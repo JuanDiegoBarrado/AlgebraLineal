@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.8)  3 JUL 2021 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.8)  20 SEP 2021 11:05
 entering extended mode
 **./AlgebraLineal.tex
 (AlgebraLineal.tex
@@ -1226,8 +1226,12 @@ x
 ( FP-UPN ) ))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/oberdiek\centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
+) (AlgebraLineal.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
 )
-No file AlgebraLineal.aux.
 \openout1 = `AlgebraLineal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
@@ -1246,6 +1250,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
 LaTeX Info: Redefining \. on input line 47.
 LaTeX Info: Redefining \% on input line 47.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1483,7 +1488,7 @@ it/10 a[]b[]x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 q\OT1/cmr/m/n/10 )\OML/cmm/m
 
 Package xcolor Warning: Incompatible color definition on input line 483.
 
-<./fotos/division de polinomios.jpg, id=93, 196.48407pt x 115.93312pt>
+<./fotos/division de polinomios.jpg, id=94, 196.48407pt x 115.93312pt>
 File: ./fotos/division de polinomios.jpg Graphic file (type jpg)
 <use ./fotos/division de polinomios.jpg>
 Package pdftex.def Info: ./fotos/division de polinomios.jpg  used on input line
@@ -1798,7 +1803,7 @@ Package xcolor Warning: Incompatible color definition on input line 1222.
 
 Package xcolor Warning: Incompatible color definition on input line 1223.
 
-<./fotos/clase lateral.png, id=161, 636.3775pt x 602.25pt>
+<./fotos/clase lateral.png, id=162, 636.3775pt x 602.25pt>
 File: ./fotos/clase lateral.png Graphic file (type png)
 <use ./fotos/clase lateral.png>
 Package pdftex.def Info: ./fotos/clase lateral.png  used on input line 1243.
@@ -2083,7 +2088,7 @@ OML/cmm/m/it/10 V[][]B[]; B[][]V[]B[]; B[][]V[] \OT1/cmr/m/n/10 : \OML/cmm/m/it
 OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )
  []
 
-<./fotos/Matrices equivalentes.jpeg, id=196, 795.72281pt x 201.75375pt>
+<./fotos/Matrices equivalentes.jpeg, id=197, 795.72281pt x 201.75375pt>
 File: ./fotos/Matrices equivalentes.jpeg Graphic file (type jpg)
 <use ./fotos/Matrices equivalentes.jpeg>
 Package pdftex.def Info: ./fotos/Matrices equivalentes.jpeg  used on input line
@@ -2204,7 +2209,7 @@ Package xcolor Warning: Incompatible color definition on input line 1831.
 Package xcolor Warning: Incompatible color definition on input line 1877.
 
 [50]
-<./fotos/Sistema asociado.png, id=222, 477.28313pt x 451.6875pt>
+<./fotos/Sistema asociado.png, id=223, 477.28313pt x 451.6875pt>
 File: ./fotos/Sistema asociado.png Graphic file (type png)
 <use ./fotos/Sistema asociado.png>
 Package pdftex.def Info: ./fotos/Sistema asociado.png  used on input line 1903.
@@ -3063,11 +3068,11 @@ LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 ) ) 
 Here is how much of TeX's memory you used:
- 33034 strings out of 480790
- 793930 string characters out of 2897301
- 1235546 words of memory out of 3000000
- 48354 multiletter control sequences out of 15000+200000
- 542768 words of font info for 67 fonts, out of 3000000 for 9000
+ 33049 strings out of 480790
+ 794136 string characters out of 2897301
+ 1235620 words of memory out of 3000000
+ 48362 multiletter control sequences out of 15000+200000
+ 544419 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,21n,98p,880b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
@@ -3090,18 +3095,19 @@ TeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/jdbar/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jdbar/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/jdbar/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jdba
-r/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
-sers/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.p
-fb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy7.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmti10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/jdbar/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/jdbar/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on AlgebraLineal.pdf (134 pages, 882156 bytes).
+r/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Use
+rs/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmsy5.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmti10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/jdbar/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/jdbar/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on AlgebraLineal.pdf (134 pages, 895964 bytes).
 PDF statistics:
- 574 PDF objects out of 1000 (max. 8388607)
+ 578 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  129 words of extra memory for PDF output out of 10000 (max. 10000000)
 
