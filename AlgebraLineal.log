@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.8)  23 SEP 2021 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.8)  2 JUN 2022 16:04
 entering extended mode
 **./AlgebraLineal.tex
 (AlgebraLineal.tex
@@ -22,19 +22,46 @@ File: bk10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
 )
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count176
+\Gm@cntv=\count177
+\c@Gm@tempcnt=\count178
+\Gm@bindingoffset=\dimen135
+\Gm@wd@mp=\dimen136
+\Gm@odd@mp=\dimen137
+\Gm@even@mp=\dimen138
+\Gm@layoutwidth=\dimen139
+\Gm@layoutheight=\dimen140
+\Gm@layouthoffset=\dimen141
+\Gm@layoutvoffset=\dimen142
+\Gm@dimlist=\toks16
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2020/06/10 3.45 The Babel package
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
 File: babel.def 2020/06/10 3.45 Babel common definitions
-\babel@savecnt=\count176
-\U@D=\dimen135
+\babel@savecnt=\count179
+\U@D=\dimen143
 \l@babelnohyphens=\language79
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 )
-\bbl@dirlevel=\count177
+\bbl@dirlevel=\count180
 
 *************************************
 * Local config file bblopts.cfg used
@@ -46,112 +73,47 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.l
 df
 Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
-\es@quottoks=\toks15
-\es@quotdepth=\count178
+\es@quottoks=\toks17
+\es@quotdepth=\count181
 Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
 Package babel Info: Making > an active character on input line 707.
-))
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip49
-
-For additional information on amsmath, use the `?' option.
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
-
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen136
-))
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen137
-)
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
-)
-\inf@bad=\count179
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count180
-\leftroot@=\count181
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count182
-\DOTSCASE@=\count183
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box45
-\strutbox@=\box46
-\big@size=\dimen138
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count184
-\c@MaxMatrixCols=\count185
-\dotsspace@=\muskip16
-\c@parentequation=\count186
-\dspbrk@lvl=\count187
-\tag@help=\toks17
-\row@=\count188
-\column@=\count189
-\maxfields@=\count190
-\andhelp@=\toks18
-\eqnshift@=\dimen139
-\alignsep@=\dimen140
-\tagshift@=\dimen141
-\tagwidth@=\dimen142
-\totwidth@=\dimen143
-\lineht@=\dimen144
-\@envbody=\toks19
-\multlinegap=\skip50
-\multlinetaggap=\skip51
-\mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
-)
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-)
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/base\latexsym.sty
-Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
-\symlasy=\mathgroup6
-LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
-(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)) (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
+\UL@box=\box45
+\UL@hyphenbox=\box46
+\UL@skip=\skip49
+\UL@hook=\toks18
+\UL@height=\dimen144
+\UL@pe=\count182
+\UL@pixel=\dimen145
+\ULC@box=\box47
+Package: ulem 2019/11/18
+\ULdepth=\dimen146
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count191
-\mult@box=\box47
-\multicol@leftmargin=\dimen145
-\c@unbalance=\count192
-\c@collectmore=\count193
-\doublecol@number=\count194
-\multicoltolerance=\count195
-\multicolpretolerance=\count196
-\full@width=\dimen146
-\page@free=\dimen147
-\premulticols=\dimen148
-\postmulticols=\dimen149
-\multicolsep=\skip52
-\multicolbaselineskip=\skip53
-\partial@page=\box48
-\last@line=\box49
-\maxbalancingoverflow=\dimen150
-\mult@rightbox=\box50
-\mult@grightbox=\box51
-\mult@gfirstbox=\box52
-\mult@firstbox=\box53
-\@tempa=\box54
+\c@tracingmulticols=\count183
+\mult@box=\box48
+\multicol@leftmargin=\dimen147
+\c@unbalance=\count184
+\c@collectmore=\count185
+\doublecol@number=\count186
+\multicoltolerance=\count187
+\multicolpretolerance=\count188
+\full@width=\dimen148
+\page@free=\dimen149
+\premulticols=\dimen150
+\postmulticols=\dimen151
+\multicolsep=\skip50
+\multicolbaselineskip=\skip51
+\partial@page=\box49
+\last@line=\box50
+\maxbalancingoverflow=\dimen152
+\mult@rightbox=\box51
+\mult@grightbox=\box52
+\mult@gfirstbox=\box53
+\mult@firstbox=\box54
 \@tempa=\box55
 \@tempa=\box56
 \@tempa=\box57
@@ -188,68 +150,101 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box88
 \@tempa=\box89
 \@tempa=\box90
-\c@minrows=\count197
-\c@columnbadness=\count198
-\c@finalcolumnbadness=\count199
-\last@try=\dimen151
-\multicolovershoot=\dimen152
-\multicolundershoot=\dimen153
-\mult@nat@firstbox=\box91
-\colbreak@box=\box92
-\mc@col@check@num=\count266
+\@tempa=\box91
+\c@minrows=\count189
+\c@columnbadness=\count190
+\c@finalcolumnbadness=\count191
+\last@try=\dimen153
+\multicolovershoot=\dimen154
+\multicolundershoot=\dimen155
+\mult@nat@firstbox=\box92
+\colbreak@box=\box93
+\mc@col@check@num=\count192
 )
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip52
 
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks21
-)
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+For additional information on amsmath, use the `?' option.
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
 
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen156
 ))
-\Gm@cnth=\count267
-\Gm@cntv=\count268
-\c@Gm@tempcnt=\count269
-\Gm@bindingoffset=\dimen154
-\Gm@wd@mp=\dimen155
-\Gm@odd@mp=\dimen156
-\Gm@even@mp=\dimen157
-\Gm@layoutwidth=\dimen158
-\Gm@layoutheight=\dimen159
-\Gm@layouthoffset=\dimen160
-\Gm@layoutvoffset=\dimen161
-\Gm@dimlist=\toks22
-
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
-Package: titlesec 2019/10/16 v2.13 Sectioning titles
-\ttl@box=\box93
-\beforetitleunit=\skip54
-\aftertitleunit=\skip55
-\ttl@plus=\dimen162
-\ttl@minus=\dimen163
-\ttl@toksa=\toks23
-\titlewidth=\dimen164
-\titlewidthlast=\dimen165
-\titlewidthfirst=\dimen166
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen157
 )
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
-Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
-
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
 )
-Package color Info: Driver file: pdftex.def on input line 147.
-
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-) (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.def
-File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-))
+\inf@bad=\count193
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count194
+\leftroot@=\count195
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count196
+\DOTSCASE@=\count197
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box94
+\strutbox@=\box95
+\big@size=\dimen158
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count198
+\c@MaxMatrixCols=\count199
+\dotsspace@=\muskip16
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
+\tag@help=\toks20
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
+\andhelp@=\toks21
+\eqnshift@=\dimen159
+\alignsep@=\dimen160
+\tagshift@=\dimen161
+\tagwidth@=\dimen162
+\totwidth@=\dimen163
+\lineht@=\dimen164
+\@envbody=\toks22
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/base\latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/cancel\cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -264,21 +259,146 @@ fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-)
-\Gin@req@height=\dimen167
-\Gin@req@width=\dimen168
-)
-(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/pstricks\pstricks.sty
-Package: pstricks 2020/06/11 v0.70 LaTeX wrapper for `PSTricks' (RN,HV)
 
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen165
+\Gin@req@width=\dimen166
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
+ty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen167
+\Hy@linkcounter=\count271
+\Hy@pagecounter=\count272
+ (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count273
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count274
+ (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen168
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count275
+\Field@Width=\dimen169
+\Fld@charsize=\dimen170
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/atbegshi\atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count276
+\c@Item=\count277
+\c@Hfootnote=\count278
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/atveryend\atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count279
+\c@bookmark@seq@number=\count280
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip55
+)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
+Package xcolor Info: Package option `usenames' ignored on input line 216.
 Package xcolor Info: Driver file: pdftex.def on input line 225.
-LaTeX Info: Redefining \color on input line 709.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -288,7 +408,70 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)) (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.st
+y
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box96
+\beforetitleunit=\skip56
+\aftertitleunit=\skip57
+\ttl@plus=\dimen171
+\ttl@minus=\dimen172
+\ttl@toksa=\toks24
+\titlewidth=\dimen173
+\titlewidthlast=\dimen174
+\titlewidthfirst=\dimen175
+) (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/ntheorem\ntheorem.sty
+
+Style `ntheorem', Version 1.33 <2011/08/15>
+Package: ntheorem 2011/08/15 1.33
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
+\theorem@style=\toks25
+\theorem@@style=\toks26
+\theorembodyfont=\toks27
+\theoremnumbering=\toks28
+\theorempreskipamount=\skip58
+\theorempostskipamount=\skip59
+\theoremframepreskipamount=\skip60
+\theoremframepostskipamount=\skip61
+\theoreminframepreskipamount=\skip62
+\theoreminframepostskipamount=\skip63
+\theorem@preskip=\toks29
+\theorem@postskip=\toks30
+\theorem@framepreskip=\toks31
+\theorem@framepostskip=\toks32
+\theorem@inframepreskip=\toks33
+\theorem@inframepostskip=\toks34
+\theoremindent=\dimen176
+\theorem@indent=\dimen177
+\theoremrightindent=\dimen178
+\theorem@rightindent=\dimen179
+\theoremheaderfont=\toks35
+\theoremseparator=\toks36
+\theoremprework=\toks37
+\theorempostwork=\toks38
+\theoremsymbol=\toks39
+\qedsymbol=\toks40
+\theoremkeyword=\toks41
+\qedsymbol=\toks42
+\thm@topsep=\skip64
+\thm@topsepadd=\skip65
+)
+\c@defi=\count281
+\c@theo=\count282
+\c@coro=\count283
+\c@lema=\count284
+\c@prop=\count285
+\c@demo=\count286
+\c@obs=\count287
+\c@ej=\count288
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/pstricks\pstricks.sty
+Package: pstricks 2020/06/11 v0.70 LaTeX wrapper for `PSTricks' (RN,HV)
+
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\pst-xkey.tex
 File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
 
@@ -297,41 +480,41 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks24
-\XKV@tempa@toks=\toks25
+\XKV@toks=\toks43
+\XKV@tempa@toks=\toks44
 )
-\XKV@depth=\count270
+\XKV@depth=\count289
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pstricks\pstricks.tex
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pstricks\pst-fp.tex
 `pst-fp' v0.05, 2010/01/17 (hv)
-\pstFP@xs=\count271
-\pstFP@xia=\count272
-\pstFP@xib=\count273
-\pstFP@xfa=\count274
-\pstFP@xfb=\count275
-\pstFP@rega=\count276
-\pstFP@regb=\count277
-\pstFP@regs=\count278
-\pstFP@times=\count279
+\pstFP@xs=\count290
+\pstFP@xia=\count291
+\pstFP@xib=\count292
+\pstFP@xfa=\count293
+\pstFP@xfb=\count294
+\pstFP@rega=\count295
+\pstFP@regb=\count296
+\pstFP@regs=\count297
+\pstFP@times=\count298
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common.tex
-\pgfutil@everybye=\toks26
-\pgfutil@tempdima=\dimen169
-\pgfutil@tempdimb=\dimen170
+\pgfutil@everybye=\toks45
+\pgfutil@tempdima=\dimen180
+\pgfutil@tempdimb=\dimen181
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common-lists.tex))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 .code.tex
-\pgfkeys@pathtoks=\toks27
-\pgfkeys@temptoks=\toks28
+\pgfkeys@pathtoks=\toks46
+\pgfkeys@temptoks=\toks47
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 filtered.code.tex
-\pgfkeys@tmptoks=\toks29
+\pgfkeys@tmptoks=\toks48
 ))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
 code.tex
@@ -343,29 +526,29 @@ Loading pgffor.code.tex
 code.tex
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
 code.tex
-\pgf@x=\dimen171
-\pgf@xa=\dimen172
-\pgf@xb=\dimen173
-\pgf@xc=\dimen174
-\pgf@y=\dimen175
-\pgf@ya=\dimen176
-\pgf@yb=\dimen177
-\pgf@yc=\dimen178
-\c@pgf@counta=\count280
-\c@pgf@countb=\count281
-\c@pgf@countc=\count282
-\c@pgf@countd=\count283
-\pgfutil@tempcnta=\count284
-\pgfutil@tempcntb=\count285
+\pgf@x=\dimen182
+\pgf@xa=\dimen183
+\pgf@xb=\dimen184
+\pgf@xc=\dimen185
+\pgf@y=\dimen186
+\pgf@ya=\dimen187
+\pgf@yb=\dimen188
+\pgf@yc=\dimen189
+\c@pgf@counta=\count299
+\c@pgf@countb=\count300
+\c@pgf@countc=\count301
+\c@pgf@countd=\count302
+\pgfutil@tempcnta=\count303
+\pgfutil@tempcntb=\count304
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
 r.code.tex
-\pgfmath@dimen=\dimen179
-\pgfmath@count=\count286
-\pgfmath@box=\box94
-\pgfmath@toks=\toks30
-\pgfmath@stack@operand=\toks31
-\pgfmath@stack@operation=\toks32
+\pgfmath@dimen=\dimen190
+\pgfmath@count=\count305
+\pgfmath@box=\box97
+\pgfmath@toks=\toks49
+\pgfmath@stack@operand=\toks50
+\pgfmath@stack@operation=\toks51
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
 ions.code.tex
@@ -387,62 +570,62 @@ ions.misc.code.tex)
 ions.integerarithmetics.code.tex)))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count287
+\c@pgfmathroundto@lastzeros=\count306
 ))
-\pgffor@iter=\dimen180
-\pgffor@skip=\dimen181
-\pgffor@stack=\toks33
-\pgffor@toks=\toks34
+\pgffor@iter=\dimen191
+\pgffor@skip=\dimen192
+\pgffor@stack=\toks52
+\pgffor@toks=\toks53
 )
-\psLoopIndex=\count288
+\psLoopIndex=\count307
 
 `PSTricks' v3.01  <2020/09/18> (tvz,hv)
-\pst@dima=\dimen182
-\pst@dimb=\dimen183
-\pst@dimc=\dimen184
-\pst@dimd=\dimen185
-\pst@dimg=\dimen186
-\pst@dimh=\dimen187
-\pst@dimm=\dimen188
-\pst@dimn=\dimen189
-\pst@dimo=\dimen190
-\pst@dimp=\dimen191
-\pst@hbox=\box95
-\pst@ibox=\box96
-\pst@boxg=\box97
-\pst@cnta=\count289
-\pst@cntb=\count290
-\pst@cntc=\count291
-\pst@cntd=\count292
-\pst@cntg=\count293
-\pst@cnth=\count294
-\pst@cntm=\count295
-\pst@cntn=\count296
-\pst@cnto=\count297
-\pst@cntp=\count298
-\@zero=\count299
-\pst@toks=\toks35
+\pst@dima=\dimen193
+\pst@dimb=\dimen194
+\pst@dimc=\dimen195
+\pst@dimd=\dimen196
+\pst@dimg=\dimen197
+\pst@dimh=\dimen198
+\pst@dimm=\dimen199
+\pst@dimn=\dimen256
+\pst@dimo=\dimen257
+\pst@dimp=\dimen258
+\pst@hbox=\box98
+\pst@ibox=\box99
+\pst@boxg=\box100
+\pst@cnta=\count308
+\pst@cntb=\count309
+\pst@cntc=\count310
+\pst@cntd=\count311
+\pst@cntg=\count312
+\pst@cnth=\count313
+\pst@cntm=\count314
+\pst@cntn=\count315
+\pst@cnto=\count316
+\pst@cntp=\count317
+\@zero=\count318
+\pst@toks=\toks54
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pstricks\pstricks.con
 )
-\psunit=\dimen192
-\psxunit=\dimen193
-\psyunit=\dimen194
-\pst@C@@rType=\count300
-\pslinewidth=\dimen195
-\psk@startLW=\dimen196
-\psk@endLW=\dimen197
-\pst@customdefs=\toks36
-\pslinearc=\dimen198
-\pst@symbolStep=\dimen199
-\pst@symbolWidth=\dimen256
-\pst@symbolLinewidth=\dimen257
-\everypsbox=\toks37
-\psframesep=\dimen258
-\pslabelsep=\dimen259
-\sh@wgridXunit=\dimen260
-\sh@wgridYunit=\dimen261
-\pst@shift=\dimen262
+\psunit=\dimen259
+\psxunit=\dimen260
+\psyunit=\dimen261
+\pst@C@@rType=\count319
+\pslinewidth=\dimen262
+\psk@startLW=\dimen263
+\psk@endLW=\dimen264
+\pst@customdefs=\toks55
+\pslinearc=\dimen265
+\pst@symbolStep=\dimen266
+\pst@symbolWidth=\dimen267
+\pst@symbolLinewidth=\dimen268
+\everypsbox=\toks56
+\psframesep=\dimen269
+\pslabelsep=\dimen270
+\sh@wgridXunit=\dimen271
+\sh@wgridYunit=\dimen272
+\pst@shift=\dimen273
 )
 File: pstricks.tex 2020/09/18 v3.01 `PSTricks' (tvz,hv)
 
@@ -464,14 +647,14 @@ Package: pst-node 2010/04/22 package wrapper for pst-node.tex
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pst-node\pst-node.tex
  v1.42a, 2020/04/01
-\psrow=\count301
-\pscol=\count302
-\psmatrixcnt=\count303
-\psrowsep=\skip56
-\pscolsep=\skip57
-\pst@args=\count304
-\num@pts=\count305
-\pst@argcnt=\count306
+\psrow=\count320
+\pscol=\count321
+\psmatrixcnt=\count322
+\psrowsep=\skip66
+\pscolsep=\skip67
+\pst@args=\count323
+\num@pts=\count324
+\pst@argcnt=\count325
 )
 File: pst-node.tex 2020/04/01 1.42a `pst-node' (tvz,hv)
 )
@@ -487,9 +670,9 @@ Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/multido\multido.tex
  v1.42, 2010/05/14 <tvz>
-\multido@count=\count307
-\multidocount=\count308
-\multido@stuff=\toks38
+\multido@count=\count326
+\multidocount=\count327
+\multido@stuff=\toks57
 )
 File: multido.tex 2010/05/14 v1.42 `multido' (tvz,hv)
 )
@@ -499,52 +682,52 @@ Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pst-tools\pst-tools.t
 ex `PST-tools' v0.10, 2020/03/24 (hv)
-\randomi=\count309
-\ranval=\count310
+\randomi=\count328
+\ranval=\count329
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pstricks-add\pstricks
 -add.tex
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pst-arrow\pst-arrow.t
 ex `pst-arrow' v0.01, 2016/09/01 (dr,hv)
-\pshooklength=\dimen263
-\pshookwidth=\dimen264
+\pshooklength=\dimen274
+\pshookwidth=\dimen275
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pst-3d\pst-3d.tex
 `PST-3d' v1.11, 2010/02/14 (tvz))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pst-math\pst-math.tex
 `pst-math' v0.64 , (CJ,hv)) `pstricks-add' v3.89a, 2020/02/12 (dr,hv)
-\psparallelogramsep=\dimen265
-\pst@cntC=\count311
-\pst@stepcount=\count312
-\chart@ColorIndex=\dimen266
-\chart@ColorStep=\dimen267
-\pst@chartHeight=\dimen268
-\pst@chartStackDepth=\dimen269
-\pst@chartStackWidth=\dimen270
-\chart@Toggle=\count313
-\psVectorCtr=\count314
+\psparallelogramsep=\dimen276
+\pst@cntC=\count330
+\pst@stepcount=\count331
+\chart@ColorIndex=\dimen277
+\chart@ColorStep=\dimen278
+\pst@chartHeight=\dimen279
+\pst@chartStackDepth=\dimen280
+\pst@chartStackWidth=\dimen281
+\chart@Toggle=\count332
+\psVectorCtr=\count333
 )
  v1.92, 2019/05/16 (tvz,hv)
-\pstRadUnit=\dimen271
-\pstRadUnitInv=\dimen272
-\pst@linecnt=\count315
+\pstRadUnit=\dimen282
+\pstRadUnitInv=\dimen283
+\pst@linecnt=\count334
 \RCD@file=\read3
-\psxlabelsep=\dimen273
-\psylabelsep=\dimen274
-\psk@subticksize=\dimen275
-\pst@xticksizeA=\dimen276
-\pst@xticksizeB=\dimen277
-\pst@xticksizeC=\dimen278
-\pst@yticksizeA=\dimen279
-\pst@yticksizeB=\dimen280
-\pst@yticksizeC=\dimen281
-\@digitcounter=\count316
-\psk@llx=\dimen282
-\psk@lly=\dimen283
-\psk@urx=\dimen284
-\psk@ury=\dimen285
-\pst@xunit=\dimen286
-\pst@yunit=\dimen287
+\psxlabelsep=\dimen284
+\psylabelsep=\dimen285
+\psk@subticksize=\dimen286
+\pst@xticksizeA=\dimen287
+\pst@xticksizeB=\dimen288
+\pst@xticksizeC=\dimen289
+\pst@yticksizeA=\dimen290
+\pst@yticksizeB=\dimen291
+\pst@yticksizeC=\dimen292
+\@digitcounter=\count335
+\psk@llx=\dimen293
+\psk@lly=\dimen294
+\psk@urx=\dimen295
+\psk@ury=\dimen296
+\pst@xunit=\dimen297
+\pst@yunit=\dimen298
 )
 File: pst-plot.tex 2019/05/16 1.92 `pst-plot' (tvz,hv)
 )
@@ -560,15 +743,15 @@ sty
 y
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common.tex
-\pgfutil@everybye=\toks39
-\pgfutil@tempdima=\dimen288
-\pgfutil@tempdimb=\dimen289
+\pgfutil@everybye=\toks58
+\pgfutil@tempdima=\dimen299
+\pgfutil@tempdimb=\dimen300
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common-lists.tex))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -latex.def
-\pgfutil@abb=\box98
+\pgfutil@abb=\box101
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/ms\everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
@@ -590,26 +773,26 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 .code.tex)
-\pgf@x=\dimen290
-\pgf@y=\dimen291
-\pgf@xa=\dimen292
-\pgf@ya=\dimen293
-\pgf@xb=\dimen294
-\pgf@yb=\dimen295
-\pgf@xc=\dimen296
-\pgf@yc=\dimen297
-\pgf@xd=\dimen298
-\pgf@yd=\dimen299
+\pgf@x=\dimen301
+\pgf@y=\dimen302
+\pgf@xa=\dimen303
+\pgf@ya=\dimen304
+\pgf@xb=\dimen305
+\pgf@yb=\dimen306
+\pgf@xc=\dimen307
+\pgf@yc=\dimen308
+\pgf@xd=\dimen309
+\pgf@yd=\dimen310
 \w@pgf@writea=\write3
 \r@pgf@reada=\read4
-\c@pgf@counta=\count317
-\c@pgf@countb=\count318
-\c@pgf@countc=\count319
-\c@pgf@countd=\count320
-\t@pgf@toka=\toks40
-\t@pgf@tokb=\toks41
-\t@pgf@tokc=\toks42
-\pgf@sys@id@count=\count321
+\c@pgf@counta=\count336
+\c@pgf@countb=\count337
+\c@pgf@countc=\count338
+\c@pgf@countd=\count339
+\t@pgf@toka=\toks59
+\t@pgf@tokb=\toks60
+\t@pgf@tokc=\toks61
+\pgf@sys@id@count=\count340
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
 fg
@@ -628,8 +811,8 @@ File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count322
-\pgfsyssoftpath@bigbuffer@items=\count323
+\pgfsyssoftpath@smallbuffer@items=\count341
+\pgfsyssoftpath@bigbuffer@items=\count342
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 sprotocol.code.tex
@@ -646,52 +829,52 @@ tex)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epoints.code.tex
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@picminx=\dimen300
-\pgf@picmaxx=\dimen301
-\pgf@picminy=\dimen302
-\pgf@picmaxy=\dimen303
-\pgf@pathminx=\dimen304
-\pgf@pathmaxx=\dimen305
-\pgf@pathminy=\dimen306
-\pgf@pathmaxy=\dimen307
-\pgf@xx=\dimen308
-\pgf@xy=\dimen309
-\pgf@yx=\dimen310
-\pgf@yy=\dimen311
-\pgf@zx=\dimen312
-\pgf@zy=\dimen313
+\pgf@picminx=\dimen311
+\pgf@picmaxx=\dimen312
+\pgf@picminy=\dimen313
+\pgf@picmaxy=\dimen314
+\pgf@pathminx=\dimen315
+\pgf@pathmaxx=\dimen316
+\pgf@pathminy=\dimen317
+\pgf@pathmaxy=\dimen318
+\pgf@xx=\dimen319
+\pgf@xy=\dimen320
+\pgf@yx=\dimen321
+\pgf@yy=\dimen322
+\pgf@zx=\dimen323
+\pgf@zy=\dimen324
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@path@lastx=\dimen314
-\pgf@path@lasty=\dimen315
+\pgf@path@lastx=\dimen325
+\pgf@path@lasty=\dimen326
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathusage.code.tex
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@shorten@end@additional=\dimen316
-\pgf@shorten@start@additional=\dimen317
+\pgf@shorten@end@additional=\dimen327
+\pgf@shorten@start@additional=\dimen328
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 escopes.code.tex
 File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfpic=\box99
-\pgf@hbox=\box100
-\pgf@layerbox@main=\box101
-\pgf@picture@serial@count=\count324
+\pgfpic=\box102
+\pgf@hbox=\box103
+\pgf@layerbox@main=\box104
+\pgf@picture@serial@count=\count343
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgflinewidth=\dimen318
+\pgflinewidth=\dimen329
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 etransformations.code.tex
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@pt@x=\dimen319
-\pgf@pt@y=\dimen320
-\pgf@pt@temp=\dimen321
+\pgf@pt@x=\dimen330
+\pgf@pt@y=\dimen331
+\pgf@pt@temp=\dimen332
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 equick.code.tex
@@ -708,14 +891,14 @@ File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 earrows.code.tex
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowsep=\dimen322
+\pgfarrowsep=\dimen333
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eshade.code.tex
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@max=\dimen323
-\pgf@sys@shading@range@num=\count325
-\pgf@shadingcount=\count326
+\pgf@max=\dimen334
+\pgf@sys@shading@range@num=\count344
+\pgf@shadingcount=\count345
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eimage.code.tex
@@ -724,7 +907,7 @@ File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eexternal.code.tex
 File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfexternal@startupbox=\box102
+\pgfexternal@startupbox=\box105
 ))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 elayers.code.tex
@@ -745,7 +928,7 @@ File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 shapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodeparttextbox=\box103
+\pgfnodeparttextbox=\box106
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 plot.code.tex
@@ -754,8 +937,8 @@ File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@nodesepstart=\dimen324
-\pgf@nodesepend=\dimen325
+\pgf@nodesepstart=\dimen335
+\pgf@nodesepend=\dimen336
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-1-18.sty
@@ -776,10 +959,10 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
 .tex)
-\pgffor@iter=\dimen326
-\pgffor@skip=\dimen327
-\pgffor@stack=\toks43
-\pgffor@toks=\toks44
+\pgffor@iter=\dimen337
+\pgffor@skip=\dimen338
+\pgffor@stack=\toks62
+\pgffor@toks=\toks63
 ))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z\tikz.code.tex
@@ -788,34 +971,34 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count327
-\pgfplotmarksize=\dimen328
+\pgf@plot@mark@count=\count346
+\pgfplotmarksize=\dimen339
 )
-\tikz@lastx=\dimen329
-\tikz@lasty=\dimen330
-\tikz@lastxsaved=\dimen331
-\tikz@lastysaved=\dimen332
-\tikz@lastmovetox=\dimen333
-\tikz@lastmovetoy=\dimen334
-\tikzleveldistance=\dimen335
-\tikzsiblingdistance=\dimen336
-\tikz@figbox=\box104
-\tikz@figbox@bg=\box105
-\tikz@tempbox=\box106
-\tikz@tempbox@bg=\box107
-\tikztreelevel=\count328
-\tikznumberofchildren=\count329
-\tikznumberofcurrentchild=\count330
-\tikz@fig@count=\count331
+\tikz@lastx=\dimen340
+\tikz@lasty=\dimen341
+\tikz@lastxsaved=\dimen342
+\tikz@lastysaved=\dimen343
+\tikz@lastmovetox=\dimen344
+\tikz@lastmovetoy=\dimen345
+\tikzleveldistance=\dimen346
+\tikzsiblingdistance=\dimen347
+\tikz@figbox=\box107
+\tikz@figbox@bg=\box108
+\tikz@tempbox=\box109
+\tikz@tempbox@bg=\box110
+\tikztreelevel=\count347
+\tikznumberofchildren=\count348
+\tikznumberofcurrentchild=\count349
+\tikz@fig@count=\count350
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count332
-\pgfmatrixcurrentcolumn=\count333
-\pgf@matrix@numberofcolumns=\count334
+\pgfmatrixcurrentrow=\count351
+\pgfmatrixcurrentcolumn=\count352
+\pgf@matrix@numberofcolumns=\count353
 )
-\tikz@expandcount=\count335
+\tikz@expandcount=\count354
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -825,12 +1008,12 @@ File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 e.tex
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore
 .code.tex
-\t@pgfplots@toka=\toks45
-\t@pgfplots@tokb=\toks46
-\t@pgfplots@tokc=\toks47
-\pgfplots@tmpa=\dimen337
-\c@pgfplots@coordindex=\count336
-\c@pgfplots@scanlineindex=\count337
+\t@pgfplots@toka=\toks64
+\t@pgfplots@tokb=\toks65
+\t@pgfplots@tokc=\toks66
+\pgfplots@tmpa=\dimen348
+\c@pgfplots@coordindex=\count355
+\c@pgfplots@scanlineindex=\count356
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplots
 sysgeneric.code.tex))
@@ -848,14 +1031,14 @@ e\pgfplotsliststructure.code.tex)
 e\pgfplotsliststructureext.code.tex)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count338
+\c@pgfplotsarray@tmp=\count357
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsmatrix.code.tex)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
 plotstableshared.code.tex
-\c@pgfplotstable@counta=\count339
-\t@pgfplotstable@a=\toks48
+\c@pgfplotstable@counta=\count358
+\t@pgfplotstable@a=\toks67
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsdeque.code.tex)
@@ -867,7 +1050,7 @@ sbinary.data.code.tex))
 sutil.verb.code.tex)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibr
 arypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count340
+\c@pgfplotslibrarysurf@no=\count359
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibra
 rypgfplots.surfshading.pgfsys-pdftex.def)))
@@ -899,16 +1082,16 @@ hs.code.tex)
 z/libraries\tikzlibrarydecorations.code.tex
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 decorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen338
-\pgfdecoratedremainingdistance=\dimen339
-\pgfdecoratedinputsegmentcompleteddistance=\dimen340
-\pgfdecoratedinputsegmentremainingdistance=\dimen341
-\pgf@decorate@distancetomove=\dimen342
-\pgf@decorate@repeatstate=\count341
-\pgfdecorationsegmentamplitude=\dimen343
-\pgfdecorationsegmentlength=\dimen344
+\pgfdecoratedcompleteddistance=\dimen349
+\pgfdecoratedremainingdistance=\dimen350
+\pgfdecoratedinputsegmentcompleteddistance=\dimen351
+\pgfdecoratedinputsegmentremainingdistance=\dimen352
+\pgf@decorate@distancetomove=\dimen353
+\pgf@decorate@repeatstate=\count360
+\pgfdecorationsegmentamplitude=\dimen354
+\pgfdecorationsegmentlength=\dimen355
 )
-\tikz@lib@dec@box=\box108
+\tikz@lib@dec@box=\box111
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
@@ -918,13 +1101,13 @@ ions\pgflibrarydecorations.pathmorphing.code.tex))
 z/libraries\tikzlibrarydecorations.pathreplacing.code.tex
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
 ions\pgflibrarydecorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count342
-\pgfplots@xmin@reg=\dimen345
-\pgfplots@xmax@reg=\dimen346
-\pgfplots@ymin@reg=\dimen347
-\pgfplots@ymax@reg=\dimen348
-\pgfplots@zmin@reg=\dimen349
-\pgfplots@zmax@reg=\dimen350
+\pgfplots@numplots=\count361
+\pgfplots@xmin@reg=\dimen356
+\pgfplots@xmax@reg=\dimen357
+\pgfplots@ymin@reg=\dimen358
+\pgfplots@ymax@reg=\dimen359
+\pgfplots@zmin@reg=\dimen360
+\pgfplots@zmax@reg=\dimen361
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibraryplotmarks.code.tex
@@ -937,7 +1120,7 @@ File: pgflibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/tkz-fct\tkz-fct.sty
 2020/05/01 1.4c function tkz-fct
 Package: tkz-fct 2020/05/01 1.4c function 
-\tkz@tkzf@fct=\count343
+\tkz@tkzf@fct=\count362
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-base.sty
 2020/03/18 3.06c tkz-base.sty
 Package: tkz-base 2020/03/18 3.06c tkz-base
@@ -953,15 +1136,15 @@ File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryarrows.code.tex
 File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\arrowsize=\dimen351
+\arrowsize=\dimen362
 ))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowinset=\dimen352
-\pgfarrowlength=\dimen353
-\pgfarrowwidth=\dimen354
-\pgfarrowlinewidth=\dimen355
+\pgfarrowinset=\dimen363
+\pgfarrowlength=\dimen364
+\pgfarrowwidth=\dimen365
+\pgfarrowlinewidth=\dimen366
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarybabel.code.tex
@@ -983,15 +1166,15 @@ ions\pgflibrarydecorations.shapes.code.tex))
 z/libraries\tikzlibrarydecorations.text.code.tex
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
 ions\pgflibrarydecorations.text.code.tex
-\pgf@lib@dec@text@box=\box109
+\pgf@lib@dec@text@box=\box112
 )
-\tikz@lib@dec@te@box=\box110
+\tikz@lib@dec@te@box=\box113
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibraryintersections.code.tex
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryintersections.code.tex
-\pgf@intersect@solutions=\count344
+\pgf@intersect@solutions=\count363
 ))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarypatterns.code.tex
@@ -1038,31 +1221,31 @@ Package: numprint 2012/08/20 v1.39 Print numbers (HH)
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen356
-\ar@mcellbox=\box111
-\extrarowheight=\dimen357
-\NC@list=\toks49
-\extratabsurround=\skip58
-\backup@length=\skip59
-\ar@cellbox=\box112
+\col@sep=\dimen367
+\ar@mcellbox=\box114
+\extrarowheight=\dimen368
+\NC@list=\toks68
+\extratabsurround=\skip68
+\backup@length=\skip69
+\ar@cellbox=\box115
 )
-\c@nprt@mantissa@digitsbefore=\count345
-\c@nprt@mantissa@digitsafter=\count346
-\c@nprt@exponent@digitsbefore=\count347
-\c@nprt@exponent@digitsafter=\count348
-\nprt@digitwidth=\skip60
-\nprt@sepwidth=\skip61
-\nprt@decimalwidth=\skip62
-\nprt@blockwidth=\skip63
-\nprt@digittoks=\toks50
-\nprt@pretoks=\toks51
-\nprt@posttoks=\toks52
-\nprt@thisdigit=\count349
-\nprt@curpos=\count350
-\nprt@rndpos=\count351
-\c@nprt@digitsfirstblock=\count352
-\c@nprt@blockcnt=\count353
-\c@nprt@cntprint=\count354
+\c@nprt@mantissa@digitsbefore=\count364
+\c@nprt@mantissa@digitsafter=\count365
+\c@nprt@exponent@digitsbefore=\count366
+\c@nprt@exponent@digitsafter=\count367
+\nprt@digitwidth=\skip70
+\nprt@sepwidth=\skip71
+\nprt@decimalwidth=\skip72
+\nprt@blockwidth=\skip73
+\nprt@digittoks=\toks69
+\nprt@pretoks=\toks70
+\nprt@posttoks=\toks71
+\nprt@thisdigit=\count368
+\nprt@curpos=\count369
+\nprt@rndpos=\count370
+\c@nprt@digitsfirstblock=\count371
+\c@nprt@blockcnt=\count372
+\c@nprt@cntprint=\count373
 
 No configuration file `numprint.cfg' found.)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xfp\xfp.sty
@@ -1072,8 +1255,8 @@ Package: expl3 2020-06-18 L3 programming layer (loader)
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 mode.def
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count355
-\l__pdf_internal_box=\box113
+\l__kernel_color_stack_int=\count374
+\l__pdf_internal_box=\box116
 ))
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
 e.sty
@@ -1081,10 +1264,10 @@ Package: xparse 2020-05-15 L3 Experimental document command parser
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
 e-generic.tex
-\l__xparse_current_arg_int=\count356
-\g__xparse_grabber_int=\count357
-\l__xparse_m_args_int=\count358
-\l__xparse_v_nesting_int=\count359
+\l__xparse_current_arg_int=\count375
+\g__xparse_grabber_int=\count376
+\l__xparse_m_args_int=\count377
+\l__xparse_v_nesting_int=\count378
 ))
 Package: xfp 2020-05-15 L3 Floating point unit
 )
@@ -1094,19 +1277,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/fp\defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count360
+\actioncount=\count379
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count361
-\FP@xia=\count362
-\FP@xib=\count363
-\FP@xfa=\count364
-\FP@xfb=\count365
-\FP@rega=\count366
-\FP@regb=\count367
-\FP@regs=\count368
-\FP@times=\count369
+\FP@xs=\count380
+\FP@xia=\count381
+\FP@xib=\count382
+\FP@xfa=\count383
+\FP@xfb=\count384
+\FP@rega=\count385
+\FP@regb=\count386
+\FP@regs=\count387
+\FP@times=\count388
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -1125,7 +1308,7 @@ Package: fp-pas 1994/08/29
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count370
+\FPseed=\count389
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -1136,26 +1319,26 @@ Package: fp-upn 1996/10/21
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-eval.sty
 Package: fp-eval 1995/04/03
 ))
-\tkzRadius=\dimen358
-\tkzLength=\dimen359
-\tkz@radi=\dimen360
-\tkz@ax=\dimen361
-\tkz@ay=\dimen362
-\tkz@bx=\dimen363
-\tkz@by=\dimen364
-\tkz@cx=\dimen365
-\tkz@cy=\dimen366
-\tkz@dx=\dimen367
-\tkz@dy=\dimen368
-\tkz@tax=\dimen369
-\tkz@tay=\dimen370
-\tkz@tbx=\dimen371
-\tkz@tby=\dimen372
-\tkz@tcx=\dimen373
-\tkz@tcy=\dimen374
-\tkz@tdx=\dimen375
-\tkz@tdy=\dimen376
-\tkz@cntmk=\count371
+\tkzRadius=\dimen369
+\tkzLength=\dimen370
+\tkz@radi=\dimen371
+\tkz@ax=\dimen372
+\tkz@ay=\dimen373
+\tkz@bx=\dimen374
+\tkz@by=\dimen375
+\tkz@cx=\dimen376
+\tkz@cy=\dimen377
+\tkz@dx=\dimen378
+\tkz@dy=\dimen379
+\tkz@tax=\dimen380
+\tkz@tay=\dimen381
+\tkz@tbx=\dimen382
+\tkz@tby=\dimen383
+\tkz@tcx=\dimen384
+\tkz@tcy=\dimen385
+\tkz@tdx=\dimen386
+\tkz@tdy=\dimen387
+\tkz@cntmk=\count390
 
 Local configuration file tkz-base.cfg found and used
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/tkz-base\tkz-base.cfg
@@ -1227,29 +1410,29 @@ x
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/oberdiek\centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 ) (AlgebraLineal.aux
-LaTeX Info: Redefining \. on input line 8.
-LaTeX Info: Redefining \% on input line 8.
-LaTeX Info: Redefining \. on input line 9.
-LaTeX Info: Redefining \% on input line 9.
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+LaTeX Info: Redefining \. on input line 26.
+LaTeX Info: Redefining \% on input line 26.
 )
 \openout1 = `AlgebraLineal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Info: Redefining \. on input line 47.
-LaTeX Info: Redefining \% on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1285,49 +1468,79 @@ LaTeX Info: Redefining \% on input line 47.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Info: Redefining \. on input line 109.
+LaTeX Info: Redefining \% on input line 109.
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count372
-\scratchdimen=\dimen377
-\scratchbox=\box114
-\nofMPsegments=\count373
-\nofMParguments=\count374
-\everyMPshowfont=\toks53
-\MPscratchCnt=\count375
-\MPscratchDim=\dimen378
-\MPnumerator=\count376
-\makeMPintoPDFobject=\count377
-\everyMPtoPDFconversion=\toks54
+\scratchcounter=\count391
+\scratchdimen=\dimen388
+\scratchbox=\box117
+\nofMPsegments=\count392
+\nofMParguments=\count393
+\everyMPshowfont=\toks72
+\MPscratchCnt=\count394
+\MPscratchDim=\dimen389
+\MPnumerator=\count395
+\makeMPintoPDFobject=\count396
+\everyMPtoPDFconversion=\toks73
 )
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-) ABD: EveryShipout initializing macros
+)
+\AtBeginShipoutBox=\box118
+Package hyperref Info: Link coloring OFF on input line 109.
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count397
+)
+LaTeX Info: Redefining \ref on input line 109.
+LaTeX Info: Redefining \pageref on input line 109.
+LaTeX Info: Redefining \nameref on input line 109.
+ (AlgebraLineal.out) (AlgebraLineal.out)
+\@outlinefile=\write4
+\openout4 = `AlgebraLineal.out'.
+
+
+ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 47.
+ on input line 109.
 
-LaTeX Info: Redefining \. on input line 47.
-LaTeX Info: Redefining \% on input line 47.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
-
+LaTeX Info: Redefining \. on input line 109.
+LaTeX Info: Redefining \% on input line 109.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 111
+.
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 111
+.
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 48
-.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
+11.
+
+(C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 11
+1.
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1358,119 +1571,47 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
 
-{C:/Users/jdbar/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]
-
-Package xcolor Warning: Incompatible color definition on input line 56.
-
-
-Package xcolor Warning: Incompatible color definition on input line 59.
-
-
-Package xcolor Warning: Incompatible color definition on input line 60.
+{C:/Users/jdbar/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2]pdfTeX warni
+ng (ext4): destination with the same identifier (name{page.1}) has been already
+ used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.149 \end{enumerate}
+                      [1
 
 
-Package xcolor Warning: Incompatible color definition on input line 72.
+]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.184 ...\mid ab\Rightarrow p\mid a \vee p\mid b$$
+                                                   [2]
+Overfull \hbox (0.10088pt too wide) detected at line 218
+\OML/cmm/m/it/10 p[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 p[] \OMS/cmsy/m/n/10 
+ []  \OML/cmm/m/it/10 p[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 q[] \OMS/cmsy/m/n
+/10  \OML/cmm/m/it/10 q[] \OMS/cmsy/m/n/10  []  \OML/cmm/m/it/10 q[] \OMS/cm
+sy/m/n/10 ) \OML/cmm/m/it/10 p[] \OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 q[] \OMS/c
+msy/m/n/10  []  \OML/cmm/m/it/10 q[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 p[] 
+\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 q[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 q[]
+ \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 p[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 k \
+OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 k \OT1/cmr/m/n/10 = 1[]
+ []
 
-
-Package xcolor Warning: Incompatible color definition on input line 81.
-
-[1
-
-
-]
-
-Package xcolor Warning: Incompatible color definition on input line 91.
-
-
-Package xcolor Warning: Incompatible color definition on input line 114.
-
-
-Package xcolor Warning: Incompatible color definition on input line 120.
-
-[2]
-
-Package xcolor Warning: Incompatible color definition on input line 139.
-
-
-Package xcolor Warning: Incompatible color definition on input line 164.
-
-[3]
-
-Package xcolor Warning: Incompatible color definition on input line 170.
-
-
-Package xcolor Warning: Incompatible color definition on input line 176.
-
-
-Package xcolor Warning: Incompatible color definition on input line 187.
-
-[4]
-Overfull \hbox (42.70432pt too wide) detected at line 229
+[3] [4]
+Overfull \hbox (42.70432pt too wide) detected at line 291
 []
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 237.
-
-[5]
-
-Package xcolor Warning: Incompatible color definition on input line 242.
-
-
-Package xcolor Warning: Incompatible color definition on input line 261.
-
-
-Package xcolor Warning: Incompatible color definition on input line 267.
-
-[6]
-Overfull \hbox (38.61932pt too wide) detected at line 309
+[5] [6]
+Overfull \hbox (38.61932pt too wide) detected at line 371
 \OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 []m[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 
 []m[] \OMS/cmsy/m/n/10 ) [] ) []
  []
 
+[7] [8] [9] [10
 
-Package xcolor Warning: Incompatible color definition on input line 316.
-
-
-Package xcolor Warning: Incompatible color definition on input line 317.
-
-[7]
-
-Package xcolor Warning: Incompatible color definition on input line 339.
-
-
-Package xcolor Warning: Incompatible color definition on input line 385.
-
-[8] [9] [10
-
-]
-
-Package xcolor Warning: Incompatible color definition on input line 430.
-
-
-Package xcolor Warning: Incompatible color definition on input line 440.
-
-
-Package xcolor Warning: Incompatible color definition on input line 444.
-
-
-Package xcolor Warning: Incompatible color definition on input line 446.
-
-
-Package xcolor Warning: Incompatible color definition on input line 451.
-
-[11]
-
-Package xcolor Warning: Incompatible color definition on input line 459.
-
-
-Package xcolor Warning: Incompatible color definition on input line 460.
-
-
-Package xcolor Warning: Incompatible color definition on input line 465.
-
-
-Overfull \hbox (29.32965pt too wide) detected at line 485
+] [11]
+Overfull \hbox (29.32965pt too wide) detected at line 547
 \OML/cmm/m/it/10 gr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10   \OT1/
 cmr/m/n/10 (\OML/cmm/m/it/10 a[]b[]x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 g\OT1/c
 mr/m/n/10 ) \OML/cmm/m/it/10 < n [] f \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 (\OML/
@@ -1484,20 +1625,14 @@ it/10 a[]b[]x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 q\OT1/cmr/m/n/10 )\OML/cmm/m
  []
 
 [12]
-
-Package xcolor Warning: Incompatible color definition on input line 488.
-
-<./fotos/division de polinomios.jpg, id=94, 196.48407pt x 115.93312pt>
+<./fotos/division de polinomios.jpg, id=148, 196.48407pt x 115.93312pt>
 File: ./fotos/division de polinomios.jpg Graphic file (type jpg)
 <use ./fotos/division de polinomios.jpg>
 Package pdftex.def Info: ./fotos/division de polinomios.jpg  used on input line
- 497.
+ 559.
 (pdftex.def)             Requested size: 186.6588pt x 110.13583pt.
 
-Package xcolor Warning: Incompatible color definition on input line 500.
-
-
-Overfull \hbox (30.49356pt too wide) detected at line 504
+Overfull \hbox (30.49356pt too wide) detected at line 566
 \OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/c
 mr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 v\OT1/cmr/m/n/10 (\OML/cmm/m/it
 /10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 gr\OT1/cmr/m/n/10 (1
@@ -1512,58 +1647,8 @@ n/10 = \OML/cmm/m/it/10 k; v \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 z \OT1/cmr/m/n/
 10 : \OML/cmm/m/it/10 k; z \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 R
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 506.
-
-[13 <./fotos/division de polinomios.jpg>]
-
-Package xcolor Warning: Incompatible color definition on input line 520.
-
-
-Package xcolor Warning: Incompatible color definition on input line 557.
-
-[14]
-
-Package xcolor Warning: Incompatible color definition on input line 574.
-
-
-Package xcolor Warning: Incompatible color definition on input line 587.
-
-[15]
-
-Package xcolor Warning: Incompatible color definition on input line 602.
-
-
-Package xcolor Warning: Incompatible color definition on input line 619.
-
-
-Package xcolor Warning: Incompatible color definition on input line 623.
-
-
-Package xcolor Warning: Incompatible color definition on input line 635.
-
-[16]
-
-Package xcolor Warning: Incompatible color definition on input line 638.
-
-
-Package xcolor Warning: Incompatible color definition on input line 641.
-
-
-Package xcolor Warning: Incompatible color definition on input line 657.
-
-
-Package xcolor Warning: Incompatible color definition on input line 667.
-
-[17]
-
-Package xcolor Warning: Incompatible color definition on input line 676.
-
-
-Package xcolor Warning: Incompatible color definition on input line 679.
-
-
-Overfull \hbox (33.71982pt too wide) detected at line 701
+[13 <./fotos/division de polinomios.jpg>] [14] [15] [16] [17]
+Overfull \hbox (33.71982pt too wide) detected at line 763
 \OT1/cmr/m/n/10 + : []0 = 0(\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/1
 0 2 \OML/cmm/m/it/10 F; [] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 g\OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ) = (\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 g\O
@@ -1572,7 +1657,7 @@ m/it/10 F[]
  []
 
 
-Overfull \hbox (13.05566pt too wide) detected at line 705
+Overfull \hbox (13.05566pt too wide) detected at line 767
 []\OML/cmm/m/it/10 mcd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + \
 OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + 1\OML/cmm/m/it/10 ; g\OT1/cmr/m/n/10 ) = 1 
 \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 k\OT1/cmr/m/n/10 (\OML/
@@ -1588,11 +1673,7 @@ n/10 ) = \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 )
  []
 
 [18]
-
-Package xcolor Warning: Incompatible color definition on input line 714.
-
-
-Overfull \hbox (2.14807pt too wide) detected at line 748
+Overfull \hbox (2.14807pt too wide) detected at line 810
 \OML/cmm/m/it/10 A \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = (\
 OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]C \OT1/cmr/m/n/10 + [
 ] + \OML/cmm/m/it/10 a[]C[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]C[]\OT1/cmr/m
@@ -1601,16 +1682,8 @@ m/n/10 + \OML/cmm/m/it/10 a[]CE[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]C[
 ]E[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]C[]E[] \OT1/cmr/m/n/10 =
  []
 
-[19]
-
-Package xcolor Warning: Incompatible color definition on input line 787.
-
-[20]
-
-Package xcolor Warning: Incompatible color definition on input line 792.
-
-
-Overfull \hbox (40.12227pt too wide) detected at line 793
+[19] [20]
+Overfull \hbox (40.12227pt too wide) detected at line 855
 \OML/cmm/m/it/10 f \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + \OM
 L/cmm/m/it/10 x \OT1/cmr/m/n/10 + 1 \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 Z[] \OMS/c
 msy/m/n/10 ) \OML/cmm/m/it/10 F \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OML/cmm/m/
@@ -1620,14 +1693,8 @@ it/10 a[]I \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]C \OT1/cmr/m/n/10 + \OML/cmm/m
  [] []
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 796.
-
-
-Package xcolor Warning: Incompatible color definition on input line 814.
-
 [21]
-Overfull \hbox (16.24274pt too wide) detected at line 839
+Overfull \hbox (16.24274pt too wide) detected at line 901
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/
 cmr/m/n/10 ) = \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]x[] \
 OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[] \
@@ -1635,136 +1702,96 @@ OMS/cmsy/m/n/10 ) []
  []
 
 [22]
-
-Package xcolor Warning: Incompatible color definition on input line 841.
-
-
-Package xcolor Warning: Incompatible color definition on input line 842.
-
-
-Package xcolor Warning: Incompatible color definition on input line 857.
-
-
-Package xcolor Warning: Incompatible color definition on input line 884.
-
-[23
+Package hyperref Info: bookmark level for unknown defi defaults to 0 on input l
+ine 907.
+Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
+ine 924.
+Package hyperref Info: bookmark level for unknown demo defaults to 0 on input l
+ine 936.
+ [23
 
 ]
-
-Package xcolor Warning: Incompatible color definition on input line 920.
-
-[24]
-
-Package xcolor Warning: Incompatible color definition on input line 942.
-
-
-Package xcolor Warning: Incompatible color definition on input line 957.
-
-[25]
-
-Package xcolor Warning: Incompatible color definition on input line 962.
-
-
-Package xcolor Warning: Incompatible color definition on input line 972.
-
-
-Overfull \hbox (21.05536pt too wide) detected at line 978
+Package hyperref Info: bookmark level for unknown ej defaults to 0 on input lin
+e 953.
+ [24]
+Package hyperref Info: bookmark level for unknown obs defaults to 0 on input li
+ne 992.
+ [25] [26]
+Overfull \hbox (34.38837pt too wide) detected at line 1087
 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 B \OT1
 /cmr/m/n/10 : \OML/cmm/m/it/10 v [] S \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 v \OT1
-/cmr/m/n/10 = \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \O
-T1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 v[];
- :::; v[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 S \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n
-/10 0[] = 1[]\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a[]v[] \OMS
-/cmsy/m/n/10   \OML/cmm/m/it/10 ::: \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a[]v[] 
-\OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 B[]
+/cmr/m/n/10 = \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a
+[]v[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 v[]; []  ; v[] \OMS/cmsy/m/n/10 2 \OML
+/cmm/m/it/10 S \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 0[] = 1[]\OML/cmm/m/it/10 v \
+OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a[]v[] \OMS/cmsy/m/n/10   []   \OML/cmm/m/it
+/10 a[]v[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 B[]
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 9
-82.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+091.
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 982.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1091.
 
-Overfull \hbox (49.34201pt too wide) detected at line 982
+
+Overfull \hbox (28.78647pt too wide) detected at line 1091
 \OMS/cmsy/m/n/10 ) 9\OML/cmm/m/it/10 i \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 a[] \
 OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = 0[] [] \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10
  6\OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 =
- \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[]a[]v[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/
-10 ::: \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a[][]a[]v[] \OMS/cmsy/m/n/10 ) \OML/
-cmm/m/it/10 S \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 B[]\OMS/cmsy/m/n/10 f\OML/cmm/
-m/it/10 v[]\OMS/cmsy/m/n/10 g[] ) \OT1/cmr/m/n/10 #
+ \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[]a[]v[] \OMS/cmsy/m/n/10   []   \OML/cmm/
+m/it/10 a[][]a[]v[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 S \OT1/cmr/m/n/10 = \OM
+L/cmm/m/it/10 B[]\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 v[]\OMS/cmsy/m/n/10 g[]
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 986.
-
-
-Package xcolor Warning: Incompatible color definition on input line 989.
-
-[26]
-
-Package xcolor Warning: Incompatible color definition on input line 998.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1021.
-
+Package hyperref Info: bookmark level for unknown theo defaults to 0 on input l
+ine 1100.
+Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
+ine 1107.
 [27]
+Overfull \hbox (21.79794pt too wide) in paragraph at lines 1166--1170
+[]$[] \OML/cmm/m/it/10 Mat[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 
+) = \OML/cmm/m/it/10 m \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 !
+ \OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 E[] \O
+T1/cmr/m/n/10 : 1 \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 i \OMS/cmsy/m/n/10  \OML
+/cmm/m/it/10 m \OMS/cmsy/m/n/10 ^ \OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10  \OML/cmm
+/m/it/10 j \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 n\OMS/cmsy/m/n/10 g \OT1/cmr/m/n
+/10 : \OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/
+10 ) []$ 
+ []
 
-Package xcolor Warning: Incompatible color definition on input line 1028.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1042.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1055.
-
-[28]
-
-Package xcolor Warning: Incompatible color definition on input line 1078.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1085.
-
-[29]
-
-Package xcolor Warning: Incompatible color definition on input line 1108.
-
-
-Overfull \hbox (48.03229pt too wide) detected at line 1118
+[28] [29]
+Overfull \hbox (58.58783pt too wide) detected at line 1243
 \OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 = \
 OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 : \O
-ML/cmm/m/it/10 w[]; w[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 W[] \OMS/cmsy/m/n/1
-0 ^ \OML/cmm/m/it/10 w[]; w[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 W[] \OMS/cmsy
-/m/n/10 ) \OML/cmm/m/it/10 w[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 w[] \OT1/cmr
-/m/n/10 = \OML/cmm/m/it/10 w[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 w[] \OMS/cms
-y/m/n/10 2 \OML/cmm/m/it/10 W[] \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/10 W[] \OT1/cm
-r/m/n/10 = 0 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 = \OML/cmm
-/m/it/10 w[] \OMS/cmsy/m/n/10 ^ \OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 = \OML/cmm
-/m/it/10 w[]
+ML/cmm/m/it/10 w[]; w[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 W[][]w[]; w[] \OMS/
+cmsy/m/n/10 2 \OML/cmm/m/it/10 W[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 w[] \OMS
+/cmsy/m/n/10   \OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 w[] \OMS
+/cmsy/m/n/10   \OML/cmm/m/it/10 w[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 W[] \OM
+S/cmsy/m/n/10 \ \OML/cmm/m/it/10 W[] \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 ) \OM
+L/cmm/m/it/10 w[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 w[][]w[] \OT1/cmr/m/n/10 =
+ \OML/cmm/m/it/10 w[]
  []
 
 [30]
-
-Package xcolor Warning: Incompatible color definition on input line 1165.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1172.
+Overfull \hbox (41.60953pt too wide) in paragraph at lines 1265--1270
+[]\OT1/cmr/m/n/10 Consideramos $\OML/cmm/m/it/10 V \OT1/cmr/m/n/10 = \OML/cmm/m
+/it/10 Mat[]\OT1/cmr/m/n/10 (\U/msb/m/n/10 R\OT1/cmr/m/n/10 )$ por lo que una b
+a-se sera $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = []$.
+ []
 
 [31]
-Overfull \hbox (42.77196pt too wide) detected at line 1178
-\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ([]) + \OML/cmm/m/it/10 :
-:: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ([]) = (\OML/cmm/m/it/
-10 a[]x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/i
-t/10 a[]x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 + \OML/cmm/m/i
-t/10 ::: \OT1/cmr/m/n/10 + (\OML/cmm/m/it/10 a[]x[] \OT1/cmr/m/n/10 + \OML/cmm/
-m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]x[]\OT1/cmr/m/n/10 )\OML/cmm/
-m/it/10 v[] \OMS/cmsy/m/n/10 ,
+Overfull \hbox (62.77147pt too wide) detected at line 1314
+\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ([]) + [] + \OML/cmm/m/it
+/10 x[]\OT1/cmr/m/n/10 ([]) = (\OML/cmm/m/it/10 a[]x[] \OT1/cmr/m/n/10 + [] + \
+OML/cmm/m/it/10 a[]x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 + [
+] + (\OML/cmm/m/it/10 a[]x[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]x[]\OT1
+/cmr/m/n/10 )\OML/cmm/m/it/10 v[] \OMS/cmsy/m/n/10 ,
  []
 
 
-Overfull \hbox (31.61302pt too wide) detected at line 1187
+Overfull \hbox (31.61302pt too wide) detected at line 1321
 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 =
  \OML/cmm/m/it/10 P \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 Q \OMS/cmsy/m/n/10  []
  , \OT1/cmr/m/n/10 0 = (\OML/cmm/m/it/10 PQ \OMS/cmsy/m/n/10   \OML/cmm/m/it/10
@@ -1774,8 +1801,8 @@ Overfull \hbox (31.61302pt too wide) detected at line 1187
 \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Q
  []
 
-
-Overfull \hbox (61.76495pt too wide) detected at line 1192
+[32]
+Overfull \hbox (61.76495pt too wide) detected at line 1334
 \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + 2\O
 ML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (2\OM
 L/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 ) = 0 \
@@ -1789,33 +1816,14 @@ mr/m/n/10 3\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 ) \OML/cmm
 /m/it/10 a[] \OT1/cmr/m/n/10 = 0 = \OML/cmm/m/it/10 a[]
  []
 
-
-Overfull \hbox (44.92386pt too wide) detected at line 1215
-[] \OMS/cmsy/m/n/10 ) [] ) \OML/cmm/m/it/10 M\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
-B[]; B[]\OT1/cmr/m/n/10 ) = []
- []
-
-[32]
-
-Package xcolor Warning: Incompatible color definition on input line 1227.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1228.
-
-<./fotos/clase lateral.png, id=162, 636.3775pt x 602.25pt>
+[33]
+<./fotos/clase lateral.png, id=350, 636.3775pt x 602.25pt>
 File: ./fotos/clase lateral.png Graphic file (type png)
 <use ./fotos/clase lateral.png>
-Package pdftex.def Info: ./fotos/clase lateral.png  used on input line 1248.
+Package pdftex.def Info: ./fotos/clase lateral.png  used on input line 1390.
 (pdftex.def)             Requested size: 159.09398pt x 150.56212pt.
-
-Package xcolor Warning: Incompatible color definition on input line 1251.
-
-[33 <./fotos/clase lateral.png>]
-
-Package xcolor Warning: Incompatible color definition on input line 1262.
-
-
-Overfull \hbox (56.00188pt too wide) detected at line 1272
+ [34 <./fotos/clase lateral.png>]
+Overfull \hbox (56.00188pt too wide) detected at line 1427
 \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[] \OT1/cmr
 /m/n/10 = \OML/cmm/m/it/10 a[]w[] \OT1/cmr/m/n/10 + [] \OML/cmm/m/it/10 a[]w[] 
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it
@@ -1824,25 +1832,14 @@ Overfull \hbox (56.00188pt too wide) detected at line 1272
  []
 
 
-Overfull \hbox (50.9144pt too wide) detected at line 1275
+Overfull \hbox (50.9144pt too wide) detected at line 1430
 \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 V \OT1
 /cmr/m/n/10 : [] = [] = [] + \OML/cmm/m/it/10 a[][][] \OT1/cmr/m/n/10 + [] \OML
 /cmm/m/it/10 a[][][] \OT1/cmr/m/n/10 =
  []
 
-[34]
-
-Package xcolor Warning: Incompatible color definition on input line 1296.
-
-[35]
-
-Package xcolor Warning: Incompatible color definition on input line 1346.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1352.
-
-[36]
-Overfull \hbox (81.94754pt too wide) detected at line 1406
+[35] [36] [37]
+Overfull \hbox (81.94754pt too wide) detected at line 1572
 \OML/cmm/m/it/10 ' \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 V [][]\OMS/cmsy/m/n/10 ! 
 \OML/cmm/m/it/10 V[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 W \OT1/cmr/m/n/10 = \O
 MS/cmsy/m/n/10 f\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 V \OT1/c
@@ -1854,7 +1851,7 @@ m/n/10 ) = 0\OMS/cmsy/m/n/10 g )
  []
 
 
-Overfull \hbox (73.60463pt too wide) detected at line 1407
+Overfull \hbox (73.60463pt too wide) detected at line 1573
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 W \OM
 S/cmsy/m/n/10 _ \OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 U \OT1/c
 mr/m/n/10 : \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/1
@@ -1871,24 +1868,23 @@ cmr/m/n/10 : \OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 w \OT1/cmr/m
 /10 V
  []
 
-[37]
-Overfull \hbox (63.03159pt too wide) detected at line 1427
-\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Ker\OT1/cmr/m/n/10 (\OML
-/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OML/cmm/m/it/10 v \OT1/cmr/
-m/n/10 = \OML/cmm/m/it/10 w \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 u \OMS/cmsy/m/n/
-10 ) \OML/cmm/m/it/10 w \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = 
-\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = 0 = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OM
-L/cmm/m/it/10 v\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 w \OMS/cmsy/m/n/10   \OML/c
-mm/m/it/10 u \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m
-/it/10 w \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/
-10 w \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 U \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/10 
-W \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0\OMS/cmsy/m/n/10 g ) \OM
-L/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 w \OT1/cmr/m/n/10 = 0 = \OML
-/cmm/m/it/10 v
+
+Overfull \hbox (57.73875pt too wide) detected at line 1593
+\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1
+/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = \OML/cmm/
+m/it/10 w \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 ) \OML/cmm/m/it
+/10 w \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 v
+ \OT1/cmr/m/n/10 = 0 = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT
+1/cmr/m/n/10 ) = \OML/cmm/m/it/10 w \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 u \OMS/
+cmsy/m/n/10 ) \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 w \OMS/cmsy
+/m/n/10 ) \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 w \OMS/cmsy/m/n
+/10 2 \OML/cmm/m/it/10 U \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/10 W \OT1/cmr/m/n/10 
+= \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0\OMS/cmsy/m/n/10 g ) \OML/cmm/m/it/10 u \O
+T1/cmr/m/n/10 = \OML/cmm/m/it/10 w \OT1/cmr/m/n/10 = 0 = \OML/cmm/m/it/10 v
  []
 
-
-Overfull \hbox (79.15355pt too wide) detected at line 1442
+[38]
+Overfull \hbox (79.15355pt too wide) detected at line 1608
 \OML/cmm/m/it/10 ' \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 V [][]\OMS/cmsy/m/n/10 ! 
 \OML/cmm/m/it/10 V[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 W \OT1/cmr/m/n/10 = \O
 MS/cmsy/m/n/10 f\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 V \OT1/c
@@ -1900,7 +1896,7 @@ m/n/10 ) = \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 v\OMS/cmsy/m/n/10 g )
  []
 
 
-Overfull \hbox (73.60463pt too wide) detected at line 1443
+Overfull \hbox (73.60463pt too wide) detected at line 1609
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 W \OM
 S/cmsy/m/n/10 _ \OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 U \OT1/c
 mr/m/n/10 : \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/1
@@ -1918,304 +1914,191 @@ cmr/m/n/10 : \OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 w \OT1/cmr/m
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1449.
-
-[38]
-
-Package xcolor Warning: Incompatible color definition on input line 1460.
-
-
-Overfull \hbox (66.84239pt too wide) detected at line 1470
-\OML/cmm/m/it/10 w \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 b[]; :::; b[]\OT1/cmr/m/
-n/10 )[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 v \OT1/cmr/m/n/10 + \OML/cmm/m/it/
-10 w \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10
- b[]; :::; a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 b[]\OT1/cmr/m/n/10 )[] \OMS/c
-msy/m/n/10 ) \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v \OT1/cmr/m/n
-/10 + \OML/cmm/m/it/10 w\OT1/cmr/m/n/10 ) = [](\OML/cmm/m/it/10 a[] \OT1/cmr/m/
-n/10 + \OML/cmm/m/it/10 b[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 v[] \OT1/cmr/m/n/1
-0 = [] \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] \OML/cmm/m/it/10 b[]v[] \OT
-1/cmr/m/n/10 = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/
-n/10 ) + \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 w\OT1/cmr/m/n/10 )
-
+Overfull \hbox (80.1754pt too wide) detected at line 1637
+\OML/cmm/m/it/10 w \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 b[]; []  ; b[]\OT1/cmr/m
+/n/10 )[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 v \OT1/cmr/m/n/10 + \OML/cmm/m/it
+/10 w \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/1
+0 b[]; []  ; a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 b[]\OT1/cmr/m/n/10 )[] \OMS
+/cmsy/m/n/10 ) \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v \OT1/cmr/m
+/n/10 + \OML/cmm/m/it/10 w\OT1/cmr/m/n/10 ) = [](\OML/cmm/m/it/10 a[] \OT1/cmr/
+m/n/10 + \OML/cmm/m/it/10 b[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 v[] \OT1/cmr/m/n
+/10 = [] \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] \OML/cmm/m/it/10 b[]v[] \
+OT1/cmr/m/n/10 = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/
+m/n/10 ) + \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 w\OT1/cmr/m/n/10
+ )
  []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1485.
 
 [39]
-Overfull \hbox (42.30942pt too wide) detected at line 1493
+Overfull \hbox (55.64243pt too wide) detected at line 1663
 \OML/cmm/m/it/10 v[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 V [] v[] \OT1/cmr/m/n/
 10 = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 ) = \
-OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + \OM
-L/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]v[]\OT1/cmr/m/n/10 ) = 
-\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) + \
-OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OM
-L/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) f\OML/cmm/m/it/10 \OT1/c
-mr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; :::; \OT1/c
-mr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g[]
+OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] 
++ \OML/cmm/m/it/10 a[]v[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/
+10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 a[]\OT1/cmr/
+m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) f\OML/cmm/m/it
+/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [
+]  ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g[
+]
  []
 
 
-Overfull \hbox (67.86285pt too wide) detected at line 1495
+Overfull \hbox (75.90303pt too wide) detected at line 1665
 \OT1/cmr/m/n/10 0 = \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\
-OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 \OT1
-/cmr/m/n/10 (\OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT
-1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]v[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML
-/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \O
-ML/cmm/m/it/10 a[]v[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Ker\OT1/cmr/m/n/10 (\
-OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0\OMS/cm
-sy/m/n/10 g ) \OT1/cmr/m/n/10 0 = \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + \OM
-L/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 = 0
-
+OT1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
+v[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]v
+[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/
+n/10 ) \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[] \
+OMS/cmsy/m/n/10 2 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = \OMS
+/cmsy/m/n/10 f\OT1/cmr/m/n/10 0\OMS/cmsy/m/n/10 g ) \OT1/cmr/m/n/10 0 = \OML/cm
+m/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10
+ = 0
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 1509.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1518.
-
-
-Overfull \hbox (17.04257pt too wide) in paragraph at lines 1527--1527
-[]$[] \OMS/cmsy/m/n/10 ) [][] \OML/cmm/m/it/10 Ker\OT1/cmr/m/n/10 (\OML/cmm/m/i
-t/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 n$\OT1/cmr/m/n/10 ,
- por tan-to eli-jo una ba-se de V: $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OMS/c
-msy/m/n/10 f\OML/cmm/m/it/10 v[]; :::; v[]; []\OMS/cmsy/m/n/10 g$\OT1/cmr/m/n/1
-0 .
- []
-
+Package hyperref Info: bookmark level for unknown coro defaults to 0 on input l
+ine 1679.
 [40]
-Overfull \hbox (5.29802pt too wide) detected at line 1534
-\OT1/cmr/m/n/10 0 = \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\
-OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 \OT1
-/cmr/m/n/10 (\OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT
-1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]v[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML
-/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \O
-ML/cmm/m/it/10 a[]v[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Ker\OT1/cmr/m/n/10 (\
-OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 a[]v[] \
-OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]v[]
- \OT1/cmr/m/n/10 =
+Overfull \hbox (39.65382pt too wide) detected at line 1703
+\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/
+10 a[]v[] \OMS/cmsy/m/n/10 , \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OM
+L/cmm/m/it/10 a[]v[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a[]v[] \OMS/cmsy/m/n/1
+0   []   \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 ) \OML/cm
+m/m/it/10 a[] \OT1/cmr/m/n/10 = [] = \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = \OM
+L/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = [] = \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 =
+ 0
  []
 
 
-Overfull \hbox (47.9876pt too wide) detected at line 1535
-\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::
-: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]v[] \OMS/cmsy/m/n/10 , \OML/cmm/m/it/10
- a[]v[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/
-10 a[]v[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a[]v[] \OMS/cmsy/m/n/10   \OML/cm
-m/m/it/10 ::: \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 = 0 \O
-MS/cmsy/m/n/10 ) \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ::: \O
-T1/cmr/m/n/10 = \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a[] \OT
-1/cmr/m/n/10 = \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a[] \OT1
-/cmr/m/n/10 = 0
+Overfull \hbox (0.64601pt too wide) detected at line 1713
+[] \OML/cmm/m/it/10 V \OT1/cmr/m/n/10 = [] [](\OML/cmm/m/it/10 \OT1/cmr/m/n/10
+ ) + [] \OML/cmm/m/it/10 Im\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )
+ \OMS/cmsy/m/n/10 , [] \OML/cmm/m/it/10 V \OMS/cmsy/m/n/10   [] []\OT1/cmr/m/n/
+10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = [] \OML/cmm/m/it/10 Im\OT1/cmr/m/n/10
+ (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 , [] \OML/cmm/m/it/10 V=
+ []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = [] \OML/cmm/m/it/10 I
+m\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )
  []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1538.
-
-
-Overfull \hbox (14.85788pt too wide) detected at line 1545
-[] \OML/cmm/m/it/10 V \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 Ker\OT1/cmr/m/n/10 
-(\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) + [] \OML/cmm/m/it/10 Im\OT1/cmr/m/n/10 (\
-OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 , [] \OML/cmm/m/it/10 V \OM
-S/cmsy/m/n/10   [] \OML/cmm/m/it/10 Ker\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/
-cmr/m/n/10 ) = [] \OML/cmm/m/it/10 Im\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cm
-r/m/n/10 ) \OMS/cmsy/m/n/10 , [] \OML/cmm/m/it/10 V=Ker\OT1/cmr/m/n/10 (\OML/cm
-m/m/it/10 \OT1/cmr/m/n/10 ) = [] \OML/cmm/m/it/10 Im\OT1/cmr/m/n/10 (\OML/cmm/
-m/it/10 \OT1/cmr/m/n/10 )
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1558.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1566.
 
 [41]
-Overfull \hbox (21.16881pt too wide) detected at line 1579
+Overfull \hbox (13.35391pt too wide) detected at line 1740
+\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]v[] \OT1/cmr/m/n/10 + []
+ + \OML/cmm/m/it/10 x[]v[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 x[]\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 x[]\OT1/cmr
+/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 x[]\OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[]\O
+T1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[
+]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[]\OT1/cmr/m/n/10 ) =
+ []
+
+
+Overfull \hbox (39.5017pt too wide) detected at line 1742
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cm
 r/m/n/10 ) = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]v[] \OT1/cm
-r/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 x[]v[]\OT1/c
-mr/m/n/10 ) = (\OML/cmm/m/it/10 a[]x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \
-OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 v[] \
-OT1/cmr/m/n/10 + \OML/cmm/m/it/10 :::\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]x[] \
-OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]x[]
-\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 x[]v[]
- \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 x[]v
-[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 v[]
+r/m/n/10 + [] + \OML/cmm/m/it/10 x[]v[]\OT1/cmr/m/n/10 ) = (\OML/cmm/m/it/10 a[
+]x[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]x[]\OT1/cmr/m/n/10 )\OML/cmm/m/
+it/10 v[] \OT1/cmr/m/n/10 + [] (\OML/cmm/m/it/10 a[]x[] \OT1/cmr/m/n/10 + [] + 
+\OML/cmm/m/it/10 a[]x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 = 
+\OML/cmm/m/it/10 x[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 x[]v[] \OT1/cmr
+/m/n/10 = \OML/cmm/m/it/10 v[]
  []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1599.
 
 [42]
-Overfull \hbox (19.60757pt too wide) detected at line 1625
-\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Ker\OT1/cmr/m/n/10 (\OML
-/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 (\OML/cmm/m
-/it/10 \OT1/cmr/m/n/10 ) = 0 \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 (\OML/cmm/m/i
-t/10 \OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 Mat[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/
-10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OM
-L/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 = \OM
-L/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) = 0 \OMS/
-cmsy/m/n/10 ) \OML/cmm/m/it/10  \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 ) \OML/cm
-m/m/it/10 Inyectiva
+Overfull \hbox (17.648pt too wide) detected at line 1789
+\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1
+/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m
+/n/10 ) = 0 \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n
+/10 ) = \OML/cmm/m/it/10 Mat[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/1
+0 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\
+OT1/cmr/m/n/10 ) = [] = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]
+\OT1/cmr/m/n/10 ) = 0 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10  \OT1/cmr/m/n/10 = 0
+ \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 Inyectiva
  []
 
 
-Overfull \hbox (63.4383pt too wide) detected at line 1629
+Overfull \hbox (66.77155pt too wide) detected at line 1793
 \OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Mat
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) 9\OML
 /cmm/m/it/10  \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 V [][]\OMS/cmsy/m/n/10 ! \OML
 /cmm/m/it/10 V[][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) = \OM
-L/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \
-OML/cmm/m/it/10 a[]v[] \OMS/cmsy/m/n/10 ) 9\OT1/cmr/m/n/10 !\OML/cmm/m/it/10  
-\OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 Sobre
+L/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[] \OMS/cmsy/m
+/n/10 ) 9\OT1/cmr/m/n/10 !\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/1
+0 Sobre
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 1639.
-
-
-Overfull \hbox (56.96774pt too wide) detected at line 1641
-\OML/cmm/m/it/10 A[] \U/msb/m/n/10 s \OML/cmm/m/it/10 A[] \OMS/cmsy/m/n/10 , 9\
-OML/cmm/m/it/10  \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 V [][]\OMS/cmsy/m/n/10 ! \
-OML/cmm/m/it/10 V[][]B[]; B[][]V[]B[]; B[][]V[] \OT1/cmr/m/n/10 : \OML/cmm/m/it
-/10 A[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
- \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OML/cmm/m/it/10 A[] \OT1/cmr/m/n/10 = \
-OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )
- []
-
-<./fotos/Matrices equivalentes.jpeg, id=197, 795.72281pt x 201.75375pt>
-File: ./fotos/Matrices equivalentes.jpeg Graphic file (type jpg)
-<use ./fotos/Matrices equivalentes.jpeg>
-Package pdftex.def Info: ./fotos/Matrices equivalentes.jpeg  used on input line
- 1650.
-(pdftex.def)             Requested size: 278.50714pt x 70.61487pt.
-[43]
-
-Package xcolor Warning: Incompatible color definition on input line 1661.
-
-
-Overfull \hbox (47.08163pt too wide) detected at line 1684
+[43] [44]
+Overfull \hbox (53.74814pt too wide) detected at line 1856
 \OMS/cmsy/m/n/10 ) [] ) \OML/cmm/m/it/10 P \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/1
 0 = [] \OMS/cmsy/m/n/10 , [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P[] \OMS/cmsy/m
 /n/10  [] \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 ) 8\OML/cmm/m/it/10 i \OT1/cmr/
-m/n/10 = 0\OML/cmm/m/it/10 ; :::; n \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 a[] \OT1
-/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 )
+m/n/10 = 0\OML/cmm/m/it/10 ; []  ; n \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 a[] \OT
+1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 )
  []
-
-[44 <./fotos/Matrices equivalentes.jpeg>]
-
-Package xcolor Warning: Incompatible color definition on input line 1691.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1701.
-
-
-Overfull \hbox (55.23303pt too wide) detected at line 1712
-\OT1/cmr/m/n/10 0 = \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]w[
-] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]
-w[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 
-[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]w[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 
-::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]w[]\OT1/cmr/m/n/10 ) = (\OML/cmm/m/it
-/10 []a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/
-it/10 []a[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 + \OML/cmm/m/
-it/10 ::: \OT1/cmr/m/n/10 + (\OML/cmm/m/it/10 []a[] \OT1/cmr/m/n/10 + \OML/cmm
-/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 []a[]\OT1/cmr/m/n/10 )\OML/cmm
-/m/it/10 w[] \OMS/cmsy/m/n/10 )
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1720.
 
 [45]
-Overfull \hbox (23.29362pt too wide) detected at line 1727
+Overfull \hbox (75.23254pt too wide) detected at line 1888
+\OT1/cmr/m/n/10 0 = \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]w[
+] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]w[]\OT1/cmr/m/n/10 ) + [] + \OML/c
+mm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]w[] \OT1/cmr/m/n/10 + [] + \
+OML/cmm/m/it/10 a[]w[]\OT1/cmr/m/n/10 ) = (\OML/cmm/m/it/10 []a[] \OT1/cmr/m/n
+/10 + [] + \OML/cmm/m/it/10 []a[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 w[] \OT1/cm
+r/m/n/10 + [] + (\OML/cmm/m/it/10 []a[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/1
+0 []a[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 w[] \OMS/cmsy/m/n/10 )
+ []
+
+
+Overfull \hbox (43.29314pt too wide) detected at line 1907
 \OML/cmm/m/it/10 rg\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = [] \O
 ML/cmm/m/it/10 Im\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = [] \OML
 /cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it
-/10 v[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; :::; \OT1/cmr/m/n/10 (\OML/cmm/m/it
-/10 v[]\OT1/cmr/m/n/10 )) = [] \OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it
-/10 a[]v[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/
-it/10 a[]v[]; :::; a[]v[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/1
-0 + \OML/cmm/m/it/10 a[]v[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 rg\OT1/cmr/m/n/
-10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 )
+/10 v[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; []  ; \OT1/cmr/m/n/10 (\OML/cmm/m/i
+t/10 v[]\OT1/cmr/m/n/10 )) = [] \OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/i
+t/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[]; []  ; a[]v[] \OT1/c
+mr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 rg
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 )
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1729.
-
-
-Overfull \hbox (31.06885pt too wide) detected at line 1737
+Overfull \hbox (39.10902pt too wide) detected at line 1917
 \OT1/cmr/m/n/10 0 = \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 w[]\
-OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 w[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 \OT1
-/cmr/m/n/10 (\OML/cmm/m/it/10 a[]w[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT
-1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]w[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 \OT
-1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]w[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \O
-T1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]w[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OM
-L/cmm/m/it/10 v \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a[]w[] \OT1/cmr/m/n/10 + \OM
-L/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]w[] \OMS/cmsy/m/n/10 2 
-\OML/cmm/m/it/10 Ker\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/c
-msy/m/n/10 )
+OT1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
+w[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]w
+[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]w[]\OT1/cmr/m/n/10 ) = \OML/cmm/m
+/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]w[] \OT1/cmr/m/n/10 + [] + \OML/cm
+m/m/it/10 a[]w[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 v \OT1/cm
+r/m/n/10 = \OML/cmm/m/it/10 a[]w[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]w
+[] \OMS/cmsy/m/n/10 2 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \O
+MS/cmsy/m/n/10 )
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 1754.
-
-[46]
-
-Package xcolor Warning: Incompatible color definition on input line 1768.
-
-
-Overfull \hbox (25.90347pt too wide) detected at line 1773
-\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10  [] ) [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/1
-0 Q \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 A \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 P
- \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 P \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Gl[]\
-OT1/cmr/m/n/10 (\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; Q \OMS/cm
-sy/m/n/10 2 \OML/cmm/m/it/10 Gl[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 K\OT1/cmr/m/
-n/10 ) \OMS/cmsy/m/n/10 ) [][] \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 QAP\OT1/cmr/
-m/n/10 )[]
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 1782.
-
-
-Overfull \hbox (45.25423pt too wide) detected at line 1796
+[46] [47]
+Overfull \hbox (48.58748pt too wide) detected at line 1975
 \OML/cmm/m/it/10 rg\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ) = \OML/
 cmm/m/it/10 n \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OML/cmm/
 m/it/10 B[][]B[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 p[]e[] \O
-T1/cmr/m/n/10 + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 e[]p[]\
-OMS/cmsy/m/n/10 g[] )
+T1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 e[]p[]\OMS/cmsy/m/n/10 g[] )
  []
 
-[47] [48]
+[48] [49
 
-Package xcolor Warning: Incompatible color definition on input line 1801.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1816.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1836.
-
-[49
-
-]
-
-Package xcolor Warning: Incompatible color definition on input line 1882.
-
-[50]
-<./fotos/Sistema asociado.png, id=223, 477.28313pt x 451.6875pt>
+] [50]
+<./fotos/Sistema asociado.png, id=497, 477.28313pt x 451.6875pt>
 File: ./fotos/Sistema asociado.png Graphic file (type png)
 <use ./fotos/Sistema asociado.png>
-Package pdftex.def Info: ./fotos/Sistema asociado.png  used on input line 1908.
+Package pdftex.def Info: ./fotos/Sistema asociado.png  used on input line 2088.
 
 (pdftex.def)             Requested size: 214.77542pt x 203.25749pt.
- [51 <./fotos/Sistema asociado.png>]
-Overfull \hbox (20.63184pt too wide) detected at line 1921
+
+Overfull \hbox (9.37645pt too wide) detected at line 2100
+\OT1/cmr/m/n/10 [](\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 6\OT1/
+cmr/m/n/10 = \OMS/cmsy/m/n/10 ; , \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b[]; []  ; 
+b[]\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Im\OT1/cmr/m/n/10 (\
+OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 , \OML/cmm/m/it/10 b[]e[] \
+OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 b[]e[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/
+10 Im\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 L 
+[] \OMS/cmsy/m/n/10 ,
+ []
+
+[51 <./fotos/Sistema asociado.png>]
+Overfull \hbox (30.63159pt too wide) detected at line 2101
 \OMS/cmsy/m/n/10 , \OML/cmm/m/it/10 L [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Im\
 OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 , [] \OML/
 cmm/m/it/10 L \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 Im\OT1/cmr/m/n/10 (\OML/cmm
@@ -2226,48 +2109,19 @@ msy/m/n/10 ,
  []
 
 
-Overfull \hbox (28.52031pt too wide) detected at line 1935
+Overfull \hbox (35.18681pt too wide) detected at line 2115
 \OML/cmm/m/it/10 A \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 B; 
 A \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 
-(\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]; :::; a[] \OT1/cmr
-/m/n/10 + \OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 \OT1/cmr/m/n
-/10 [](\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10
- A \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 = [] = []
+(\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]; []  ; a[] \OT1/cm
+r/m/n/10 + \OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 \OT1/cmr/m/
+n/10 [](\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/1
+0 A \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 = [] = []
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 1938.
-
-[52]
-
-Package xcolor Warning: Incompatible color definition on input line 1944.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1947.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1955.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1956.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1966.
-
-[53
+[52] [53
 
 ]
-
-Package xcolor Warning: Incompatible color definition on input line 1970.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1988.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1995.
-
-
-Overfull \hbox (15.13637pt too wide) in paragraph at lines 2003--2004
+Overfull \hbox (15.13637pt too wide) in paragraph at lines 2183--2184
 []\OT1/cmr/m/n/10 Si $\OML/cmm/m/it/10 $ \OT1/cmr/m/n/10 es si-metra, en-ton
 -ces te-ne-mos que: $\OML/cmm/m/it/10 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 id
  \OMS/cmsy/m/n/10 , \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10   \O
@@ -2275,15 +2129,8 @@ T1/cmr/m/n/10 1)(\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = 0 \OMS/cmsy/m/n/10 , []$
 \OT1/cmr/m/n/10 . 
  []
 
-[54]
-
-Package xcolor Warning: Incompatible color definition on input line 2007.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2029.
-
-[55]
-Overfull \hbox (13.56836pt too wide) detected at line 2041
+[54] [55]
+Overfull \hbox (13.56836pt too wide) detected at line 2221
 [] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) = [] (\OML/cmm/m/it/1
 0 v[]\OT1/cmr/m/n/10 ) = [\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
  \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 (\OM
@@ -2293,130 +2140,39 @@ mm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(0) = 0 \OMS/
 cmsy/m/n/10 ) [] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) == 0
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 2045.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2053.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2054.
-
-[56]
-
-Package xcolor Warning: Incompatible color definition on input line 2074.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2089.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2098.
-
-[57]
-
-Package xcolor Warning: Incompatible color definition on input line 2108.
-
-[58] [59]
-
-Package xcolor Warning: Incompatible color definition on input line 2198.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2219.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2220.
-
-[60]
-
-Package xcolor Warning: Incompatible color definition on input line 2232.
-
-[61]
-
-Package xcolor Warning: Incompatible color definition on input line 2265.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2278.
-
-
-Overfull \hbox (47.25896pt too wide) detected at line 2293
+[56] [57] [58] [59] [60] [61]
+Overfull \hbox (57.25871pt too wide) detected at line 2473
 \OT1/cmr/m/n/10 [(\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT
-1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 ::: \OMS/cmsy/m/n/10  \OT1/
+1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  []  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OMS
+/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )](\OML/cmm/m/it/10 \OT1/cm
+r/m/n/10 )(\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) = [(\OML/cmm/m/it/10 x \OMS/cm
+sy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  []  \OT1/
 cmr/m/n/10 (\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/
-m/n/10 )](\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/
-10 ) = [(\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n
-/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 ::: \OMS/cmsy/m/n/10  \OT1/cmr/m/n/1
-0 (\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )(
-\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )](\O
-ML/cmm/m/it/10 \OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) = [(\OM
-L/cmm/m/it/10  \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []id\OT1/cmr/m/n/10 ) \OMS
-/cmsy/m/n/10  \OML/cmm/m/it/10 ::: \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 (\OML/cm
-m/m/it/10  \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []id\OT1/cmr/m/n/10 )]([]) = 0
-
+m/n/10 )(\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n
+/10 )](\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 
+) = [(\OML/cmm/m/it/10  \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []id\OT1/cmr/m/n/
+10 ) \OMS/cmsy/m/n/10  []  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10  \OMS/cmsy/m/n/
+10   \OML/cmm/m/it/10 []id\OT1/cmr/m/n/10 )]([]) = 0
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 2296.
-
-[62]
-
-Package xcolor Warning: Incompatible color definition on input line 2299.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2328.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2334.
-
-[63]
-
-Package xcolor Warning: Incompatible color definition on input line 2348.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2362.
-
-[64]
-
-Package xcolor Warning: Incompatible color definition on input line 2402.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2407.
-
-[65]
-
-Package xcolor Warning: Incompatible color definition on input line 2454.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2455.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2463.
-
-[66]
-
-Package xcolor Warning: Incompatible color definition on input line 2472.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2478.
-
-
-Overfull \hbox (37.46036pt too wide) detected at line 2487
+[62] [63] [64] [65] [66]
+Overfull \hbox (50.79337pt too wide) detected at line 2667
 \OML/cmm/m/it/10 g \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 g[]h[] \OMS/cmsy/m/n/10 )
- \OML/cmm/m/it/10 mcd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h[]; :::; h[]\OT1/cmr/m/
-n/10 ) = 1 \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 h[]\OT1/cmr/
-m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 
-(\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ::: \OT1/cmr/m/n/10 + \
-OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm
-/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/
-10 ) \OML/cmm/m/it/10 id[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 h[]\OT1/cmr/m/n/1
-0 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[]\
-OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ::: \OT1
-/cmr/m/n/10 + \OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m
-/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
-0 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 )
+ \OML/cmm/m/it/10 mcd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h[]; []  ; h[]\OT1/cmr/m
+/n/10 ) = 1 \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 h[]\OT1/cmr
+/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10
+ (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 h[]\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML
+/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 id[] \OT1/c
+mr/m/n/10 = \OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n
+/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
+\OT1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
+ \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OM
+L/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 )
  []
 
 
-Overfull \hbox (60.22202pt too wide) detected at line 2491
+Overfull \hbox (60.22202pt too wide) detected at line 2671
 \OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(\OML/c
 mm/m/it/10 v[]\OT1/cmr/m/n/10 ) = [\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cm
 m/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 h[]\OT1/cmr/m/
@@ -2435,7 +2191,7 @@ OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(0) = 0
  []
 
 
-Overfull \hbox (14.96294pt too wide) detected at line 2497
+Overfull \hbox (14.96294pt too wide) detected at line 2677
 \OML/cmm/m/it/10 mcd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]; h[]\OT1/cmr/m/n/10 )
  = 1 \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/
@@ -2451,22 +2207,8 @@ T1/cmr/m/n/10 ) = 0 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 = 0
 
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 2499.
-
-[67]
-
-Package xcolor Warning: Incompatible color definition on input line 2513.
-
-[68]
-
-Package xcolor Warning: Incompatible color definition on input line 2545.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2546.
-
-
-Overfull \hbox (29.13718pt too wide) detected at line 2557
+[67] [68]
+Overfull \hbox (29.13718pt too wide) detected at line 2737
 \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(\OML/cmm
 /m/it/10 v\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 L[]\OT1/cmr/m/n
 /10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 \
@@ -2480,11 +2222,8 @@ n/10 )2 \OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10
 )
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 2567.
-
 [69] [70]
-Overfull \hbox (60.9924pt too wide) detected at line 2619
+Overfull \hbox (60.9924pt too wide) detected at line 2799
 \OT1/cmr/m/n/10 0 = \OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1
 /cmr/m/n/10 )(\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 g[]
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 v[]\OT1/c
@@ -2497,22 +2236,8 @@ mr/m/n/10 ) \OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cmm/m
 /m/it/10 g[]\OT1/cmr/m/n/10 ([])([]) \OMS/cmsy/m/n/10 )
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 2627.
-
-[71]
-
-Package xcolor Warning: Incompatible color definition on input line 2658.
-
-[72]
-
-Package xcolor Warning: Incompatible color definition on input line 2688.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2699.
-
-
-Overfull \hbox (22.45467pt too wide) in paragraph at lines 2710--2712
+[71] [72]
+Overfull \hbox (22.45467pt too wide) in paragraph at lines 2890--2892
 \OT1/cmr/m/n/10 Luego en-ton-ces co-mo $\OML/cmm/m/it/10 q[] \OT1/cmr/m/n/10 = 
 \OML/cmm/m/it/10 gh$ \OT1/cmr/m/n/10 si es-co-ge-mos el vec-tor $\OML/cmm/m/it/
 10 v[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 v \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 
@@ -2521,41 +2246,10 @@ r/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] ; []\OT1/
 cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g$
  []
 
-[73]
+[73] [74] [75] [76
 
-Package xcolor Warning: Incompatible color definition on input line 2713.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2724.
-
-[74] [75] [76
-
-]
-
-Package xcolor Warning: Incompatible color definition on input line 2755.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2757.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2774.
-
-[77]
-
-Package xcolor Warning: Incompatible color definition on input line 2797.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2813.
-
-[78]
-
-Package xcolor Warning: Incompatible color definition on input line 2838.
-
-[79]
-Overfull \hbox (48.7602pt too wide) in paragraph at lines 2863--2865
+] [77] [78] [79]
+Overfull \hbox (48.7602pt too wide) in paragraph at lines 3043--3045
 \OT1/cmr/m/n/10 mos $\OML/cmm/m/it/10 B[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\
 OML/cmm/m/it/10 w[]; []  ; w[]\OMS/cmsy/m/n/10 g$ \OT1/cmr/m/n/10 ba-se de W y 
 ex-ten-de-mos a una ba-se del to-tal $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OMS
@@ -2563,49 +2257,8 @@ ex-ten-de-mos a una ba-se del to-tal $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OMS
 $
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 2891.
-
-[80]
-
-Package xcolor Warning: Incompatible color definition on input line 2894.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2922.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2931.
-
-[81]
-
-Package xcolor Warning: Incompatible color definition on input line 2943.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2962.
-
-[82]
-
-Package xcolor Warning: Incompatible color definition on input line 2988.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2997.
-
-[83]
-
-Package xcolor Warning: Incompatible color definition on input line 3011.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3033.
-
-[84]
-
-Package xcolor Warning: Incompatible color definition on input line 3042.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3059.
-
-
-Overfull \hbox (7.5969pt too wide) detected at line 3065
+[80] [81] [82] [83] [84]
+Overfull \hbox (7.5969pt too wide) detected at line 3245
 \OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Bil[]\OT1/cmr/m/n/10 (\O
 ML/cmm/m/it/10 V\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 f\OT1/cmr
 /m/n/10 (\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 w; v \OT1/cmr/m/
@@ -2613,36 +2266,22 @@ n/10 + \OML/cmm/m/it/10 w\OT1/cmr/m/n/10 ) = [] \OMS/cmsy/m/n/10 ) \OML/cmm/m/i
 t/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v; w\OT1/cmr/m/n/10 ) = [] []
  []
 
-[85]
-
-Package xcolor Warning: Incompatible color definition on input line 3070.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3098.
-
-[86]
-Overfull \hbox (1.51237pt too wide) in paragraph at lines 3115--3117
+[85] [86]
+Overfull \hbox (1.51237pt too wide) in paragraph at lines 3295--3297
 \OT1/cmr/m/n/10 Para ter-mi-nar la de-mos-tra-cion to-ma-mos una ba-se de $\OM
 L/cmm/m/it/10 V$ \OT1/cmr/m/n/10 de for-ma que $\OML/cmm/m/it/10 B \OT1/cmr/m/n
 /10 = \OMS/cmsy/m/n/10 f[] []g$\OT1/cmr/m/n/10 ,
  []
 
-[87]
-
-Package xcolor Warning: Incompatible color definition on input line 3139.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3146.
-
-[88]
-Overfull \hbox (20.8831pt too wide) in paragraph at lines 3162--3163
+[87] [88]
+Overfull \hbox (20.8831pt too wide) in paragraph at lines 3342--3343
 []\OT1/cmr/m/n/10 Ahora pa-ra es-co-ger la ba-se $\OML/cmm/m/it/10 B$ \OT1/cmr/
 m/n/10 que ha-ce dia-go-nal la ma-triz to-ma-mos $\OML/cmm/m/it/10 B \OT1/cmr/m
 /n/10 = \OMS/cmsy/m/n/10 f[]\OML/cmm/m/it/10 ; []\OMS/cmsy/m/n/10 g$
  []
 
 
-Overfull \hbox (1.98927pt too wide) detected at line 3184
+Overfull \hbox (1.98927pt too wide) detected at line 3364
 \OML/cmm/m/it/10 q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 ) = \OMS/c
 msy/m/n/10  \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + 4\OML/cmm/m/it/10 xy \OT1/cm
 r/m/n/10 + 3\OML/cmm/m/it/10 y[] \OT1/cmr/m/n/10 + 2\OML/cmm/m/it/10 z[] \OMS/c
@@ -2653,46 +2292,22 @@ msy/m/n/10 ) \OML/cmm/m/it/10 q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/
 ] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 ([])[] + 7 [] +2 []
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 3190.
-
-[89]
-
-Package xcolor Warning: Incompatible color definition on input line 3204.
-
-[90]
-Overfull \hbox (29.84335pt too wide) detected at line 3229
+[89] [90]
+Overfull \hbox (29.84335pt too wide) detected at line 3409
 [] \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 a[]v[] \OMS/cm
 sy/m/n/10 2 \OML/cmm/m/it/10 W[] \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/10 W[] \OMS/c
 msy/m/n/10 ) []
  []
 
 [91] [92]
-
-Package xcolor Warning: Incompatible color definition on input line 3257.
-
-
-Overfull \hbox (26.02435pt too wide) in paragraph at lines 3257--3257
+Overfull \hbox (26.02435pt too wide) in paragraph at lines 3437--3437
 |\OT1/cmr/bx/n/24.88 ESPACIO VEC-TO-RIAL EUCL[]IDEO| 
  []
-
-
-Package xcolor Warning: Incompatible color definition on input line 3258.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3259.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3273.
 
 [93
 
 ]
-
-Package xcolor Warning: Incompatible color definition on input line 3286.
-
-
-Overfull \hbox (59.85803pt too wide) detected at line 3308
+Overfull \hbox (61.22377pt too wide) detected at line 3488
 \OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/
 cmm/m/it/10 f \OMS/cmsy/m/n/10 j[]\OT1/cmr/m/n/10 ) = [] \OMS/cmsy/m/n/10 ) j\O
 ML/cmm/m/it/10 A\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 0 \OMS/cm
@@ -2702,39 +2317,15 @@ m/n/10 ) \OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Bil[]\OT1/cmr/m
  []
 
 [94]
-Overfull \hbox (52.37471pt too wide) detected at line 3315
+Overfull \hbox (53.74045pt too wide) detected at line 3495
 \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 j[]\OT
 1/cmr/m/n/10 ) = [] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OM
 L/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 j[]\OT1/c
 mr/m/n/10 ) = [] \OMS/cmsy/m/n/10 )
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 3319.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3340.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3347.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3348.
-
-[95]
-
-Package xcolor Warning: Incompatible color definition on input line 3368.
-
-[96]
-
-Package xcolor Warning: Incompatible color definition on input line 3401.
-
-[97]
-
-Package xcolor Warning: Incompatible color definition on input line 3411.
-
-[98]
-Overfull \hbox (4.845pt too wide) detected at line 3446
+[95] [96] [97] [98]
+Overfull \hbox (4.845pt too wide) detected at line 3626
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10  \OMS/cmsy/m/n/10   \OML/
 cmm/m/it/10 id\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 )\OML/cmm/m/
 it/10 ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10  \OMS/cmsy/m/n/10   \OML/cmm/m/it/10
@@ -2748,40 +2339,15 @@ n/10   \OML/cmm/m/it/10 id\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 v\OT1/cmr/m/n/10
 0 (\OML/cmm/m/it/10  \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 id\OT1/cmr/m/n/10 )
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 3454.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3455.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3469.
-
-[99]
-
-Package xcolor Warning: Incompatible color definition on input line 3496.
-
-[100]
-
-Package xcolor Warning: Incompatible color definition on input line 3517.
-
-
-Overfull \hbox (38.1411pt too wide) in paragraph at lines 3537--3538
+[99] [100]
+Overfull \hbox (38.1411pt too wide) in paragraph at lines 3717--3718
 []\OT1/cmr/m/n/10 La se-gun-da par-te ya la te-ne-mos de-mos-tra-da, que-da de-
 mos-trar que el or-to-go-nal es $\OML/cmm/m/it/10 $\OT1/cmr/m/n/10 -invariante
 .Tenemos
  []
 
-[101]
-
-Package xcolor Warning: Incompatible color definition on input line 3545.
-
-[102]
-
-Package xcolor Warning: Incompatible color definition on input line 3606.
-
-
-Overfull \hbox (9.1893pt too wide) detected at line 3610
+[101] [102]
+Overfull \hbox (9.1893pt too wide) detected at line 3790
 \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = \OML
 /cmm/m/it/10 I[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 I[] \OMS/cmsy/m/n/10  []
   []  [] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 s; t; m \OMS/cmsy/m/n/10  \OT1/c
@@ -2792,41 +2358,16 @@ r/m/n/10 (0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 \OT1/cmr/m/n/1
  []
 
 
-Overfull \hbox (19.81177pt too wide) detected at line 3637
+Overfull \hbox (19.81177pt too wide) detected at line 3817
 \OML/cmm/m/it/10 \OMS/cmsy/m/n/10 j[] 2 \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OM
 L/cmm/m/it/10 W[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 M[]\OT1/
 cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = [] = []
  []
 
-[103] [104]
+[103] [104] [105
 
-Package xcolor Warning: Incompatible color definition on input line 3651.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3653.
-
-[105
-
-]
-
-Package xcolor Warning: Incompatible color definition on input line 3705.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3725.
-
-[106]
-
-Package xcolor Warning: Incompatible color definition on input line 3752.
-
-[107]
-
-Package xcolor Warning: Incompatible color definition on input line 3779.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3815.
-
-[108]
-Overfull \hbox (73.02475pt too wide) detected at line 3838
+] [106] [107] [108]
+Overfull \hbox (73.02475pt too wide) detected at line 4018
 \OML/cmm/m/it/10 q \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 X[] \OMS/cmsy/m/n/10 \ \
 OML/cmm/m/it/10 X[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 q \OT1/cmr/m/n/10 = [] 
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 q \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 q[] \O
@@ -2838,51 +2379,14 @@ m/n/10 + \OML/cmm/m/it/10 w \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 p \OT1/cmr/m/n/
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3845.
-
-
-Overfull \hbox (63.71588pt too wide) detected at line 3856
+Overfull \hbox (63.71588pt too wide) detected at line 4036
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 X[]\
 OT1/cmr/m/n/10 ) = []([]) = []([] + [] + \OML/cmm/m/it/10 L\OT1/cmr/m/n/10 ([])
 ) = []([] + []) + [] \OMS/cmsy/m/n/10   []
  []
 
-[109]
-
-Package xcolor Warning: Incompatible color definition on input line 3860.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3865.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3870.
-
-[110]
-
-Package xcolor Warning: Incompatible color definition on input line 3898.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3914.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3919.
-
-[111]
-
-Package xcolor Warning: Incompatible color definition on input line 3927.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3946.
-
-[112]
-
-Package xcolor Warning: Incompatible color definition on input line 3953.
-
-
-Package xcolor Warning: Incompatible color definition on input line 3970.
-
-[113]
-Overfull \hbox (32.29124pt too wide) detected at line 3986
+[109] [110] [111] [112] [113]
+Overfull \hbox (32.29124pt too wide) detected at line 4166
 []\OT1/cmr/m/n/10 ([]) = [] \OMS/cmsy/m/n/10   [] ) []\OT1/cmr/m/n/10 ((\OML/cm
 m/m/it/10 x[]; [] ; x[]\OT1/cmr/m/n/10 )[]) = (\OML/cmm/m/it/10 x[]; [] ; x[]\O
 T1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]; [] 
@@ -2890,21 +2394,8 @@ T1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]; []
 it/10 a[]; [] ; x[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 )[]
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 4016.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4017.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4032.
-
 [114]
-
-Package xcolor Warning: Incompatible color definition on input line 4063.
-
-
-Overfull \hbox (1.78046pt too wide) detected at line 4074
+Overfull \hbox (1.78046pt too wide) detected at line 4254
 \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 c\OT1/cmr/m/n/10 ) = \OML/c
 mm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 ) + [][]([]) = \
 OML/cmm/m/it/10 p \OT1/cmr/m/n/10 + [] + [][] = \OML/cmm/m/it/10 p \OT1/cmr/m/n
@@ -2912,12 +2403,8 @@ OML/cmm/m/it/10 p \OT1/cmr/m/n/10 + [] + [][] = \OML/cmm/m/it/10 p \OT1/cmr/m/n
 1/cmr/m/n/10 = \OML/cmm/m/it/10 c
  []
 
-[115]
-
-Package xcolor Warning: Incompatible color definition on input line 4088.
-
-[116]
-Overfull \hbox (13.12999pt too wide) detected at line 4146
+[115] [116]
+Overfull \hbox (13.12999pt too wide) detected at line 4326
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[] \OMS/cmsy/m/n/10 \ \OT1/cmr/m/n/10 (\OM
 L/cmm/m/it/10 p \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 )) = [] [
 ] = []([] \OMS/cmsy/m/n/10 \ []\OT1/cmr/m/n/10 ) = [](\OML/cmm/m/it/10 V[] \OMS
@@ -2926,10 +2413,7 @@ L/cmm/m/it/10 p \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 )) = [] [
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 4149.
-
-
-Overfull \hbox (12.62593pt too wide) detected at line 4162
+Overfull \hbox (12.62593pt too wide) detected at line 4342
 \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m\OT1/cmr/m/n/10 ) = \OML/c
 mm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 ) + [][]([]) = \
 OML/cmm/m/it/10 p \OT1/cmr/m/n/10 + [] + [][] = \OML/cmm/m/it/10 p \OT1/cmr/m/n
@@ -2937,73 +2421,26 @@ OML/cmm/m/it/10 p \OT1/cmr/m/n/10 + [] + [][] = \OML/cmm/m/it/10 p \OT1/cmr/m/n
 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 m
  []
 
-[117]
-
-Package xcolor Warning: Incompatible color definition on input line 4186.
-
-[118] [119]
-
-Package xcolor Warning: Incompatible color definition on input line 4266.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4267.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4301.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4319.
-
-[120]
-Overfull \hbox (42.92386pt too wide) in paragraph at lines 4328--4329
+[117] [118] [119] [120]
+Overfull \hbox (42.92386pt too wide) in paragraph at lines 4508--4509
 []$\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 \OT1/cmr/m/n/10 ([]) 
 = []$ 
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 4388.
-
 [121]
-
-Package xcolor Warning: Incompatible color definition on input line 4399.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4403.
-
-
-Overfull \hbox (60.29393pt too wide) detected at line 4435
+Overfull \hbox (60.29393pt too wide) detected at line 4615
 \OT1/cmr/m/n/10 0 = [] \OML/cmm/m/it/10 A [] \OT1/cmr/m/n/10 = [] [] [] = [] []
  [] = \OML/cmm/m/it/10 a[]x[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 4437.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4442.
-
 [122] [123]
-
-Package xcolor Warning: Incompatible color definition on input line 4583.
-
-
-Overfull \hbox (55.28485pt too wide) detected at line 4613
+Overfull \hbox (55.28485pt too wide) detected at line 4793
 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 A[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P[
 ]AP \OT1/cmr/m/n/10 = [] [] []
  []
 
 [124] [125] [126]
-
-Package xcolor Warning: Incompatible color definition on input line 4717.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4720.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4731.
-
-
-Overfull \hbox (20.1882pt too wide) detected at line 4735
+Overfull \hbox (20.1882pt too wide) detected at line 4915
 \OMS/cmsy/m/n/10 jj[]jj[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (
 []\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ([
 ] + []\OML/cmm/m/it/10 ; [] \OT1/cmr/m/n/10 + []) = \OML/cmm/m/it/10 f\OT1/cmr/
@@ -3012,27 +2449,8 @@ m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 f\OT1/cmr/m
 1/cmr/m/n/10 + \OMS/cmsy/m/n/10 jj[]jj
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 4737.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4745.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4753.
-
 [127]
-
-Package xcolor Warning: Incompatible color definition on input line 4756.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4768.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4782.
-
-
-Overfull \hbox (40.12708pt too wide) detected at line 4786
+Overfull \hbox (40.12708pt too wide) detected at line 4966
 \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/
 m/it/10 p\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10
  q\OT1/cmr/m/n/10 ))[] = \OMS/cmsy/m/n/10 jj[]jj[] \OT1/cmr/m/n/10 = \OML/cmm/m
@@ -3043,70 +2461,75 @@ L/cmm/m/it/10 f\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ) = \OMS
 /cmm/m/it/10 p; q\OT1/cmr/m/n/10 )[]
  []
 
-[128]
-
-Package xcolor Warning: Incompatible color definition on input line 4821.
-
-[129]
-Overfull \hbox (11.65984pt too wide) detected at line 4897
+[128] [129]
+Overfull \hbox (11.65984pt too wide) detected at line 5077
 \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = [] =
  [] []
  []
 
-[130]
+[130] [131]
+\tf@thm=\write5
+\openout5 = `AlgebraLineal.thm'.
 
-Package xcolor Warning: Incompatible color definition on input line 4956.
+ [132]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5207.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5207.
+ (AlgebraLineal.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+LaTeX Info: Redefining \. on input line 26.
+LaTeX Info: Redefining \% on input line 26.
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5207.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5207.
 
-
-Package xcolor Warning: Incompatible color definition on input line 4961.
-
-[131] [132] (AlgebraLineal.aux
-LaTeX Info: Redefining \. on input line 8.
-LaTeX Info: Redefining \% on input line 8.
-LaTeX Info: Redefining \. on input line 9.
-LaTeX Info: Redefining \% on input line 9.
-) ) 
+Package rerunfilecheck Info: File `AlgebraLineal.out' has not changed.
+(rerunfilecheck)             Checksum: 94E39D3DCBA377B5F6D9E7BE8B60D76F;75.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5207.
+ ) 
 Here is how much of TeX's memory you used:
- 33050 strings out of 480790
- 794153 string characters out of 2897301
- 1234620 words of memory out of 3000000
- 48363 multiletter control sequences out of 15000+200000
- 544419 words of font info for 74 fonts, out of 3000000 for 9000
+ 38004 strings out of 480790
+ 867630 string characters out of 2897301
+ 1333269 words of memory out of 3000000
+ 52790 multiletter control sequences out of 15000+200000
+ 546206 words of font info for 82 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,21n,98p,880b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
-m1000.pk> <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
-00\tcrm1200.pk><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jdbar/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jdbar/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/jdbar/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/j
-dbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:
-/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7
-.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr12.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/jdbar/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/jdbar/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jdbar/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/jdbar/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jdba
-r/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Use
-rs/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmsy5.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmsy8.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmti10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/jdbar/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/jdbar/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on AlgebraLineal.pdf (134 pages, 897435 bytes).
+ <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1000.pk> <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcrm1200.pk><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/jdbar/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jdbar/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jdbar/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users
+/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
+C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
+i6.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmmi7.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jdbar/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/jdbar/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/jdbar/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jdbar/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/j
+dbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/
+Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.p
+fb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy5.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/jdbar/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/jdbar/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Us
+ers/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msb
+m7.pfb>
+Output written on AlgebraLineal.pdf (134 pages, 937479 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1102 PDF objects out of 1200 (max. 8388607)
+ 403 named destinations out of 1000 (max. 500000)
+ 132 words of extra memory for PDF output out of 10000 (max. 10000000)
 

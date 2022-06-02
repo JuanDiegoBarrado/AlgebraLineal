@@ -1,0 +1,99 @@
+\contentsline {defi}{{Definición}{1}{Espacio Vectorial}}{23}{defi.1}%
+\contentsline {prop}{{Proposición}{1}{}}{23}{prop.1}%
+\contentsline {demo}{{\underline {Demostración}:}{1}{}}{23}{demo.1}%
+\contentsline {ej}{{\underline {Ejemplo}:}{1}{}}{24}{ej.1}%
+\contentsline {defi}{{Definición}{2}{Subespacio Vectorial}}{25}{defi.2}%
+\contentsline {obs}{{\underline {Observación}:}{1}{}}{25}{obs.1}%
+\contentsline {ej}{{\underline {Ejemplo}:}{2}{}}{25}{ej.2}%
+\contentsline {prop}{{Proposición}{2}{Operaciones con subespacios}}{25}{prop.2}%
+\contentsline {obs}{{\underline {Observación}:}{2}{}}{25}{obs.2}%
+\contentsline {defi}{{Definición}{3}{Independencia lineal}}{25}{defi.3}%
+\contentsline {ej}{{\underline {Ejemplo}:}{3}{}}{26}{ej.3}%
+\contentsline {defi}{{Definición}{4}{Envoltura lineal}}{26}{defi.4}%
+\contentsline {prop}{{Proposición}{3}{}}{26}{prop.3}%
+\contentsline {defi}{{Definición}{5}{Sistema generador}}{26}{defi.5}%
+\contentsline {ej}{{\underline {Ejemplo}:}{4}{}}{26}{ej.4}%
+\contentsline {defi}{{Definición}{6}{Base vectorial}}{26}{defi.6}%
+\contentsline {ej}{{\underline {Ejemplo}:}{5}{}}{27}{ej.5}%
+\contentsline {prop}{{Proposición}{4}{}}{27}{prop.4}%
+\contentsline {demo}{{\underline {Demostración}:}{2}{}}{27}{demo.2}%
+\contentsline {prop}{{Proposición}{5}{}}{27}{prop.5}%
+\contentsline {theo}{{Teorema}{1}{Existencia de bases}}{27}{theo.1}%
+\contentsline {demo}{{\underline {Demostración}:}{3}{}}{27}{demo.3}%
+\contentsline {lema}{{Lema}{1}{de Intercambio}}{27}{lema.1}%
+\contentsline {demo}{{\underline {Demostración}:}{4}{}}{28}{demo.4}%
+\contentsline {prop}{{Proposición}{6}{}}{28}{prop.6}%
+\contentsline {demo}{{\underline {Demostración}:}{5}{}}{28}{demo.5}%
+\contentsline {prop}{{Proposición}{7}{}}{28}{prop.7}%
+\contentsline {demo}{{\underline {Demostración}:}{6}{}}{28}{demo.6}%
+\contentsline {defi}{{Definición}{7}{Dimensión}}{28}{defi.7}%
+\contentsline {ej}{{\underline {Ejemplo}:}{6}{}}{29}{ej.6}%
+\contentsline {theo}{{Teorema}{2}{de extensión de la base}}{29}{theo.2}%
+\contentsline {demo}{{\underline {Demostración}:}{7}{}}{29}{demo.7}%
+\contentsline {ej}{{\underline {Ejemplo}:}{7}{}}{29}{ej.7}%
+\contentsline {obs}{{\underline {Observación}:}{3}{}}{29}{obs.3}%
+\contentsline {theo}{{Teorema}{3}{de la Fórmula de GrassManm}}{29}{theo.3}%
+\contentsline {demo}{{\underline {Demostración}:}{8}{}}{30}{demo.8}%
+\contentsline {defi}{{Definición}{8}{Suma Directa}}{30}{defi.8}%
+\contentsline {prop}{{Proposición}{8}{}}{30}{prop.8}%
+\contentsline {demo}{{\underline {Demostración}:}{9}{}}{30}{demo.9}%
+\contentsline {obs}{{\underline {Observación}:}{4}{}}{31}{obs.4}%
+\contentsline {ej}{{\underline {Ejemplo}:}{8}{}}{31}{ej.8}%
+\contentsline {defi}{{Definición}{9}{Coordenadas}}{32}{defi.9}%
+\contentsline {ej}{{\underline {Ejemplo}:}{9}{}}{32}{ej.9}%
+\contentsline {defi}{{Definición}{10}{Característica de un Cuerpo}}{33}{defi.10}%
+\contentsline {ej}{{\underline {Ejemplo}:}{10}{}}{33}{ej.10}%
+\contentsline {prop}{{Proposición}{9}{}}{33}{prop.9}%
+\contentsline {demo}{{\underline {Demostración}:}{10}{}}{33}{demo.10}%
+\contentsline {defi}{{Definición}{11}{Clase Lateral}}{34}{defi.11}%
+\contentsline {defi}{{Definición}{12}{Conjunto Cociente}}{34}{defi.12}%
+\contentsline {obs}{{\underline {Observación}:}{5}{}}{34}{obs.5}%
+\contentsline {prop}{{Proposición}{10}{}}{35}{prop.10}%
+\contentsline {demo}{{\underline {Demostración}:}{11}{}}{35}{demo.11}%
+\contentsline {ej}{{\underline {Ejemplo}:}{11}{}}{35}{ej.11}%
+\contentsline {defi}{{Definición}{13}{}}{36}{defi.13}%
+\contentsline {ej}{{\underline {Ejemplo}:}{12}{}}{36}{ej.12}%
+\contentsline {defi}{{Definición}{14}{Imagen y Núcleo}}{37}{defi.14}%
+\contentsline {prop}{{Proposición}{11}{}}{37}{prop.11}%
+\contentsline {demo}{{\underline {Demostración}:}{12}{}}{37}{demo.12}%
+\contentsline {prop}{{Proposición}{12}{Operaciones con aplicaciones lineales}}{39}{prop.12}%
+\contentsline {obs}{{\underline {Observación}:}{6}{}}{39}{obs.6}%
+\contentsline {theo}{{Teorema}{4}{}}{39}{theo.4}%
+\contentsline {demo}{{\underline {Demostración}:}{13}{}}{39}{demo.13}%
+\contentsline {ej}{{\underline {Ejemplo}:}{13}{}}{40}{ej.13}%
+\contentsline {theo}{{Teorema}{5}{}}{40}{theo.5}%
+\contentsline {demo}{{\underline {Demostración}:}{14}{}}{40}{demo.14}%
+\contentsline {coro}{{Corolario}{1}{}}{41}{coro.1}%
+\contentsline {demo}{{\underline {Demostración}:}{15}{}}{41}{demo.15}%
+\contentsline {theo}{{Teorema}{6}{de la dimensión}}{41}{theo.6}%
+\contentsline {demo}{{\underline {Demostración}:}{16}{}}{41}{demo.16}%
+\contentsline {theo}{{Teorema}{7}{Primer Teorema de Isomorfía}}{41}{theo.7}%
+\contentsline {demo}{{\underline {Demostración}:}{17}{}}{41}{demo.17}%
+\contentsline {theo}{{Teorema}{8}{Segundo Teorema de Isomorfía}}{42}{theo.8}%
+\contentsline {demo}{{\underline {Demostración}:}{18}{}}{42}{demo.18}%
+\contentsline {theo}{{Teorema}{9}{de la Matriz Asociada}}{42}{theo.9}%
+\contentsline {ej}{{\underline {Ejemplo}:}{14}{}}{43}{ej.14}%
+\contentsline {prop}{{Proposición}{13}{Operaciones con matrices asociadas}}{43}{prop.13}%
+\contentsline {prop}{{Proposición}{14}{}}{43}{prop.14}%
+\contentsline {demo}{{\underline {Demostración}:}{19}{}}{43}{demo.19}%
+\contentsline {defi}{{Definición}{15}{Equivalencia de aplicaciones}}{44}{defi.15}%
+\contentsline {defi}{{Definición}{16}{}}{44}{defi.16}%
+\contentsline {obs}{{\underline {Observación}:}{7}{}}{44}{obs.7}%
+\contentsline {prop}{{Proposición}{15}{}}{44}{prop.15}%
+\contentsline {demo}{{\underline {Demostración}:}{20}{}}{45}{demo.20}%
+\contentsline {obs}{{\underline {Observación}:}{8}{}}{45}{obs.8}%
+\contentsline {defi}{{Definición}{17}{Rango}}{45}{defi.17}%
+\contentsline {lema}{{Lema}{2}{}}{45}{lema.2}%
+\contentsline {demo}{{\underline {Demostración}:}{21}{}}{45}{demo.21}%
+\contentsline {obs}{{\underline {Observación}:}{9}{}}{46}{obs.9}%
+\contentsline {prop}{{Proposición}{16}{}}{46}{prop.16}%
+\contentsline {demo}{{\underline {Demostración}:}{22}{}}{46}{demo.22}%
+\contentsline {prop}{{Proposición}{17}{}}{46}{prop.17}%
+\contentsline {demo}{{\underline {Demostración}:}{23}{}}{46}{demo.23}%
+\contentsline {prop}{{Proposición}{18}{}}{47}{prop.18}%
+\contentsline {demo}{{\underline {Demostración}:}{24}{}}{47}{demo.24}%
+\contentsline {obs}{{\underline {Observación}:}{10}{}}{47}{obs.10}%
+\contentsline {theo}{{Teorema}{10}{}}{47}{theo.10}%
+\contentsline {demo}{{\underline {Demostración}:}{25}{}}{47}{demo.25}%
+\contentsline {prop}{{Proposición}{19}{}}{48}{prop.19}%
+\contentsline {demo}{{\underline {Demostración}:}{26}{}}{48}{demo.26}%
