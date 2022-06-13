@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper,openright]{book}
+ \documentclass[10pt,a4paper,openright]{book}
 
 \title{ÁLGEBRA LINEAL}
 \author{Juan Diego Barrado Daganzo e Iker Muñoz Martínez\footnote{Últimas versiones en https://github.com/JuanDiegoBarrado/AlgebraLineal}\\1º de Carrera} %\\ es salto de linea
@@ -28,16 +28,17 @@
 \graphicspath{{./fotos/}}
 
 %% Inclusion de referencias cruzadas por defecto y específicas
-\usepackage{hyperref}
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{urlcolor=blue, citecolor=blue, linkcolor=blue}
 
 %% Paquete para definir y utilizar colores por el documento
 \usepackage[dvipsnames,usenames]{xcolor} %activar e incluir colores
 	%% definicion de los colores que se van a utilizar en cada cabecera
-    \definecolor{capitulos}{RGB}{0, 100, 0}% gama de colores de los capitulos
-    \definecolor{secciones}{RGB}{0, 128, 0}% gama de colores de las secciones
-    \definecolor{subsecciones}{RGB}{34, 139, 34}% gama de colores de las subsections
-    \definecolor{subsubsecciones}{RGB}{40, 195, 40}% gama de colores de las subsubsections
-    \definecolor{teoremas}{RGB}{164,56,32}% gama de colores para los teoremas
+    \definecolor{capitulos}{RGB}{22, 18, 56}% gama de colores de los capitulos
+    \definecolor{secciones}{RGB}{40, 57, 141}% gama de colores de las secciones
+    \definecolor{subsecciones}{RGB}{71, 93, 197}% gama de colores de las subsections
+    \definecolor{subsubsecciones}{RGB}{115, 135, 195}% gama de colores de las subsubsections
+    \definecolor{teoremas}{RGB}{182, 166, 214}% gama de colores para los teoremas
     \definecolor{demos}{RGB}{105,105,105} % gama de colores para el cuerpo de las demostraciones
 
 %% Paquete para la edición y el formateo de capítulos, secciones...
@@ -118,7 +119,7 @@ http://creativecommons.org/licenses/by-nc/4.0/
 \chapter*{ENTEROS}
 Es el conjunto no vacío dotado con dos operaciones de modo que:
 $$Anillo \rightarrow (R,+,\cdot)\mbox{ donde }+,\cdot : R\times R \rightarrow R$$
-\subsection*{\underline{Propiedades de conjuntos}:}
+\subsection{Propiedades de conjuntos}
 \subsubsection*{Grupo}
 Un conjunto R, con una operación, que cumple las siguientes propiedades se llama GRUPO:
 \begin{enumerate}
@@ -150,7 +151,7 @@ Se dice que un conjunto R, con dos operaciones, forma un CUERPO cuando cumple la
 Por último, si se cumple la propiedad conmutativa del producto el cuerpo se denomina CUERPO CONMUTATIVO:
 $$\forall a,b \in R : ab=ba$$
 
-\subsection*{\underline{Algoritmo de la división de Euclides}}
+\subsection{Algoritmo de la división de Euclides}
 Este es un algoritmo empleado en la búsqueda del m.c.d. de dos números cualquiera. Para ello definimos primero dos lemas:\par
 \textbf{Lema 1}\par
 Si a, b, c, r son números enteros no nulos tales que $a=cb+r$ se tiene que el $mcd(a,b)=mcd(b,r)$\par
@@ -173,13 +174,13 @@ Si $r_1=0$, por el Lema 2 $mcd(a,b)=|b|$, en caso contrario:
 $$r_1\neq 0\Rightarrow mcd(a,b)=mcd(b,r)$$
 Tomando como nuevos $a=b$ y $b=r$ volvemos al inicio del algoritmo comenzando de nuevo el razonamiento hasta llegar al caso $r_i=0$
 
-\subsection*{\underline{Teorema de Bezout}}
+\subsection{Teorema de Bezout}
 $$mcd(a,b)=1\Rightarrow \exists u,v\in \mathbb Z : 1=ua+vb$$
 Es decir que si $a$ y $b$ son primos, existen dos números que satisfacen la igualdad.\par
 \underline{Corolario}:
 $$mcd(a,b)=d\Rightarrow \exists u,v \in \mathbb Z: d=ua+vb$$
 
-\subsection*{\underline{Teorema (Eucides)}}
+\subsection{Teorema (Eucides)}
 Para comprender este teorema definimos el concepto de número primo y número irreducible:
 $$p\mbox{ es primo si }p\mid ab\Rightarrow p\mid a \vee p\mid b$$
 $$p\mbox{ es irreducible si } p=ab\Rightarrow a=\pm 1 \vee b=\pm 1$$
@@ -198,7 +199,7 @@ Suponemos que $p\mid ab$ pero $p\nmid a\wedge p\nmid b$:
 $$mcd(p,a)=\pm 1\stackrel{Bezout}{\Rightarrow} 1=\lambda p+ \mu a\Rightarrow b=b\lambda p+ b\mu a \Rightarrow b \lambda p+ \mu \omega p=(\lambda b+ \mu \omega)p\Rightarrow p\mid b \mbox{ \#}$$
 \end{itemize}
 
-\subsection*{\underline{Teorema Fundamental de la Aritmética}}
+\subsection{Teorema Fundamental de la Aritmética}
 Si $n\in \mathbb Z$, $n\neq 0, \pm 1$ entonces:
 $$\exists p_1, p_2, \cdots, p_t \mbox{ primos}: n=p_1\cdot \cdots \cdot p_t$$
 $$\mbox{Si }n=q_1\cdot q_2\cdot  \cdots\cdot  q_t \mbox{ primos}\Rightarrow s=t: p_i=q_i $$
@@ -223,7 +224,7 @@ $$r-1=s-1\stackrel{H.I:}{\Rightarrow }r=s$$
 \end{enumerate}
 \end{itemize}
 
-\subsection*{\underline{Teorema de la existencia de infinitos primos}}
+\subsection{Teorema de la existencia de infinitos primos}
 Supongamos que existen una cantidad finita de primos:
 $$S=\{p\in \mathbb Z: p \mbox{ primo}\}=\{p_1,p_2,\cdots,p_t: p_i\mbox{ primos}\}$$
 Ahora escojamos el número $n=p_1\cdot p_2\cdot \cdots \cdot p_t+1\neq 0\neq \pm 1$, por el Teorema Fundamental de la Aritmética: $n=q_1\cdot \cdots \cdot q_s\Rightarrow q_i\mid n$ y como $q_i\in S$, entonces $q_i\mid p_i\Rightarrow q_i=p_i$, además como $q_i\mid n$ y $p_i\mid p_1\cdot \cdots\cdot p_t$ entonces $q_i\mid n-p_1\cdot \cdots\cdot p_t\Rightarrow q_1=p_1\mid 1$ \#.
@@ -235,7 +236,7 @@ $$a\equiv b\mbox{ (mod m) si }m|a-b$$
 También se escribe $a\equiv_m b$\par
 Ej.:
 $$24\equiv_m 18\Rightarrow m|24-18=6\Rightarrow m=2 \wedge m=3$$
-\subsection*{\underline{Proposición}}
+\subsection{Proposición}
 Una congruencia entre enteros es una relación de equivalencia sobre el conjunto de los números enteros.\par
 \underline{Demostración}:
 \begin{itemize}
@@ -246,7 +247,7 @@ Una congruencia entre enteros es una relación de equivalencia sobre el conjunto
 Una relación de equivalencia permite establecer una partición del conjunto en el que se aplica y los subconjuntos que se forman tras la partición del conjunto inicial se llaman CLASES y son disjuntos entre sí ($\bigcap_{i\in I} A_i=0)$\par
 Por el algoritmo de la división:
 $$a=bc+r\Rightarrow a-r=bc\Rightarrow c|a-r\Rightarrow a\equiv_c r$$
-\subsection*{\underline{Particiones de conjuntos infinitos}}
+\subsection{Particiones de conjuntos infinitos}
 En cierto modo lo que dice también la relación de congruencia es que $a$ dividido entre el módulo $m$ y $b$ dividido entre el módulo $m$ tienen como resultado el mismo resto.\par
 De este modo, si realizamos una partición de los números enteros en 3 subgrupos obtendremos 3 grupos distintos gracias a las congruencias de módulo 3, los que tienen de resto 0, los de resto 1 y los de resto 2.\par
 Para expresar estos subconjuntos generados a partir de las relaciones de congruencia expresamos:
@@ -301,7 +302,7 @@ De estas propiedades se deduce que $\mathbb Z_m \mbox{ es un anillo  unitario co
 \underline{Demostración}: Notacion: $\bar{a}=[a]_m$
 $$(\bar{a}\oplus \bar{b})\times\bar{c}=\overline{(a+b)}\otimes\bar{c}=\overline{(a+b)\cdot c}\stackrel{\mathbb Z\mbox{ }prop.}{=}\overline{ac+bc}=\overline{ac}\oplus\overline{bc}=\bar{a}\otimes\bar{c}\oplus\bar{b}\otimes\bar{c}$$
 
-\subsection*{\underline{Función de Euler $\varphi ()$}}
+\subsection{Función de Euler $\varphi ()$}
 La tripleta ordenada $(\mathbb Z_m,+,\cdot)$ forma un anillo conmutativo y unitario, además $(\mathbb Z_m, +)$ es un grupo conmutativo y SIEMPRE es cíclico, es decir, $\exists a\in \mathbb Z : [a]_m+[a]_m+\cdots=[b]_m$ siendo $b=0,1,2,\cdots,m-1$, lo que quiere decir que cualquier clase de dicho conjunto puede ser generada a partir de la aplicación sucesiva de la operación del grupo al generador.\par
 Por otro lado, $(\mathbb Z_m^x, \cdot)$ es un grupo conmutativo no necesariamente cíclico. Este conjunto contiene las clases que son unidades del conjunto, es decir, que esa clase, operada por el operador correspondiente con otra, tiene como resultado el elemento neutro de la operación (lo que quiere decir que la operación de cada elemento con el de la otra clase, tienen como resultado un elemento de la clase cuyo representante es el elemento neutro de la operación).\par
 En nuestro caso, al ser la multiplicación la seleccionada, el elemento neutro será el 1 por lo que algunos ejemplos son:
@@ -398,7 +399,7 @@ $$1=3\cdot 201 -86\cdot 7$$
 $$1=3\cdot 201 -86\cdot 7\Rightarrow -86\cdot 7\equiv 1\Rightarrow [x]_m=[-86]_m=[115]$$
 \end{enumerate}
 
-\subsection*{\underline{Resolución de ecuaciones diofánticas}}
+\subsection{Resolución de ecuaciones diofánticas}
 Las ecuaciones diofánticas son aquellas en las que los coeficientes y las incógnitas solo pueden tomar valores en el anillo de los enteros.
 $$a_1x_1+a_2x_2+\cdots+a_nx_n=c : a_i, c\in \mathbb Z$$
 Para que estas ecuaciones tengan solución, basta ver según lo anterior que $mcd(a_1,a_2,\cdots,a_n)\mid c$.
@@ -503,7 +504,7 @@ $$\sum_{i=0}^{n} a_ix^i$$
 Llamamos grado de un polinomio al mayor subíndice no nulo de los coeficientes del polinomio.
 $$\mbox{Ej.: } f=x^4+3x^3+-x+1 \Rightarrow gr(f)=4$$
 
-\subsection*{\underline {Operaciones con polinomios}}
+\subsection{Operaciones con polinomios}
 Para poder operar estos objetos matemáticos es necesario primero definir las operaciones competentes que logren conseguir las propiedades más ventajosas para el manejo de los mismos (p. ej. que posea las características de un anillo o de un cuerpo).
 \subsubsection*{Suma}
 La suma de polinomios se realiza coeficiente a coeficiente.
@@ -518,7 +519,7 @@ $$c_k=\sum_{i+j=k} a_i+b_j$$
 Es decir el polinomio resultante sería de la forma:
 $$\sum_{i=0}^n a_ix^i\cdot \sum_{j=0}^m b_jx^j=a_0b_0+(a_0b_1+a_1b_0)x+(a_0b_2+a_1b_1+a_2b_0)x^2+\cdots+(a_nb_mx^{n+m})$$
 
-\subsection*{\underline {Definiciones}}
+\subsection{Definiciones}
 \subsubsection*{Proposición}
 Si $R$ es un anillo conmutativo y unitario entonces los polinomios con coeficientes en $R$ también lo son\footnote{La demostración se haría propiedad a propiedad de anillo, verificando que se cumple para un polinomio}.
 $$(R,+,\cdot)\mbox{ anillo conmutativo y unitario} \Rightarrow (R[x],+,\cdot) \mbox{ anillo conmutativo y unitario}$$
@@ -565,7 +566,7 @@ $$f,g\in \mathbb K[x], d=mcd(f,g)\Rightarrow d=uf+vg : u,v\in \mathbb K[x]$$
 Cuando ocurre el caso particular de que $d=1$ entonces los polinomios $u(x)$ y $v(x)$ deben ser constantes no nulas, ya que:
 $$1=u(x)\cdot v(x)\Rightarrow gr(1)=gr(u)+gr(v)\Leftrightarrow 0=gr(u)+gr(v)\Rightarrow gr(u)=gr(v)=0 \Rightarrow u=k, v=z : k,z\in \mathbb R$$
 
-\subsection*{\underline{Polinomios primos e irreducibles}}
+\subsection{Polinomios primos e irreducibles}
 Decimos que $f\in \mathbb K[x], gr(f)>0$ es \textbf{irreducible} si $f=g\cdot h \Rightarrow gr(g)=0 \vee gr(h)=0$, es decir, $g,h\in \mathbb K[x]^x$\par
 Decimos que $f\in \mathbb K[x], gr(f)>0$ es \textbf{primo} si $f|g\cdot h \Rightarrow f|g \vee f|h$, es decir, $g,h\in \mathbb K[x]^x$\par
 De ambas definiciones se desprende la siguiente proposición:
@@ -616,7 +617,7 @@ $$r-1=s-1\stackrel{H.I:}{\Rightarrow }r=s$$
 \end{enumerate}
 \end{enumerate}
 
-\subsection*{\underline{Raíces de un polinomio}}
+\subsection{Raíces de un polinomio}
 Son los valores que hacen 0 el polinomio, pero obsevemos con detenimiento un concepto que tal vez no tengamos en la cabeza de Bachillerato, veamos con detenimiento el siguiente polinomio:
 $$f(x)=x^2+1\in \mathbb R[x]$$
 Es curioso observar que a priori diríamos que este polinomio no tiene raíces en los $\mathbb R$, pero cojamos la siguiente matriz:
@@ -678,7 +679,7 @@ $$\Leftrightarrow \beta-\alpha=0 \vee g(\beta)=0\Leftrightarrow |\{\beta\in\math
 $$
 $$\Rightarrow |\{\beta\in\mathbb F: f(\beta)=0\}|\leq 1+gr(g)=1+n-1$$
 
-\subsection*{\underline{Teorema Fundamental del Álgebra}}
+\subsection{Teorema Fundamental del Álgebra}
 Si $f\in \mathbb C[x]$ y es no constante, entonces $\exists \alpha\in \mathbb C: f(\alpha)=0$.\par
 La demostración de dicho Teorema excede con creces la capacidad de este curso así que se pospondrá para más adelante, sin embargo, si podemos demostrar un Corolario:
 
@@ -694,7 +695,7 @@ f(\alpha)\neq 0\Rightarrow \bar{f}(\alpha)=0\Rightarrow \overline{\bar{f}(\alpha
 \end{cases}
 $$
 
-\subsection*{\underline{Teorema de la irreducibilidad de un polinomio}}
+\subsection{Teorema de la irreducibilidad de un polinomio}
 Un polinomio $f\in \mathbb C[x]$ es irreducible cuando $gr(f)=1$, puesto que ya hemos comprobado que para $gr(f)>1$, $f$ posee tantas raíces como el valor del grado del polinomio y  cada raíz descompone el polinomio en un factor lineal.
 
 \subsubsection*{Corolario}
@@ -735,7 +736,7 @@ Ej.: $f\in \mathbb Z_2[x]$
 \item ...
 \end{itemize}
 
-\subsection*{\underline{Teorema raíces en una extensión de K}}
+\subsection{Teorema raíces en una extensión de K}
 Existe un teorema que dice que si extendemos K a un cuerpo superior que lo contenga, entonces podemos encontrar ahí también las raíces de un polinomio de $K[x]$, pero antes vamos a ver determinados ejemplos.
 
 \subsubsection*{Ejemplo 1}
@@ -873,7 +874,7 @@ $$\Rightarrow f(\alpha_1)=0\Rightarrow f(x)=(x-\alpha_1)g(x)\mbox{ donde }g(x)\i
 $$K\subset K_1\subset F: g(x)=a(x-\alpha_2)\cdot \cdots(x-\alpha_n)\Rightarrow f(x)=a(x-\alpha_1)(x-\alpha_2)\cdot \cdots \cdot (x-\alpha_n)\in F$$
 \end{itemize}
 
-\subsection*{\underline{Relaciones de Girard-Newton}}
+\subsection{Relaciones de Girard-Newton}
 Al analizar el grado de un polinomio cuadrático mónico cualquiera como $f=a_0+a_1x+x^2$, se observa que el número de raíces según lo hablado en el capítulo debería ser 2, de este modo, el polinomio se puede reescribir como: $f=(x-\alpha_1)(x-\alpha_2)$. Desarrollando:
 $$f=(x-\alpha_1)(x-\alpha_2)=x^2-(\alpha_1+\alpha_2)x+\alpha_1\alpha_2\Rightarrow\begin{cases}a_0=\alpha_1\cdot \alpha_2 \\
 a_1=-(\alpha_1+\alpha_2)\end{cases}$$
@@ -900,10 +901,10 @@ a_1'=(\alpha_1+1)(\alpha_2+1)+(\alpha_1+1)(\alpha_3+1)+(\alpha_2+1)(\alpha_3+1)=
 a_2'=-(\alpha_1+\alpha_2+\alpha_3+3)=-3
 \end{cases}$$
 
-\chapter*{ESPACIO VECTORIAL Y \\APLICACIÓN LINEAL}
+\chapter{ESPACIO VECTORIAL Y \\APLICACIÓN LINEAL}
 En este capítulo vamos a definir el concepto central de la asignatura: el espacio vectorial. Sus características dotan de propiedades muy especiales a los espacios que cumplen dicha definición y nos permite, junto con las aplicaciones lineales, descubrir una serie de propiedades abstractas a dichos espacios con consecuencias muy importantes en espacios concretos de este tipo.
 
-\section*{ESPACIOS VECTORIALES}
+\section{ESPACIOS VECTORIALES}
 \begin{defi}[Espacio Vectorial]
 Si suponemos que $(V,+,\cdot)$ donde $+: V\times V\rightarrow V$, $\cdot : K\times V\rightarrow V$ y $K$ es un cuerpo conmutativo, definimos un \textbf{espacio vectorial sobre $K$} como la terna que cumple:
 \begin{itemize}
@@ -1016,8 +1017,9 @@ No es un subespacio en general. Como contraejemplo podemos pensar que $W_1$ es e
 \end{obs}
 
 
-\subsubsection*{Espacio de generadores: dependencia e independencia lineal}
-Primero debemos definir el concepto de independencia y dependencia lineal
+\subsection{Sistema generador, base e indepencia lineal}
+Una vez visto el concepto de espacio vectorial y subespacio, vamos a caracterizar un conjunto de vectores del mismo que sea capaz de definir por completo la totalidad del espacio y que nos servirá como referencia para trabajar con el resto de vectores.
+
 \begin{defi}[Independencia lineal]
 Un conjunto de vectores $\{v_1, v_2, \cdots, v_n\}$ es \textbf{linealmente independiente} si toda combinación lineal nula implica que dichos coeficientes son nulos:
 $$\forall a_1, \cdots, a_m\in K: a_1v_1+\cdots +a_mv_m=0_v\Rightarrow a_1=a_2=\cdots =a_m=0$$
@@ -1292,7 +1294,7 @@ $$(A+A^t)^t=A^t+A^{tt}=A^t+A\rightarrow A+A^t\mbox{ es simétrica}$$
 $$(A-A^t)^t=A^t-A^{tt}=A^t-A\rightarrow A-A^t\mbox{ es antisimétrica}$$
 \end{ej}
 
-\subsection*{Coordenadas de un vector}
+\subsubsection{Coordenadas y Cambio de Base}
 Dado un espacio vectorial Las son los valores que identifican a un vector con respecto a una base y son \textbf{únicos} con respecto a esa base.
 
 \begin{defi}[Coordenadas]
@@ -1305,7 +1307,7 @@ a los coeficientes $x_i$ los denotamos por \textbf{coordenadas} del vector $v$ r
 Un vector $v=(a_1,a_2)$ se escribe de esa forma en la base canónica pero $v=(a_1-a_2, a_2)$ son las coordenadas del mismo vector en la base $B'=\{e_1, e_1+e_2\}$
 \end{ej}
 
-\subsubsection*{Cambio de base}
+\begin{prop}[Cambio de base]
 Sean $B'=\{v_1',\cdots, v_n'\}$ y $B=\{v_1, \cdots, v_n\}$ bases de $V$, entonces:
 $$\begin{cases}
 v=x_1v_1+\cdots+x_nv_n & \mbox{en } B\\
@@ -1319,8 +1321,8 @@ De forma análoga, en el otro sentido:
 $$\left(\begin{array}{c}x_1\\\vdots\\x_n\end{array}\right)=Q\cdot \left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)$$
 Por tanto, de ambas igualdades se deduce:
 $$\left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)=P\cdot \left(\begin{array}{c}x_1\\\vdots\\x_n\end{array}\right)=P\cdot Q\cdot \left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)\Leftrightarrow 0=(PQ-I)\left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)\Leftrightarrow PQ-I=0\Leftrightarrow PQ=I\Rightarrow \exists P^{-1}=Q$$
-
-Esto quiere decir que $P,Q\in Mat_n(\mathbb R)^x$, también llamado \textbf{grupo lineal} de \textit{n} dimensión sobre (K) $GL_n(K)$. En consecuencia la matriz de paso de una base a otra es la inversa del cambio de base al revés.
+Esto quiere decir que $P,Q\in Mat_n(\mathbb R)^x$, también llamado \textbf{grupo lineal} de \textit{n} dimensión sobre (K) $GL_n(K)$. En consecuencia, la matriz de paso de una base a otra es la inversa del cambio de base al revés.
+\end{prop}
 
 \begin{defi}[Característica de un Cuerpo]
 Sea $K$ un cuerpo, definimos su característica como el valor $p\in K$ que verifica que:
@@ -1362,7 +1364,9 @@ $$v=(7,-6)_{B_c}\in \mathbb R^2\Rightarrow v=\left(\begin{array}{cc}
 \end{array}\right)\Rightarrow v = \left(\frac{-19}{3}, \frac{-20}{3}\right)_{B'}$$
 \end{ej}
 
-\subsection*{\underline{Espacio vectorial cociente}}
+\subsection{Espacio vectorial cociente}
+Los conjuntos cocientes, en general, son un concepto abstracto complicado de entender al principio, pero con muy buenas propiedades. Estos permiten caracterizar y clasificar los elementos del conjunto inicial en un conjunto de subgrupos al que pertenecen todos los elementos relacionados entre sí a través de una relación de equivalencia.
+
 \begin{prop}
 Sea $W<V$ un subespacio del espacio $V$, la siguiente relación:
 $$v\equiv_W v' \Leftrightarrow v-v'\in W: v,v'\in V$$
@@ -1451,12 +1455,12 @@ $$=\{(0,0,1,0,0),(1,-1,0,1,0),(0,1,0,0,1), e_1=(1,0,0,0,0), e_2=(0,1,0,0,0)\}$$
 Con lo cual, $e_1$ y $e_2$ forman la base de $V/W$.
 \end{ej}
 
-\section*{APLICACIONES LINEALES}
+\section{APLICACIONES LINEALES}
 \begin{defi}
 Sean $V$ y $V'$ dos espacios vectoriales y $\phi:V\longrightarrow V'$ una aplicación entre ambos, entonces decimos que \textbf{dicha aplicación es lineal} si conserva la suma y el producto por un escalar:
 $$\phi(v_1+v_2)=\phi(v_1)+\phi(v_2): \forall v_1,v_2\in V$$
 $$\phi(a\cdot v_1)=a\cdot \phi(v_1): \forall a\in K,\ \forall v\in V$$
-Al conjunto de aplicaciones lineales entre ambos espacios se le denota por $Hom(V,V')$.
+Al conjunto de aplicaciones lineales entre ambos espacios se le denota\footnote{Si el espacio de llegada y de salida son el mismo, es decir, $V=V'$, entonces se denota por $End(V)$} por $Hom(V,V')$.
 \end{defi}
 
 \begin{ej}
@@ -1613,16 +1617,16 @@ $$\begin{cases}\phi(v)=w-u \\ \varphi(v)=w \\ id(v)=w+u\end{cases}\Rightarrow (\
 \end{itemize}
 
 \begin{prop}[Operaciones con aplicaciones lineales]
-Supongamos que tenemos: $\phi_1, \phi_2: V\longrightarrow V'$ siendo ambas $K-lineales$, entonces:
+Sean $\phi_1, \phi_2: V\longrightarrow V'$ aplicaciones $K-lineales$, si definimos las operaciones:
 \begin{itemize}
 \item $(\phi_1+\phi_2)(v)\stackrel{Def}{=}\phi_1(v)+\phi_2(v):\forall v\in V$
 \item $(a\cdot \phi_1)(v)\stackrel{Def}{=}a\cdot \phi_1(v):\forall v\in V$
 \end{itemize}
-Entonces podemos considerar $(Hom(V,V'),+,\cdot )$ como un espacio vectorial.
+entonces podemos considerar $(Hom(V,V'),+,\cdot )$ como un espacio vectorial.
 \end{prop}
 
 \begin{obs}
-Del mismo modo se puede ver que $(\phi_2 \circ \phi_1)(v)$ es también una aplicación lineal si ambas aplicaciones lo son. Con lo que $(End(V), +, \circ)$ conforma un anillo conmutativo y unitario.
+Del mismo modo, se puede ver que $(\phi_2 \circ \phi_1)(v)$ es también una aplicación lineal si ambas aplicaciones lo son. Con lo que $(End(V), +, \circ)$ conforma un anillo conmutativo y unitario.
 \end{obs}
 
 \begin{theo}
@@ -1651,6 +1655,9 @@ $$\varphi(v)=\varphi(\sum_{i=1}^na_iv_i)=\sum_{i=1}^na_i\varphi(v_i)=\sum_{i=1}^
 Esto lo que quiere decir es que si suponemos que $V=K^2$ y $V'=K^3$ entonces solo hay una aplicación lineal que cumpla que $\phi(e_1)=(2,1,-3)$ y $\phi(e_2)=(0,1,0)$, con lo cual sabiendo la relación que existe entre los vectores de la base de un espacio y los vectores del espacio de llegada podemos definir de modo único la aplicación que las relaciona.
 $$\phi(a_1, a_2)=\phi(a_1e_1+a_2e_2)=a_1(2,1,-3)+a_2(0,1,0)=(2a_1, a_1+a_2, -3a_1)$$
 \end{ej}
+
+\subsection{Isomorfía de Espacios Vectoriales}
+En ocasiones conocemos poco las características del espacio vectorial que estamos manejando. En estas situaciones, es útil encontrar un isomorfismo entre el espacio que manejamos y otro que sí conocemos, pues de encontrar dicha biyección se puede trabajar con uno y otro de forma intercambiable y aplicar los resultados del uno en el otro y viceversa.
 
 \begin{theo}
 Dos espacios vectoriales son isomorfos si y solo si la dimensión de ambos es la misma.
@@ -1730,7 +1737,9 @@ Considerando $W$ y $U$ de dimensión finita, entonces $W+U$ es de dimensión fin
 $$\dim (W+U/W)=\dim (W+U)- \dim W\stackrel{Grassman}{=}\dim U-\dim (W\cap U)=\dim (U/W\cap U)$$
 \end{demo}
 
-\begin{theo}[de la Matriz Asociada]
+\subsection{Matriz asociada a una aplicación lineal}
+Del mismo modo que un espacio vectorial quedaba completamente determinado a través de la base que lo componía, nuestro objetivo ahora es condensar toda la información relativa a una transformación lineal en un objeto matemático que nos sea fácil de manejar, en este caso, una matriz.
+
 Sea $\phi: V\longrightarrow V'$ una aplicación K-lineal, $B=\{v_1,\cdots, v_n\}$ una base de $V$ y $B'=\{v_1',\cdots, v_m'\}$ una de $V'$. Sabemos que $\phi$ está determinado de modo único por su valor en los vectores de la base $B$, es decir:
 $$\begin{cases}\phi(v_1)=a_{11}v_1'+\cdots+a_{m1}v_m'
 \\ \vdots \\ \phi(v_n)=a_{1n}v_1'+\cdots+a_{mn}v_m'\end{cases}$$
@@ -1741,7 +1750,12 @@ $$\phi(x_1v_1+\cdots+x_nv_n)=x_1\phi(v_1)+\cdots+x_n\phi(v_n)=x_1(a_{11}v_1'+\cd
 $$=\underbrace{(a_{11}x_1+\cdots+a_{1n}x_n)}_{x_1'}v_1'+\cdots\underbrace{(a_{m1}x_1+\cdots+a_{mn}x_n)}_{x_m'}v_m'\Rightarrow$$
 $$\Rightarrow \phi(v)=\phi(x_1v_1+\cdots+x_nv_n)=(a_{11}x_1+\cdots+a_{1n}x_n)v_1'+\cdots(a_{m1}x_1+\cdots+a_{mn}x_n)v_m'=x_1'v_1'+\cdots+x_m'v_m'=v'$$
 Con lo cual para transformar un vector en otro tenemos que:
-$$\left(\begin{array}{c} \overbrace{x_1'}^{\phi(v)} \\ \vdots\\ x_m'\end{array}\right)=\left(\begin{array}{ccc} \overbrace{a_{11}}^{\phi(v_1)} & \cdots & \overbrace{a_{1n}}^{\phi(v_n)} \\ \vdots & \ddots & \vdots \\ a_{m1} & \cdots & a_{mn} \end{array}\right)\cdot \left(\begin{array}{c} \overbrace{x_1}^{v} \\ \vdots\\ x_n\end{array}\right) \Rightarrow \phi(v) = M_{B,B'}(\phi)\cdot v$$
+$$\left(\begin{array}{c} \overbrace{x_1'}^{\phi(v)} \\ \vdots\\ x_m'\end{array}\right)=\left(\begin{array}{ccc} \overbrace{a_{11}}^{\phi(v_1)} & \cdots & \overbrace{a_{1n}}^{\phi(v_n)} \\ \vdots & \ddots & \vdots \\ a_{m1} & \cdots & a_{mn} \end{array}\right)\cdot \left(\begin{array}{c} \overbrace{x_1}^{v} \\ \vdots\\ x_n\end{array}\right) \Rightarrow \phi(v) = M_{B,B'}(\phi)\cdot v^t$$
+\begin{theo}[de la Matriz Asociada]
+Sea $\phi: V\longrightarrow V'$ una aplicación K-lineal, $B=\{v_1,\cdots, v_n\}$ una base de $V$ y $B'=\{v_1',\cdots, v_m'\}$ una de $V'$. Podemos expresar la imagen por $\phi$ de los vectores de $V$ como:
+$$\forall v\in V : \phi(v) = M_{B,B'}(\phi) \cdot v^t$$
+donde la matriz de la ecuación es la matriz:
+$$\left(\begin{array}{ccc} \overbrace{a_{11}}^{\phi(v_1)} & \cdots & \overbrace{a_{1n}}^{\phi(v_n)} \\ \vdots & \ddots & \vdots \\ a_{m1} & \cdots & a_{mn} \end{array}\right)$$
 \end{theo}
 
 \begin{ej}
@@ -1761,7 +1775,7 @@ Para hallar el subespacio $U$ el procedimiento es el mismo.
 
 \begin{prop}[Operaciones con matrices asociadas]
 \begin{itemize}
-\item Supongamos $V\stackrel{\phi_1, \phi_2}{\longrightarrow} V'$ son dos aplicaciones lineales y $B$ y $B'$ bases respectivas de los espacios $V$ y $V'$ respectivamente, entonces:
+\item Sean $V\stackrel{\phi_1, \phi_2}{\longrightarrow} V'$ dos aplicaciones lineales y $B$ y $B'$ bases respectivas de los espacios $V$ y $V'$, entonces:
 $$M_{B,B'}(\phi_1+\phi_2)=M_{B,B'}(\phi_1)+M_{B,B'}(\phi_2)$$
 
 \item Del mismo modo, si $a\in \mathbb K$ y $\phi: V\longrightarrow V'$, entonces:
@@ -1796,15 +1810,19 @@ Como para que la imagen de $\phi$ sea $A$ tiene que definirse a partir de los ve
 \end{itemize}
 \end{demo}
 
+\begin{obs}
 Análogamente, si consideramos $(End_k(V), +, \circ)$ que forma un anillo unitario, entonces $End_k(V)\simeq Mat_n(K)$:
 \begin{eqnarray*} \Phi:(V,V) &\longrightarrow& Mat_{m\times n}(K)\\ \phi &\longmapsto& M_{B}(\phi) 
 \end{eqnarray*} 
+\end{obs}
 
 
-\subsubsection{Relación entre matrices asociadas de la misma aplicación}
+\subsubsection{Equivalencia de aplicaciones lineales y relación entre sus matrices}
+Si dos aplicaciones lineales son esencialmente la misma aplicación, pero están expresadas respecto de bases distintas, entonces guardarán una relación muy especial que también relacionará sus matrices. En este apartado, tratamos de estudiar qué consecuencias tiene dicha relación y que ventajas le podemos sacar.
+
 \begin{defi}[Equivalencia de aplicaciones]
 Sea $A_1, A_2\in Mat_{m\times n}(K)$ y $V, V'$ espacios vectoriales de dimensiones $n$ y $m$ respectivamente, entonces se define la \textbf{equivalencia de matrices} como:
-$$A_1\thicksim A_2 \Leftrightarrow \exists \phi: V\rightarrow V'\mbox{ lineal y bases } B_1,B_2\subset V \mbox{ y } B_1', B_2'\subset V': \begin{cases}
+$$A_1\approx A_2 \Leftrightarrow \exists \phi: V\rightarrow V'\mbox{ lineal y bases } B_1,B_2\subset V \mbox{ y } B_1', B_2'\subset V': \begin{cases}
 A_1=M_{B_1,B_1'}(\phi) \\ A_2=M_{B_2,B_2'}(\phi)
 \end{cases}$$
 Es decir, dos matrices son equivalentes si representan a la misma aplicación lineal respecto de bases distintas.
@@ -1819,7 +1837,7 @@ $$\underbrace{V}_{B_1}\xrightarrow{id_v} \underbrace{V}_{B_2} \xrightarrow{\phi}
 De este modo, podemos ver $A_1$ como la composición\footnote{Nótese que la composición de funciones se hace en orden inverso al producto de las mismas.} de las funciones que en el diagrama anterior aparecen, luego
 $$A_1=M_{B_1,B_1'}(\phi)=M_{B_2',B_1'}(id_{V'})\cdot M_{B_2,B_2'}(\phi)\cdot M_{B_1, B_2}(id_V)=\underbrace{M(B_2',B_1')}_{Q}\cdot A_2\cdot \underbrace{M(B_1,B_2)}_{P}=Q\cdot A_2\cdot P$$
 Sabemos, por ser matrices de paso, que $Q\in Mat_m(K)^x=Gl_m(K)$ y $P\in Mat_n(K)^x=Gl_n(K)$, es decir, existen sus inversas. Por lo tanto, podemos dar la siguiente definición para la equivalencia de matrices:
-\begin{defi}
+\begin{defi}[Equivalencia de matrices]
 Sean $A_1, A_2\in Mat_{m\times n}(K)$, se define la \textbf{equivalencia} como:
 $$A_1\approx A_2 \Leftrightarrow \exists P\in GL_n(K), Q\in GL_m(K) :  A_1=Q\cdot A_2\cdot P$$
 donde el conjunto $GL(K)$ se refiere a las matrices inversibles de los tamaños adecuados.
@@ -1866,6 +1884,8 @@ Esto nos lleva a considerar que TODA matriz inversible se puede considerar como 
 \end{obs}
 
 \subsection{Rango de una aplicación lineal}
+Una característica fundamental tanto de las aplicaciones lineales como del álgebra matricial es el rango de dicho objeto. Esta característica nos permite desde discutir sistemas lineales para elucubrar sus posibles soluciones como conocer la dimensión de la imagen del subespacio de llegada de una aplicación lineal.
+
 \begin{defi}[Rango]
 Sea $\phi: V\rightarrow V'$ una aplicación lineal, se define el \textbf{rango de la aplicación} como:
 $$rg(\phi)=\dim_k Im(\phi)$$
@@ -1884,9 +1904,8 @@ $$rg(A)=\dim L(a_{11}w_{1}+\cdots+a_{m1}w_m, \cdots, a_{1n}w_1+\cdots+a_{mn}w_m)
 En el fondo, la dimensión de $L()$ no es más que el número de vectores linealmente independientes de ese sistema de generadores, por lo que yo si encuentro un conjunto de vectores linealmente independientes maximal de los que forman ese sistema, entonces serán una base. Por ello podemos considerar que hay una cantidad $p\leq n$ de vectores linealmente independientes siendo $n$ el número de vectores que hay dentro de $L()$.  Y lo mismo ocurre con el $L()$ de la condición 2) del rango de una aplicación lineal, en el que designaremos su $p$ por $q$. Ahora se trata de ver que $p=q$
 $$\{a_{11}e_{1}+\cdots+a_{m1}e_m, \cdots, a_{1q}e_1+\cdots+a_{mq}e_m\}\mbox{ supongamoslos l. ind.}$$
 Tenemos que llegar a que $\{a_{11}w_1+\cdots+a_{m1}w_m,\cdots,a_{1q}w_1+\cdots+a_{mq}w_m\}$ son linealmente independientes.
-
-$$0=\lambda_1(a_{11}w_1+\cdots+a_{m1}w_m)+\cdots+\lambda_q(a_{1q}w_1+\cdots+a_{mq}w_m)=(\lambda_1a_{11}+\cdots+\lambda_qa_{1q})w_1+\cdots+(\lambda_1a_{m1}+\cdots+\lambda_qa_{mq})w_m\Rightarrow $$
-
+$$0=\lambda_1(a_{11}w_1+\cdots+a_{m1}w_m)+\cdots+\lambda_q(a_{1q}w_1+\cdots+a_{mq}w_m)=$$
+$$=(\lambda_1a_{11}+\cdots+\lambda_qa_{1q})w_1+\cdots+(\lambda_1a_{m1}+\cdots+\lambda_qa_{mq})w_m\Rightarrow $$
 Como $B=\{w_1, \cdots, w_m\}$ es base de $W$, entonces:
 $$0=\underbrace{(\lambda_1a_{11}+\cdots+\lambda_qa_{1q})}_{=0}w_1+\cdots+\underbrace{(\lambda_1a_{m1}+\cdots+\lambda_qa_{mq})}_{=0}w_m\Rightarrow$$
 $$\Rightarrow  0=(\lambda_1a_{11}+\cdots+\lambda_qa_{1q})e_1+\cdots+(\lambda_1a_{m1}+\cdots+\lambda_qa_{mq})e_m=$$
@@ -1978,47 +1997,60 @@ $$\Rightarrow \mbox{ como }rg(P)=n\mbox{ B' es l. ind.}\Rightarrow B'\mbox{ base
 \end{itemize}
 \end{demo}
 
-\chapter*{SISTEMAS LINEALES}
-Podemos llamar a un sistema lineal a una cosa del tipo:
+\chapter{SISTEMAS LINEALES}
+El estudio de sistemas de ecuaciones lineales es una característica fundamental muy presente en matemáticas. Tiene muy útiles aplicaciones prácticas y, en consecuencia, es conveniente utilizar una forma eficiente de resolver y discutir este tipo de sistemas. Así como el método de sustitución o de igualación sirven para cuando los sistemas son pequeños, quedan muy obsoletos cuando tenemos sistemas muy grandes o con parámetros que desconocemos. De este modo, se va a tratar en este capítulo de dar un método y desarrollar una serie de herramientas que nos permitan realizar esta tarea de forma más eficiente.
+
+\subsection{Introducción al problema}
+Dado un problema general, como es la resolución de un sistema lineal, vamos a tratar de encontrar una solución desde el álgebra que nos permita transformar dicho problema conceptual en un problema algebraico de tipo vectorial.
+
+\begin{defi}[Sistema Lineal]
+Definimos un \textbf{sistema lineal} a un conjunto de ecuaciones compuestas por combinación lineal de las incógnitas, es decir:
 $$\Sigma: \begin{cases}a_{11} x_1+\cdots+a_{1n}x_n=b_1 \\ \vdots \\ a_{m1}x_1+\cdots+a_{mn}x_n=b_m\end{cases}: a_{ij}, b_{ij}\in K$$
+Al conjunto de las soluciones de dicho sistema lo denotamos por $\Sigma(K)=\{(a_1, \cdots, a_n)\in K^n: a_{11}a_1+\cdots+a_{1n}a_n=b_1, \cdots, a_{m1}a_1+\cdots+a_{mn}a_n=b_m\}$.
+\end{defi}
 
-Definimos $\Sigma(K)=\{(a_1, \cdots, a_n)\in K^n: a_{11}a_1+\cdots+a_{1n}a_n=b_1, \cdots, a_{m1}a_1+\cdots+a_{mn}a_n=b_m\}$ como el conjunto de soluciones del sistema lineal.
-
-También podemos tener la siguiente notación: $A\cdot X=B\Leftrightarrow \begin{pmatrix}
+Sin embargo, podemos considerar los $a_{ij}$ como los coeficientes de una matriz de tamaño $m\times n$ y entonces la expresión de $\Sigma$ se podría escribir como:
+$$A\cdot X=B\Leftrightarrow \begin{pmatrix}
 a_{11} &\cdots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{m1}  & \cdots & a_{mn}\end{pmatrix} \cdot \begin{pmatrix}
 x_1 \\ \vdots \\ x_n
 \end{pmatrix}=\begin{pmatrix}
 b_1 \\ \vdots \\ b_m
-\end{pmatrix}$ a lo que llamamos forma matricial.  Concretamente a $A$, la matriz de coeficientes, a $X$ la matriz de incógnitas y a $A^*=(A\mid B)$ la matriz ampliada.
+\end{pmatrix}$$
+Precisamente por este motivo podemos considerar en cierto modo a $A = M_{B,B'}(\phi)$ y a $B$ las imágenes a través de $\phi$ de unos ciertos vectores, llegando al siguiente enunciado.
 
-Tras la definición de estos conceptos surge la duda que responde a la aplicación de este objeto matemático. ¿Cuándo tiene soluciones el sistema? Y, si las tiene, ¿cuáles son?.
+\begin{theo}
+Sean $V$ y $V'$ espacios vectoriales de dimensiones $n$ y $m$ respectivamente, si consideramos el endomorfismo $\phi$ caracterizado por la matriz $A = M_{B,B'}(\phi)$, entonces
+$$\Sigma(K) = \phi^{-1}(B)$$
+\end{theo}
 
-\subsection*{\underline{Teorema: subespacio de las soluciones}}
-Si todas las $b_i=0$, entonces se dice que el sistema es homogéneo. Si $\Sigma$ es homogéneo\footnote{Como forma un subespacio podemos decir que la solución trivial al sistema es el vector nulo (todo 0) porque siempre pertenece a un subespacio vectorial arbitrario}, entonces el conjunto de soluciones $\Sigma(K)$ es un subespacio vectorial de $K^n$ de dimensión $n-rg(A)$. 
+Luego, hemos transformado el problema inicial a uno de tipo vectorial, pues resolver el sistema lineal consiste en calcular las antimágenes de cierto vector a través de $\phi$. En lo sucesivo del capítulo, nuestro objetivo será responder a las siguiente preguntas:
+\begin{itemize}
+\item ¿Cuándo un sistema tiene solución?
+\item ¿Cuántas soluciones puede tener mi sistema?
+\item ¿Cómo puedo encontrar las soluciones del sistema?
+\end{itemize}
 
-\underline{Demostración}:\par
-$\Sigma: A\cdot \begin{pmatrix}
-x_1 \\ \vdots \\ x_n
-\end{pmatrix}=\begin{pmatrix}
-0 \\ \vdots \\ 0
-\end{pmatrix}$, definimos $\phi: K^n \longrightarrow K^m$ como $M_{B_{c_n}, B_{c_m}}(\phi)=A$
+\subsection{Sistemas Homogéneos}
+\begin{defi}[Sistema Homogéneo]
+Sea $\Sigma$ un sistema lineal con coeficientes en $K$, se dice que es \textbf{homogéneo} si la matriz $B$ es nula, es decir, si es de la forma:
+$$\Sigma: \begin{cases}a_{11} x_1+\cdots+a_{1n}x_n=0 \\ \vdots \\ a_{m1}x_1+\cdots+a_{mn}x_n=0\end{cases}: a_{ij}, b_{ij}\in K$$
+\end{defi}
+\begin{prop}
+Si $\Sigma$ es un sistema homogéneo, entonces el conjunto de soluciones $\Sigma(K)$ es un subespacio vectorial de $K^n$ de dimensión $n-rg(A)$. 
+\end{prop}
+\begin{demo}
+Si consideramos $V$ y $V'$ como espacios vectoriales de dimensiones $n$ y $m$ respectivamente y $A = M_{B,B'}(\phi)$ como la matriz de una aplicación lineal entre ambas, entonces dijimos que $\Sigma(K) = \phi^{-1}(B)$, pero como hemos dicho que el sistema es homogéneo, entonces se reescribe como $\Sigma(K) = \phi^{-1}(0)$. Por tanto, $v\in \Sigma(K) \Leftrightarrow \phi(v) = 0\Rightarrow \Sigma(K) = \ker \phi$ y ya vimos que esto siempre es un subespacio vectorial. Además vista esa igualdad, la dimensión es trivialmente la del enunciado.
+\end{demo}
 
-Si $v=(v_1, \cdots, v_n)\in K^n\Rightarrow \phi(v_1', \cdots, v_m')$, el teorema que vimos dice que $\begin{pmatrix}
-x_1' \\ \vdots \\ x_m'
-\end{pmatrix}=A\cdot \begin{pmatrix}
-x_1 \\ \vdots \\ x_n
-\end{pmatrix}$, por lo que vemos que para que un vector sea solución de ese sistema tiene que ocurrir que su producto por $A$, tenga como resultado el vector nulo, es decir, que:
-$$u\in Sigma (K)\Leftrightarrow \phi(u)=0\Rightarrow u\in \ker(\phi)$$
-Con lo cual, en los sistemas lineales homogéneos, el espacio de soluciones es el núcleo de la aplicación lineal que relaciona ambos espacios vectoriales. 
+\subsubsection{Método de Gauss}
+Este método consiste en calcular una matriz equivalente a $A$ mucho más apropiada para poder resolver el sistema, esto es, una matriz triangular inferior.
 
-Por ello tenemos que $\Sigma(K)=\ker(\phi)\Rightarrow \Sigma(K)< K^n\Rightarrow \dim \Sigma(K)=\dim K^n- rg(\phi)=n-rg(A)$
-
-\subsubsection*{Método genérico de resolución}
+\subsubsection{Método genérico de resolución}
 Podemos decir que siendo el sistema lineal homogéneo:
 $$\Sigma: \begin{cases}a_{11} x_1+\cdots+a_{1n}x_n=0 \\ \vdots \\ a_{m1}x_1+\cdots+a_{mn}x_n=0\end{cases}$$
-Si su rango es mayor que 0, entonces podemos suprimir tras las $n-rg$ últimas filas porque sabemos que esas son combinación lineal de las anteriores que sí que son linealmente independientes, quedando el sistema de la siguiente forma:
+Si $rg(A) = r> 0$, entonces podemos dejar sólo las $r$ primeras filas, pues las últimas filas serán combinación lineal de las anteriores que sí que son linealmente independientes, quedando el sistema de la siguiente forma:
 $$\Sigma: \begin{cases}a_{11} x_1+\cdots+a_{1n}x_n=0 \\ \vdots \\ a_{r1}x_1+\cdots+a_{rn}x_n=0\end{cases}$$
-Ahora no hay más que pasar al otro lado de la igualdad $n-m$ incógnitas para que la matriz $A$ de coeficientes nos quede cuadrada, una vez hecho eso solo queda que:
+Ahora no hay más que pasar al otro lado de la igualdad $n-r$ incógnitas para que la matriz $A$ de coeficientes nos quede cuadrada, una vez hecho el sistema queda como:
 $$\begin{pmatrix}
 a_{11} &\cdots & a_{1r} \\ \vdots & \ddots & \vdots \\ a_{r1}  & \cdots & a_{rr}\end{pmatrix} \cdot \begin{pmatrix}
 x_1 \\ \vdots \\ x_r
@@ -2032,7 +2064,7 @@ a_{11} &\cdots & a_{1r} \\ \vdots & \ddots & \vdots \\ a_{r1}  & \cdots & a_{rr}
 -a_{1,r+1}x_{r+1}-\cdots-a_{rn}x_n \\ \vdots \\ -a_{n,r+1}x_{r+1}-\cdots-a_{rn}x_n
 \end{pmatrix}$$
 
-Ej.:
+\begin{ej}
 $$\begin{cases}x+y-2z+t=0 \\
 x-2y+z-2t=0 \\
 -2x+y+z+t=0\end{cases}\Leftrightarrow \begin{cases}x+y-2z+t=0 \\
@@ -2058,8 +2090,9 @@ z \\ z-t
 \end{pmatrix}$$
 
 Que vemos que sale lo mismo que anteriormente.
+\end{ej}
 
-\subsection*{\underline{Teorema de Rouché-Frobenius}}
+\subsection{Sistemas no homogéneos}
 Los sistemas no homogéneos no poseen todos los $b_i=0$ y las condiciones que los rigen cambian, por ejemplo, el conjunto de las soluciones ya no forma un subespacio vectorial porque el vector nulo no pertenece a él; en este caso forma un espacio afín del que ya se verán sus características.\par
 Sea el sistema lineal no homógeneo $(\Sigma_b)$ y su sistema homogéneo $(\Sigma_0)$ asociado:
 Lo primero de todo, posee un sistema lineal asociado que sí es homogéneo.
@@ -2115,102 +2148,141 @@ b_1 \\ \vdots \\ b_n
 \end{pmatrix}$$
 \end{enumerate}
 
-\subsection*{\underline{Regla de Cramer}}
+\subsection{Regla de Cramer}
 Para la resolución de sistemas lineales que sean compatibles determinados, existe un método muy eficiente conocido como la \textit{regla de Cramer}:
 $$\Sigma:\begin{cases}a_1x+b_1y+c_1z=d_1 \\ a_2x+b_2y+c_2z=d_2 \\ a_3x+b_3y+c_3z=d_3 \end{cases}\Rightarrow \left( x=\frac{\begin{vmatrix} d_1 & b_1 & c_1 \\ d_2 & b_2 & c_2 \\ d_3 & b_3 & c_3 \end{vmatrix}}{|A|}, y=\frac{\begin{vmatrix} a_1 & d_1 & c_1 \\ a_2 & d_2 & c_2 \\ a_3 & d_3 & c_3 \end{vmatrix}}{|A|}, z=\frac{\begin{vmatrix} a_1 & b_1 & d_1 \\ a_2 & b_2 & d_2 \\ a_3 & b_3 & d_3 \end{vmatrix}}{|A|} \right)$$
 
 \underline{Demostración}:
 
-\chapter*{ESTRUCTURA DE \\ ENDOMORFISMOS}
-Vamos a estudiar en este tema la estructura de unas aplicaciones lineales muy concretas, las que van de un cuerpo en sí mismo.
+\chapter{ESTRUCTURA DE \\ ENDOMORFISMOS}
+Vamos a estudiar en este capítulo la estructura de unas aplicaciones lineales muy concretas, las que van de un cuerpo en sí mismo. La intención de este capítulo es clasificar los endomorfismos según su clase de equivalencia a través de los conceptos que se van a desarrollar.
 
-\subsection*{\underline{Matrices semejantes}}
-Supongamos que $\dim V = n$, $B=\{v_1, \cdots, v_n\}$ base de $V$ y que $\phi: V\rightarrow V$.
+\begin{defi}[Semejanza de Aplicaciones]
+Sea $\phi: V\rightarrow V$ una aplicación lineal de un espacio vectorial $V$ en sí mismo, con dimensión $\dim V = n$, entonces definimos la \textbf{semejanza entre matrices} como:
+$$A\sim A' \Leftrightarrow \exists B, B'\subset V : \begin{cases}
+A=M_{B}(\phi) \\ A'=M_{B'}(\phi) \end{cases}$$
+\end{defi}
+De nuevo, como en el capítulo anterior, dada la aplicación lineal esta queda definida por su matriz $A=M_B(\phi)$ y la matriz $A'=M_{B'}(\phi)$ respecto de otra base $B'$ queda relacionada con primera por medio de una matriz de paso:
+$$A'= P^{-1}AP: P=M(B',B)\in Gl_n(K)$$
+Por tanto, podemos dar la siguiente definición equivalente a la primera dada:
+\begin{defi}[Semejanza de Matrices]
+Sean $A,A'\in Mat_{n}(K)$ dos matrices de dimensión $n$, decimos que estas dos matrices \textbf{son semejantes} si y sólo si existe una matriz de paso entre ambas:
+$$A\sim A' \Leftrightarrow \exists P \in Gl_n(K) : A' = P^{-1}AP$$
+\end{defi}
 
-Dada la aplicación lineal, esta queda definida por su matriz: $A=M_B(\phi)$ y tenemos que la matriz respecto de otra base queda relacionada con la anterior por la siguiente fórmula:
-$$A'=M_B'(\phi): A'= P^{-1}AP: P=M(B',B)\in Gl_n(K)$$
+\begin{obs}
+Esta relación entre matrices define una relación de equivalencia en el espacio $End(V)$.
+\end{obs}
 
-Estas dos matrices $A$ y $A'$ son \textbf{semejantes} cuando se relacionan de este modo y de nuevo definen una relación de equivalencia entre matrices.\footnote{Muy semejante a la relación de equivalencia que vimos en el tema anterior}. La intención de este capítulo es clasificar los endomorfismos según su clase de equivalencia de la forma definida previamente.
-
-\section*{POLINOMIO MÍNIMO Y CARACTERÍSTICO DE \\UN ENDOFMORFISMO}
-\subsection*{\underline{Polinomio mínimo de una matriz}}
-Consideramos $A\in Mat_n(K)$ y el conjunto de vectores $\{I_n, A, A^2, \cdots, A^{n^2}\}\subset Mat_n(K)$.
-
-Como $\dim Mat_n(K)= n^2$ y tenemos en ese conjunto $n^2+1$ vectores, necesariamente ese conjunto es linealmente dependiente. Con lo cual, $\exists a_0, \cdots, a_{n^2}\in K: a_0I+\cdots+a_{n^2}A^{n^2}=0$ donde $\exists a_i \neq 0$.
-
-Esto se puede interpretar como que $A$ es la raíz de un polinomio luego:
+\section{POLINOMIO MÍNIMO Y CARACTERÍSTICO}
+\subsection{Polinomio mínimo de un endomorfismo}
+Consideramos $A\in Mat_n(K)$ y el conjunto de vectores $\{I_n, A, A^2, \cdots, A^{n^2}\}\subset Mat_n(K)$. Como $\dim Mat_n(K)= n^2$ y en ese conjunto hay $n^2+1$ vectores, necesariamente ese conjunto debe ser linealmente dependiente. Con lo cual, $\exists a_0, \cdots, a_{n^2}\in K: a_0I+\cdots+a_{n^2}A^{n^2}=0$ donde $\exists a_i \neq 0$, es decir, en cierta manera se puede interpretar que $A$ es la raíz del polinomio:
 $$(a_0+a_1x+\cdots+a_{n^2}x^{n^2})(A)=f(A): f\neq 0$$
+Por tanto, es lógico preguntarse cuál es el polinomio mínimio para el cuál esto ocurre.
 
-Luego tal y como vimos en el tema de polinomios, podemos considerar que $A$ es la matriz compañera del polinomio definido por la dependencia lineal de dicho conjunto de vectores.
+\begin{defi}[Polinomio Mínimo de un Endomorfismo]
+Sea $\phi \in End(V)$ y dada la aplicación
+\begin{eqnarray*}
+\Phi_\phi:K[x] &\longrightarrow& End(V) \\ p(x) &\longmapsto& p(\phi) 
+\end{eqnarray*}
+se define el \textbf{polinomio mínimo} de un endomorfismo como el mínimo elemento en el $\ker \Phi_\phi$ y lo denotamos por $q_\phi(x)$, es decir, el polinomio mínimo es el polinomio de menor grado que se anula en el endomorfismo.
+\end{defi}
 
-\subsubsection*{Proposición}
-Dada una matriz cuadrada siempre existe un polinomio no nulo y de grado al menos 1 del que es raíz.
-$$A\in Mat_n(K)\Rightarrow \exists f\in K[x]: f(A)=0$$
+\begin{prop}
+Sea $A\in Mat_n(K)$, siempre existe un polinomio no nulo y de grado al menos 1 del que es raíz.
+$$\forall A\in Mat_n(K): \exists f\in K[x]: f(A)=0$$
+\end{prop}
 
-\subsubsection*{Proposición}
-Dada una matriz en las condiciones anteriores, existe un único polinomio de manera que ese es mínimo:
-$$\exists! q_A\in K[x]:$$
+\begin{defi}[Polinomio Mínimo de una Matriz]
+Sea $A\in Mat_n(K)$ y dada la siguiente aplicación
+\begin{eqnarray*}
+\Phi_A:K[x] &\longrightarrow& Mat_n(K) \\ p(x) &\longmapsto& p(A) 
+\end{eqnarray*}
+se define el \textbf{polinomio mínimo de una matriz} como el mínimo elemento del $\ker \Phi_A$ y se denota por $q_A(x)$, es decir, el polinomio mínimo es el polinomio de menor grado que se anula en la matriz.
+\end{defi}
+
+\begin{prop}
+Sea $A\in Mat_n(K)$, existe un único polinomio $q_A\in K[x]$ que cumple:
 \begin{itemize}
 \item $q_A\neq 0$
 \item $q_A \mbox{ mónico }$
 \item $q_A(A)=0$
 \item $f(A)=0\Rightarrow q_A\mid f$
 \end{itemize}
-
-\underline{Demostración}:\par
+\end{prop}
+\begin{demo}
 Las tres primeras condiciones ya se han visto donde se explica la parte de como descubrir dicho polinomio, por lo que vamos a demostrar la 3ª:
 $$f(A) = 0 \Rightarrow f(A)=0= g(A)q_A(A)+r(A)\Rightarrow r(A)=0\Rightarrow r=0\Rightarrow q_A\mid f$$
 Vemos que $r(A)=0\Rightarrow r=0$ porque $q_A$ es mínimo, entonces $r(A)$ que es de grado más pequeño no puede anularse a menos que sea el polinomio nulo.
 
 Veamos que es único:
 $$q_A, q_A'\Rightarrow q_A\mid q_A' \mbox{ pero también }q_A'\mid q_A \Rightarrow q_A = q_A'$$
+\end{demo}
 
-\subsubsection*{Proposición: polinomio mínimo de matrices semejantes}
-Supongamos que tenemos $A\sim A'$, veamos que ocurre con $q_A(A')$, vemos que:
+\begin{prop}
+Sean $A, A'\in Mat_n(K): A\sim A'$, entonces tienen el mismo polinomio mínimo.
+\end{prop}
+\begin{demo}
 $$q_A(A')=q_A(P^{-1}AP)= (a_0+a_1x+\cdots+x^m)(P^{-1}AP)= a_0I+a_1P^{-1}AP+\cdots+(P^{-1}AP)^m= $$
 $$= a_0I+P^{-1}a_1AP+\cdots+ P^{-1}A^mP= P^{-1}(a_0I+a_1A+\cdots+A^m)P = P^{-1}\underbrace{q_A(A)}_{=0}P = 0$$
+\end{demo}
 
-Luego tenemos que matrices semejantes tienen el mismo polinomio mínimo.
-
-\subsection*{\underline{Polinomio mínimo de un endomorfismo}}
-Con los resultados anteriores, podemos definir el polinomio mínimo como el polinomio que define al endomorfismo, \textbf{sea cual sea la matriz que lo representa}.
-
-Ej.:
-Sea $f\in K[x]$ mónico, donde f es no constante$\Rightarrow C_f\Rightarrow q_{C_f}=f$ donde $C_f$ es la matriz compañera del polinomio $f$.
-
-Si $\phi$ es proyección entonces $\phi^2= \phi\Leftrightarrow (x^2-x)(\phi)= 0\Leftrightarrow q_\phi = \begin{cases} x(\phi) = 0 & \Rightarrow \phi = 0 \\ (x-1)(\phi) = 0 & \Rightarrow\phi = id \\ (x^2-x)(\phi) = 0 & \Rightarrow\phi \neq 0,id\end{cases}$.
-
-Si $\phi$ es simetría, entonces tenemos que: $\phi^2=id\Leftrightarrow (x^2-1)(\phi)=0\Leftrightarrow \begin{cases} (x-1)(\phi) = 0 & \Rightarrow \phi = id \\ (x+1)(\phi) = 0 & \Rightarrow \phi = -id \\ (x^2-x)(\phi) = 0 & \Rightarrow\phi \neq 0,-id\end{cases}$.
-
-Supongamos que $q_\phi = (x-1)(x-r): r\neq 0, 1, -1$ donde decimos que este endomorfismo es una homología general de razón $r$.
-
-\subsection*{\underline{Polinomio mínimo de un endomorfismo y un vector}}
-Vemos que el polinomio mínimo de un endomorfismo se anula en ese endomorfismo: $q_\phi(\phi)=0$. Del mismo modo, si sustituimos un endormorfismo en un polinomio y vemos la matriz de esa evaluación vemos que:
-$$M_B(f(\phi)): f= a_0+\cdots+a_mx^m \Rightarrow f(\phi)= a_0 id_v+\cdots+a_m\phi^m\Rightarrow$$
+El último objetivo de este razonamiento es poder afirmar que el polinomio mínimo de un endomorfismo y de su representación matricial coinciden. Para ello, analizamos la matriz del endomorfismo resultante de evaluarlo en un polinomio:
+$$f= a_0+\cdots+a_mx^m \Rightarrow f(\phi)= a_0 id_v+\cdots+a_m\phi^m\Rightarrow$$
 $$\Rightarrow M_B(f(\phi))=a_0I+a_1A+\cdots+a_mA^m= f(A):A=M_B(\phi)$$
-Con lo cual vemos que la matriz en base $B$ de $f(\phi)$ es justamente evaluar $A$ en $f$, es decir, $f(A)$.
+y vemos precisamente que la matriz final es la misma que la resultante de evaluar la matriz $A$ del endomorfismo en $f$, es decir, $f(A) = M_B(f(\phi))$.
 
-Entonces vemos que para que el endomorfismo $q_\phi(\phi) = 0$ sea el endomorfismo nulo, su matriz en cualquier base ha de ser la matriz nula, es decir:
-$$q_\phi (\phi)=0\Leftrightarrow M_B(q_\phi(\phi))= 0\Leftrightarrow M_B(q_A(\phi))=0 \Leftrightarrow q_A(A)=0$$
+Por tanto, de aquí podemos concluir que para que el endomorfismo $q_\phi(\phi)$ sea el endomorfismo nulo, su matriz en cualquier base ha de ser la matriz nula, es decir\footnote{En la segunda ecuación se puede concluir que $q_A(\phi) = 0$ porque $M_B(q_A(\phi)) = 0$ para cualquier base $B$ ya que es cierto que $A$ cambia en función de la base, pero matrices semejantes tienen el mismo polinomio mínimo, luego $q_A = q_{A'}$.}
+$$q_\phi (\phi)=0\Leftrightarrow M_B(q_\phi(\phi))= 0\Leftrightarrow q_\phi(A)=0 \Rightarrow q_\phi \mid q_A$$
+$$q_A(A) = 0 \Leftrightarrow M_B(q_A(\phi)) = 0 \Leftrightarrow q_A(\phi) = 0\Rightarrow q_A\mid q_\phi$$
+Este resultado nos permite ver $q_\phi(\phi)$ como el endomorfismo nulo o como la matriz nula en función de lo que mejor nos convenga.
 
+Por tanto, visto que el razonamiento de polinomio mínimo se aplica para cualquier matriz y que dos matrices semejantes conservan su polinomio mínimo, podemos hacer referencia a el polinomio mínimo del endomorfismo \textbf{sea cual sea la matriz que lo representa}, puesto que este se conserva independientemente de la base en la que esté expresada su matriz.
 
-Esto nos permite ver $q_\phi(\phi)$ como el endomorfismo nulo o como la matriz nula de la forma que mejor nos convenga. Lo que implica que si es el endomorfismo nulo, el polinomio mínimo de $\phi$ se anula en cualquier $\phi(v)$, luego: $[q_\phi(\phi)](v)=0$
+\begin{ej}
+\begin{itemize}
+\item Sea $f\in K[x]$ mónico, donde f es no constante$\Rightarrow C_f\Rightarrow q_{C_f}=f$ donde $C_f$ es la matriz compañera del polinomio $f$.
 
-Es decir, ahora podemos redefinir el polinomio mínimo, pero ahora respecto de dos objetos $q_{\phi, v}$ siendo $v\in V: v\neq 0$.
+\item Si $\phi$ es proyección, entonces:
+$$\phi^2= \phi\Leftrightarrow (x^2-x)(\phi)= 0\Leftrightarrow q_\phi = \begin{cases} x(\phi) = 0 & \Rightarrow \phi = 0 \\ (x-1)(\phi) = 0 & \Rightarrow\phi = id \\ (x^2-x)(\phi) = 0 & \Rightarrow\phi \neq 0,id\end{cases}$$
 
-Este polinomio es el único polinomio mónico no nulo en $K[x]$ tal que $[q_{\phi,v}(\phi)](v)=0$, por lo tanto $q_\phi,v\mid q_\phi$.
+\item Si $\phi$ es simetría, entonces:
+$$\phi^2=id\Leftrightarrow (x^2-1)(\phi)=0\Leftrightarrow \begin{cases} (x-1)(\phi) = 0 & \Rightarrow \phi = id \\ (x+1)(\phi) = 0 & \Rightarrow \phi = -id \\ (x^2-x)(\phi) = 0 & \Rightarrow\phi \neq 0,-id\end{cases}$$
 
-Ej.:
+\item Supongamos que $q_\phi = (x-1)(x-r): r\neq 0, 1, -1$ donde decimos que este endomorfismo es una homología general de razón $r$.
+\end{itemize}
+\end{ej}
 
+\subsubsection{Polinomio mínimo de un endomorfismo y un vector}
+Lógicamente, si $q_\phi(\phi) = 0 $, entonces $\forall v\in V : q_\phi(\phi)(v) = 0$ puesto que es la aplicación nula. Por tanto, surge la siguiente pregunta: ¿cuál es el polinomio mínimo $q_v(x)$ para que $q_v(\phi)(v) = 0$?, es decir, se puede redefinir el concepto de polinomio mínimo, pero ahora respecto de dos objetos $q_{\phi, v}$ siendo $v\in V: v\neq 0$ y $\phi\in End(V)$ un endomorfismo.
+
+\begin{defi}[Polinomio mínimo de un Endomorfismo y un Vector]
+Sea $\phi\in End(V)$ y $v\in V$ no nulo, dada la aplicación 
+\begin{eqnarray*}
+\Phi_{v, \phi}: K[x] &\longrightarrow& V \\ p(x) &\longmapsto& p(\phi)(v) 
+\end{eqnarray*}
+se define el \textbf{polinomio mínimo de un endomorfismo y un vector} como el mínimo del $\ker \Phi_{v,\phi}$ y se denota por $q_{v, \phi}$, es decir, es el polinomio de menor grado para el cual la imagen de $v$ a través del endomorfismo $q(\phi)$ es nula.
+\end{defi}
+
+\begin{prop}
+Sea $\phi\in End(V)$ y $v\in V$, entonces:
+$$q_{v,\phi}\mid q_\phi$$
+\end{prop}
+\begin{demo}
+Se tiene trivialmente por ser $q_\phi$ el mínimo donde se anulan todos los $v$ y ser $q_{v,\phi}$ el mínimo donde se anula $v$ (no necesariamente los demás).
+\end{demo}
+
+\begin{ej}
 Imaginemos que tenemos una proyección cuya matriz respecto de la base canónica es $M_{B_c}(\phi)=\begin{pmatrix} 1 & 0 \\ 0 & 0\end{pmatrix}$, ¿cuál es el polinomio mínimo de esta proyección? Por todo lo desarrollado antes es fácil ver que $q_\phi(\phi)= x^2-x$, pero ¿quién es $q_{\phi,e_1}(\phi)$ y $q_{\phi, e_2}$?.
 
 Aplicamos la proyección al primer vector y segundo vector: $\phi(e_1)=e_1$ y $\phi(e_2)=0$. Entonces $q_{\phi,e_1}=x-1(\phi)$ y $q_{\phi, e_2}=x$ porque $(x-1)(\phi)=\phi-id$ y ahora $\phi(e_1)-id(e_1)=e_1-e_1=0$, es decir, al evaluar $e_1$ en $q_{\phi,e_1}$ obtenemos que el resultado es 0. Del mismo modo que con $(x)(\phi)=\phi$ y ahora $\phi(e_2)=0$.
+\end{ej}
 
-\subsubsection*{Proposición}
-Del hecho anterior, se desprende una consecuencia inmediata: el mcm de los $q_{\phi,v_i}$ tales que estos $v_i$ son la base del espacio vectorial, es precisamente $q_\phi$:
-$$q_\phi = mcm\{q_{\phi, v_1}, \cdots, q_{\phi, v_n}\}: B=\{v_1, \cdots, v_n\} \mbox{ es base}$$
-
-\underline{Demostración:}
+\begin{prop}
+Sea $\phi\in End(V)$ y $B=\{v_1, \cdots, v_n\}$, entonces:
+$$q_\phi = mcm\{q_{\phi, v_1}, \cdots, q_{\phi, v_n}\}$$
+\end{prop}
+\begin{demo}
 Vamos a ver que $q_\phi = \bar{q}$ y para ello basta con ver que se dividen mutuamente, es decir, que $q_\phi \mid \bar{q}$ y $\bar{q}\mid q_\phi$: 
 
 $$q_i\mid q_\phi\Rightarrow \bar{q}\mid q_\phi$$
@@ -2221,76 +2293,91 @@ Con lo cual, vemos que le pasa a $\bar{q}(\phi)$ cuando se le aplica a $v_i$:
 $$\left[\bar{q}(\phi)\right](v_i)=\left[(g_iq_i)(\phi)\right](v_i)= [g_i(\phi)\circ q_i(\phi)](v_i)=g_i(\phi)\left(\underbrace{q_i(\phi)(v_i}_{=0})\right) = g_i(\phi)(0)=0\Rightarrow \left[\bar{q}(\phi)\right](v_i)==0$$
 
 Por tanto, $\bar{q}(\phi)$ es la aplicación nula porque se anula sobre cada uno de los vectores de la base, luego $q_\phi \mid \bar{q}$.
+\end{demo}
 
-\subsubsection*{Cálculo del polinomio mínimo}
-Con lo cual, en la práctica, basta con calcular el polinomio mínimo de cada uno de los vectores de la base del espacio vectorial; puesto que el buscado es el m.c.m. de ellos. Además, la búsqueda del polinomio mínimo de cada vector se puede plantear de la siguiente forma: como lo que se busca es una expresión $a_0v+a_1\phi(v)+\cdots+a_n\phi^n(v_n)$ de tamaño mínimo y con algún $a_i\neq 0$, entonces si hallamos $v,\phi(v), \phi^2(v),\cdots \in V$ en algún momento el número de vectores será mayor que la dimensión de la base (o incluso antes lo veremos) y entonces serán linealmente dependientes, luego tendremos cada $a_i$.
+\subsubsection{Cálculo del polinomio mínimo}
+Ya visto el concepto de polinomio mínimo, en la práctica basta con calcular el polinomio mínimo de cada uno de los vectores de la base del espacio vectorial y saber que el buscado es el m.c.m. de ellos.
 
-Ej.:
+Además, la búsqueda del polinomio mínimo de cada vector se puede plantear de la siguiente forma: como lo que se busca es una expresión $a_0v+a_1\phi(v)+\cdots+a_n\phi^n(v_n)$ de tamaño mínimo y con algún $a_i\neq 0$, entonces basta calcular $v,\phi(v), \phi^2(v),\cdots \in V$ hasta que el conjunto sea linealmente dependiente\footnote{Realmente este polinomio es el mínimo porque si existiera otro de grado menor para el cual se anulase el vector evaluado en el endomorfismo resultante, entonces habría un conjunto más pequeño linealmente independiente y eso no puede ser.}, luego tendremos cada $a_i$.
 
-Sea $M_B(\phi)=\begin{pmatrix} 0&1&1\\1&0&1\\1&1&0\end{pmatrix}$, vemos que $\phi(e_1) = e_2+e_3$ y $\phi^2(e_1)=2e_1+e_2+e_3$. Vemos incluso que antes de que el número de vectores sea mayor que la dimensión de $R^3$ ya tenemos una colección de vectores que guardan dependencia lineal de la siguiente forma: $\phi^2(v)-2e_1-2\phi(e_1)=0$, luego tenemos que $[(x^2-x-2)(\phi)](e_1)=0$ luego $q_{\phi,e_1}=x^2-x-2$.
+\begin{ej}
+Sea $\phi\in End(V)$ representado en la base canónica por
+$$M_B(\phi)=\begin{pmatrix} 0&1&1\\1&0&1\\1&1&0\end{pmatrix}$$
+calculamos las imágenes de los vectores de la base $\phi(e_1) = e_2+e_3$ y $\phi^2(e_1)=2e_1+e_2+e_3$. Vemos incluso que, antes de que el número de vectores sea mayor que la dimensión de $R^3$, ya tenemos una colección de vectores que guardan dependencia lineal de la siguiente forma: $\phi^2(v)-2e_1-2\phi(e_1)=0$, por tanto, tenemos que $[(x^2-x-2)(\phi)](e_1)=0$ luego $q_{\phi,e_1}=x^2-x-2$.
 Realizando este procedimiento con el resto de vectores y hallando el m.c.m. tenemos el $q_\phi$.
+\end{ej}
 
-\subsection*{\underline{Polinomio característico}}
-\subsubsection*{Autovalores y autovectores}
-Sea $\lambda\in K$ y $v\neq 0$, se tiene que:
-$$q_\phi(\lambda)=0\Leftrightarrow \exists v\neq 0: \phi(v)=\lambda\cdot v \Leftrightarrow |A-\lambda\cdot I_n|=0$$
-Siendo $A$ la matriz del endomorfismo en \textbf{cualquier base}.
+\subsection{Polinomio característico de un endomorfismo}
+Aunque el polinomio mínimo goza de buenas propiedades, tenemos una herramienta más potente: el  polinomio característico. Este especial polinomio nos permitirá determinar desde el número y dimensión de los subespacios invariantes por $\phi$ hasta poder expresar la matriz de $\phi$ de la forma más sencilla posible.
 
-Es decir, las \textbf{raíces del polinomio mínimo} son los autovalores del endomorfismo y los vectores que verifican $\phi(v)=\lambda \cdot v$ son los \textbf{autovectores} del endomorfismo.
+\begin{defi}[Autovalores y Vectores Propios]
+Sea $\phi\in End(V)$, $\lambda\in K$ y $v\neq 0$, definimos los \textbf{vectores propios} del endomorfismo como aquellos que verifican:
+$$\phi(v) = \lambda \cdot v$$
+y definimos los \textbf{autovalores} como todos los valores de $\lambda$ para los cuales existen autovectores.
+\end{defi}
 
-\underline{Demostración}:
+\begin{defi}[Polinomio Característico]
+Sea $\phi\in End(V)$ y $A = M_B(\phi)$, definimos el \textbf{polinomio característico de $\phi$} como:
+$$p_\phi(x) = |A- x\cdot I_n|$$
+\end{defi}
 
-2 implica 1:
+\begin{prop}
+Sea $\phi\in End(V)$, $A=M_B(\phi)$ y $A'=M_{B'}(\phi)$, entonces el polinomio característico respecto de ambas matrices coincide, es decir, matrices semejantes tienen el mismo polinomio característico.
+\end{prop}
+\begin{demo}
+Sean $A=M_B(\phi)$ y $A'=M_B'(\phi)$, ambas matrices por ser semejantes cumplen que $A'=P^{-1}AP$. Veamos que:
+$$p_{A'}=|A'-xI_n|=|P^{-1}AP-P^{-1}xP|=|P^{-1}(A-xI_n)P|=|P^{-1}|(A-xI_n)|P|=|(A-xI_n|=p_A$$
+\end{demo}
+
+\begin{obs}
+El resultado anterior prueba que la definición de polinomio característico es adecuada porque es independiente de la base en la que yo represente la matriz de $\phi$, luego tiene sentido hablar de $p_\phi(x)$ en vez de $p_A(x)$.
+\end{obs}
+
+\begin{defi}[Espectro]
+Sea $\phi \in End(V)$, se define el \textbf{espectro} de un endomorfismo como el conjunto de los autovalores :
+$$\sigma(\phi)=\{\lambda_1, \cdots, \lambda_t\}: q_\phi(\lambda_i) = 0$$
+\end{defi}
+
+\subsubsection{Teorema de Caley-Hamilton}
+Aunque hemos adelantado que el polinomio característico tendrá muy buenas propiedades y que el mínimo y el característico coinciden, es fundamental probar que el polinomio característico se anula en el endomorfismo porque la gran mayoría de resultados provechosos de esta definición utilizarán dicho resultado.
+
+\begin{prop}
+Sea $\phi\in End(V)$, entonces $\lambda$ es autovalor si y solo si:
+\begin{itemize}
+\item $q_\phi(\lambda)=0$
+\item $\vert A -\lambda I\vert = 0$
+\end{itemize}
+\end{prop}
+\begin{demo}
+\begin{itemize}
+\item $2\Rightarrow 1$
 $$\phi(v)-\lambda v =0 \Rightarrow q_{\phi,v}=x-\lambda \Rightarrow x-\lambda\mid q_\phi\Rightarrow q_\phi(\lambda)=0$$
 
-1 implica 2:
+\item $1\Rightarrow 2$
 $$q_\phi(\lambda)=0\Rightarrow x-\lambda\mid q_\phi\Rightarrow q_\phi = (x-\lambda)g(x)$$
 Sea $B=\{v_1, \cdots, v_n\}$ una base consideremos $q_i=q_{\phi,v_i}$, entonces si $x-\lambda \nmid q_1, \cdots, q_n \Rightarrow x-\lambda\nmid mcm\{q_1, \cdots, q_n\}$ pero ocurre que $q_\phi = mcm \{\cdots\}$ luego necesariamente $x-\lambda \mid q_i$ para algún $i \in \mathbb N$. Por tanto, se tiene (podemos escoger que es $q_1$ porque el orden no importa) que $q_1=q_{\phi,v_i} = (x-\lambda)h(x)$. Esto necesariamente conlleva a que $(\phi-\lambda\cdot id)(h(\phi)(v_1))=0$, $h(\phi)(v_1)$ no puede ser 0 porque sería el polinomio mínimo de $v_1$ y no lo es luego precisamente $h(\phi)(v_1)=v$, es decir, es el vector donde se cumple la desigualdad.   
 
-2 implica 3
+\item $2\Rightarrow 3$
 
 Si expresamos en términos de una base $B=\{v_1,\cdots, v_n\}$ de forma que queda $v=a_1v_1+\cdots+a_nv_n$ vemos que como $\phi(v)=\lambda\cdot v$ se ve fácilmente que $(A-\lambda\cdot I_n)(v)=0$, luego como ese sistema tiene solución no nula el determinante de la matriz del sistema es 0, por lo tanto tenemos que $|A-\lambda \cdot I_n|=0$
-
-\subsubsection*{\underline{Polinomio característico}}
-Llamamos polinomio característico de $A$ o $p_A$ a:
-$$|A-\lambda I_n|=|A-x\cdot I_n|(\lambda)=p_A(\lambda)=0$$
-De hecho, este polinomio representa al endomorfismo sea cual sea la base en la que esté expresado, es decir, no depende de la matriz $A$, por lo que tiene sentido llamarlo $p_\phi$.
-
-El grado del polinomio característico es $gr(p_\phi)=n: \dim V=n$ y además es de la forma: $p_\phi= (-1)^nx^n+(-1)^{n-1}tr(A)+(-1)sx+\cdots+|A|$, donde $s$ son los determinantes de orden dos en los que aparece un término de la diagonal\footnote{Los demás términos intermedios del polinomio se obvian, pero existen fórmulas para interpretar los coeficientes en cada grado.}.
-
-\underline{Demostración}:
-
-Sean $A=M_B(\phi)$ y $A'=M_B'(\phi)$, ambas matrices por ser semejantes cumplen que $A'=P^{-1}AP$. Veamos que:
-$$p_{A'}=|A'-xI_n|=|P^{-1}AP-P^{-1}xP|=|P^{-1}(A-xI_n)P|=|P^{-1}|(A-xI_n)|P|=|(A-xI_n|=p_A$$
-
-Luego si $q_\phi(\lambda)=0\Leftrightarrow|A-\lambda I_n|=0\Leftrightarrow p_\phi(\lambda)=0$, entonces las raíces de $q_\phi$ son raíces de $p_\phi$ y viceversa, luego son el mismo polinomio salvo multiplicidad de raíces.
+\end{itemize}
+\end{demo}
 
 
-\subsubsection*{Subespacios propios}
-Si definimos por $V_{\phi, \lambda}$ como el subespacio de $V$ en el que todos los vectores cumplen $\phi(v)=\lambda v$, vemos que realmente estamos diciendo que $\ker(\phi-\lambda id)=V_{\phi,\lambda}$. Esto es lo que definimos como \textbf{subespacio propio}:
-$$V_{\phi,\lambda}=\ker(\phi-\lambda\cdot id_V)=\{v\in V: \phi(v)=\lambda \cdot v\}<V$$
-Es trivial ver que es un subespacio puesto que como se trata del $\ker$ de una aplicación lineal, este siempre es un subespacio vectorial del espacio en el que esta definido el endomorfismo.
+\begin{lema}
+Sea $\phi \in End(V)$, el polinomio mínimo y característico tienen las mismas raíces.
+\end{lema}
+\begin{demo}
+Tenemos la siguiente cadena de equivalencias
+$$q_\phi(\lambda)=0\Leftrightarrow|A-\lambda I_n|=0\Leftrightarrow p_\phi(\lambda)=0$$
+por tanto, $\lambda$ es raíz de $q_\phi$ si y sólo si lo es de $p_\phi$.
+\end{demo}
 
-Si $V_{\phi,\lambda}\neq 0\Rightarrow \lambda\mbox{ es autovalor y }v\in V_{\phi,\lambda}\mbox{ es un vector propio}$.
-
-Vamos a llamar al conjunto de los autovalores a $\sigma(\phi)=\{\lambda_1, \cdots, \lambda_t\}: q_\phi(\lambda_i) = 0$ y se denota por el \textbf{espectro}.
-
-\subsection*{\underline{Teorema de Caley - Hamilton}}
-Todo endomorfismo es raíz de su polinomio característico, es decir,
-$$p_\phi (\phi) = 0$$
-
-\underline{Demostración}
-
-La demostración de este teorema consiste en probar que el polinomio mínimo siempre divide al polinomio característico:
-$$q_\phi | p_\phi$$
-Porque implica directamente que $p_\phi (\phi) = 0$
-
-\subsubsection*{Lema}
-Si $f \in K[x]$ es un polinomio irreducible, y $f^a$ es la potencia exacta que divide a $q_\phi$, entonces
-$$f^a || q_\phi, \ f^a | q_\phi, \ f^{a+1} \nmid \mid q_\phi \Rightarrow f^a | p_\phi$$
-
-\underline{Demostración}
-
+\begin{lema}
+Sea $f \in K[x]$ un polinomio irreducible, si $f^a$ es la potencia exacta que divide a $q_\phi$, entonces
+$$f^a | q_\phi, \ f^a | q_\phi, \ f^{a+1} \nmid \mid q_\phi \Rightarrow f^a | p_\phi$$
+\end{lema}
+\begin{demo}
 Sea $B = \{v_1, \ldots, v_n \}$ base de $V$. Llamamos $q_i = q_{\phi, v_i}$
 
 Sabemos que $q_\phi = mcm \{q_1, \ldots, q_n\}$. Queremos ver que hay vectores en $V$ cuyo polinomio mínimo es exactamente $f^a$. Razonamos por reducción al absurdo.
@@ -2374,13 +2461,23 @@ $$\tilde{v} = a(\tilde{\phi})\left( g(\tilde{\phi})( \tilde{\phi}(0)\right) = 0 
 
 Por tanto, todos los irreducibles de $q_\phi$ y de $p_\phi$ son los mismos, cambiando únicamente los exponentes. Así, $$q_\phi | p_\phi$$
 $\hfill\square$
+\end{demo}
 
-\subsubsection*{Proposición}
+\begin{theo}[de Caley-Hamilton]
+Todo endomorfismo es raíz de su polinomio característico, es decir,
+$$p_\phi (\phi) = 0$$
+\end{theo}
+\begin{demo}
+La demostración de este teorema consiste en probar que el polinomio mínimo siempre divide al polinomio característico:
+$$q_\phi | p_\phi$$
+Porque implica directamente que $p_\phi (\phi) = 0$
+\end{demo}
+
+\begin{prop}
 Sea $q_\phi$ el polinomio mínimo y $p_\phi$ el polinomio característico, entonces poseen los mismos irreducibles en su descomposición salvo la multiplicidad de estos, que es mayor en la del característico.
 $$1\leq a_i\leq e_1: q_\phi = f_1^{a_1} \cdot \cdots \cdot f_t^{a_t} \wedge \pm p_\phi=f_1^{e_1} \cdot \cdots \cdot f_t^{e_t}\cdot f_{t+1}^{e_{t+1}} \cdot \cdots \cdot f_{s}^{e_s}$$
-
-\underline{Demostración}:
-
+\end{prop}
+\begin{demo}
 Sea $q_\phi = f_1^{a_1} \cdot \cdots \cdot f_t^{a_t}$ y $\pm p_\phi=f_1^{e_1} \cdot \cdots \cdot f_t^{e_t}\cdot f_{t+1}^{e_{t+1}} \cdot \cdots \cdot f_{s}^{e_s}$. Vamos a ver que estos factores adicionales no pueden existir, y en consecuencia solo cambian los exponentes de cada factor irreducible, pero no los factores irreducibles. Para ello basta con demostrar que $f\mid p_\phi\Rightarrow f\mid q_\phi$
 
 Sea $f\in K[x]: f$ es irreducible y $f\mid p_\phi \Rightarrow f\mid q_\phi$. Vamos a extender el cuerpo $K$ a un cuerpo $\tilde{K}$ de manera que $K\subset \tilde{K}$ y $p_\phi$ descompone en $\tilde{K}[x]$. Entonces tenemos que la matriz de A también tiene sentido en $\tilde{K}$: $A=M_B(\phi)\in Mat_n(K)\subset Mat_n(\tilde{K})$. Si fijamos una base en un espacio del nuevo cuerpo, entonces ahora $A$ puede representar la matriz de otro endomorfismo dentro de ese cuerpo, por lo que ahora si llamamos $\tilde{V}=\tilde{K}^n$ donde es $\tilde{K}-$espacio vectorial y definimos $\tilde{B}_c$ podemos considerar $\tilde{\phi}\in End(\tilde{K}^n): M_{\tilde{B}_c}(\tilde{\phi})=A$.
@@ -2394,89 +2491,164 @@ $$1=a(x)g(x)(x-\tilde{\lambda})+ b(x)q_{\phi}(x)\Rightarrow id_{\tilde{v}}=a(\ti
 
 Si ahora lo aplicamos al $\tilde{v}\neq 0$ elegido previamente tenemos que:
 $$\tilde{v}=a(\tilde{\phi})\left(g(\tilde{\phi})\left(\underbrace{\tilde{\phi}-\tilde{\lambda}\tilde{v}}_{=0}\right)\right)\Rightarrow \tilde{v}=0\Rightarrow\#$$
+\end{demo}
 
 
-\section*{CLASES NOTABLES DE ENDOMORFISMOS}
-\subsection*{\underline{Diagonalizabilidad}}
-Decimos que $\phi$ es diagonalizable si existe alguna base de manera que la matriz de $\phi$ en esa base es diagonal.
-$$\phi \mbox{ es diagonalizable}\Leftrightarrow \exists B=\{v_1, \cdots, v_n\}: M_{B}(\phi)\mbox{ sea diagonal}$$
+\section{CLASES NOTABLES DE ENDOMORFISMOS}
+Tal y como dijimos al comienzo del capítulo, el objetivo de este desarrollo es poder hacer una clasificación exhaustiva de los endomorfismos a través de la clase de equivalencia a la que pertenezcan. Además, nos gustaría que para escoger el representante de su clase de equivalencia escojamos la matriz más sencilla posible, esto es, aquella que permita un cálculo computacional más sencillo a la hora de trabajar con la matriz.
 
-Ej.:
 
-Supongamos que $\phi: V\rightarrow V$ simetría, entonces $V=W\oplus U$ definimos $\dim V=n$, $\dim W=m$ y $\dim U = m-n$. Escogemos una base de $V$, $B=\{\underbrace{v_1, \cdots, v_m,}_{B_W} \underbrace{v_{m+1}, \cdots, v_n}_{B_U}\}$ vemos que como un endomorfismo queda determinado por la imagen de los vectores de la base:
-$$M_B(\phi)=\begin{pmatrix}
-I_n & | & 0 \\ - & + & - \\ 0 & | & -I_{n-m}
-\end{pmatrix}$$
+\begin{defi}[Subespacios Propios]
+Sea $V$ un espacio vectorial y $\phi  \in End(V)$, se define un \textbf{subespacio propio para el autovalor $\lambda$} como aquel que verifica:
+$$V_{\phi, \lambda}=\{v\in V : \phi(v) = \lambda v\}$$
+es decir, son los subespacios generador por vectores propios.
+\end{defi}
+
+\begin{obs}
+Realmente estamos diciendo que $V_{\phi,\lambda} = \ker(\phi-\lambda id)$ por lo que trivialmente es un subespacio de $V$.
+\end{obs}
+
+\begin{defi}[Multiplicidades Algebraicas y Dimensión geométrica]
+Sea $\phi \in End(V)$, si su polinomio característico es $\pm p_\phi=(x-\lambda_1)^{e_1}\cdots (x-\lambda_t)^{e_t}$ decimos que las \textbf{multiplicidades algebraicas de los autovalores} son los $e_i$.
+
+Del mismo modo, decimos que la \textbf{dimensión geométrica} es la dimensión del subespacio propio para el autovalor $\lambda$, es decir:
+$$d_i=\dim_K V_{\phi,\lambda_i} = \dim \ker(\phi-\lambda_i id)= n - rg(\phi-\lambda_i id)$$
+\end{defi}
+\begin{obs}
+En la práctica, la dimensión geométrica representa el número de vectores propios linealmente independientes para cada autovalor $\lambda_i$.
+\end{obs}
+
+\begin{prop}
+Las dimensiones geométricas siempre son más pequeñas o iguales que las multiplicidades algebraicas:
+$$\forall i \in \mathbb N: d_i\leq e_i$$
+\end{prop}
+\begin{demo}
+Como $d$ es la dimensión de un subespacio consideramos una base del mismo: $B=\{v_1, \cdots, v_d\}$ base de $V_{\phi, \lambda}$ y ahora completamos dicha base a una base de $V$ siendo esta $B'=\{v_1,\cdots,v_d, v_{d+1},\cdots, v_n\}$ así que vamos a expresar la matriz de $\phi$ en base $B'$:
+$$M_{B'}(\phi)=\left(\begin{array}{c|c}\lambda I_d & M \\ \hline 0 & N \end{array}\right)$$
+Esto ocurre así porque los primeros $d$ vectores de la base van a ellos mismos multiplicados por $\lambda$ (son autovectores) y las otras cajas no son tan relevantes.
+
+Si calculamos ahora su polinomio característico vemos que:
+$$p_\phi=\left|\begin{array}{c|c}(\lambda-x) I_d & M\\ \hline 0 & N-xI_{n-d} \end{array}\right|=(\lambda-x)^d p_N$$
+Pero como sabemos que $p_\phi=(x-\lambda)^e g(x)$ vemos claramente que $e\geq d$.
+\end{demo}
+
+\subsection{Diagonalizabilidad}
+La primera clase de endomorfismos que nos encontramos son los diagonalizables. Estos tienen una propiedad excelente a la hora de trabajar con ellos: sólo tienen valores distintos de $0$ en la diagonal principal. Dicha característica confiere una gran ventaja a trabajar con esta matriz adecuada, por ejemplo, para calcular las potencias de matrices o las imágenes sucesivas de la aplicación.
+
+\begin{defi}[Diagonalizabilidad]
+Sea $\phi\in End(V)$, decimos que es \textbf{diagonalizable} si existe alguna base $B$ respecto de la cual su matriz $M_B(\phi)$ sea diagonal.
+\end{defi}
+
+\begin{ej}
+Supongamos que $\phi: V\rightarrow V$ es una simetría, entonces $V=W\oplus U$ con $\dim V=n$, $\dim W=m$ y $\dim U = m-n$. Escogemos una base de $V$, $B=\{\underbrace{v_1, \cdots, v_m,}_{B_W} \underbrace{v_{m+1}, \cdots, v_n}_{B_U}\}$ vemos que como un endomorfismo queda determinado por la imagen de los vectores de la base:
+$$M_B(\phi)=\left(\begin{array}{c|c} I_n & 0 \\ \hline 0 & -I_{n-m} \end{array}\right)$$
 Lo que ocurre realmente es que si $A=M_{B'}(\phi)$ y $A=M_B(\phi)$, entonces $\exists P=M(B',B): A'=P^{-1}AP$. Es decir, transformo mediante una matriz de paso, una matriz que no es diagonal en una \textbf{semejante} que sí lo es.
+\end{ej}
 
-\subsubsection*{Proposición}
-Una $\phi$ es diagonalizable si y sólo si $V$ posee alguna base formada por vectores propios.
-
-Luego esto nos da un muy buen criterio para saber si un endomorfismo es diagonalizable puesto que sabemos hallar autovectores y bases.
-
-\underline{Demostración}:
-\begin{itemize}
-\item $\Rightarrow$
-
+\begin{prop}
+Sea $\phi\in End(V)$, entonces es diagonalizable si y sólo si $V$ posee alguna base formada por vectores propios.
+\end{prop}
+\begin{demo}
+Por un lado, tenemos que $\Rightarrow$ se demuestra como:
 $$\exists B=\{v_1, \cdots, v_n\} : M_B(\phi)=D=\begin{pmatrix}
 \lambda_1 & \cdots & 0 \\
 \vdots & \ddots & \vdots \\
 0 & \cdots & \lambda_n
 \end{pmatrix}\Rightarrow \phi(v_i)=\lambda_i \cdot v_i\Rightarrow v_i \mbox{ autovector}$$
-
-\item $\Leftarrow$
+Por otro, la implicación contraria $\Leftarrow$ es viendo que:
 $$B\mbox{ base}: \phi(v_i)=\lambda_iv_i: i=1,\cdots, n\Rightarrow M_B(\phi)=\begin{pmatrix}
 \lambda_1 & \cdots & 0 \\
 \vdots & \ddots & \vdots \\
 0 & \cdots & \lambda_n
 \end{pmatrix}$$
-\end{itemize} 
+\end{demo}
 
-Ej.:
+\begin{obs}
+Luego esto nos da un muy buen criterio a priori para saber si un endomorfismo es diagonalizable, puesto que basta con calcular sus vectores propios y ver si forman una base.
+\end{obs}
 
-Supongamos que $M_{B_c}(\phi)=\begin{pmatrix}
-0&1&1\\1&0&1\\1&1&0
-\end{pmatrix}$ luego tenemos $p_\phi= (x+1)^2(x-2)$ y $q_\phi=(x+1)(x-2)$, por lo que tenemos que $\lambda_1 = -1$ y $\lambda_2 = 2$ y tenemos que $V_{\phi, \lambda_1}= \ker(\phi+id): (A+I_3)$ cuyo resultado del sistema es $V_{\phi, \lambda_1}:x+y+z=0$. Es decir, como es un plano puedo encontrar en él dos vectores linealmente independientes.
+\begin{ej}
+Supongamos el siguiente endomorfismo:
+$$M_{B_c}(\phi)=\begin{pmatrix} 0&1&1\\1&0&1\\1&1&0 \end{pmatrix} \Rightarrow \begin{cases}
+p_\phi= (x+1)^2(x-2) \\ q_\phi=(x+1)(x-2)
+\end{cases}$$
+Luego sus autovalores son $\lambda_1 = -1$ y $\lambda_2 = 2$ y de ahí podemos deducir que $V_{\phi, \lambda_1}= \ker(\phi+id) \equiv x+y+z=0$ y como es un plano puedo encontrar en él dos vectores linealmente independientes.
 
-Vamos a por el segundo $V_{\phi,\lambda_2}=\ker(\phi-2id)$ y al final tenemos que $V_{\phi,\lambda_2}:\begin{cases}x-2y+z=0 \\ x+y-2z=0\end{cases}$, que por ser una recta posee un vector linealmente independiente.
+Por otro lado, $V_{\phi,\lambda_2}=\ker(\phi-2id)\equiv \begin{cases}x-2y+z=0 \\ x+y-2z=0\end{cases}$, que por ser una recta posee un vector linealmente independiente.
 
-Así que uniendo los 3 vectores comentados se tiene que $B'=\{(e_1-e_2), (e_1-e_3), (e_1+e_2+e_3)\}$ es base de $V$. Expresando $\phi$ en la base construida se tiene que $A'=M_{B'}(\phi)=\begin{pmatrix}-1&0&0\\0&-1&0\\0&0&2\end{pmatrix}$.
+Así que uniendo los 3 vectores comentados se tiene que $B'=\{(e_1-e_2), (e_1-e_3), (e_1+e_2+e_3)\}$ y se comprueba fácilmente que es base de $V$. Expresando $\phi$ en la base construida se tiene que
+$$A'=M_{B'}(\phi)=\begin{pmatrix}-1&0&0\\0&-1&0\\0&0&2\end{pmatrix}$$
+\end{ej}
 
-\subsubsection*{Propiedad}
-Vectores propios no nulos respecto de autovalores distintos forman conjuntos linealmente independientes.
-$$v_1\in V_{\phi, \lambda_1}, v_2\in V_{\phi,\lambda_2}: \lambda_1 \neq \lambda_2\Rightarrow \{v_1,v_2\}\mbox{ linealmente independientes}$$
-
-\underline{Demostración}:
-
+\begin{prop}
+Sea $\phi \in End(V)$ y $\lambda_1, \lambda_2$ autovalores del endomorfismo, entonces los vectores propios de $\lambda_1$ son distintos de los vectores propios de $\lambda_2$, es decir, vectores propios respecto de autovalores distintos forman conjuntos linealmente independientes.
+$$v_1\in V_{\phi, \lambda_1},\ v_2\in V_{\phi,\lambda_2}: \lambda_1 \neq \lambda_2 \Rightarrow \{v_1,v_2\}\mbox{ l.i.}$$
+\end{prop}
+\begin{demo}
 $$a_1v_1+a_2v_2=0\Rightarrow \phi(a_1v_1+a_2v_2)=\phi(0)=0\Rightarrow a_1\lambda_1v_1+a_2\lambda_2v_2=0$$
 Por otro lado tenemos que:
 $$a_1v_1+a_2v_2=0\Rightarrow a_1\lambda_1v_1+a_2\lambda_1v_2=0$$
 Restando ambas:
 $$a_2(\lambda_2-\lambda_1)v_2=0\Rightarrow a_2=0$$
 Y tenemos que $a_1v_1=0\Rightarrow a_1=0$
+\end{demo}
 
-\subsubsection*{Proposición}
-Supongamos que $\phi$ es diagonalizable, entonces su matriz es diagonal, es decir, $A=\begin{pmatrix}\lambda_1 &\cdots &0\\ \vdots &\ddots & \vdots\\ 0 &\cdots &\lambda_n\end{pmatrix}$ por lo que vemos que su polinomio característico es $p_\phi = |A-x\cdot I_n|=(\lambda_1-x)\cdots (\lambda_n-x)=(-1)^n\cdot (x-\lambda_1)\cdots (x-\lambda_n)$.
+\begin{prop}
+Sea $\phi\in End(V)$, entonces $\phi$ es diagonalizable si y sólo si $p_\phi$ descompone completamente en $K[x]$ y $d_i=e_i:\forall i$.
+\end{prop}
+\begin{demo}
+\begin{itemize}
+\item $\Rightarrow$
 
-En primer lugar, \textbf{el polinomio característico de un endomorfismo diagonalizable descompone completamente en $K[x]$}.
-$$p_\phi=(-1)^{n}(x-\lambda_1)\cdot \cdots \cdots (x-\lambda_n)$$
+Supongamos que $\phi$ es diagonalizable, entonces existe una base donde su matriz es diagonal, es decir,
+$$A=\begin{pmatrix}\lambda_1 &\cdots &0\\ \vdots &\ddots & \vdots\\ 0 &\cdots &\lambda_n\end{pmatrix} \Rightarrow p_\phi = |A-x\cdot I_n|=(\lambda_1-x)\cdots (\lambda_n-x)=(-1)^n\cdot (x-\lambda_1)\cdots (x-\lambda_n)$$
+Como es diagonalizable por hipótesis, entonces existe una base formada por vectores propios: $B=\{\underbrace{v_{11}, \cdots, v_{1m_1}}_{V_{\phi,\lambda_1}}, \cdots,\underbrace{v_{t_1}, \cdots, v_{tm_t}}_{V_{\phi,\lambda_t}}\}$. Entonces tenemos que $m_1\leq d_1$, ..., $m_t\leq d_t$. Como es base tiene que haber $n$ vectores y como sabemos que $gr(p_\phi)=\dim V = n= e_1+\cdots+e_t=m_1+\cdots+m_t\leq d_1+\cdots+d_t\Rightarrow (d_1-e_1)+\cdots+(d_t-e_t)=0\Rightarrow d_i=e_i$.
 
-En segundo lugar, \textbf{la diagonal de un endoformismo diagonalizado es precisamente el espectro del mismo}.
+\item $\Leftarrow$
 
-Por último, Si un endomorfismo es diagonalizable, su polinomio mínimo no posee raíces múltiples y descompone completamente.
+Si el polinomio descompone completamente en $K[x]$, entonces $gr(p_\phi)=n = e_1+\cdots+e_t$ y si suponemos que $d_i=e_i$, entonces se tiene que $n=e_1+\cdots+e_t=d_1+\cdots+d_t$. Pero como $d_1$ indica que hay $d_1$ vectores linealmente independientes para el primer autovalor, podemos ir construyendo con cada conjunto de vectores de cada $d_i$ una base de $n$ y como es una base formada por autovectores, entonces es diagonalizable.
+\end{itemize}
+\end{demo}
 
-\underline{Demostración}:
+\begin{prop}
+Sea $\phi\in End(V)$, entonces $\phi$ es diagonalizable si y sólo si $q_\phi$ descompone en $K[x]$ y las raíces son distintas.
+\end{prop}
+\begin{demo}
+\begin{itemize}
+\item $\Rightarrow$
 
-Si tenemos que $(-1)^n\cdot (x-\lambda_1)\cdots (x-\lambda_n)$, la hipótesis es que el mínimo posee los mismos factores pero sin repetir, es decir, $q_\phi= (x-\lambda_1)\cdot \cdots (x-\lambda_t)$ donde $t$ es el número de raíces distintas. Vamos a ver que realmente $q_\phi(\phi)=0$.
+Ya es conocido porque si $p_\phi$ lo es y $q_\phi\mid p_\phi$ ya está.
 
-Tenemos que por los teoremas anteriores, hay una base formada por autovectores de forma que $B=\{\underbrace{v_{11}, \cdots, v_{m1}}_{\in V_{\phi, \lambda_1}}, \cdots\}$, ahora nos preguntamos:
-$$[(x-\lambda_1)\cdot \cdots \cdot (x-\lambda_t)](\phi)(v_{1j})=[(x-\lambda_2)\cdot \cdots \cdot (x-\lambda_t)(x-\lambda_1)](\phi)(v_{1j})=[(\phi-\lambda_2 id)\cdot \cdots \cdot (\phi-\lambda_t id )](\underbrace{\phi-\lambda_1 id)(v_ij}_{\lambda_1 v_{ij}-\lambda_1v_{1j}=0})=0$$
-Si hacemos lo mismo con el resto de autovalores se tiene que el polinomio que hemos definido se anula completamente sobre los vectores de una base, es decir, que $q_\phi(\phi)=0$.
+\item $\Leftarrow$
+$$q_\phi=(x-\lambda_1)\cdots (x-\lambda_t): \lambda_1 \neq \cdots \neq \lambda_t= (x-\lambda_i)g_i(x)$$
+Vemos que $1=mcd(g_1, \cdots, g_t)$, luego $1=g_1(x)a_1(x)+\cdots +g_t(x)a_t(x)$. Tenemos pues que
+$$id_v=g_1(\phi)\circ a_1(\phi)+\cdots + g_t(\phi)\circ a_t(\phi)$$
+y entonces ocurre:
+$$\forall v\in V: v=g_1(\phi)(a_1(\phi)(v))+\cdots + g_t(\phi)(a_t(\phi)(v))$$
+Es decir, podemos expresar cada $v$ como $v=v_1+\cdots+v_t$ donde cada $v_i=g_i(\phi)(a_i(\phi)(v))$. Veamos que cada uno de esos sumandos es un vector propio:
+$$v_i\in V_{\phi, \lambda_i}: \phi(v_i)-\lambda_iv_i= (x-\lambda_i)(\phi)(v_i)= (x-\lambda_i)(\phi)(g_i(\phi)(a_i(\phi)(v)))=$$
+$$=[(x-\lambda_i)g_i(x)a_i(x)](\phi)(v)= q_\phi(\phi)(a_i(\phi)(v))=0(a_i(\phi)(v))=0$$
+Entonces lo que tenemos es que cada vector $v$ se puede expresar como la suma de $v_1, \cdots, v_t$ vectores, si consideramos $B_i$ base de $V_{\phi, \lambda_i}$ (que genera $v_i$), entonces tenemos que $B_1\cup \cdots \cup B_t$ es sistema de generadores de $V$ y además como vimos que vectores propios de autovalores distintos son independientes, la unión de todas las bases es independiente y por tanto es base de $V$.
+\end{itemize}
+\end{demo}
 
-\subsubsection*{Proposición}
-$\phi$ es diagonalizable si y solo si $p_\phi$ descompone en $K[x]$ de forma que $d_i = e_i$.
+\begin{ej}
+Vamos a aplicarlo al caso de las homologías: supongamos que $q_\phi=(x-1)(x-r): r\neq 0,1,-1$ y vemos que como se cumplen las condiciones anteriores, entonces es diagonalizable. Entonces, por lo probado antes tenemos que $v=v_1+v_r$ cada uno en uno de los subespacios propios. Vamos a ver que la intersección es 0; $v_1=v_r\Rightarrow \phi(v_1)=v_1 \wedge r\cdot v_1=0\Leftrightarrow (1-r)v_1=0\Rightarrow v_1 = 0$. Tenemos entonces que $V=V_{\phi, 1} \oplus V_{\phi,r}$, luego los primeros vectores van a ellos mismos y los segundos se multiplican por $r$.
 
-\subsubsection*{Potencia enésima de matrices}
+Por ejemplo, en dimensión $K^2$ tenemos que las únicas aplicaciones lineales diagonalizables posibles responden a la siguiente afirmación:
+$$\begin{cases}x-\lambda \\ (x-\lambda_1)(x-\lambda_2): \lambda_1\neq \lambda_2 \end{cases}$$
+En el primer caso son homotecias de razón $\lambda$ y en el segundo la matriz resultante es: 
+$$\begin{pmatrix}
+\lambda_1 & 0\\ 0&\lambda_2
+\end{pmatrix}=\begin{pmatrix}
+\lambda_1 & 0\\ 0&1
+\end{pmatrix}\cdot\begin{pmatrix}
+1 & 0\\ 0&\lambda_2
+\end{pmatrix}\Rightarrow \phi=\phi_1\circ\phi_2$$
+Es decir, cualquier aplicación en el plano que sea diagonalizable y no sea una homotecia es producto de dos homologías generales. Y esto es aplicacble a cualquier dimensión con el correspondiente aumento de producto de homologías.
+\end{ej}
+
+\subsubsection{Potencia enésima de matrices}
 Una aplicación bastante buena de esta parte de teoría es hallar la fórmula general de la sucesión geométrica cuyo término base es la matriz A. Para ello hay que distinguir dos casos:
 \begin{itemize}
 \item \underline{\textbf{Diagonalizable}}
@@ -2499,95 +2671,25 @@ $$
 \item \underline{\textbf{NO diagonalizable}}
 
 Este caso es más complejo y se explicará el procedimiento general a través de un ejemplo (aunque explicando los pasos a seguir y las partes).
-
+%%FIXME falta desarrollar este caso y poner el ejemplo
 Ej.:
-
-
 \end{itemize}
 
-\subsection*{\underline{Multiplicidades algebraicas y dimensión geométrica}}
-Sea $\pm p_\phi=(x-\lambda_1)^{e_1}\cdots (x-\lambda_t)^{e_t}$ decimos que $e_i$ son las \textbf{multiplicidades algebraicas} de los autovalores y sea $q_phi=(x-\lambda_1)^{a_1}\cdots (x-\lambda_t)^{a_t}$ decimos que la \textbf{dimensión geométrica} es:
-$$d_i=\dim_K V- \dim \ker(\phi-\lambda_i id)=n-rg(\phi-\lambda_i id)$$
+\subsection{Triangularizabilidad}
+Las condiciones para que una matriz sea diagonalizable son muy restrictivas pues obligan al endomorfismo a poder formar una base de vectores propios. En general, estas condiciones tan específicas no se pueden dar y debemos buscar otra forma ``sencilla'' para las matrices de aquellos endomorfismos no diagonalizables. Una de las posibles soluciones es poder triangularizar la matriz, lo que no logra la simplicidad de la diagonalización pero sí simplifica los cálculos al obtener muchos 0 dentro de la matriz.
 
-En la práctica, la dimensión geométrica representa el número de vectores propios linealmente independientes para cada autovalor $\lambda_i$.
+\begin{defi}[Triangularizabilidad]
+Sea $\phi \in End(V)$, decimos que $\phi$ es \textbf{triangularizable} si existe alguna base $B$ de $V$ respecto de la cual la matriz de $\phi$ sea triangular.
+\end{defi}
 
-\subsubsection*{Proposición}
-Las dimensiones geométricas siempre son más pequeñas que las multiplicidades algebraicas:
-$$\forall i \in \mathbb N: d_i\leq e_i$$
+\begin{obs}
+En el documento se va a desarrollar la teoría para conseguir matrices triangulares inferiores, esto es, con los $0$ bajo la diagonal principal. Si se desea una matriz triangular superior, basta con invertir el orden de los vectores de la base en la que es triangular inferior.
+\end{obs}
 
-\underline{Demostración}:
-
-Como $d$ es la dimensión de un subespacio consideramos una base del mismo: $B=\{v_1, \cdots, v_d\}$ base de $V_{\phi, \lambda}$ y ahora completamos dicha base a una base de $V$ siendo esta $B'=\{v_1,\cdots,v_d, v_{d+1},\cdots, v_n\}$ así que vamos a expresar la matriz de $\phi$ en base $B'$:
-$$M_{B'}(\phi)=\begin{pmatrix}\lambda I_d & | & M\\ -&+&-\\0&|&N\end{pmatrix}$$
-Esto ocurre así porque los primeros $d$ vectores de la base van a ellos mismos multiplicados por $\lambda$ (son autovectores) y las otras cajas no son tan relevantes.
-
-Si calculamos ahora su polinomio característico vemos que:
-$$p_\phi=\left|\begin{array}{ccc}(\lambda-x) I_d & | & M\\ -&+&-\\0&|&N-xI_{n-d}\end{array}\right|=(\lambda-x)^d p_N$$
-Pero como sabemos que $p_\phi=(x-\lambda)^e g(x)$ vemos claramente que $e\geq d$.
-
-\subsubsection*{Proposición}
-Decimos que $\phi$ es diagonalizable si y sólo si $p_\phi$ descompone completamente en $K[x]$ y $d_i=e_i:\forall i$.
-
-\underline{Demostración}:
-\begin{itemize}
-\item $\Rightarrow$
-
-Como es diagonalizable por hipótesis, entonces existe una base formada por vectores propios: $B=\{\underbrace{v_{11}, \cdots, v_{1m_1}}_{V_{\phi,\lambda_1}}, \cdots,\underbrace{v_{t_1}, \cdots, v_{tm_t}}_{V_{\phi,\lambda_t}}\}$. Entonces tenemos que $m_1\leq d_1$, ..., $m_t\leq d_t$. Como es base tiene que haber $n$ vectores y como sabemos que $gr(p_\phi)=\dim V = n= e_1+\cdots+e_t=m_1+\cdots+m_t\leq d_1+\cdots+d_t\Rightarrow (d_1-e_1)+\cdots+(d_t-e_t)=0\Rightarrow d_i=e_i$.
-
-\item $\Leftarrow$
-
-Si el polinomio descompone completamente en $K[x]$, entonces $gr(p_\phi)=n = e_1+\cdots+e_t$ y si suponemos que $d_i=e_i$, entonces se tiene que $n=e_1+\cdots+e_t=d_1+\cdots+d_t$. Pero como $d_1$ indica que hay $d_1$ vectores linealmente independientes para el primer autovalor, podemos ir construyendo con cada conjunto de vectores de cada $d_i$ una base de $n$ y como es una base formada por autovectores, entonces es diagonalizable.
-\end{itemize}
-
-\subsubsection*{Teorema}
-$$\phi\mbox{ diagonalizable}\Leftrightarrow q_\phi\mbox{ descompone en } K[x]\mbox{ y las raíces son distintas}$$
-
-El interés de este criterio es saber si una aplicación es diagonalizable sin calcular nada más que el polinomio mínimo.
-
-\underline{Demostración}:
-
-\begin{itemize}
-\item $\Rightarrow$
-
-Ya es conocido porque si $p_\phi$ lo es y $q_\phi\mid p_\phi$ ya está.
-
-\item $\Leftarrow$
-$$q_\phi=(x-\lambda_1)\cdots (x-\lambda_t): \lambda_1 \neq \cdots \neq \lambda_t= (x-\lambda_i)g_i(x)$$
-Vemos que $1=mcd(g_1, \cdots, g_t)$, luego $1=g_1(x)a_1(x)+\cdots +g_t(x)a_t(x)$. Tenemos pues que
-$$id_v=g_1(\phi)\circ a_1(\phi)+\cdots + g_t(\phi)\circ a_t(\phi)$$
-y entonces ocurre:
-$$\forall v\in V: v=g_1(\phi)(a_1(\phi)(v))+\cdots + g_t(\phi)(a_t(\phi)(v))$$
-Es decir, podemos expresar cada $v$ como $v=v_1+\cdots+v_t$ donde cada $v_i=g_i(\phi)(a_i(\phi)(v))$. Veamos que cada uno de esos sumandos es un vector propio:
-$$v_i\in V_{\phi, \lambda_i}: \phi(v_i)-\lambda_iv_i= (x-\lambda_i)(\phi)(v_i)= (x-\lambda_i)(\phi)(g_i(\phi)(a_i(\phi)(v)))=$$
-$$=[(x-\lambda_i)g_i(x)a_i(x)](\phi)(v)= q_\phi(\phi)(a_i(\phi)(v))=0(a_i(\phi)(v))=0$$
-Entonces lo que tenemos es que cada vector $v$ se puede expresar como la suma de $v_1, \cdots, v_t$ vectores, si consideramos $B_i$ base de $V_{\phi, \lambda_i}$ (que genera $v_i$), entonces tenemos que $B_1\cup \cdots \cup B_t$ es sistema de generadores de $V$ y además como vimos que vectores propios de autovalores distintos son independientes, la unión de todas las bases es independiente y por tanto es base de $V$.
-\end{itemize}
-
-Ej.:
-
-Vamos a aplicarlo al caso de las homologías: supongamos que $q_\phi=(x-1)(x-r): r\neq 0,1,-1$ y vemos que como se cumplen las condiciones anteriores, entonces es diagonalizable. Entonces, por lo probado antes tenemos que $v=v_1+v_r$ cada uno en uno de los subespacios propios. Vamos a ver que la intersección es 0; $v_1=v_r\Rightarrow \phi(v_1)=v_1 \wedge r\cdot v_1=0\Leftrightarrow (1-r)v_1=0\Rightarrow v_1 = 0$. Tenemos entonces que $V=V_{\phi, 1} \oplus V_{\phi,r}$, luego los primeros vectores van a ellos mismos y los segundos se multiplican por $r$.
-
-Por ejemplo, en dimensión $K^2$ tenemos que las únicas aplicaciones lineales diagonalizables posibles responden a la siguiente afirmación:
-$$\begin{cases}x-\lambda \\ (x-\lambda_1)(x-\lambda_2): \lambda_1\neq \lambda_2 \end{cases}$$
-En el primer caso son homotecias de razón $\lambda$ y en el segundo la matriz resultante es: 
-$$\begin{pmatrix}
-\lambda_1 & 0\\ 0&\lambda_2
-\end{pmatrix}=\begin{pmatrix}
-\lambda_1 & 0\\ 0&1
-\end{pmatrix}\cdot\begin{pmatrix}
-1 & 0\\ 0&\lambda_2
-\end{pmatrix}\Rightarrow \phi=\phi_1\circ\phi_2$$
-Es decir, cualquier aplicación en el plano que sea diagonalizable y no sea una homotecia es producto de dos homologías generales. Y esto es aplicacble a cualquier dimensión con el correspondiente aumento de producto de homologías.
-
-\subsection*{\underline{Triangularizabilidad}}
-Decimos que $\phi$ es triangularizable si existe alguna base $B$ de $V$ de manera que la matriz de $\phi$ es triangular.
-
-Como observación si una matriz es triangular inferior respecto de una base inviertiendo el orden de los vectores de la base en la que es triangular inferior tenemos que es triangular superior.
-
-\subsubsection*{Teorema}
-Decimos que $\phi$ es triangularizable si y sólo si el polinomio característico de $\phi$ descompone en $K[x]$.
-
-\underline{Demostración}:
+\begin{theo}
+Sea $\phi\in End(V)$, entonces $\phi$ es triangularizable si y sólo si $p_\phi$ descompone en $K[x]$.
+\end{theo}
+\begin{demo}
 \begin{itemize}
 \item $\Rightarrow$
 
@@ -2628,45 +2730,56 @@ $$M_B(\phi)=\begin{pmatrix}
 0 & N
 \end{pmatrix}$$
 Puedo considerar $N$ como $M_{\{w_2, \cdots,w_n\}}(\psi)$ de forma que $\psi: W\rightarrow W$. El polinomio característico de la matriz anterior es $p_\phi=|A-xI|=(\lambda_1-x)p_N=(\lambda_1-x)p_\psi$ luego tenemos que $p_\psi = (x-\lambda_2)\cdots (x-\lambda_n)$ y aplicando la hipótesis de inducción tenemos que $\psi$ es triangularizable con lo cual como en la columna de $\lambda_1$ de la matriz A ya tiene todo ceros debajo ya está.
-
 \end{itemize}
+\end{demo}
 
-\section*{FORMAS CANÓNICAS}
-\subsection*{\underline{Subespacios invariantes}}
-Sea $\phi: V\rightarrow V$ y $W<V$ se dice que $W$ es invariante si $\phi(W)\subset W$.
+\section{FORMA CANÓNICA DE JORDAN}
+De nuevo, aunque las clases anteriores nos dan unas muy buenas representaciones para cierto tipo de endomorfismos, no son válidas para todos en general. Nuestro objetivo en esta sección es desarrollar una estructura general, canónica, para todos los endomorfismos que encontremos. Esta forma será diagonal o triangular para los endomorfismos que sí cumplan las condiciones de la sección anterior, pero tendrá una nueva representación para aquellos que no encajen en los conceptos vistos.
 
-De esta manera y a priori podemos ver que $\phi(L(v_1))\subset L(v_1)\Leftrightarrow \phi(v_1)=\lambda v_1$, luego las rectas invariantes son las generadas por vectores propios.
+\begin{defi}[Subepacios Invariantes]
+Sea $\phi: V\rightarrow V$ y $W<V$ se dice que $W$ es un \textbf{subespacio invariante} si es cerrado bajo $\phi$, es decir, $\phi(W)\subset W$.
+\end{defi}
 
-El resultado de esta definición es que si $W$ es un subespacio $\phi-invariante$ (que denotaremos por $W<_\phi V$), entonces la restricción de $\phi$ al subespacio es de nuevo un endomorfismo:
+\begin{obs}
+El resultado de esta definición es que si $W$ es un subespacio $\phi-invariante$ (que denotaremos por $W<_\phi V$), entonces la restricción de $\phi$ al subespacio es de nuevo un endomorfismo, pero esta vez sobre $W$:
 $$\phi\mid_W: W\rightarrow W\Rightarrow \phi\mid_W\in End(W)$$
+Además, podemos ver que $\phi(L(v_1))\subset L(v_1)\Leftrightarrow \phi(v_1)=\lambda v_1$, luego las rectas invariantes son las generadas por vectores propios.
+\end{obs}
 
-\subsubsection*{Proposición}
-Los subespacios propios y el núcleo de cualquier endomorfismo son subespacios invariantes del mismo.
-$$\phi\left(V_{\phi,\lambda}\right)\in V_{\phi,\lambda}$$
-$$g\in K[x]: \ker\{g(\phi)\}<_\phi V$$
+\begin{prop}
+Sea $\phi\in End(V)$, entonces los subespacios propios $V_{\phi, \lambda}$ y $\ker \phi$ son subespacios invariantes del mismo.
+\begin{align*}
+\phi\left(V_{\phi,\lambda}\right)\in V_{\phi,\lambda} & & \ker\{\phi\}<_\phi V
+\end{align*}
+\end{prop}
 
-\underline{Demostración}:
-
-Se considera trivial (usar propiedades de las aplicaciones lineales y la definición de cada concepto).
-
-\subsubsection*{Proposición}
-El polinomio característico de la restricción de $\phi$ a un subespacio invariante divide al polinomio característico de la aplicación lineal.
+\begin{prop}
+Sea $\phi\in End(V)$ un endomorfismo y $W<_\phi V$ un subespacio invariante del mismo, entonces:
+\begin{itemize}
+\item El polinomio característico de la restricción a $W$ divide al polinomio característico del endormorfismo inicial, es decir:
 $$p_{\phi\mid_W}\mid p_\phi$$
-Del mismo modo, el polinomio mínimo de la restricción de $\phi$ a un subespacio invariante divide al polinomio mínimo de la aplicación lineal.
+
+\item El polinomio mínimo de la restricción a $W$ divide al polinomio mínimo del endormorfismo inicial, es decir:
 $$q_{\phi\mid_W}\mid q_\phi$$
+\end{itemize}
+\end{prop}
 
-\subsubsection*{Lema}
-Suponemos que $\phi\in End(V)$, que $g\in K[x]: g(\phi)=0$ suponemos que $g=g_1\cdot \cdots \cdot g_t: g_i\in K[x]: mcd(g_i, g_j)=1$. Entonces se cumple que:
+\begin{obs}
+El resultado anterior es fundamental, puesto que nos permite caracterizar los subespacios invariantes de la dimensión que queramos. Si tenemos un polinomio característico concreto, los  subespacios invariantes de dimensión 2 solo podrán ser aquellos para los cuales el polinomio característico de la restricción a ellos mismos tengan 2 factores del polinomio característico original, etc.
+\end{obs}
+
+\begin{lema}
+Sea $\phi\in End(V)$ y $g\in K[x]: g(\phi)=0$ que podemos factorizar como:
+$$g=g_1\cdot \ldots \cdot g_t: g_i\in K[x]: mcd(g_i, g_j)=1$$
+entonces se cumple que:
 $$V=_\phi \ker g_1(\phi)\oplus \cdots \oplus \ker g_t(\phi)$$
-
-\underline{Demostración}:
-
+\end{lema}
+\begin{demo}
 Llamamos a $v_i=\ker g_i(\phi)$ vamos a ver que todo vector de $V$ se expresa como suma de dichos $v_i$ y que la intersección de todos es nula.
 
 Nos fijamos solo en uno de los factores: 
 $$g=g_ih_i\Rightarrow mcd(h_1, \cdots, h_t)=1\Rightarrow 1=h_1(x)a_1(x)+\cdots+h_t(x)a_t(x)\Rightarrow id_v=h_1(\phi)\circ a_1(\phi)+\cdots+h_t(\phi)\circ a_t(\phi)\Rightarrow$$
 $$\Rightarrow v=[h_1(\phi)\circ a_1(\phi)](v)+\cdots+[h_t(\phi)\circ a_t(\phi)](v)\Rightarrow v=v_1+\cdots+v_t: v_i=[h_i(\phi)\circ a_i(\phi)](v )$$
-
 Ahora tenemos que ver que cada uno de esos vectores está en su núcleo correspondiente:
 $$g_i(\phi)(v_i)=[g_i(\phi)\circ h_i(\phi)\circ a_i(\phi)](v)=[g_i(x)h_i(x)a_i(x)(\phi)](v)=[a_i(x)g(x)](\phi)(v)=a_i(\phi)(g(\phi)(v))=a_i(\phi)(0)=0$$
 $$\Rightarrow v_i\in \ker g_i(\phi)$$
@@ -2675,82 +2788,90 @@ Ahora vamos a ver que si la suma de todos es el vector nulo, entonces necesariam
 $$v_1+\cdots+v_t=0\Rightarrow 0=h_i(\phi)(v_1+\cdots+v_t)=h_i(\phi)(v_i)$$
 Por otra parte tenemos que $g_i(\phi)(v_i)=0$ pero habíamos definido que:
 $$mcd(g_i, h_i)=1\Rightarrow 1=a_i(x)g_i(x)+b_i(x)h_i(x)\Rightarrow v_i=[a_i(\phi)\circ g_i(\phi)](v_i)+[b_i(\phi)\circ h_i(\phi)](v_i)=0\Rightarrow v_i=0$$
+\end{demo}
 
-\subsubsection*{Matriz diagonal por cajas}
-Supongamos que $V=_\phi V_1\oplus \cdots\oplus V_t$ (de hecho cualquier descomposición en suma directa de subespacios invariantes), entonces tenemos que $B=B_1\cup \cdots\cup B_t$, falta no se que de $\phi_i=\phi\mid_{V_i}:V_i\rightarrow V_i$. Vamos a llamar $A_i=M_{B_i}(\phi_i)$, entonces tenemos que $$M_B(\phi)=\begin{pmatrix}
+\begin{defi}[Matriz diagonal por cajas]
+Sea $V$ un espacio vectorial de modo que $V=_\phi V_1\oplus \cdots\oplus V_t$ y $\phi\in End(V)$. Si escogemos $B$ de forma que esté formada por unión de las bases de cada subespacio, es decir, $B=B_1\cup \cdots\cup B_t$, entonces la matriz de $\phi$ queda\footnote{Los 0 de la matriz denotan matrices nulas de las dimensiones adecuadas} como:
+$$M_B(\phi)=\begin{pmatrix}
 A_1 & 0 &\cdots & 0\\
 0& A_2 & \cdots & 0\\
 \vdots & \vdots & \ddots & \vdots\\
 0&0&\cdots & A_t
 \end{pmatrix}$$
+donde cada  $A_i=M_{B_i}(\phi\mid_{V_i})$.
 
-Vemos que entonces tenemos una matriz diagonal por cajas y a partir de ahora a este tipo tan especial de matriz lo denominaremos como $A=A_1\oplus \cdots \oplus A_t$.
+Además, para denotar una matriz diagonal por cajas utilizaremos la siguiente notación:
+$$A=A_1\oplus \cdots \oplus A_t$$
+\end{defi}
 
-Ej.:
-
+\begin{ej}
 Supongamos que $q_\phi =\underbrace{(x-\lambda_1)}_{g_1}\cdots \underbrace{(x-\lambda_t)}_{g_t} : \lambda_i \neq \lambda_j$ con lo cual sabemos que es diagonalizable. Vemos que $mcd(g_i, g_j)=1$ osea que se cumple la condición del lema porque $q_\phi(\phi)=0$ por lo que si llamo $V_i=\ker\{(x-\lambda_i)(\phi)\}=\ker(\phi-\lambda_i id_v)=V_{\phi, \lambda_i}$ y esto quiere decir que $V= V_1\oplus \cdots \oplus V_t$ y eso es diagonalizable.
+\end{ej}
 
-\subsubsection*{Lema para polinomio mínimo y característico}
-Aplicando el lema anterior al polinomio mínimo y característico, vemos que los subespacios que descomponen el endormorfismo en suma directa de matrices son justamente el $\ker$ de cada factor del polinomio mínimo y característico (porque coinciden), es decir, podemos dividir el estudio de un endomorfismo al estudio de cada uno de los trozos en los que se divide su polinomio característico y después juntar todas las bases para obtener la matriz escalonada por cajas de antes.
-$$g=\begin{cases}q_\phi = f_1^{a_1}\cdots f_t^{a_t}\\ p_\phi = f_1^{e_1}\cdots f_t^{e_t}: e_i\geq a_i\end{cases}$$
-Consideramos que:
-$$V=_\phi V_1\oplus \cdots \oplus V_t: V_i=\ker f_i^{a_i}(\phi)$$
-Y tenemos también que:
-$$V=_\phi V_1'\oplus \cdots \oplus V'_t: V_i'=\ker f_i^{e_i}(\phi)$$
-Vemos entonces que:
+\subsection{Teorema de Estructura}
+Aplicando el lema anterior al polinomio mínimo y característico, vemos que el endomorfismo se puede descomponer como la suma directa de los subespacios generados por el $\ker$ de cada factor del polinomio mínimo y característico\footnote{Porque ya vimos que coinciden}, es decir, podemos simplificar el estudio de un endomorfismo al estudio de cada uno de los trozos en los que se divide su polinomio característico y después juntar todas las bases para obtener la matriz escalonada por cajas de antes.
+\begin{align*}
+q_\phi = f_1^{a_1}\cdots f_t^{a_t} & & p_\phi = f_1^{e_1}\cdots f_t^{e_t}
+\end{align*}
+Por el lema anterior, podemos dividir $V$ en suma directa de los subespacios del $\ker$ de cada factor:
+\begin{align*}
+V=_\phi V_1\oplus \cdots \oplus V_t: V_i=\ker f_i^{a_i}(\phi) & & V=_\phi V_1'\oplus \cdots \oplus V'_t: V_i'=\ker f_i^{e_i}(\phi)
+\end{align*}
+Ahora mismo, estamos tratando de ver que la descomposición según uno u otro es indiferente, puesto que generan los mismos subespacios:
 $$\ker f_i(\phi)\subset \ker f_i^2(\phi)\subset \cdots \subset \ker f_i^{a_i}(\phi)\subset \cdots \subset \ker f_i^{e_i}(\phi)\Rightarrow V_i\subset V_i'$$
-Como la suma directa de ambas descomposiciones son el mismo espacio vectorial $V$ y cada una está contenida en su homóloga, entonces tiene que ser iguales porque si no la suma de las dimensiones daría resultados distintos así que $V_i=V_i'$. Con lo que se tiene que:
-$$V=_\phi V_1\oplus \cdots \oplus V_t: V_i=\ker f_i^{a_i}(\phi)=\ker f_i^{e_i}(\phi)$$
+Como la suma directa de ambas descomposiciones son el mismo espacio vectorial $V$ y cada una está contenida en su homóloga, entonces $\forall i\in \mathbb{N}: \dim V_i = \dim V_i'$ porque si no la suma de las dimensiones daría resultados distintos, por tanto, por estar uno metido en el otro y tener la misma dimensión $V_i=V_i'$. Y con este razonamiento ya tendríamos dividido de forma única el espacio $V$:
+$$V=_\phi V_1\oplus \cdots \oplus V_t: \forall i \in \mathbb{N}, \ V_i=\ker f_i^{a_i}(\phi)=\ker f_i^{e_i}(\phi)$$
+Como se tratan del núcleo de una aplicación lineal, sabemos que la suma directa es de subespacios $\phi-invariantes$ y, por tanto, se induce un endomorfismo en cada subespacio generado por la restricción $\phi_i=\phi\mid_{V_i}: V_i\rightarrow V_i$. Una vez hecho esto, definimos $B_i$ base de $V_i$ y llamamos $A_i=M_{B_i}(\phi_i)$ y generamos la base total uniendo las de cada trozo $B=B_1\cup \cdots \cup B_t$ y llamando a $A=M_B(\phi)$ quedaría la matriz del total como: $A=A_1\oplus \cdots \oplus A_t$.
 
-Sabemos que la suma directa es de subespacios $\phi-invariantes$ podemos definir $\phi_i=\phi\mid_{V_i}: V_i\rightarrow V_i$. Elegimos $B_i$ base de $V_i$ y llamamos $A_i=M_{B_i}(\phi_i)$ y denotamos $B=B_1\cup \cdots \cup B_t$ y llamamos a $A=M_B(\phi)$, que quedaría como: $A=A_1\oplus \cdots \oplus A_t$.
-
-Ahora vamos a calcular los polinomios mínimo y característico de estos endomorfismos más pequeños para así reducir en complejidad el estudio de los endomorfismos a unos que son más pequeños, después pegando las matrices a la matriz grande habríamos resuelto el problema:
+Tratamos ahora de estudiar estos endomorfismos generados por la restricción del inicial a los subespacios $\phi-invariantes$. Para ello, vamos a intentar ver que el polinomio mínimo y característico de la restricción coincide precisamente con el factor del polinomio sobre el que estamos estudiando. En primer lugar, tenemos\footnote{Ya que sabemos que la restricción se anula en el trozo de polinomio que le toca.} que 
 $$q_{\phi_i}\mid f_i^{a_i}\Rightarrow q_{\phi_i}=f_{i}^{b_i}: b_i\leq a_i$$
-Veamos ahora que el exponente es precisamente $a_i$:
-$$q_{\phi_1}=f_1^{b_1}: b_1<a_1$$
-Entonces yo considero que:
+y hay que ver que exponente es precisamente $a_i$, para lo que suponemos $q_{\phi_1}=f_1^{b_1}: b_1<a_1$. De esta forma, consideramos que:
 $$f_1^{a_1-1}\cdots f_2^{a_2} \cdots f_t^{a_t}$$
-Y vamos a ver que $f_1^{a_1-1}\cdots f_2^{a_2} \cdots f_t^{a_t}(\phi)=0$ pero eso diría que $q_\phi\mid f_1^{a_1-1}\cdots f_2^{a_2} \cdots f_t^{a_t}$ que es absurdo. Por tanto, $q_{\phi_i}=f_i^{a_i}$.
-
-Veamos ahora con el característico que ocurre lo mismo, es el mismo polinomio que el mínimo pero elevado a un exponente que puede ser igual o distinto:
+y entonces $f_1^{a_1-1}\cdots f_2^{a_2} \cdots f_t^{a_t}(\phi)=0$, pero eso diría que $q_\phi\mid f_1^{a_1-1}\cdots f_2^{a_2} \cdots f_t^{a_t}$ que es absurdo, luego:
+$$\boxed{q_{\phi_i}=f_i^{a_i}}$$
+En segundo lugar, con el característico que ocurre lo mismo, es el mismo polinomio que el mínimo pero elevado a un exponente que puede ser igual o mayor:
 $$q_{\phi_i} \mid p_{\phi_i} \Rightarrow \pm p_{\phi_i} = f_i^{c_i}: a_i\leq c_i$$
-Sabemos que $A=A_1\oplus \cdots \oplus A_t$ y sabemos que:
+Como sabemos que $A$ es diagonal por cajas, entonces $A=A_1\oplus \cdots \oplus A_t$ y sucede:
 $$p_\phi=|A-xI_n|=|(A_1-xI_{m_1})\oplus \cdots \oplus (A_t-xI_{m_t})|=|A_1-xI_{m_1}|\cdots |A_t-xI_{m_t}|=p_{\phi_1}\cdots p_{\phi_t}\Rightarrow $$
 $$\Rightarrow p_\phi= f_1^{c_1}\cdots f_t^{c_t}=p_{\phi_1}\cdots p_{\phi_t}\Rightarrow gr(p_{\phi_i})=c_i\Rightarrow e_i=c_i$$
+$$\boxed{p_{\phi_i} = f^{e_i}}$$
 
-Con lo cual también se deduce que $\dim V_i=gr(f_i^{e_i})$
+\begin{obs}
+Del hecho anterior, deducimos que $\dim V_i=gr(f_i^{e_i})$, es decir, que el grado del polinomio característico siempre coincide con la dimensión del espacio $V$ sobre el que actúa $\phi$.
+\end{obs}
 
-CON LO CUAL BASTA CON CENTRARSE EN LOS ENDOMORFISMOS MÁS PEQUEÑOS DE CADA CAJA PARA LUEGO UNIRLOS TODOS Y FORMAR EL GRANDE.
-
-\subsection*{\underline{Teorema de Estructura}}
-\subsubsection*{Subespacios cíclicos}
-Sea $v\in V$ y $L_\phi(v)=\{g(\phi)(v):g\in K[x]\}=\{g(\phi)(v): g\in K[x], gr(g)<gr(q_{\phi,v})\}$. Ocurre:
+\begin{theo}[Subespacios Cíclicos]
+Sea $v\in V$ y $\phi\in End(V)$, definimos el conjunto
+$$L_\phi(v)=\{g(\phi)(v):g\in K[x]\}=\{g(\phi)(v): g\in K[x],\ gr(g)<gr(q_{\phi,v})\}$$
+es decir, todas las posibles combinaciones lineales\footnote{La segunda igualdad de la definición del conjunto es válida porque cualquier potencia mayor que $gr(q_{\phi, v})$ será una de las potencias de $\phi$ menores que dicho grado, puesto que será combinación lineal de las mismas por lo razonado en el apartado del polinomio mínimo de un endomorfismo y un vector.} de potencias de $\phi$ evaluadas en $v$ y que verifica las siguientes propiedades:
 \begin{itemize}
 \item $L_\phi(v) <_\phi V$
-\item $\{v, \phi(v), \cdots, \phi^{m-1}(v)\}$ es base de $L_\phi(v)$ siendo $m=gr(q_{\phi,v})$
+\item $B_v= \{v, \phi(v), \cdots, \phi^{m-1}(v)\}$ es una base siendo $m=gr(q_{\phi,v})$.
 \item $M_{B_v}(\phi\mid_{L_\phi(v)})=C_{q_{\phi,v}}$
 \item $L_\phi(v)$ es el subespacio $\phi-invariante$ \textbf{más pequeño} que contiene al vector $v$
 \end{itemize}
-\underline{Demostración}:
+\end{theo}
+\begin{demo}
 \begin{itemize}
-\item 
+\item Veamos que es cerrado bajo $\phi$:
 $$g(\phi)(v)\in L_\phi(v)\Rightarrow \phi(g(\phi)(v))=x(\phi)\left(g(\phi)(v)\right)=\left[(x\cdot g(x))(\phi)\right](v)=h(\phi)(v): h\in K[x]\Rightarrow \in L_{\phi}(v)$$
-\item Vamos a ver que son independientes y sistema de generadores:
+\item Veamos que son independientes y sistema de generadores:
 $$a_0v+a_1\phi(v)+\cdots+a_{m-1}\phi^{m-1}(v)=0\Rightarrow (a_0+a_1x+\cdots+a_{m-1}x^{m-1})(\phi)(v)\stackrel{gr(\cdots)< gr(q)}{\Rightarrow}$$
 $$\Rightarrow a_0+a_1x+\cdots+a_{m-1}x^{m-1}=0\Rightarrow a_i=0: \forall i$$
 $$g\in K[x]=\left[g(x)(\phi)\right](v)=\left[h(x)q_{\phi,v}(x)+a_0+a_1x+\cdots+a_{m-1}x^{m-1}\right](\phi)(v)=$$
-
 $$=\left[(a_0+a_1x+\cdots+a_{m-1}x^{m-1})(\phi)\right](v)=a_0v+a_1\phi(v)+\cdots+ a_{m-1}\phi^{m-1}(v)$$
-\item Trivial porque lo hemos hecho ya alguna vez
+\item Trivial por el tema de polinomios (o incluso haciendo las imágenes a mano).
+\item No procede. 
 \end{itemize}
+\end{demo}
 
-\subsubsection*{Teorema de Estructura}
-Supongamos que $\phi\in End(V)$ de manera que $p_\phi =\pm f_\phi^e$ y que $q_\phi=f^a$ con $f\in K[x]$ irreducible y $1\leq a\leq e$.
+\begin{theo}[de Estructura]
+\label{Teorema de Estructura}
+Sea $\phi\in End(V)$ y $f\in K[x]$ irreducible, si los polinomios mínimo y característico son $p_\phi =\pm f_\phi^e$ y $q_\phi=f^a$, entonces:
 $$\exists v_1, \cdots, v_s\in V: V=L_\phi(v_1)\oplus\cdots \oplus L_\phi(v_s)$$
-Donde $q_{\phi, v_i}=f^{a_i}$ de manera que $a=a_1\geq \cdots \geq a_s$
-
-\underline{Demostración}:
-
+de manera que $a=a_1\geq \cdots \geq a_s$, entendiendo dichos índices como\footnote{Luego el cálculo de dichos $v_i$ es muy sencillo, puesto que basta con calcular el subespacio $f^{a_i}(\phi)(v_i) = 0$ y descartar los vectores que hayamos encontrado en $a_i - 1$ o anteriores.} $q_{\phi, v_i}=f^{a_i}$.
+\end{theo}
+\begin{demo}
 Vamos a hacer inducción sobre $e$:
 \begin{itemize}
 \item $e=1$
@@ -2767,7 +2888,6 @@ C_{f^a} & M\\ 0 & N
 Definimos $\overline{V}=V/L_\phi(v_1)$ los elementos por tanto son clases de $\bar{v}$, es decir, $\bar{v}=\bar{w}\Rightarrow v-w\in L_\phi(v_1)$ y que un vector pertenezca a dicho subespacio quiere decir que son de la forma $g_1(\phi)(v_1)$. Veamos como se define $\bar{\phi}$ en este nuevo espacio vectorial $\bar{\phi}: \overline{V}\rightarrow \overline{V}$ de forma que $\overline{\phi}(\bar{v})=\overline{\phi(v)}$. Vemos si $\bar{v}=\bar{w}\stackrel{?}{\Rightarrow} \overline{\phi(v)}=\overline{\phi(w)}$:
 $$\overline{\phi(v)}=\overline{\phi(w)}\Leftrightarrow \phi(v)-\phi(w)\in  L_\phi(v_1)\Leftrightarrow \phi(v-w)\in L_\phi(v_1)\stackrel{v-w\in L_{\bar{\phi}}(v_1)}{\Leftrightarrow}$$
 $$\Leftrightarrow \phi(g_1(\phi)(v_1))\in L_\phi(v_1)\Leftrightarrow (xg_1(x))(\phi)(v_1)\in L_\phi(v_1)\Leftrightarrow h(x)(\phi)(v_1)\in L_{\bar{\phi}}(v_1)$$
-
 Vemos que es lineal:
 $$\bar{\phi}(\bar{v}+\bar{w})=\bar{\phi}(\overline{v+w})=\overline{\phi(v+w)}=\overline{\phi(v)+\phi(w)}=\overline{\phi(v)}+\overline{\phi(w)}=\bar{\phi}(\bar{v})+\bar{\phi}(\bar{w})$$
 Del mismo modo, el producto por un escalar se verifica con normalidad.
@@ -2784,10 +2904,8 @@ Ahora vamos a ver que:
 $$f^{a-b_i}(\phi)\left(g_i(\phi)(v_1)\right)=\underbrace{f^{a-b_i}(\phi)\left(f^{b_i}(\phi)(w_i)\right)}_{=f^a(\phi)(w_i)=0}=0$$
 Es decir, a $\phi(v_1)$ lo anula cierto polinomio y por lo tanto:
 $$\underbrace{q_{\phi, v_1}}_{=f^a}\mid f^{a-b_i}g_i\Rightarrow f^{b_i}\mid g_i\Rightarrow g_i=f^{b_i}h_i$$
-
 Ahora volviendo a tener en cuenta la igualdad anterior ocurre que:
 $$f^{b_i}(\phi)(w_i)=f^{b_i}(\phi)\left(h_i(\phi)(v_1)\right)=f^{b_i}(\phi)\left[w_i-h_i(\phi)(v_1)\right]=0$$
-
 Ahora definimos el siguiente vector $v_i=w_i-h_i(\phi)(v_1)$. ¿Qué sabemos de dicho vector?, pues: $f^{b_i}(\phi)(v_i)=0$, $\bar{v_i}=\bar{w_i}$ por como está definido $v_i$ y $\underbrace{q_{\phi, v_i}}_{=f^{a_i}}\mid f^{b_i}: a_i\leq b_i$.
 
 Es decir, en la descomposición inicial de $V=L_\phi(\bar{w}_2)\oplus \cdots \oplus L_\phi(\bar{w}_s)$ hemos cambiado de representante a $v_i$ y hemos conseguido una sucesión de menor o iguales: $a_i\leq b_i \leq \bar{a} <a$.
@@ -2801,22 +2919,21 @@ $$g_2(\bar{\phi})(\bar{v_2})=\cdots = g_s(\bar{\phi})(\bar{v_s})=\bar{0}\Rightar
 Porque como la suma es directa, necesariamente cada uno de ellos es 0. Ahora vemos que debido a esto:
 $$f^{b_i}\mid g_i\Rightarrow g_i=f^{b_i}\cdot h_i\Rightarrow g_i(\phi)(v_i)=h_i(\phi)(\underbrace{f^{b_i}(\phi)(v_i)}_{=0})=0\Rightarrow g_i(\phi)(v_i)=0$$
 \end{itemize}
+\end{demo}
 
-Este resultado es muy importante porque la matriz del endomorfismo respecto a la base unión va a ser una matriz diagonal por cajas porque ahora todos los subespacios son $\phi-invariantes$. Estos subespacios además son muy especiales, puesto que la matriz de $\phi$ restringido a $L_\phi(v_i)=C_{f^{a_i}}$, es decir, es la compañera del polinomio mínimo de $\phi(v_i)$. Es destacable notar que esta descomposición no es única puesto que a pesar de que el resto de subespacios si están determinados por el 1º, el 1º podemos elegirlo libremente.
+\begin{obs}
+Este resultado es muy importante porque, si ya podíamos separar\footnote{Es destacable notar que esta descomposición no es única puesto que a pesar de que el resto de subespacios si están determinados por el 1º, el 1º podemos elegirlo libremente.} la matriz inicial en suma directa de los núcleos de las restricciones a cada factor del polinomio mínimo, ahora podemos a su vez dividir dichas restricciones en sumas directas de subespacios cíclicos. Esto provoca que la matriz de la restricción del endomorfismo sea una matriz diagonal por cajas y además que la matriz de $\phi$ restringido a $L_\phi(v_i)$ sea la compañera del polinomio mínimo de $\phi(v_i)$, es decir, $C_{f^{a_i}}$.
+\end{obs}
 
-\subsubsection*{Teorema de clasificación: forma canónica racional}
-Suponemos que $\pm p_\phi = f^e$ y $q_\phi = f^a$ de manera que $1 \leq a \leq e$ y $f\in K[x]$ irreducible, entonces:
-$$\exists B\mbox{ base de }V:M_B(\phi)= C_{f^{a_1}}\oplus \cdots \oplus C_{f^{a_s}}:a=a_1\geq a_2 \geq \cdots \geq a_s\geq 1$$
-Además si $M_{B'}(\phi)=C_{f^{a'_1}}\oplus \cdots \oplus C_{f^{a'_s}}$ donde $a=a_1\geq \cdots \geq a_s\geq 1$ entonces $s=s'$ y $a_i=a'_i$, es decir, que esta descomposición es única y se la conoce como \textbf{matriz canónica racional de $\phi$}.
-
-A los polinomio que poseen la siguiente relación se les conoce como \textbf{divisores elementales}:
+\begin{theo}[de clasificación: forma canónica racional]
+Sea $\phi\in End(V)$ y $f\in K[x]$ irreducible, si los polinomios mínimo y característico son $\pm p_\phi = f^e$ y $q_\phi = f^a$, entonces:
+$$\exists B\mbox{ base de }V:M_B(\phi)= C_{f^{a_1}}\oplus \cdots \oplus C_{f^{a_s}}\mbox{ y } a=a_1\geq a_2 \geq \cdots \geq a_s\geq 1$$
+Esta descomposición es única y se la conoce como \textbf{matriz canónica racional de $\phi$}. A los polinomios de las sucesivas potencias como \textbf{divisores elementales}:
 $$f^{a_s}\mid f^{a_s +1} \mid \cdots \mid f^{a_2}\mid f^{a_1}$$
-De hecho caracterizan a los polinomios mínimo y característico porque:
+y caracterizan a los polinomios mínimo y característico porque:
 $$\begin{cases}p_\phi = f^{a_s}\cdot \cdots \cdot \underbrace{f^{a_1}}_{= q_\phi} \\ q_\phi = f^{a_1} = f^a\end{cases}$$
-Por eso, que dos matrices sean semejantes implica que tengan los mismo polinomios mínimos y característicos pero que dos endomorfismos tengan el mismo polinomio característico y mínimo no implica que sean semejantes, porque deben coincidir en sus divisiores elementales
-
-\underline{Demostración}:
-
+\end{theo}
+\begin{demo}
 Está clara la existencia, porque descomponemos $V=L_\phi(v_1)\oplus \cdots \oplus L_\phi(v_s)$, elegimos bases $B_i$ de cada uno donde $B_i=\{v_i, \phi(v_i), \phi^2(v_i), \cdots, \phi^{m_i-1}(v_i)\}$ tal que $m_i=gr(f^{a_i}): f^{a_i}=q_{\phi, v_i}$ y la base resultante de la unión de todas hemos demostrado que cumple las premisas.
 
 Para ver que se cumple la unicidad vamos a ver primero que se verifica la siguiente propiedad (de hecho para una cantidad numerable de sumandos):
@@ -2834,13 +2951,27 @@ Entonces si ambas expresiones son representaciones matriciales del endomorfismo 
 $$rg\left( \left[f^{a-1}\left( C_{f^a} \right)\right]^{k'_a} \right) = rg\left(f^{a-1}(\phi)\right) = rg\left( \left[f^{a-1}\left( C_{f^a} \right)\right]^{(k_a)}  \right)\Leftrightarrow $$
 $$\Leftrightarrow k_a \cdot rg \left( f^{a-1}\left(C_{f^{a}}\right) \right) = k'_a \cdot rg \left( f^{a-1}\left(C_{f^{a}}\right) \right)\stackrel{rg \neq 0}{\Rightarrow} k'_a = k_a$$
 Si hacemos la misma demostración usando $f^{a-2}$, $f^{a-3}$, ... llegamos a la misma conclusión con cada uno de los exponentes, por lo tanto la representación es única.
+\end{demo}
 
-\subsection*{\underline{Endomorfismos nilpotentes}}
-Llamamos $\xi: V\rightarrow V: \xi \in End(V)$ y decimos que es \textbf{nilpotente} de índice $a$ siendo $1\leq a \leq n$ si $q_\xi = x^a$ y en consecuencia, como el grado del característico es la dimensión del espacio, entonces $\pm p_xi = x^n$.
+\begin{obs}
+Por eso, que dos matrices sean semejantes implica que tengan los mismo polinomios mínimos y característicos, pero que \textbf{dos endomorfismos tengan el mismo polinomio característico y mínimo no implica que sean semejantes}, porque deben coincidir en sus divisiores elementales
+\end{obs}
 
-Esto quiere decir que $\xi ^a =0$ pero $\xi ^{a-1}\neq 0$ porque si no el mínimo sería de grado menor que el definido. Vemos también que para una base conveniente, la matriz del endomorfismo nilpotente quedaría como:
+\subsubsection{Endomorfismos Nilpotentes}
+\label{Nilpotentes}
+Hemos visto buenas propiedades para simplificar el estudio del endomorfismo inicial al estudio de endomorfismos más pequeños caracterizados por poseer un único factor en su polinomio mínimo y característico. En este subapartado vamos a sacarle provecho a todos estos enunciados válidos para el estudio adecuado de estos endomorfismos más pequeño, de manera que podamos utilizar los teoremas anteriormente citados para encontrar bases sencillas cuando el polinomio mínimo y característico sólo tiene un factor.
+
+\begin{defi}[Endomorfismos nilpotentes]
+Sea $\xi \in End(V)$, decimos que es \textbf{nilpotente de índice $a$} siendo $1\leq a \leq n$ si $q_\xi = x^a$.
+\end{defi}
+
+\begin{obs}
+Consecuentemente, como el grado del característico es la dimensión del espacio, entonces $\pm p_xi = x^n$.
+\end{obs}
+
+Por el Teorema de Estructura y el Teorema de la Forma Canónica Racional, existe una base conveniente para la cual la matriz del endomorfismo nilpotente quedaría como:
 $$M_B(\xi) = C_{x^a}^{(k_a)}\oplus \cdots \oplus C_{x}^{(k_1)}$$
-El exponente $(K_i)$ denota el número de veces que aparece comos suma directa esa caja, no que sea un producto. Además ocurre que $1\leq (k_a)$ y los demás $\geq 0$. Ahora veamos que la caja $C_{x^a}$ es:
+donde el exponente\footnote{Los teoremas anteriores también prueban que $1\leq (k_a)$ y los demás $\geq 0$, es decir, que por lo menos el mínimo sale en la descomposición al menos una vez.} $(k_i)$ denota el número de veces que aparece en la suma directa esa caja. Además, como dichos teoremas probaban que la matriz asociada es la compañera del polinomio, entonces la caja $C_{x^a}$ es: 
 $$C_{x^{a}}=\begin{pmatrix}
 0&0&\cdots &0 &0\\
 1&0&\cdots &0 &0\\
@@ -2848,35 +2979,94 @@ $$C_{x^{a}}=\begin{pmatrix}
 \vdots & \vdots& \ddots & \vdots & \vdots \\
 0&0&\cdots & 1&0
 \end{pmatrix}=J_{0,a}$$
-Donde para introducir el significado de esta notación decimos que $J_{a,b}$ es una matriz de tamaño $b\times b$ y con $a$ en la diagonal. Denominamos a esta construcción \textbf{caja elemental de Jordan}, así que podemos reescribir la matriz como:
-$$M_B(\xi)=J_{0,a}^{(k_a)}\oplus \cdots \oplus J_{0,1}^{(k_1)}$$
-Y esto es lo que denominamos como \textbf{Matriz canónica de Jordan para endomorfismos nilpotentes}.
+De este modo, podemos dar la siguiente definición que será fundamental para la descomposición canónica de matrices en su base de Jordan.
 
-Por ejemplo, en dimensión 1:
-$$n=1\Rightarrow J_{0,1}=(0)$$
-Para dimensión 2:
+\begin{defi}[Matriz Elemental de Jordan]
+Se define una \textbf{matriz elemental de Jordan} como una matriz del tipo:
+$$J_{a,b}=\begin{pmatrix}
+a&0&\cdots &0 &0\\
+1&a&\cdots &0 &0\\
+0&1&\cdots &0 &0\\
+\vdots & \vdots& \ddots & \vdots & \vdots \\
+0&0&\cdots & 1&a
+\end{pmatrix}_{b\times b}$$
+\end{defi}
+De este modo, podemos reescribir la matriz del endomorfismo nilpotente como:
+$$M_B(\xi)=J_{0,a}^{(k_a)}\oplus \cdots \oplus J_{0,1}^{(k_1)}$$
+\begin{obs}
+Esto supone la culminación del proceso de simplificación del endomorfismo, pues podemos separar la matriz inicial como suma directa de la matriz de cada factor lineal y, posteriormente, tratar cada factor lineal como si de un endomorfismo nilpotente se tratase.
+\end{obs}
+\begin{ej}
+\begin{itemize}
+\item Dimensión 1:
+$$J_{0,1}=(0)$$
+\item Dimensión 2:
 $$\begin{cases}
 x^2\Rightarrow a=2\Rightarrow & J_{0,2}=\begin{pmatrix} 0&0 \\ 1&0\end{pmatrix} \\
-x\mid x\Rightarrow a=1 \Rightarrow  & J_{0,1}^{(2)} =\begin{pmatrix} 0 & \cdots \\ \cdots & 0\end{pmatrix}\end{cases}$$
-Para dimensión 3:
+x\mid x\Rightarrow a=1 \Rightarrow  & J_{0,1}^{(2)} =0
+\end{cases}$$
+\item Dimensión 3:
 $$\begin{cases}
 x^3\Rightarrow a=3\Rightarrow & J_{0,3} \\
 x\mid x^2 \Rightarrow a=2\Rightarrow & J_{0,2}\oplus J_{0,1}\\
 x\mid x\mid x\Rightarrow a=1\Rightarrow & J_{0,1}^{(3)} = 0
 \end{cases}$$
+\item Dimensión 4:
+$$\begin{cases}
+x^4\Rightarrow a=4\Rightarrow & J_{0,4} \\
+x\mid x^3 \Rightarrow a=3\Rightarrow & J_{0,3}\oplus J_{0,1}\\
+x^2\mid x^2 \Rightarrow a=2\Rightarrow & J_{0,2}^{(2)} = 0 \\
+x \mid x \mid x \mid x \Rightarrow a = 1 \Rightarrow & J_{0,0}^{(4)} = 0
+\end{cases}$$
+\end{itemize}
+\end{ej}
 
-\subsubsection*{Conversión de trozos a endomorfismos nilpotentes}
+\subsection{Cálculo de Matrices y Bases de Jordan}
+Una vez desarrolladas todas las herramientas teóricas anteriores para poder justificar los procedimientos que vamos a realizar, trataremos de describir un proceso más o menos unificado para calcular la matriz de Jordan de un endomorfismo y definir la base sobre la cual está expresada dicha matriz.
+
+
+\subsubsection{Conversión de trozos a endomorfismos nilpotentes}
+\label{Conversion a nilpotentes}
 El caso general que nos encontraremos a la hora de trabajar con estos endomorfismos no será de la forma de los endomorfismo nilpotentes sino que será algo de la forma: $(x-\lambda)^e$.
 
-Para trabajar con estos elementos como si fuesen nilpotentes, definimos $\xi = \phi- \lambda id$ lo que quieres decir que $p_\xi = x^e$ y $q_\xi = x^a$ entonces ya lo hemos conseguido tratar como un endomorfismo nilpotente.
+Para trabajar con estos elementos como si fuesen nilpotentes, definimos $\xi = \phi- \lambda id$ que posibilita que los polinomios sean de la forma $p_\xi = x^e$ y $q_\xi = x^a$ y así podemos tratarlos como si de un nilpotente se tratase.
 
-Una vez hallada y construida la matriz en bases de Jordan del endomorfismo niloptente que hemos construido, regresar a nuestro ejemplo es muy sencillo, puesto que se trata de despejar de la siguiente forma:
+Una vez hallada y construida la matriz en bases de Jordan del endomorfismo nilpotente que hemos construido, regresar a nuestro ejemplo es muy sencillo, puesto que se trata de despejar de la siguiente forma:
 $$\phi = \lambda id +\xi\Rightarrow M_B(\phi)=\lambda I +M_B(\xi)$$ 
-Lo que en definitiva es rellenar con $\lambda$ los $0$ que dejan las bases de Jordan en los endomorfismos nilpotentes.
+Lo que en definitiva es rellenar con $\lambda$ los $0$ que dejan las bases de Jordan en las diagonales de los endomorfismos nilpotentes.
 
 Por lo tanto, \textbf{un endomorfismo admite una matriz de Jordan si y sólo si su polinomio característico descompone completamente}.
 
-\subsection*{\underline{Factores invariantes}}
+\subsubsection{Cálculo de la Matriz de Jordan}
+\label{Matriz Jordan}
+Supongamos que tenemos un endomorfismo $\phi\in End(V)$ sobre un espacio $V$ de dimensión $n$, cuyos polinomios son:
+\begin{align*}
+\pm p_\phi(x)= (x-\lambda_1)^{e_1}\cdot \ldots \cdot (x-\lambda_s)^{e_s} & & q_\phi(x)= (x-\lambda_1)^{a_1}\cdot \ldots \cdot (x-\lambda_s)^{a_s}
+\end{align*}
+Lo primero que sabemos es que $V=_\phi \ker\left((\phi-\lambda_1I)^{e_1}\right) \oplus \cdots \oplus \ker\left((\phi-\lambda_sI)^{e_s}\right) = \ker\left((\phi-\lambda_1I)^{a_1}\right) \oplus \cdots \oplus \ker\left((\phi-\lambda_sI)^{a_s}\right)$, luego si calculamos las matrices de Jordan de cada sumando, luego basta componerlas para que queden como una matriz diagonal por cajas.
+
+Centrándonos en un sumando en concreto, sabemos primero que es $\phi-invariante$ por ser el $\ker$ de una aplicación lineal y también que el polinomio mínimo y característico de la restricción a ese sumando en el que nos hemos fijado son $p_{\phi_i}(x) = (x-\lambda_i)^{e_i}$ y $q_{\phi_i}(x)= (x-\lambda_i)^{a_i}$. Precisamente por esto, le podemos aplicar el Teorema de Estructura, luego sabemos que existe una base que descompone el espacio como:
+$$\ker\left((x-\lambda_i)^{a_i}\right) =_{\phi_i} L_\phi(v_1)\oplus \cdots \oplus L_{\phi_i}(v_{e_i}) \Rightarrow M_B(\phi_i) = C_{(x-\lambda_i)^{a_i}} \oplus \cdots \oplus C_{(x-\lambda_i)^{a_r}}$$
+donde los $a_i \geq a_{i+1}\geq \cdots \geq a_{r}$ y son los divisores elementales del polinomio. Sin embargo, aún sabiendo los divisores elementales la matriz resultante no es muy limpia puesto que la columna final correspondiente a los coeficientes del polinomio del que es compañera la matriz queda muy sucia. En este caso, es más provechoso transformar el endomorfismo a uno nilpotente como se ha explicado en el apartado \nameref{Conversion a nilpotentes}, es decir, tomar $\xi = \phi- \lambda_i$. Una vez tenemos esto, basta con aplicar el \nameref{Teorema de Estructura} al nuevo endomorfismo:
+$$\ker\left(\xi^{a_i}\right) =_{\xi} L_\xi(v_1)\oplus \cdots \oplus L_{\xi}(v_{e_i}) \Rightarrow M_B(\xi) = C_{\xi^{a_i}} \oplus \cdots \oplus C_{\xi^{a_r}}$$
+Luego aquí basta tener en cuenta que $C_{\xi^a_j}$ es una Matriz Elemental de Jordan de las que se vieron en \nameref{Nilpotentes} y recuperar la matriz de $\phi$ basta con tener en cuenta la siguiente igualdad:
+$$M_B(\phi) = M_B(\xi) + \lambda_i I$$
+Sin embargo, la verdadera pregunta está en saber cuáles son los exponentes $a_1, \cdots, a_r$ de los divisores elementales en los que se descompone el subespacio invariante. Pues la respuesta es sencilla. Nosotros somos capaces de calcular, para una dimensión concreta, todas las posibles matrices elementales de Jordan que hay en función de qué posibles divisores elementales haya. Pues bien, la matriz canónica de Jordan no deja de ser una matriz equivalente a la inicial de endomorfismo, luego deben tener el mismo rango. Por tanto, basta con elegir como matriz de Jordan (es decir, realmente para esto no nos importan los $v_i$ ni los $L_{\phi_i}(v_i)$) que tenga el mismo rango que la restricción $\phi_i$ de $\phi$ al trozo que estamos examinando.
+
+\begin{ej}
+FALTA EL EJEMPLO
+\end{ej}
+
+\subsubsection{Cálculo de la Base de Jordan}
+Aunque tengamos la matriz de Jordan, la base es necesaria en multitud de ocasiones y muy conveniente de conocer en general. Para poder encontrarla nos situamos en la misma situación que en el apartado \nameref{Matriz Jordan}, es decir, tenemos
+$$\ker\left((x-\lambda_i)^{a_i}\right) =_{\phi_i} L_\phi(v_1)\oplus \cdots \oplus L_{\phi_i}(v_{e_i}) \Rightarrow M_B(\phi_i) = C_{(x-\lambda_i)^{a_i}} \oplus \cdots \oplus C_{(x-\lambda_i)^{a_r}}$$
+Como estos $a_j$ son los grados de $q_{\phi_i, v_j}$, estamos buscando un vector de modo que $v\in \ker\left(\phi - \lambda_i id\right)^{a_j}$ pero no pertenezca a los $a_m \leq a_j$. Luego, para cada exponente $a_j$ hay que calcular un vector que pertenezca a ese núcleo pero que no pertenezca a los anteriores (para que así sea realmente ese su polinomio mínimo) y de esta forma construir la base parcial de cada uno de los sumandos, luego basta con juntarlos todos.
+
+\begin{ej}
+FALTA EL EJEMPLO
+\end{ej}
+
+\subsection{Factores invariantes}
 Supongamos que tenemos un endomorfismo $\phi:V\rightarrow V$ y que:
 $$q_{\phi,v} = g\mbox{ y }q_{\phi, w} = h\mbox{ donde }mcd(g,h)=1\Rightarrow q_{\phi, v+w}=gh$$
 De este modo es lógico pensar que:
@@ -2922,84 +3112,88 @@ $$h_2(x)=x-1\Rightarrow C_{h_2(x)}$$
 Luego por factores invariantes, la matriz queda de la siguiente forma:
 $$M_{B'}(\phi)=C_{h_1(x)}\oplus C_{h_2(x)}$$
 
-ENTREGABLE:
+\chapter{FORMAS LINEALES Y \\BILINEALES}
+\section{FORMAS LINEALES}
+\subsection{Espacio dual}
+\begin{defi}[Formas Lineales y Espacio Dual]
+Sea $V$ un espacio vectorial de dimensión $n$ sobre un cuerpo $K$, se define el \textbf{espacio dual} como el espacio vectorial de dimensión $n$ definido por:
+$$V^* = Hom(V,K)$$
+A los elementos de dicho espacio, es decir, a las aplicaciones lineales $\omega: V\rightarrow K$ se las conoce como \textbf{formas lineales}.
+\end{defi}
+Como las formas lineales se tratan de aplicaciones lineales, podemos caracterizarlas a través de la matriz que la representa, es decir, que suponiendo $B = \{v_1, \cdots, v_n\}$ base de V y $\{1_k\}$ de $K$, entonces\footnote{Realmente estamos considerando el escalar $a_i$ como un vector en un espacio de dimensión 1 como es $K$, luego sería $\omega(v_i) = a_i \cdot 1_k$ para indicar que está expresado en dicha base, pero se omite para no sobrecargar la notación.}:
+$$Mat_{B,\{1_k\}}(\omega)\in Mat_{1\times n}(K)=\begin{pmatrix} a_1 & \cdots & a_n \end{pmatrix} \mbox{ donde } \forall i \in \mathbb{N}: a_i = \omega (v_i)$$
 
-Demostrar que cada matriz cuadrada es semejante a su traspuesta.
-
-Supongamos que $K\subset \tilde{K}$ y que $A, C\in Mat_n(K)$ pues probar que $A\sim_k C\Leftrightarrow A\sim_{\tilde{K}} C$.
-
-Probar que $q_{\tilde{\phi}}=q_\phi$ sabiendo que $q_{\tilde{\phi}}\mid q_\phi$.
-
-La demostración es una aplicación inteligente de lo que acabamos de ver en esta clase.
-
-\chapter*{FORMAS LINEALES Y \\BILINEALES}
-\section*{FORMAS LINEALES}
-\subsection*{\underline{Espacio dual}}
-Si tenemos un espacio vectorial $V$ de dimensión $n$, y consideramos $Hom_k(V,K)= V^*$ este conjunto es un $K-espacio$ vectorial de dimensión $n$ y lo llamamos \textbf{dual de }$V$.
-
-Se llaman \textbf{forma lineales} de $V$ sobre $K$ a los elementos de dicho conjunto:
-$$\omega \in Hom_k(V,K): \omega: V\rightarrow K\mbox{ forma lineal de }V\mbox{ sobre }K$$
-Podemos definir la forma lineal con respecto a la matriz que la representa, supongamos que $B$ es base de V y $\{1_k\}$ de $K$, entonces:
-$$Mat_{B,\{1_k\}}(\omega)\in Mat_{m\times n}(K)=Mat_{1\times n}(K)=\begin{pmatrix} a_1 & \cdots & a_n \end{pmatrix}: a_i\cdot 1_k = \omega (v_i)$$
-De este modo vemos que cada $a_i$ es la forma lineal $\omega$ aplicada a cada vector de la base y escrita en base del espacio de llegada, que en este caso es el $1$:
+\begin{obs}
+Para tener una idea más intuitiva de lo que representan estos nuevos objetos matemáticos, estamos definiendo lo que serían las ``líneas'' de un sistema de ecuaciones:
 $$\omega(v)=\omega(x_1v_1+\cdots x_nv_n)=a_1x_1+\cdots a_nx_n$$
-Es decir, que en resumen cada forma lineal es como una de las ``líneas'' de un sistema de ecuaciones y que evaluar un vector sobre ella no es más que sustituir las coordenadas del vector en la ecuación de la forma lineal.
+Es decir, que en definitiva no son más que aplicaciones que a cada vector les asignan un escalar (o elemento de $K$) y que evaluar un vector sobre ella no es más que sustituir las coordenadas del vector en la ecuación de la forma lineal.
+\end{obs}
 
-\underline{\textbf{Ejemplos}}:
+\begin{ej}
+La aplicación lineal $\omega: Mat_n(K)\rightarrow K$ de forma que $\omega(A)=tr(A)$ es una forma lineal que a cada matriz (elemento de $V = Mat_n(K)$) le asigna su traza (elemento de $K=\mathbb{R}$).
 
-Supongamos $\omega: Mat_n(K)\rightarrow K$ de forma que $\omega(A)=tr(A)$ que también es claramente lineal.
+La aplicación lineal $\omega: C(\mathbb R, \mathbb R)\rightarrow \mathbb R$ de forma que $\omega(f)=\int_0^1 f(t)dt$ es una forma lineal que a cada función continua le asigna el valor de su integral entre 0 y 1.
+\end{ej}
 
-Consideremos también $\omega: C(\mathbb R, \mathbb R)\rightarrow \mathbb R$ de forma que $\omega(f)=\int_0^1 f(t)dt$ que también es lineal
-
-\subsubsection*{Base dual}
-Obviamente $V^*\simeq V$ porque tienen la misma dimensión y la dimensión de $V$ es finita. Con lo cual vamos a ver como podemos definir una base dual:
-$$B=\{v_1, \cdots , v_n\}\mbox{ base de }V\Rightarrow B^*=\{v_1^*, \cdots , v_n^*\}: v_i^*\in V^*$$
-Por lo tanto si definimos el valor de cada forma lineal $v_i^*$ para cada uno de los vectores $v_j$ de la base, entonces tendremos que cada aplicación estará definida y tendremos una base de aplicaciones:
-$$v_i^*(v_j)=\delta_{ij}=\begin{cases} 1 &\mbox{si }i=j\\ 0 &\mbox{si }i\neq j\end{cases}$$
-
-\underline{Demostración}:
-
-Vamos a ver que son independientes:
+\begin{prop}[Base Dual]
+Sea $V$ un espacio vectorial de dimensión $n$ y $V^*$ su dual, dada una base $B=\{v_1,\cdots, v_n\}$ de $V$, entonces el conjunto:
+$$B^*=\{v_1^*, \cdots, v_n^*\} : \forall i \in \mathbb{N}, \ v_i^* = \delta_{ij} =  \begin{cases} 1 & i =j \\ 0 & i \neq j \end{cases}$$
+es una base del espacio dual.
+\end{prop}
+\begin{demo}
+En primer lugar, trivialmente $V^*\simeq V$ porque tienen la misma dimensión y la dimensión de $V$ es $n$. En segundo lugar, los elementos de $V^*$ son aplicaciones lineales, luego para poder tenerlos definidos tendremos que conocer su valor sobre cada uno de los vectores de una base $B$ de $V$, por lo tanto, la clave está en ver que la definición que se ha dado de los $v_i^*$ genera un conjunto linealmente independiente:
 $$a_1v_1^* +\cdots a_nv_n^*=0\Rightarrow \forall j\in \mathbb N : 0=(a_1v_1^*+\cdots a_nv_n^*)(v_j)= a_jv_j^*(v_j)=a_j$$
-Como las dimensiones son las mismas, al ser independientes ya se tiene que ese conjunto es base de $V^*$.
+\end{demo}
 
-\underline{\textbf{Ejemplos}}:
-
-Supongamos que $B=\{e_1-e_2, e_1+3e_2\}$ base de $K^2$ entonces veamos como definimos $v_1^*$:
+\begin{ej}
+Sea $B=\{e_1-e_2, e_1+3e_2\}$ una base de $K^2$, vamos a ver como definimos $v_1^*$:
 $$\begin{cases}1=v_1^*(e_1-e_2)=v_1^*(e_1)-v_1^*(e_2)\\ 0=v_1^*(e-1-3e_2)= v_1^*(e_1)-3v_1^*(e_2)\end{cases}\Rightarrow \begin{cases}v_1^*(e_2)=\frac{-1}{4} \\ v_1^*(e_1)=\frac{3}{4}\end{cases}$$
 Entonces $Mat_{B_c, \{1_k\}}(v_1^*)=\begin{pmatrix} \frac{3}{4} & \frac{-1}{4}\end{pmatrix}$, para calcular $v_2^*$ se hace igual.
 
 Pero ahora si cambiamos la base a $B'=\{e_1-e_2, e_1\}$ base de $K^2$ entonces volviendo a calcular todo:
 $$\begin{cases}1= v_1^*(e_1-e_2) \\0=v_1^*(e_1) \end{cases}\Rightarrow \begin{cases}v_1^*(e_1)=0 \\ v_1^*(e_2)=-1\end{cases}$$
+\end{ej}
 
-Es cierto que existe un isomorfismo entre un espacio y su dual entonces debe existir una aplicación que a cada vector que le asigne su dual, pero hemos de decir que no existe ningún isomorfismo canónico entre ambos ya que incluso la demostración de este resultado depende de las bases escogidas al estar una  determinada por la otra.
+\begin{obs}
+Es cierto que existe un isomorfismo entre un espacio y su dual y entonces debe existir una aplicación que a cada vector que le asigne su dual, pero es importante resaltar que ésta aplicación no es canónica entre ambos ya que incluso la demostración de este resultado depende de las bases escogidas al estar una determinada por la otra.
 
-\subsubsection*{Aplicación dual}
-Si tenemos una aplicación entre dos espacios vectoriales hay una manera de definir la misma aplicación sobre los duales:
-$$V\xrightarrow{\phi} W\xrightarrow{\omega} K\stackrel{\omega \circ \phi}{\leftarrow} V\Rightarrow \phi^*: W^*\rightarrow V^*: \phi^*(\omega)=\omega\circ \phi$$
-Es fácil ver que es se cumplen las siguientes propiedades:
+Con esto queremos decir que, si $B=\{v_1,\cdots, v_n\}$ y $B'=\{v_1',\cdots, v_n'\}$ son dos bases con algunos vectores comunes, por ejemplo $v_1 = v_1'$, los vectores $v_1^*$ y $v_1'^*$ no tienen por qué coincidir, pues están condicionados por el resto de la base.
+\end{obs}
+
+\begin{prop}
+Sea $B=\{v_1,\cdots, v_n\}$ una base de $V$ y $B^* = \{v_1^*,\cdots, v_n^*\}$ una del dual $V^*$, entonces las coordenadas de una forma lineal $\omega \in V^*$ son precisamente $\omega = (\omega(v_1), \cdots, \omega(v_n))$.
+\end{prop}
+
+\begin{defi}[Aplicación dual]
+Sean $V$ y $W$ dos espacios vectoriales y $\phi \in Hom(V,W)$ una aplicación entre ellos, se define la \textbf{aplicación dual} a $\phi$ como:
+$$V\xrightarrow{\phi} W\xrightarrow{\omega} K$$
+\begin{eqnarray*}
+\phi^*: W^* &\longrightarrow& V^* \\ \omega &\longmapsto& \omega\circ \phi 
+\end{eqnarray*}
+Además, se verifican las siguientes propiedades:
 \begin{itemize}
 \item $\phi^*(\omega_1+\omega_2)=(\omega_1+\omega_2)\circ \phi= \omega_1\circ \phi+\omega_2 \circ \phi= \phi^*(\omega_1)+\phi^*(\omega_2)$
 \item $\phi^*(\lambda\omega)=(\lambda\omega)\circ \phi=\lambda(\omega\circ\phi)=\lambda \phi^*(\omega)$
 \item $(id_V)^*=id_{V^*}$
 \item $(\phi_2\circ\phi_1)^*=\phi_1^*\circ \phi_2^*$
 \end{itemize}
+\end{defi}
 
-Por tanto, el dual asigna a cada espacio otro espacio vectorial y a cada aplicación su dual. Conserva la identidad y cambia de orden las composiciones por lo que es un \textbf{funtor contravariante}.
+\begin{obs}
+Por tanto, acabamos de ver que la dualidad asigna a cada espacio otro espacio vectorial y a cada aplicación su dual. Conserva la identidad y cambia de orden las composiciones por lo que se llama (esto se ve en otras asignaturas) un \textbf{funtor contravariante}.
+\end{obs}
 
-De hecho si queremos observar que relación establecen las matrices de una aplicación y su dual vemos que:
+\begin{prop}
+Sea $\phi$ una aplicación entre dos espacios vectoriales $V$ y $W$ y $\phi^*$ su dual correspondiente, las matrices de ambas aplicaciones guardan la siguiente relación:
 $$A=M_{B_v, B_w}(\phi)\Rightarrow M_{B_w^*, B_v^*}(\phi^*)=A^t$$
+\end{prop}
 
-\subsubsection*{Teorema}
-Consideremos $\langle , \rangle: V^*\times V\rightarrow K$ a aplicación:
-$$(\omega, u)\longmapsto \omega(u)$$
-Vemos que al dejar fijo $u$ obtenemos la aplicación $\langle , u\rangle: V^*\rightarrow K$ que llamaremos $\xi(v)$ de forma que ocurre que:
-$$\omega \longmapsto \langle \omega, u \rangle$$
-Es fácil ver que $\xi(v)$ es lineal y que pertenece al conjunto $Hom(V^*, K)=V^{**}$ y que \textbf{llamaremos bidual} de $V$. Por tanto podemos decir que:
-$$V\xrightarrow{\eta_v}V^{**}: \eta_v(v)\longmapsto \xi(v)$$
-Es un isomorfismo canónico entre $V$ y $V^{**}$
-
-\underline{Demostración}:
+\subsubsection{Espacio Bidual}
+Consideremos la aplicación $\langle \bullet , \bullet \rangle: V^*\times V\rightarrow K$  como aquella que evalúa en la formal el vector seleccionado, es decir, $(\omega, v)\longmapsto \omega(v)$. Si fijamos $v$ obtenemos la aplicación $\langle \bullet , v\rangle: V^*\rightarrow K$ que llamaremos $\xi_v$ y que mapea $\omega \longmapsto \langle \omega, u \rangle$
+\begin{prop}
+La aplicación $\xi_v \in Hom(V^*, K)$ definida como $\xi_v(\omega) = \omega(v)$ es una aplicación lineal y biyectiva.
+\end{prop}
+\begin{demo}
 \begin{itemize}
 \item Está bien definida, es decir, ocurre que $\forall v\in V: \eta_v(v)\in V^{**}=Hom_k(V^*, K)$
 $$\left[\eta(v)\right](\omega_1+\omega_2)=(\omega_1+\omega_2)(v)=\omega_1(v)+\omega_2(v)=\left[\eta(v)\right](\omega_1)+\left[\eta(v)\right](\omega_2)$$
@@ -3014,12 +3208,31 @@ $$\ker(\eta_v)\neq \{0\}\Rightarrow v\in \ker(\eta_v)\Rightarrow\forall \omega \
 Pues construimos una forma lineal que no verifique esto:
 $$B=\{v, v_2, \cdots, v_n\}\mbox{ de }V \Rightarrow \exists B^*\mbox{ de }V^*\Rightarrow \left[\eta(v)\right](v_1^*)=v_1^*(v)=1\neq 0\Rightarrow \#$$
 \end{itemize}
+\end{demo}
 
-\subsection*{\underline{Ortogonalidad}}
-Decimos que $\omega \in V^*$ es ortogonal a $v\in V$ si $\omega(v)=0$. Además si $W<V$ definimos el \textbf{ortogonal de W}:
-$$W^\perp=\{w\in W:\omega(w)=0\}$$
+\begin{defi}[Espacio Bidual]
+Sea $V$ un espacio vectorial de dimensión $n$, se define el \textbf{espacio bidual} como $V^{**} = Hom(V^*, K)$ conformado por todas las aplicaciones $\forall v \in V: \xi_v$.
+\end{defi}
 
-\underline{\textbf{Propiedades}}
+\begin{prop}
+Sea $V$ un espacio vectorial de dimensión $n$ y $V^{**}$ su bidual, la aplicación
+\begin{eqnarray*}
+\eta: V &\longrightarrow& V^{**} \\ v &\longmapsto& \xi_v
+\end{eqnarray*}
+es un isomorfismo canónico entre ambos espacios.
+\end{prop}
+
+\subsection{Ortogonalidad}
+
+\begin{defi}[Ortogonalidad]
+Sea $V$ un espacio vectorial y $V^*$ su dual, decimos que $\omega \in V^*$ es \textbf{ortogonal} a $v\in V$ si $\omega(v)=0$.
+
+Además, sea $W$ un subespacio de $V$, se define el \textbf{ortogonal de $W$} como:
+$$W^\perp=\{\omega \in V^*:\forall w \in W, \ \omega(w)=0\}$$
+\end{defi}
+
+\begin{prop}
+La definición de ortogonalidad verifica las siguientes propiedades:
 \begin{enumerate}
 \item $W<V\Rightarrow W^\perp<V^*$
 \item $\{0\}^\perp = V^*$ y $V^\perp = \{0_{v^*}\}$
@@ -3028,9 +3241,11 @@ $$W^\perp=\{w\in W:\omega(w)=0\}$$
 \item $n=\dim V$ y $m=\dim W\Rightarrow \dim W^\perp = n-m$
 \item $(W_1+W_2)^\perp = W_1^\perp \cap W_2^\perp$
 \item $(W_1\cap W_2)^\perp= W_1^\perp + W_2^\perp$
-\item $W_1^{\perp\perp}=\eta_v(W)$
+\item $W_1^{\perp\perp}=W$
+\item $V = W \oplus U \Rightarrow V^* = W^* \oplus U^*$
 \end{enumerate}
-\underline{Demostración}:
+\end{prop}
+\begin{demo}
 \begin{enumerate}
 \item Es subespacio:
 $$\omega_1,\omega_2\in W^\perp \Rightarrow (\omega_1+\omega_2)(w)=\omega_1(w)+\omega_2(w)\Rightarrow \omega_1+\omega_2\in W^\perp$$
@@ -3067,135 +3282,162 @@ $$\Rightarrow \eta_v(W_1\cap W_2)^\perp = \eta_v(W_1^\perp+W_2^\perp)\Rightarrow
 $$\forall \omega \in W^{\perp}: \left[\eta_v(w)\right](\omega) = \omega(w) = 0$$
 Pero como $\dim (W^{\perp})^\perp = \dim V^*-\dim W^\perp =\dim V^*-( \dim V- \dim W)= \dim W = \dim \eta_v(W)$.
 \end{enumerate}
+\end{demo}
 
-\subsubsection*{Teorema: principio de dualidad}
-La correspondencia $Sub(V)\rightarrow Sub(V^*)$ de forma que $W\rightarrow W^*$ es un antiismorfismo de retículos completos, es decir, lleva ínfimos a supremos y viceversa y sumas a intersecciones y viceversa.
+\begin{theo}[Principio de dualidad]
+La correspondencia $Sub(V)\rightarrow Sub(V^*)$ que lleva cada subespacio $W\rightarrow W^*$ en su dual es un antiismorfismo de retículos completos, es decir, lleva ínfimos a supremos y viceversa y sumas a intersecciones y viceversa.
+\end{theo}
 
-\subsubsection*{Relación entre aplicación dual y subespacios ortogonales}
-Si tenemos $V\xrightarrow{\phi} W$, podemos definir su dual $W^*\xrightarrow{\phi^*}V^*$ y se verifican las siguientes propiedades:
+\begin{prop}
+Sea $V\xrightarrow{\phi} W$ una aplicación lineal y $W^*\xrightarrow{\phi^*}V^*$ su dual, entonces se tienen las siguientes propiedades:
 \begin{enumerate}
-\item $\ker(\phi^*)=Im(\phi)^\perp$
-\item $Im(\phi^*)=\ker(\phi)^\perp$
+\item $\ker(\phi^*)=Im(\phi)^\perp < W^*$
+\item $Im(\phi^*)=\ker(\phi)^\perp < V^*$
 \end{enumerate}
-
-Por lo tanto se tiene que:
-\begin{itemize}
-\item $\ker(\phi^*)< W^*$
-\item $Im(\phi)^\perp < W^*$
-\item $\ker(\phi)^\perp < V^*$
-\item $Im(\phi^*) < V^*$
-\end{itemize}
-
-\underline{Demostración}:
+\end{prop}
+\begin{demo}
 \begin{enumerate}
 \item Basta con probar que un elemento de uno está en el otro y viceversa:
 $$\omega \in \ker(\phi^*)\Rightarrow \phi^*(\omega)=0\Rightarrow \omega \circ \phi = 0\Rightarrow \forall v\in V: \omega(\phi(v))=0\Rightarrow \omega \in (Im(\phi))^\perp$$
 \item Demostración análoga a la anterior.
 \end{enumerate}
+\end{demo}
 
-\underline{Observación}:
-
-Si recordamos que $A=M_{B_v, B_w}(\phi)$ y $A^t=M_{B_w^*, B_v^*}(\phi^*)$ veamos que el rango de ambas matrices es el mismo:
+\begin{obs}
+Si recordamos que $A=M_{B_v, B_w}(\phi)$ y $A^t=M_{B_w^*, B_v^*}(\phi^*)$, veamos de otra forma que el rango de ambas matrices es el mismo:
 $$rg(A^t)=rg(\phi^*)=\dim W^*-\dim \ker(\phi^*)=\dim W- \dim (Im(\phi))^\perp=$$
 $$=\dim W- (\dim W-\dim Im(\phi))=\dim Im(\phi)=rg(\phi)=A$$
+\end{obs}
 
-\subsubsection*{Observación}
+%FIXME
+\subsubsection{Hiperplanos explicación}
 Supongamos que tenemos $\dim V=n$ y un hiperplano $H<V$, es decir, $\dim H=n-1$. Este tendrá una única ecuación cartesiana que lo defina, por lo tanto:
 $$v\in H\Leftrightarrow a_1x_1+\cdots a_nx_n=0$$
 De este modo $H^\perp$ vemos que $\dim H^\perp = n-(n-1)=1$, con lo cual, este está generado por una única forma lineal. Si definimos $B^*$ la pregunta es quién es $\omega$. Si definimos $\omega=a_1v_1^*+\cdots + a_nv_n^*$, es decir, de la manera usual vemos que al aplicarla a un vector de $V$ lo que ocurre es que tras desarrollar:
-$$a_iv_i^*(v) = a_iv_i^*(b_1v_1+\cdots b_nv_n)=a_ib_j$$
+$$a_iv_i^*(v) = a_iv_i^*(b_1v_1+\cdots b_nv_n)=a_ib_i$$
 Porque $v_i^*$ se anula sobre todos los vectores de la base, excepto sobre el del mismo índice que él. Si esto lo hacemos con todos los vectores y sumando (lo que sería hacerla evaluación normal de $\omega(v)$) se tiene que:
 $$\omega(v)=a_1b_1+\cdots +a_nb_n$$
 Si $v=(b_1, \cdots, b_n)\in H\Rightarrow a_1b_1+\cdots a_nb_n=0\Rightarrow \omega(v)=0$ si definimos $\omega$ como lo hemos hecho, luego está bien definida.
 
-\section*{FORMAS BILINEALES}
-\underline{\textbf{Preámbulo}}:
-
-Definimos $V\times V^* \rightarrow K$ de forma que $(v,\omega)\rightarrow \omega(v)\in K$, pero esto justamente es $\left[\eta_v(v)\right](\omega)$ y a esto lo llamamos corchete canónico $\langle v,\omega\rangle$. ¿Pero que propiedades tiene este objeto? Decimos que este corchete es bilineal, lo que quiere decir que:
+\section{FORMAS BILINEALES}
+La definición $V\times V^* \rightarrow K$ de forma que $(v,\omega)\rightarrow \omega(v)\in K$, que justamente se dio para $\left[\eta(v)\right](\omega)$ tiene buenas propiedades que podemos querer ``copiar'' para otros objetos matemáticos. ¿Pero qué propiedades tiene esta aplicación? Si denotamos la aplicación por $\langle v,\omega\rangle$, entonces:
 \begin{itemize}
 \item $\langle v+v',\omega\rangle=\langle v,\omega\rangle+\langle v',\omega\rangle$
 \item $\langle\lambda v,\omega\rangle = \lambda \langle v,\omega\rangle$
 \item $\langle v,\omega+\omega'\rangle =\langle v,\omega\rangle+\langle v,\omega'\rangle$
 \item $\langle v,\lambda\omega\rangle = \lambda \langle v,\omega\rangle$
 \end{itemize}
-Es decir, lo que quiere decir esto es que considerando la función que fija $\omega$ si varía $v$ lo que tenemos es una forma lineal sobre $V$ y si escogemos la función que deja fija la $v$ y varía $\omega$, entonces también es una forma lineal sobre $V^*$.
+Es decir, que considerando la función fija para $\omega$ y libre para $v$ lo que tenemos es una forma lineal sobre $V$ y si escogemos la función fija para $v$ y libre para $\omega$, entonces también es una forma lineal sobre $V^*$.
 
-\subsection*{\underline{Definición de forma bilineal}}
-
-Decimos que $f: V\times V\rightarrow K$ es $K-bilineal$ si verifica:
+\subsection{Concepto de forma bilineal}
+\begin{defi}[Forma Bilineal]
+Sea $f: V\times V\rightarrow K$ una aplicación, se dice que es \textbf{K-bilineal} si es lineal respecto de ambas componentes de la función, es decir, verifica:
 \begin{itemize}
 \item $f(v+v',w) = f(v,w)+f(v',w)$
 \item $f(v, w+w') = f(v,w)+f(v,w')$
 \item $f(av, w)= a f(v,w)$
 \item $f(v,bw)=bf(v,w)$
 \end{itemize}
-Es decir, que estamos diciendo que es lineal respecto de ambos componentes de la función. Al conjunto de todas las formas bilineales se le denota como $Bil(V)$
+Al conjunto de todas las formas bilineales se le denota como $Bil(V)$
+\end{defi}
 
-\textbf{Ejemplo 1}:
-
+\begin{ej}
 Supongamos que tenemos $\omega_1, \omega_2\in V^*$ y definimos $f(v,w)=\omega_1(v)\omega_2(w)$ es trivialmente una forma bilineal porque verifica dichas condiciones.
+\end{ej}
 
-\textbf{Ejemplo 2}:
-
+\begin{ej}
 Supongamos que $V=Mat_n(K)$ y definimos $f(A,C)=tr(A\cdot C)$ y se puede comprobar fácilmente que se verifican las propiedades de bilinealidad.
+\end{ej}
 
-\subsubsection*{Matriz asociada y de cambio de base}
-Si definimos una base de $V$, los vectores quedarán determinados de la forma:
+\begin{defi}[Forma Bilineal Degenerada]
+Sea $f$ una forma K-bilineal, decimos que $f$ es \textbf{degenerada} si $rg(f)< n$.
+\end{defi}
+
+\begin{prop}[Operaciones con formas bilineales]
+El conjunto $Bil(V)$ tiene estructura de espacio vectorial con las operaciones:
+\begin{align*}
+(f+g)(v,w)=f(v,w)+g(v,w) & & f\in Bil(V)\Rightarrow (\lambda f)(v,w)=\lambda f(v,w)
+\end{align*}
+\end{prop}
+
+\begin{obs}
+Una forma bilineal no es una aplicación lineal porque no ocurre lo siguiente:
+$$f((v,w)+(v'w'))\neq f(v,w)+f(v',w')$$
+\end{obs}
+
+\subsubsection{Matriz asociada y Cambio de Base}
+Si definimos una base de $V$, los vectores operandos quedarán determinados de la forma:
 $$\begin{cases}v=x_1v_1+\cdots x_nv_n \\ w=y_1v_1+\cdots y_nv_n\end{cases}$$
-Ahora si evaluamos la forma bilineal en estos vectores nos queda:
-$$f(v,w)=\sum_{i,j} (x_iy_jf(v_i,v_j)) = \begin{pmatrix} x_1 & \cdots & x_n\end{pmatrix}(a_{ij})\begin{pmatrix} y_1 \\ \vdots \\ y_n \end{pmatrix} $$
-Esta matriz $A$ es la va asociada a la forma bilineal y está compuesta por la evaluación de la forma en todos los vectores de la base:
+De este modo, podemos expresar la imagen de dicha forma bilineal como:
+$$f(v,w)=\sum_{i,j} (x_iy_jf(v_i,v_j)) = \begin{pmatrix} x_1 & \cdots & x_n\end{pmatrix}(a_{ij})\begin{pmatrix} y_1 \\ \vdots \\ y_n \end{pmatrix} \mbox{ donde }a_{ij} = f(v_i, v_j)$$
+La matriz $A$ formada por los $a_{ij}$ es la asociada a la forma bilineal y está compuesta por las imágenes de la forma bilineal en todos los posibles pares de vectores de la base:
 $$A=\begin{pmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{n1} & \cdots & a_{nm} \end{pmatrix}$$
-Veamos un ejemplo:
 
+\begin{theo}[de la Matriz Asociada]
+Sea $f: V\times V \longrightarrow K$ una forma K-bilineal y $B=\{v_1,\cdots, v_n\}$ una base de $V$, podemos expresar la imagen por $f$ de los pares de vectores de $V$ como:
+$$\forall v, w\in V : f(v,w) = v\cdot M_{B,B'}(\phi) \cdot w^t$$
+donde la matriz de la ecuación es la matriz:
+$$A=\begin{pmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{n1} & \cdots & a_{nm} \end{pmatrix} \mbox{ donde } a_{ij} = f(v_i, v_j)$$
+\end{theo}
+
+\begin{ej}
 Si escogemos $V=Mat_2(K)$ y la base formada por:
 $$E_{11}=\begin{pmatrix} 1 & 0 \\ 0 & 0\end{pmatrix}, E_{12}=\begin{pmatrix} 0 & 1 \\ 0 & 1\end{pmatrix}, E_{21}=\begin{pmatrix} 0 & 0 \\ 1 & 0\end{pmatrix}, E_{22}=\begin{pmatrix} 0 & 0 \\ 0 & 1\end{pmatrix}$$
 Si definimos la forma bilineal como $f(A,C)=tr(A\cdot C)$ vamos a  calcular los coeficientes de su matriz:
 $$\begin{cases} a_{11} = tr(E_{11},E_{11})=tr\cdots = 1\\
 a_{12} = tr(E_{11}, E_{12})= tr \cdots =0 \\ a_{13} = tr(E_{11},E_{21})=tr\cdots = 0 \\ a_{14} = tr(E_{11},E_{22})=tr\cdots = 0 \\ \vdots\end{cases}$$
+\end{ej}
 
 Si suponemos ahora que $B'$ es otra base, entonces la función cambiará a:
 $$f(v,w)=\begin{pmatrix} x_1' & \cdots & x_n'\end{pmatrix}(a'_{ij})\begin{pmatrix} y_1' \\ \vdots \\ y_n' \end{pmatrix} $$
-Por tanto, llamando a $P=M(B',B)\in GL_n(K)$ la matriz de paso de $B'$ a $B$, entonces:
+Por tanto, llamando $P=M(B',B)\in GL_n(K)$ a la matriz de paso de $B'$ a $B$, entonces:
 $$\begin{pmatrix} x_1 \\ \vdots \\ x_n\end{pmatrix}=P\begin{pmatrix} x_1' \\ \vdots \\ x_n' \end{pmatrix} $$
 $$\begin{pmatrix} y_1 & \cdots & y_n\end{pmatrix}=\begin{pmatrix} y_1' & \cdots & y_n' \end{pmatrix} P^t$$
-Es decir, la relación que existe entre ambas matrices $A$ y $A'$ en distintas bases es:
-$$A'=P^tAP$$
-Cuando esto ocurre se dice que ambas matrices son \textbf{congruentes} y esta relación es una relación de equivalencia.
+luego si reescribimos la matriz $A$ en estos nuevos términos, vemos que se relacionan como:
+$$f(v,w)=\begin{pmatrix} x_1 & \cdots & x_n\end{pmatrix} A \begin{pmatrix} y_1 \\ \vdots \\ y_n \end{pmatrix} = \begin{pmatrix} x_1' & \cdots & x_n'\end{pmatrix}\cdot \underbrace{P^t \cdot A \cdot P}_{A'} \begin{pmatrix} y_1' \\ \vdots \\ y_n' \end{pmatrix} \Rightarrow A'=P^tAP$$
+\begin{defi}[Congruencia de Matrices]
+Sean $A, A'\in Mat_n(K)$, decimos que ambas matrices son \textbf{congruentes} si están relacionadas como:
+$$\exists P \in GL_n(K) : A' = P^tAP$$
+esta relación es de equivalencia en el espacio $Mat_n(K)$.
+\end{defi}
 
-Definimos entonces $rg(f)=rg M_B(f)$ para una $B$ cualquiera. Además decimos que $f$ es \textbf{NO degenerada} si $rg(f)=n$, es decir, es la dimensión del espacio ambiente.
-
-\subsubsection*{Operaciones con formas bilineales}
-Veamos que el conjunto $Bil(V)$ tiene estructura de espacio vectorial sobre $K$:
-$$f,g\in Bil(V)\Rightarrow (f+g)(v,w)=f(v,w)+g(v,w)$$
-$$f\in Bil(V)\Rightarrow (\lambda f)(v,w)=\lambda f(v,w)$$
-Por lo que $Bil(V)$ es un espacio vectorial sobre $K$ con estas dos operaciones, pero ¡ojo! una forma bilineal no es una aplicación lineal porque no ocurre lo siguiente:
-$$f((v,w)+(v'w'))\neq f(v,w)+f(v',w')$$
-Además del mismo modo que ocurría con las aplicaciones lineales ocurre que si asociamos cada forma a su matriz tenemos un isomorfismo de espacios y, en consecuencia, conocemos la dimensión del espacio $Bil(V)$:
+\begin{obs}
+Del mismo modo que ocurría con las aplicaciones lineales, ocurre que la aplicación que asocia a cada forma su matriz es un isomorfismo de espacios y, en consecuencia, la dimensión del espacio $Bil(V)$ es:
 $$f\stackrel{\Phi}{\longmapsto} M_B(f)\Rightarrow Bil(V)\simeq Mat_n(K)\Rightarrow \dim Bil(V)=n^2$$
+\end{obs}
 
-\subsection*{\underline{Simetría y antisimetría}}
-Decimos que $f$ es \textbf{simétrica} si:
+\subsection{Simetría y antisimetría}
+\begin{defi}[Simetría y Antisimetría]
+Sea $f: V\times V \rightarrow K$ una forma K-bilineal, decimos que $f$ es \textbf{simétrica} si:
 $$f(v,w)=f(w,v)\Rightarrow A=M_B(f)\in Mat_n(K) \mbox{ simétricas}$$
-Decimos que $f$ es \textbf{antisimétrica} si:
+y decimos que $f$ es \textbf{antisimétrica} si:
 $$f(v,w)=-f(w,v)\Rightarrow A=M_B(f)\in Mat_n(K) \mbox{ antisimétricas}$$
+\end{defi}
 
-Además ocurre que, como en las matrices cualquier matriz se podía escribir como combinación de una matriz simétrica y antisimétrica:
+Recordemos por un instante que cualquier matriz se podía escribir como combinación de una matriz simétrica y antisimétrica:
 $$A=\frac{A+A^t}{2}+\frac{A-A^t}{2}$$
-así que es razonable pensar que con las formas bilineales sucede lo mismo:
+así que es razonable pensar que con las formas bilineales suceda lo mismo.
+
+\begin{theo}
+Sea $f\in Bil(V)$, entonces se puede\footnote{De este modo, es fácil comprobar que toda la teoría desarrollada no tiene sentido a menos que $\chi(K)\neq 2$ puesto que si no la antisimetría no tendría sentido.} escribir como combinación lineal de una forma simétrica y otra antisimétrica:
 $$f=f_s+f_a: \begin{cases} f_s(v,w)=\frac{f(v,w)+f(w,v)}{2}& \Rightarrow A_{f_s} = \frac{A+A^t}{2} \\ f_a(v,w)=\frac{f(v,w)-f(w,v)}{2} &\Rightarrow A_{f_a} = \frac{A-A^t}{2} \end{cases}$$
-De este modo es fácil comprobar que toda la teoría desarrollada no tiene sentido a menos que $\chi(K)\neq 2$ puesto que si no la antisimetría no tendría sentido.
+\end{theo}
 
-De este modo podemos definir:
+\begin{obs}
+En consecuencia, podemos calcular la dimensión de estos dos subespacios de $Bil(V)$:
 $$\begin{cases}Bil_s(V)=\{f_s: V\times V\rightarrow K\} &\Rightarrow \dim Bil_s(V)=\frac{n(n+1)}{2} \\ Bil_a(V)=\{f_a: V\times V\rightarrow K\} &\Rightarrow \dim Bil_a(V)=\frac{n(n-1)}{2}\end{cases}$$
-\subsubsection*{Vectores isótropos}
-Definimos un vector isótropo respecto de una forma bilineal a aquellos vectores que cumplen:
-$$f(v,v)=0$$
-\underline{\textbf{Proposición}}:
+\end{obs}
 
-De este modo es fácil ver que para las formas antisimétricas esto se va a cumplir trivialmente luego se tiene la siguiente afirmación:
+
+\begin{defi}[Vectores Isótropos]
+Sea $V$ un espacio vectorial y $f:V \times V \rightarrow K$ una forma bilinieal, un vector $v$ se dice \textbf{isótropo respecto a $f$} si verifica $f(v,v)=0$.
+\end{defi}
+
+\begin{prop}
+Sea $V$ un espacio vectorial y $f$ una forma bilineal sobre dicho espacio, entonces:
 $$f \mbox{ antisimétrica} \Leftrightarrow \forall v\in V: f(v,v)=0$$
-\underline{Demostración}:
+\end{prop}
+\begin{demo}
 \begin{itemize}
 \item $\Rightarrow$:
 
@@ -3204,83 +3446,109 @@ Trivial por la definición de antisimetría
 \item $\Leftarrow$:
 $$0= f(v+w, v+w)\Rightarrow 0= \underbrace{f(v,v)}_{=0}+ f(v,w)+ f(w,v)+ \underbrace{f(w,w)}_{=0}\Rightarrow f(v,w)= - f(w,v)$$
 \end{itemize}
+\end{demo}
 
-\underline{\textbf{Corolario}}:
-
+\begin{coro}
 Si $f$ es simétrica donde $f\neq 0$, entonces $\exists v\in V: f(v,v)\neq 0$
+\end{coro}
 
+\begin{defi}[Formas Izquierda y Derecha]
+Sea $f:V\times V \rightarrow \mathbb K$ una forma bilineal, definimos la \textbf{forma izquierda} $f_{iz} \in Hom(V,V^*)$ y la \textbf{forma derecha} $f_{d}\in Hom(V,V^*)$ de la forma bilineal como aquellas que verifican que:
+$$f_{iz}: V\rightarrow V^*\mbox{ donde } f_{iz}(v)(w) = f(v,w)$$
+$$f_{d}: V\rightarrow V^*\mbox{ donde } f_{d}(v)(w) = f(w,v)$$
+es decir, que $f_{iz}$ asocia a cada vector $v$ la forma de $V^*$ que al aplicarse sobre $w$ tiene como resultado la aplicación bilineal y con la derecha sucede de modo análogo.
+\end{defi}
 
-\subsection*{\underline{Formas izquierda y derecha}}
-Supogamos que $f:V\times V \rightarrow \mathbb K$ es bilineal, vamos a llamar:
-$$f_{iz}: V\rightarrow V^*\mbox{ de forma que } f_{iz}(v)(w) = f(v,w)$$
-$$f_{d}: V\rightarrow V^*\mbox{ de forma que } f_{d}(v)(w) = f(w,v)$$
-Es decir, que $f_{iz}$ asocia a cada vector $v$ la forma de $V^*$ que al aplicarse sobre $w$ tiene como resultado la aplicación bilineal y con la derecha sucede de modo análogo.
-
-Estas aplicaciones son \textbf{aplicaciones lineales} de $V$ en $V^*$, por lo que:
-$$f_{iz},f_{d}\in Hom(V,V^*)$$
-
-\subsubsection*{Matriz asociada a ambas formas}
-Si definimos estas aplicaciones, vamos a ver que matriz las representan. Supongamos que hemos elegido $B$ base de $V$ y $B^*$ base de $V^*$, entonces tenemos que:
-$$M_{B,B^*}(f_{iz})= (c_{ij}): f_{iz}(v_i)=\sum c_{ji}v_j^* \Rightarrow f_{iz}(v_i)(v_k)= \left(\sum_{j=1}^{n} c_{ji}v_j^*\right)(v_k) = c_{ki}$$
+\begin{prop}
+Sea $f\in Bil(V)$ y $f_{iz}$ y $f_d$ sus formas izquierda y derecha respectivamente, dadas unas bases $B$ y $B^*$ de $V$ y $V^*$ sus matrices son:
+\begin{align*}
+M_{B,B^*}(f_{iz}) = A^t & & M_{B,B^*}(f_{d}) = A
+\end{align*}
+\end{prop}
+\begin{demo}
+$$M_{B,B^*}(f_{iz})= (c_{ij}) \mbox{ donde } f_{iz}(v_i)=\sum c_{ji}v_j^* \Rightarrow f_{iz}(v_i)(v_k)= \left(\sum_{j=1}^{n} c_{ji}v_j^*\right)(v_k) = c_{ki}$$
 Pero por otro lado tenemos que:
 $$f_{iz}(v_i)(v_k)=f(v_i,v_k) = a_{ik}\Rightarrow c_{ki} = a_{ik}$$
 Con lo cual se tiene que:
 $$M_{B,B^*}(f_{iz}) = M_B(f)^t = A^t$$
 Del mismo modo y con una demostración análoga tenemos que:
 $$M_{B,B^*}(f_d) = A$$
+\end{demo}
 
-En consecuencia, tenemos\footnote{En una forma bilineal no hay un núcleo concreto porque no se puede considerar subespacio de nada. Lo único que podemos llamar núcleo es la intersección de los núcleos izquierdo y derecho y considerarlo un cojunto de pares que se anulas que estudiaremos más tarde.} que:
+\begin{obs}
+En consecuencia, tenemos\footnote{En una forma bilineal no hay un núcleo concreto porque no se puede considerar subespacio de nada. Lo único que podemos llamar núcleo es la intersección de los núcleos izquierdo y derecho y considerarlo un cojunto de pares que se anulan y que estudiaremos más tarde.} que:
 $$\begin{cases} rg(f) = rg(f_{iz}) = n - \dim \ker(f_{iz}) \\ rg(f) = rg(f_{d}) = n - \dim \ker(f_{d})  \end{cases}\Rightarrow \dim \ker f_{iz} = \dim \ker f_d = n - rg(f)$$
 Esto quiere decir pues, que los núcleos de ambas funciones no tienen por qué coincidir, pero siempre tendrán la misma dimensión.
+\end{obs}
 
-Además se puede extraer la siguiente conclusión:
+\begin{prop}
+Sea $f$ una forma bilineal, entonces:
 $$f \mbox{ no degenerada }\Leftrightarrow f_{iz} \mbox{ isomorfismo o }f_{d} \mbox{ isomorfimo}$$
+\end{prop}
 
-\subsubsection*{Forma cuadrática asociada}
-Supongamos que $f\in Bil(V)\Rightarrow q: V\rightarrow K$ donde $q(v) = f(v,v)$. Esto es lo que llamamos la \textbf{forma cuadrática asociada a f}.
+\subsubsection{Forma cuadrática asociada}
+\begin{defi}[Forma Cuadrática]
+Sea $f$ una forma bilineal, se define su \textbf{forma cuadrática asociada} como la aplicación
+\begin{eqnarray*}
+q:V &\longrightarrow& K \\ v &\longmapsto& f(v,v) 
+\end{eqnarray*}
+\end{defi}
 
-Es notable decir tenemos una forma cuadrática no podemos determinar la forma de la que viene porque por ejemplo, la forma cuadrática nula proviene de cualquier antisimétrica:
-$$f\in Bil_a(V) \Rightarrow q(v) = 0 \mbox{ pero }\Leftarrow \mbox{ no es cierto}$$
-Por el contrario, si dada una forma cuadrática queremos ver de que forma simétrica proviene, esto sí es posible:
-$$f\in Bil_s(V)\Rightarrow f(v+w,v+w)=\begin{cases} q(v+w) \\ q(v)+q(w)+2f(v,w)\end{cases}\Rightarrow f(v,w) = \frac{1}{2}\left( q (v+w) -q(v)-q(w)\right)$$
+\begin{prop}
+Sea $q: V\rightarrow K$ una forma cuadrática, existe una única forma bilineal $f$ simétrica de la cual es asociada y viene dada por la expresión:
+$$ f(v,w) = \frac{1}{2}\left( q (v+w) -q(v)-q(w)\right)$$
 Es decir, que existe una correspondencia biyectiva entre las formas bilineales simétricas y las formas cuadráticas asociadas.
+\end{prop}
+\begin{demo}
+$$f\in Bil_s(V)\Rightarrow f(v+w,v+w)=\begin{cases} q(v+w) \\ q(v)+q(w)+2f(v,w)\end{cases}\Rightarrow f(v,w) = \frac{1}{2}\left( q (v+w) -q(v)-q(w)\right)$$
+\end{demo}
 
-Cuando hablamos de la matriz de la forma cuadrática no estamos hablando más que de la matriz de la forma bilineal de la que procede, ya que el cálculo sería el mismo que cuando vimos la matriz de la forma bilineal, pero cambiando los $y_i$ por $x_j$.
+\begin{obs}
+Es notable destacar que la proposición anterior no se verifica para una forma bilineal en general, por ejemplo, la forma cuadrática nula proviene de cualquier antisimétrica:
+$$f\in Bil_a(V) \Rightarrow q(v) = 0 \mbox{ pero }\Leftarrow \mbox{ no es cierto}$$
+\end{obs}
 
-\subsection*{\underline{Clasificación de formas antisimétricas}}
-Sea $W<V$ y $f\in Bil_a(V)$ y $v,w\in V$, ocurre:
-\begin{enumerate}
-\item $v$ y $w$ son ortogonales respecto de $f$ si $f(v,w)=0$
-\item $W^\perp=\{v\in V: f(v,w)=0: \forall w\in W\}$, como observación $W^\perp< V$
-\end{enumerate}
+\begin{obs}
+Cuando hablamos de la matriz de la forma cuadrática no estamos hablando más que de la matriz de la forma bilineal de la que procede, ya que el cálculo sería el mismo que cuando vimos la matriz de la forma bilineal, pero cambiando los $y_i$ por $x_i$.
+\end{obs}
 
-\underline{\textbf{Ejemplos}}
+\subsection{Clasificación de formas bilineales}
+Del mismo modo que en el tema de clasificación de endomorfismos, tratábamos de agrupar las aplicaciones lineales en clases de equivalencia y escoger el representante más sencillo posible dentro de cada clase, en este apartado vamos a tratar de hacer lo mismo pero con las formas bilineales.
 
-El conjunto $W$ y su ortogonal $W^\perp$ no tienen porque ser disjuntos, por ejemplo considerando:
+\begin{defi}[Ortogonalidad respecto de una forma bilineal]
+Sea $W<V$, $f\in Bil_a(V)$ y $v,w\in V$, decimos que $v$ y $w$ son \textbf{ortogonales respecto de $f$} si $f(v,w)=0$. Además, se define el ortogonal a un subespacio como:
+$$W^\perp=\{v\in V: f(v,w)=0: \forall w\in W\} < V$$
+\end{defi}
+
+\begin{ej}
+\begin{itemize}
+\item El conjunto $W$ y su ortogonal $W^\perp$ no tienen porque ser disjuntos, por ejemplo considerando:
 $$\begin{pmatrix}
 0 & 1\\ -1 & 0\end{pmatrix}=M_B(f)\mbox{ donde }f:\mathbb R^2\times \mathbb R^2\rightarrow \mathbb R$$
-Veamos quienes son los vectores isótropos de esta forma bilineal.
+los vectores isótropos de esta forma bilineal son:
 $$v=(x_1,x_2): f(v,v)=0\Rightarrow f((x_1,x_2), (y_1,y_2))=x_1y_2- x_2y_1$$
 Si ocurre que $f(v,v)=0$ quiere decir que $v\in L(v)^\perp$ con lo cual estos vectores quedarían definidos por:
 $$x_1x_2-x_2x_1=0\Leftrightarrow 0=0$$
 Lo que implica que todos los vectores son ortogonales a sí mismos\footnote{Pero no hemos demostrado que sean ortogonales a todos los vectores, que no es cierto.}.
 
-Del mismo modo ocurre que:
+\item Del mismo modo, para cualquier forma bilineal antisimétrica:
 $$\{0\}^\perp = \mathbb R^2$$
 porque $f(v,0) = f(v,0)+f(v,0)\Rightarrow f(v,0)=0$.
-$$(\mathbb R^2)^\perp$$
+$$(\mathbb R^2)^\perp = 0$$
 Por que $f(v,w)=0: \forall w \in \mathbb R^2\Rightarrow f_{iz}(v)(w)\Rightarrow v\in \ker(f_{iz})$, pero como el $rg(f)=2=rg(f_{iz})$ entonces $\ker(f_{iz})=\{0\}\Rightarrow v = 0\Rightarrow (\mathbb R^2)^\perp = \{0\}$.
 
-Consideramos $W: x_1-x_2=0$, para que un vector sea ortogonal a esa recta, tiene que serlo a todos los vectores de esa recta, por lo que basta que sea ortogonal al generador de esa recta:
+\item Consideramos $W: x_1-x_2=0$, para que un vector sea ortogonal a esa recta, tiene que serlo a todos los vectores de esa recta, por lo que basta que sea ortogonal al generador de esa recta:
 $$0=f(v,e_1+e_2)=x_1-x_2$$
 Luego el ortogonal de $W$ es $W^\perp$ la propia recta.
+\end{itemize}
+\end{ej}
 
-\subsubsection*{Teorema}
-Si $f\in Bin_a(V)$, el rango de $f$ es par y:
-$$\exists B: M_B(f) = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}^{(s)}\oplus (0)^{(t)}\mbox{ donde }rg(f)=2s\mbox{ y }2s+t=\dim V$$
+\begin{theo}[de Clasificación de Formas Antisimétricas]
+Sea $f\in Bil_a(V)$, entonces $rg(f) = 2\cdot s$ y $\exists B =\{v_1, \cdots, v_n\}$ base de $V$ tal que la matriz de $f$ queda como:
+$$M_B(f) = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}^{(s)}\oplus (0)^{(t)}\mbox{ donde }2s+t=\dim V$$
+\end{theo}
 
-\underline{Demostración}:
-
+\begin{demo}
 Supongamos que $f=0$, está trivialmente probado por lo que podemos suponer $f$ distinto de 0.
 
 Por tanto, supongamos $f\neq 0\Rightarrow \exists v,w: v\neq w: f(v,w)\neq 0$, deben ser distintos porque todos los vectores son isótropos al ser la forma antisimétrica. Vamos a probar primero que son linealmente independientes denotando por $a=f(v,w)$:
@@ -3296,9 +3564,18 @@ $$v\in \Pi\cap \Pi^\perp\Rightarrow \begin{cases}0 = f(\lambda_1v_1+\lambda_2v_2
 Para terminar la demostración tomamos una base de $V$ de forma que $B=\{\underbrace{v_1,v_2}_{B\mbox{ base de }\Pi}\underbrace{v_3, \cdots , v_n}_{ \mbox{base de }\Pi^\perp}\}$, con lo cual la matriz de $f$ en la base elegida queda como:
 $$M_B(f)=M_{\{v_1,v_2\}}(f\mid_{\Pi\times \Pi})\oplus M_{\{v_3, \cdots, v_n\}}(f\mid_{\Pi^\perp \times \Pi^\perp})$$
 Como la segunda matriz se puede considerar como una forma restringida a una dimensión más pequeña, aplicamos inducción y terminamos.
+\end{demo}
 
-\underline{\textbf{Ejemplos}}:
+\begin{obs}
+La demostración nos propone un método para calcular la base $B$ que genera esa representación matricial:
+\begin{itemize}
+\item Como la matriz es no nula, $\exists v,w\in V: f(v,w)\neq 0$ que serán los primeros vectores de la base.
+\item Calculamos el ortogonal del plano formado por ambos vectores, es decir, $\Pi = L(v_1,v_2)\Rightarrow \Pi^\perp = L(v_1,v_2)^\perp$.
+\item La restricción de la forma bilineal $f$ al subespacio $\Pi^\perp$ es de nuevo una forma bilineal que podemos simplificar con este método, es decir, calcularíamos dos vectores tal que $f(v,w)\neq 0$, etc.
+\end{itemize}
+\end{obs}
 
+\begin{ej}
 Si estamos en dimensión 2 tenemos que:
 $$A\in A_2(K)\Rightarrow\begin{cases} A = 0 \\ A\equiv \begin{pmatrix} 0 & 1\\ -1 & 0\end{pmatrix}\end{cases}\Rightarrow f\in Bil_a(V)\Rightarrow \begin{cases} f = 0 \\ f(v,w) = x_1y_2-x_2y_1 \end{cases}$$
 Si estamos en dimensión 3 tenemos que:
@@ -3315,19 +3592,12 @@ Para calcular la base $B$ en la que la matriz de la forma bilineal es esa tenemo
 $$\Pi^\perp = \begin{cases} 0 = f(e_1,v) = x_2+ x_3 \\ 0= f(e_2,v)-x_1+x_3\end{cases}\Rightarrow B = \{(1,-1,1)\}\mbox{ es base de }\Pi^\perp$$
 \item Tomamos la base $B=\{e_1,e_2, e_1-e_2+e_3\}$ y solo queda calcular $P=M(B,B_c)$.
 \end{itemize}
+\end{ej}
 
-\subsection*{\underline{Clasificación de formas simétricas}}
-Sea $W<V$ y $f\in Bil_s(V)$ y $v,w\in V$, ocurre:
-\begin{enumerate}
-\item $v$ y $w$ son ortogonales respecto de $f$ si $f(v,w)=0$
-\item $W^\perp=\{v\in V: f(v,w)=0: \forall w\in W\}$, como observación $W^\perp< V$
-\end{enumerate}
-De nuevo, en este caso el espacio $V$ no es necesariamente suma directa de $W$ y $W^\perp$.
-\subsubsection*{Teorema}
-Si $f\in Bil_s(V)$, entonces $\exists B=\{v_1, \cdots v_n\}$ respecto de la cual  $M_B(f) \mbox{ es diagonal}$.
-
-\underline{Demostración}:
-
+\begin{theo}[de Clasificación de Formas Simétricas]
+Sea $f\in Bil_s(V)$, entonces $\exists B=\{v_1, \cdots v_n\}$ base de $V$ respecto de la cual  $M_B(f)$ es diagonal.
+\end{theo}
+\begin{demo}
 Si $f = 0$ no hay nada que probar puesto que se cumple trivialmente.
 
 Suponiendo que $f\neq 0\Rightarrow \exists v\in V: f(v,v)\neq 0$, es decir, existe algún vector no isótropo. En la práctica, sean cuales sean los vectores escogidos se debe cumplir que o bien $v$, o bien $w$ o $v+w$ sean NO isótropos. De este modo llamamos $v_1$ a ese $v$ que no es isótropo.
@@ -3342,9 +3612,9 @@ $$v\in L(v_1)\cap L(v_1)^\perp \Rightarrow \begin{cases} 0 = f(\lambda v_1, v_1)
 Ahora para escoger la base $B$ que hace diagonal la matriz tomamos $B=\{\underbrace{v_1}_{\mbox{ base de }L(v_1)^\perp},\underbrace{ v_2, \cdots , v_n}_{\mbox{base de }L(v_1)^\perp}\}$ luego la matriz de la forma bilineal en esta base queda de la siguiente forma:
 $$M_B(f)=\begin{pmatrix} f(v_1,v_1)&\cdots & 0 \\ \vdots & M_B(f\mid_{L(v_1)^\perp \times L(v_1)^\perp}) \\ 0 \end{pmatrix}$$
 Es decir, que nos quedan todo ceros menos en la posición $a_{11}$ y después una caja más pequeña que es la forma bilineal restringida a al subespacio ortogonal hallado. Por inducción se termina teniendo que ocurre de nuevo en los sucesivos trozos más pequeños luego la matriz queda diagonal.
+\end{demo}
 
-\underline{\textbf{Métodos de diagonalización}}:
-
+\subsubsection{Métodos de diagonalización de formas simétricas}
 Fundamentalmente tenemos tres métodos plausibles:
 \begin{itemize}
 \item Por vectores isótropos:
@@ -3353,42 +3623,52 @@ Hemos visto en la demostración de que existe una base respecto de la cual es di
 	\begin{enumerate}
 	\item Buscamos un vector no isótropo que llamaremos $v$
 	\item Calculamos el subespacio ortogonal que siempre será un hiperplano y además $L(v)\oplus L(v)^\perp = V$
-	\item Como $v$ es ortogonal a todo lo que queda de $v$ la fila y la columna que contiene a $v$ son 0 menos la posición de v.
-	\item Restringimos $f$ al subespacio ortogonal hallado y vuelve a ser una forma bilineal.
+	\item Como $v$ es ortogonal a todo lo que queda de $V$, la fila y la columna que contiene a $v$ son 0 menos la posición de $v$.
+	\item La restricción de $f$ al subespacio ortogonal hallado vuelve a ser una forma bilineal y repetimos el proceso.
 	\end{enumerate}
-	Repitiendo este proceso un número finito de veces, cada $v$ es un vector de la base respecto de la cual es diagonal
+	Repitiendo este proceso un número finito de veces, cada $v$ es un vector de la base respecto de la cual es diagonal.
+	\begin{ej}
+	FALTA EJEMPLO
+	\end{ej}
 	
 \item Sumando filas con filas o columnas con columnas (que es como multiplicar a izquierda o derecha por matrices elementales) y aplicar el mismo cambio sobre las filas o las columnas (las que no se hayan hecho) para que de esta forma sea como multiplicar por una matriz elemental y su traspuesta por el otro lado, hasta tener una matriz diagonal. El producto de todas esas matrices sobre la identidad es la matriz $P$ de cambio de base.
+	\begin{ej}
+	FALTA EJEMPLO
+	\end{ej}
 	
-\item El último método consiste en obtener la forma cuadrática asociada y llegar mediante métodos algebraicos como completar cuadrados a una forma cuadrática asociada de la forma $q(v) = x^2+y^2+z^2+\cdots$ porque esta forma es la asociada a una matriz diagonal, para ello veamos un ejemplo:
-$$q(v) = -x^2+4xy+3y^2+2z^2 \Rightarrow q(v)= -(x-2y)^2+4y^2+3y^2+2z^2 =-(\underbrace{x-2y}_{x'})^2+7\underbrace{y^2}_{y'}+2\underbrace{z^2}_{z'} $$
-Luego tenemos que:
-$$\begin{cases} x' = x+2y \\ y' = y \\ z'=z\end{cases}\Rightarrow
+\item El último método consiste en obtener la forma cuadrática asociada y llegar mediante métodos algebraicos como completar cuadrados a una forma cuadrática asociada de la forma $q(v) = x^2+y^2+z^2+\cdots$ porque esta forma es la asociada a una matriz diagonal.
+	\begin{ej}
+	$$q(v) = -x^2+4xy+3y^2+2z^2 \Rightarrow q(v)= -(x-2y)^2+4y^2+3y^2+2z^2 =-(\underbrace{x-2y}_{x'})^2+7\underbrace{y^2}_{y'}+2\underbrace{z^2}_{z'} $$
+	Luego tenemos que:
+	$$\begin{cases} x' = x+2y \\ y' = y \\ z'=z\end{cases}\Rightarrow
 \begin{pmatrix}x' \\ y' \\ z'\end{pmatrix} \underbrace{\begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}}_{=M(B,B')} \begin{pmatrix}x \\ y \\ z\end{pmatrix}$$
+	\end{ej}
 \end{itemize}
 
-\subsubsection*{Clasificación de formas bilineales simétricas sobre $\mathbb C$}
-Si $f\in Bil_s(V): rg(f)= r$ y $V$ es un $\mathbb C -$espacio vectorial, entonces:
+\subsubsection{Clasificación de formas bilineales simétricas sobre $\mathbb C$}
+\begin{theo}
+Sea $f\in Bil_s(V)$ cuyo rango es $rg(f)= r$ y $V$ un $\mathbb C -$espacio vectorial, entonces:
 $$\exists B =\{v_1, \cdots , v_n\}\mbox{ base de }V: M_B(f) = I_r\oplus 0_{n-r}$$
-
-\underline{Demostración}:
-
-Sabemos por el Teorema general que $M_B(f)$ es diagonal respecto de alguna base, es decir:
+\end{theo}
+\begin{demo}
+Sabemos por el teorema general que $M_B(f)$ es diagonal respecto de alguna base, es decir:
 $$M_B(f)=\begin{pmatrix} d_1 & \cdots & 0 & \cdots & 0 \\ \vdots & \ddots & \vdots & \vdots & \vdots \\ 0 & \cdots & d_r  & \vdots & \vdots \\ \vdots & \cdots & \cdots & \ddots & \vdots \\ 0 & \cdots & 0 & \cdots & 0\end{pmatrix}  $$
-Cambiamos los primeros $r$ vectores por los que siguen a continuación y los demás los dejamos igual:
+Si cambiamos los primeros $r$ vectores por los que siguen a continuación y los demás los dejamos igual
 $$v_i' = \begin{cases} \frac{1}{\sqrt{d_i}}v_i & i = 1, \cdots , r \\ v_i& i > r\end{cases}$$
-Resulta con este cambio que:
+conseguimos que con este cambio la forma bilineal valga:
 $$f(v'_i,v_i')=f\left(\frac{1}{\sqrt{d_i}}v_i, \frac{1}{\sqrt{d_i}}v_i\right) = \left(\frac{1}{\sqrt{d_i}}\right)^2f(v_i,v_i) = \left(\frac{1}{\sqrt{d_i}}\right)^2 d_i = 1 $$
-Es decir, es la matriz que habíamos enunciado.
+es decir, que quede la matriz que habíamos enunciado.
+\end{demo}
 
-\subsubsection*{Clasificación de formas bilineales simétricas sobre $\mathbb R$: Ley de inercia}
-Si $f\in Bil_s(V): rg(f)= r$ y $V$ es un $\mathbb R -$espacio vectorial, entonces:
-$$\exists B =\{v_1, \cdots , v_n\}\mbox{ base de }V: M_B(f) = I_s\oplus (-I_t)\oplus 0_{n-r}: r = s+t$$
-Y además $s$ y $t$ son únicos y forman lo que llamamos \textbf{signatura}:
+\subsubsection{Clasificación de formas bilineales simétricas sobre $\mathbb R$: Ley de inercia}
+\begin{theo}
+Sea $f\in Bil_s(V)$ cuyo rango es $rg(f)= r$ y $V$ un $\mathbb R -$espacio vectorial, entonces:
+$$\exists B =\{v_1, \cdots , v_n\}\mbox{ base de }V: M_B(f) = I_s\oplus (-I_t)\oplus 0_{n-r} \mbox{ donde } r = s+t$$
+Además, $s$ y $t$ son únicos y forman lo que llamamos \textbf{signatura} de la forma bilineal:
 $$\varepsilon(f) = (s,t)$$
-\underline{Demostración}:
-
-Sabemos por el Teorema general que $M_B(f)$ es diagonal respecto de alguna base, es decir:
+\end{theo}
+\begin{demo}
+Sabemos por el teorema general que $M_B(f)$ es diagonal respecto de alguna base, es decir:
 $$M_B(f)=\begin{pmatrix} d_1 & \cdots & 0 & \cdots & 0 \\ \vdots & \ddots & \vdots & \vdots & \vdots \\ 0 & \cdots & d_r  & \vdots & \vdots \\ \vdots & \cdots & \cdots & \ddots & \vdots \\ 0 & \cdots & 0 & \cdots & 0\end{pmatrix}  $$
 En este caso procedemos de la misma manera que con los complejos, pero distinguiendo entre positivos (desde $d_1$ hasta $d_s$) y negativos (desde $d_{s+1}$ hasta $d_r$) porque aquí no existen ciertas raíces. Se puede definir una base $B'$ de forma que se cambian los positivos por 1 y los negativos por menos 1:
 $$v_i' =\begin{cases} \frac{1}{e_i}v_i & 1\leq i \leq s: d_i = e_i^2 \\ \frac{1}{e_1}v_i & s+1\leq i \leq r: d_i = -e_i^2 \\ v_i & r< i \leq n\end{cases} $$
@@ -3413,9 +3693,9 @@ Por tanto, usando la fórmula de Grassmann:
 $$n\geq \dim (W_1+ W_2) = \dim W_1 + \dim W_2 = s+n-s'\Rightarrow s'\geq s$$
 
 Por un razonamiento análogo cambiando la base llegaríamos a $s\geq s'$, en consecuencia $s=s'$, implicando $t=t'$.
+\end{demo}
 
-\underline{\textbf{Ejemplos}}:
-
+\begin{ej}
 Sobre $n= 2$ y $rg(f)=2$ hay 3 clases de equivalencia por congruencia de matrices, una por cada posible signatura:
 $$\varepsilon(f)=(2,0)\Rightarrow f((x_1,x_2),(y_1,y_2)) = x_1y_1+x_2y_2 \Rightarrow \begin{pmatrix} 1 & 0 \\ 0 & 1\end{pmatrix}$$
 $$\varepsilon(f)=(1,1)\Rightarrow f((x_1,x_2),(y_1,y_2)) = x_1y_1-x_2y_2 \Rightarrow \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}$$
@@ -3426,17 +3706,17 @@ Viendo las formas cuadráticas asociadas:
 $$q(x_1,x_2) = x_1^2+x_2^2$$
 $$q(x_1,x_2) = x_1^2-x_2^2$$
 $$q(x_1,x_2) = -(x_1^2+x_2^2)$$
-
 Si ahora $rg(f)=1$, entonces:
 $$\varepsilon(f)=(1,0)\Rightarrow f((x_1,x_2),(y_1,y_2)) = x_1y_1$$
 $$\varepsilon(f)=(0,1)\Rightarrow f((x_1,x_2),(y_1,y_2)) = -x_1y_1$$
 Y viendo las formas cuadráticas asociadas entonces:
 $$q(x_1,x_2) = x_1^2$$
 $$q(x_1,x_2) = -x_1^2$$
+\end{ej}
 
 \chapter*{ESPACIO VECTORIAL EUCLÍDEO}
 \section*{DEFINICIÓN Y CONCEPTOS BÁSICOS}
-\subsection*{\underline{Espacio vectorial euclídeo}}
+\subsection{Espacio vectorial euclídeo}
 Supongamos que $\dim_{\mathbb R} V = n$ y $f\in Bil_s(V)$ de forma que su signatura es $\varepsilon(f)=(n,0)$, lo que implica que $M_B(f)=I_n$ en alguna base. Decimos que:
 \begin{itemize}
 \item Esta forma es \textbf{producto escalar} si es bilineal simétrica y definida positiva.
@@ -3524,7 +3804,7 @@ $$f(w_i,w_j) = 0\Rightarrow \{w_i, w_j\} \mbox{ independientes}$$
 \underline{Demostración}:
 $$\lambda_1w_1+\cdots+\lambda_nw_n = 0 \Rightarrow 0 = f(w_i, \lambda_1w_1+\cdots \lambda_nw_n) = \lambda_i\underbrace{f(w_i,w_i)}_{\neq 0}\Rightarrow\lambda_i = 0: \forall i$$
 
-\subsection*{\underline{Bases ortonormales}}
+\subsection{Bases ortonormales}
 \subsubsection*{Base ortogonal: método de Gram-Schimdt}
 Vamos a ver un procedimiento para obtener a partir de una base dada, una ortogonal del espacio vectorial euclideo. Sea $(V,f)$ un espacio vectorial euclídeo:
 $$B=\{v_1, \cdots, v_n\}\Rightarrow \begin{cases} v_1' = v_1  \\ v_2' = v_2 + \lambda_{2,1}v_1' \\ v_3' = v_3 + \lambda_{3,2}v_2' + \lambda_{3,1}v_1' \\ \vdots \\ v_n' = v_n + \lambda_{n,n-1}v_{n-1}'+\cdots + \lambda_{n,1}v_1'\end{cases}$$
@@ -3578,7 +3858,7 @@ $$\frac{|f(v,w)|}{||v||\cdot ||w||} \leq 1\Rightarrow -1\leq \underbrace{\frac{f
 Es decir, que podemos entender el producto escalar como una forma de relacionar los módulos de los vectores y el ángulo que los relaciona.
 \end{itemize}
 
-\subsection*{\underline{Endomorfismos autoadjuntos}}
+\subsection{Endomorfismos autoadjuntos}
 Definimos un endomorfismo autoadjunto respecto de $f$, en el contexto de un espacio vectorial euclideo con un producto escalar, como $\phi\in End(V)$ que cumple que:
 $$f(\phi(v),w) = f(v,\phi(w)): \forall v,w\in V$$
 Si definimos una base $B$ de $V$ y llamamos $A=M_B(\phi)$ y $C=M_B(f)$, entonces siendo $v=(x_1, \cdots, x_n)$ y $w=(y_1, \cdots, y_n)$ se tiene:
@@ -3588,7 +3868,7 @@ $$A^tC=CA$$
 Del mismo modo, si elegimos $B$ convenientemente hemos visto que la matriz de $f$ es $I$ luego el endomorfismo $\phi$ en esa base cumple que:
 $$A=A^t$$
 
-\subsection*{\underline{Teorema Espectral}}
+\subsection{Teorema Espectral}
 Supongamos que $(V,f)$ es un espacio vectorial euclídeo si $\phi\in End(V)$ es autoadjunto entonces existe una base $B$ de $V$ ortonormal respecto de $f$ formada por vectores propios respecto de $\phi$.
 
 Es muy notable destacar que si tenemos $(\mathbb R^n, \cdot)$ con un producto escalar y un endomorfismo autoadjunto $\phi$ de manera que en la base dada $M_B(\phi) = A$ no diagonal pero simétrica y $M_B(f) = I_n$, entonces si aplicamos este teorema y cambiamos a una base ortonormal donde $\phi$ sea diagonal, vemos que:
@@ -3632,7 +3912,7 @@ $$\Rightarrow (\underbrace{\lambda_i -\lambda_j}_{\neq 0})f(v_i,v_j) = 0\Rightar
 Así que sabemos que todos los vectores entre $B_i$ distintas ya son ortogonales. Para poder terminar, si restrinjo a cada subespacio propio el producto escalar, este sigue siendo un producto escalar y, en consecuencia, existe una base ortonormal para cada $V_{\phi, \lambda_i}$ formada además por vectores propios así que ya he terminado.
 
 \section*{APLICACIONES ORTOGONALES}
-\subsection*{\underline{Definición y características}}
+\subsection{Definición y características}
 En el contexto de un espacio vectorial euclídeo $(V,f)$ decimos que una aplicación $\phi: V\rightarrow V$ conserva $f$ si verifica que:
 $$f(\phi(v),\phi(w)) = f(v,w): \forall v,w\in V$$
 Si $\phi$ conserva f, entonces $\phi$ es $\mathbb{R}$-lineal.
@@ -3722,7 +4002,7 @@ De este modo, puedo considerar $w$ como $\phi(w')$ para algún $w'\in W$ luego s
 $$f(\phi(v), w) = f(\phi(v),\phi(w') = f(v,w') = 0$$
 \end{itemize}
 
-\subsection*{\underline{Clasificación de aplicaciones ortogonales}}
+\subsection{Clasificación de aplicaciones ortogonales}
 \underline{\textbf{Dimensión 1}}
 
 Si tomamos $\dim V = 1$, entonces tenemos que:
@@ -3929,7 +4209,7 @@ Es decir, que dados dos puntos cualesquiera siempre existe un vector único que 
 \item Por como hemos redefinido el concepto de espacio euclídeo.
 \end{enumerate}
 
-\subsection*{\underline{Variedades Afines}}
+\subsection{Variedades Afines}
 Dado un espacio afín, partimos de un punto $p \in A$ y de un subespacio de $W < V$ para denotar el siguiente objeto:
 $$p + W = \{p + w : w \in W\}$$
 A este conjunto lo denotamos por \textbf{variedad afín} que pasa por $p$ con dirección $W$.
@@ -4042,7 +4322,7 @@ Sean $X_1, X_2$ variedades de $(A,V,\varphi)$, se tiene que:
 $$X_1, X_2 = \begin{cases} \mbox{ se cortan si } X_1 \cap X_2 \neq\emptyset \\ \mbox{ son paralelas si } \vec{X_1} \subseteq \vec{X_2} \mbox{ ó } \vec{X_2} \subseteq \vec{X_1} \\ \mbox{ se cruzan en caso contrario}\end{cases}$$
 Es destacable el hecho de que no exigimos que el paralelismo implique la igualdad de las direcciones permite definir correctamente el concepto de recta paralela a un plano o, en general, el concepto de paralelismo entre objetos de distinta dimensión.
 
-\subsection*{\underline{Sistema de Referencia}}
+\subsection{Sistema de Referencia}
 Sea $(A, V, \varphi)$ la terna usual de espacio afín, escogemos $p \in A$, un punto $p_0 \in A $ fijo y una base $B=\{v_1, \ldots, v_n\}$ de V, entonces podemos escribir para cualquiera que sea el punto $p$:
 $$\vec{p_0p} = x_1 v_1 + \ldots + x_n v_n$$
 De este modo, decimos que $(x_1, \ldots, x_n)_R$ son las las coordenadas del punto $p$ en el sistema de referencia afín $R = \{p_0 , B\}$, siendo $p_0$ el centro de referencia del sistema.
@@ -4147,7 +4427,7 @@ $$\phi(p) = \phi(p_0)  + \vec{\phi}(v) = p_0 + v = p$$
 Por otro lado, veamos el otro contenido, es decir, $p_0 + V_{\vec{\phi}, 1}  \supseteq A_\phi$; para ello queremos demostrar $p \in A_\phi \overset{?}{\Rightarrow}  p = p_0 + v: v \in  V_{\vec{\phi}, 1}$:
 $$\vec{\phi}(p_0 \vec{p}) = \overrightarrow{\phi(p_0) \phi(p)} = \vec{p_0 p}  \in V_{\vec{\phi}, 1} \Rightarrow p = p_0 + \vec{p_0 p} \in p_0 + V_{\vec{\phi}, 1} $$
 
-\subsection*{\underline{Matriz de una aplicación afín}}
+\subsection{Matriz de una aplicación afín}
 Supongamos que tenemos la siguiente situación:
 \begin{itemize}
 \item $\phi: A \to A'$ una aplicación afín
@@ -4193,7 +4473,7 @@ a_m & & &
 \end{pmatrix} $$
 Esta matriz es la matriz que representa a $\phi$ en las referencias $R$ y $R'$. Contiene la información relativa a la aplicación asociada $\vec{\phi}$ y además la primera columna son las coordenadas que tiene la imagen del origen de $R$ expresadas en $R'$.
 
-\subsection*{\underline{Aplicaciones notorias}}
+\subsection{Aplicaciones notorias}
 \subsubsection*{Aplicación constante}
 Supongamos $\phi : A \to A'$ de manera que $\phi(p) = p'_0$, es decir, para cualquier punto se le asigna el punto constante $p'_0$, entonces veamos quién es la aplicación lineal asociada:
 $$\vec{\phi}(\vec{pq}) = \overrightarrow{\phi(p)\phi(q)} = \vec{p'_0 p'_0} = 0$$
@@ -4443,7 +4723,7 @@ a_1 & 1 &  1 \\
 \right) = M_R (\phi_2 \circ \phi_1)$$
 
 \newpage
-\subsection*{\underline{Clasificación de las Afinidades del Plano}}
+\subsection{Clasificación de las Afinidades del Plano}
 \subsubsection*{Proposición}
 Si el 1 no es un autovalor de la aplicación asociada, entonces el conjunto de puntos fijos es un único valor:
 $$A_\phi = \{p_0\} \Leftrightarrow 1 \notin \sigma(\vec{\phi})$$
@@ -4614,7 +4894,7 @@ a'_{01} & a'_{11} & a'_{12} \\ a'_{02} & a'_{12} & a'_{22}
 1 \\ x' \\ y'
 \end{pmatrix} = a'_{11} x'^2 + \ldots + a'_{00}$$
 
-\subsection*{\underline{Clasificación de cónicas}}
+\subsection{Clasificación de cónicas}
 Dos cónicas $C, C'$ son \textbf{afínmente equivalentes} si respecto de sistemas distintos ambas tienen la misma matriz, es decir:
 $$C \sim C' \Leftrightarrow M_R (C) = M_{R'} (C')$$
 Esta relación es de equivalencia que cuenta con exactamente 7 clases de equivalecia en el conjunto cociente.
@@ -4897,7 +5177,7 @@ $$M_{R_c} (\phi)= \left(\begin{array}{c|cc}
 \section*{ISOMETRÍAS}
 Sea $\dim V = n$ y $(A, V, \varphi)$ donde $\varphi(p,q) = \vec{pq}$ un espacio afín, si añadimos un producto escalar $f: V \times V \rightarrow \mathbb R$, entonces denominamos a $(A,V,\varphi, f)$ espacio afín euclídeo.
 
-\subsection*{\underline{Espacio métrico}}
+\subsection{Espacio métrico}
 Definimos la distancia entre dos puntos como:
 $$d(p,q) = ||\vec{pq}||$$
 De forma que con esta definición se cumplen las siguientes propiedades:
@@ -4930,7 +5210,7 @@ $$d(X,Y) = \min\{d(p,q) : p\in X, \ q\in Y \}$$
 En consecuencia, si ambas intersecan, su distancia es 0:
 $$X\cap Y \neq \emptyset \Leftrightarrow \exists p_0 \in X \cap Y: d(p_0,p_0) = 0$$
 
-\subsection*{\underline{Referencias Ortonormales}}
+\subsection{Referencias Ortonormales}
 Sea $R = \{p_0, B\}$, diremos que el sistema de referencia es ortonormal, si lo es la base $B$ que lo compone.
 
 \subsubsection*{Matriz de paso entre sistemas de referencia}
@@ -4945,7 +5225,7 @@ a_n & & &
 \right)$$
 Recíprocamente, si la matriz de cambio de base es de este tipo, entonces los sistemas que intercambia son ortogonales.
 
-\subsection*{\underline{Isometrías}}
+\subsection{Isometrías}
 Denotamos por movimiento rígido o isometría de A a una aplicación afín $\phi : A \to A $ tal que su aplicación lineal asociada $\vec{\phi}$ es ortogonal, es decir:
 $$ M_R (\phi) = \left(\begin{array}{c|ccc}
 1& 0 & \ldots & 0 \\
@@ -5133,7 +5413,7 @@ Se trata de una simetría especular compuesta con una traslación, cuyo vector d
 \end{itemize}
 
 
-\subsection*{\underline{Cónicas desde el punto de vista afín euclídeo}}
+\subsection{Cónicas desde el punto de vista afín euclídeo}
 Sea $\mathbb{R}^2$ espacio afín euclídeo usual y la definición habitual de cónica, decimos que dos cónicas son afín-euclídeamente equivalentes si poseen la misma matriz respecto de sistemas de referencia \textbf{ortonormales} distintos:
 $$C \equiv C' \Leftrightarrow M_R(C) = M_{R'} (C)$$
 Es decir, hemos incluido una condición más fuerte porque exigimos que estos sistemas de referencia sean ortonormales.

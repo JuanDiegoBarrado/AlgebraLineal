@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.8)  2 JUN 2022 16:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.8)  12 JUN 2022 16:37
 entering extended mode
 **./AlgebraLineal.tex
 (AlgebraLineal.tex
@@ -324,6 +324,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count273
+Package hyperref Info: Option `colorlinks' set `true' on input line 4338.
 Package hyperref Info: Hyper figures OFF on input line 4464.
 Package hyperref Info: Link nesting OFF on input line 4469.
 Package hyperref Info: Hyper index ON on input line 4472.
@@ -354,7 +355,7 @@ Package hyperref Info: Hyper figures OFF on input line 6347.
 Package hyperref Info: Link nesting OFF on input line 6352.
 Package hyperref Info: Hyper index ON on input line 6355.
 Package hyperref Info: backreferencing OFF on input line 6362.
-Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring ON on input line 6365.
 Package hyperref Info: Link coloring with OCG OFF on input line 6372.
 Package hyperref Info: PDF/A mode OFF on input line 6377.
 LaTeX Info: Redefining \ref on input line 6417.
@@ -1417,22 +1418,22 @@ LaTeX Info: Redefining \% on input line 26.
 )
 \openout1 = `AlgebraLineal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1468,8 +1469,8 @@ LaTeX Font Info:    ... okay on input line 109.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \. on input line 109.
-LaTeX Info: Redefining \% on input line 109.
+LaTeX Info: Redefining \. on input line 110.
+LaTeX Info: Redefining \% on input line 110.
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -1493,7 +1494,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
 \AtBeginShipoutBox=\box118
-Package hyperref Info: Link coloring OFF on input line 109.
+Package hyperref Info: Link coloring ON on input line 110.
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1507,9 +1508,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count397
 )
-LaTeX Info: Redefining \ref on input line 109.
-LaTeX Info: Redefining \pageref on input line 109.
-LaTeX Info: Redefining \nameref on input line 109.
+LaTeX Info: Redefining \ref on input line 110.
+LaTeX Info: Redefining \pageref on input line 110.
+LaTeX Info: Redefining \nameref on input line 110.
  (AlgebraLineal.out) (AlgebraLineal.out)
 \@outlinefile=\write4
 \openout4 = `AlgebraLineal.out'.
@@ -1520,27 +1521,27 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 109.
+ on input line 110.
 
-LaTeX Info: Redefining \. on input line 109.
-LaTeX Info: Redefining \% on input line 109.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 111
+LaTeX Info: Redefining \. on input line 110.
+LaTeX Info: Redefining \% on input line 110.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 112
 .
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 111
+LaTeX Font Info:    Trying to load font information for U+msb on input line 112
 .
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
-11.
+12.
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 11
-1.
+2.
 
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1576,7 +1577,7 @@ ng (ext4): destination with the same identifier (name{page.1}) has been already
  used, duplicate ignored
 <to be read again> 
                    \relax 
-l.149 \end{enumerate}
+l.150 \end{enumerate}
                       [1
 
 
@@ -1584,9 +1585,9 @@ l.149 \end{enumerate}
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.184 ...\mid ab\Rightarrow p\mid a \vee p\mid b$$
+l.185 ...\mid ab\Rightarrow p\mid a \vee p\mid b$$
                                                    [2]
-Overfull \hbox (0.10088pt too wide) detected at line 218
+Overfull \hbox (0.10088pt too wide) detected at line 219
 \OML/cmm/m/it/10 p[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 p[] \OMS/cmsy/m/n/10 
  []  \OML/cmm/m/it/10 p[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 q[] \OMS/cmsy/m/n
 /10  \OML/cmm/m/it/10 q[] \OMS/cmsy/m/n/10  []  \OML/cmm/m/it/10 q[] \OMS/cm
@@ -1598,12 +1599,25 @@ OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 k \OT1/cmr/m/n/10 = 1[]
  []
 
 [3] [4]
-Overfull \hbox (42.70432pt too wide) detected at line 291
+Overfull \hbox (42.70432pt too wide) detected at line 292
 []
  []
 
-[5] [6]
-Overfull \hbox (38.61932pt too wide) detected at line 371
+[5]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\varphi' on input line 305.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 305.
+
+[6]
+Overfull \hbox (38.61932pt too wide) detected at line 372
 \OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 []m[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 
 []m[] \OMS/cmsy/m/n/10 ) [] ) []
  []
@@ -1611,7 +1625,7 @@ Overfull \hbox (38.61932pt too wide) detected at line 371
 [7] [8] [9] [10
 
 ] [11]
-Overfull \hbox (29.32965pt too wide) detected at line 547
+Overfull \hbox (29.32965pt too wide) detected at line 548
 \OML/cmm/m/it/10 gr\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10   \OT1/
 cmr/m/n/10 (\OML/cmm/m/it/10 a[]b[]x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 g\OT1/c
 mr/m/n/10 ) \OML/cmm/m/it/10 < n [] f \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 (\OML/
@@ -1625,14 +1639,14 @@ it/10 a[]b[]x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 q\OT1/cmr/m/n/10 )\OML/cmm/m
  []
 
 [12]
-<./fotos/division de polinomios.jpg, id=148, 196.48407pt x 115.93312pt>
+<./fotos/division de polinomios.jpg, id=408, 196.48407pt x 115.93312pt>
 File: ./fotos/division de polinomios.jpg Graphic file (type jpg)
 <use ./fotos/division de polinomios.jpg>
 Package pdftex.def Info: ./fotos/division de polinomios.jpg  used on input line
- 559.
+ 560.
 (pdftex.def)             Requested size: 186.6588pt x 110.13583pt.
 
-Overfull \hbox (30.49356pt too wide) detected at line 566
+Overfull \hbox (30.49356pt too wide) detected at line 567
 \OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/c
 mr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 v\OT1/cmr/m/n/10 (\OML/cmm/m/it
 /10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 gr\OT1/cmr/m/n/10 (1
@@ -1648,7 +1662,7 @@ n/10 = \OML/cmm/m/it/10 k; v \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 z \OT1/cmr/m/n/
  []
 
 [13 <./fotos/division de polinomios.jpg>] [14] [15] [16] [17]
-Overfull \hbox (33.71982pt too wide) detected at line 763
+Overfull \hbox (33.71982pt too wide) detected at line 764
 \OT1/cmr/m/n/10 + : []0 = 0(\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/1
 0 2 \OML/cmm/m/it/10 F; [] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 g\OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ) = (\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 g\O
@@ -1657,7 +1671,7 @@ m/it/10 F[]
  []
 
 
-Overfull \hbox (13.05566pt too wide) detected at line 767
+Overfull \hbox (13.05566pt too wide) detected at line 768
 []\OML/cmm/m/it/10 mcd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + \
 OML/cmm/m/it/10 x \OT1/cmr/m/n/10 + 1\OML/cmm/m/it/10 ; g\OT1/cmr/m/n/10 ) = 1 
 \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 k\OT1/cmr/m/n/10 (\OML/
@@ -1673,7 +1687,7 @@ n/10 ) = \OML/cmm/m/it/10 h\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 )
  []
 
 [18]
-Overfull \hbox (2.14807pt too wide) detected at line 810
+Overfull \hbox (2.14807pt too wide) detected at line 811
 \OML/cmm/m/it/10 A \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = (\
 OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]C \OT1/cmr/m/n/10 + [
 ] + \OML/cmm/m/it/10 a[]C[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]C[]\OT1/cmr/m
@@ -1683,7 +1697,7 @@ m/n/10 + \OML/cmm/m/it/10 a[]CE[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]C[
  []
 
 [19] [20]
-Overfull \hbox (40.12227pt too wide) detected at line 855
+Overfull \hbox (40.12227pt too wide) detected at line 856
 \OML/cmm/m/it/10 f \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + \OM
 L/cmm/m/it/10 x \OT1/cmr/m/n/10 + 1 \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 Z[] \OMS/c
 msy/m/n/10 ) \OML/cmm/m/it/10 F \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OML/cmm/m/
@@ -1694,7 +1708,7 @@ it/10 a[]I \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]C \OT1/cmr/m/n/10 + \OML/cmm/m
  []
 
 [21]
-Overfull \hbox (16.24274pt too wide) detected at line 901
+Overfull \hbox (16.24274pt too wide) detected at line 902
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/
 cmr/m/n/10 ) = \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]x[] \
 OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[]x \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 a[] \
@@ -1702,22 +1716,27 @@ OMS/cmsy/m/n/10 ) []
  []
 
 [22]
+Cap\'{\i }tulo 1.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 904.
+
 Package hyperref Info: bookmark level for unknown defi defaults to 0 on input l
-ine 907.
+ine 908.
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 924.
+ine 925.
 Package hyperref Info: bookmark level for unknown demo defaults to 0 on input l
-ine 936.
- [23
+ine 937.
+[23
 
 ]
 Package hyperref Info: bookmark level for unknown ej defaults to 0 on input lin
-e 953.
+e 954.
  [24]
 Package hyperref Info: bookmark level for unknown obs defaults to 0 on input li
-ne 992.
+ne 993.
  [25] [26]
-Overfull \hbox (34.38837pt too wide) detected at line 1087
+Overfull \hbox (34.38837pt too wide) detected at line 1089
 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 B \OT1
 /cmr/m/n/10 : \OML/cmm/m/it/10 v [] S \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 v \OT1
 /cmr/m/n/10 = \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a
@@ -1728,15 +1747,15 @@ OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a[]v[] \OMS/cmsy/m/n/10   []   \OML/cmm/m/it
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-091.
+093.
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1091.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1093.
 
 
-Overfull \hbox (28.78647pt too wide) detected at line 1091
+Overfull \hbox (28.78647pt too wide) detected at line 1093
 \OMS/cmsy/m/n/10 ) 9\OML/cmm/m/it/10 i \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 a[] \
 OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = 0[] [] \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10
  6\OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 =
@@ -1746,11 +1765,11 @@ L/cmm/m/it/10 B[]\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 v[]\OMS/cmsy/m/n/10 g[]
  []
 
 Package hyperref Info: bookmark level for unknown theo defaults to 0 on input l
-ine 1100.
+ine 1102.
 Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
-ine 1107.
-[27]
-Overfull \hbox (21.79794pt too wide) in paragraph at lines 1166--1170
+ine 1109.
+[27] [28]
+Overfull \hbox (21.79794pt too wide) in paragraph at lines 1168--1172
 []$[] \OML/cmm/m/it/10 Mat[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 
 ) = \OML/cmm/m/it/10 m \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 !
  \OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 E[] \O
@@ -1761,8 +1780,8 @@ T1/cmr/m/n/10 : 1 \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 i \OMS/cmsy/m/n/10  \OML
 10 ) []$ 
  []
 
-[28] [29]
-Overfull \hbox (58.58783pt too wide) detected at line 1243
+[29] [30]
+Overfull \hbox (58.58783pt too wide) detected at line 1245
 \OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 = \
 OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 : \O
 ML/cmm/m/it/10 w[]; w[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 W[][]w[]; w[] \OMS/
@@ -1774,15 +1793,15 @@ L/cmm/m/it/10 w[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 w[][]w[] \OT1/cmr/m/n/10 =
  \OML/cmm/m/it/10 w[]
  []
 
-[30]
-Overfull \hbox (41.60953pt too wide) in paragraph at lines 1265--1270
+
+Overfull \hbox (41.60953pt too wide) in paragraph at lines 1267--1272
 []\OT1/cmr/m/n/10 Consideramos $\OML/cmm/m/it/10 V \OT1/cmr/m/n/10 = \OML/cmm/m
 /it/10 Mat[]\OT1/cmr/m/n/10 (\U/msb/m/n/10 R\OT1/cmr/m/n/10 )$ por lo que una b
 a-se sera $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = []$.
  []
 
 [31]
-Overfull \hbox (62.77147pt too wide) detected at line 1314
+Overfull \hbox (62.77147pt too wide) detected at line 1316
 \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ([]) + [] + \OML/cmm/m/it
 /10 x[]\OT1/cmr/m/n/10 ([]) = (\OML/cmm/m/it/10 a[]x[] \OT1/cmr/m/n/10 + [] + \
 OML/cmm/m/it/10 a[]x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 + [
@@ -1790,8 +1809,8 @@ OML/cmm/m/it/10 a[]x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 + [
 /cmr/m/n/10 )\OML/cmm/m/it/10 v[] \OMS/cmsy/m/n/10 ,
  []
 
-
-Overfull \hbox (31.61302pt too wide) detected at line 1321
+[32]
+Overfull \hbox (31.61302pt too wide) detected at line 1323
 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 =
  \OML/cmm/m/it/10 P \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 Q \OMS/cmsy/m/n/10  []
  , \OT1/cmr/m/n/10 0 = (\OML/cmm/m/it/10 PQ \OMS/cmsy/m/n/10   \OML/cmm/m/it/10
@@ -1801,8 +1820,8 @@ Overfull \hbox (31.61302pt too wide) detected at line 1321
 \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Q
  []
 
-[32]
-Overfull \hbox (61.76495pt too wide) detected at line 1334
+
+Overfull \hbox (61.76495pt too wide) detected at line 1336
 \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + 2\O
 ML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (2\OM
 L/cmm/m/it/10 e[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 e[]\OT1/cmr/m/n/10 ) = 0 \
@@ -1817,13 +1836,13 @@ mr/m/n/10 3\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 ) \OML/cmm
  []
 
 [33]
-<./fotos/clase lateral.png, id=350, 636.3775pt x 602.25pt>
+<./fotos/clase lateral.png, id=609, 636.3775pt x 602.25pt>
 File: ./fotos/clase lateral.png Graphic file (type png)
 <use ./fotos/clase lateral.png>
-Package pdftex.def Info: ./fotos/clase lateral.png  used on input line 1390.
+Package pdftex.def Info: ./fotos/clase lateral.png  used on input line 1394.
 (pdftex.def)             Requested size: 159.09398pt x 150.56212pt.
  [34 <./fotos/clase lateral.png>]
-Overfull \hbox (56.00188pt too wide) detected at line 1427
+Overfull \hbox (56.00188pt too wide) detected at line 1431
 \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[] \OT1/cmr
 /m/n/10 = \OML/cmm/m/it/10 a[]w[] \OT1/cmr/m/n/10 + [] \OML/cmm/m/it/10 a[]w[] 
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it
@@ -1832,14 +1851,14 @@ Overfull \hbox (56.00188pt too wide) detected at line 1427
  []
 
 
-Overfull \hbox (50.9144pt too wide) detected at line 1430
+Overfull \hbox (50.9144pt too wide) detected at line 1434
 \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 V \OT1
 /cmr/m/n/10 : [] = [] = [] + \OML/cmm/m/it/10 a[][][] \OT1/cmr/m/n/10 + [] \OML
 /cmm/m/it/10 a[][][] \OT1/cmr/m/n/10 =
  []
 
 [35] [36] [37]
-Overfull \hbox (81.94754pt too wide) detected at line 1572
+Overfull \hbox (81.94754pt too wide) detected at line 1576
 \OML/cmm/m/it/10 ' \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 V [][]\OMS/cmsy/m/n/10 ! 
 \OML/cmm/m/it/10 V[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 W \OT1/cmr/m/n/10 = \O
 MS/cmsy/m/n/10 f\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 V \OT1/c
@@ -1851,7 +1870,7 @@ m/n/10 ) = 0\OMS/cmsy/m/n/10 g )
  []
 
 
-Overfull \hbox (73.60463pt too wide) detected at line 1573
+Overfull \hbox (73.60463pt too wide) detected at line 1577
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 W \OM
 S/cmsy/m/n/10 _ \OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 U \OT1/c
 mr/m/n/10 : \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/1
@@ -1868,8 +1887,8 @@ cmr/m/n/10 : \OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 w \OT1/cmr/m
 /10 V
  []
 
-
-Overfull \hbox (57.73875pt too wide) detected at line 1593
+[38]
+Overfull \hbox (57.73875pt too wide) detected at line 1597
 \OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1
 /cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = \OML/cmm/
 m/it/10 w \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 ) \OML/cmm/m/it
@@ -1883,8 +1902,8 @@ cmsy/m/n/10 ) \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 w \OMS/cmsy
 T1/cmr/m/n/10 = \OML/cmm/m/it/10 w \OT1/cmr/m/n/10 = 0 = \OML/cmm/m/it/10 v
  []
 
-[38]
-Overfull \hbox (79.15355pt too wide) detected at line 1608
+
+Overfull \hbox (79.15355pt too wide) detected at line 1612
 \OML/cmm/m/it/10 ' \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 V [][]\OMS/cmsy/m/n/10 ! 
 \OML/cmm/m/it/10 V[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 W \OT1/cmr/m/n/10 = \O
 MS/cmsy/m/n/10 f\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 V \OT1/c
@@ -1896,7 +1915,7 @@ m/n/10 ) = \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 v\OMS/cmsy/m/n/10 g )
  []
 
 
-Overfull \hbox (73.60463pt too wide) detected at line 1609
+Overfull \hbox (73.60463pt too wide) detected at line 1613
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 W \OM
 S/cmsy/m/n/10 _ \OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 U \OT1/c
 mr/m/n/10 : \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/1
@@ -1914,7 +1933,7 @@ cmr/m/n/10 : \OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 w \OT1/cmr/m
  []
 
 
-Overfull \hbox (80.1754pt too wide) detected at line 1637
+Overfull \hbox (80.1754pt too wide) detected at line 1641
 \OML/cmm/m/it/10 w \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 b[]; []  ; b[]\OT1/cmr/m
 /n/10 )[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 v \OT1/cmr/m/n/10 + \OML/cmm/m/it
 /10 w \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/1
@@ -1929,7 +1948,7 @@ m/n/10 ) + \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 w\OT1/cmr/m/n/10
  []
 
 [39]
-Overfull \hbox (55.64243pt too wide) detected at line 1663
+Overfull \hbox (55.64243pt too wide) detected at line 1670
 \OML/cmm/m/it/10 v[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 V [] v[] \OT1/cmr/m/n/
 10 = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 ) = \
 OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] 
@@ -1942,7 +1961,7 @@ m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) f\OML/cmm/m/it
  []
 
 
-Overfull \hbox (75.90303pt too wide) detected at line 1665
+Overfull \hbox (75.90303pt too wide) detected at line 1672
 \OT1/cmr/m/n/10 0 = \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\
 OT1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
 v[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]v
@@ -1954,10 +1973,11 @@ m/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10
  = 0
  []
 
-Package hyperref Info: bookmark level for unknown coro defaults to 0 on input l
-ine 1679.
 [40]
-Overfull \hbox (39.65382pt too wide) detected at line 1703
+Package hyperref Info: bookmark level for unknown coro defaults to 0 on input l
+ine 1686.
+
+Overfull \hbox (39.65382pt too wide) detected at line 1710
 \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/
 10 a[]v[] \OMS/cmsy/m/n/10 , \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OM
 L/cmm/m/it/10 a[]v[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a[]v[] \OMS/cmsy/m/n/1
@@ -1968,7 +1988,7 @@ L/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = [] = \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (0.64601pt too wide) detected at line 1713
+Overfull \hbox (0.64601pt too wide) detected at line 1720
 [] \OML/cmm/m/it/10 V \OT1/cmr/m/n/10 = [] [](\OML/cmm/m/it/10 \OT1/cmr/m/n/10
  ) + [] \OML/cmm/m/it/10 Im\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )
  \OMS/cmsy/m/n/10 , [] \OML/cmm/m/it/10 V \OMS/cmsy/m/n/10   [] []\OT1/cmr/m/n/
@@ -1979,7 +1999,7 @@ m\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )
  []
 
 [41]
-Overfull \hbox (13.35391pt too wide) detected at line 1740
+Overfull \hbox (13.35391pt too wide) detected at line 1749
 \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]v[] \OT1/cmr/m/n/10 + []
  + \OML/cmm/m/it/10 x[]v[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 x[]\OT1/cmr/m/n
 /10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 x[]\OT1/cmr
@@ -1990,7 +2010,7 @@ T1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[
  []
 
 
-Overfull \hbox (39.5017pt too wide) detected at line 1742
+Overfull \hbox (39.5017pt too wide) detected at line 1751
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cm
 r/m/n/10 ) = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]v[] \OT1/cm
 r/m/n/10 + [] + \OML/cmm/m/it/10 x[]v[]\OT1/cmr/m/n/10 ) = (\OML/cmm/m/it/10 a[
@@ -2001,8 +2021,8 @@ it/10 v[] \OT1/cmr/m/n/10 + [] (\OML/cmm/m/it/10 a[]x[] \OT1/cmr/m/n/10 + [] +
 /m/n/10 = \OML/cmm/m/it/10 v[]
  []
 
-[42]
-Overfull \hbox (17.648pt too wide) detected at line 1789
+[42] [43]
+Overfull \hbox (17.648pt too wide) detected at line 1803
 \OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1
 /cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m
 /n/10 ) = 0 \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n
@@ -2014,7 +2034,7 @@ OT1/cmr/m/n/10 ) = [] = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]
  []
 
 
-Overfull \hbox (66.77155pt too wide) detected at line 1793
+Overfull \hbox (66.77155pt too wide) detected at line 1807
 \OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Mat
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) 9\OML
 /cmm/m/it/10  \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 V [][]\OMS/cmsy/m/n/10 ! \OML
@@ -2024,8 +2044,8 @@ L/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[] \OMS/cmsy/m
 0 Sobre
  []
 
-[43] [44]
-Overfull \hbox (53.74814pt too wide) detected at line 1856
+[44]
+Overfull \hbox (53.74814pt too wide) detected at line 1874
 \OMS/cmsy/m/n/10 ) [] ) \OML/cmm/m/it/10 P \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/1
 0 = [] \OMS/cmsy/m/n/10 , [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P[] \OMS/cmsy/m
 /n/10  [] \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 ) 8\OML/cmm/m/it/10 i \OT1/cmr/
@@ -2033,19 +2053,8 @@ m/n/10 = 0\OML/cmm/m/it/10 ; []  ; n \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 a[] \OT
 1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 )
  []
 
-[45]
-Overfull \hbox (75.23254pt too wide) detected at line 1888
-\OT1/cmr/m/n/10 0 = \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]w[
-] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]w[]\OT1/cmr/m/n/10 ) + [] + \OML/c
-mm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]w[] \OT1/cmr/m/n/10 + [] + \
-OML/cmm/m/it/10 a[]w[]\OT1/cmr/m/n/10 ) = (\OML/cmm/m/it/10 []a[] \OT1/cmr/m/n
-/10 + [] + \OML/cmm/m/it/10 []a[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 w[] \OT1/cm
-r/m/n/10 + [] + (\OML/cmm/m/it/10 []a[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/1
-0 []a[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 w[] \OMS/cmsy/m/n/10 )
- []
-
-
-Overfull \hbox (43.29314pt too wide) detected at line 1907
+[45] [46]
+Overfull \hbox (43.29314pt too wide) detected at line 1926
 \OML/cmm/m/it/10 rg\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = [] \O
 ML/cmm/m/it/10 Im\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = [] \OML
 /cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it
@@ -2057,7 +2066,7 @@ mr/m/n/10 + [] + \OML/cmm/m/it/10 a[]v[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 rg
  []
 
 
-Overfull \hbox (39.10902pt too wide) detected at line 1917
+Overfull \hbox (39.10902pt too wide) detected at line 1936
 \OT1/cmr/m/n/10 0 = \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 w[]\
 OT1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
 w[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]w
@@ -2069,25 +2078,31 @@ r/m/n/10 = \OML/cmm/m/it/10 a[]w[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]w
 MS/cmsy/m/n/10 )
  []
 
-[46] [47]
-Overfull \hbox (48.58748pt too wide) detected at line 1975
+[47] [48]
+Overfull \hbox (48.58748pt too wide) detected at line 1994
 \OML/cmm/m/it/10 rg\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ) = \OML/
 cmm/m/it/10 n \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OML/cmm/
 m/it/10 B[][]B[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 p[]e[] \O
 T1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 e[]p[]\OMS/cmsy/m/n/10 g[] )
  []
 
-[48] [49
+[49] [50
 
-] [50]
-<./fotos/Sistema asociado.png, id=497, 477.28313pt x 451.6875pt>
+]
+Cap\'{\i }tulo 2.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 2003.
+
+[51] [52] [53]
+<./fotos/Sistema asociado.png, id=777, 477.28313pt x 451.6875pt>
 File: ./fotos/Sistema asociado.png Graphic file (type png)
 <use ./fotos/Sistema asociado.png>
-Package pdftex.def Info: ./fotos/Sistema asociado.png  used on input line 2088.
+Package pdftex.def Info: ./fotos/Sistema asociado.png  used on input line 2121.
 
 (pdftex.def)             Requested size: 214.77542pt x 203.25749pt.
 
-Overfull \hbox (9.37645pt too wide) detected at line 2100
+Overfull \hbox (9.37645pt too wide) detected at line 2133
 \OT1/cmr/m/n/10 [](\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 6\OT1/
 cmr/m/n/10 = \OMS/cmsy/m/n/10 ; , \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b[]; []  ; 
 b[]\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Im\OT1/cmr/m/n/10 (\
@@ -2097,8 +2112,8 @@ OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 b[]e[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/
 [] \OMS/cmsy/m/n/10 ,
  []
 
-[51 <./fotos/Sistema asociado.png>]
-Overfull \hbox (30.63159pt too wide) detected at line 2101
+
+Overfull \hbox (30.63159pt too wide) detected at line 2134
 \OMS/cmsy/m/n/10 , \OML/cmm/m/it/10 L [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Im\
 OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 , [] \OML/
 cmm/m/it/10 L \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 Im\OT1/cmr/m/n/10 (\OML/cmm
@@ -2108,8 +2123,8 @@ OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 B\OT1/cmr/m/n/10 ) \OMS/c
 msy/m/n/10 ,
  []
 
-
-Overfull \hbox (35.18681pt too wide) detected at line 2115
+[54 <./fotos/Sistema asociado.png>]
+Overfull \hbox (35.18681pt too wide) detected at line 2148
 \OML/cmm/m/it/10 A \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 B; 
 A \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 
 (\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]; []  ; a[] \OT1/cm
@@ -2118,19 +2133,16 @@ n/10 [](\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/1
 0 A \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 = [] = []
  []
 
-[52] [53
+[55] [56
 
 ]
-Overfull \hbox (15.13637pt too wide) in paragraph at lines 2183--2184
-[]\OT1/cmr/m/n/10 Si $\OML/cmm/m/it/10 $ \OT1/cmr/m/n/10 es si-metra, en-ton
--ces te-ne-mos que: $\OML/cmm/m/it/10 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 id
- \OMS/cmsy/m/n/10 , \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10   \O
-T1/cmr/m/n/10 1)(\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = 0 \OMS/cmsy/m/n/10 , []$
-\OT1/cmr/m/n/10 . 
- []
+Cap\'{\i }tulo 3.
 
-[54] [55]
-Overfull \hbox (13.56836pt too wide) detected at line 2221
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 2157.
+
+[57] [58] [59]
+Overfull \hbox (13.56836pt too wide) detected at line 2293
 [] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) = [] (\OML/cmm/m/it/1
 0 v[]\OT1/cmr/m/n/10 ) = [\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
  \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 (\OM
@@ -2140,23 +2152,8 @@ mm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(0) = 0 \OMS/
 cmsy/m/n/10 ) [] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) == 0
  []
 
-[56] [57] [58] [59] [60] [61]
-Overfull \hbox (57.25871pt too wide) detected at line 2473
-\OT1/cmr/m/n/10 [(\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT
-1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  []  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \OMS
-/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )](\OML/cmm/m/it/10 \OT1/cm
-r/m/n/10 )(\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) = [(\OML/cmm/m/it/10 x \OMS/cm
-sy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  []  \OT1/
-cmr/m/n/10 (\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/
-m/n/10 )(\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n
-/10 )](\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 
-) = [(\OML/cmm/m/it/10  \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []id\OT1/cmr/m/n/
-10 ) \OMS/cmsy/m/n/10  []  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10  \OMS/cmsy/m/n/
-10   \OML/cmm/m/it/10 []id\OT1/cmr/m/n/10 )]([]) = 0
- []
-
-[62] [63] [64] [65] [66]
-Overfull \hbox (50.79337pt too wide) detected at line 2667
+[60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71]
+Overfull \hbox (50.79337pt too wide) detected at line 2781
 \OML/cmm/m/it/10 g \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 g[]h[] \OMS/cmsy/m/n/10 )
  \OML/cmm/m/it/10 mcd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h[]; []  ; h[]\OT1/cmr/m
 /n/10 ) = 1 \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 h[]\OT1/cmr
@@ -2172,7 +2169,7 @@ L/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 )
  []
 
 
-Overfull \hbox (60.22202pt too wide) detected at line 2671
+Overfull \hbox (60.22202pt too wide) detected at line 2784
 \OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(\OML/c
 mm/m/it/10 v[]\OT1/cmr/m/n/10 ) = [\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cm
 m/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 h[]\OT1/cmr/m/
@@ -2191,7 +2188,7 @@ OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(0) = 0
  []
 
 
-Overfull \hbox (14.96294pt too wide) detected at line 2677
+Overfull \hbox (14.96294pt too wide) detected at line 2790
 \OML/cmm/m/it/10 mcd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]; h[]\OT1/cmr/m/n/10 )
  = 1 \OMS/cmsy/m/n/10 ) \OT1/cmr/m/n/10 1 = \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/
@@ -2207,8 +2204,8 @@ T1/cmr/m/n/10 ) = 0 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 = 0
 
  []
 
-[67] [68]
-Overfull \hbox (29.13718pt too wide) detected at line 2737
+[72] [73]
+Overfull \hbox (29.13718pt too wide) detected at line 2857
 \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(\OML/cmm
 /m/it/10 v\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 L[]\OT1/cmr/m/n
 /10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 \
@@ -2222,8 +2219,8 @@ n/10 )2 \OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10
 )
  []
 
-[69] [70]
-Overfull \hbox (60.9924pt too wide) detected at line 2799
+[74] [75]
+Overfull \hbox (60.9924pt too wide) detected at line 2917
 \OT1/cmr/m/n/10 0 = \OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1
 /cmr/m/n/10 )(\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 ) + [] + \OML/cmm/m/it/10 g[]
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 v[]\OT1/c
@@ -2236,8 +2233,15 @@ mr/m/n/10 ) \OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cmm/m
 /m/it/10 g[]\OT1/cmr/m/n/10 ([])([]) \OMS/cmsy/m/n/10 )
  []
 
-[71] [72]
-Overfull \hbox (22.45467pt too wide) in paragraph at lines 2890--2892
+[76] [77] [78] [79]
+Overfull \hbox (0.5056pt too wide) in paragraph at lines 3062--3064
+\OT1/cmr/m/n/10 Como es-tos $\OML/cmm/m/it/10 a[]$ \OT1/cmr/m/n/10 son los gra-
+dos de $\OML/cmm/m/it/10 q[]$\OT1/cmr/m/n/10 , es-ta-mos bus-can-do un vec-tor 
+de mo-do que $\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 [] [][]$
+ []
+
+[80]
+Overfull \hbox (22.45467pt too wide) in paragraph at lines 3080--3082
 \OT1/cmr/m/n/10 Luego en-ton-ces co-mo $\OML/cmm/m/it/10 q[] \OT1/cmr/m/n/10 = 
 \OML/cmm/m/it/10 gh$ \OT1/cmr/m/n/10 si es-co-ge-mos el vec-tor $\OML/cmm/m/it/
 10 v[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 v \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 
@@ -2246,10 +2250,16 @@ r/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] ; []\OT1/
 cmr/m/n/10 (\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g$
  []
 
-[73] [74] [75] [76
+[81] [82]
+Cap\'{\i }tulo 4.
 
-] [77] [78] [79]
-Overfull \hbox (48.7602pt too wide) in paragraph at lines 3043--3045
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 3115.
+
+[83
+
+] [84] [85]
+Overfull \hbox (48.7602pt too wide) in paragraph at lines 3258--3260
 \OT1/cmr/m/n/10 mos $\OML/cmm/m/it/10 B[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\
 OML/cmm/m/it/10 w[]; []  ; w[]\OMS/cmsy/m/n/10 g$ \OT1/cmr/m/n/10 ba-se de W y 
 ex-ten-de-mos a una ba-se del to-tal $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OMS
@@ -2257,8 +2267,8 @@ ex-ten-de-mos a una ba-se del to-tal $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OMS
 $
  []
 
-[80] [81] [82] [83] [84]
-Overfull \hbox (7.5969pt too wide) detected at line 3245
+[86] [87] [88] [89] [90] [91]
+Overfull \hbox (7.5969pt too wide) detected at line 3503
 \OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Bil[]\OT1/cmr/m/n/10 (\O
 ML/cmm/m/it/10 V\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 f\OT1/cmr
 /m/n/10 (\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 w; v \OT1/cmr/m/
@@ -2266,22 +2276,22 @@ n/10 + \OML/cmm/m/it/10 w\OT1/cmr/m/n/10 ) = [] \OMS/cmsy/m/n/10 ) \OML/cmm/m/i
 t/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v; w\OT1/cmr/m/n/10 ) = [] []
  []
 
-[85] [86]
-Overfull \hbox (1.51237pt too wide) in paragraph at lines 3295--3297
+[92] [93]
+Overfull \hbox (1.51237pt too wide) in paragraph at lines 3563--3565
 \OT1/cmr/m/n/10 Para ter-mi-nar la de-mos-tra-cion to-ma-mos una ba-se de $\OM
 L/cmm/m/it/10 V$ \OT1/cmr/m/n/10 de for-ma que $\OML/cmm/m/it/10 B \OT1/cmr/m/n
 /10 = \OMS/cmsy/m/n/10 f[] []g$\OT1/cmr/m/n/10 ,
  []
 
-[87] [88]
-Overfull \hbox (20.8831pt too wide) in paragraph at lines 3342--3343
+[94] [95]
+Overfull \hbox (20.8831pt too wide) in paragraph at lines 3612--3613
 []\OT1/cmr/m/n/10 Ahora pa-ra es-co-ger la ba-se $\OML/cmm/m/it/10 B$ \OT1/cmr/
 m/n/10 que ha-ce dia-go-nal la ma-triz to-ma-mos $\OML/cmm/m/it/10 B \OT1/cmr/m
 /n/10 = \OMS/cmsy/m/n/10 f[]\OML/cmm/m/it/10 ; []\OMS/cmsy/m/n/10 g$
  []
 
-
-Overfull \hbox (1.98927pt too wide) detected at line 3364
+[96]
+Overfull \hbox (1.98927pt too wide) detected at line 3641
 \OML/cmm/m/it/10 q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 ) = \OMS/c
 msy/m/n/10  \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + 4\OML/cmm/m/it/10 xy \OT1/cm
 r/m/n/10 + 3\OML/cmm/m/it/10 y[] \OT1/cmr/m/n/10 + 2\OML/cmm/m/it/10 z[] \OMS/c
@@ -2292,22 +2302,22 @@ msy/m/n/10 ) \OML/cmm/m/it/10 q\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v\OT1/cmr/m/n/
 ] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 ([])[] + 7 [] +2 []
  []
 
-[89] [90]
-Overfull \hbox (29.84335pt too wide) detected at line 3409
+[97]
+Overfull \hbox (29.84335pt too wide) detected at line 3689
 [] \OML/cmm/m/it/10 a[]v[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 a[]v[] \OMS/cm
 sy/m/n/10 2 \OML/cmm/m/it/10 W[] \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/10 W[] \OMS/c
 msy/m/n/10 ) []
  []
 
-[91] [92]
-Overfull \hbox (26.02435pt too wide) in paragraph at lines 3437--3437
+[98] [99] [100
+
+]
+Overfull \hbox (26.02435pt too wide) in paragraph at lines 3717--3717
 |\OT1/cmr/bx/n/24.88 ESPACIO VEC-TO-RIAL EUCL[]IDEO| 
  []
 
-[93
-
-]
-Overfull \hbox (61.22377pt too wide) detected at line 3488
+[101]
+Overfull \hbox (61.22377pt too wide) detected at line 3768
 \OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/
 cmm/m/it/10 f \OMS/cmsy/m/n/10 j[]\OT1/cmr/m/n/10 ) = [] \OMS/cmsy/m/n/10 ) j\O
 ML/cmm/m/it/10 A\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 0 \OMS/cm
@@ -2316,16 +2326,16 @@ m/n/10 ) \OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Bil[]\OT1/cmr/m
 /n/10 (\U/msb/m/n/10 R\OT1/cmr/m/n/10 )[]
  []
 
-[94]
-Overfull \hbox (53.74045pt too wide) detected at line 3495
+[102]
+Overfull \hbox (53.74045pt too wide) detected at line 3775
 \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 j[]\OT
 1/cmr/m/n/10 ) = [] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = \OM
 L/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 j[]\OT1/c
 mr/m/n/10 ) = [] \OMS/cmsy/m/n/10 )
  []
 
-[95] [96] [97] [98]
-Overfull \hbox (4.845pt too wide) detected at line 3626
+[103] [104] [105] [106]
+Overfull \hbox (4.845pt too wide) detected at line 3906
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10  \OMS/cmsy/m/n/10   \OML/
 cmm/m/it/10 id\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 )\OML/cmm/m/
 it/10 ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10  \OMS/cmsy/m/n/10   \OML/cmm/m/it/10
@@ -2339,15 +2349,15 @@ n/10   \OML/cmm/m/it/10 id\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 v\OT1/cmr/m/n/10
 0 (\OML/cmm/m/it/10  \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 id\OT1/cmr/m/n/10 )
  []
 
-[99] [100]
-Overfull \hbox (38.1411pt too wide) in paragraph at lines 3717--3718
+[107] [108]
+Overfull \hbox (38.1411pt too wide) in paragraph at lines 3997--3998
 []\OT1/cmr/m/n/10 La se-gun-da par-te ya la te-ne-mos de-mos-tra-da, que-da de-
 mos-trar que el or-to-go-nal es $\OML/cmm/m/it/10 $\OT1/cmr/m/n/10 -invariante
 .Tenemos
  []
 
-[101] [102]
-Overfull \hbox (9.1893pt too wide) detected at line 3790
+[109] [110]
+Overfull \hbox (9.1893pt too wide) detected at line 4070
 \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = \OML
 /cmm/m/it/10 I[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 I[] \OMS/cmsy/m/n/10  []
   []  [] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 s; t; m \OMS/cmsy/m/n/10  \OT1/c
@@ -2358,16 +2368,16 @@ r/m/n/10 (0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 \OT1/cmr/m/n/1
  []
 
 
-Overfull \hbox (19.81177pt too wide) detected at line 3817
+Overfull \hbox (19.81177pt too wide) detected at line 4097
 \OML/cmm/m/it/10 \OMS/cmsy/m/n/10 j[] 2 \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OM
 L/cmm/m/it/10 W[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 M[]\OT1/
 cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = [] = []
  []
 
-[103] [104] [105
+[111] [112] [113
 
-] [106] [107] [108]
-Overfull \hbox (73.02475pt too wide) detected at line 4018
+] [114] [115] [116]
+Overfull \hbox (73.02475pt too wide) detected at line 4298
 \OML/cmm/m/it/10 q \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 X[] \OMS/cmsy/m/n/10 \ \
 OML/cmm/m/it/10 X[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 q \OT1/cmr/m/n/10 = [] 
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 q \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 q[] \O
@@ -2379,14 +2389,14 @@ m/n/10 + \OML/cmm/m/it/10 w \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 p \OT1/cmr/m/n/
  []
 
 
-Overfull \hbox (63.71588pt too wide) detected at line 4036
+Overfull \hbox (63.71588pt too wide) detected at line 4316
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 X[]\
 OT1/cmr/m/n/10 ) = []([]) = []([] + [] + \OML/cmm/m/it/10 L\OT1/cmr/m/n/10 ([])
 ) = []([] + []) + [] \OMS/cmsy/m/n/10   []
  []
 
-[109] [110] [111] [112] [113]
-Overfull \hbox (32.29124pt too wide) detected at line 4166
+[117] [118] [119] [120] [121]
+Overfull \hbox (32.29124pt too wide) detected at line 4446
 []\OT1/cmr/m/n/10 ([]) = [] \OMS/cmsy/m/n/10   [] ) []\OT1/cmr/m/n/10 ((\OML/cm
 m/m/it/10 x[]; [] ; x[]\OT1/cmr/m/n/10 )[]) = (\OML/cmm/m/it/10 x[]; [] ; x[]\O
 T1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]; [] 
@@ -2394,8 +2404,8 @@ T1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]; []
 it/10 a[]; [] ; x[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 )[]
  []
 
-[114]
-Overfull \hbox (1.78046pt too wide) detected at line 4254
+[122]
+Overfull \hbox (1.78046pt too wide) detected at line 4534
 \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 c\OT1/cmr/m/n/10 ) = \OML/c
 mm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 ) + [][]([]) = \
 OML/cmm/m/it/10 p \OT1/cmr/m/n/10 + [] + [][] = \OML/cmm/m/it/10 p \OT1/cmr/m/n
@@ -2403,8 +2413,8 @@ OML/cmm/m/it/10 p \OT1/cmr/m/n/10 + [] + [][] = \OML/cmm/m/it/10 p \OT1/cmr/m/n
 1/cmr/m/n/10 = \OML/cmm/m/it/10 c
  []
 
-[115] [116]
-Overfull \hbox (13.12999pt too wide) detected at line 4326
+[123] [124]
+Overfull \hbox (13.12999pt too wide) detected at line 4606
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[] \OMS/cmsy/m/n/10 \ \OT1/cmr/m/n/10 (\OM
 L/cmm/m/it/10 p \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 )) = [] [
 ] = []([] \OMS/cmsy/m/n/10 \ []\OT1/cmr/m/n/10 ) = [](\OML/cmm/m/it/10 V[] \OMS
@@ -2413,7 +2423,7 @@ L/cmm/m/it/10 p \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 )) = [] [
  []
 
 
-Overfull \hbox (12.62593pt too wide) detected at line 4342
+Overfull \hbox (12.62593pt too wide) detected at line 4622
 \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m\OT1/cmr/m/n/10 ) = \OML/c
 mm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 ) + [][]([]) = \
 OML/cmm/m/it/10 p \OT1/cmr/m/n/10 + [] + [][] = \OML/cmm/m/it/10 p \OT1/cmr/m/n
@@ -2421,26 +2431,26 @@ OML/cmm/m/it/10 p \OT1/cmr/m/n/10 + [] + [][] = \OML/cmm/m/it/10 p \OT1/cmr/m/n
 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 m
  []
 
-[117] [118] [119] [120]
-Overfull \hbox (42.92386pt too wide) in paragraph at lines 4508--4509
+[125] [126] [127] [128]
+Overfull \hbox (42.92386pt too wide) in paragraph at lines 4788--4789
 []$\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 \OT1/cmr/m/n/10 ([]) 
 = []$ 
  []
 
-[121]
-Overfull \hbox (60.29393pt too wide) detected at line 4615
+[129]
+Overfull \hbox (60.29393pt too wide) detected at line 4895
 \OT1/cmr/m/n/10 0 = [] \OML/cmm/m/it/10 A [] \OT1/cmr/m/n/10 = [] [] [] = [] []
  [] = \OML/cmm/m/it/10 a[]x[] \OT1/cmr/m/n/10 + [] + \OML/cmm/m/it/10 a[]
  []
 
-[122] [123]
-Overfull \hbox (55.28485pt too wide) detected at line 4793
+[130] [131]
+Overfull \hbox (55.28485pt too wide) detected at line 5073
 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 A[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 P[
 ]AP \OT1/cmr/m/n/10 = [] [] []
  []
 
-[124] [125] [126]
-Overfull \hbox (20.1882pt too wide) detected at line 4915
+[132] [133] [134]
+Overfull \hbox (20.1882pt too wide) detected at line 5195
 \OMS/cmsy/m/n/10 jj[]jj[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (
 []\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ([
 ] + []\OML/cmm/m/it/10 ; [] \OT1/cmr/m/n/10 + []) = \OML/cmm/m/it/10 f\OT1/cmr/
@@ -2449,8 +2459,8 @@ m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 f\OT1/cmr/m
 1/cmr/m/n/10 + \OMS/cmsy/m/n/10 jj[]jj
  []
 
-[127]
-Overfull \hbox (40.12708pt too wide) detected at line 4966
+[135]
+Overfull \hbox (40.12708pt too wide) detected at line 5246
 \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/cmm/
 m/it/10 p\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10
  q\OT1/cmr/m/n/10 ))[] = \OMS/cmsy/m/n/10 jj[]jj[] \OT1/cmr/m/n/10 = \OML/cmm/m
@@ -2461,75 +2471,77 @@ L/cmm/m/it/10 f\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ) = \OMS
 /cmm/m/it/10 p; q\OT1/cmr/m/n/10 )[]
  []
 
-[128] [129]
-Overfull \hbox (11.65984pt too wide) detected at line 5077
+[136] [137]
+Overfull \hbox (11.65984pt too wide) detected at line 5357
 \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) = [] =
  [] []
  []
 
-[130] [131]
+[138] [139]
 \tf@thm=\write5
 \openout5 = `AlgebraLineal.thm'.
 
- [132]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5207.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5207.
+ [140]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5487.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5487.
  (AlgebraLineal.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5207.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5207.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5487.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5487.
 
 Package rerunfilecheck Info: File `AlgebraLineal.out' has not changed.
-(rerunfilecheck)             Checksum: 94E39D3DCBA377B5F6D9E7BE8B60D76F;75.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5207.
+(rerunfilecheck)             Checksum: 08DA6FB6F1AEBF6D033F85DB1CE95ABC;5128.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5487.
  ) 
 Here is how much of TeX's memory you used:
- 38004 strings out of 480790
- 867630 string characters out of 2897301
- 1333269 words of memory out of 3000000
- 52790 multiletter control sequences out of 15000+200000
- 546206 words of font info for 82 fonts, out of 3000000 for 9000
+ 38309 strings out of 480790
+ 871022 string characters out of 2897301
+ 1333600 words of memory out of 3000000
+ 52864 multiletter control sequences out of 15000+200000
+ 546543 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,21n,98p,880b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1000.pk> <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcrm1200.pk><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/jdbar/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jdbar/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jdbar/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users
-/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
-C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
-i6.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmmi7.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jdbar/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/jdbar/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/jdbar/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jdbar/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/j
-dbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/
-Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.p
-fb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmsy5.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmsy7.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/jdbar/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/jdbar/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Us
+0800.pk> <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcrm1000.pk> <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\tcrm1200.pk><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jdbar/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/jdbar/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jdbar/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jd
+bar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
+/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5
+.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmmi6.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmmi7.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jdbar/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/jdbar/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/jdbar/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jd
+bar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/U
+sers/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pf
+b><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr9.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy5.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmsy6.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/jdbar/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jdbar/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/jdbar/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Us
 ers/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msb
-m7.pfb>
-Output written on AlgebraLineal.pdf (134 pages, 937479 bytes).
+m10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/symbols/msbm7.pfb>
+Output written on AlgebraLineal.pdf (142 pages, 1039659 bytes).
 PDF statistics:
- 1102 PDF objects out of 1200 (max. 8388607)
- 403 named destinations out of 1000 (max. 500000)
- 132 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1619 PDF objects out of 1728 (max. 8388607)
+ 633 named destinations out of 1000 (max. 500000)
+ 652 words of extra memory for PDF output out of 10000 (max. 10000000)
 
