@@ -1,66 +1,70 @@
-\BOOKMARK [2][-]{subsection.0.0.1}{Propiedades de conjuntos}{}% 1
-\BOOKMARK [2][-]{subsection.0.0.2}{Algoritmo de la divisi\363n de Euclides}{}% 2
-\BOOKMARK [2][-]{subsection.0.0.3}{Teorema de Bezout}{}% 3
-\BOOKMARK [2][-]{subsection.0.0.4}{Teorema \(Eucides\)}{}% 4
-\BOOKMARK [2][-]{subsection.0.0.5}{Teorema Fundamental de la Aritm\351tica}{}% 5
-\BOOKMARK [2][-]{subsection.0.0.6}{Teorema de la existencia de infinitos primos}{}% 6
-\BOOKMARK [2][-]{subsection.0.0.7}{Proposici\363n}{}% 7
-\BOOKMARK [2][-]{subsection.0.0.8}{Particiones de conjuntos infinitos}{}% 8
-\BOOKMARK [2][-]{subsection.0.0.9}{Funci\363n de Euler \(\)}{}% 9
-\BOOKMARK [2][-]{subsection.0.0.10}{Resoluci\363n de ecuaciones diof\341nticas}{}% 10
-\BOOKMARK [2][-]{subsection.0.0.11}{Operaciones con polinomios}{}% 11
-\BOOKMARK [2][-]{subsection.0.0.12}{Definiciones}{}% 12
-\BOOKMARK [2][-]{subsection.0.0.13}{Polinomios primos e irreducibles}{}% 13
-\BOOKMARK [2][-]{subsection.0.0.14}{Ra\355ces de un polinomio}{}% 14
-\BOOKMARK [2][-]{subsection.0.0.15}{Teorema Fundamental del \301lgebra}{}% 15
-\BOOKMARK [2][-]{subsection.0.0.16}{Teorema de la irreducibilidad de un polinomio}{}% 16
-\BOOKMARK [2][-]{subsection.0.0.17}{Teorema ra\355ces en una extensi\363n de K}{}% 17
-\BOOKMARK [2][-]{subsection.0.0.18}{Relaciones de Girard-Newton}{}% 18
-\BOOKMARK [0][-]{chapter.1}{ESPACIO VECTORIAL Y APLICACI\323N LINEAL}{}% 19
-\BOOKMARK [1][-]{section.1.1}{ESPACIOS VECTORIALES}{chapter.1}% 20
-\BOOKMARK [2][-]{subsection.1.1.1}{Sistema generador, base e indepencia lineal}{section.1.1}% 21
-\BOOKMARK [2][-]{subsection.1.1.2}{Espacio vectorial cociente}{section.1.1}% 22
-\BOOKMARK [1][-]{section.1.2}{APLICACIONES LINEALES}{chapter.1}% 23
-\BOOKMARK [2][-]{subsection.1.2.1}{Isomorf\355a de Espacios Vectoriales}{section.1.2}% 24
-\BOOKMARK [2][-]{subsection.1.2.2}{Matriz asociada a una aplicaci\363n lineal}{section.1.2}% 25
-\BOOKMARK [2][-]{subsection.1.2.3}{Rango de una aplicaci\363n lineal}{section.1.2}% 26
-\BOOKMARK [0][-]{chapter.2}{SISTEMAS LINEALES}{}% 27
-\BOOKMARK [1][-]{subsection.2.0.1}{Introducci\363n al problema}{chapter.2}% 28
-\BOOKMARK [2][-]{subsection.2.0.2}{Sistemas Homog\351neos}{subsection.2.0.1}% 29
-\BOOKMARK [2][-]{subsection.2.0.3}{Sistemas no homog\351neos}{subsection.2.0.1}% 30
-\BOOKMARK [2][-]{subsection.2.0.4}{Regla de Cramer}{subsection.2.0.1}% 31
-\BOOKMARK [0][-]{chapter.3}{ESTRUCTURA DE \040ENDOMORFISMOS}{}% 32
-\BOOKMARK [1][-]{section.3.1}{POLINOMIO M\315NIMO Y CARACTER\315STICO}{chapter.3}% 33
-\BOOKMARK [2][-]{subsection.3.1.1}{Polinomio m\355nimo de un endomorfismo}{section.3.1}% 34
-\BOOKMARK [2][-]{subsection.3.1.2}{Polinomio caracter\355stico de un endomorfismo}{section.3.1}% 35
-\BOOKMARK [1][-]{section.3.2}{CLASES NOTABLES DE ENDOMORFISMOS}{chapter.3}% 36
-\BOOKMARK [2][-]{subsection.3.2.1}{Diagonalizabilidad}{section.3.2}% 37
-\BOOKMARK [2][-]{subsection.3.2.2}{Triangularizabilidad}{section.3.2}% 38
-\BOOKMARK [1][-]{section.3.3}{FORMA CAN\323NICA DE JORDAN}{chapter.3}% 39
-\BOOKMARK [2][-]{subsection.3.3.1}{Teorema de Estructura}{section.3.3}% 40
-\BOOKMARK [2][-]{subsection.3.3.2}{C\341lculo de Matrices y Bases de Jordan}{section.3.3}% 41
-\BOOKMARK [2][-]{subsection.3.3.3}{Factores invariantes}{section.3.3}% 42
-\BOOKMARK [0][-]{chapter.4}{FORMAS LINEALES Y BILINEALES}{}% 43
-\BOOKMARK [1][-]{section.4.1}{FORMAS LINEALES}{chapter.4}% 44
-\BOOKMARK [2][-]{subsection.4.1.1}{Espacio dual}{section.4.1}% 45
-\BOOKMARK [2][-]{subsection.4.1.2}{Ortogonalidad}{section.4.1}% 46
-\BOOKMARK [1][-]{section.4.2}{FORMAS BILINEALES}{chapter.4}% 47
-\BOOKMARK [2][-]{subsection.4.2.1}{Concepto de forma bilineal}{section.4.2}% 48
-\BOOKMARK [2][-]{subsection.4.2.2}{Simetr\355a y antisimetr\355a}{section.4.2}% 49
-\BOOKMARK [2][-]{subsection.4.2.3}{Clasificaci\363n de formas bilineales}{section.4.2}% 50
-\BOOKMARK [2][-]{subsection.4.2.4}{Espacio vectorial eucl\355deo}{section.4.2}% 51
-\BOOKMARK [2][-]{subsection.4.2.5}{Bases ortonormales}{section.4.2}% 52
-\BOOKMARK [2][-]{subsection.4.2.6}{Endomorfismos autoadjuntos}{section.4.2}% 53
-\BOOKMARK [2][-]{subsection.4.2.7}{Teorema Espectral}{section.4.2}% 54
-\BOOKMARK [2][-]{subsection.4.2.8}{Definici\363n y caracter\355sticas}{section.4.2}% 55
-\BOOKMARK [2][-]{subsection.4.2.9}{Clasificaci\363n de aplicaciones ortogonales}{section.4.2}% 56
-\BOOKMARK [2][-]{subsection.4.2.10}{Variedades Afines}{section.4.2}% 57
-\BOOKMARK [2][-]{subsection.4.2.11}{Sistema de Referencia}{section.4.2}% 58
-\BOOKMARK [2][-]{subsection.4.2.12}{Matriz de una aplicaci\363n af\355n}{section.4.2}% 59
-\BOOKMARK [2][-]{subsection.4.2.13}{Aplicaciones notorias}{section.4.2}% 60
-\BOOKMARK [2][-]{subsection.4.2.14}{Clasificaci\363n de las Afinidades del Plano}{section.4.2}% 61
-\BOOKMARK [2][-]{subsection.4.2.15}{Clasificaci\363n de c\363nicas}{section.4.2}% 62
-\BOOKMARK [2][-]{subsection.4.2.16}{Espacio m\351trico}{section.4.2}% 63
-\BOOKMARK [2][-]{subsection.4.2.17}{Referencias Ortonormales}{section.4.2}% 64
-\BOOKMARK [2][-]{subsection.4.2.18}{Isometr\355as}{section.4.2}% 65
-\BOOKMARK [2][-]{subsection.4.2.19}{C\363nicas desde el punto de vista af\355n eucl\355deo}{section.4.2}% 66
+\BOOKMARK [0][-]{chapter.1}{Enteros}{}% 1
+\BOOKMARK [1][-]{subsection.1.0.1}{Propiedades de conjuntos}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.0.2}{Algoritmo de la divisi\363n de Euclides}{subsection.1.0.1}% 3
+\BOOKMARK [2][-]{subsection.1.0.3}{Teorema de Bezout}{subsection.1.0.1}% 4
+\BOOKMARK [2][-]{subsection.1.0.4}{Teorema \(Eucides\)}{subsection.1.0.1}% 5
+\BOOKMARK [2][-]{subsection.1.0.5}{Teorema Fundamental de la Aritm\351tica}{subsection.1.0.1}% 6
+\BOOKMARK [2][-]{subsection.1.0.6}{Teorema de la existencia de infinitos primos}{subsection.1.0.1}% 7
+\BOOKMARK [2][-]{subsection.1.0.7}{Proposici\363n}{subsection.1.0.1}% 8
+\BOOKMARK [2][-]{subsection.1.0.8}{Particiones de conjuntos infinitos}{subsection.1.0.1}% 9
+\BOOKMARK [2][-]{subsection.1.0.9}{Funci\363n de Euler \(\)}{subsection.1.0.1}% 10
+\BOOKMARK [2][-]{subsection.1.0.10}{Resoluci\363n de ecuaciones diof\341nticas}{subsection.1.0.1}% 11
+\BOOKMARK [0][-]{chapter.2}{Polinomios}{}% 12
+\BOOKMARK [1][-]{subsection.2.0.1}{Operaciones con polinomios}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.0.2}{Definiciones}{subsection.2.0.1}% 14
+\BOOKMARK [2][-]{subsection.2.0.3}{Polinomios primos e irreducibles}{subsection.2.0.1}% 15
+\BOOKMARK [2][-]{subsection.2.0.4}{Ra\355ces de un polinomio}{subsection.2.0.1}% 16
+\BOOKMARK [2][-]{subsection.2.0.5}{Teorema Fundamental del \301lgebra}{subsection.2.0.1}% 17
+\BOOKMARK [2][-]{subsection.2.0.6}{Teorema de la irreducibilidad de un polinomio}{subsection.2.0.1}% 18
+\BOOKMARK [2][-]{subsection.2.0.7}{Teorema ra\355ces en una extensi\363n de K}{subsection.2.0.1}% 19
+\BOOKMARK [2][-]{subsection.2.0.8}{Relaciones de Girard-Newton}{subsection.2.0.1}% 20
+\BOOKMARK [0][-]{chapter.3}{Espacio vectorial y \040Aplicaci\363n lineal}{}% 21
+\BOOKMARK [1][-]{section.3.1}{ESPACIOS VECTORIALES}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.1.1}{Sistema generador, base e indepencia lineal}{section.3.1}% 23
+\BOOKMARK [2][-]{subsection.3.1.2}{Espacio vectorial cociente}{section.3.1}% 24
+\BOOKMARK [1][-]{section.3.2}{APLICACIONES LINEALES}{chapter.3}% 25
+\BOOKMARK [2][-]{subsection.3.2.1}{Isomorf\355a de Espacios Vectoriales}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.2}{Matriz asociada a una aplicaci\363n lineal}{section.3.2}% 27
+\BOOKMARK [2][-]{subsection.3.2.3}{Rango de una aplicaci\363n lineal}{section.3.2}% 28
+\BOOKMARK [0][-]{chapter.4}{Sistemas Lineales}{}% 29
+\BOOKMARK [1][-]{subsection.4.0.1}{Introducci\363n al problema}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.0.2}{Sistemas Homog\351neos}{subsection.4.0.1}% 31
+\BOOKMARK [2][-]{subsection.4.0.3}{Sistemas no homog\351neos}{subsection.4.0.1}% 32
+\BOOKMARK [2][-]{subsection.4.0.4}{Regla de Cramer}{subsection.4.0.1}% 33
+\BOOKMARK [0][-]{chapter.5}{Estructura de Endomorfismos}{}% 34
+\BOOKMARK [1][-]{section.5.1}{POLINOMIO M\315NIMO Y CARACTER\315STICO}{chapter.5}% 35
+\BOOKMARK [2][-]{subsection.5.1.1}{Polinomio m\355nimo de un endomorfismo}{section.5.1}% 36
+\BOOKMARK [2][-]{subsection.5.1.2}{Polinomio caracter\355stico de un endomorfismo}{section.5.1}% 37
+\BOOKMARK [1][-]{section.5.2}{CLASES NOTABLES DE ENDOMORFISMOS}{chapter.5}% 38
+\BOOKMARK [2][-]{subsection.5.2.1}{Diagonalizabilidad}{section.5.2}% 39
+\BOOKMARK [2][-]{subsection.5.2.2}{Triangularizabilidad}{section.5.2}% 40
+\BOOKMARK [1][-]{section.5.3}{FORMA CAN\323NICA DE JORDAN}{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.3.1}{Teorema de Estructura}{section.5.3}% 42
+\BOOKMARK [2][-]{subsection.5.3.2}{C\341lculo de Matrices y Bases de Jordan}{section.5.3}% 43
+\BOOKMARK [2][-]{subsection.5.3.3}{Factores invariantes}{section.5.3}% 44
+\BOOKMARK [0][-]{chapter.6}{Formas Lineales y \040Bilineales}{}% 45
+\BOOKMARK [1][-]{section.6.1}{FORMAS LINEALES}{chapter.6}% 46
+\BOOKMARK [2][-]{subsection.6.1.1}{Espacio Dual}{section.6.1}% 47
+\BOOKMARK [2][-]{subsection.6.1.2}{Ortogonalidad}{section.6.1}% 48
+\BOOKMARK [1][-]{section.6.2}{FORMAS BILINEALES}{chapter.6}% 49
+\BOOKMARK [2][-]{subsection.6.2.1}{Caracter\355sticas de las formas bilineales}{section.6.2}% 50
+\BOOKMARK [2][-]{subsection.6.2.2}{Simetr\355a y antisimetr\355a}{section.6.2}% 51
+\BOOKMARK [2][-]{subsection.6.2.3}{Ortogonalidad}{section.6.2}% 52
+\BOOKMARK [2][-]{subsection.6.2.4}{Clasificaci\363n de formas bilineales}{section.6.2}% 53
+\BOOKMARK [0][-]{chapter.7}{Espacio Vectorial Eucl\355deo}{}% 54
+\BOOKMARK [1][-]{section.7.1}{DEFINICI\323N Y CONCEPTOS B\301SICOS}{chapter.7}% 55
+\BOOKMARK [1][-]{section.7.2}{APLICACIONES ORTOGONALES}{chapter.7}% 56
+\BOOKMARK [2][-]{subsection.7.2.1}{Caracter\355sticas de las aplicaciones ortogonales}{section.7.2}% 57
+\BOOKMARK [2][-]{subsection.7.2.2}{Clasificaci\363n de aplicaciones ortogonales}{section.7.2}% 58
+\BOOKMARK [0][-]{chapter.8}{Espacio Af\355n}{}% 59
+\BOOKMARK [1][-]{section.8.1}{DEFINICI\323N Y CONCEPTOS B\301SICOS}{chapter.8}% 60
+\BOOKMARK [2][-]{subsection.8.1.1}{Variedades Afines}{section.8.1}% 61
+\BOOKMARK [2][-]{subsection.8.1.2}{Sistema de Referencia}{section.8.1}% 62
+\BOOKMARK [2][-]{subsection.8.1.3}{Matriz de una aplicaci\363n af\355n}{section.8.1}% 63
+\BOOKMARK [2][-]{subsection.8.1.4}{Aplicaciones notorias}{section.8.1}% 64
+\BOOKMARK [2][-]{subsection.8.1.5}{Clasificaci\363n de las Afinidades del Plano}{section.8.1}% 65
+\BOOKMARK [2][-]{subsection.8.1.6}{Clasificaci\363n de c\363nicas}{section.8.1}% 66
+\BOOKMARK [2][-]{subsection.8.1.7}{Espacio m\351trico}{section.8.1}% 67
+\BOOKMARK [2][-]{subsection.8.1.8}{Referencias Ortonormales}{section.8.1}% 68
+\BOOKMARK [2][-]{subsection.8.1.9}{Isometr\355as}{section.8.1}% 69
+\BOOKMARK [2][-]{subsection.8.1.10}{C\363nicas desde el punto de vista af\355n eucl\355deo}{section.8.1}% 70

@@ -184,71 +184,109 @@
 \contentsline {obs}{{\underline {Observación}:}{23}{}}{78}{obs.23}%
 \contentsline {defi}{{Definición}{35}{Matriz Elemental de Jordan}}{78}{defi.35}%
 \contentsline {obs}{{\underline {Observación}:}{24}{}}{78}{obs.24}%
-\contentsline {ej}{{\underline {Ejemplo}:}{23}{}}{79}{ej.23}%
+\contentsline {ej}{{\underline {Ejemplo}:}{23}{}}{78}{ej.23}%
 \contentsline {ej}{{\underline {Ejemplo}:}{24}{}}{80}{ej.24}%
 \contentsline {ej}{{\underline {Ejemplo}:}{25}{}}{80}{ej.25}%
 \contentsline {defi}{{Definición}{36}{Formas Lineales y Espacio Dual}}{83}{defi.36}%
-\contentsline {obs}{{\underline {Observación}:}{25}{}}{83}{obs.25}%
-\contentsline {ej}{{\underline {Ejemplo}:}{26}{}}{83}{ej.26}%
+\contentsline {obs}{{\underline {Observación}:}{25}{}}{84}{obs.25}%
+\contentsline {ej}{{\underline {Ejemplo}:}{26}{}}{84}{ej.26}%
 \contentsline {prop}{{Proposición}{37}{Base Dual}}{84}{prop.37}%
 \contentsline {demo}{{\underline {Demostración}:}{48}{}}{84}{demo.48}%
 \contentsline {ej}{{\underline {Ejemplo}:}{27}{}}{84}{ej.27}%
 \contentsline {obs}{{\underline {Observación}:}{26}{}}{84}{obs.26}%
-\contentsline {prop}{{Proposición}{38}{}}{84}{prop.38}%
-\contentsline {defi}{{Definición}{37}{Aplicación dual}}{84}{defi.37}%
+\contentsline {prop}{{Proposición}{38}{}}{85}{prop.38}%
+\contentsline {defi}{{Definición}{37}{Aplicación dual}}{85}{defi.37}%
 \contentsline {obs}{{\underline {Observación}:}{27}{}}{85}{obs.27}%
 \contentsline {prop}{{Proposición}{39}{}}{85}{prop.39}%
 \contentsline {prop}{{Proposición}{40}{}}{85}{prop.40}%
 \contentsline {demo}{{\underline {Demostración}:}{49}{}}{85}{demo.49}%
-\contentsline {defi}{{Definición}{38}{Espacio Bidual}}{85}{defi.38}%
-\contentsline {prop}{{Proposición}{41}{}}{85}{prop.41}%
+\contentsline {defi}{{Definición}{38}{Espacio Bidual}}{86}{defi.38}%
+\contentsline {prop}{{Proposición}{41}{}}{86}{prop.41}%
 \contentsline {defi}{{Definición}{39}{Ortogonalidad}}{86}{defi.39}%
 \contentsline {prop}{{Proposición}{42}{}}{86}{prop.42}%
-\contentsline {demo}{{\underline {Demostración}:}{50}{}}{86}{demo.50}%
-\contentsline {theo}{{Teorema}{17}{Principio de dualidad}}{87}{theo.17}%
-\contentsline {prop}{{Proposición}{43}{}}{87}{prop.43}%
-\contentsline {demo}{{\underline {Demostración}:}{51}{}}{87}{demo.51}%
-\contentsline {obs}{{\underline {Observación}:}{28}{}}{87}{obs.28}%
-\contentsline {defi}{{Definición}{40}{Forma Bilineal}}{88}{defi.40}%
+\contentsline {demo}{{\underline {Demostración}:}{50}{}}{87}{demo.50}%
+\contentsline {theo}{{Teorema}{17}{Principio de dualidad}}{88}{theo.17}%
+\contentsline {prop}{{Proposición}{43}{}}{88}{prop.43}%
+\contentsline {demo}{{\underline {Demostración}:}{51}{}}{88}{demo.51}%
+\contentsline {obs}{{\underline {Observación}:}{28}{}}{88}{obs.28}%
+\contentsline {defi}{{Definición}{40}{Forma Bilineal}}{89}{defi.40}%
 \contentsline {ej}{{\underline {Ejemplo}:}{28}{}}{89}{ej.28}%
 \contentsline {ej}{{\underline {Ejemplo}:}{29}{}}{89}{ej.29}%
-\contentsline {defi}{{Definición}{41}{Forma Bilineal Degenerada}}{89}{defi.41}%
-\contentsline {prop}{{Proposición}{44}{Operaciones con formas bilineales}}{89}{prop.44}%
+\contentsline {defi}{{Definición}{41}{Tipos de formas bilineales}}{89}{defi.41}%
 \contentsline {obs}{{\underline {Observación}:}{29}{}}{89}{obs.29}%
-\contentsline {theo}{{Teorema}{18}{de la Matriz Asociada}}{89}{theo.18}%
-\contentsline {ej}{{\underline {Ejemplo}:}{30}{}}{90}{ej.30}%
-\contentsline {defi}{{Definición}{42}{Congruencia de Matrices}}{90}{defi.42}%
+\contentsline {prop}{{Proposición}{44}{Operaciones con formas bilineales}}{90}{prop.44}%
 \contentsline {obs}{{\underline {Observación}:}{30}{}}{90}{obs.30}%
-\contentsline {defi}{{Definición}{43}{Simetría y Antisimetría}}{90}{defi.43}%
-\contentsline {theo}{{Teorema}{19}{}}{91}{theo.19}%
+\contentsline {theo}{{Teorema}{18}{de la Matriz Asociada}}{90}{theo.18}%
+\contentsline {defi}{{Definición}{42}{Congruencia de Matrices}}{91}{defi.42}%
+\contentsline {ej}{{\underline {Ejemplo}:}{30}{}}{91}{ej.30}%
 \contentsline {obs}{{\underline {Observación}:}{31}{}}{91}{obs.31}%
-\contentsline {defi}{{Definición}{44}{Vectores Isótropos}}{91}{defi.44}%
-\contentsline {prop}{{Proposición}{45}{}}{91}{prop.45}%
-\contentsline {demo}{{\underline {Demostración}:}{52}{}}{91}{demo.52}%
-\contentsline {coro}{{Corolario}{2}{}}{91}{coro.2}%
-\contentsline {defi}{{Definición}{45}{Formas Izquierda y Derecha}}{91}{defi.45}%
-\contentsline {prop}{{Proposición}{46}{}}{92}{prop.46}%
-\contentsline {demo}{{\underline {Demostración}:}{53}{}}{92}{demo.53}%
+\contentsline {defi}{{Definición}{43}{Simetría y Antisimetría}}{91}{defi.43}%
+\contentsline {theo}{{Teorema}{19}{}}{92}{theo.19}%
 \contentsline {obs}{{\underline {Observación}:}{32}{}}{92}{obs.32}%
-\contentsline {prop}{{Proposición}{47}{}}{92}{prop.47}%
-\contentsline {defi}{{Definición}{46}{Forma Cuadrática}}{92}{defi.46}%
-\contentsline {prop}{{Proposición}{48}{}}{92}{prop.48}%
-\contentsline {demo}{{\underline {Demostración}:}{54}{}}{93}{demo.54}%
+\contentsline {defi}{{Definición}{44}{Vectores Isótropos}}{92}{defi.44}%
+\contentsline {prop}{{Proposición}{45}{}}{92}{prop.45}%
+\contentsline {demo}{{\underline {Demostración}:}{52}{}}{92}{demo.52}%
+\contentsline {coro}{{Corolario}{2}{}}{92}{coro.2}%
+\contentsline {defi}{{Definición}{45}{Forma Cuadrática}}{92}{defi.45}%
+\contentsline {prop}{{Proposición}{46}{}}{93}{prop.46}%
+\contentsline {demo}{{\underline {Demostración}:}{53}{}}{93}{demo.53}%
 \contentsline {obs}{{\underline {Observación}:}{33}{}}{93}{obs.33}%
 \contentsline {obs}{{\underline {Observación}:}{34}{}}{93}{obs.34}%
-\contentsline {defi}{{Definición}{47}{Ortogonalidad respecto de una forma bilineal}}{93}{defi.47}%
-\contentsline {ej}{{\underline {Ejemplo}:}{31}{}}{93}{ej.31}%
-\contentsline {theo}{{Teorema}{20}{de Clasificación de Formas Antisimétricas}}{94}{theo.20}%
-\contentsline {demo}{{\underline {Demostración}:}{55}{}}{94}{demo.55}%
+\contentsline {defi}{{Definición}{46}{Formas Izquierda y Derecha}}{93}{defi.46}%
+\contentsline {prop}{{Proposición}{47}{}}{93}{prop.47}%
+\contentsline {demo}{{\underline {Demostración}:}{54}{}}{94}{demo.54}%
 \contentsline {obs}{{\underline {Observación}:}{35}{}}{94}{obs.35}%
-\contentsline {ej}{{\underline {Ejemplo}:}{32}{}}{95}{ej.32}%
-\contentsline {theo}{{Teorema}{21}{de Clasificación de Formas Simétricas}}{95}{theo.21}%
-\contentsline {demo}{{\underline {Demostración}:}{56}{}}{95}{demo.56}%
-\contentsline {ej}{{\underline {Ejemplo}:}{33}{}}{96}{ej.33}%
-\contentsline {ej}{{\underline {Ejemplo}:}{34}{}}{97}{ej.34}%
-\contentsline {ej}{{\underline {Ejemplo}:}{35}{}}{97}{ej.35}%
-\contentsline {theo}{{Teorema}{22}{}}{97}{theo.22}%
-\contentsline {demo}{{\underline {Demostración}:}{57}{}}{97}{demo.57}%
-\contentsline {theo}{{Teorema}{23}{}}{97}{theo.23}%
-\contentsline {demo}{{\underline {Demostración}:}{58}{}}{98}{demo.58}%
-\contentsline {ej}{{\underline {Ejemplo}:}{36}{}}{99}{ej.36}%
+\contentsline {prop}{{Proposición}{48}{}}{94}{prop.48}%
+\contentsline {defi}{{Definición}{47}{Ortogonalidad respecto de una forma bilineal}}{94}{defi.47}%
+\contentsline {ej}{{\underline {Ejemplo}:}{31}{}}{94}{ej.31}%
+\contentsline {defi}{{Definición}{48}{Producto Escalar}}{95}{defi.48}%
+\contentsline {prop}{{Proposición}{49}{}}{95}{prop.49}%
+\contentsline {theo}{{Teorema}{20}{de Clasificación de Formas Antisimétricas}}{96}{theo.20}%
+\contentsline {demo}{{\underline {Demostración}:}{55}{}}{96}{demo.55}%
+\contentsline {obs}{{\underline {Observación}:}{36}{}}{96}{obs.36}%
+\contentsline {ej}{{\underline {Ejemplo}:}{32}{}}{97}{ej.32}%
+\contentsline {theo}{{Teorema}{21}{de Clasificación de Formas Simétricas}}{97}{theo.21}%
+\contentsline {demo}{{\underline {Demostración}:}{56}{}}{97}{demo.56}%
+\contentsline {ej}{{\underline {Ejemplo}:}{33}{}}{98}{ej.33}%
+\contentsline {ej}{{\underline {Ejemplo}:}{34}{}}{98}{ej.34}%
+\contentsline {ej}{{\underline {Ejemplo}:}{35}{}}{99}{ej.35}%
+\contentsline {theo}{{Teorema}{22}{}}{99}{theo.22}%
+\contentsline {demo}{{\underline {Demostración}:}{57}{}}{99}{demo.57}%
+\contentsline {theo}{{Teorema}{23}{}}{99}{theo.23}%
+\contentsline {demo}{{\underline {Demostración}:}{58}{}}{100}{demo.58}%
+\contentsline {theo}{{Teorema}{24}{}}{101}{theo.24}%
+\contentsline {ej}{{\underline {Ejemplo}:}{36}{}}{101}{ej.36}%
+\contentsline {defi}{{Definición}{49}{Base Ortonormal}}{103}{defi.49}%
+\contentsline {defi}{{Definición}{50}{Espacio Vectorial Euclídeo}}{103}{defi.50}%
+\contentsline {theo}{{Teorema}{25}{}}{103}{theo.25}%
+\contentsline {demo}{{\underline {Demostración}:}{59}{}}{103}{demo.59}%
+\contentsline {obs}{{\underline {Observación}:}{37}{}}{104}{obs.37}%
+\contentsline {theo}{{Teorema}{26}{del Criterio de Silvester}}{104}{theo.26}%
+\contentsline {demo}{{\underline {Demostración}:}{60}{}}{104}{demo.60}%
+\contentsline {prop}{{Proposición}{50}{}}{105}{prop.50}%
+\contentsline {demo}{{\underline {Demostración}:}{61}{}}{105}{demo.61}%
+\contentsline {prop}{{Proposición}{51}{}}{105}{prop.51}%
+\contentsline {demo}{{\underline {Demostración}:}{62}{}}{105}{demo.62}%
+\contentsline {theo}{{Teorema}{27}{Método de Gram-Schimdt}}{106}{theo.27}%
+\contentsline {demo}{{\underline {Demostración}:}{63}{}}{106}{demo.63}%
+\contentsline {defi}{{Definición}{51}{Norma de un vector}}{106}{defi.51}%
+\contentsline {prop}{{Proposición}{52}{}}{106}{prop.52}%
+\contentsline {demo}{{\underline {Demostración}:}{64}{}}{107}{demo.64}%
+\contentsline {defi}{{Definición}{52}{Endomorfismos Autoadjuntos}}{107}{defi.52}%
+\contentsline {prop}{{Proposición}{53}{}}{107}{prop.53}%
+\contentsline {demo}{{\underline {Demostración}:}{65}{}}{108}{demo.65}%
+\contentsline {theo}{{Teorema}{28}{Espectral}}{108}{theo.28}%
+\contentsline {demo}{{\underline {Demostración}:}{66}{}}{108}{demo.66}%
+\contentsline {obs}{{\underline {Observación}:}{38}{}}{109}{obs.38}%
+\contentsline {defi}{{Definición}{53}{Aplicación Conservativa}}{110}{defi.53}%
+\contentsline {prop}{{Proposición}{54}{}}{110}{prop.54}%
+\contentsline {demo}{{\underline {Demostración}:}{67}{}}{110}{demo.67}%
+\contentsline {defi}{{Definición}{54}{Aplicación Ortogonal}}{110}{defi.54}%
+\contentsline {prop}{{Proposición}{55}{Grupo Ortogonal}}{110}{prop.55}%
+\contentsline {demo}{{\underline {Demostración}:}{68}{}}{110}{demo.68}%
+\contentsline {obs}{{\underline {Observación}:}{39}{}}{111}{obs.39}%
+\contentsline {defi}{{Definición}{55}{Orientación de una Base}}{111}{defi.55}%
+\contentsline {defi}{{Definición}{56}{Grupo Conservativo e Inversivo}}{111}{defi.56}%
+\contentsline {ej}{{\underline {Ejemplo}:}{37}{}}{111}{ej.37}%
+\contentsline {prop}{{Proposición}{56}{Propiedades de las aplicaciones ortogonales}}{112}{prop.56}%
+\contentsline {demo}{{\underline {Demostración}:}{69}{}}{112}{demo.69}%

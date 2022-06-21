@@ -44,7 +44,7 @@
 %% Paquete para la edición y el formateo de capítulos, secciones...
 \usepackage[explicit]{titlesec}
 	%% Definición del estilo de los capítulos, secciones, etc...
-    \titleformat{\chapter}[display]{\normalfont\huge\bfseries\color{capitulos}}{}{0pt}{\Huge #1}[\titlerule]
+    \titleformat{\chapter}[display]{\normalfont\huge\bfseries\color{capitulos}}{}{0pt}{\Huge \uppercase{#1}}[\titlerule]
     \titleformat{\section}{\normalfont\Large\bfseries\color{secciones}}{}{0pt}{#1}
     \titleformat{\subsection}{\normalfont\large\bfseries\color{subsecciones}}{}{0pt}{\uline{#1}}
     \titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{subsubsecciones}}{}{0pt}{#1}
@@ -83,7 +83,7 @@
     	\newtheorem*{demo}{\underline{Demostración}:}
 
 	\theoremheaderfont{\normalfont}
-	\theorembodyfont{\normalfont}
+	\theorembodyfont{\sffamily}
     	\newtheorem*{obs}{\underline{Observación}:}
     	\newtheorem*{ej}{\underline{Ejemplo}:}
 
@@ -116,7 +116,7 @@ http://creativecommons.org/licenses/by-nc/4.0/
 \end{center}
 
 \mainmatter
-\chapter*{ENTEROS}
+\chapter{Enteros}
 Es el conjunto no vacío dotado con dos operaciones de modo que:
 $$Anillo \rightarrow (R,+,\cdot)\mbox{ donde }+,\cdot : R\times R \rightarrow R$$
 \subsection{Propiedades de conjuntos}
@@ -490,7 +490,7 @@ $7x+2y+3z=5\Leftrightarrow 7(2-13k)+2y(-3+29k)+3z=5\Rightarrow z=-1=11k$
 Siendo estas las soluciones enteras para el sistema.
 \end{enumerate}
 
-\chapter*{POLINOMIOS}
+\chapter{Polinomios}
 Sea $R$ un anillo conmutativo y unitario, un polinomio se define como una suma finita con coeficientes en R:
 $$R[x]=\{a_0+a_1x+\cdots+a_nx^n : a_0,a_1,\cdots,a_n\in R, n\geq 0\}$$
 Lo expresado arriba es una expresión sintética de lo que un polinomio representa puesto que se puede conocer a un polinomio solo por sus coeficientes:
@@ -901,7 +901,7 @@ a_1'=(\alpha_1+1)(\alpha_2+1)+(\alpha_1+1)(\alpha_3+1)+(\alpha_2+1)(\alpha_3+1)=
 a_2'=-(\alpha_1+\alpha_2+\alpha_3+3)=-3
 \end{cases}$$
 
-\chapter{ESPACIO VECTORIAL Y \\APLICACIÓN LINEAL}
+\chapter{Espacio vectorial y \\ Aplicación lineal}
 En este capítulo vamos a definir el concepto central de la asignatura: el espacio vectorial. Sus características dotan de propiedades muy especiales a los espacios que cumplen dicha definición y nos permite, junto con las aplicaciones lineales, descubrir una serie de propiedades abstractas a dichos espacios con consecuencias muy importantes en espacios concretos de este tipo.
 
 \section{ESPACIOS VECTORIALES}
@@ -1997,7 +1997,7 @@ $$\Rightarrow \mbox{ como }rg(P)=n\mbox{ B' es l. ind.}\Rightarrow B'\mbox{ base
 \end{itemize}
 \end{demo}
 
-\chapter{SISTEMAS LINEALES}
+\chapter{Sistemas Lineales}
 El estudio de sistemas de ecuaciones lineales es una característica fundamental muy presente en matemáticas. Tiene muy útiles aplicaciones prácticas y, en consecuencia, es conveniente utilizar una forma eficiente de resolver y discutir este tipo de sistemas. Así como el método de sustitución o de igualación sirven para cuando los sistemas son pequeños, quedan muy obsoletos cuando tenemos sistemas muy grandes o con parámetros que desconocemos. De este modo, se va a tratar en este capítulo de dar un método y desarrollar una serie de herramientas que nos permitan realizar esta tarea de forma más eficiente.
 
 \subsection{Introducción al problema}
@@ -2154,7 +2154,7 @@ $$\Sigma:\begin{cases}a_1x+b_1y+c_1z=d_1 \\ a_2x+b_2y+c_2z=d_2 \\ a_3x+b_3y+c_3z
 
 \underline{Demostración}:
 
-\chapter{ESTRUCTURA DE \\ ENDOMORFISMOS}
+\chapter{Estructura de Endomorfismos}
 Vamos a estudiar en este capítulo la estructura de unas aplicaciones lineales muy concretas, las que van de un cuerpo en sí mismo. La intención de este capítulo es clasificar los endomorfismos según su clase de equivalencia a través de los conceptos que se van a desarrollar.
 
 \begin{defi}[Semejanza de Aplicaciones]
@@ -3112,9 +3112,15 @@ $$h_2(x)=x-1\Rightarrow C_{h_2(x)}$$
 Luego por factores invariantes, la matriz queda de la siguiente forma:
 $$M_{B'}(\phi)=C_{h_1(x)}\oplus C_{h_2(x)}$$
 
-\chapter{FORMAS LINEALES Y \\BILINEALES}
+\chapter{Formas Lineales y \\ Bilineales}
+Durante este capítulo vamos a desarrollar las propiedades y características de dos objetos matemáticos muy presentes: las formas lineales y bilineales. La relevancia de estos objetos va desde la definición del concepto de ``ortogonalidad'' básico en ramas como la geometría hasta la definición de normas a través de productos escalares.
+
 \section{FORMAS LINEALES}
-\subsection{Espacio dual}
+Las formas lineales son fundamentalmente aplicaciones lineales del espacio vectorial en el cuerpo sobre el que está estructurado. Es decir, son aplicaciones lineales que a cada vector les asigna un número y, por la similitud con las funciones reales escalares, toma gran relevancia analizar las propiedades que tienen.
+
+\subsection{Espacio Dual}
+El espacio dual es un concepto abstracto y vago a priori pero con propiedades esenciales más tarde. Sobre todo, el principio de dualidad nos permite hacer extensibles enunciados sobre $V$ (más intuitivos para nosotros) a $V^*$, su dual. Del mismo modo, enunciados sorprendentes en $V$ vienen de traducir dichas hipótesis de un enunciado muy intuitivo en $V^*$.
+
 \begin{defi}[Formas Lineales y Espacio Dual]
 Sea $V$ un espacio vectorial de dimensión $n$ sobre un cuerpo $K$, se define el \textbf{espacio dual} como el espacio vectorial de dimensión $n$ definido por:
 $$V^* = Hom(V,K)$$
@@ -3189,6 +3195,7 @@ $$A=M_{B_v, B_w}(\phi)\Rightarrow M_{B_w^*, B_v^*}(\phi^*)=A^t$$
 \end{prop}
 
 \subsubsection{Espacio Bidual}
+\label{Espacio Bidual}
 Consideremos la aplicación $\langle \bullet , \bullet \rangle: V^*\times V\rightarrow K$  como aquella que evalúa en la formal el vector seleccionado, es decir, $(\omega, v)\longmapsto \omega(v)$. Si fijamos $v$ obtenemos la aplicación $\langle \bullet , v\rangle: V^*\rightarrow K$ que llamaremos $\xi_v$ y que mapea $\omega \longmapsto \langle \omega, u \rangle$
 \begin{prop}
 La aplicación $\xi_v \in Hom(V^*, K)$ definida como $\xi_v(\omega) = \omega(v)$ es una aplicación lineal y biyectiva.
@@ -3211,7 +3218,7 @@ $$B=\{v, v_2, \cdots, v_n\}\mbox{ de }V \Rightarrow \exists B^*\mbox{ de }V^*\Ri
 \end{demo}
 
 \begin{defi}[Espacio Bidual]
-Sea $V$ un espacio vectorial de dimensión $n$, se define el \textbf{espacio bidual} como $V^{**} = Hom(V^*, K)$ conformado por todas las aplicaciones $\forall v \in V: \xi_v$.
+Sea $V$ un espacio vectorial de dimensión $n$, se define el \textbf{espacio bidual} como $V^{**} = Hom(V^*, K)$ conformado por todas las aplicaciones $\xi_v$.
 \end{defi}
 
 \begin{prop}
@@ -3223,6 +3230,8 @@ es un isomorfismo canónico entre ambos espacios.
 \end{prop}
 
 \subsection{Ortogonalidad}
+\label{Ortogonalidad dual}
+Un concepto fundamental que también se desarolla por ejemplo en el apartado de \nameref{Formas bilineales} es la ortogonalidad. Ésta nos va a permitir, en el caso del espacio dual, caracterizar los hiperplanos vectoriales con formas lineales del espacio dual.
 
 \begin{defi}[Ortogonalidad]
 Sea $V$ un espacio vectorial y $V^*$ su dual, decimos que $\omega \in V^*$ es \textbf{ortogonal} a $v\in V$ si $\omega(v)=0$.
@@ -3236,7 +3245,6 @@ La definición de ortogonalidad verifica las siguientes propiedades:
 \begin{enumerate}
 \item $W<V\Rightarrow W^\perp<V^*$
 \item $\{0\}^\perp = V^*$ y $V^\perp = \{0_{v^*}\}$
-
 \item $W_1\subset W_2\Rightarrow W_2^\perp \subset W_1^\perp$
 \item $n=\dim V$ y $m=\dim W\Rightarrow \dim W^\perp = n-m$
 \item $(W_1+W_2)^\perp = W_1^\perp \cap W_2^\perp$
@@ -3320,6 +3328,7 @@ $$\omega(v)=a_1b_1+\cdots +a_nb_n$$
 Si $v=(b_1, \cdots, b_n)\in H\Rightarrow a_1b_1+\cdots a_nb_n=0\Rightarrow \omega(v)=0$ si definimos $\omega$ como lo hemos hecho, luego está bien definida.
 
 \section{FORMAS BILINEALES}
+\label{Formas bilineales}
 La definición $V\times V^* \rightarrow K$ de forma que $(v,\omega)\rightarrow \omega(v)\in K$, que justamente se dio para $\left[\eta(v)\right](\omega)$ tiene buenas propiedades que podemos querer ``copiar'' para otros objetos matemáticos. ¿Pero qué propiedades tiene esta aplicación? Si denotamos la aplicación por $\langle v,\omega\rangle$, entonces:
 \begin{itemize}
 \item $\langle v+v',\omega\rangle=\langle v,\omega\rangle+\langle v',\omega\rangle$
@@ -3329,7 +3338,9 @@ La definición $V\times V^* \rightarrow K$ de forma que $(v,\omega)\rightarrow \
 \end{itemize}
 Es decir, que considerando la función fija para $\omega$ y libre para $v$ lo que tenemos es una forma lineal sobre $V$ y si escogemos la función fija para $v$ y libre para $\omega$, entonces también es una forma lineal sobre $V^*$.
 
-\subsection{Concepto de forma bilineal}
+\subsection{Características de las formas bilineales}
+Vamos aproximarnos primero al concepto de forma bilineal y ver que consecuencias y características tiene sobre las definiciones de espacio vectorial y endomorfismos que venimos desarrollando hasta ahora.
+
 \begin{defi}[Forma Bilineal]
 Sea $f: V\times V\rightarrow K$ una aplicación, se dice que es \textbf{K-bilineal} si es lineal respecto de ambas componentes de la función, es decir, verifica:
 \begin{itemize}
@@ -3349,9 +3360,20 @@ Supongamos que tenemos $\omega_1, \omega_2\in V^*$ y definimos $f(v,w)=\omega_1(
 Supongamos que $V=Mat_n(K)$ y definimos $f(A,C)=tr(A\cdot C)$ y se puede comprobar fácilmente que se verifican las propiedades de bilinealidad.
 \end{ej}
 
-\begin{defi}[Forma Bilineal Degenerada]
-Sea $f$ una forma K-bilineal, decimos que $f$ es \textbf{degenerada} si $rg(f)< n$.
+\begin{defi}[Tipos de formas bilineales]
+Sea $f$ una forma K-bilineal, decimos que $f$ es:
+\begin{itemize}
+\item \textbf{Degenerada}: $rg(f)< n$
+\item \textbf{Definida positiva}: $\forall x,y \in V, \ x,y\neq 0: f(x,y) > 0$
+\item \textbf{Semidefinida positiva}: $\forall x,y \in V: f(x,y) \geq 0$
+\item \textbf{Semidefinida negativa}: $ \forall x,y \in V: f(x,y) \leq 0$
+\item \textbf{Definida negativa}: $ \forall x,y, \ x,y\neq 0 \in V: f(x,y) < 0$
+\end{itemize}
 \end{defi}
+
+\begin{obs}
+Obsérvese que $\forall x \in V: f(x,0) = 0$ y que, por tanto, una forma que es definida positiva o definida negativa tiene por único elemento que cumple $f(v,v) = 0$ al $v=0$.
+\end{obs}
 
 \begin{prop}[Operaciones con formas bilineales]
 El conjunto $Bil(V)$ tiene estructura de espacio vectorial con las operaciones:
@@ -3380,14 +3402,6 @@ donde la matriz de la ecuación es la matriz:
 $$A=\begin{pmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{n1} & \cdots & a_{nm} \end{pmatrix} \mbox{ donde } a_{ij} = f(v_i, v_j)$$
 \end{theo}
 
-\begin{ej}
-Si escogemos $V=Mat_2(K)$ y la base formada por:
-$$E_{11}=\begin{pmatrix} 1 & 0 \\ 0 & 0\end{pmatrix}, E_{12}=\begin{pmatrix} 0 & 1 \\ 0 & 1\end{pmatrix}, E_{21}=\begin{pmatrix} 0 & 0 \\ 1 & 0\end{pmatrix}, E_{22}=\begin{pmatrix} 0 & 0 \\ 0 & 1\end{pmatrix}$$
-Si definimos la forma bilineal como $f(A,C)=tr(A\cdot C)$ vamos a  calcular los coeficientes de su matriz:
-$$\begin{cases} a_{11} = tr(E_{11},E_{11})=tr\cdots = 1\\
-a_{12} = tr(E_{11}, E_{12})= tr \cdots =0 \\ a_{13} = tr(E_{11},E_{21})=tr\cdots = 0 \\ a_{14} = tr(E_{11},E_{22})=tr\cdots = 0 \\ \vdots\end{cases}$$
-\end{ej}
-
 Si suponemos ahora que $B'$ es otra base, entonces la función cambiará a:
 $$f(v,w)=\begin{pmatrix} x_1' & \cdots & x_n'\end{pmatrix}(a'_{ij})\begin{pmatrix} y_1' \\ \vdots \\ y_n' \end{pmatrix} $$
 Por tanto, llamando $P=M(B',B)\in GL_n(K)$ a la matriz de paso de $B'$ a $B$, entonces:
@@ -3401,12 +3415,22 @@ $$\exists P \in GL_n(K) : A' = P^tAP$$
 esta relación es de equivalencia en el espacio $Mat_n(K)$.
 \end{defi}
 
+\begin{ej}
+Si escogemos $V=Mat_2(K)$ y la base formada por:
+$$E_{11}=\begin{pmatrix} 1 & 0 \\ 0 & 0\end{pmatrix}, E_{12}=\begin{pmatrix} 0 & 1 \\ 0 & 1\end{pmatrix}, E_{21}=\begin{pmatrix} 0 & 0 \\ 1 & 0\end{pmatrix}, E_{22}=\begin{pmatrix} 0 & 0 \\ 0 & 1\end{pmatrix}$$
+Si definimos la forma bilineal como $f(A,C)=tr(A\cdot C)$ vamos a  calcular los coeficientes de su matriz:
+$$\begin{cases} a_{11} = tr(E_{11},E_{11})=tr\cdots = 1\\
+a_{12} = tr(E_{11}, E_{12})= tr \cdots =0 \\ a_{13} = tr(E_{11},E_{21})=tr\cdots = 0 \\ a_{14} = tr(E_{11},E_{22})=tr\cdots = 0 \\ \vdots\end{cases}$$
+\end{ej}
+
 \begin{obs}
 Del mismo modo que ocurría con las aplicaciones lineales, ocurre que la aplicación que asocia a cada forma su matriz es un isomorfismo de espacios y, en consecuencia, la dimensión del espacio $Bil(V)$ es:
 $$f\stackrel{\Phi}{\longmapsto} M_B(f)\Rightarrow Bil(V)\simeq Mat_n(K)\Rightarrow \dim Bil(V)=n^2$$
 \end{obs}
 
 \subsection{Simetría y antisimetría}
+Como nos encaminamos a una clasificación general de las formas bilineales, es necesario observar las características de dos tipos fundamentales de formas: las simétricas y las antisimétricas, pues más adelante veremos que son las piezas fundamentales de cualquier forma bilineal.
+
 \begin{defi}[Simetría y Antisimetría]
 Sea $f: V\times V \rightarrow K$ una forma K-bilineal, decimos que $f$ es \textbf{simétrica} si:
 $$f(v,w)=f(w,v)\Rightarrow A=M_B(f)\in Mat_n(K) \mbox{ simétricas}$$
@@ -3452,6 +3476,37 @@ $$0= f(v+w, v+w)\Rightarrow 0= \underbrace{f(v,v)}_{=0}+ f(v,w)+ f(w,v)+ \underb
 Si $f$ es simétrica donde $f\neq 0$, entonces $\exists v\in V: f(v,v)\neq 0$
 \end{coro}
 
+\subsubsection{Forma cuadrática asociada}
+Reviste gran importancia, sobre todo en los capítulos posteriores, el valor que toma la función bilineal sobre el mismo vector como ambas componentes de la función. Hemos visto que podemos caracterizar las formas antisimétricas como aquellas en las que todos los vectores son isótropos. Por ejemplo, para que una forma no sea degenerada, el único vector isótropo debe ser el 0. Por todo esto, tiene sentido definir una nueva función que a cada vector $v\in V$ le asigne su imagen por $f$ como ambas componentes.
+ 
+\begin{defi}[Forma Cuadrática]
+Sea $f$ una forma bilineal, se define su \textbf{forma cuadrática asociada} como la aplicación
+\begin{eqnarray*}
+q:V &\longrightarrow& K \\ v &\longmapsto& f(v,v) 
+\end{eqnarray*}
+\end{defi}
+
+\begin{prop}
+Sea $q: V\rightarrow K$ una forma cuadrática, existe una única forma bilineal $f$ simétrica de la cual es asociada y viene dada por la expresión:
+$$ f(v,w) = \frac{1}{2}\left( q (v+w) -q(v)-q(w)\right)$$
+Es decir, que existe una correspondencia biyectiva entre las formas bilineales simétricas y las formas cuadráticas asociadas.
+\end{prop}
+\begin{demo}
+$$f\in Bil_s(V)\Rightarrow f(v+w,v+w)=\begin{cases} q(v+w) \\ q(v)+q(w)+2f(v,w)\end{cases}\Rightarrow f(v,w) = \frac{1}{2}\left( q (v+w) -q(v)-q(w)\right)$$
+\end{demo}
+
+\begin{obs}
+Es notable destacar que la proposición anterior no se verifica para una forma bilineal en general, por ejemplo, la forma cuadrática nula proviene de cualquier antisimétrica:
+$$f\in Bil_a(V) \Rightarrow q(v) = 0 \mbox{ pero }\Leftarrow \mbox{ no es cierto}$$
+\end{obs}
+
+\begin{obs}
+Cuando hablamos de la matriz de la forma cuadrática no estamos hablando más que de la matriz de la forma bilineal de la que procede, ya que el cálculo sería el mismo que cuando vimos la matriz de la forma bilineal, pero cambiando los $y_i$ por $x_i$.
+\end{obs}
+
+\subsection{Ortogonalidad}
+En este apartado, vamos a tratar de relacionar la ortogonalidad tal y como se definió en el capítulo \nameref{Ortogonalidad dual} con una nueva definición a través de una forma bilineal. De esta manera, el objetivo fundamental es intentar sacar provecho de los resultados que ésta tenía en el espacio dual para utilizarlos en la que se va a ver ahora.
+
 \begin{defi}[Formas Izquierda y Derecha]
 Sea $f:V\times V \rightarrow \mathbb K$ una forma bilineal, definimos la \textbf{forma izquierda} $f_{iz} \in Hom(V,V^*)$ y la \textbf{forma derecha} $f_{d}\in Hom(V,V^*)$ de la forma bilineal como aquellas que verifican que:
 $$f_{iz}: V\rightarrow V^*\mbox{ donde } f_{iz}(v)(w) = f(v,w)$$
@@ -3486,37 +3541,8 @@ Sea $f$ una forma bilineal, entonces:
 $$f \mbox{ no degenerada }\Leftrightarrow f_{iz} \mbox{ isomorfismo o }f_{d} \mbox{ isomorfimo}$$
 \end{prop}
 
-\subsubsection{Forma cuadrática asociada}
-\begin{defi}[Forma Cuadrática]
-Sea $f$ una forma bilineal, se define su \textbf{forma cuadrática asociada} como la aplicación
-\begin{eqnarray*}
-q:V &\longrightarrow& K \\ v &\longmapsto& f(v,v) 
-\end{eqnarray*}
-\end{defi}
-
-\begin{prop}
-Sea $q: V\rightarrow K$ una forma cuadrática, existe una única forma bilineal $f$ simétrica de la cual es asociada y viene dada por la expresión:
-$$ f(v,w) = \frac{1}{2}\left( q (v+w) -q(v)-q(w)\right)$$
-Es decir, que existe una correspondencia biyectiva entre las formas bilineales simétricas y las formas cuadráticas asociadas.
-\end{prop}
-\begin{demo}
-$$f\in Bil_s(V)\Rightarrow f(v+w,v+w)=\begin{cases} q(v+w) \\ q(v)+q(w)+2f(v,w)\end{cases}\Rightarrow f(v,w) = \frac{1}{2}\left( q (v+w) -q(v)-q(w)\right)$$
-\end{demo}
-
-\begin{obs}
-Es notable destacar que la proposición anterior no se verifica para una forma bilineal en general, por ejemplo, la forma cuadrática nula proviene de cualquier antisimétrica:
-$$f\in Bil_a(V) \Rightarrow q(v) = 0 \mbox{ pero }\Leftarrow \mbox{ no es cierto}$$
-\end{obs}
-
-\begin{obs}
-Cuando hablamos de la matriz de la forma cuadrática no estamos hablando más que de la matriz de la forma bilineal de la que procede, ya que el cálculo sería el mismo que cuando vimos la matriz de la forma bilineal, pero cambiando los $y_i$ por $x_i$.
-\end{obs}
-
-\subsection{Clasificación de formas bilineales}
-Del mismo modo que en el tema de clasificación de endomorfismos, tratábamos de agrupar las aplicaciones lineales en clases de equivalencia y escoger el representante más sencillo posible dentro de cada clase, en este apartado vamos a tratar de hacer lo mismo pero con las formas bilineales.
-
 \begin{defi}[Ortogonalidad respecto de una forma bilineal]
-Sea $W<V$, $f\in Bil_a(V)$ y $v,w\in V$, decimos que $v$ y $w$ son \textbf{ortogonales respecto de $f$} si $f(v,w)=0$. Además, se define el ortogonal a un subespacio como:
+Sea $W<V$, $f\in Bil_a(V)$ y $v,w\in V$, decimos que $v$ y $w$ son \textbf{ortogonales respecto de $f$} si $f(v,w)=0$. Además, se define el \textbf{ortogonal a un subespacio} como:
 $$W^\perp=\{v\in V: f(v,w)=0: \forall w\in W\} < V$$
 \end{defi}
 
@@ -3542,6 +3568,37 @@ $$0=f(v,e_1+e_2)=x_1-x_2$$
 Luego el ortogonal de $W$ es $W^\perp$ la propia recta.
 \end{itemize}
 \end{ej}
+
+\subsubsection{Ortogonalidad en productos escalares}
+En primer lugar, vamos a definir la noción de producto escalar, que va a ser fundamental para la comprensión de otros capítulos o áreas como la geometría análitica o el espacio vectorial euclídeo.
+
+\begin{defi}[Producto Escalar]
+Sea $V$ un espacio vectorial sobre $\mathbb{R}$ de dimensión $\dim_{\mathbb R} V = n$ y $f\in Bil_s(V)$ una forma bilineal simétrica, decimos que esta es \textbf{producto escalar} si es bilineal simétrica y definida positiva.
+\end{defi}
+
+Vista la definición, si consideramos $f$ un producto escalar y la siguiente aplicación:
+para cada $v\in V$ le asignamos la aplicación $v^*: V \rightarrow K$ que mapea $w\mapsto f(v,w)$, es decir, la forma bilineal $f$ fija para el vector $v$ o, lo que es lo mismo, la aplicación $f_{iz}(v)$. Entonces la aplicación que a cada $v$ le asigna su correspondiente $v^*$ es un isomorfimos y además canónico por la proposición sobre $f$ no degeneradas.
+
+Por otro lado, tenemos que la correspondencia entre $v$ y la aplicación $\eta_v$ que vimos en el apartado de \nameref{Espacio Bidual} es un isomorfismo canónico entre $V$ y $V^{**}$.
+
+Por tanto, dado $v\in V$ podemos considerar, ya no $L(v)^\perp < V^*$, sino $L(v)^\perp < V$ debido al siguiente razonamiento:
+\begin{itemize}
+\item Consideramos $v^*\in V^*$ y calculamos $L(v^*)^\perp$, de este modo, estamos considerando todos los $\eta_v\in V^{**}$ de modo que $\eta_v(v^*) = 0$, esto es, que $v^*(v) = 0$.
+\item Como, por ser $f$ un producto escalar, tenemos que $v\mapsto v^*$ es un isomorfismo, podemos considerar $L(v)^\perp = L(v^*)^\perp < V^{**}$ por ser $L(v)\simeq L(v^*)$.
+\item Del mismo modo, como también hemos visto que $w\mapsto \eta_w$ es un isomorfismo, entonces $L(v^*)^\perp \simeq W < V$.
+\item Por tanto, cuando escogemos un vector $v$ y decimos que otro vector $w$ es ortogonal a él, estamos diciendo que $\eta_w(v^*) = v^*(w)= f(v,w) = 0 $.
+\end{itemize}
+Surge ahora la pregunta de ¿y para qué todo este razonamiento si me podía limitar a considerar la definición de ortogonalidad previa sin relacionarla con la ortogonalidad del espacio dual? Pues muy sencillo: porque como una es equivalente a la otra a través de isomorfismos todos los enunciados válidos para una también lo son para la otra. De este modo y prácticamente de forma trivial, tenemos el siguiente enunciado.
+
+\begin{prop}
+Sea $V$ un espacio vectorial y $f$ un producto escalar, la ortogonalidad con respecto a $f$ verifica las siguientes propiedades:
+\begin{itemize}
+\item $W\subset U \Rightarrow U^\perp \subset W^\perp$
+\end{itemize}
+\end{prop}
+
+\subsection{Clasificación de formas bilineales}
+Del mismo modo que en el tema de clasificación de endomorfismos, tratábamos de agrupar las aplicaciones lineales en clases de equivalencia y escoger el representante más sencillo posible dentro de cada clase, en este apartado vamos a tratar de hacer lo mismo pero con las formas bilineales.
 
 \begin{theo}[de Clasificación de Formas Antisimétricas]
 Sea $f\in Bil_a(V)$, entonces $rg(f) = 2\cdot s$ y $\exists B =\{v_1, \cdots, v_n\}$ base de $V$ tal que la matriz de $f$ queda como:
@@ -3695,6 +3752,17 @@ $$n\geq \dim (W_1+ W_2) = \dim W_1 + \dim W_2 = s+n-s'\Rightarrow s'\geq s$$
 Por un razonamiento análogo cambiando la base llegaríamos a $s\geq s'$, en consecuencia $s=s'$, implicando $t=t'$.
 \end{demo}
 
+\begin{theo}
+Sea $f\in Bil_s(V)$ y $\dim V = n$, entonces verifica:
+\begin{itemize}
+\item Si $s+t < n$, entonces es \textbf{degenerada}.
+\item Si $\varepsilon(m, 0)$ con $m < n$, entonces es \textbf{semidefinida positiva}.
+\item Si $\varepsilon(0, m)$ con $m < n$, entonces es \textbf{semidefinida negativa}.
+\item Si $\varepsilon(n, 0)$, entonces es \textbf{definida positiva}.
+\item Si $\varepsilon(0, n)$, entonces es \textbf{definida negativa}.
+\end{itemize}
+\end{theo}
+
 \begin{ej}
 Sobre $n= 2$ y $rg(f)=2$ hay 3 clases de equivalencia por congruencia de matrices, una por cada posible signatura:
 $$\varepsilon(f)=(2,0)\Rightarrow f((x_1,x_2),(y_1,y_2)) = x_1y_1+x_2y_2 \Rightarrow \begin{pmatrix} 1 & 0 \\ 0 & 1\end{pmatrix}$$
@@ -3714,40 +3782,45 @@ $$q(x_1,x_2) = x_1^2$$
 $$q(x_1,x_2) = -x_1^2$$
 \end{ej}
 
-\chapter*{ESPACIO VECTORIAL EUCLÍDEO}
-\section*{DEFINICIÓN Y CONCEPTOS BÁSICOS}
-\subsection{Espacio vectorial euclídeo}
-Supongamos que $\dim_{\mathbb R} V = n$ y $f\in Bil_s(V)$ de forma que su signatura es $\varepsilon(f)=(n,0)$, lo que implica que $M_B(f)=I_n$ en alguna base. Decimos que:
-\begin{itemize}
-\item Esta forma es \textbf{producto escalar} si es bilineal simétrica y definida positiva.
-\item La base $B$ para la cual la forma bilineal es la identidad se dice que es una base \textbf{ortonormal}.
-\end{itemize}
-Una pregunta razonables es ver cuanto vale la forma cuadrática asociada, de este modo es evidente que:
-$$q(v)=f(v,v) = (x_1, \cdots, x_n)I_n(x_1,\cdots., x_n) = x_1^2+\cdots+x_n^2$$
 
-Definimos entonces un espacio vectorial euclídeo como un espacio vectorial real de dimensión finita con una operación que conocemos como producto escalar, es decir, $(V,f)$ con las condiciones especificadas se le conoce como espacio vectorial euclideo.
 
-Entonces decimos que dos espacios vectoriales son isomorfos cuando ocurre que:
+\chapter{Espacio Vectorial Euclídeo}
+El espacio vectorial euclídeo es un concepto fundamental que servirá de antesala del espacio afín, la geometría euclídea, la física, etc. Nos permite modelar el espacio n dimensional de $\mathbb{R}$ y estudiar analíticamente las propiedades de dicho espacio. Sin ir más lejos, permite modelar el espacio tridimensional real (o al menos sirve como base) para poder hacer un estudio exhaustivo de la geometría en tres dimensiones, para poder hacer modelos físicos sobre el comportamiento de cierto objeto, etc.
+
+\section{DEFINICIÓN Y CONCEPTOS BÁSICOS}
+\begin{defi}[Base Ortonormal]
+Sea $f$ un producto escalar y $V$ un espacio vectorial euclídeo, entonces la base $B$ para la cual la forma bilineal es la identidad se dice que es una base \textbf{ortonormal}.
+\end{defi}
+
+\begin{defi}[Espacio Vectorial Euclídeo]
+Se define un \textbf{espacio vectorial euclídeo} como una dupla $(V,f)$ formada por un espacio vectorial sobre $\mathbb{R}$ de dimensión finita y un producto escalar.
+
+De este modo, decimos que \textbf{dos espacios vectoriales son isomorfos} cuando:
 $$(V,f) \simeq (V',f')\Leftrightarrow \begin{cases} \exists \phi: V\rightarrow V' \mbox{ isomorfismo} \\ f(\phi(v),\phi(w)) = f(v,w): \forall v,w\in V\end{cases}$$
+\end{defi}
 
-\subsubsection*{Teorema}
-Dos espacios vectoriales euclideos son vectoriales euclideos son isomorfos si y solo si la dimensión de $V$ es la misma que la de $V'$.
+\begin{theo}
+Sean $V$ y $V'$ espacios vectoriales euclídeos, éstos son isomorfos si y solo si la dimensión de $V$ es la misma que la de $V'$, es decir:
 $$(V,f) \simeq (V',f')\Leftrightarrow \dim V = \dim V'$$
-De este razonamiento extraemos que lo que clasifica los espacios euclídeos es la dimensión del espacio vectorial porque si tenemos dos productos escalares distintos basta con definir la aplicación biyectiva que transforma uno en otro y ya son isomorfos.
-
-\underline{Demostración}:
-
+\end{theo}
+\begin{demo}
 La implicación en el sentido derecho está clara por la definición de isomorfismo de espacios euclídeos y por la condición de isomorfismos de espacios vectoriales.
 
 Sea $B=\{v_1, \cdots , v_n\}$ base ortonormal de $V$ respecto de $f$ y $B=\{v_1', \cdots, v_n'\}$ base ortonormal de $V'$ respecto de $f'$, entonces definimos:
 $$\phi\left(\sum_{i=1}^{n}x_iv_i\right)=\sum_{i=1}^{n}x_iv_i'$$
 Esta es la única aplicación lineal que lleva los vectores de la base $B$ a los de la base $V'$ ya tenemos completamente definida la aplicación. Tal y como la hemos definido se tiene que $f(v_i,v_j) = \delta_{ij}$ donde cada $v_i, v_j$ son vectores de la base $B$. De este modo, $f(v_i',v_j') = \delta_{ij}$ también porque hemos dicho que $B'$ es ortonormal respecto de $f'$ luego esto ya prueba la biyectividad, etc.
+\end{demo}
 
-\subsubsection*{Teorema: criterio de Silvester}
-Supongamos que $f\in Bil_s(V)$ y también que $A=(a_{ij})=M_B(f)\in Mat_n(\mathbb R)$ donde $a_{ij} = f(v_i,v_j)$, entonces:
+\begin{obs}
+De este razonamiento extraemos que lo que clasifica los espacios euclídeos es la dimensión del espacio vectorial porque si tenemos dos productos escalares distintos basta con definir la aplicación biyectiva que transforma uno en otro y ya son isomorfos.
+\end{obs}
+
+\begin{theo}[del Criterio de Silvester]
+Sea $f\in Bil_s(V)$ y $A=(a_{ij})=M_B(f)\in Mat_n(\mathbb R)$ donde $a_{ij} = f(v_i,v_j)$, entonces:
 $$f\mbox{ es producto escalar }\Leftrightarrow\begin{vmatrix} a_{11} & \cdots & a_{1i} \\ \vdots & \ddots & \vdots \\ a_{i1} & \cdots & a_{ii}\end{vmatrix} > 0 : \forall i =1, 2, \cdots , n$$
-
-\underline{Demostración}:
+es decir, basta con ver que todos los menores superiores izquierdos son positivos.
+\end{theo}
+\begin{demo}
 \begin{itemize}
 \item $\Rightarrow $:
 
@@ -3775,14 +3848,15 @@ Para completar la demostración falta comprobar que $f(v_{i+1}',v_{i+1}')>0$, ve
 $$M_{\{v_1, \cdots, v_{i+1}\}}(f\mid_{W\times W}) = \begin{pmatrix} a_{11} & \cdots & a_{1i+1} \\ \vdots & \ddots & \vdots \\ a_{i+1,1} & \cdots & a_{i+1,i+1}\end{pmatrix}\Rightarrow B= M_{\{v_1', \cdots v_{i+1}'\}}(f\mid_{W\times W})=\begin{pmatrix} d_1 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & d_{i+1}\end{pmatrix}\Rightarrow$$
 $$\Rightarrow B=C_1\oplus C_2: C_2 = d_{i+1}\Rightarrow |B| = |C_1| \cdot |C_2|\Rightarrow |C_2|>0$$
 \end{itemize}
+\end{demo}
 
-\subsubsection*{Proposición}
-Supongamos que $f$ es una forma bilineal  no degenerada en un espacio vectorial euclideo, vamos a ver que la dimensión de un subespacio ortogonal es la codimensión del subespacio del que es ortogonal.
+\begin{prop}
+Sea $f$ una forma bilineal no degenerada en un espacio vectorial euclideo, la dimensión de un subespacio ortogonal es la codimensión del subespacio del que es ortogonal, es decir:
 $$\dim W^\perp = n-m: \dim W = m$$
-Además si imponemos que $f$ sea un producto escalar, se verifica que:
+Además, si $f$ es producto escalar:
 $$W^\perp \oplus W = V$$
-
-\underline{Demostración}:
+\end{prop}
+\begin{demo}
 \begin{enumerate}
 \item Supongamos que la dimensión es $m$, pues sea $\{w_1, \cdots, w_m\}$ base de $W$, entonces:
 $$v\in W^\perp\Leftrightarrow 0 = f(v,w_i) = f_d(w_i)(v): V\rightarrow V^*$$
@@ -3792,26 +3866,23 @@ De este modo, podemos denominar a $f_d(w_i)=\omega_i\in V^*$ puesto que es una f
 $$v\in W\cap W^\perp \Rightarrow f(v,v)=0\Rightarrow v = 0$$
 Luego como la interseccion es nula y la suma de las dimensiones es todo n entonces queda probado:
 $$\dim W+W^\perp = \dim W + \dim W^\perp -\dim W\cap W^\perp = n = \dim V$$
-
 \end{enumerate}
+\end{demo}
 
-
-
-\subsubsection*{Proposición}
-Si suponemos $f$ definida positiva y $\{w_1, \cdots, w_n\}$ son ortogonales $2$ a $2$, entonces:
+\begin{prop}
+Sea $f$ definida positiva, los vectores ortogonales son independientes.
 $$f(w_i,w_j) = 0\Rightarrow \{w_i, w_j\} \mbox{ independientes}$$
-
-\underline{Demostración}:
+\end{prop}
+\begin{demo}
 $$\lambda_1w_1+\cdots+\lambda_nw_n = 0 \Rightarrow 0 = f(w_i, \lambda_1w_1+\cdots \lambda_nw_n) = \lambda_i\underbrace{f(w_i,w_i)}_{\neq 0}\Rightarrow\lambda_i = 0: \forall i$$
+\end{demo}
 
-\subsection{Bases ortonormales}
-\subsubsection*{Base ortogonal: método de Gram-Schimdt}
-Vamos a ver un procedimiento para obtener a partir de una base dada, una ortogonal del espacio vectorial euclideo. Sea $(V,f)$ un espacio vectorial euclídeo:
-$$B=\{v_1, \cdots, v_n\}\Rightarrow \begin{cases} v_1' = v_1  \\ v_2' = v_2 + \lambda_{2,1}v_1' \\ v_3' = v_3 + \lambda_{3,2}v_2' + \lambda_{3,1}v_1' \\ \vdots \\ v_n' = v_n + \lambda_{n,n-1}v_{n-1}'+\cdots + \lambda_{n,1}v_1'\end{cases}$$
-Es decir, podemos encontrar $\lambda_{i,j}\in \mathbb R$ únicos de forma que la base formada por esos vectores sea ortogonal respecto de $f$.
-
-\underline{Demostración}:
-
+\begin{theo}[Método de Gram-Schimdt]
+Sea $(V,f)$ un espacio vectorial euclídeo y $B=\{v_1, \cdots, v_n\}$ una base de $V$, entonces
+$$B'= \begin{cases} v_1' = v_1  \\ v_2' = v_2 + \lambda_{2,1}v_1' \\ v_3' = v_3 + \lambda_{3,2}v_2' + \lambda_{3,1}v_1' \\ \vdots \\ v_n' = v_n + \lambda_{n,n-1}v_{n-1}'+\cdots + \lambda_{n,1}v_1'\end{cases}$$
+forma una base ortogonal de $V$, es decir, podemos encontrar $\lambda_{i,j}\in \mathbb R$ únicos de forma que la base formada por esos vectores sea ortogonal respecto de $f$.
+\end{theo}
+\begin{demo}
 Primero vamos a ver como encontrar estos $\lambda_{i,j}$ \textbf{únicos} conociendo que la base formada debe ser ortogonal:
 $$0 = f(v_2',v_1') = f(v_2+\lambda_{2,1}v_1, v_1) = f(v_2,v_1)+\lambda_{2,1}f(v_1,v_1)\Rightarrow \lambda_{2,1} = -\frac{f(v_2,v_1)}{f(v_1,v_1)}$$
 Para el caso $v_3'$ se imponen de nuevo las condiciones que sean necesarias:
@@ -3824,20 +3895,22 @@ $$v_i''= \frac{v_i'}{\sqrt{f(v_i',v_i')}}$$
 Vamos a comprobarlo:
 $$f(v_i'', v_i'')=f\left(\frac{v_i'}{\sqrt{f(v_i',v_i')}},\frac{v_i'}{\sqrt{f(v_i',v_i')}}\right) = \frac{1}{f(v_i',v_i')}f(v_i',v_i') = 1$$
 Es notable destacar que la matriz de el produto escalar en esta base es la matriz identidad, porque todos los vectores son ortogonales dos a dos y ellos mismos son 1.
+\end{demo}
 
-\subsubsection*{Norma de un vector}
-Supongamos que $f$ es un producto escalar en un espacio vectorial euclídeo vamos a definir la norma de un vector como:
+\begin{defi}[Norma de un vector]
+Sea $f$ producto escalar en un espacio vectorial euclídeo, se define la \textbf{norma de un vector} como:
 $$||v|| = \sqrt{f(v,v)} =\sqrt{q(v)}$$
-Esta nueva función que denominamos módulo es una función que cumple:
-$$||\cdot||: V\rightarrow \mathbb R$$
-Y posee las siguientes propiedades:
+\end{defi}
+
+\begin{prop}
+La función norma definida anteriormente $||\cdot||: V\rightarrow \mathbb R$, cumple las siguientes propiedades:
 \begin{itemize}
 \item $||v||\geq 0, \ ||v||=0\Leftrightarrow v=0$
 \item $||\lambda v|| = |\lambda|\cdot ||v||$
 \item $||v+w||\leq ||v||+||w||$
 \end{itemize}
-
-\underline{Demostración}:
+\end{prop}
+\begin{demo}
 \begin{itemize}
 \item Trivial
 \item Por biliniealidad
@@ -3857,26 +3930,32 @@ Además, recuperando la desigualdad de Schawrz podemos dar otra interpretación 
 $$\frac{|f(v,w)|}{||v||\cdot ||w||} \leq 1\Rightarrow -1\leq \underbrace{\frac{f(v,w)}{||v||\cdot ||w||}}_{\cos(\varphi)}\leq 1: 0\leq \varphi \leq \pi$$
 Es decir, que podemos entender el producto escalar como una forma de relacionar los módulos de los vectores y el ángulo que los relaciona.
 \end{itemize}
+\end{demo}
 
-\subsection{Endomorfismos autoadjuntos}
-Definimos un endomorfismo autoadjunto respecto de $f$, en el contexto de un espacio vectorial euclideo con un producto escalar, como $\phi\in End(V)$ que cumple que:
+\begin{defi}[Endomorfismos Autoadjuntos]
+Sea $(V,f)$ un espacio vectorial euclídeo y $\phi\in End(V)$, decimos que es un \textbf{endomorfismo autoadjunto respecto de $f$} si cumple que:
 $$f(\phi(v),w) = f(v,\phi(w)): \forall v,w\in V$$
+\end{defi}
+
+\begin{prop}
+Sea $(V,f)$ un espacio vectorial euclídeo, $\phi \in End(V)$ un endomorfismo y $C = M_B(f)$, entonces:
+$$\phi \mbox{ autoadjunto } \Leftrightarrow A^tC=CA$$
+Además, cómo podemos elegir una base conveniente sobre la que $M_{B'}(f) = I$, entonces se tiene también:
+$$\phi \mbox{ autoadjunto } \Leftrightarrow A^t=A$$
+\end{prop}
+\begin{demo}
 Si definimos una base $B$ de $V$ y llamamos $A=M_B(\phi)$ y $C=M_B(f)$, entonces siendo $v=(x_1, \cdots, x_n)$ y $w=(y_1, \cdots, y_n)$ se tiene:
 $$(x_1, \cdots, x_n) A^tC \begin{pmatrix} y_1 \\ \vdots \\ y_n\end{pmatrix} = (x_1, \cdots, x_n)CA\begin{pmatrix} y_1 \\ \vdots \\ y_n\end{pmatrix}$$
 Por tanto, $\phi$ es autoadjunto si y solo si:
 $$A^tC=CA$$
 Del mismo modo, si elegimos $B$ convenientemente hemos visto que la matriz de $f$ es $I$ luego el endomorfismo $\phi$ en esa base cumple que:
 $$A=A^t$$
+\end{demo}
 
-\subsection{Teorema Espectral}
-Supongamos que $(V,f)$ es un espacio vectorial euclídeo si $\phi\in End(V)$ es autoadjunto entonces existe una base $B$ de $V$ ortonormal respecto de $f$ formada por vectores propios respecto de $\phi$.
-
-Es muy notable destacar que si tenemos $(\mathbb R^n, \cdot)$ con un producto escalar y un endomorfismo autoadjunto $\phi$ de manera que en la base dada $M_B(\phi) = A$ no diagonal pero simétrica y $M_B(f) = I_n$, entonces si aplicamos este teorema y cambiamos a una base ortonormal donde $\phi$ sea diagonal, vemos que:
-$$M_{B'}(f) = P^t M_B(f) P \Rightarrow I_n = P^t I_n P\Rightarrow P^t =P^{-1}$$
-Es decir, que, en consecuencia, $\phi$ se diagonaliza simultáneamente por congruencia y por semejanza.
-
-\underline{Demostración}:
-
+\begin{theo}[Espectral]
+Sea $(V,f)$ un espacio vectorial euclídeo, si $\phi\in End(V)$ es autoadjunto entonces existe una base $B$ de $V$ ortonormal respecto de $f$ formada por vectores propios respecto de $\phi$.
+\end{theo}
+\begin{demo}
 Vamos a ver primero que $q_\phi$ descompone completamente, para ello supongamos que $f = x^2+a_1x+a_0\in R[x]$ irreducible de forma que $f\mid q_\phi$, entonces $\exists v\in V: v\neq 0: q_{\phi,v} = f$. Para buscarlo, en primer lugar vemos que podemos escribir $q_\phi$ de esta manera:
 $$q_\phi = f^a \cdot g_ a\geq 1 \ \wedge f\nmid g$$
 De este modo, vimos en el Teorema de Caley Hamilton que siempre existe un $w\in V: q_{\phi, w} = f^a$ y ahora para elegir el $v$ basta con seleccionarlo de esta forma:
@@ -3910,72 +3989,93 @@ Sin embargo, aunque hemos demostrado que en esa cierta base $\phi$ es diagonal, 
 $$f(\phi(v_i), v_j) = f(v_i, \phi(v_j))\Rightarrow f(\lambda_iv_i, v_j) = f(v_i, \lambda_j v_j) \Rightarrow \lambda_i f(v_i,v_j) = \lambda_j f(v_i,v_j)\Rightarrow$$
 $$\Rightarrow (\underbrace{\lambda_i -\lambda_j}_{\neq 0})f(v_i,v_j) = 0\Rightarrow f(v_i, v_j) = 0$$
 Así que sabemos que todos los vectores entre $B_i$ distintas ya son ortogonales. Para poder terminar, si restrinjo a cada subespacio propio el producto escalar, este sigue siendo un producto escalar y, en consecuencia, existe una base ortonormal para cada $V_{\phi, \lambda_i}$ formada además por vectores propios así que ya he terminado.
+\end{demo}
 
-\section*{APLICACIONES ORTOGONALES}
-\subsection{Definición y características}
-En el contexto de un espacio vectorial euclídeo $(V,f)$ decimos que una aplicación $\phi: V\rightarrow V$ conserva $f$ si verifica que:
+\begin{obs}
+Supongamos que tenemos $(\mathbb R^n, \cdot)$ con un producto escalar y un endomorfismo autoadjunto $\phi$. Si escogemos una base ortonormal $B$ de manera $M_B(\phi) = A$ no sea diagonal y, aplicando el teorema, cambiamos a una base ortonormal donde $M_{B'}(\phi) = A'$ sea diagonal, vemos que:
+$$M_{B'}(f) = P^t M_B(f) P \Rightarrow I_n = P^t I_n P\Rightarrow P^t =P^{-1}$$
+es decir, que, en consecuencia, $\phi$ se diagonaliza simultáneamente por congruencia y por semejanza, ya que:
+$$A' = P^{-1}AP = P^tAP$$
+\end{obs}
+
+\section{APLICACIONES ORTOGONALES}
+Las aplicaciones ortogonales son aplicaciones de gran importancia pues conservan el producto escalar, esto quiere decir, en términos geométricos que respetan el ``ángulo'' (puesto que aún no hemos definido la noción de ángulo) que forman varios vectores entre sí. Cabe destacar que hemos dicho que únicamente respetan la posición relativa entre ellos, no que no deformen dichos vectores aumentando su módulo o disminuyéndolo.
+
+\subsection{Características de las aplicaciones ortogonales}
+Primero vamos aproximarnos al concepto de aplicación ortogonal y ver que consecuencias tiene con las definiciones de espacio vectorial euclídeo que se han dado. Una vez conozcamos los detalles técnicos que las hacen tan especiales, estaremos listos para poder clasificar en su conjunto los tipos de aplicaciones en cada dimensión.
+
+\begin{defi}[Aplicación Conservativa]
+Sea $(V,f)$ un espacio vectorial euclídeo y $\phi \in End(V)$, decimos que \textbf{$\phi$ conserva $f$} si verifica que:
 $$f(\phi(v),\phi(w)) = f(v,w): \forall v,w\in V$$
+\end{defi}
+
+\begin{prop}
 Si $\phi$ conserva f, entonces $\phi$ es $\mathbb{R}$-lineal.
-
-\underline{Demostración}:
-
+\end{prop}
+\begin{demo}
 Es lineal ya que: $\begin{cases} \phi(v+w) = \phi(v)+\phi(w) \\ \phi(\lambda v) = \lambda \phi(v) \end{cases}$. Para comprobar, por ejemplo, la segunda:
 $$f(\phi(\lambda v) - \lambda \phi(v),\phi(\lambda v) - \lambda \phi(v)) = f(\phi(\lambda v), \phi(\lambda v)) + \lambda^2 f(\phi(v),\phi(v)) - 2\lambda f(\phi(\lambda v), \phi(v)) $$
 Como f es producto escalar
 $$= f(\lambda v, \lambda v) + \lambda^2 f(v,v) -2\lambda f(\lambda v, v) = \lambda^2 f(v,v) + \lambda^2 f(v,v) - 2\lambda^2 f(v,v) = 0$$
 Para comprobar la primera de las condiciones habría que ver que:
 $$ f(\phi(v+w) - \phi(v) - \phi(w), \phi(v+w) - \phi(v) - \phi(w))$$
+\end{demo}
 
-\subsubsection*{Aplicación ortogonal}
-Decimos que $\phi: V\rightarrow V$ es una aplicación ortogonal si:
-\begin{itemize}
-\item $\phi$ es lineal
-\item $\phi$ conserva f
-\end{itemize}
-Vamos a denominar $O(V) = \{\phi\in End(V): \phi \mbox{ ortogonal}\}$.
+\begin{defi}[Aplicación Ortogonal]
+Sea $(V,f)$ un espacio vectorial euclídeo y $\phi\in End(V)$, decimos que $\phi$ es una \textbf{aplicación ortogonal} si $\phi$ es lineal y conserva $f$.
+Denotamos por $O(V) = \{\phi\in End(V): \phi \mbox{ ortogonal}\}$ al conjunto de aplicaciones ortogonales.
+\end{defi}
 
-\underline{\textbf{Propiedades}}:
+\begin{prop}[Grupo Ortogonal]
+Sea $(V,f)$ un espacio vectorial euclídeo, las aplicaciones ortogonales verifican las siguientes propiedades:
 \begin{itemize}
 \item $\phi \in O(V)\Rightarrow \mbox{ biyectiva}$
 \item $\phi\in O(V)\Rightarrow \phi^{-1}\in O(V)$
 \item $\phi,\psi \in O(V)\Rightarrow \psi \circ \phi \in O(V)$
 \end{itemize}
-Estas aplicaciones junto con la composición, forman lo que se conoce como \textbf{Grupo Ortogonal} $\left(O(v),\circ \right)$.
-
-\underline{Demostración}:
+Por tanto, el conjutno de aplicaciones ortogonales con operación de composición forman lo que se conoce como \textbf{Grupo Ortogonal} $\left(O(v),\circ \right)$.
+\end{prop}
+\begin{demo}
 \begin{enumerate}
 \item Por ser un endomorfismo, basta con probar que es inyectiva, así que:
 $$v\in \ker \phi \Rightarrow \phi(v) = 0 \Rightarrow f(\phi (v), \phi (v)) = f(v,v) = 0 \Rightarrow v= 0$$
 \item Como es biyectiva, existe la inversa y entonces es trivial comprobar que es ortogonal.
 \item Trivial
 \end{enumerate}
+\end{demo}
 
-Vimos en su momento que el conjunto de endomorfismos que sean isomorfismos se denotaba por $GL(V)$, de modo que $(GL(V),\circ)$ formaba de nuevo un grupo. Es sencillo ver que $O(V)<GL(V)$ y entonces ocurre que:
-$$GL(V)\simeq Gl_n(\mathbb R)\Rightarrow O(V)\simeq Mat_n(V): A^t = A^{-1}$$
+\begin{obs}
+El conjunto de isomorfismos se denotaba por $GL(V)$, de modo que $(GL(V),\circ)$ tenía estructura de grupo. Es sencillo ver que $O(V)<GL(V)$ y como $GL(V)\simeq Mat_n(K)$ es sencillo demostrar que $O(V)\simeq \{A\in Mat_n(K): A^t = A^{-1}\}$.
+\end{obs}
 
-\subsubsection*{Orientación de las bases}
-Sean B,B' bases\footnote{La base canónica $B_c$ de $\mathbb{R}^n$ es positiva por convenio.} de $V$ y $P=M(B',B) \in GL_n(\mathbb{R})$ hay dos posibilidades:
-$$\begin{cases} |P|>0 & \Rightarrow \mbox{B y B' tienen la misma orientación} \\ |P|<0 & \Rightarrow \mbox{B y B' tienen distinta orientación} \end{cases}$$
-De este modo, si tenemos $\phi \in GL(V)$ y tomamos $B=\{ v_1, \ldots, v_n\}$, $B'=\{ \phi(v_1), \ldots, \phi(v_n)\}$, entonces ser verifica que:
+\begin{defi}[Orientación de una Base]
+Sean $B$, $B'$ bases\footnote{La base canónica $B_c$ de $\mathbb{R}^n$ es positiva por convenio.} de $V$ y $P=M(B',B) \in GL_n(\mathbb{R})$ la matriz de cambio entre ambas, decimos que:
+$$\begin{cases} |P|>0 & \Rightarrow \mbox{B y B' tienen la \textbf{misma orientación}} \\ |P|<0 & \Rightarrow \mbox{B y B' tienen \textbf{distinta orientación}} \end{cases}$$
+\end{defi}
+
+De este modo, si tenemos $\phi \in GL(V)$ y tomamos una base cualquiera $B=\{ v_1, \ldots, v_n\}$ y consideramos la base resultante de las imágenes de los vectores a través de $\phi$ que denotamos por $B'=\{ \phi(v_1), \ldots, \phi(v_n)\}$, entonces se verifica que:
 $$M(B', B) = M_B (\phi) = A\Rightarrow \begin{cases} |A| > 0 \\ |A| < 0 \end{cases}$$
-Es decir, que podemos diferenciar tanto en $GL(V)$ como en $O(V)$ dos grupos de aplicaciones, las que conservan la orientación de las bases y las que invierten esta orientación:
-$$GL(V) = GL^+ (V) \dot{\cup} GL^- (V)$$
-$$O(V) = O^+ (V) \dot{\cup} O^- (V)$$
+Por tanto, podemos distinguir en $GL(V)$ (y por extensión en $O(V)$) dos grupos de aplicaciones, las que conservan la orientación de las bases y las que invierten esta orientación.
 
-\underline{\textbf{Ejemplos}}
+\begin{defi}[Grupo Conservativo e Inversivo]
+Sea $GL(V)$ el conjunto\footnote{La definición es completamente válida y análoga para el grupo $O(V)$.} de isomorfimos de un espacio vectorial en sí mismo, definimos $GL^+(V)$ como el grupo de isomorfismos que conservan la orientación de las bases y $GL^-(V)$ como el que las invierte. Además, la unión de ambos es el total:
+$$GL(V) = GL^+ (V) \sqcup GL^- (V)$$
+\end{defi}
 
+\begin{ej}
 Podemos descomponer $\mathbb{R}^n = W \oplus W^\perp$ porque en este contexto $f$ es un producto escalar y entonces la suma es directa.
 
-Si consideramos $\phi:\mathbb{R}^n  \to \mathbb{R}^n$ la simetría\footnote{Si la base de la simetría es un hiperplano, se la denota por especular. Si la base es una recta, decimos que es axial} ortogonal respecto de W (simetría con base W y dirección $W^\perp$). Para ver que es ortogonal vamos a tomar dos vectores cuales quiera y vamos a ver si se verifican las premisas de ortogonalidad:
+Si consideramos $\phi:\mathbb{R}^n  \to \mathbb{R}^n$ la simetría ortogonal respecto de W (simetría con base W y dirección $W^\perp$). Para ver que es ortogonal vamos a tomar dos vectores cuales quiera y vamos a ver si se verifican las premisas de ortogonalidad:
 $$\begin{cases} v_1 \in \mathbb{R}^n : v_1 = w_1 + w'_1 \\ v_2 \in \mathbb{R}^n : v_2 = w_2 + w'_2 \end{cases}$$
 Sabiendo que las simetrías ya son aplicaciones lineales, vemos si conserva el producto escalar definido:
 $$\begin{cases} f(\phi(v_1), \phi(v_2)) = f( w_1 - w'_1,w_2 - w'_2) = f(w_1, w_2) + f(w'_1,w'_2) \\ f(v_1, v_2) = f(w_1+w_1', w_2+w_2') = f(w_1, w_2) + f(w_1', w_2') \end{cases}\Rightarrow f(\phi(v_1), \phi(v_2)) = f(v_1, v_2)$$
 Luego es una aplicación ortogonal.
 
 Por el contrario, hay que tener cuidado porque no siempre podemos verificar esto. Ocurre que sea $\phi:\mathbb{R}^n  \to \mathbb{R}^n$ la proyección ortogonal respecto de W [proyección con base W y dirección $W^\perp$] no es una aplicación ortogonal porque a pesar de que descompone como suma directa de subespacios, no es biyectiva.
+\end{ej}
 
-\subsubsection*{Propiedades}
-Supongamos que $\phi\in End(V)$, que $A = M_B(\phi)$ y que $C = M_B(f)$, se verifican:
+\begin{prop}[Propiedades de las aplicaciones ortogonales]
+Sea $\phi\in End(V)$ con matriz asociada $A = M_B(\phi)$ y $f$ un producto escalar con matriz $C = M_B(f)$, se verifican:
 \begin{itemize}
 \item $\phi\in O(V)\Leftrightarrow A^t C A = C $
 
@@ -3983,12 +4083,12 @@ Supongamos que $\phi\in End(V)$, que $A = M_B(\phi)$ y que $C = M_B(f)$, se veri
 
 \item $\phi \in O(V)\Rightarrow |A| = \pm 1: \begin{cases} \phi \in O^+(V) & \Rightarrow |\phi| = 1 \\ \phi \in O^-(V) & \Rightarrow |\phi| = -1\end{cases}$
 
-\item Los únicos autovalores posibles son $\phi\in O(V)\Rightarrow \sigma(\phi) \subset \{-1, 1\}$
+\item Los únicos autovalores posibles son $\sigma(\phi) \subset \{-1, 1\}$
 
-\item $\phi\in O(V) \ \wedge W<_\phi V\Rightarrow W^\perp <_\phi V \ \wedge V = W \oplus W^\perp$
+\item $\phi\in O(V) \mbox{ y } W<_\phi V \Rightarrow W^\perp <_\phi V$. Además, $V = W \oplus W^\perp$.
 \end{itemize}
-
-\underline{Demostración}:
+\end{prop}
+\begin{demo}
 \begin{itemize}
 \item Trivialmente por la definición que se ha dado de aplicación ortogonal: $f(\phi(v),\phi(w)) = f(v,w)$
 \item De la primera se deduce fácilmente por ser $C=I_n$ en base ortonormal.
@@ -4001,8 +4101,11 @@ $$\phi \in O(V) \mbox{ y la dimensión es finita }\Rightarrow \phi:V\to V \mbox{
 De este modo, puedo considerar $w$ como $\phi(w')$ para algún $w'\in W$ luego se tiene que:
 $$f(\phi(v), w) = f(\phi(v),\phi(w') = f(v,w') = 0$$
 \end{itemize}
+\end{demo}
 
 \subsection{Clasificación de aplicaciones ortogonales}
+Nuestro objetivo ahora es el que viene siendo en los capítulos anteriores, poder llegar a un conjunto de clases de equivalencia en las que poder meter todas las aplicaciones de cierto tipo y elegir un representante adecuado para dicha clase.
+
 \underline{\textbf{Dimensión 1}}
 
 Si tomamos $\dim V = 1$, entonces tenemos que:
@@ -4108,9 +4211,10 @@ $$V = \pi \oplus \pi^\perp$$
 Restringimos de nuevo $\phi\mid_{\pi^\perp}$ que sigue siendo ortogonal y en ese trozo la matriz que conforma ya cumple las hipótesis. Los vectores de $\pi$ son ortogonales a los del perpendicular y podemos seleccionarlos de forma que conformen una base ortonormal en $\pi$ por lo que compondrán una de las cajas que habíamos definido como rotaciones.
 \end{itemize}
 
-\chapter*{ESPACIO AFÍN}
-Con este concepto buscamos enriquecer la estructura que habíamos denominado como espacio vectorial euclídeo e ir preparando el terreno para introducir los conceptos de geometría y estudio de coordenadas baricéntricas, para ello también se empiezan a introducir nociones de puntos, posiciones relativas, paralelismo...
-\section*{DEFINICIÓN Y CONCEPTOS BÁSICOS}
+\chapter{Espacio Afín}
+Con esta nueva estructura oncepto buscamos enriquecer la estructura que habíamos denominado como espacio vectorial euclídeo e ir preparando el terreno para introducir los conceptos de geometría y estudio de coordenadas baricéntricas, para ello también se empiezan a introducir nociones de puntos, posiciones relativas, paralelismo...
+
+\section{DEFINICIÓN Y CONCEPTOS BÁSICOS}
 Una terna $(A,V,\varphi)$ es un espacio afín si:
 \begin{enumerate}
 \item $A \neq \emptyset$
