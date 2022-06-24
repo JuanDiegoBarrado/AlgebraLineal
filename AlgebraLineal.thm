@@ -105,9 +105,10 @@
 \contentsline {prop}{{Proposición}{21}{}}{52}{prop.21}%
 \contentsline {demo}{{\underline {Demostración}:}{27}{}}{52}{demo.27}%
 \contentsline {ej}{{\underline {Ejemplo}:}{15}{}}{53}{ej.15}%
+\contentsline {obs}{{\underline {Observación}:}{12}{}}{53}{obs.12}%
 \contentsline {defi}{{Definición}{20}{Semejanza de Aplicaciones}}{57}{defi.20}%
 \contentsline {defi}{{Definición}{21}{Semejanza de Matrices}}{57}{defi.21}%
-\contentsline {obs}{{\underline {Observación}:}{12}{}}{57}{obs.12}%
+\contentsline {obs}{{\underline {Observación}:}{13}{}}{57}{obs.13}%
 \contentsline {defi}{{Definición}{22}{Polinomio Mínimo de un Endomorfismo}}{58}{defi.22}%
 \contentsline {prop}{{Proposición}{22}{}}{58}{prop.22}%
 \contentsline {defi}{{Definición}{23}{Polinomio Mínimo de una Matriz}}{58}{defi.23}%
@@ -127,7 +128,7 @@
 \contentsline {defi}{{Definición}{26}{Polinomio Característico}}{61}{defi.26}%
 \contentsline {prop}{{Proposición}{27}{}}{61}{prop.27}%
 \contentsline {demo}{{\underline {Demostración}:}{32}{}}{62}{demo.32}%
-\contentsline {obs}{{\underline {Observación}:}{13}{}}{62}{obs.13}%
+\contentsline {obs}{{\underline {Observación}:}{14}{}}{62}{obs.14}%
 \contentsline {defi}{{Definición}{27}{Espectro}}{62}{defi.27}%
 \contentsline {prop}{{Proposición}{28}{}}{62}{prop.28}%
 \contentsline {demo}{{\underline {Demostración}:}{33}{}}{62}{demo.33}%
@@ -140,16 +141,16 @@
 \contentsline {prop}{{Proposición}{29}{}}{65}{prop.29}%
 \contentsline {demo}{{\underline {Demostración}:}{37}{}}{65}{demo.37}%
 \contentsline {defi}{{Definición}{28}{Subespacios Propios}}{66}{defi.28}%
-\contentsline {obs}{{\underline {Observación}:}{14}{}}{66}{obs.14}%
-\contentsline {defi}{{Definición}{29}{Multiplicidades Algebraicas y Dimensión geométrica}}{66}{defi.29}%
 \contentsline {obs}{{\underline {Observación}:}{15}{}}{66}{obs.15}%
+\contentsline {defi}{{Definición}{29}{Multiplicidades Algebraicas y Dimensión geométrica}}{66}{defi.29}%
+\contentsline {obs}{{\underline {Observación}:}{16}{}}{66}{obs.16}%
 \contentsline {prop}{{Proposición}{30}{}}{66}{prop.30}%
 \contentsline {demo}{{\underline {Demostración}:}{38}{}}{66}{demo.38}%
 \contentsline {defi}{{Definición}{30}{Diagonalizabilidad}}{67}{defi.30}%
 \contentsline {ej}{{\underline {Ejemplo}:}{19}{}}{67}{ej.19}%
 \contentsline {prop}{{Proposición}{31}{}}{67}{prop.31}%
 \contentsline {demo}{{\underline {Demostración}:}{39}{}}{67}{demo.39}%
-\contentsline {obs}{{\underline {Observación}:}{16}{}}{67}{obs.16}%
+\contentsline {obs}{{\underline {Observación}:}{17}{}}{67}{obs.17}%
 \contentsline {ej}{{\underline {Ejemplo}:}{20}{}}{68}{ej.20}%
 \contentsline {prop}{{Proposición}{32}{}}{68}{prop.32}%
 \contentsline {demo}{{\underline {Demostración}:}{40}{}}{68}{demo.40}%
@@ -159,44 +160,44 @@
 \contentsline {demo}{{\underline {Demostración}:}{42}{}}{69}{demo.42}%
 \contentsline {ej}{{\underline {Ejemplo}:}{21}{}}{69}{ej.21}%
 \contentsline {defi}{{Definición}{31}{Triangularizabilidad}}{70}{defi.31}%
-\contentsline {obs}{{\underline {Observación}:}{17}{}}{70}{obs.17}%
+\contentsline {obs}{{\underline {Observación}:}{18}{}}{70}{obs.18}%
 \contentsline {theo}{{Teorema}{13}{}}{70}{theo.13}%
 \contentsline {demo}{{\underline {Demostración}:}{43}{}}{70}{demo.43}%
 \contentsline {defi}{{Definición}{32}{Subepacios Invariantes}}{71}{defi.32}%
-\contentsline {obs}{{\underline {Observación}:}{18}{}}{72}{obs.18}%
+\contentsline {obs}{{\underline {Observación}:}{19}{}}{72}{obs.19}%
 \contentsline {prop}{{Proposición}{35}{}}{72}{prop.35}%
 \contentsline {prop}{{Proposición}{36}{}}{72}{prop.36}%
-\contentsline {obs}{{\underline {Observación}:}{19}{}}{72}{obs.19}%
+\contentsline {obs}{{\underline {Observación}:}{20}{}}{72}{obs.20}%
 \contentsline {lema}{{Lema}{5}{}}{72}{lema.5}%
 \contentsline {demo}{{\underline {Demostración}:}{44}{}}{72}{demo.44}%
 \contentsline {defi}{{Definición}{33}{Matriz diagonal por cajas}}{73}{defi.33}%
 \contentsline {ej}{{\underline {Ejemplo}:}{22}{}}{73}{ej.22}%
-\contentsline {obs}{{\underline {Observación}:}{20}{}}{74}{obs.20}%
+\contentsline {obs}{{\underline {Observación}:}{21}{}}{74}{obs.21}%
 \contentsline {theo}{{Teorema}{14}{Subespacios Cíclicos}}{74}{theo.14}%
 \contentsline {demo}{{\underline {Demostración}:}{45}{}}{75}{demo.45}%
 \contentsline {theo}{{Teorema}{15}{de Estructura}}{75}{theo.15}%
 \contentsline {demo}{{\underline {Demostración}:}{46}{}}{75}{demo.46}%
-\contentsline {obs}{{\underline {Observación}:}{21}{}}{76}{obs.21}%
+\contentsline {obs}{{\underline {Observación}:}{22}{}}{76}{obs.22}%
 \contentsline {theo}{{Teorema}{16}{de clasificación: forma canónica racional}}{77}{theo.16}%
 \contentsline {demo}{{\underline {Demostración}:}{47}{}}{77}{demo.47}%
-\contentsline {obs}{{\underline {Observación}:}{22}{}}{77}{obs.22}%
+\contentsline {obs}{{\underline {Observación}:}{23}{}}{77}{obs.23}%
 \contentsline {defi}{{Definición}{34}{Endomorfismos nilpotentes}}{78}{defi.34}%
-\contentsline {obs}{{\underline {Observación}:}{23}{}}{78}{obs.23}%
-\contentsline {defi}{{Definición}{35}{Matriz Elemental de Jordan}}{78}{defi.35}%
 \contentsline {obs}{{\underline {Observación}:}{24}{}}{78}{obs.24}%
+\contentsline {defi}{{Definición}{35}{Matriz Elemental de Jordan}}{78}{defi.35}%
+\contentsline {obs}{{\underline {Observación}:}{25}{}}{78}{obs.25}%
 \contentsline {ej}{{\underline {Ejemplo}:}{23}{}}{78}{ej.23}%
 \contentsline {ej}{{\underline {Ejemplo}:}{24}{}}{80}{ej.24}%
 \contentsline {ej}{{\underline {Ejemplo}:}{25}{}}{80}{ej.25}%
 \contentsline {defi}{{Definición}{36}{Formas Lineales y Espacio Dual}}{83}{defi.36}%
-\contentsline {obs}{{\underline {Observación}:}{25}{}}{84}{obs.25}%
+\contentsline {obs}{{\underline {Observación}:}{26}{}}{84}{obs.26}%
 \contentsline {ej}{{\underline {Ejemplo}:}{26}{}}{84}{ej.26}%
 \contentsline {prop}{{Proposición}{37}{Base Dual}}{84}{prop.37}%
 \contentsline {demo}{{\underline {Demostración}:}{48}{}}{84}{demo.48}%
 \contentsline {ej}{{\underline {Ejemplo}:}{27}{}}{84}{ej.27}%
-\contentsline {obs}{{\underline {Observación}:}{26}{}}{84}{obs.26}%
+\contentsline {obs}{{\underline {Observación}:}{27}{}}{84}{obs.27}%
 \contentsline {prop}{{Proposición}{38}{}}{85}{prop.38}%
 \contentsline {defi}{{Definición}{37}{Aplicación dual}}{85}{defi.37}%
-\contentsline {obs}{{\underline {Observación}:}{27}{}}{85}{obs.27}%
+\contentsline {obs}{{\underline {Observación}:}{28}{}}{85}{obs.28}%
 \contentsline {prop}{{Proposición}{39}{}}{85}{prop.39}%
 \contentsline {prop}{{Proposición}{40}{}}{85}{prop.40}%
 \contentsline {demo}{{\underline {Demostración}:}{49}{}}{85}{demo.49}%
@@ -208,21 +209,21 @@
 \contentsline {theo}{{Teorema}{17}{Principio de dualidad}}{88}{theo.17}%
 \contentsline {prop}{{Proposición}{43}{}}{88}{prop.43}%
 \contentsline {demo}{{\underline {Demostración}:}{51}{}}{88}{demo.51}%
-\contentsline {obs}{{\underline {Observación}:}{28}{}}{88}{obs.28}%
+\contentsline {obs}{{\underline {Observación}:}{29}{}}{88}{obs.29}%
 \contentsline {defi}{{Definición}{40}{Forma Bilineal}}{89}{defi.40}%
 \contentsline {ej}{{\underline {Ejemplo}:}{28}{}}{89}{ej.28}%
 \contentsline {ej}{{\underline {Ejemplo}:}{29}{}}{89}{ej.29}%
 \contentsline {defi}{{Definición}{41}{Tipos de formas bilineales}}{89}{defi.41}%
-\contentsline {obs}{{\underline {Observación}:}{29}{}}{89}{obs.29}%
+\contentsline {obs}{{\underline {Observación}:}{30}{}}{89}{obs.30}%
 \contentsline {prop}{{Proposición}{44}{Operaciones con formas bilineales}}{90}{prop.44}%
-\contentsline {obs}{{\underline {Observación}:}{30}{}}{90}{obs.30}%
+\contentsline {obs}{{\underline {Observación}:}{31}{}}{90}{obs.31}%
 \contentsline {theo}{{Teorema}{18}{de la Matriz Asociada}}{90}{theo.18}%
 \contentsline {defi}{{Definición}{42}{Congruencia de Matrices}}{91}{defi.42}%
 \contentsline {ej}{{\underline {Ejemplo}:}{30}{}}{91}{ej.30}%
-\contentsline {obs}{{\underline {Observación}:}{31}{}}{91}{obs.31}%
+\contentsline {obs}{{\underline {Observación}:}{32}{}}{91}{obs.32}%
 \contentsline {defi}{{Definición}{43}{Simetría y Antisimetría}}{91}{defi.43}%
 \contentsline {theo}{{Teorema}{19}{}}{92}{theo.19}%
-\contentsline {obs}{{\underline {Observación}:}{32}{}}{92}{obs.32}%
+\contentsline {obs}{{\underline {Observación}:}{33}{}}{92}{obs.33}%
 \contentsline {defi}{{Definición}{44}{Vectores Isótropos}}{92}{defi.44}%
 \contentsline {prop}{{Proposición}{45}{}}{92}{prop.45}%
 \contentsline {demo}{{\underline {Demostración}:}{52}{}}{92}{demo.52}%
@@ -230,12 +231,12 @@
 \contentsline {defi}{{Definición}{45}{Forma Cuadrática}}{92}{defi.45}%
 \contentsline {prop}{{Proposición}{46}{}}{93}{prop.46}%
 \contentsline {demo}{{\underline {Demostración}:}{53}{}}{93}{demo.53}%
-\contentsline {obs}{{\underline {Observación}:}{33}{}}{93}{obs.33}%
 \contentsline {obs}{{\underline {Observación}:}{34}{}}{93}{obs.34}%
+\contentsline {obs}{{\underline {Observación}:}{35}{}}{93}{obs.35}%
 \contentsline {defi}{{Definición}{46}{Formas Izquierda y Derecha}}{93}{defi.46}%
 \contentsline {prop}{{Proposición}{47}{}}{93}{prop.47}%
 \contentsline {demo}{{\underline {Demostración}:}{54}{}}{94}{demo.54}%
-\contentsline {obs}{{\underline {Observación}:}{35}{}}{94}{obs.35}%
+\contentsline {obs}{{\underline {Observación}:}{36}{}}{94}{obs.36}%
 \contentsline {prop}{{Proposición}{48}{}}{94}{prop.48}%
 \contentsline {defi}{{Definición}{47}{Ortogonalidad respecto de una forma bilineal}}{94}{defi.47}%
 \contentsline {ej}{{\underline {Ejemplo}:}{31}{}}{94}{ej.31}%
@@ -243,7 +244,7 @@
 \contentsline {prop}{{Proposición}{49}{}}{95}{prop.49}%
 \contentsline {theo}{{Teorema}{20}{de Clasificación de Formas Antisimétricas}}{96}{theo.20}%
 \contentsline {demo}{{\underline {Demostración}:}{55}{}}{96}{demo.55}%
-\contentsline {obs}{{\underline {Observación}:}{36}{}}{96}{obs.36}%
+\contentsline {obs}{{\underline {Observación}:}{37}{}}{96}{obs.37}%
 \contentsline {ej}{{\underline {Ejemplo}:}{32}{}}{97}{ej.32}%
 \contentsline {theo}{{Teorema}{21}{de Clasificación de Formas Simétricas}}{97}{theo.21}%
 \contentsline {demo}{{\underline {Demostración}:}{56}{}}{97}{demo.56}%
@@ -260,7 +261,7 @@
 \contentsline {defi}{{Definición}{50}{Espacio Vectorial Euclídeo}}{103}{defi.50}%
 \contentsline {theo}{{Teorema}{25}{}}{103}{theo.25}%
 \contentsline {demo}{{\underline {Demostración}:}{59}{}}{103}{demo.59}%
-\contentsline {obs}{{\underline {Observación}:}{37}{}}{104}{obs.37}%
+\contentsline {obs}{{\underline {Observación}:}{38}{}}{104}{obs.38}%
 \contentsline {theo}{{Teorema}{26}{del Criterio de Silvester}}{104}{theo.26}%
 \contentsline {demo}{{\underline {Demostración}:}{60}{}}{104}{demo.60}%
 \contentsline {prop}{{Proposición}{50}{}}{105}{prop.50}%
@@ -277,16 +278,73 @@
 \contentsline {demo}{{\underline {Demostración}:}{65}{}}{108}{demo.65}%
 \contentsline {theo}{{Teorema}{28}{Espectral}}{108}{theo.28}%
 \contentsline {demo}{{\underline {Demostración}:}{66}{}}{108}{demo.66}%
-\contentsline {obs}{{\underline {Observación}:}{38}{}}{109}{obs.38}%
+\contentsline {obs}{{\underline {Observación}:}{39}{}}{109}{obs.39}%
 \contentsline {defi}{{Definición}{53}{Aplicación Conservativa}}{110}{defi.53}%
 \contentsline {prop}{{Proposición}{54}{}}{110}{prop.54}%
 \contentsline {demo}{{\underline {Demostración}:}{67}{}}{110}{demo.67}%
 \contentsline {defi}{{Definición}{54}{Aplicación Ortogonal}}{110}{defi.54}%
 \contentsline {prop}{{Proposición}{55}{Grupo Ortogonal}}{110}{prop.55}%
 \contentsline {demo}{{\underline {Demostración}:}{68}{}}{110}{demo.68}%
-\contentsline {obs}{{\underline {Observación}:}{39}{}}{111}{obs.39}%
+\contentsline {obs}{{\underline {Observación}:}{40}{}}{111}{obs.40}%
 \contentsline {defi}{{Definición}{55}{Orientación de una Base}}{111}{defi.55}%
 \contentsline {defi}{{Definición}{56}{Grupo Conservativo e Inversivo}}{111}{defi.56}%
 \contentsline {ej}{{\underline {Ejemplo}:}{37}{}}{111}{ej.37}%
 \contentsline {prop}{{Proposición}{56}{Propiedades de las aplicaciones ortogonales}}{112}{prop.56}%
 \contentsline {demo}{{\underline {Demostración}:}{69}{}}{112}{demo.69}%
+\contentsline {defi}{{Definición}{57}{Espacio Afín}}{115}{defi.57}%
+\contentsline {ej}{{\underline {Ejemplo}:}{38}{}}{115}{ej.38}%
+\contentsline {obs}{{\underline {Observación}:}{41}{}}{116}{obs.41}%
+\contentsline {prop}{{Proposición}{57}{}}{116}{prop.57}%
+\contentsline {demo}{{\underline {Demostración}:}{70}{}}{116}{demo.70}%
+\contentsline {defi}{{Definición}{58}{Notación de traslación de vector $v$}}{116}{defi.58}%
+\contentsline {prop}{{Proposición}{58}{}}{117}{prop.58}%
+\contentsline {demo}{{\underline {Demostración}:}{71}{}}{117}{demo.71}%
+\contentsline {defi}{{Definición}{59}{Variedad Afín}}{117}{defi.59}%
+\contentsline {obs}{{\underline {Observación}:}{42}{}}{117}{obs.42}%
+\contentsline {prop}{{Proposición}{59}{}}{118}{prop.59}%
+\contentsline {demo}{{\underline {Demostración}:}{72}{}}{118}{demo.72}%
+\contentsline {theo}{{Teorema}{29}{Operaciones con Variedades}}{119}{theo.29}%
+\contentsline {demo}{{\underline {Demostración}:}{73}{}}{119}{demo.73}%
+\contentsline {theo}{{Teorema}{30}{Fórmula de las Dimensiones}}{119}{theo.30}%
+\contentsline {demo}{{\underline {Demostración}:}{74}{}}{119}{demo.74}%
+\contentsline {defi}{{Definición}{60}{Variedad Afín definida por puntos}}{120}{defi.60}%
+\contentsline {prop}{{Proposición}{60}{}}{120}{prop.60}%
+\contentsline {demo}{{\underline {Demostración}:}{75}{}}{120}{demo.75}%
+\contentsline {defi}{{Definición}{61}{Posición relativa}}{120}{defi.61}%
+\contentsline {obs}{{\underline {Observación}:}{43}{}}{120}{obs.43}%
+\contentsline {defi}{{Definición}{62}{Sistema de Referencia Afín}}{122}{defi.62}%
+\contentsline {defi}{{Definición}{63}{Sistema de Referencia por puntos}}{123}{defi.63}%
+\contentsline {obs}{{\underline {Observación}:}{44}{}}{123}{obs.44}%
+\contentsline {defi}{{Definición}{64}{Dependencia Lineal Afín}}{123}{defi.64}%
+\contentsline {obs}{{\underline {Observación}:}{45}{}}{123}{obs.45}%
+\contentsline {theo}{{Teorema}{31}{Cambio de Sistema de Referencia}}{123}{theo.31}%
+\contentsline {defi}{{Definición}{65}{Aplicación Afín}}{124}{defi.65}%
+\contentsline {obs}{{\underline {Observación}:}{46}{}}{124}{obs.46}%
+\contentsline {theo}{{Teorema}{32}{}}{124}{theo.32}%
+\contentsline {demo}{{\underline {Demostración}:}{76}{}}{124}{demo.76}%
+\contentsline {theo}{{Teorema}{33}{}}{124}{theo.33}%
+\contentsline {theo}{{Teorema}{34}{}}{124}{theo.34}%
+\contentsline {demo}{{\underline {Demostración}:}{77}{}}{125}{demo.77}%
+\contentsline {defi}{{Definición}{66}{Grupo Afín}}{125}{defi.66}%
+\contentsline {obs}{{\underline {Observación}:}{47}{}}{125}{obs.47}%
+\contentsline {prop}{{Proposición}{61}{Matriz de una aplicación afín}}{126}{prop.61}%
+\contentsline {defi}{{Definición}{67}{Conjunto de Puntos Fijos}}{126}{defi.67}%
+\contentsline {prop}{{Proposición}{62}{}}{126}{prop.62}%
+\contentsline {demo}{{\underline {Demostración}:}{78}{}}{126}{demo.78}%
+\contentsline {obs}{{\underline {Observación}:}{48}{}}{126}{obs.48}%
+\contentsline {prop}{{Proposición}{63}{}}{127}{prop.63}%
+\contentsline {demo}{{\underline {Demostración}:}{79}{}}{127}{demo.79}%
+\contentsline {obs}{{\underline {Observación}:}{49}{}}{127}{obs.49}%
+\contentsline {prop}{{Proposición}{64}{}}{127}{prop.64}%
+\contentsline {demo}{{\underline {Demostración}:}{80}{}}{127}{demo.80}%
+\contentsline {coro}{{Corolario}{3}{}}{127}{coro.3}%
+\contentsline {defi}{{Definición}{68}{Variedad Invariante}}{127}{defi.68}%
+\contentsline {theo}{{Teorema}{35}{Caracterización de la Invarianza}}{128}{theo.35}%
+\contentsline {obs}{{\underline {Observación}:}{50}{}}{128}{obs.50}%
+\contentsline {defi}{{Definición}{69}{Aplicación constante}}{128}{defi.69}%
+\contentsline {defi}{{Definición}{70}{Traslación de vector $u$}}{129}{defi.70}%
+\contentsline {obs}{{\underline {Observación}:}{51}{}}{129}{obs.51}%
+\contentsline {defi}{{Definición}{71}{Homotecia de razón $r$}}{130}{defi.71}%
+\contentsline {defi}{{Definición}{72}{Homología general con desplazamiento}}{134}{defi.72}%
+\contentsline {defi}{{Definición}{73}{Homología Especial}}{134}{defi.73}%
+\contentsline {defi}{{Definición}{74}{Homología Especial con desplazamiento}}{134}{defi.74}%

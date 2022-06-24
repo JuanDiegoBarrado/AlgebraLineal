@@ -45,7 +45,7 @@
 \usepackage[explicit]{titlesec}
 	%% Definición del estilo de los capítulos, secciones, etc...
     \titleformat{\chapter}[display]{\normalfont\huge\bfseries\color{capitulos}}{}{0pt}{\Huge \uppercase{#1}}[\titlerule]
-    \titleformat{\section}{\normalfont\Large\bfseries\color{secciones}}{}{0pt}{#1}
+    \titleformat{\section}{\normalfont\Large\bfseries\color{secciones}}{}{0pt}{\uppercase{#1}}
     \titleformat{\subsection}{\normalfont\large\bfseries\color{subsecciones}}{}{0pt}{\uline{#1}}
     \titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{subsubsecciones}}{}{0pt}{#1}
 
@@ -904,7 +904,7 @@ a_2'=-(\alpha_1+\alpha_2+\alpha_3+3)=-3
 \chapter{Espacio vectorial y \\ Aplicación lineal}
 En este capítulo vamos a definir el concepto central de la asignatura: el espacio vectorial. Sus características dotan de propiedades muy especiales a los espacios que cumplen dicha definición y nos permite, junto con las aplicaciones lineales, descubrir una serie de propiedades abstractas a dichos espacios con consecuencias muy importantes en espacios concretos de este tipo.
 
-\section{ESPACIOS VECTORIALES}
+\section{Espacios Vectoriales}
 \begin{defi}[Espacio Vectorial]
 Si suponemos que $(V,+,\cdot)$ donde $+: V\times V\rightarrow V$, $\cdot : K\times V\rightarrow V$ y $K$ es un cuerpo conmutativo, definimos un \textbf{espacio vectorial sobre $K$} como la terna que cumple:
 \begin{itemize}
@@ -1455,7 +1455,7 @@ $$=\{(0,0,1,0,0),(1,-1,0,1,0),(0,1,0,0,1), e_1=(1,0,0,0,0), e_2=(0,1,0,0,0)\}$$
 Con lo cual, $e_1$ y $e_2$ forman la base de $V/W$.
 \end{ej}
 
-\section{APLICACIONES LINEALES}
+\section{Aplicaciones Lineales}
 \begin{defi}
 Sean $V$ y $V'$ dos espacios vectoriales y $\phi:V\longrightarrow V'$ una aplicación entre ambos, entonces decimos que \textbf{dicha aplicación es lineal} si conserva la suma y el producto por un escalar:
 $$\phi(v_1+v_2)=\phi(v_1)+\phi(v_2): \forall v_1,v_2\in V$$
@@ -2093,7 +2093,21 @@ Que vemos que sale lo mismo que anteriormente.
 \end{ej}
 
 \subsection{Sistemas no homogéneos}
-Los sistemas no homogéneos no poseen todos los $b_i=0$ y las condiciones que los rigen cambian, por ejemplo, el conjunto de las soluciones ya no forma un subespacio vectorial porque el vector nulo no pertenece a él; en este caso forma un espacio afín del que ya se verán sus características.\par
+Los sistemas no homogéneos no poseen todos los $b_i=0$ y las condiciones que los rigen cambian, por ejemplo, el conjunto de las soluciones ya no forma un subespacio vectorial porque el vector nulo no pertenece a él; en este caso forma un espacio afín del que ya se verán sus características.
+
+\begin{obs}
+Otro resultado muy importante está relacionado con el capítulo de sistemas lineales. Nosotros consideramos $\Sigma $ un sistema de ecuaciones lineal, y $\Sigma_0$ el sistema homogéneo asociado. El espacio de soluciones del sistema lineal dijimos que correspondía a un subconjunto de $K^n$, es decir, $\Sigma(K) \subseteq K^n$ y del mismo modo ocurría con su asociado; $\Sigma_0 (K) < K^n$. Además relacionamos ambos conjuntos de soluciones a través de la siguiente fórmula:
+$$\Sigma(K) = (a_0, \cdots , a_n) + \Sigma_0(K): (a_1, \cdots, a_n)\mbox{ es solución particular de }\Sigma(K)$$
+Dicho lo cual, si consideramos la siguiente estructura:
+$$\begin{cases} V = \Sigma_0(K) \\ A = \Sigma(K)\neq \emptyset \\ \varphi((a_0, \cdots, a_n)+v, (a_0, \cdots, a_n)+ w) = w-v\end{cases}$$
+Luego esto quiere decir que cualquier sistema lineal NO homogéneo puede considerarse como un espacio afín asociado al espacio vectorial euclídeo que forma su asociado.
+\end{obs}
+
+luego podemos sustituir el vector en las coordenadas del subespacio vectorial $X$:
+$$X =\begin{cases} a_{11} (x_1 - c_1) + \ldots + a_{1n} (x_n - c_n) = 0 \\ \vdots \\  a_{p1} (x_1 - c_1) + \ldots + a_{pn} (x_n - c_n) = 0 \end{cases}$$
+Si pasamos todos los valores que son constantes al otro lado de los iguales, obtenemos el sistema lineal de la variedad afín y, por consiguiente, el asociado que define el subespacio vectorial que va con la variedad y de los que hablamos.
+
+
 Sea el sistema lineal no homógeneo $(\Sigma_b)$ y su sistema homogéneo $(\Sigma_0)$ asociado:
 Lo primero de todo, posee un sistema lineal asociado que sí es homogéneo.
 \begin{gather*}
@@ -2174,7 +2188,7 @@ $$A\sim A' \Leftrightarrow \exists P \in Gl_n(K) : A' = P^{-1}AP$$
 Esta relación entre matrices define una relación de equivalencia en el espacio $End(V)$.
 \end{obs}
 
-\section{POLINOMIO MÍNIMO Y CARACTERÍSTICO}
+\section{Polinomio mínimo y característico}
 \subsection{Polinomio mínimo de un endomorfismo}
 Consideramos $A\in Mat_n(K)$ y el conjunto de vectores $\{I_n, A, A^2, \cdots, A^{n^2}\}\subset Mat_n(K)$. Como $\dim Mat_n(K)= n^2$ y en ese conjunto hay $n^2+1$ vectores, necesariamente ese conjunto debe ser linealmente dependiente. Con lo cual, $\exists a_0, \cdots, a_{n^2}\in K: a_0I+\cdots+a_{n^2}A^{n^2}=0$ donde $\exists a_i \neq 0$, es decir, en cierta manera se puede interpretar que $A$ es la raíz del polinomio:
 $$(a_0+a_1x+\cdots+a_{n^2}x^{n^2})(A)=f(A): f\neq 0$$
@@ -2494,7 +2508,7 @@ $$\tilde{v}=a(\tilde{\phi})\left(g(\tilde{\phi})\left(\underbrace{\tilde{\phi}-\
 \end{demo}
 
 
-\section{CLASES NOTABLES DE ENDOMORFISMOS}
+\section{Clases Notables de Endomorfismos}
 Tal y como dijimos al comienzo del capítulo, el objetivo de este desarrollo es poder hacer una clasificación exhaustiva de los endomorfismos a través de la clase de equivalencia a la que pertenezcan. Además, nos gustaría que para escoger el representante de su clase de equivalencia escojamos la matriz más sencilla posible, esto es, aquella que permita un cálculo computacional más sencillo a la hora de trabajar con la matriz.
 
 
@@ -2733,7 +2747,7 @@ Puedo considerar $N$ como $M_{\{w_2, \cdots,w_n\}}(\psi)$ de forma que $\psi: W\
 \end{itemize}
 \end{demo}
 
-\section{FORMA CANÓNICA DE JORDAN}
+\section{Forma Canónica de Jordan}
 De nuevo, aunque las clases anteriores nos dan unas muy buenas representaciones para cierto tipo de endomorfismos, no son válidas para todos en general. Nuestro objetivo en esta sección es desarrollar una estructura general, canónica, para todos los endomorfismos que encontremos. Esta forma será diagonal o triangular para los endomorfismos que sí cumplan las condiciones de la sección anterior, pero tendrá una nueva representación para aquellos que no encajen en los conceptos vistos.
 
 \begin{defi}[Subepacios Invariantes]
@@ -3115,7 +3129,7 @@ $$M_{B'}(\phi)=C_{h_1(x)}\oplus C_{h_2(x)}$$
 \chapter{Formas Lineales y \\ Bilineales}
 Durante este capítulo vamos a desarrollar las propiedades y características de dos objetos matemáticos muy presentes: las formas lineales y bilineales. La relevancia de estos objetos va desde la definición del concepto de ``ortogonalidad'' básico en ramas como la geometría hasta la definición de normas a través de productos escalares.
 
-\section{FORMAS LINEALES}
+\section{Formas Lineales}
 Las formas lineales son fundamentalmente aplicaciones lineales del espacio vectorial en el cuerpo sobre el que está estructurado. Es decir, son aplicaciones lineales que a cada vector les asigna un número y, por la similitud con las funciones reales escalares, toma gran relevancia analizar las propiedades que tienen.
 
 \subsection{Espacio Dual}
@@ -3327,7 +3341,7 @@ Porque $v_i^*$ se anula sobre todos los vectores de la base, excepto sobre el de
 $$\omega(v)=a_1b_1+\cdots +a_nb_n$$
 Si $v=(b_1, \cdots, b_n)\in H\Rightarrow a_1b_1+\cdots a_nb_n=0\Rightarrow \omega(v)=0$ si definimos $\omega$ como lo hemos hecho, luego está bien definida.
 
-\section{FORMAS BILINEALES}
+\section{Formas Bilineales}
 \label{Formas bilineales}
 La definición $V\times V^* \rightarrow K$ de forma que $(v,\omega)\rightarrow \omega(v)\in K$, que justamente se dio para $\left[\eta(v)\right](\omega)$ tiene buenas propiedades que podemos querer ``copiar'' para otros objetos matemáticos. ¿Pero qué propiedades tiene esta aplicación? Si denotamos la aplicación por $\langle v,\omega\rangle$, entonces:
 \begin{itemize}
@@ -3787,7 +3801,7 @@ $$q(x_1,x_2) = -x_1^2$$
 \chapter{Espacio Vectorial Euclídeo}
 El espacio vectorial euclídeo es un concepto fundamental que servirá de antesala del espacio afín, la geometría euclídea, la física, etc. Nos permite modelar el espacio n dimensional de $\mathbb{R}$ y estudiar analíticamente las propiedades de dicho espacio. Sin ir más lejos, permite modelar el espacio tridimensional real (o al menos sirve como base) para poder hacer un estudio exhaustivo de la geometría en tres dimensiones, para poder hacer modelos físicos sobre el comportamiento de cierto objeto, etc.
 
-\section{DEFINICIÓN Y CONCEPTOS BÁSICOS}
+\section{Espacio Vectorial Euclídeo}
 \begin{defi}[Base Ortonormal]
 Sea $f$ un producto escalar y $V$ un espacio vectorial euclídeo, entonces la base $B$ para la cual la forma bilineal es la identidad se dice que es una base \textbf{ortonormal}.
 \end{defi}
@@ -3998,7 +4012,7 @@ es decir, que, en consecuencia, $\phi$ se diagonaliza simultáneamente por congr
 $$A' = P^{-1}AP = P^tAP$$
 \end{obs}
 
-\section{APLICACIONES ORTOGONALES}
+\section{Aplicaciones Ortogonales}
 Las aplicaciones ortogonales son aplicaciones de gran importancia pues conservan el producto escalar, esto quiere decir, en términos geométricos que respetan el ``ángulo'' (puesto que aún no hemos definido la noción de ángulo) que forman varios vectores entre sí. Cabe destacar que hemos dicho que únicamente respetan la posición relativa entre ellos, no que no deformen dichos vectores aumentando su módulo o disminuyéndolo.
 
 \subsection{Características de las aplicaciones ortogonales}
@@ -4211,32 +4225,33 @@ $$V = \pi \oplus \pi^\perp$$
 Restringimos de nuevo $\phi\mid_{\pi^\perp}$ que sigue siendo ortogonal y en ese trozo la matriz que conforma ya cumple las hipótesis. Los vectores de $\pi$ son ortogonales a los del perpendicular y podemos seleccionarlos de forma que conformen una base ortonormal en $\pi$ por lo que compondrán una de las cajas que habíamos definido como rotaciones.
 \end{itemize}
 
-\chapter{Espacio Afín}
-Con esta nueva estructura oncepto buscamos enriquecer la estructura que habíamos denominado como espacio vectorial euclídeo e ir preparando el terreno para introducir los conceptos de geometría y estudio de coordenadas baricéntricas, para ello también se empiezan a introducir nociones de puntos, posiciones relativas, paralelismo...
++\chapter{Espacio Afín}
+Con esta nueva estructura buscamos enriquecer la noción de espacio vectorial euclídeo. Con éste último habíamos sido capaces de introducir las nociones ortogonalidad, producto escalar, etc. Sin embargo, dicha definición nos dejaba anclados a subespacios fijos al origen, pues todos los subespacios contienen al 0. Supuesto el plano $z=0$, si quisiéramos describir los paralelos a distintas alturas la definición de espacio vectorial euclídeo se nos quedaría corta. De esta necesidad nace el espacio afín.
 
-\section{DEFINICIÓN Y CONCEPTOS BÁSICOS}
-Una terna $(A,V,\varphi)$ es un espacio afín si:
-\begin{enumerate}
-\item $A \neq \emptyset$
+\section{Definición y Conceptos Básicos}
+\begin{defi}[Espacio Afín]
+Un \textbf{espacio afín} sobre un cuerpo $K$, es una terna $(A,V,\varphi)$ que verifica:
+\begin{itemize}
+\item $A \neq \emptyset$.
 
-\item $V$ es un $\mathbb{K}$-espacio vectorial de dimensión finita ($\dim A \overset{def}{=} \dim V$)
+\item $V$ es un $\mathbb{K}$-espacio vectorial de dimensión finita.
 
-\item $\varphi$ es una función que a cada par de puntos le asigna un vector de $V$, es decir: 
-$$\varphi : A \times A \to V: (\vec{pq} =\varphi (p,q) \in V: \forall p,q \in A)$$
-Además esta función verifica estas condiciones:
-	\begin{itemize}
-	\item $\varphi (p,q) = \varphi(p,r) + \varphi (r,q) : \forall p,q,r \in A$
+\item $\varphi$ es una función que a cada par de puntos le asigna un vector de $V$, es decir:
+\begin{eqnarray*}
+\varphi : A\times A &\longrightarrow& V \\ (p,q) &\longmapsto& \vec{pq} = \varphi(p,q)
+\end{eqnarray*}
 
-	\item Si fijamos uno de los puntos de $A$, entonces la correspondencia entre vectores de $V$ y puntos que conforman la otra componente es una biyección:
-	$$\forall p \in A, \varphi_p : A \to V \mbox{ dada por }\varphi_p (q) = \varphi(p,q)\mbox{ es biyectiva}$$
-	
-	\end{itemize}
+\item $\forall p,q,r \in A: \varphi (p,q) = \varphi(p,r) + \varphi (r,q)$
 
-\end{enumerate}
+\item $\forall p \in A$ la siguiente función es una biyección:
+\begin{eqnarray*}
+\varphi_p : A &\longrightarrow& V \\ q &\longmapsto& \vec{pq} = \varphi(p,q)
+\end{eqnarray*}
+\end{itemize}
+\end{defi}
 
-\underline{\textbf{Ejemplos}}:
-
-Por ejemplo, tal y como conocemos el espacio afín usual su definición formal es:
+\begin{ej}
+Por ejemplo, definimos el espacio afín usual como:
 $$\begin{cases} A = \mathbb{K}^n \\ V = \mathbb{K}^n \\ \varphi(p,q) \overset{def}{=} (b_1 - a_1 , \ldots , b_n - a_n)_{B_c} \in \mathbb{K}^n : p=(a_1, \ldots , a_n), q=(b_1, \ldots, b_n) \end{cases}$$
 Las primeras 3 propiedades son trivialmente ciertas, comprobamos la 4:
 $$r=(c_1, \ldots, c_n) \Rightarrow \varphi(p,r) + \varphi (r,q) = (c_1 - a_1 , \ldots, c_n - a_n)_{B_c} + (b_1 - c_1 , \ldots, b_n - c_n)_{B_c} =$$
@@ -4254,28 +4269,23 @@ Sea $v=(x_1, \ldots, x_n)_{B_c}$, ¿ tenemos un $ \varphi_p (q) = v : q\in A$ ?
 $$\varphi_p (q)=(b_1 - a_1 , \ldots , b_n - a_n)_{B_c}\overset{?}{=}(x_1, \ldots, x_n)_{B_c} \Rightarrow b_i - a_i = x_i$$
 Luego ya tenemos la definición de cada $b_i$ y, por lo tanto, ya está demostrado.
 \end{itemize}
+\end{ej}
 
-
+\begin{obs}
 En general, se puede considerar cualquier espacio vectorial como un espacio afín si lo definimos de la siguiente manera:
 $$\begin{cases} V \\ A = V \\ \varphi(v,w) = w - v \in V \end{cases} \Rightarrow (V,V,\varphi)\mbox{ es espacio afín}$$
-Aunque esto pone de manifiesto que todo espacio vectorial puede considerarse como un espacio afín, aunque esta forma no sea única porque podemos definir de distinta forma la $\varphi$ (o incluso algún otro de los elementos de la definición).
+Aunque esto pone de manifiesto que todo espacio vectorial puede considerarse como un espacio afín, esta forma no es única porque podemos dar una definición distinta para $\varphi$ o incluso para algún otro elemento en casos concretos.
+\end{obs}
 
-Otro resultado muy importante está relacionado con el capítulo de sistemas lineales. Nosotros consideramos $\Sigma $ un sistema de ecuaciones lineal, y $\Sigma_0$ el sistema homogéneo asociado. El espacio de soluciones del sistema lineal dijimos que correspondía a un subconjunto de $K^n$, es decir, $\Sigma(K) \subseteq K^n$ y del mismo modo ocurría con su asociado; $\Sigma_0 (K) < K^n$. Además relacionamos ambos conjuntos de soluciones a través de la siguiente fórmula:
-$$\Sigma(K) = (a_0, \cdots , a_n) + \Sigma_0(K): (a_1, \cdots, a_n)\mbox{ es solución particular de }\Sigma(K)$$
-Dicho lo cual, si consideramos la siguiente estructura:
-$$\begin{cases} V = \Sigma_0(K) \\ A = \Sigma(K)\neq \emptyset \\ \varphi((a_0, \cdots, a_n)+v, (a_0, \cdots, a_n)+ w) = w-v\end{cases}$$
-Luego esto quiere decir que cualquier sistema lineal NO homogéneo puede considerarse como un espacio afín asociado al espacio vectorial euclídeo que forma su asociado.
-
-\subsubsection*{Propiedades de Espacio Afín}
+\begin{prop}
+Sea $(A,V,\varphi)$ un espacio afín, se verifican las siguientes propiedades:
 \begin{enumerate}
 \item $\vec{pp} = 0$
-
 \item $\vec{qp} = - \vec{pq}$
-
-\item $\vec{pq} = \vec{rs} \Leftrightarrow \vec{pr} = \vec{qs}$ (Propiedad del Paralelogramo)
+\item Propiedad del Paralelogramo: $\vec{pq} = \vec{rs} \Leftrightarrow \vec{pr} = \vec{qs}$ 
 \end{enumerate}
-
-Demostración:
+\end{prop}
+\begin{demo}
 \begin{enumerate}
 \item $\vec{pp} + \vec{pp} = \vec{pp} \Rightarrow \vec{pp} = 0$
 
@@ -4285,72 +4295,70 @@ $$\varphi_p(q) = \vec{pq} = 0 = \vec{pp} = \varphi_p (p) \overset{\varphi_p \mbo
 \item Hacemos ``$\Rightarrow$'' porque la otra dirección es completamente análoga:
 $$\vec{pr} = \vec{pq} + \vec{qr} = \vec{rs} + \vec{qr} = \vec{qs}$$
 \end{enumerate}
+\end{demo}
 
-\subsubsection*{Definición alternativa}
-Teniendo en cuenta que hemos definido el espacio afín como la asignación de un vector concreto para cada par de puntos de $A$ que escojamos, es decir, $\vec{pq} = v \in V$; entonces podemos dar una nueva definición que será:
+\begin{defi}[Notación de traslación de vector $v$]
+Hemos definido la $\varphi$ como la asignación de un vector concreto para cada par de puntos de $A$ que escojamos, es decir, $\vec{pq} = v \in V$, entonces podemos emplear la siguiente notación:
 $$p + v \overset{def}{=} q$$
-Esto es, que hemos creado una nueva aplicación que suma a un punto concreto un vector y entonces se le asigna el punto correspondiente:
-$$A \times V \to A\mbox{ de forma que } (p,v) \mapsto p + v = q$$
-Donde $q \in A$ es el único tal que $v = \vec{pq} = \varphi_p(q)$. En el fondo lo que estamos haciendo es dado un punto y un vector, la aplicación que hemos definido asocia a ese par donde acabaría el punto tras trasladarlo lo que manda el vector.
+En la que el operador ``suma'' no tiene por qué ser la suma\footnote{
+En el fondo lo que estamos haciendo es dado un punto y un vector, la aplicación que hemos definido asocia a ese par donde acabaría el punto tras trasladarlo lo que manda el vector.} usual, sino aquella que cumpla la igualdad de la notación, es decir, será la aplicación:
+\begin{eqnarray*}
++ : A \times V &\longrightarrow& A \\ (p,v) &\longmapsto& q
+\end{eqnarray*}
+donde $q \in A$ es el único punto tal que $v = \vec{pq} = \varphi_p(q)$. Por tanto, realmente estamos diciendo que:
+$$\boxed{p+v = \varphi_p^{-1}(v) = q}$$
+que está bien definida por ser una biyección $\varphi_p$.
+\end{defi}
 
-\underline{\textbf{Propiedades}}
+\begin{prop}
+Sea $\varphi$ la aplicación de un espacio afín y $+$ la notación para la aplicación $\varphi_p^{-1}$, entonces esta cumple las siguientes propiedades:
 \begin{enumerate}
 \item $p + 0 = p$
-
 \item $p + (v+ w) = (p + v)+ w$
-
 \item $\forall p,q \in A: \exists! v \in V : p + v = q$
-
-Es decir, que dados dos puntos cualesquiera siempre existe un vector único que transforma uno en el otro.
 \end{enumerate}
-
-\underline{Demostración}:
+\end{prop}
+\begin{demo}
 \begin{enumerate}
 \item Porque si consideramos que $\vec{pp}= 0$, entonces sumarle a $p$ el vector nulo implica que su destino es el mismo.
 
 \item Trivial, porque basta con considerar $\begin{cases} v = \vec{pq} \\ w = \vec{qr} \\ v + w = \vec{pr} \end{cases} \Rightarrow r = q + w = q + \vec{qr} = r$
 
-\item Por como hemos redefinido el concepto de espacio euclídeo.
+\item Trivial por ser $\varphi_p^{-1}$ biyectiva.
 \end{enumerate}
+\end{demo}
 
 \subsection{Variedades Afines}
-Dado un espacio afín, partimos de un punto $p \in A$ y de un subespacio de $W < V$ para denotar el siguiente objeto:
-$$p + W = \{p + w : w \in W\}$$
-A este conjunto lo denotamos por \textbf{variedad afín} que pasa por $p$ con dirección $W$.
+\begin{defi}[Variedad Afín]
+Dado un espacio afín $(A,V,\varphi)$, un punto $p \in A$ y un subespacio $W < V$ se define la \textbf{variedad afín que pasa por $p$ con dirección $W$} como el conjunto:
+$$p + W = \{p + w : w \in W\} = \{q\in A : \vec{pq}\in W\}$$
+\end{defi}
 
+\begin{obs}
 Es notable destacar que $X = p + W$, $W<V$ y $\varphi|_{X \times X}$ tienen de nuevo estructura de espacio afín porque:
 \begin{enumerate}
 \item $X \neq\emptyset : p = p + 0 \in X $
-
 \item $W < V$
-
 \item $\varphi|_{X \times X} : X \times X \to W$
-
 $$\varphi(q,r) = \varphi (p + w_1, p + w_2) = \varphi(p + w_1, p + w_1 + (w_2 - w_1)) = w_2 - w_1 \in W$$
-
 \item Trivial
-
-\item ¿$\forall q\in X, \varphi_q : X \to W $ biyectiva?
-
-Que es inyectiva es inmediato porque es la restricción de una que sí es inyectiva, la pregunta es: ¿$ \varphi_q $ suprayectiva? ¿$\forall w \in W : \exists! r \in X: \varphi_q (r) = w$?
-
-Sea $w =  \varphi_q (r)=\varphi(q,r) = \vec{qr} : r \in A$ único
-
-$r= q + \vec{qr} = p + (\vec{pq} + \vec{qr})$
+\item Inyectiva es inmediato porque es la restricción de una que sí es inyectiva.
+\item Es suprayectiva si se verifica $\forall w \in W : \exists! r \in X: \varphi_q (r) = w$, es decir, sea $w =  \varphi_q (r)=\varphi(q,r) = \vec{qr} : r \in A$ único. $r= q + \vec{qr} = p + (\vec{pq} + \vec{qr})$
 $$\begin{cases} \vec{pq} = \varphi(p,q) \ [p,q \in X] \in W \\ \vec{qr} = \varphi(q,r) = \varphi_q(r) = w \in W\end{cases} \Rightarrow r= q + \vec{qr} = p + (\vec{pq} + \vec{qr}) \in p + W = X$$
 \end{enumerate}
+\end{obs}
 
-\subsubsection*{Proposición}
-Sea $X=p+W$ una variedad afín. Entonces:
+\begin{prop}
+Sea $X=p+W$ una variedad afín, entonces:
 \begin{itemize}
+\item El punto de definición de la variedad se puede cambiar por cualquier otro de la misma:
+$$\forall q \in X: X = q + W$$
 
-\item $X = q + W : \forall q \in X$
-
-\item $W = \underbrace{\{ \vec{pq} : q \in X\}}_{= \vec{pX}} = \underbrace{\{\vec{qr} : q,r \in X\}}_{= \vec{X}}$
+\item La dirección de la variedad, que denotaremos por $\vec{X}$ queda determinada por todos los vectores formados por el punto de definición y otro punto de $X$ o todos los vectores generados por dos puntos:
+$$W = \underbrace{\{ \vec{pq} : q \in X\}}_{\vec{pX}} = \underbrace{\{\vec{qr} : q,r \in X\}}_{\vec{X}}$$
 \end{itemize}
-Es decir, el punto de definición de la variedad se puede cambiar por cualquier otro dentro de la misma y la dirección de la variedad la definimos como $\vec{X}$ que podemos determinarla por los extremos de los vectores de la variedad o dos puntos cualesquiera.
-
-\underline{Demostración}
+\end{prop}
+\begin{demo}
 \begin{itemize}
 \item Vamos a demotrarlo por el doble contenido, es decir, vamos a ver que siendo $p$ el punto de definición de la variedad afín, siempre puede escribirse cualquier elemento de la variedad en términos de otro punto $q$.
 	\begin{itemize}
@@ -4375,24 +4383,28 @@ Para terminar vamos a ver $W \subseteq \vec{pX}$:
 $$w \in W \Rightarrow q = p + w \in X \Rightarrow w = \vec{pq} \in \vec{pX}$$
 
 \end{itemize}
+\end{demo}
 
-\subsubsection*{Operaciones con variedades}
-\underline{\textbf{Intersección}}:
+\begin{theo}[Operaciones con Variedades]
+\begin{itemize}
+\item \textbf{Intersección}
 
-Puede ocurrir que la intersección entre dos variedades afines no sea nula, es decir, que se cortan y esta convergencia de ambas define de nuevo una variedad, es decir:
+Si la intersección entre dos variedades no es nula, es decir, se cortan, entonces ésta define de nuevo una variedad, es decir:
 $$X_1, X_2\mbox{ variedades}\Rightarrow X_1\cap X_2\mbox{ es variedad afin}$$
 Además esta nueva variedad queda definida por cualquier punto que está en la intersección y la intersección de las direcciones:
 $$X_1\cap X_2 = p + (\vec{X_1}+\vec{X_2}): \begin{cases} p\in X_1\cap X_2 \\ \vec{X_1\cap X_2} = \vec{X_1} \cap  \vec{X_2}\end{cases}$$
-\underline{\textbf{Unión}}:
+\item \textbf{Unión}:
 
-Sin embargo, del mismo modo que ocurría con los subespacios vectoriales, la unión de variedades no es en general una variedad:
+Del mismo modo que ocurría con los subespacios vectoriales, la unión de variedades no es en general una variedad:
 $$X_1,X_2\mbox{ variedades} \Rightarrow X_1 \cup X_2 \mbox{ no es variedad}$$
-\underline{\textbf{Suma}}:
+\item \textbf{Suma}:
 
-Por el contrario, la suma de variedades afines sí es una variedad afín y además es la más pequeña que contiene a la unión de ambas variedades:
+La suma de variedades afines es la variedad más pequeña que contiene a la unión de ambas variedades, queda definida como:
 $$X_1+X_2 = p_1 + \vec{X_1} + \vec{X_2} + L(\vec{p_1p_2})$$
-
-\underline{Demostración}:
+donde $L(\vec{p_1p_2})$ es el subespacio generado por el vector entre dos puntos cualesquiera de ambas variedades.
+\end{itemize}
+\end{theo}
+\begin{demo}
 \begin{itemize}
 \item Veamos la intersección:
 
@@ -4405,13 +4417,13 @@ $$q\in X_1\cap X_2\Rightarrow q = \begin{cases} p+w_1= p+\vec{pq_1} : q_1\in X_1
 
 Se deja para mirar en el libro
 \end{itemize}
+\end{demo}
 
-\subsubsection*{Formula de las dimensiones para variedades afines}
+\begin{theo}[Fórmula de las Dimensiones]
 Sean $X_1$ y $X_2$ dos variedades afines, entonces se verifica que:
 $$\begin{cases} X_1 \cap X_2 \neq 0 \Rightarrow & \dim (X_1+X_2) = \dim X_1 +\dim X_2 - \dim X_1\cap X_2 \\ X_1 \cap X_2 = 0 \Rightarrow & \dim (X_1+X_2) = \dim X_1 +\dim X_2 - \dim \vec{X_1}\cap \vec{X_2} +1\end{cases}$$
-Es decir, en el caso de que no sean disjuntas se aplica la fórmula de Grassman de forma habitual, pero si lo son entonces se juega con la intersección de las direcciones.
-
-\underline{Demostración}:
+\end{theo}
+\begin{demo}
 \begin{itemize}
 \item $X_1\cap X_2 \neq 0$, entonces hay que tener en cuenta que $\vec{p_1p_2}\in \vec{X_1}+\vec{X_2}$:
 $$\dim (X_1+ X_2) = \dim (\overrightarrow{X_1+X_2}) = \dim (\vec{X_1}+\vec{X_2}+L(\vec{p_1p_2})) = \dim (\vec{X_1}+\vec{X_2}) =$$
@@ -4420,75 +4432,71 @@ $$= \dim \vec{X_1}+\dim \vec{X_2} -\dim (\vec{X_1}\cap \vec{X_2}) = \dim X_1+\di
 $$\dim (X_1+ X_2) = \dim (\overrightarrow{X_1+X_2}) = \dim (\vec{X_1}+\vec{X_2}+L(\vec{p_1p_2})) = \dim (\vec{X_1}+\vec{X_2}) + \underbrace{\dim \vec{p_1p_2}}_{=1} - \underbrace{\dim (\vec{X_1}+\vec{X_2}\cap \vec{p_1p_2})}_{=0} $$
 $$= \dim \vec{X_1}+\dim \vec{X_2} -\dim (\vec{X_1}\cap \vec{X_2}) + 1 - 0 = \dim X_1+\dim X_2 -\dim (X_1\cap X_2)+1$$
 \end{itemize}
+\end{demo}
 
-\subsubsection*{Posición relativa}
-Sean $X_1, X_2$ variedades de $(A,V,\varphi)$, se tiene que:
-$$X_1, X_2 = \begin{cases} \mbox{ se cortan si } X_1 \cap X_2 \neq\emptyset \\ \mbox{ son paralelas si } \vec{X_1} \subseteq \vec{X_2} \mbox{ ó } \vec{X_2} \subseteq \vec{X_1} \\ \mbox{ se cruzan en caso contrario}\end{cases}$$
-Es destacable el hecho de que no exigimos que el paralelismo implique la igualdad de las direcciones permite definir correctamente el concepto de recta paralela a un plano o, en general, el concepto de paralelismo entre objetos de distinta dimensión.
-
-\subsection{Sistema de Referencia}
-Sea $(A, V, \varphi)$ la terna usual de espacio afín, escogemos $p \in A$, un punto $p_0 \in A $ fijo y una base $B=\{v_1, \ldots, v_n\}$ de V, entonces podemos escribir para cualquiera que sea el punto $p$:
-$$\vec{p_0p} = x_1 v_1 + \ldots + x_n v_n$$
-De este modo, decimos que $(x_1, \ldots, x_n)_R$ son las las coordenadas del punto $p$ en el sistema de referencia afín $R = \{p_0 , B\}$, siendo $p_0$ el centro de referencia del sistema.
-
-\subsubsection*{Cambio de sistema de referencia}
-Definimos un sistema de referencia cartesiano, como un conjunto $R = \{p_0, B\}$ formado por un punto $p_0 \in A$ y una base $B=\{v_1, \cdots, v_n\}$ de $V, B=\{v_1, \ldots, v_n\}$.
-En consecuencia, si $p\in A$ arbitrario, definimos sus coordenadas de la siguiente forma:
-$$p=(x_1, \ldots, x_n)_R \overset{def}{\Leftrightarrow} \vec{p_0 p} = (x_1, \ldots, x_n)_B = x_1v_1 + \ldots + x_n v_n$$
-Supongamos ahora que tenemos un nuevo sistema de referencia $R' = \{p_0', B'\}$, entonces ahora las coordenadas de $p$ son $(x_1', \ldots, x_n')_R'$. Por tanto, teniendo en cuenta que $p_0=(a_1, \cdots , a_n)$ los vectores se relacionan de la siguiente forma:
-$$\vec{p_0 p} = \vec{p_0 p'_0} + \vec{p_0' p} \Rightarrow  \vec{p_0 p} -\vec{p_0 p'_0}  =  \vec{p_0'p_0} \Rightarrow$$
-$$\Rightarrow (x_1, \ldots, x_n)_B  -(a_1, \ldots, a_n)_B = (x_1', \ldots, x_n')_B' \Rightarrow (x_1 - a_1,  \ldots, x_n - a_n)_B = x_1', \ldots, x_n')_B' \Rightarrow $$
-$$\Rightarrow \begin{pmatrix}
-x_1 \\ \vdots \\ x_n
-\end{pmatrix} =\begin{pmatrix}
-a_1 \\ \vdots \\ a_n
-\end{pmatrix} + M(B',B)\begin{pmatrix}
-x'_1 \\ \vdots \\ x'_n
-\end{pmatrix} $$
-Sin embargo, esta notación nos es muy incomoda puesto que no resulta un cambio de ``base'' como al que estamos acostumbrados, luego introduciendo el siguiente cambio se conserva la igualdad y se usa una notación más cómoda:
-$$\begin{pmatrix}
-1 \\ x_1 \\ \vdots \\ x_n
-\end{pmatrix} = \underbrace{\left(\begin{array}{c|ccc}
-1  & 0 & \ldots & 0 \\
-\hline
-a_1  &  & & \\
-\vdots &  & M(B',B)& \\
-a_n & & &
-\end{array}
-\right)}_{M(R,'R)} \begin{pmatrix}
-1 \\ x'_1 \\ \vdots \\ x'_n
-\end{pmatrix}$$
-
-\subsubsection*{Sistema de Referencia dado por puntos}
-Se trata ahora de dar una definición alternativa de sistema de referencia, ya que podemos prescindir de esa base que habíamos definido para $V$ y supeditarla a puntos. La relación entre lo que denominaremos el origen y el resto de puntos\footnote{Es notable destacar que si $n= \dim A$, serán necesarios $n+1$ puntos porque $p_0$ va a constituir el origen} de referencia es lo que constituirá los vectores que formarán la base de $V$.
-
-Decimos que $\{p_0, \ldots, p_n\}$ es sistema de referencia afín si y sólo si $\{\vec{p_0 p_1}, \ldots, \vec{p_0 p_n}\}$ es base de V. Luego entonces se tiene que $R=\{p_0, B=\{\vec{p_0 p_1}, \ldots, \vec{p_0 p_n}\}\}$ es sistema de referencia cartesiano.
-
-Decimos que $\{p_0, p_1, \ldots, p_m\}, m \leq n$ son afínmente independientes si $\vec{p_0 p_1}, \ldots, \vec{p_0 p_m}$ son linealmente independientes. Además, la independencia de estos vectores no dependen de quién sea escogido como origen de los vectores.
-
-
-Vamos a definir quién es la menor variedad posible que contiene a un conjunto finito de puntos:
-
-Sea $P = \{p_0, p_1, \ldots, p_m\}$ con $m+1$ puntos. La variedad afín generada por P será:
+\begin{defi}[Variedad Afín definida por puntos]
+Sea $(A,V,\varphi)$ un espacio afín y $P = \{p_0, p_1, \ldots, p_m\}$ un conjunto de puntos de $A$, la \textbf{variedad afín generada por $P$} será:
 $$A(P)=p_0 + L(\vec{p_0 p_1}, \ldots, \vec{p_0 p_n})$$
+donde dicha definición\footnote{Trivialmente se verifican las condiciones de Variedad Afín.} no depende del punto que se tome como ``origen''.
+\end{defi}
+
+\begin{prop}
+Sea $(A,V,\varphi)$ un espacio afín y $P = \{p_0, p_1, \ldots, p_m\}$, la variedad generada por $P$ es la menor variedad que contiene a los puntos de $P$.
+\end{prop}
+\begin{demo}
 Definimos la el conjunto:
 $$A(P)=p_0 + L(\vec{p_0p_1}, \cdots, \vec{p_0p_m})$$
 Por definición es una variedad y además es trivial que contiene a todos los puntos, ¿pero es la más pequeña posible que contiene a todos los puntos? Sí, porque su dirección es la suma de las direcciones de cada variedad ``lineal'' que compondría cada vector.
+\end{demo}
 
-\subsubsection*{Ecuaciones cartesianas}
-Sea $X= q_0 + \vec{X}$ variedad afín donde $q_0 \in X$, $\dim X =m$ y $R= \{p_0, B\}$ un sistema de referencia cartesiana. Si tenemos un punto $p \in X$ la pertenencia a $X$ es si y sólo si $\vec{q_0 p} \in \vec{X}$, luego podemos sustituir el vector en las coordenadas del subespacio vectorial $X$:
-$$X =\begin{cases} a_{11} (x_1 - c_1) + \ldots + a_{1n} (x_n - c_n) = 0 \\ \vdots \\  a_{p1} (x_1 - c_1) + \ldots + a_{pn} (x_n - c_n) = 0 \end{cases}$$
-Si pasamos todos los valores que son constantes al otro lado de los iguales, obtenemos el sistema lineal de la variedad afín y, por consiguiente, el asociado que define el subespacio vectorial que va con la variedad y de los que hablamos.
+\begin{defi}[Posición relativa]
+Sean $X_1, X_2$ variedades de $(A,V,\varphi)$, decimos que son:
+\begin{itemize}
+\item \textbf{Secantes}: $X_1 \cap X_2 \neq\emptyset $.
+\item \textbf{Paralelas}: $\vec{X_1} \subseteq \vec{X_2} \mbox{ ó } \vec{X_2} \subseteq \vec{X_1}$.
+\item  \textbf{Cruzadas}: en caso contrario.
+\end{itemize}
+\end{defi}
 
-\subsubsection*{Ecuaciones paramétricas}
-Partimos del sistema no homogéneo de las ecuaciones cartesianas:
-$$X = \begin{cases} a_{11}x_1 + \ldots +  a_{1n}x_n = b_1 \\ \vdots \\  a_{p1}x_1 + \ldots + a_{pn}x_n = b_p \end{cases}$$
-Como sabemos que $p$ es la codimensión de la variedad, entonces habrá algún menor cuadrado de orden $p$ cuyo determinante no sea nulo. Como esto siempre es cierto y en caso de no ser el que vamos a usar ahora se puede escoger otro cualquiera, entonces podemos suponer que:
+\begin{obs}
+Es destacable decir que el hecho de no exigir que el paralelismo implique la igualdad de las direcciones permite definir correctamente el concepto de paralelismo entre variedades de distinta dimensión, es decir, de recta paralela a un plano, plano paralelo a hiperplano, etc.
+\end{obs}
+
+\subsubsection{Ecuaciones cartesianas}
+Sea $(A,V,\varphi)$ un espacio afín tal que $\dim A = n$ y $X= q_0 + \vec{X}$ una variedad afín tal que $\dim X =m$, $\vec{X} = \{u_1, \cdots, u_k\}$ y $q_0 = (a_1, \cdots, a_n)$. Nos proponemos, fijado un sistema $R= \{p_0, B=\{v_1, \cdots, v_n\}\}$ de referencia cartesiana, encontrar las condiciones que debe cumplir un punto $p\in X$.
+
+Cualquier $p = (x_1, \cdots, x_n) \in X$ pertenece si y sólo si $\vec{q_0 p} \in \vec{X}$, por tanto, debe ser combinación lineal de los que forman la dirección de la variedad:
+$$rg\begin{pmatrix} x_1 - a_1 & \overbrace{b_1^1}^{u_1} & \cdots & \overbrace{b_1^k}^{u_k} \\ \vdots & \vdots & & \vdots \\ x_n - a_n & b_n^1 & \cdots & b_n^k \end{pmatrix} = rg \begin{pmatrix} \overbrace{b_1^1}^{u_1} & \cdots & \overbrace{b_1^k}^{u_k} \\ \vdots & & \vdots \\ b_n^1 & \cdots & b_n^k \end{pmatrix}= k$$
+Escogemos de la segunda matriz un menor no nulo de orden $k$ (debe haber alguno por tener rango $k$) y consideraremos por simplicidad que es el primero:
+$$\begin{vmatrix}
+b_1^1 & \cdots & b_1^k \\ \vdots & \ddots & \vdots \\ b_k^1 & \cdots & b_k^k 
+\end{vmatrix} \neq 0$$
+Por tanto, lo que tiene que ocurrir para que se cumpla la afirmación anterior sobre el rango es:
+$$\forall i = k+1, \cdots, n: \begin{vmatrix}
+x_1 - a_1 & b_1^1 & \cdots & b_1^k \\ \vdots & \ddots & \vdots \\ x_k - a_k & b_k^1 & \ddots & b_k^k \\ x_i - a_i & b_1^i & \cdots & b_k^i
+\end{vmatrix} = 0$$
+Todos estos determinantes generan $n-k$ ecuaciones lineales que forman un sistema con $n$ incógnitas.
+
+\subsubsection{Ecuaciones paramétricas}
+Supongamos que partimos del sistema no homogéneo de las ecuaciones cartesianas:
+$$X = \begin{cases} a_{11}x_1 + \ldots +  a_{1n}x_n = b_1 \\ \vdots \\  a_{p1}x_1 + \ldots + a_{pn}x_n = b_p \end{cases} \Rightarrow AX= B$$
+En primer lugar y por el desarrollo que se ha hecho para las cartesianas, sabemos que $p$ es la codimensión de la variedad, luego habrá algún menor cuadrado de orden $p$ cuyo determinante no sea nulo. Por comodidad de notación y sin pérdida de generalidad\footnote{Puesto que permutar las variables y las ecuaciones entre sí podría convertir el menor concreto del caso en el que se ha escogido para la explicación.} podemos suponer que:
 $$\begin{vmatrix} a_{11} & \ldots & a_{1p} \\ \vdots & & \vdots \\ a_{p1} & \ldots & a_{pp} \end{vmatrix} \neq 0 $$
-Luego entonces se tiene:
+De este modo, podemos parametrizar $n-p$ incógnitas y pasarlas a formar parte de la matriz $B$. En consecuencia, bastaría con resolver el sistema en función de los parámetros:
 $$\begin{cases} x_{p+1} = \lambda_{p+1} \\ \vdots \\ x_n = \lambda_n \\ x_1 = c_{1, p+1} \lambda_{p+1} + \ldots + c_{1n} \lambda_n + d_1 \\ \vdots \\ x_p = c_{p,p+1} \lambda_{p+1} + \ldots + c_{pn} \lambda_n + d_p \end{cases}$$
+En definitiva, la forma de calcular la ecuación paramétrica de dicha variedad es resolver el sistema formado por sus ecuaciones cartesianas en función de $n-p$ parámetros.
 
-\subsubsection*{Paso de paramétricas a cartesianas}
+De modo análogo, si supiésemos cuál es el punto $q_0$ de definición de la variedad $X$ y la dirección $\vec{X}=\{v_1, \cdots, v_k\}$ que la compone para obtener las paramétricas bastaría con escribir:
+$$p = q_0 + \lambda_1 v_1 + \cdots + \lambda_k v_k \Leftrightarrow \begin{cases}
+x_1 = q_0^1 + \lambda_1 v_1 \\
+\vdots \\
+x_k = q_0^n + \lambda_k v_k \\
+x_{k+1} = q_0^{k+1} \\
+\vdots \\
+x_{n} = q_0^n
+\end{cases}$$
+
+\subsubsection{Paso de paramétricas a cartesianas}
 Si tenemos por ejemplo el plano $\pi = (-1,1, 0, 0) + L(e_1-e_2, e_3-e_4)$ y queremos saber sus ecuaciones paramétricas tenemos que:
 $$\pi = \begin{cases} x = 1+\lambda \\ y = -1-\lambda \\ z = \mu \\ t = 1-\mu 
 \end{cases}$$
@@ -4506,64 +4514,160 @@ y + 1 & -1 & 0 \\ z & 0 & 1
 y + 1 & -1 & 0 \\ z & 0 & 1 \\ t - 1 &0 & 1\end{vmatrix} = 0$$
 Y de aquí salen las dos ecuaciones correspondientes al plano en $\mathbb R^4$
 
+\subsection{Sistema de Referencia}
+Sea $(A, V, \varphi)$ la terna usual de espacio afín, nos gustaría poder determinar de forma única un punto $p \in A$ arbitrario del mismo modo que los vectores quedaban determinados de forma única por una base en espacios vectoriales.
 
-\section*{APLICACIONES AFINES}
-Supongamos que $\phi: A\rightarrow A'$ es una aplicación entre ambos conjuntos y $\lambda: V\rightarrow V'$ que es $K-lineal$, entonces el par $(\phi,\lambda)$ es una \textbf{aplicación afín} si:
+Para ello, escogemos un punto $p_0 \in A $ fijo y una base $B=\{v_1, \ldots, v_n\}$ de $V$ y, de este modo, podemos describir dicho punto $p$ como:
+$$\vec{p_0p} = v= x_1 v_1 + \ldots + x_n v_n$$
+Y, de hecho, estas coordenadas son únicas pues $\varphi_{p_0}(p) = v$ y es una biyección por hipótesis. Luego estamos en condiciones de dar la siguiente definición.
+
+\begin{defi}[Sistema de Referencia Afín]
+Sea $(A,V,\varphi)$ un espacio afín, $p_0\in A$ un punto cualquiera y $B=\{v_1,\cdots, v_n\}$ una base de $V$, definimos un \textbf{sistema de referencia afín} como el conjunto $R=\{p_0, B\}$.
+
+Dado un punto $p\in A$ cualquiera, se definen sus \textbf{coordenadas cartesianas} como los coeficientes del vector asignados por $\varphi_{p_0}$, es decir:
+$$p=(x_1, \cdots, x_n)_{R} \Leftrightarrow \varphi_{p_0}(p) = \vec{p_0p}=(x_1, \cdots, x_n)_B=  x_1v_1 + \cdots + x_nv_n$$ 
+\end{defi}
+
+A pesar de que la idea de tener un punto a modo de ``origen'' de coordenadas y una base $B$ a modo de direcciones es muy intuitiva para dar una definición de sistema de referencia, también podemos dar una definición alternativa que prescinde de la base definida para $V$ y se  supedita en puntos. La relación entre lo que denominaremos el origen y el resto de puntos\footnote{Es notable destacar que si $n= \dim A$, serán necesarios $n+1$ puntos porque $p_0$ va a constituir el origen.} de referencia es lo que hará las veces de base $B$, puesto que determinan los vectores sus vectores.
+
+\begin{defi}[Sistema de Referencia por puntos]
+Sea $(A,V,\varphi)$ un espacio afín, $p_0\in A$ un punto cualquiera, entonces decimos que el conjunto $\{p_0, \ldots, p_n\}$ es \textbf{un sistema de referencia afín } si y sólo si $\{\vec{p_0 p_1}, \ldots, \vec{p_0 p_n}\}$ es base de $V$.
+\end{defi}
+
+\begin{obs}
+Luego entonces $R=\{p_0, B=\{\vec{p_0 p_1}, \cdots, \vec{p_0 p_n}\}$ es el sistema de referencia cartesiano equivalente.
+\end{obs}
+
+\begin{defi}[Dependencia Lineal Afín]
+Sea $\{p_0, p_1, \cdots, p_m\}$ un conjunto de puntos de $A$ con $m \leq n$, decimos que son \textbf{afínmente independientes} si $\{\vec{p_0 p_1}, \cdots, \vec{p_0 p_m}\}$ son linealmente independientes.
+\end{defi}
+
+\begin{obs}
+Además, la independencia de estos vectores no dependen de quién sea escogido como origen de los vectores.
+\end{obs}
+
+\subsubsection{Cambio de sistema de referencia}
+Definido un sistema de referencia cartesiano $R = \{p_0, B\}$ formado por un punto $p_0 \in A$ y una base $B=\{v_1, \cdots, v_n\}$ de $V$, habíamos dicho que las coordenadas de un punto $p\in A$ cualquiera venían dadas por:
+$$p=(x_1, \ldots, x_n)_R \overset{def}{\Leftrightarrow} \vec{p_0 p} = (x_1, \ldots, x_n)_B = x_1v_1 + \ldots + x_n v_n$$
+La pregunta ahora es ¿cómo cambian dichas coordenadas si cambiamos de punto $p_0\in A$ o de base $B$? Supongamos que cambiamos a un nuevo sistema de referencia $R' = \{p_0', B'\}$. Las coordenadas de $p$ ahora son $(x_1', \ldots, x_n')_{R'}$ y suponiendo las coordenadas de  $p'_0=(a_1, \cdots , a_n)_R$ podemos relacionar ambos vectores:
+$$\vec{p_0 p} = \vec{p_0 p'_0} + \vec{p_0' p} \Rightarrow  \vec{p_0 p} -\vec{p_0 p'_0}  =  \vec{p_0'p} \Rightarrow (x_1, \ldots, x_n)_B  -(a_1, \ldots, a_n)_B = (x_1', \ldots, x_n'){_B'} \Rightarrow $$
+$$\Rightarrow (x_1 - a_1,  \ldots, x_n - a_n)_B = (x_1', \ldots, x_n')_{B'} \Rightarrow \begin{pmatrix}
+x_1 \\ \vdots \\ x_n
+\end{pmatrix} =\begin{pmatrix}
+a_1 \\ \vdots \\ a_n
+\end{pmatrix} + M(B',B)\begin{pmatrix}
+x'_1 \\ \vdots \\ x'_n
+\end{pmatrix} $$
+Sin embargo, esta notación nos es muy incómoda pues no resulta un cambio de ``base'' similar al que estamos acostumbrados, por tanto, el siguiente cambio algebraico conserva la igualdad y usa una notación más cómoda.
+
+\begin{theo}[Cambio de Sistema de Referencia]
+Sea $(A,V,\varphi)$ un espacio afín y $R=\{p_0,B\}$ y $R'=\{p_0', B'\}$ sistemas de referencia afines, entonces las coordenadas de un punto $p\in A$ respecto de ambos sistemas se relacionan a través de la siguiente igualdad:
+$$\begin{pmatrix}
+1 \\ x_1 \\ \vdots \\ x_n
+\end{pmatrix} = \underbrace{\left(\begin{array}{c|ccc}
+1  & 0 & \ldots & 0 \\
+\hline
+a_1  &  & & \\
+\vdots &  & M(B',B)& \\
+a_n & & &
+\end{array}
+\right)}_{M(R,'R)} \begin{pmatrix}
+1 \\ x'_1 \\ \vdots \\ x'_n
+\end{pmatrix}$$
+\end{theo}
+
+\section{Aplicaciones afines}
+Del mismo modo que vimos la importancia que revestían las aplicaciones lineales en los espacios vectoriales, en esta sección vamos a tratar definir y caracterizar el análogo de dichas aplicaciones lineales en espacios afines: las aplicaciones afines.
+
+\begin{defi}[Aplicación Afín]
+Sean $(A,V,\varphi)$  y $(A',V', \varphi)$ dos espacios afines, una aplicación $\phi: A\rightarrow A'$ entre ambos conjuntos y $\lambda: V\rightarrow V'$ una aplicación $K-lineal$, decimos que el par $(\phi, \lambda)$ es una \textbf{aplicación afín} si y sólo si:
 $$\forall q \in A: q = p+v\Rightarrow \phi(q) = \phi(p)+\lambda(v)$$
-Tal y como se ha definido, la aplicación lineal $\lambda$ queda definida de manera única en función de las imágenes que de $\phi$ a cada punto y además es común, por este motivo, denotarla por $\vec{\phi}$:
+\end{defi}
+
+\begin{obs}
+Por la definición que se ha dado, dada una aplicación $\phi$ concreta la aplicación lineal $\lambda$ queda definida de manera única en función de las imágenes que otorgue $\phi$ a cada par de puntos, por este motivo,  es común denotarla por $\vec{\phi}$:
 $$v=\vec{pq}\Rightarrow \lambda (v) = \vec{\phi}(v) = \overrightarrow{\phi(p)\phi(q)}$$
-Luego para determinar si es afín una aplicación $\phi$ basta con ver que la asociada a ella es lineal.
+Por tanto, para determinar si una aplicación $\phi$ es afín basta con ver que la asociada a ella $\vec{\phi}$ es lineal.
+\end{obs}
 
-\subsubsection*{Conjunto de puntos fijos}
-Dada una aplicación afín $\phi: A\rightarrow A$ definimos el conjunto de puntos fijos como:
-$$A_\phi = \{p\in A: \phi(p) = p\}$$
-Además se tiene que:
-$$A_\phi \neq \emptyset \Rightarrow A_\phi \mbox{ es variedad y } \overrightarrow{A_\phi} = V_{\vec{\phi}, 1}$$
-Es decir, existe una fuerte analogía entre los subespacios invariantes de los espacios vectoriales y las variedades afines, hasta el punto de tener también conjuntos invariantes.
+\begin{theo}
+Sean $A, A'$ espacios afines y $R=\{p_0, B=\{v_1, \ldots v_n\}\}$ un sistema de referencia, entonces:
+$$\forall p'_0 \in A' \mbox{ y }B'= \{v'_1, \ldots v'_n\} \mbox{ base de }V':\exists ! \phi: A \to A'\mbox{ afín tal que} \begin{cases} \phi(p_0) = p'_0 \\ \vec{\phi} (v_i) = v'_i : \forall i = 1, \ldots, n \end{cases}$$
+es decir, que los valores que toma la aplicación afín sobre los elementos del sistema de referencia determinan de forma única la aplicación afín.
+\end{theo}
+\begin{demo}
+Sea $p \in A $ un punto cualquiera de $A$, entonces:
+$$p = p_0 + \sum_{i=1}^{n} a_i v_i \Rightarrow  \phi(p) = p'_0 + \sum_{i=1}^{n} a_i v'_i $$
+Y se comprueba trivialmente que cumple las propiedades de afín.
+\end{demo}
 
-\underline{Demostración}:
+\begin{theo}
+Sea $\{p_0, p_1, \ldots, p_n\}$ sistema de referencia afín de A, entonces:
+$$\forall p'_0, p'_1, \ldots, p'_n \in A': \exists! \phi: A \to A' \mbox{ afín }:\phi (p_i) = p'_i : \forall i = 1, \ldots, n$$
+es decir, el teorema anterior se cumple para los sistemas dados por puntos.
+\end{theo}
 
-Vamos a tratar de demostrar que $A_\phi \neq \emptyset \overset{?}{\Rightarrow} A_\phi = p_0 + V_{\vec{\phi}, 1} $, donde $p_0 \in A_\phi$.
-
-En primer lugar, veamos que $p_0 + V_{\vec{\phi}, 1}  \subseteq A_\phi$, para ello escogemos un $p= p_0+v$ donde $v\in V_{\vec{\phi}, 1}:  v = \vec{p_0 p}$ de forma que $p = p_0 + v = p_0 + \vec{p_0 p}$. Entonces ocurre que por ser $\phi$ afín:
-$$\phi(p) = \phi(p_0)  + \vec{\phi}(v) = p_0 + v = p$$
-
-Por otro lado, veamos el otro contenido, es decir, $p_0 + V_{\vec{\phi}, 1}  \supseteq A_\phi$; para ello queremos demostrar $p \in A_\phi \overset{?}{\Rightarrow}  p = p_0 + v: v \in  V_{\vec{\phi}, 1}$:
-$$\vec{\phi}(p_0 \vec{p}) = \overrightarrow{\phi(p_0) \phi(p)} = \vec{p_0 p}  \in V_{\vec{\phi}, 1} \Rightarrow p = p_0 + \vec{p_0 p} \in p_0 + V_{\vec{\phi}, 1} $$
-
-\subsection{Matriz de una aplicación afín}
-Supongamos que tenemos la siguiente situación:
+\begin{theo}
+Sea $\phi: A\rightarrow A'$ una aplicación afín, entonces el carácter de $\phi$ depende estrictamente de $\vec{\phi}$, es decir:
 \begin{itemize}
-\item $\phi: A \to A'$ una aplicación afín
-\item $R = \{p_0 , B\}$, $R' = \{p'_0, B'\}$ sistemas de referencia cartesianos
-\item $\dim A = \dim V = n$
-\item $\dim A' = \dim V' = m$
-\item $B = \{v_1, \ldots, v_n\}$, $B'=\{v'_1, \ldots, v'_n\}$
+\item $\phi$ inyectiva $\Leftrightarrow$ $\vec{\phi}$ inyectiva
+\item $\phi$ suprayectiva $\Leftrightarrow$ $\vec{\phi}$ suprayectiva
+\item $\phi$ biyectiva $\Leftrightarrow$ $\vec{\phi}$ biyectiva
 \end{itemize}
-Sabemos que para un punto cualquiera $p \in A$, la imagen está entonces en$\phi(p) \in A'$ y además conocemos $\phi(p_0) \in A'$. Si damos coordenadas a los puntos se tiene que
+\end{theo}
+\begin{demo}
+Se va a realizar la demostración de la primera afirmación, dejando al lector las restantes.
+\begin{itemize}
+\item $\Rightarrow$
+$$\lambda (\vec{pq}) = \lambda (\vec{pr}) \Rightarrow  \phi(q) = \phi(p) + \lambda(\vec{pq}) = \phi(p) + \lambda(\vec{pr}) = \phi(r) \overset{\phi \mbox{ inyectiva }}{\Rightarrow} q = r \Rightarrow \vec{pq} = \vec{pr}$$
+\item $\Leftarrow$
+$$\phi(q) = \phi(r) \Rightarrow \lambda (\vec{qr}) = \overrightarrow{\phi(q) \phi(r)} = 0 \overset{\lambda \mbox{ inyectiva }}{\Rightarrow} \vec{qr} = 0 \Rightarrow q = r$$
+\end{itemize}
+\end{demo}
+
+\begin{defi}[Grupo Afín]
+Dado un espacio afín $\mathcal{A}$, se denomina \textbf{grupo afín} de dicho espacio a:
+$$GA(\mathcal{A}) = \{\phi : A \to A : \phi \mbox{ es afín y biyectiva }\}$$
+que forma un grupo junto con las operaciones de composición y suma de aplicaciones.
+\end{defi}
+
+\begin{obs}
+De este hecho anterior se deduce, aunque no se va a demostrar que:
+\begin{itemize}
+\item Si $\phi_1$ y $\phi_2$ son afinidades, entonces $\phi_1 \circ \phi_2$ también lo es.
+\item Si $\phi$ es afinidad con $\vec{\phi}$ como aplicación lineal asociada, entonces $\phi^{-1}$ también lo es con aplicación lineal asociada $\vec{\phi}^{-1}$.
+\end{itemize}
+\end{obs}
+
+De la misma manera que las aplicaciones lineales fueron caracterizadas a través de una matriz que representaba su interacción con el espacio vectorial, nos encaminamos a encontrar un objeto matemático similar que representa dicha interacción en las variedades afines.
+
+Sabemos que la imagen de un punto cualquiera $p \in A$ está descrita en términos de $A'$ pues $\phi(p) \in A'$. Además, conocemos la imagen $\phi(p_0) \in A'$ del origen del primer sistema de referencia con respecto al segundo, por tanto, podemos dar coordenadas a los puntos:
 $$p = (x_1, \ldots, x_n )_R\Rightarrow\vec{p_0 p} = (x_1, \ldots, x_n)_B$$
 $$\phi(p_0) = (a_1, \ldots, a_m)_{R'}\Rightarrow\overrightarrow{p'_0 \phi(p_0)} =(a_1, \ldots, a_m)_{B'} $$
 $$\phi(p) = (x'_1, \ldots, x'_m)_{R'}\Rightarrow\overrightarrow{p'_0 \phi(p)} =(x'_1, \ldots, x'_m)_{B'} $$
-Vamos a expresar las coordenadas de $\phi(p)$ en el sistema $R'$ y tratar de relacionarlas con sus coordenadas en $R$:
-$$ \overrightarrow{p'_0 \phi(p)} = \overrightarrow{p'_0 \phi(p_0)} +  \overrightarrow{\phi(p_0) \phi(p)} = \overrightarrow{p'_0 \phi(p_0)} + \vec{\phi} (\vec{p_0 p}) $$
-Depejamos y tenemos que:
-$$\vec{\phi} (\vec{p_0 p}) = \overrightarrow{p'_0 \phi(p)} -  \overrightarrow{p'_0 \phi(p_0)} \Rightarrow \vec{\phi}((x_1, \ldots, x_n)_B) = (x'_1, \ldots, x'_m)_{B'} - (a_1, \ldots, a_m)_{B'}  = (x'_1 - a_1, \ldots, x'_m - a_m)_{B'} $$
-Luego expresado en forma matricial tenemos que:
+Ahora tenemos que intentar relacionar las coordenadas de $\phi(p)$ en el sistema $R'$ con sus coordenadas en $R$:
+$$ \overrightarrow{p'_0 \phi(p)} = \overrightarrow{p'_0 \phi(p_0)} +  \overrightarrow{\phi(p_0) \phi(p)} = \overrightarrow{p'_0 \phi(p_0)} + \vec{\phi} (\vec{p_0 p}) \Rightarrow \vec{\phi} (\vec{p_0 p}) = \overrightarrow{p'_0 \phi(p)} -  \overrightarrow{p'_0 \phi(p_0)} \Rightarrow$$
+$$\Rightarrow \vec{\phi}((x_1, \ldots, x_n)_B) = (x'_1, \ldots, x'_m)_{B'} - (a_1, \ldots, a_m)_{B'}  = (x'_1 - a_1, \ldots, x'_m - a_m)_{B'} $$
+Luego, expresado en forma matricial:
 $$\begin{pmatrix}
 x'_1 - a_1 \\ \vdots \\ x'_m - a_m
 \end{pmatrix}
 = M_{B, B'} (\vec{\phi}) \begin{pmatrix}
 x_1 \\ \vdots \\ x_n
-\end{pmatrix}
-: M_{B, B'} (\vec{\phi}) \in Mat_{m \times n}(K) $$
-Pero tratando de obtener una expresión más cómoda como la que teníamos para el cambio de base en espacios vectoriales tenemos que:
-$$ \begin{pmatrix}
+\end{pmatrix} \Rightarrow \begin{pmatrix}
 x'_1 \\ \vdots \\ x'_m
 \end{pmatrix} = \begin{pmatrix}
 a_1 \\ \vdots \\ a_m
 \end{pmatrix}+ M_{B, B'} (\vec{\phi}) \begin{pmatrix}
 x_1 \\ \vdots \\ x_n
-\end{pmatrix} \Rightarrow  \begin{pmatrix}
+\end{pmatrix}
+$$
+Pero, de nuevo, para tratar de obtener una expresión más cómoda y similar a un cambio de base podemos expresarla de la siguiente manera.
+
+
+\begin{prop}[Matriz de una aplicación afín]
+Sean $(A,V,\varphi)$ y $(A',V',R')$ dos espacios afines de dimensiones $n$ y $m$ respectivamente y $R = \{p_0 , B\}$ y $R' = \{p'_0, B'\}$ sus respectivos sistemas de referencia cartesianos. Dada una aplicación $\phi: A \to A'$ afín, ésta queda totalmente definida a través de la matriz:
+$$ \begin{pmatrix}
 1 \\ x'_1 \\ \vdots \\ x'_m
 \end{pmatrix} = \underbrace{\left(\begin{array}{c|ccc}
 1  & 0 & \ldots & 0 \\
@@ -4575,15 +4679,129 @@ a_m & & &
 \right)}_{M_{R, R'} (\phi)} \begin{pmatrix}
 1 \\ x_1 \\ \vdots \\ x_n
 \end{pmatrix} $$
-Esta matriz es la matriz que representa a $\phi$ en las referencias $R$ y $R'$. Contiene la información relativa a la aplicación asociada $\vec{\phi}$ y además la primera columna son las coordenadas que tiene la imagen del origen de $R$ expresadas en $R'$.
+donde la primera columna son las coordenadas que tiene la imagen del origen de $R$ expresadas en $R'$, es decir, $\phi(p_0) = (a_1, \cdots, a_m)_{R'}$.
+\end{prop}
+
+\subsection{Variedades $\phi$-invariantes}
+Del mismo modo que teníamos subespacios $\phi$-invariantes en espacios vectoriales, podemos preguntarnos por las variedades $X$ que se mantienen fijas bajo $\phi$, esto es, para las cuales $\phi\mid_X$ vuelve a ser una variedad. En este apartado, vamos a desarrollar que características tienen éstas y su íntima relación con los subespacios invariantes mencionados anteriormente.
+
+\begin{defi}[Conjunto de Puntos Fijos]
+Dada una aplicación afín $\phi: A\rightarrow A$ definimos el \textbf{conjunto de puntos fijos} como:
+$$A_\phi = \{p\in A: \phi(p) = p\}$$
+es decir, son aquellos para los que $\phi$ es la identidad.
+\end{defi}
+
+\begin{prop}
+Dada una aplicación afín $\phi$, entonces:
+$$A_\phi \neq \emptyset \Rightarrow A_\phi \mbox{ es variedad y } \overrightarrow{A_\phi} = V_{\vec{\phi}, 1}$$
+\end{prop}
+\begin{demo}
+Vamos a tratar de demostrar que $A_\phi \neq \emptyset \overset{?}{\Rightarrow} A_\phi = p_0 + V_{\vec{\phi}, 1} $, donde $p_0 \in A_\phi$.
+
+En primer lugar, veamos que $p_0 + V_{\vec{\phi}, 1}  \subseteq A_\phi$, para ello escogemos un $p= p_0+v$ donde $v\in V_{\vec{\phi}, 1}:  v = \vec{p_0 p}$ de forma que $p = p_0 + v = p_0 + \vec{p_0 p}$. Entonces ocurre que por ser $\phi$ afín:
+$$\phi(p) = \phi(p_0)  + \vec{\phi}(v) = p_0 + v = p$$
+
+Por otro lado, veamos el otro contenido, es decir, $p_0 + V_{\vec{\phi}, 1}  \supseteq A_\phi$; para ello queremos demostrar $p \in A_\phi \overset{?}{\Rightarrow}  p = p_0 + v: v \in  V_{\vec{\phi}, 1}$:
+$$\vec{\phi}(p_0 \vec{p}) = \overrightarrow{\phi(p_0) \phi(p)} = \vec{p_0 p}  \in V_{\vec{\phi}, 1} \Rightarrow p = p_0 + \vec{p_0 p} \in p_0 + V_{\vec{\phi}, 1} $$
+\end{demo}
+
+\begin{obs}
+Por tanto, empezamos a ver la fuerte correlación entre los espacios invariantes y las variedades invariantes por $\phi$.
+\end{obs}
+
+\begin{prop}
+Sea $\phi: A \rightarrow A$ una aplicación afín. Si el $1$ no es un autovalor de $\vec{\phi}$, entonces sólo hay un punto fijo:
+$$A_\phi = \{p_0\} \Leftrightarrow 1 \notin \sigma(\vec{\phi})$$
+\end{prop}
+\begin{demo}
+$$\begin{pmatrix}
+1 \\ x_1 \\ \vdots \\ x_n
+\end{pmatrix} = \left(\begin{array}{c|ccc}
+1  & 0 & \ldots & 0 \\
+\hline
+a_1  & a_{11} & \ldots & a_{1n} \\
+\vdots & \vdots &  & \vdots \\
+a_n & a_{n1} & \ldots & a_{nn}
+\end{array}
+\right) \begin{pmatrix}
+1 \\ x_1 \\ \vdots \\ x_n
+\end{pmatrix} \Leftrightarrow (A - I_n) \begin{pmatrix}
+x_1 \\ \vdots \\ x_n
+\end{pmatrix} = \begin{pmatrix}
+-a_1 \\ \vdots \\ -a_n
+\end{pmatrix}$$
+Para que la solución sea única, entonces $rg(A-I_n) = n$, luego:
+$$A_\phi = \{p_0\} \Leftrightarrow rg(A - I_n) = n \Leftrightarrow p_A (1) = |A - I_n| \neq 0 \Leftrightarrow 1\notin \sigma(\vec{\phi})$$
+\end{demo}
+
+\begin{obs}
+Es importante dejar claro que cuando el 1 pertenece al espectro de la aplicación asociada, no podemos suponer que el conjunto de puntos fijos es no vacío porque, por ejemplo:
+$$\left(\begin{array}{c|cc}
+1  & 0 & 0 \\
+\hline
+1 & 1 &  0 \\
+0 & 0 &  r
+\end{array}
+\right) \Rightarrow p\in A_\phi \Rightarrow \begin{cases} x_1 =1 + x_1  \\ x_2 = rx_2 \end{cases} \Rightarrow \#$$
+\end{obs}
+
+\begin{prop}
+Sea $\phi: A \rightarrow A'$ una afinidad y $X= a + \vec{X} \subset A$ una variedad, entonces:
+$$\phi(X) = \phi(a) + \vec{\phi}(\vec{X})$$
+Del mismo modo, si $Y = b + \vec{Y}\subset A'$ es una variedad y $a\in \phi^{-1}(Y)$, entonces:
+$$\phi^{-1}(Y) = a + \vec{\phi}^{-1}(\vec{Y})$$
+\end{prop}
+\begin{demo}
+La primera parte es consecuencia inmediata de la definición de afinidad. En cuanto a la segunda:
+$$\phi(a + \vec{\phi}^{-1}(\vec{Y})) = \phi(a) + \vec{Y} = b + \vec{Y} \Rightarrow \phi^{-1}(b + \vec{Y}) \supset a + \vec{\phi}^{-1}(\vec{Y})$$
+Por otro lado:
+$$c\in \phi^{-1}(b + \vec{Y}) \Rightarrow  f(c)\in  b+ \vec{Y} = f(a) + \vec{Y} \Rightarrow \overrightarrow{f(a)f(c)} = \vec{\phi}(\vec{ac})\in \vec{Y} \Rightarrow \vec{ca}\in \vec{\phi}^{-1}(\vec{Y})\Rightarrow c \in a + \vec{\phi}^{-1}(\vec{Y})$$
+\end{demo}
+
+\begin{coro}
+Sea $\phi : A\rightarrow A'$ un afinidad, entonces:
+\begin{itemize}
+\item $Im(\phi)$ es una variedad de $A'$.
+\item Sean $X,Y\subset A$ tales que $X\parallel Y$, entonces $\phi(X) \parallel \phi(Y)$.
+\item Si $p,q\in A$ están alineados, entonces $\phi(p), \phi(q)\in A'$ están alineados.
+\end{itemize}
+\end{coro}
+
+\begin{defi}[Variedad Invariante]
+Sea $\phi : A \rightarrow A$ una variedad de un espacio afín en si mísmo, decimos que una variedad $X = q + \vec{X}$ es \textbf{$\phi$-invariante} si y sólo si:
+$$\phi(q + \vec{X}) \subset q + \vec{X}$$
+es decir, aquellas variedades cerradas bajo $\phi$.
+\end{defi}
+
+\begin{theo}[Caracterización de la Invarianza]
+Sea $\phi$ una afinidad y $X$ una variedad, ésta es $\phi$-invariante si y sólo si:
+\begin{itemize}
+\item $\vec{\phi}(\vec{X})\subset \vec{X}$
+\item $\forall p \in A : \phi(p)\in X \Leftrightarrow \overrightarrow{p\phi(p)}\in \vec{X}$
+\end{itemize}
+\end{theo}
+
+\begin{obs}
+Esto quiere decir que las direcciones de las variedades $\phi$-invariantes son necesariamente subespacios $\vec{\phi}$-invariantes. Por tanto, acabamos de encontrar un método muy preciso para poder calcular las variedades $\phi$-invariantes de la dimensión deseada. Para ello, basta con calcular los subespacios $\vec{\phi}$-invariantes de dimensión $k$ requerida. Dada una base de dicho subespacio $B_k=\{v_1, \cdots, v_k\}$ solo hace falta verificar que:
+$$rg\left(v_1, \cdots, v_k\right) = rg\left(\overrightarrow{p\phi(p)}, v_1, \cdots, v_k\right)$$
+de este modo obtendremos las ecuaciones de todos los puntos que pueden componer una variedad $\phi$-invariante con el subespacio seleccionado como dirección.
+\end{obs}
+
 
 \subsection{Aplicaciones notorias}
-\subsubsection*{Aplicación constante}
-Supongamos $\phi : A \to A'$ de manera que $\phi(p) = p'_0$, es decir, para cualquier punto se le asigna el punto constante $p'_0$, entonces veamos quién es la aplicación lineal asociada:
-$$\vec{\phi}(\vec{pq}) = \overrightarrow{\phi(p)\phi(q)} = \vec{p'_0 p'_0} = 0$$
-\underline{Matriz asociada}:
+En este apartado vamos a caracterizar una serie de aplicaciones recurrentes y muy importantes en distintas áreas y aplicaciones de las matemáticas. Se trata, por tanto, de hacer un estudio exhaustivo de las mismas para tener soltura con sus propiedades fundamentales.
 
-Tomamos $R = \{p_0, B\}$ cualquiera y $R' = \{p'_0, B'\}: p'_0 = \phi (p)$, es decir, valdría cualquiera pero lo tomamos centrado en el único punto de la imagen para que sea más sencilla la matriz, entonces su matriz asociada es:
+\subsubsection{Aplicación constante}
+Se trata de la aplicación que transforma todos los puntos en el mismo punto constante y fijo $p_0$, es decir, concentra todo el espacio afín en un único punto. Trivialmente queda caracterizada por ser $\vec{\phi}$ la aplicación nula, pues:
+$$\vec{\phi}(\vec{pq}) = \overrightarrow{\phi(p)\phi(q)} = \vec{p'_0 p'_0} = 0$$
+\begin{defi}[Aplicación constante]
+Sea $\phi: A\rightarrow A'$ una afinidad, se denomina \textbf{aplicación constante $p_0$} si: 
+\begin{itemize}
+\item $\phi(p) = p_0$
+\item $\vec{\phi}(v) = 0$
+\item \underline{\textbf{Matriz asociada}}:
+
+Para dar la matriz más sencilla posible, tomamos $R = \{p_0, B\}$ cualquiera y $R' = \{p'_0, B'\}$ donde $p'_0 = \phi (p)$. De este modo, la matriz asociada queda como:
 $$M_{R, R'} (\phi) = \left(\begin{array}{c|ccc}
 1  & 0 & \ldots & 0 \\
 \hline
@@ -4592,17 +4810,20 @@ $$M_{R, R'} (\phi) = \left(\begin{array}{c|ccc}
 0 & & &
 \end{array}
 \right)$$
+\end{itemize}
+\end{defi}
 
-\subsubsection*{Traslación}
-Supongamos ahora que $V=V'$ y $A=A'$, de modo que tenemos una aplicación afín $\phi: A\rightarrow A$ cuya aplicación lineal asociada es $\vec{\phi} = id_v$, entonces tenemos que:
-$$\vec{pq} = \phi(\vec{pq}) = \overrightarrow{\phi(p)\phi(q)}\stackrel{Paral.}{\Rightarrow} \overrightarrow{p\phi(p)} = \overrightarrow{q\phi(q)} = v$$
-Por tanto, ahora:
-$$\phi(p) = p +v$$
-Con lo que queda definida la traslación de vector $v$. Para ver que está bien definida vamos a ver que es afín, para ello vemos que $\vec{\phi}$ es lineal:
-$$\vec{\phi}(\vec{pq}) = \overrightarrow{\phi(p)\phi(q)} = \overrightarrow{p+v, q+v} =\overrightarrow{p+v, p+ \vec{pq}+v} = \overrightarrow{p+v, (p+v)+ \vec{pq}} = \vec{pq}$$
-\underline{Matriz asociada}:
+\subsubsection{Traslación de vector $u$}
+Se trata de una aplicación de un espacio afín en sí mismo que transforma todos los puntos en sus trasladados a través del vector $u$, es decir, que traslada cada punto en la dirección de $v$ y una distancia dada por el módulo de $u$. Trivialmente, la aplicación $\vec{\phi}$ es la identidad, pues se conservan las distancias entre puntos:
+$$\phi(\vec{pq}) = \overrightarrow{\phi(p)\phi(q)} = \overrightarrow{\phi(p)p} + \vec{pq} + \overrightarrow{q\phi(q)} = - u + \vec{pq} + u= \vec{pq}$$
+\begin{defi}[Traslación de vector $u$]
+Sea $\phi: A \rightarrow A$ una afinidad, se denomina \textbf{traslación de vector $u$} si:
+\begin{itemize}
+\item $\phi(p) = \varphi_p^{-1}(u) = p + u$
+\item $\vec{\phi}(v) = v$
+\item \underline{\textbf{Matriz Asociada}}:
 
-Sea $\phi$ traslación, su aplicación asociada $\vec{\phi} = id_v$ y como es traslación tiene que ser sobre el mismo A y R, luego $R = \{p_0, B\} $, entonces su matriz asociada es:
+Como el espacio de llegada y salida son el mismo, entonces tomamos $R = \{p_0, B\} $ cualquiera en ambos espacios y la matriz asociada queda como:
 $$M_{R} (\phi) = \left(\begin{array}{c|ccc}
 1  & 0 & \ldots & 0 \\
 \hline
@@ -4611,9 +4832,9 @@ a_1  &  & & \\
 a_n & & &
 \end{array}
 \right)$$
-Donde $(a_1, \cdots, a_n)$ es el vector de la traslación en la base $B$.
+donde $(a_1, \cdots, a_n)$ es el vector de la traslación en la base $B$.
 
-Cabe destacar dos cosas, la primera es que si el vector de la traslación es el nulo, esto querría decir que todos los puntos son fijos y, por tanto, la matriz sería la identidad. Por otro lado, si queremos simplificar aún más esta expresión podemos elegir una base $B'=\{v_1', \cdots, v_n'\}$ de forma que $v_1$ sea el vector de la traslación porque en ese caso toda esa columna sería un único 1 en $a_1$ y lo demás 0:
+Por otro lado, podemos simplificar aún más esta expresión eligiendo una base $B'=\{v_1', \cdots, v_n'\}$ de forma que $v_1'$ sea el vector de la traslación, pues la matriz quedaría como:
 $$M_{R} (\phi) = \left(\begin{array}{c|ccc}
 1  & 0 & \ldots & 0 \\
 \hline
@@ -4623,22 +4844,32 @@ $$M_{R} (\phi) = \left(\begin{array}{c|ccc}
 0 & & &
 \end{array}
 \right)$$
+\end{itemize}
+\end{defi}
 
-\subsubsection*{Homotecias}
-Sea $\phi : A \to A$ afín, $\vec{\phi} = r\cdot id_V$, $\phi$ es homotecia si excluimos $r=1$ y $r=0$ para que no sean ni la identidad ni la aplicación nula.
+\begin{obs}
+Cabe destacar dos cosas, la primera es que si el vector de la traslación es el nulo, esto querría decir que todos los puntos son fijos y, por tanto, la matriz sería la identidad.
+\end{obs}
 
-Este tipo de aplicaciones tiene un único punto fijo, es decir, $A_\phi =  \{c\}$ que llamaremos el centro de homotecia. Primero veamos que en caso de haber algún punto fijo, este es único:
-$$p,q \in A_\phi \Rightarrow r\vec{pq} = r \overrightarrow{\phi(p)\phi(q)} = r \vec{\phi} (\vec{pq}) = r^2 \vec{pq} \Rightarrow r(1-r) \vec{pq} = 0 \Rightarrow \vec{pq} = 0 \Rightarrow p = q$$
-Veamos ahora quién puede ser el candidato a ser punto fijo:
-$$c \in A_\phi \Rightarrow r\cdot \vec{pc} = \vec{\phi} (\vec{pc}) = \overrightarrow{\phi(p) + \phi(c)} = \overrightarrow{\phi(p) c} = \overrightarrow{\phi(p)p} + \vec{pc} \Rightarrow$$
-$$\Rightarrow \overrightarrow{p \phi(p)} = (1-r) \vec{pc} \Rightarrow \vec{pc} = \frac{1}{1-r} \overrightarrow{p \phi(p)} \Rightarrow c = p + \vec{pc} = p + \frac{1}{1-r}\cdot\overrightarrow{p \phi(p)}$$
+\newpage
+\subsubsection{Homotecia}
+Todas aquellas aplicaciones afines donde $\vec{\phi}= r\cdot id_v$ donde\footnote{Tal y como se ve en las demostraciones, consideramos $\phi_r$ homotecia si excluimos $r=1$ y $r=0$ para que no sean ni la identidad ni la aplicación nula.} $r\neq 0, 1$ se denominan homotecias de razón $r$. Éstas son aplicaciones del espacio afín en sí mismo que consisten en expansiones o contracciones radiales entorno a un punto que queda fijo $c$. Los demás vectores modifican su distancia con respecto a él un factor de $r$.
+
+La demostración de que hay un punto fijo es sencilla, primero hay que ver que es único:
+$$p,q \in A_\phi \Rightarrow \vec{pq} = \overrightarrow{\phi(p)\phi(q)} = \vec{\phi}(\vec{pq}) =  r\cdot \vec{pq} \Leftrightarrow r \cdot \vec{pq} = r^2 \vec{pq} \Rightarrow r(1-r) \vec{pq} = 0 \Rightarrow \vec{pq} = 0 \Rightarrow p = q$$
+Para ver quién es este punto fijo:
+$$c \in A_\phi \Rightarrow r\cdot \vec{pc} = \vec{\phi} (\vec{pc}) = \overrightarrow{\phi(p)\phi(c)} = \overrightarrow{\phi(p) c} = \overrightarrow{\phi(p)p} + \vec{pc} \Rightarrow$$
+$$\Rightarrow \overrightarrow{p \phi(p)} = (1-r) \vec{pc} \Rightarrow \vec{pc} = \frac{1}{1-r} \overrightarrow{p \phi(p)} \Rightarrow c = p + \frac{1}{1-r}\cdot\overrightarrow{p \phi(p)}$$
 De este modo, podemos definir el centro de homotecia como:
-$$c= p + \frac{1}{1-r} \cdot \overrightarrow{p \phi(p)}$$
-Comprobamos que el centro es invariante, para ver que cumple la definición y concluir que el cardinal de los puntos fijos es exactamente 1:
-$$\phi (c) = \phi (p) + \frac{1}{1-r} \vec{\phi}(\overrightarrow{p \phi(p)}) = p + \overrightarrow{p \phi(p)} + \frac{r}{1-r} \overrightarrow{p \phi(p)} = p + \left(1 + \frac{r}{1-r}\right) \overrightarrow{p \phi(p)} = p +  \frac{1}{1-r} \cdot \overrightarrow{p \phi(p)} = c$$
-\underline{Matriz asociada}:
+$$\boxed{c= p + \frac{1}{1-r} \cdot \overrightarrow{p \phi(p)}}$$
+\begin{defi}[Homotecia de razón $r$]
+Sea $\phi: A \rightarrow A$ una afinidad, se denomina \textbf{homotecia de razón $r$} si:
+\begin{itemize}
+\item $\phi(p) = c + r\cdot \vec{cp}$ donde $c\in A_\phi$.
+\item $\vec{\phi}(\vec{v}) = r\cdot v$
+\item \underline{\textbf{Matriz asociada}}:
 
-Sea $\phi$ homotecia de razón $r$ cuyo centro es $c$, entonces su matriz asociada es $\vec{\phi} = r id_V$. Si tomamos $R = \{c, B\}$, siendo $B$ una base cualquiera, entonces su matriz es:
+Si tomamos $R = \{c, B\}$, siendo $c$ el centro\footnote{Para calcular el centro, basta con escribir la matriz tomando como centro un punto cualquiera y resolver $v = A\cdot v^t$} y $B$ una base cualquiera, entonces su matriz asociada sería:
 $$M_{R} (\phi) = \left(\begin{array}{c|ccc}
 1  & 0 & \ldots & 0 \\
 \hline
@@ -4647,14 +4878,12 @@ $$M_{R} (\phi) = \left(\begin{array}{c|ccc}
 0 & & &
 \end{array}
 \right)$$
-Y las coordenadas\footnote{Si queremos hallar el centro porque no lo sabemos, escribimos la matriz en un sistema cualquiera y resolvemos $v = A\cdot v^t$} de la primera columna son nulas porque hemos elegido de centro $c$ que es un punto fijo.
+\end{itemize}
+\end{defi}
 
-\subsubsection*{Proyecciones}
-Sea $\phi : A \to A$ afín. La aplicación afín conocida como \textbf{proyección} cumple:
-$$\phi^2 = \phi \Leftrightarrow \vec{\phi}^2 = \vec{\phi} \mbox{ y } A_\phi \neq \emptyset$$
-De hecho, se tiene que $A_\phi = Im(\phi)$.
-
-\underline{Demostración}
+\newpage
+\subsubsection{Proyección}
+La aplicación afín que verifica que $\phi^2 = \phi$ se denomina proyección. Además, esta condición es equivalente a que $\vec{\phi}^2 = \vec{\phi}$ y $A_\phi \neq \emptyset$, de hecho, $A_\phi = Im(\phi)$. Para demostrarlo observemos que:
 \begin{itemize}
 \item "$\Rightarrow$":
 
@@ -4710,7 +4939,8 @@ Si $A_\phi \cap (p + V_{\vec{\phi}, 0}) \neq \emptyset \Rightarrow A_\phi \cap (
 $$\dim(A_\phi \cap (p + V_{\vec{\phi}, 0})) = \dim \overrightarrow{A_\phi \cap (p + V_{\vec{\phi}, 0})} = \dim (\vec{A_\phi} \cap \overrightarrow{p+ V_{\vec{\phi}, 0}}) = \dim( V_{\vec{\phi}, 1} \cap V_{\vec{\phi}, 0}) = \dim \{ 0 \} = 0$$
 \end{itemize}
 
-\subsubsection*{Simetrías}
+\newpage
+\subsubsection{Simetrías}
 Sea $\phi : A \to A$ afín y $\chi (K) \neq 2$. La aplicación afín conocida como \textbf{simetría} cumple:
 $$\phi^2 = id_A \Leftrightarrow \vec{\phi}^2 = id_V \mbox{ y } A_\phi \neq \emptyset$$
 
@@ -4747,28 +4977,27 @@ $$M_{R} (\phi) = \left(\begin{array}{c|cccccc}
 \end{array}
 \right)$$
 
-\subsubsection*{Homologías}
-Sea $\phi : A \to A$ afín, la denotamos por \textbf{homología general} si cumple:
-$$q_{\vec{\phi}} = (x-1)(x-r) : r \neq 1,0,-1 \mbox{ y } A_\phi \neq \emptyset$$
-\underline{Matriz asociada}:
+\newpage
+\subsubsection{Homología}
+Sea $\phi : A \to A$ una aplicación afín, se dice que es una \textbf{homología general} si cumple:
+$$q_{\vec{\phi}} = (x-1)(x-r) : r \neq 1,0,-1 \mbox{ y } A_\phi \neq \emptyset$$\\
+Al autovalor $r$ se le conoce como la \textbf{razón de la homología}, a la variedad\footnote{Cabe destacar que sabemos que los vectores de la base y de la dirección forman una base por ser $\vec{\phi}$ diagonalizable.} $W = p_0 + L(v_1, \ldots v_m) = p_0 + V_{\vec{\phi}, 1}$ como la \textbf{base} y a la variedad $U= L(v_{m+1}, \ldots, v_n) =  V_{\vec{\phi}, r}$ como la \textbf{dirección}.
 
-De este modo, sea $R = \{p_0, B\}$, siendo $p_0 \in A_\phi, B = \{\underbrace{ v_1, \ldots v_m}_{\in V_{\vec{\phi}, 1}}, \underbrace{v_{m+1}, \ldots, v_n}_{\in V_{\vec{\phi}, r}}\}$ su matriz asociada queda como:
-$$M_{R} (\phi) = \left(\begin{array}{c|cccccc}
-1  & 0 &  \ldots & \ldots & \ldots & \ldots& 0 \\
+\begin{itemize}
+\item \underline{\textbf{Matriz asociada}}:
+
+Consideramos $R = \{p_0, B\}$, siendo $p_0 \in A_\phi$, y $B = \{\overbrace{v_1, \ldots v_m}^{\in V_{\vec{\phi}, 1}}, \overbrace{v_{m+1}, \ldots, v_n}^{\in V_{\vec{\phi}, r}}\}$ su matriz asociada queda como:
+$$M_{R} (\phi) = \left(\begin{array}{c|cc}
+1  & 0 & 0 \\
 \hline
-0  & 1 & & & & & \\
-\vdots & & \ddots & & & & \\
-\vdots &  & & 1 & & \\
-\vdots &  & &  & r & \\
-\vdots & & & & & \ddots & \\
-0 & & & & & &  r
+0  & I_m & 0 \\
+0 & 0 & rI_{n-m}
 \end{array}
 \right)$$
-Denotamos por el autovalor $r$ a la \textbf{razón} de la homología, a $p_0 + L(v_1, \ldots v_m) = p_0 + V_{\vec{\phi}, 1}$ por la \textbf{base} y a la \textbf{dirección} por $L(v_{m+1}, \ldots, v_n) =  V_{\vec{\phi}, r}$.
+\end{itemize}
 
-\underline{\textbf{Homología general con desplazamiento}}
-
-Definimos una homología general con desplazamiento como la composición de una homología general con una traslación cuyo vector de traslación es paralelo a la base de la homología.
+\begin{defi}[Homología general con desplazamiento]
+Se define una \textbf{homología general con desplazamiento} como la composición de una homología general con una traslación cuyo vector de traslación es paralelo a la base de la homología.
 
 Sea $B = \{v_1, v_2\}$ base de vectores propios, entonces la matriz asociada resultante queda como:
 $$M_R (\phi) = \begin{pmatrix} 1 & 0 & 0 \\ a_1 & 1 & 0 \\ a_2 & 0 & r \end{pmatrix} = \left(\begin{array}{c|cc}
@@ -4785,11 +5014,11 @@ a_2 & 0 &  r
 \end{array}
 \right) = M_R (\phi_2 \circ \phi_1) \Rightarrow \phi = \phi_2 \circ \phi_1 $$
 Se observa que la matriz de la aplicación $\varphi_2$ es una traslación y que el vector de traslación es paralelo al vector $v_2$ que es el que compone la base de la homología general. La aplicación $\varphi_1$ es una homología no elegida en su forma canónica definida, puesto que no hemos puesto de centro a un punto fijo.
+\end{defi}
 
 
-\underline{\textbf{Homología especial}}
-
-Definimos una homología especial como una homología general pero con un único valor que corresponde al 1 que posee multiplicidad doble (si no sería traslación).
+\begin{defi}[Homología Especial]
+Se define una \textbf{homología especial} como una homología general, pero con el único autovalor $1$ que posee multiplicidad doble, pues si no sería traslación.
 
 Sea $R = \{p_0 , B\}$, siendo $p_0 \in A_\phi$ un punto fijo y eligiendo una base de forma que $M_B (\vec{\phi}) = \begin{pmatrix} 1 & 1   \\ 0 & 1  \end{pmatrix} $ la matriz canónica de Jordan asociada a su aplicación lineal, entonces su matriz queda como:
 $$M_R (\phi) = \left(\begin{array}{c|cc}
@@ -4800,9 +5029,9 @@ $$M_R (\phi) = \left(\begin{array}{c|cc}
 \end{array}
 \right)$$
 Denotamos por base a $A_\phi = p_0 + L(v_1)$ y por dirección a $L(v_2)$.
+\end{defi}
 
-\underline{\textbf{Homología especial con desplazamiento}}
-
+\begin{defi}[Homología Especial con desplazamiento]
 De modo análogo, definimos la homología especial con desplazamiento como una composición de una homología especial con una traslación cuyo vector es paralelo a la dirección de la homología.
 
 Sea $R = \{p_0 , B\}$, siendo $M_B (\vec{\phi}) = \begin{pmatrix} 1 & 1   \\ 0 & 1  \end{pmatrix} $
@@ -4825,65 +5054,10 @@ a_1 & 1 &  1 \\
 0 & 0 &  1
 \end{array}
 \right) = M_R (\phi_2 \circ \phi_1)$$
+\end{defi}
 
-\newpage
 \subsection{Clasificación de las Afinidades del Plano}
-\subsubsection*{Proposición}
-Si el 1 no es un autovalor de la aplicación asociada, entonces el conjunto de puntos fijos es un único valor:
-$$A_\phi = \{p_0\} \Leftrightarrow 1 \notin \sigma(\vec{\phi})$$
-De hecho, la discusión para clasificar las aplicaciones afines será distinguir los casos en que 1 forme parte de los autovalores y que no forme parte de los mismos.
-
-Es importante dejar claro que cuando el 1 pertenece al espectro de la aplicación asociada, no podemos suponer que el conjunto de puntos fijos es no vacío porque, por ejemplo:
-$$\left(\begin{array}{c|cc}
-1  & 0 & 0 \\
-\hline
-1 & 1 &  0 \\
-0 & 0 &  r
-\end{array}
-\right) \Rightarrow p\in A_\phi \Rightarrow \begin{cases} x_1 =1 + x_1  \\ x_2 = rx_2 \end{cases} \Rightarrow \#$$
-
-\underline{Demostración}
-$$\begin{pmatrix}
-1 \\ x_1 \\ \vdots \\ x_n
-\end{pmatrix} = \left(\begin{array}{c|ccc}
-1  & 0 & \ldots & 0 \\
-\hline
-a_1  & a_{11} & \ldots & a_{1n} \\
-\vdots & \vdots &  & \vdots \\
-a_n & a_{n1} & \ldots & a_{nn}
-\end{array}
-\right) \begin{pmatrix}
-1 \\ x_1 \\ \vdots \\ x_n
-\end{pmatrix} \Leftrightarrow (A - I_n) \begin{pmatrix}
-x_1 \\ \vdots \\ x_n
-\end{pmatrix} = \begin{pmatrix}
--a_1 \\ \vdots \\ -a_n
-\end{pmatrix}$$
-Para que la solución sea única, entonces $rg(A-I_n) = n$, luego:
-$$A_\phi = \{p_0\} \Leftrightarrow rg(A - I_n) = n \Leftrightarrow p_A (1) = |A - I_n| \neq 0 \Leftrightarrow 1\notin \sigma(\vec{\phi})$$
-
-\subsubsection*{Biyectividad de las aplicaciones afines}
-Sea el par $(\phi, \lambda)$ una aplicación afín de forma que $\phi: A_1 \to A_2$ y $\lambda: V_1 \to V_2$ donde $\lambda = \vec{\phi}$, entonces el caracter de $\phi$ depende estrictamente de $\lambda$, es decir:
-$$\phi \mbox{ inyectiva } \Leftrightarrow \lambda \mbox{ inyectiva } $$
-$$\phi \mbox{ suprayectiva } \Leftrightarrow \lambda \mbox{ suprayectiva } $$
-$$\phi \mbox{ biyectiva } \Leftrightarrow \lambda \mbox{ bityectiva } $$
-\underline{Demostración}
-
-Se va a realizar la demostración de la primera afirmación, dejando al lector las restantes.
-
-"$\Rightarrow$"
-
-$\lambda (\vec{pq}) = \lambda (\vec{pr}) \Rightarrow  \phi(q) = \phi(p) + \lambda(\vec{pq}) = \phi(p) + \lambda(\vec{pr}) = \phi(r) \overset{\phi \mbox{ inyectiva }}{\Rightarrow} q = r \Rightarrow \vec{pq} = \vec{pr}$
-
-"$\Leftarrow$"
-
-$\phi(q) = \phi(r) \Rightarrow \lambda (\vec{qr}) = \overrightarrow{\phi(q) \phi(r)} = 0 \overset{\lambda \mbox{ inyectiva }}{\Rightarrow} \vec{qr} = 0 \Rightarrow q = r$
-
-
-\subsubsection*{Grupo Afín}
-Llamaremos grupo afín del espacio afín $\mathcal{A}$ a:
-$$GA(\mathcal{A}) = \{\phi : A \to A \ | \ \phi \mbox{ es afín y biyectiva }\}$$
-Y este conjunto, junto con la composición y la suma de aplicaciones tiene todas las propiedades de un grupo.
+Del mismo modo que hemos estado clasificando y caracterizando los endomorfismos, las aplicaciones ortogonales, ... nuestro objetivo ahora es clasificar todas las posibles aplicaciones afines en el plano. El propósito es poder tener un conocimiento muy preciso de lo que se espera encontrar como aplicación afín en el plano para, llegado el momento, tener claras las posibilidades y propiedades en el manejo de este objeto en áreas como la geometría.
 
 \underline{\textbf{Clasificación en dimensión 2}}:
 
@@ -4949,22 +5123,246 @@ a & -b \\ b & a
 \right)$$
 Que se parece, pero no es extrapolable a las rotaciones vistas en las aplicaciones ortogonales.
 
-\subsubsection*{Teorema}
-Sean $A, A'$ espacios afines, $p_0 \in A$ un punto de $A$ y $\{v_1, \ldots v_n\}$ base de $V$, entonces:
-$$\forall p'_0 \in A' \mbox{ y }\{v'_1, \ldots v'_n\} \mbox{ base de }V':\exists ! \phi: A \to A'\mbox{ afín}: \begin{cases} \phi(p_0) = p'_0 \\ \vec{\phi} (v_i) = v'_i : \forall i = 1, \ldots, n \end{cases}$$
-Luego del mismo modo que al definir los valores de una aplicación sobre una base la aplicación lineal quedaba definida, aquí al definir los valores de la aplicación afín sobre un sistema de referencia esta queda determinada de modo único.
+\section{ISOMETRÍAS}
+Sea $\dim V = n$ y $(A, V, \varphi)$ donde $\varphi(p,q) = \vec{pq}$ un espacio afín, si añadimos un producto escalar $f: V \times V \rightarrow \mathbb R$, entonces denominamos a $(A,V,\varphi, f)$ espacio afín euclídeo.
 
-\underline{Demostración}
+\subsection{Espacio métrico}
+Definimos la distancia entre dos puntos como:
+$$d(p,q) = ||\vec{pq}||$$
+De forma que con esta definición se cumplen las siguientes propiedades:
+\begin{itemize}
+\item $d(p,q) \geq 0 : \forall p,q\in A$
+\item $d(p,q) = 0\Rightarrow p = q$
+\item $d(p,q) \leq d(p,r) + d(r,p)$
+\end{itemize}
+Lo cual define las características de un espacio métrico.
 
-Sea $p \in A $ un punto cualquiera de $A$, entonces:
-$$p = p_0 + \sum_{i=1}^{n} a_i v_i \Rightarrow  \phi(p) = p'_0 + \sum_{i=1}^{n} a_i v'_i $$
-Y se comprueba trivialmente que cumple las propiedades de afín.
+\subsubsection*{Teorema de Pitágoras}
+$$\vec{p_0p_1}\perp \vec{p_0p_2}\Rightarrow ||\vec{p_1p_2}||^2 = ||\vec{p_0p_1}||^2 + ||\vec{p_0p_2}||^2$$
 
-\subsubsection*{Teorema}
-Sea $\{p_0, p_1, \ldots, p_n\}$ sistema de referencia afín de A, entonces:
-$$\forall p'_0, p'_1, \ldots, p'_n \in A': \exists! \phi: A \to A' \mbox{ afín }:\phi (p_i) = p'_i : \forall i = 1, \ldots, n$$
+\underline{Demostración}:
+$$||\vec{p_1p_2}|| ^2 = f(\vec{p_1p_2}, \vec{p_1p_2}) = f(\vec{p_1p_0}+\vec{p_0p_2}, \vec{p_1p_0}+\vec{p_0p_2}) = f (\vec{p_1p_0}, \vec{p_1p_0}) + f(\vec{p_0p_2}, \vec{p_0p_2}) = ||\vec{p_1p_0}||^2 + ||\vec{p_0p_2}||$$
 
-\section*{CÓNICAS}
+\subsubsection*{Distancia punto-variedad}
+Sea $p\in A$ un punto y $X\subseteq A$ una variedad, definimos:
+$$d(p,X) = \inf\{d(p_1,q) : q\in X\}$$
+Y de hecho, este ínfimo se alcanza, luego:
+$$d(p,X) = \min\{d(p_1,q) : q\in X\}$$
+Luego si la distancia entre un punto y una variedad es 0, el punto está en la variedad:
+$$d(p,X) = 0 \Rightarrow p\in X$$
+
+\subsubsection*{Distancia entre variedades}
+Sean $X, Y\subseteq A$ variedades afines, definimos la distancia entre ellas como:
+$$d(X,Y) = \inf\{d(p,q) : p\in X, \ q\in Y \}$$
+Y, de nuevo, este ínfimo se alcanza, luego:
+$$d(X,Y) = \min\{d(p,q) : p\in X, \ q\in Y \}$$
+En consecuencia, si ambas intersecan, su distancia es 0:
+$$X\cap Y \neq \emptyset \Leftrightarrow \exists p_0 \in X \cap Y: d(p_0,p_0) = 0$$
+
+\subsection{Referencias Ortonormales}
+Sea $R = \{p_0, B\}$, diremos que el sistema de referencia es ortonormal, si lo es la base $B$ que lo compone.
+
+\subsubsection*{Matriz de paso entre sistemas de referencia}
+Sean $R, R'$ sistemas de referencia ortonormales, entonces la matriz de paso entre ambos verifica que:
+$$ M (R, R') = \left(\begin{array}{c|ccc}
+1& 0 & \ldots & 0 \\
+\hline
+a_1 & & &   \\
+\vdots & & M(B,B') & \\
+a_n & & &
+\end{array}
+\right)$$
+Recíprocamente, si la matriz de cambio de base es de este tipo, entonces los sistemas que intercambia son ortogonales.
+
+\subsection{Isometrías}
+Denotamos por movimiento rígido o isometría de A a una aplicación afín $\phi : A \to A $ tal que su aplicación lineal asociada $\vec{\phi}$ es ortogonal, es decir:
+$$ M_R (\phi) = \left(\begin{array}{c|ccc}
+1& 0 & \ldots & 0 \\
+\hline
+a_1 & & &   \\
+\vdots & & M_B (\vec{\phi}) & \\
+a_n & & &
+\end{array}
+\right): \overrightarrow{p_0 \phi(p_0)} = a_1 v_1 + \ldots + a_n v_n \mbox{ y }\vec{\phi} \in O(V)$$
+De este modo, $R$ ortonormal implica que $M_B (\vec{\phi}) \mbox{ ortogonal}$.
+ 
+Los movimientos son todos biyectivos por lo que existe la aplicación inversa que también es un movimiento. Como la composición de movimientos es de nuevo un movimiento, entonces el conjunto de estas aplicaciones junto con la composición forman un grupo.
+
+\subsubsection*{Proposición}
+Una aplicación afín es un movimiento rígido si y sólo si conserva las distancias.
+$$\phi\mbox{ movimiento} \Leftrightarrow d(p,q) = d(\phi(p),\phi(q))$$
+\underline{Demostración}:
+$$d(\phi(p), \phi(q))^2 = ||\overrightarrow{\phi(p) \phi(q)}||^2 = f(\overrightarrow{\phi(p) \phi(q)}, \overrightarrow{\phi(p) \phi(q)}) = f(\vec{\phi}(\vec{pq}),\vec{\phi}(\vec{pq})) \overset{\vec{\phi} \in O(V)}{=} f(\vec{pq}, \vec{pq}) = ||\vec{pq}||^2 = d(p,q)^2$$
+
+\underline{Ejemplo}:
+Sea $\phi: \mathbb{R}^2 \to \mathbb{R}^2$ de forma que su matriz en base canónica sea:
+$$M_{R_c} (\phi) = \frac{1}{5} \begin{pmatrix} 5 & 0 & 0 \\ 0 & 4 & 3 \\ -5 & -3 & 4 \\\end{pmatrix} $$
+Veamos que $\phi$ es movimiento:
+$$M_{B_c} (\vec{\phi}) = \frac{1}{5} \begin{pmatrix}
+4 & 3 \\ -3 & 4
+\end{pmatrix} \Rightarrow \det(\vec{\phi}) = 1 \Rightarrow \vec{\phi} \in O^+ (2)$$
+Como $1 \notin \sigma(\phi) \Rightarrow A_\phi = \{p_0\} : p_0 = \begin{cases} (\frac{4}{5} - 1) x + \frac{3}{5} y = 0 \\ -1 - \frac{3}{5} x + (\frac{4}{5} - 1) y = 0\end{cases}$. Luego si escogemos un sistema apropiado $R = \{p_0, B = \{v_1, v_2\}\}$ su matriz quedaría como:
+$$M_R (\phi) = \left(\begin{array}{c|cc}
+1& 0  & 0 \\
+\hline
+0 & \cos\theta & -\sen\theta    \\
+0 & \sen\theta & \cos\theta 
+\end{array}
+\right)$$
+Ejemplo: En $\mathbb{R}^3$ consideramos la matriz:
+$$M_{R_c} (\phi) = \frac{1}{3} =
+\left(\begin{array}{c|ccc}
+3 & 0  & 0 & 0 \\
+\hline
+3 & 2 & -1 & 2    \\
+3 & -1 & 2 & 2 \\
+0 & 2 & 2 & -1 
+\end{array}
+\right) \Rightarrow M_{B_c} (\vec{\phi}) = \frac{1}{3} \begin{pmatrix} 2 & -1 & 2 \\ -1 & 2 & 2 \\ 2 & 2 & -1 \\\end{pmatrix} \mbox{ ortogonal}\Rightarrow \vec{\phi} \in O^(3)$$
+Como $\det (\vec{\phi}) < 0 \Rightarrow \det(\vec{\phi}) = -1$, luego existe una base respecto de la cual:
+$$M_B(\vec{\phi})=\begin{pmatrix} -1 & 0 & 0 \\ 0 & c & -s \\ 0 & s & c\end{pmatrix}$$
+Como la traza es un invariante, tenemos que:
+$$tr(\vec{\phi}) = 1 = -1+2c\Rightarrow c = 1 \Rightarrow s = 0 \Rightarrow  M_B(\vec{\phi})=\begin{pmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}$$
+Luego $\phi$ será una simetría especular si hay puntos fijos:
+$$A_\phi : \begin{cases} 1 - x - y + 2z = 0 \\ 1-x-y+2z = 0 \\ 2x + 2y - 4y = 0 \end{cases} \Rightarrow A_\phi = \emptyset$$
+Lo que quiere decir que $\vec{\phi}$ es simetría ortogonal, pero $\phi$ no es simetría (es simetría con desplazamiento).
+
+\subsubsection*{Clasificación de Movimientos}
+Sea $\phi : A \to A $ movimiento, $A$ espacio afín euclídeo de dimensión 2:
+\begin{itemize}
+\item $\vec{\phi} \in O^+(V)$
+	\begin{itemize}
+	\item \underline{\textbf{Giros}}: \fbox{$A_\phi \neq \emptyset$}
+	
+	Elegimos un $R=\{p_0, B\}$ de forma que $p_0\in A_\phi$ y una base ortonormal para que:
+	$$M_R (\phi) = \begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sen\theta \\ 0 & \sen\theta & \cos\theta \\ \end{pmatrix} : 0 \leq \theta \leq \pi$$
+ 	Como casos especiales tenemos que $\begin{cases} \theta = 0  & \Rightarrow \phi = id_A  \\ \theta = \pi & \phi \mbox{sim. central}\end{cases}$
+
+	\item \underline{\textbf{Giro con desplazamiento}}: \fbox{$A_\phi = \emptyset$}
+	
+	Elegimos de nuevo un $R=\{p, B\}$ donde $B$ es ortonormal (ahora no podemos coger $p$ conveniente) de forma que:
+	$$M_R (\phi) = \begin{pmatrix} 1 & 0 & 0 \\ a_1 & \cos\theta & -\sen\theta \\ a_2 & \sen\theta & \cos\theta \\ \end{pmatrix} = \underset{(a_1, a_2) \neq (0,0)}{\left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline a_1 & 1 & 0 \\ a_2 & 0 & 1 \\ \end{array} \right) } \begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sen\theta \\ 0 & \cos\theta & \sen\theta \\ \end{pmatrix} $$	
+	Se trata de la composición de un giro con centro $p_0$ y ángulo $\theta$ (la segunda matriz), seguido de una traslación de vector $v = (a_1,a_2)$. Cuando este giro es la identidad, se tiene sólo una traslación.
+
+	\end{itemize}
+\item $\vec{\phi} \in O^-(V)$
+	\begin{itemize}
+	\item \underline{\textbf{Simetría Ortogonal Axial}}: \fbox{$A_\phi \neq \emptyset$}
+	
+	Elegimos $R=\{p_0, B\}$ con $p_0\in A_\phi$ y $B$ base ortonormal, de forma que:
+	$$M_R (\phi) = \left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline 0 & 1 & 0 \\0 & 0 & -1 \\ \end{array} \right)$$
+	La base de la simetría corresponde a la variedad $p_0 + L(v_1) = A_\phi$ y la dirección $L(v_2) = L(v_1)^\perp$.
+
+	\item \underline{\textbf{Simetría Ortogonal Axial con desplazamiento}}: \fbox{$A_\phi = \emptyset$}
+	
+	Si esto ocurre dijimos que $1 \in \sigma(\vec{\phi})$ luego se tiene que:
+	$$M_R (\phi) = \left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline a_1 & 1 & 0 \\ a_2 & 0 & -1 \\ \end{array} \right) = \left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline a_1 & 1 & 0 \\ 0 & 0 & 1 \\ \end{array} \right)\left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline 0 & -1 & 0 \\ a_2 & 0 & 1 \\\end{array} \right)$$
+	Se trata de la composición de una traslación de vector $a_1 v_1$ (la primera matriz) con una simetría ortogonal axial, es decir, se trata de una simetría con desplazamiento.
+	\end{itemize}
+\end{itemize}
+
+Sea $\phi : A\rightarrow A$ movimiento donde $A$ es un espacio afín de dimensión 3:
+\begin{itemize}
+\item $\vec{\phi} \in O^+(V)$
+	\begin{itemize}
+	\item \underline{\textbf{Rotación}}: \fbox{$A_\phi \neq \emptyset$}
+	
+	Elegimos un sistema de referencia $R=\{p_0, B\}$ donde $p_0 \in A_\phi$ y $B$ sea una base ortonormal, entonces:
+	$$M_R (\phi) = \left(\begin{array}{c|ccc}
+1 & 0  & 0 & 0 \\
+\hline
+0 & 1 &  0& 0    \\
+0 & 0 &  \cos\theta  & -\sen\theta \\
+0 & 0 &  \sen\theta & \cos\theta 
+\end{array}
+\right) : 0 \leq \theta \leq \pi$$
+Con lo cual, tal y como lo vimos el eje de rotación es $p_0 + L(v_1)$ y el ángulo $\theta$. Como casos especiales: $\begin{cases} \theta = 0 & \mbox{ Identidad } \\ \theta = \pi & \mbox{ Simetría axial } \end{cases}$
+
+\item \underline{\textbf{Movimiento Helicoidal}}: \fbox{$A_\phi = \emptyset$}
+
+En este caso solo podemos elegir una base ortonormal para poder obtener un sistema de referencia ortonormal, pero ya el punto no es fijo:
+$$M_R (\phi) = \underset{(a_1, a_2, a_3) \neq (0,0,0)}{\left(\begin{array}{c|ccc}
+1 & 0  & 0 & 0 \\
+\hline
+a_1 & 1 &  0& 0    \\
+a_2 & 0 &  \cos\theta  & -\sen\theta \\
+a_3 & 0 &  \sen\theta & \cos\theta 
+\end{array}
+\right)} =
+\left(\begin{array}{c|ccc}
+1 & 0  & 0 & 0 \\
+\hline
+a_1 &  &  &     \\
+0 & & I_3   &  \\
+0 &  &   &  
+\end{array}
+\right)\left(\begin{array}{c|ccc}
+1 & 0  & 0 & 0 \\
+\hline
+0 & 1 &  0& 0    \\
+a_2 & 0 &  \cos\theta  & -\sen\theta \\
+a_3 & 0 &  \sen\theta & \cos\theta 
+\end{array}
+\right)$$
+Se le llama movimiento helicoidal por ser la composición de una rotación y una traslación de vector $a_1 v_1$ (el movimiento que haría una hélice). Como caso especial, cuando los giros son de ángulo 0, entonces tenemos las traslaciones dentro de este grupo.
+\end{itemize}
+\newpage
+\item $\vec{\phi} \in O^-(3)$
+\begin{itemize}
+\item \underline{\textbf{Rotación con simetría especular}}: \fbox{$A_\phi \neq \emptyset$}
+
+Elegimos un sistema de referencia ortonormal $R=\{p_0, B\}$ donde $p_0\in A_\phi$ y $B$ ortonormal, entonces:
+$$M_R (\phi) = \left(\begin{array}{c|ccc}
+1 & 0  & 0 & 0 \\
+\hline
+0 & -1 &  0& 0    \\
+0 & 0 &  \cos\theta  & -\sen\theta \\
+0 & 0 &  \sen\theta & \cos\theta 
+\end{array}
+\right) = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1
+
+\end{pmatrix} \left(\begin{array}{c|ccc}
+1 & 0  & 0 & 0 \\
+\hline
+0 & 1 &  0& 0    \\
+0 & 0 &  \cos\theta  & -\sen\theta \\
+0 & 0 &  \sen\theta & \cos\theta 
+\end{array}
+\right) $$
+
+Se trata de una rotación seguida de una simetría especular, cuya base es el plano de la rotación.
+
+\item \underline{\textbf{Simetría especular compuesta con traslación}}: \fbox{$A_\phi = \emptyset$}
+
+De este modo, sabemos que $\sigma (\phi)= \{-1 , 1 , 1\}$, luego en una referencia ortonormal tenemos:
+$$ M_R (\phi) = \left(\begin{array}{c|ccc}
+1 & 0  & 0 & 0 \\
+\hline
+a_1 & -1 &  0& 0    \\
+a_2 & 0 & 1  & 0 \\
+a_3 & 0 &  0 & 1
+\end{array}
+\right) =  \left(\begin{array}{c|ccc}
+1 & 0  & 0 & 0 \\
+\hline
+0 &  &  &     \\
+a_2 & & I_3   &  \\
+a_3 &  &   &  
+\end{array}
+\right)  \left( \begin{array}{c|ccc}
+1 & 0  & 0 & 0 \\
+\hline
+a_1 & -1 & 0 & 0   \\
+0 &0 & 1   &0  \\
+0 & 0 &  0 &  1
+\end{array}
+\right)$$
+Se trata de una simetría especular compuesta con una traslación, cuyo vector de traslación está contenido en la dirección del plano que es base de la simetría.
+\end{itemize}
+\end{itemize}
+
+\chapter{Cónicas}
+\section{Versión Afín}
 Sea $A = \mathbb{R}^2$ plano afín real usual, definimos el objeto matemático de las cónicas como el conjunto de puntos que verifican:
 $$a_{11}x^2 + 2a_{12}xy + a_{22}y^2 + 2a_{01} x + 2a_{02} y + a_{00} = 0:  a_{ij} \in \mathbb{R} \mbox{ y } (a_{11}, a_{12}, a_{22}) \neq (0,0,0)$$
 La expresión matricial de la cónica sería : $$0 = \begin{pmatrix}
@@ -5277,247 +5675,7 @@ $$M_{R_c} (\phi)= \left(\begin{array}{c|cc}
 \end{array}
 \right) $$
 
-\newpage
-\section*{ISOMETRÍAS}
-Sea $\dim V = n$ y $(A, V, \varphi)$ donde $\varphi(p,q) = \vec{pq}$ un espacio afín, si añadimos un producto escalar $f: V \times V \rightarrow \mathbb R$, entonces denominamos a $(A,V,\varphi, f)$ espacio afín euclídeo.
-
-\subsection{Espacio métrico}
-Definimos la distancia entre dos puntos como:
-$$d(p,q) = ||\vec{pq}||$$
-De forma que con esta definición se cumplen las siguientes propiedades:
-\begin{itemize}
-\item $d(p,q) \geq 0 : \forall p,q\in A$
-\item $d(p,q) = 0\Rightarrow p = q$
-\item $d(p,q) \leq d(p,r) + d(r,p)$
-\end{itemize}
-Lo cual define las características de un espacio métrico.
-
-\subsubsection*{Teorema de Pitágoras}
-$$\vec{p_0p_1}\perp \vec{p_0p_2}\Rightarrow ||\vec{p_1p_2}||^2 = ||\vec{p_0p_1}||^2 + ||\vec{p_0p_2}||^2$$
-
-\underline{Demostración}:
-$$||\vec{p_1p_2}|| ^2 = f(\vec{p_1p_2}, \vec{p_1p_2}) = f(\vec{p_1p_0}+\vec{p_0p_2}, \vec{p_1p_0}+\vec{p_0p_2}) = f (\vec{p_1p_0}, \vec{p_1p_0}) + f(\vec{p_0p_2}, \vec{p_0p_2}) = ||\vec{p_1p_0}||^2 + ||\vec{p_0p_2}||$$
-
-\subsubsection*{Distancia punto-variedad}
-Sea $p\in A$ un punto y $X\subseteq A$ una variedad, definimos:
-$$d(p,X) = \inf\{d(p_1,q) : q\in X\}$$
-Y de hecho, este ínfimo se alcanza, luego:
-$$d(p,X) = \min\{d(p_1,q) : q\in X\}$$
-Luego si la distancia entre un punto y una variedad es 0, el punto está en la variedad:
-$$d(p,X) = 0 \Rightarrow p\in X$$
-
-\subsubsection*{Distancia entre variedades}
-Sean $X, Y\subseteq A$ variedades afines, definimos la distancia entre ellas como:
-$$d(X,Y) = \inf\{d(p,q) : p\in X, \ q\in Y \}$$
-Y, de nuevo, este ínfimo se alcanza, luego:
-$$d(X,Y) = \min\{d(p,q) : p\in X, \ q\in Y \}$$
-En consecuencia, si ambas intersecan, su distancia es 0:
-$$X\cap Y \neq \emptyset \Leftrightarrow \exists p_0 \in X \cap Y: d(p_0,p_0) = 0$$
-
-\subsection{Referencias Ortonormales}
-Sea $R = \{p_0, B\}$, diremos que el sistema de referencia es ortonormal, si lo es la base $B$ que lo compone.
-
-\subsubsection*{Matriz de paso entre sistemas de referencia}
-Sean $R, R'$ sistemas de referencia ortonormales, entonces la matriz de paso entre ambos verifica que:
-$$ M (R, R') = \left(\begin{array}{c|ccc}
-1& 0 & \ldots & 0 \\
-\hline
-a_1 & & &   \\
-\vdots & & M(B,B') & \\
-a_n & & &
-\end{array}
-\right)$$
-Recíprocamente, si la matriz de cambio de base es de este tipo, entonces los sistemas que intercambia son ortogonales.
-
-\subsection{Isometrías}
-Denotamos por movimiento rígido o isometría de A a una aplicación afín $\phi : A \to A $ tal que su aplicación lineal asociada $\vec{\phi}$ es ortogonal, es decir:
-$$ M_R (\phi) = \left(\begin{array}{c|ccc}
-1& 0 & \ldots & 0 \\
-\hline
-a_1 & & &   \\
-\vdots & & M_B (\vec{\phi}) & \\
-a_n & & &
-\end{array}
-\right): \overrightarrow{p_0 \phi(p_0)} = a_1 v_1 + \ldots + a_n v_n \mbox{ y }\vec{\phi} \in O(V)$$
-De este modo, $R$ ortonormal implica que $M_B (\vec{\phi}) \mbox{ ortogonal}$.
- 
-Los movimientos son todos biyectivos por lo que existe la aplicación inversa que también es un movimiento. Como la composición de movimientos es de nuevo un movimiento, entonces el conjunto de estas aplicaciones junto con la composición forman un grupo.
-
-\subsubsection*{Proposición}
-Una aplicación afín es un movimiento rígido si y sólo si conserva las distancias.
-$$\phi\mbox{ movimiento} \Leftrightarrow d(p,q) = d(\phi(p),\phi(q))$$
-\underline{Demostración}:
-$$d(\phi(p), \phi(q))^2 = ||\overrightarrow{\phi(p) \phi(q)}||^2 = f(\overrightarrow{\phi(p) \phi(q)}, \overrightarrow{\phi(p) \phi(q)}) = f(\vec{\phi}(\vec{pq}),\vec{\phi}(\vec{pq})) \overset{\vec{\phi} \in O(V)}{=} f(\vec{pq}, \vec{pq}) = ||\vec{pq}||^2 = d(p,q)^2$$
-
-\underline{Ejemplo}:
-Sea $\phi: \mathbb{R}^2 \to \mathbb{R}^2$ de forma que su matriz en base canónica sea:
-$$M_{R_c} (\phi) = \frac{1}{5} \begin{pmatrix} 5 & 0 & 0 \\ 0 & 4 & 3 \\ -5 & -3 & 4 \\\end{pmatrix} $$
-Veamos que $\phi$ es movimiento:
-$$M_{B_c} (\vec{\phi}) = \frac{1}{5} \begin{pmatrix}
-4 & 3 \\ -3 & 4
-\end{pmatrix} \Rightarrow \det(\vec{\phi}) = 1 \Rightarrow \vec{\phi} \in O^+ (2)$$
-Como $1 \notin \sigma(\phi) \Rightarrow A_\phi = \{p_0\} : p_0 = \begin{cases} (\frac{4}{5} - 1) x + \frac{3}{5} y = 0 \\ -1 - \frac{3}{5} x + (\frac{4}{5} - 1) y = 0\end{cases}$. Luego si escogemos un sistema apropiado $R = \{p_0, B = \{v_1, v_2\}\}$ su matriz quedaría como:
-$$M_R (\phi) = \left(\begin{array}{c|cc}
-1& 0  & 0 \\
-\hline
-0 & \cos\theta & -\sen\theta    \\
-0 & \sen\theta & \cos\theta 
-\end{array}
-\right)$$
-Ejemplo: En $\mathbb{R}^3$ consideramos la matriz:
-$$M_{R_c} (\phi) = \frac{1}{3} =
-\left(\begin{array}{c|ccc}
-3 & 0  & 0 & 0 \\
-\hline
-3 & 2 & -1 & 2    \\
-3 & -1 & 2 & 2 \\
-0 & 2 & 2 & -1 
-\end{array}
-\right) \Rightarrow M_{B_c} (\vec{\phi}) = \frac{1}{3} \begin{pmatrix} 2 & -1 & 2 \\ -1 & 2 & 2 \\ 2 & 2 & -1 \\\end{pmatrix} \mbox{ ortogonal}\Rightarrow \vec{\phi} \in O^(3)$$
-Como $\det (\vec{\phi}) < 0 \Rightarrow \det(\vec{\phi}) = -1$, luego existe una base respecto de la cual:
-$$M_B(\vec{\phi})=\begin{pmatrix} -1 & 0 & 0 \\ 0 & c & -s \\ 0 & s & c\end{pmatrix}$$
-Como la traza es un invariante, tenemos que:
-$$tr(\vec{\phi}) = 1 = -1+2c\Rightarrow c = 1 \Rightarrow s = 0 \Rightarrow  M_B(\vec{\phi})=\begin{pmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}$$
-Luego $\phi$ será una simetría especular si hay puntos fijos:
-$$A_\phi : \begin{cases} 1 - x - y + 2z = 0 \\ 1-x-y+2z = 0 \\ 2x + 2y - 4y = 0 \end{cases} \Rightarrow A_\phi = \emptyset$$
-Lo que quiere decir que $\vec{\phi}$ es simetría ortogonal, pero $\phi$ no es simetría (es simetría con desplazamiento).
-
-\subsubsection*{Clasificación de Movimientos}
-Sea $\phi : A \to A $ movimiento, $A$ espacio afín euclídeo de dimensión 2:
-\begin{itemize}
-\item $\vec{\phi} \in O^+(V)$
-	\begin{itemize}
-	\item \underline{\textbf{Giros}}: \fbox{$A_\phi \neq \emptyset$}
-	
-	Elegimos un $R=\{p_0, B\}$ de forma que $p_0\in A_\phi$ y una base ortonormal para que:
-	$$M_R (\phi) = \begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sen\theta \\ 0 & \sen\theta & \cos\theta \\ \end{pmatrix} : 0 \leq \theta \leq \pi$$
- 	Como casos especiales tenemos que $\begin{cases} \theta = 0  & \Rightarrow \phi = id_A  \\ \theta = \pi & \phi \mbox{sim. central}\end{cases}$
-
-	\item \underline{\textbf{Giro con desplazamiento}}: \fbox{$A_\phi = \emptyset$}
-	
-	Elegimos de nuevo un $R=\{p, B\}$ donde $B$ es ortonormal (ahora no podemos coger $p$ conveniente) de forma que:
-	$$M_R (\phi) = \begin{pmatrix} 1 & 0 & 0 \\ a_1 & \cos\theta & -\sen\theta \\ a_2 & \sen\theta & \cos\theta \\ \end{pmatrix} = \underset{(a_1, a_2) \neq (0,0)}{\left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline a_1 & 1 & 0 \\ a_2 & 0 & 1 \\ \end{array} \right) } \begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sen\theta \\ 0 & \cos\theta & \sen\theta \\ \end{pmatrix} $$	
-	Se trata de la composición de un giro con centro $p_0$ y ángulo $\theta$ (la segunda matriz), seguido de una traslación de vector $v = (a_1,a_2)$. Cuando este giro es la identidad, se tiene sólo una traslación.
-
-	\end{itemize}
-\item $\vec{\phi} \in O^-(V)$
-	\begin{itemize}
-	\item \underline{\textbf{Simetría Ortogonal Axial}}: \fbox{$A_\phi \neq \emptyset$}
-	
-	Elegimos $R=\{p_0, B\}$ con $p_0\in A_\phi$ y $B$ base ortonormal, de forma que:
-	$$M_R (\phi) = \left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline 0 & 1 & 0 \\0 & 0 & -1 \\ \end{array} \right)$$
-	La base de la simetría corresponde a la variedad $p_0 + L(v_1) = A_\phi$ y la dirección $L(v_2) = L(v_1)^\perp$.
-
-	\item \underline{\textbf{Simetría Ortogonal Axial con desplazamiento}}: \fbox{$A_\phi = \emptyset$}
-	
-	Si esto ocurre dijimos que $1 \in \sigma(\vec{\phi})$ luego se tiene que:
-	$$M_R (\phi) = \left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline a_1 & 1 & 0 \\ a_2 & 0 & -1 \\ \end{array} \right) = \left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline a_1 & 1 & 0 \\ 0 & 0 & 1 \\ \end{array} \right)\left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline 0 & -1 & 0 \\ a_2 & 0 & 1 \\\end{array} \right)$$
-	Se trata de la composición de una traslación de vector $a_1 v_1$ (la primera matriz) con una simetría ortogonal axial, es decir, se trata de una simetría con desplazamiento.
-	\end{itemize}
-\end{itemize}
-
-Sea $\phi : A\rightarrow A$ movimiento donde $A$ es un espacio afín de dimensión 3:
-\begin{itemize}
-\item $\vec{\phi} \in O^+(V)$
-	\begin{itemize}
-	\item \underline{\textbf{Rotación}}: \fbox{$A_\phi \neq \emptyset$}
-	
-	Elegimos un sistema de referencia $R=\{p_0, B\}$ donde $p_0 \in A_\phi$ y $B$ sea una base ortonormal, entonces:
-	$$M_R (\phi) = \left(\begin{array}{c|ccc}
-1 & 0  & 0 & 0 \\
-\hline
-0 & 1 &  0& 0    \\
-0 & 0 &  \cos\theta  & -\sen\theta \\
-0 & 0 &  \sen\theta & \cos\theta 
-\end{array}
-\right) : 0 \leq \theta \leq \pi$$
-Con lo cual, tal y como lo vimos el eje de rotación es $p_0 + L(v_1)$ y el ángulo $\theta$. Como casos especiales: $\begin{cases} \theta = 0 & \mbox{ Identidad } \\ \theta = \pi & \mbox{ Simetría axial } \end{cases}$
-
-\item \underline{\textbf{Movimiento Helicoidal}}: \fbox{$A_\phi = \emptyset$}
-
-En este caso solo podemos elegir una base ortonormal para poder obtener un sistema de referencia ortonormal, pero ya el punto no es fijo:
-$$M_R (\phi) = \underset{(a_1, a_2, a_3) \neq (0,0,0)}{\left(\begin{array}{c|ccc}
-1 & 0  & 0 & 0 \\
-\hline
-a_1 & 1 &  0& 0    \\
-a_2 & 0 &  \cos\theta  & -\sen\theta \\
-a_3 & 0 &  \sen\theta & \cos\theta 
-\end{array}
-\right)} =
-\left(\begin{array}{c|ccc}
-1 & 0  & 0 & 0 \\
-\hline
-a_1 &  &  &     \\
-0 & & I_3   &  \\
-0 &  &   &  
-\end{array}
-\right)\left(\begin{array}{c|ccc}
-1 & 0  & 0 & 0 \\
-\hline
-0 & 1 &  0& 0    \\
-a_2 & 0 &  \cos\theta  & -\sen\theta \\
-a_3 & 0 &  \sen\theta & \cos\theta 
-\end{array}
-\right)$$
-Se le llama movimiento helicoidal por ser la composición de una rotación y una traslación de vector $a_1 v_1$ (el movimiento que haría una hélice). Como caso especial, cuando los giros son de ángulo 0, entonces tenemos las traslaciones dentro de este grupo.
-\end{itemize}
-\newpage
-\item $\vec{\phi} \in O^-(3)$
-\begin{itemize}
-\item \underline{\textbf{Rotación con simetría especular}}: \fbox{$A_\phi \neq \emptyset$}
-
-Elegimos un sistema de referencia ortonormal $R=\{p_0, B\}$ donde $p_0\in A_\phi$ y $B$ ortonormal, entonces:
-$$M_R (\phi) = \left(\begin{array}{c|ccc}
-1 & 0  & 0 & 0 \\
-\hline
-0 & -1 &  0& 0    \\
-0 & 0 &  \cos\theta  & -\sen\theta \\
-0 & 0 &  \sen\theta & \cos\theta 
-\end{array}
-\right) = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1
-
-\end{pmatrix} \left(\begin{array}{c|ccc}
-1 & 0  & 0 & 0 \\
-\hline
-0 & 1 &  0& 0    \\
-0 & 0 &  \cos\theta  & -\sen\theta \\
-0 & 0 &  \sen\theta & \cos\theta 
-\end{array}
-\right) $$
-
-Se trata de una rotación seguida de una simetría especular, cuya base es el plano de la rotación.
-
-\item \underline{\textbf{Simetría especular compuesta con traslación}}: \fbox{$A_\phi = \emptyset$}
-
-De este modo, sabemos que $\sigma (\phi)= \{-1 , 1 , 1\}$, luego en una referencia ortonormal tenemos:
-$$ M_R (\phi) = \left(\begin{array}{c|ccc}
-1 & 0  & 0 & 0 \\
-\hline
-a_1 & -1 &  0& 0    \\
-a_2 & 0 & 1  & 0 \\
-a_3 & 0 &  0 & 1
-\end{array}
-\right) =  \left(\begin{array}{c|ccc}
-1 & 0  & 0 & 0 \\
-\hline
-0 &  &  &     \\
-a_2 & & I_3   &  \\
-a_3 &  &   &  
-\end{array}
-\right)  \left( \begin{array}{c|ccc}
-1 & 0  & 0 & 0 \\
-\hline
-a_1 & -1 & 0 & 0   \\
-0 &0 & 1   &0  \\
-0 & 0 &  0 &  1
-\end{array}
-\right)$$
-Se trata de una simetría especular compuesta con una traslación, cuyo vector de traslación está contenido en la dirección del plano que es base de la simetría.
-\end{itemize}
-\end{itemize}
-
-
-\subsection{Cónicas desde el punto de vista afín euclídeo}
+\section{Versión Afín-Euclídeo}
 Sea $\mathbb{R}^2$ espacio afín euclídeo usual y la definición habitual de cónica, decimos que dos cónicas son afín-euclídeamente equivalentes si poseen la misma matriz respecto de sistemas de referencia \textbf{ortonormales} distintos:
 $$C \equiv C' \Leftrightarrow M_R(C) = M_{R'} (C)$$
 Es decir, hemos incluido una condición más fuerte porque exigimos que estos sistemas de referencia sean ortonormales.
