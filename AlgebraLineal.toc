@@ -1,0 +1,87 @@
+\babel@toc {spanish}{}
+\babel@toc {spanish}{}
+\contentsline {chapter}{\numberline {1}Espacio vectorial y \\ Aplicación lineal}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Espacios Vectoriales}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Sistema generador, base e indepencia lineal}{8}{subsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1.1}Coordenadas y Cambio de Base}{14}{subsubsection.1.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Espacio vectorial cociente}{15}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Aplicaciones Lineales}{18}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Isomorfía de Espacios Vectoriales}{22}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Matriz asociada a una aplicación lineal}{24}{subsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.1}Equivalencia de aplicaciones lineales y relación entre sus matrices}{26}{subsubsection.1.2.2.1}%
+\contentsline {subsection}{\numberline {1.2.3}Rango de una aplicación lineal}{28}{subsection.1.2.3}%
+\contentsline {chapter}{\numberline {2}Sistemas Lineales}{33}{chapter.2}%
+\contentsline {subsection}{\numberline {2.0.1}Introducción al problema}{33}{subsection.2.0.1}%
+\contentsline {subsection}{\numberline {2.0.2}Sistemas Homogéneos}{34}{subsection.2.0.2}%
+\contentsline {subsubsection}{\numberline {2.0.2.1}Método de Gauss}{34}{subsubsection.2.0.2.1}%
+\contentsline {subsubsection}{\numberline {2.0.2.2}Método genérico de resolución}{34}{subsubsection.2.0.2.2}%
+\contentsline {subsection}{\numberline {2.0.3}Sistemas no homogéneos}{35}{subsection.2.0.3}%
+\contentsline {subsection}{\numberline {2.0.4}Regla de Cramer}{37}{subsection.2.0.4}%
+\contentsline {chapter}{\numberline {3}Estructura de Endomorfismos}{39}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Polinomio mínimo y característico}{39}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Polinomio mínimo de un endomorfismo}{39}{subsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.1.1}Polinomio mínimo de un endomorfismo y un vector}{42}{subsubsection.3.1.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.1.2}Cálculo del polinomio mínimo}{43}{subsubsection.3.1.1.2}%
+\contentsline {subsection}{\numberline {3.1.2}Polinomio característico de un endomorfismo}{43}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Teorema de Caley-Hamilton}{44}{subsubsection.3.1.2.1}%
+\contentsline {section}{\numberline {3.2}Clases Notables de Endomorfismos}{48}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Diagonalizabilidad}{49}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}Potencia enésima de matrices}{52}{subsubsection.3.2.1.1}%
+\contentsline {subsection}{\numberline {3.2.2}Triangularizabilidad}{52}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Forma Canónica de Jordan}{54}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Teorema de Estructura}{55}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}Endomorfismos Nilpotentes}{60}{subsubsection.3.3.1.1}%
+\contentsline {subsection}{\numberline {3.3.2}Cálculo de Matrices y Bases de Jordan}{61}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}Conversión de trozos a endomorfismos nilpotentes}{61}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}Cálculo de la Matriz de Jordan}{62}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}Cálculo de la Base de Jordan}{62}{subsubsection.3.3.2.3}%
+\contentsline {subsection}{\numberline {3.3.3}Factores invariantes}{63}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {4}Formas Lineales y \\ Bilineales}{65}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Formas Lineales}{65}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Espacio Dual}{65}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Espacio Bidual}{67}{subsubsection.4.1.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Ortogonalidad}{68}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Formas Bilineales}{70}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Características de las formas bilineales}{70}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Matriz asociada y Cambio de Base}{72}{subsubsection.4.2.1.1}%
+\contentsline {subsection}{\numberline {4.2.2}Simetría y antisimetría}{73}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Forma cuadrática asociada}{74}{subsubsection.4.2.2.1}%
+\contentsline {subsection}{\numberline {4.2.3}Ortogonalidad}{75}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}Ortogonalidad en productos escalares}{76}{subsubsection.4.2.3.1}%
+\contentsline {subsection}{\numberline {4.2.4}Clasificación de formas bilineales}{77}{subsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.4.1}Métodos de diagonalización de formas simétricas}{79}{subsubsection.4.2.4.1}%
+\contentsline {subsubsection}{\numberline {4.2.4.2}Clasificación de formas bilineales simétricas sobre $\mathbb C$}{80}{subsubsection.4.2.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.4.3}Clasificación de formas bilineales simétricas sobre $\mathbb R$: Ley de inercia}{81}{subsubsection.4.2.4.3}%
+\contentsline {chapter}{\numberline {5}Espacio Vectorial Euclídeo}{85}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Espacio Vectorial Euclídeo}{85}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Aplicaciones Ortogonales}{91}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Características de las aplicaciones ortogonales}{92}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Clasificación de aplicaciones ortogonales}{94}{subsection.5.2.2}%
+\contentsline {chapter}{\numberline {6}Espacio Afín}{97}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Espacio Afín}{97}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Variedades Afines}{99}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}Ecuaciones cartesianas}{103}{subsubsection.6.1.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.2}Ecuaciones paramétricas}{103}{subsubsection.6.1.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.1.3}Paso de paramétricas a cartesianas}{104}{subsubsection.6.1.1.3}%
+\contentsline {subsection}{\numberline {6.1.2}Sistema de Referencia}{104}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}Cambio de sistema de referencia}{105}{subsubsection.6.1.2.1}%
+\contentsline {section}{\numberline {6.2}Aplicaciones afines}{106}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Variedades $\phi $-invariantes}{108}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Aplicaciones notorias}{110}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}Aplicación constante}{110}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}Traslación de vector $u$}{111}{subsubsection.6.2.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.3}Homotecia}{112}{subsubsection.6.2.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.2.4}Proyección}{113}{subsubsection.6.2.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.2.5}Simetrías}{115}{subsubsection.6.2.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.2.6}Homología}{116}{subsubsection.6.2.2.6}%
+\contentsline {subsection}{\numberline {6.2.3}Clasificación de las Afinidades del Plano}{117}{subsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.1}Clasificación en $\mathbb {C}$}{117}{subsubsection.6.2.3.1}%
+\contentsline {subsubsection}{\numberline {6.2.3.2}Clasificación en $\mathbb {R}$}{117}{subsubsection.6.2.3.2}%
+\contentsline {section}{\numberline {6.3}Isometrías}{118}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Clasificación de Movimientos Rígidos}{119}{subsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.1.1}Clasificación en el plano}{120}{subsubsection.6.3.1.1}%
+\contentsline {subsubsection}{\numberline {6.3.1.2}Clasificación en el espacio}{121}{subsubsection.6.3.1.2}%
+\contentsline {chapter}{\numberline {7}Cónicas}{123}{chapter.7}%
+\contentsline {subsection}{\numberline {7.0.1}Clasificación Afín}{123}{subsection.7.0.1}%
+\contentsline {subsubsection}{\numberline {7.0.1.1}Caracterización de las Cónicas}{126}{subsubsection.7.0.1.1}%
+\contentsline {subsection}{\numberline {7.0.2}Clasificación Afín-Euclídea}{128}{subsection.7.0.2}%

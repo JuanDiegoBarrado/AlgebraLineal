@@ -1,7 +1,7 @@
- \documentclass[10pt,a4paper,openright]{book}
+\documentclass[10pt,a4paper,openright]{book}
 
 \title{ÁLGEBRA LINEAL}
-\author{Juan Diego Barrado Daganzo e Iker Muñoz Martínez\footnote{Últimas versiones en https://github.com/JuanDiegoBarrado/AlgebraLineal}\\1º de Carrera} %\\ es salto de linea
+\author{Juan Diego Barrado Daganzo e Iker Muñoz Martínez\footnote{Este documento se actualiza, para consultar las últimas versiones entrar en el enlace \url{https://github.com/JuanDiegoBarrado/AlgebraLineal}}\\1º de Carrera} %\\ es salto de linea
 \date{\today}
 
 %% Formateo del estilo de escritura y de la pagina
@@ -29,7 +29,10 @@
 
 %% Inclusion de referencias cruzadas por defecto y específicas
 \usepackage[colorlinks=true]{hyperref}
-\hypersetup{urlcolor=blue, citecolor=blue, linkcolor=blue}
+\hypersetup{
+	urlcolor=purple,
+	linkcolor=blue,
+}
 
 %% Paquete para definir y utilizar colores por el documento
 \usepackage[dvipsnames,usenames]{xcolor} %activar e incluir colores
@@ -109,797 +112,38 @@
 
 \begin{document}
 \maketitle
+\frontmatter
+\section*{Quiénes somos}
+Somos un grupo de estudiantes de la Universidad Complutense de Madrid, concretamente del Doble Grado de Informática y Matemáticas que queremos compartir unos apuntes de calidad y, como mínimo, ordenados para que os sea más fácil llevar la asignatura al día (sobre todo a estudiantes de Doble Grado).
 
-Apuntes de Algebra Lineal y Geometría © 2021 by Juan Diego Barrado \& Iker Muñoz is licensed under Attribution-NonCommercial 4.0 International. To view a copy of this license, visit:
+Estos apuntes son posibles gracias a la colaboración de más alumnos como tú que deciden aportar un granito de arena al proyecto. Puedes contribuir de la siguiente manera:
+\begin{itemize}
+\item Notificando erratas
+\item Modificando erratas
+\item Proponiendo mejoras
+\item Aportando ejemplos nuevos
+\item Aportando nuevas versiones
+\end{itemize}
+Para contribuir no tienes más que ponerte en contacto con \href{mailto:juandbar@ucm.es}{juandbar@ucm.es} o dejarnos un \textit{Pull Request} en \url{https://github.com/JuanDiegoBarrado/AlgebraLineal}. Los detalles para que la contribución de todos sea lo más homogénea posible estarán en el fichero \textit{Contribute.md} de dicho repositorio o, en caso de no aparecer correctamente, podéis poneros en contacto con el correo anteriormente mencionado.
+
+Muchas gracias, esperamos que este documento te sea útil.
+
+\section*{Agradecimientos}
+Queremos dar las gracias al Profesor Juan Ramón Delgado, por ser el profesor que impartió la asignatura de \textit{Álgebra Lineal} durante la elaboración de estos apuntes.
+
+También queremos dar las gracias al Profesor Jose Manuel Gamboa, por elaborar otros manuales más formales sobre la asignatura que nos han permitido contrastar adecuadamente los nuestros y entender mejor los contenidos aquí expuestos.
+\vfill
+Cálculo Diferencial © 2021 by Juan Diego Barrado \& Iker Muñoz is licensed under Attribution-NonCommercial 4.0 International. To view a copy of this license, visit
 \begin{center}
-http://creativecommons.org/licenses/by-nc/4.0/
+\url{http://creativecommons.org/licenses/by-nc/4.0/}
 \end{center}
 
 \mainmatter
-\chapter{Enteros}
-Es el conjunto no vacío dotado con dos operaciones de modo que:
-$$Anillo \rightarrow (R,+,\cdot)\mbox{ donde }+,\cdot : R\times R \rightarrow R$$
-\subsection{Propiedades de conjuntos}
-\subsubsection*{Grupo}
-Un conjunto R, con una operación, que cumple las siguientes propiedades se llama GRUPO:
-\begin{enumerate}
-\item Asociativa respecto de la suma: $a+b+c=a+(b+c)=(a+b)+c$
-\item Elemento Neutro de la suma: $\exists a : \forall r \in R \Rightarrow a+r=r+a=r$
-\item Elemento Opuesto de la suma: $\forall a \in R : \exists -a\in R : a+(-a)=-a+a=0$
-\end{enumerate}
-Si además cumple la propiedad conmutativa se llama GRUPO CONMUTATIVO o GRUPO ABELIANO.
-\begin{enumerate}
-\item[4.] Conmutativa: $a+b=b+a: \forall a,b\in R $
-\end{enumerate}
-
-\subsubsection*{Anillo}
-Se dice que un conjunto R forma un ANILLO cuando posee dos operaciones y cumple:
-\begin{enumerate}
-\item [5.]R forma un grupo abeliano
-\item [6.]Asociativa respecto del producto: $a\cdot b\cdot c=a\cdot(b\cdot c)=(a\cdot b)\cdot c$
-\item [7.]Distributiva: $a\cdot(b+c)=ab+ac$
-\end{enumerate}
-Si además el anillo cumple la propiedad 9 de las posteriores, se dice que es un anillo unitario. Denotamos por $R^{x}$ a las unidades del anillo unitario (elementos inversibles, es decir aquellos que multiplicados por otro elemento me dan el elemento neutro del producto).
-
-\subsubsection*{Cuerpo}
-Se dice que un conjunto R, con dos operaciones, forma un CUERPO cuando cumple las siguientes condiciones:
-\begin{enumerate}
-\item [8.]R forma un anillo
-\item [9.]Elemento neutro del producto: $\exists a\in R : \forall r\in R :r\cdot a=a\cdot r=r$
-\item [10.]Elemento inverso: $\forall a \in R : a\neq \mbox{ elemento neutro }\exists a^{-1}\in R : a\cdot a^{-1}=\mbox{ elemento inverso}$
-\end{enumerate}
-Por último, si se cumple la propiedad conmutativa del producto el cuerpo se denomina CUERPO CONMUTATIVO:
-$$\forall a,b \in R : ab=ba$$
-
-\subsection{Algoritmo de la división de Euclides}
-Este es un algoritmo empleado en la búsqueda del m.c.d. de dos números cualquiera. Para ello definimos primero dos lemas:\par
-\textbf{Lema 1}\par
-Si a, b, c, r son números enteros no nulos tales que $a=cb+r$ se tiene que el $mcd(a,b)=mcd(b,r)$\par
-\underline{Demostración}:
-$$\mbox{Sea }p=mcd(a,b)\mbox{ y }q=mcd(b,r)$$
-Como $p|a$ y $p|b$:
-$$a=bc+r\Leftrightarrow \lambda p= \mu pc +r \Leftrightarrow r=(\lambda-\mu c)p\Rightarrow p|r \Rightarrow p\leq q=mcd(b,r)$$
-Del mismo modo como $q|b$ y $q|r$:
-$$a=bc+r=\phi qc + \omega q= (\phi c + \omega)q \Rightarrow q|a \Rightarrow q\leq p=mcd(a,b)$$
-Como $q\leq p$ y $p\leq q$: $p=q$\par
-\vspace{0.5cm}
-\textbf{Lema 2}
-Si $a$ y $b$ son dos enteros no nulos tal que $b|a$ entonces $mcd(a,b)=|b|$\par
-\vspace{0.5cm}
-Habiendo dado ambos lemas ya se puede proceder a enunciar el algoritmo de Euclides:
-$$\mbox{Sean }a,b\in \mathbb Z \wedge a,b\neq 0$$
-El algoritmo de la división implica:
-$$\exists c_0, r_1 : a=bc_0+r_1$$
-Si $r_1=0$, por el Lema 2 $mcd(a,b)=|b|$, en caso contrario:
-$$r_1\neq 0\Rightarrow mcd(a,b)=mcd(b,r)$$
-Tomando como nuevos $a=b$ y $b=r$ volvemos al inicio del algoritmo comenzando de nuevo el razonamiento hasta llegar al caso $r_i=0$
-
-\subsection{Teorema de Bezout}
-$$mcd(a,b)=1\Rightarrow \exists u,v\in \mathbb Z : 1=ua+vb$$
-Es decir que si $a$ y $b$ son primos, existen dos números que satisfacen la igualdad.\par
-\underline{Corolario}:
-$$mcd(a,b)=d\Rightarrow \exists u,v \in \mathbb Z: d=ua+vb$$
-
-\subsection{Teorema (Eucides)}
-Para comprender este teorema definimos el concepto de número primo y número irreducible:
-$$p\mbox{ es primo si }p\mid ab\Rightarrow p\mid a \vee p\mid b$$
-$$p\mbox{ es irreducible si } p=ab\Rightarrow a=\pm 1 \vee b=\pm 1$$
-El teorema dice respecto de lo anterior que todo número que cumple las dos cumple al menos una de ellas y de ello se desprende que:
-$$p\mbox{ primo}\Leftrightarrow p\mbox{ irreducible}$$
-\underline{Demostración}:
-\begin{itemize}
-\item $\Rightarrow$
-$$p=ab\Rightarrow p\mid ab\Rightarrow p\mid a \vee p\mid b$$
-Supongamos que $p\mid a$, entonces $a=p\cdot a'$ y sustituimos eso en el inicio:
-$$p=ab=p\cdot a'\cdot b\Rightarrow 1=a'b\Rightarrow b=\pm 1\mbox{ porque solo el producto de 1s da 1s en }\mathbb Z $$
-Habiendo supuesto que $p\mid b$ hubiese resultado en que $a=\pm 1$ de forma análoga.
-
-\item $\Leftarrow$
-Suponemos que $p\mid ab$ pero $p\nmid a\wedge p\nmid b$:
-$$mcd(p,a)=\pm 1\stackrel{Bezout}{\Rightarrow} 1=\lambda p+ \mu a\Rightarrow b=b\lambda p+ b\mu a \Rightarrow b \lambda p+ \mu \omega p=(\lambda b+ \mu \omega)p\Rightarrow p\mid b \mbox{ \#}$$
-\end{itemize}
-
-\subsection{Teorema Fundamental de la Aritmética}
-Si $n\in \mathbb Z$, $n\neq 0, \pm 1$ entonces:
-$$\exists p_1, p_2, \cdots, p_t \mbox{ primos}: n=p_1\cdot \cdots \cdot p_t$$
-$$\mbox{Si }n=q_1\cdot q_2\cdot  \cdots\cdot  q_t \mbox{ primos}\Rightarrow s=t: p_i=q_i $$
-\underline{Demostración}:
-\begin{itemize}
-\item Comenzamos probando la primera proposición, la existencia:\par
-Sea $S=\{n\in \mathbb Z : n\neq 0, \pm 1 \wedge n\neq p_1\cdot \cdots \cdot p_t\}$, demostramos por reducción al absurdo que $S=\emptyset$
-$$S\neq 0 \Rightarrow \exists n \in S : n>0 \wedge n\neq \pm 1 \mbox{ que sea mínimo}$$
-De esto se deduce que $n$ no es primo porque si lo fuese sería el producto de un único primo, esto conlleva que no es irreducible por el teorema demostrado anteriormente por lo que $n=ab : ab\neq \pm 1$ puesto que se supone que $a,b>0$ y $\neq 0$ y $a,b\geq 2$, esto implica que $0<a$ y que $b<n$, lo que implica que $a,b\notin S$ por lo que $a=p_1\cdot \cdots \cdot p_n$ y $b=q_1\cdot \cdots\cdot q_s$, como $n=ab$, este se puede expresar como producto de primos \#.
-
-\item Probamos ahora la unicidad
-Por inducción sobre $t$:
-\begin{enumerate}
-\item Probamos los casos base: $t=1\Rightarrow p_1=q_1$
-
-\item Demostrados los casos $n\leq t-1$, demostramos que:
-$$p_1\cdot p_2 \cdot \cdots \cdot p_t=q_1\cdot q_2 \cdot \cdots \cdot q_s \Rightarrow p_1\mid q_1\cdot \cdots \cdot q_n\Rightarrow p_1\mid q_i \Rightarrow q_1=p_1\cdot k \Rightarrow k=1\mbox{ por ser primos}$$
-Sustituyendo en la expresión inicial:
-$$p_1\cdot \cdots \cdot p_t=p_1\cdot q_2\cdot \cdots \cdot q_s\Rightarrow p_2\cdot \cdots \cdot p_t=q_2\cdot \cdots \cdot q_s$$
-En el primer lado de la igualdad hay $t-1$ factores y en el lado derecho $s-2$, con lo cual:
-$$r-1=s-1\stackrel{H.I:}{\Rightarrow }r=s$$
-\end{enumerate}
-\end{itemize}
-
-\subsection{Teorema de la existencia de infinitos primos}
-Supongamos que existen una cantidad finita de primos:
-$$S=\{p\in \mathbb Z: p \mbox{ primo}\}=\{p_1,p_2,\cdots,p_t: p_i\mbox{ primos}\}$$
-Ahora escojamos el número $n=p_1\cdot p_2\cdot \cdots \cdot p_t+1\neq 0\neq \pm 1$, por el Teorema Fundamental de la Aritmética: $n=q_1\cdot \cdots \cdot q_s\Rightarrow q_i\mid n$ y como $q_i\in S$, entonces $q_i\mid p_i\Rightarrow q_i=p_i$, además como $q_i\mid n$ y $p_i\mid p_1\cdot \cdots\cdot p_t$ entonces $q_i\mid n-p_1\cdot \cdots\cdot p_t\Rightarrow q_1=p_1\mid 1$ \#.
-
-
-\section*{CONGRUENCIAS ENTRE ENTEROS}
-Sean $a,b\in \mathbb Z, m>0$:
-$$a\equiv b\mbox{ (mod m) si }m|a-b$$
-También se escribe $a\equiv_m b$\par
-Ej.:
-$$24\equiv_m 18\Rightarrow m|24-18=6\Rightarrow m=2 \wedge m=3$$
-\subsection{Proposición}
-Una congruencia entre enteros es una relación de equivalencia sobre el conjunto de los números enteros.\par
-\underline{Demostración}:
-\begin{itemize}
-\item Reflexiva: $a\equiv_m a\Rightarrow m|0\Rightarrow m=\lambda, \forall \lambda \in \mathbb Z^+$
-\item Simétrica: $a\equiv_m b \Rightarrow b\equiv_m a$ porque $a\equiv_m b \Rightarrow m|a-b \Rightarrow m|-(a-b) \Rightarrow m|b-a \Rightarrow b\equiv_m a$
-\item Transitiva: $a\equiv_m b \wedge b\equiv_m c \Rightarrow a\equiv_m c$ porque $m|a-b \wedge m|b-c\Rightarrow m|a-b+b-c\Rightarrow m|a-c \Rightarrow a\equiv_m c$
-\end{itemize}
-Una relación de equivalencia permite establecer una partición del conjunto en el que se aplica y los subconjuntos que se forman tras la partición del conjunto inicial se llaman CLASES y son disjuntos entre sí ($\bigcap_{i\in I} A_i=0)$\par
-Por el algoritmo de la división:
-$$a=bc+r\Rightarrow a-r=bc\Rightarrow c|a-r\Rightarrow a\equiv_c r$$
-\subsection{Particiones de conjuntos infinitos}
-En cierto modo lo que dice también la relación de congruencia es que $a$ dividido entre el módulo $m$ y $b$ dividido entre el módulo $m$ tienen como resultado el mismo resto.\par
-De este modo, si realizamos una partición de los números enteros en 3 subgrupos obtendremos 3 grupos distintos gracias a las congruencias de módulo 3, los que tienen de resto 0, los de resto 1 y los de resto 2.\par
-Para expresar estos subconjuntos generados a partir de las relaciones de congruencia expresamos:
-$$[a]_m=\left\lbrace b \in \mathbb Z : b\equiv_m a\right\rbrace$$
-Esto quiere decir, que $[a]_m$ (expresado como la clase de $a$ módulo $m$) es el conjunto formado por todos los números $b$ que son congruentes con $a$ en ese módulo, o dicho de otra manera, como los elementos de su misma partición para ese módulo $m$.\par
-De este hecho se desprenden las siguientes propiedades:
-\begin{enumerate}
-\item Hay $m$ particiones distintas: $[0]_m, [1]_m, \cdots, [m-1]_m$y SON DISJUNTAS\par
-Esto es así puesto que las demás son las mismas pero con un representante ``a'' distinto.
-\item $\forall b\in \mathbb Z : \exists a : 0\leq a\leq m-1: b\in [a]_m$\par
-Lo que indica que para cualquier número existe una partición
-\end{enumerate}
-
-Demostración 1.:\par
-Escogemos dos clases cuales quiera del total:
-$$0\leq a\leq b \leq m-1$$
-Supongamos que hay un elemento en ambas
-\begin{gather*}
-c\in [a]_m \wedge c\in [b]_m\Rightarrow c\equiv_m a \wedge c\equiv_m b\Rightarrow a\equiv_m b\Rightarrow a-b=\lambda m, \lambda \in \mathbb Z \Rightarrow \\
-\Rightarrow |a-b|=|\lambda|m \Rightarrow 0\leq m\leq |a-b|=|\lambda|m
-\end{gather*}
-Pero esto entra en contradicción con la hipótesis inicial de $0\leq a\leq b \leq m-1$, por lo que el razonamiento incorrecto es que un elemento puede estar en dos clases simultáneamente, luego son DISJUNTOS.\par
-Demostración 2.:
-Por el algoritmo de la división:
-$$\forall b \in \mathbb Z : \exists m,a \in \mathbb Z : b=qm+a: q,a\in \mathbb Z \wedge 0\leq a<m$$
-Luego:
-$$b\equiv_m a\Rightarrow b\in [a]_m$$
-
-Para denotar en cuantos subconjuntos hemos dividido el conjunto inicial se hace de la siguiente manera, por ejemplo:
-$$\mathbb Z_m=\left\lbrace [a]_m : a\in \mathbb Z\right\rbrace=\left\lbrace [0]_m, [1]_m, \cdots, [m-1]_m\right\rbrace$$
-\textbf{Lema}\par
-$$a\equiv_m a' \wedge b\equiv_m b' \Rightarrow
-\begin{cases}
- a+b\equiv_m a'+b' \\
- ab\equiv_m a'b'
-\end{cases}
-$$
-Demostración:
-$$a+b\equiv_m a'+b'\Rightarrow m|a+b-(a'+b')\Rightarrow m|a-a'+b-b'\Rightarrow \mbox{Por las hipótesis del Lema } \lambda m + \mu m \mbox{ Q.E.D.}$$
-\begin{gather*}
-ab\equiv_m a'b'\Rightarrow m|ab-a'b'\Rightarrow m|ab-ab'+ab'-a'b'\Rightarrow m|a(b-b')+(a-a')b'=a\lambda m + \mu m b'=m\varphi \mbox{ Q.E.D.}
-\end{gather*}
-
-De los anteriores lemas se desprenden las dos siguientes propiedades\footnote{Nótese que el empleo de $\otimes$ y $\oplus$ es usado para remarcar que se tratan de operaciones distintas de $+$ y $\cdot$}:\par
-\underline{Propiedades}
-$$[a]_m \oplus [b]_m=[a+b]_m$$
-$$[a]_m \otimes [b]_m=[a\cdot b]_m$$
-En cierto modo, lo que expresan es que dos números de particiones distintas si se suman o se multiplican tienen como resultado un número en la partición de la que sea representante dicho resultado.
-
-\subsubsection*{Teorema}
-De estas propiedades se deduce que $\mathbb Z_m \mbox{ es un anillo  unitario conmutativo con }+,\cdot : \mathbb Z_m \times \mathbb Z_m \rightarrow \mathbb Z_m$\par
-\underline{Demostración}: Notacion: $\bar{a}=[a]_m$
-$$(\bar{a}\oplus \bar{b})\times\bar{c}=\overline{(a+b)}\otimes\bar{c}=\overline{(a+b)\cdot c}\stackrel{\mathbb Z\mbox{ }prop.}{=}\overline{ac+bc}=\overline{ac}\oplus\overline{bc}=\bar{a}\otimes\bar{c}\oplus\bar{b}\otimes\bar{c}$$
-
-\subsection{Función de Euler $\varphi ()$}
-La tripleta ordenada $(\mathbb Z_m,+,\cdot)$ forma un anillo conmutativo y unitario, además $(\mathbb Z_m, +)$ es un grupo conmutativo y SIEMPRE es cíclico, es decir, $\exists a\in \mathbb Z : [a]_m+[a]_m+\cdots=[b]_m$ siendo $b=0,1,2,\cdots,m-1$, lo que quiere decir que cualquier clase de dicho conjunto puede ser generada a partir de la aplicación sucesiva de la operación del grupo al generador.\par
-Por otro lado, $(\mathbb Z_m^x, \cdot)$ es un grupo conmutativo no necesariamente cíclico. Este conjunto contiene las clases que son unidades del conjunto, es decir, que esa clase, operada por el operador correspondiente con otra, tiene como resultado el elemento neutro de la operación (lo que quiere decir que la operación de cada elemento con el de la otra clase, tienen como resultado un elemento de la clase cuyo representante es el elemento neutro de la operación).\par
-En nuestro caso, al ser la multiplicación la seleccionada, el elemento neutro será el 1 por lo que algunos ejemplos son:
-\begin{itemize}
-\item $\mathbb Z_3^x=\{[1]_3, [2]_3\}$ porque solo $[1]_3\cdot[1]_3=[1]_3$, $[2]_3\cdot[2]_3=[1]_3 $
-\item $\mathbb Z_2^x=\{\left[1\right]_2\}$ porque solo $[1]_2\cdot [1]_2=[1]_2$
-\item $\mathbb Z_5^x=\{[1]_5, [2]_5, [3]_5, [4]_5\}$
-\end{itemize}
-En el fondo no se trata más que de la siguiente propiedad:
-$$[a]_m\cdot[b]_m=[ab]_m \Rightarrow ab\equiv_m 1$$
-Ej.: $[2]_9\cdot[5]_9=[10]_9\Rightarrow 10\equiv_9 1$\par
-Esto ocurre así porque al multiplicar cada elemento de la 1ª partición por el elemento de la 2ª, los elementos resultantes de cada operación coinciden exactamente con los de la partición $[1]_m$ que siempre son congruentes módulo 1.\par
-Para saber cuántos elementos posee el conjunto $\mathbb Z_m^x$, que no es más que saber el número de unidades inversibles, utilizamos la función de euler que cumple:
-$$\varphi (m)=|\mathbb Z_m^x|\leq m-1$$
-Siendo $|\mathbb Z_m^x|$ el cardinal del conjunto (número de elementos).
-
-\textbf{Teorema}: $\mathbb Z_m^x$ es cíclico $\Leftrightarrow m=2,4,p^k, 2p^k$ donde $p>2$ es un número primo
-
-\subsubsection*{Proposición}
-Toda clase inversible de $\mathbb Z_m$ cumple que:
-$$mcd(a,m)=1 \Leftrightarrow [a]_m\in \mathbb Z_m^x$$
-\underline{Demostración}:
-$$[a]_m\in \mathbb Z_m^x \Rightarrow [a]_m[b]_m=[1]_m\Rightarrow ab-1=\lambda m\Rightarrow 1=ab-\lambda m\stackrel{Bezout}{\Rightarrow }mcd(a,m)=1$$
-
-\subsubsection*{Cálculo de la función de Euler}
-$$\varphi(m)=|\{a\in \mathbb Z : 0\leq a<m : mcd(a,m)=1\}|$$
-Aunque esa es la definición formal, en la práctica para el cálculo de las clases inversibles que posee un cierto $m$, factorizaremos en primos ese módulo y después aplicaremos las siguientes proposiciones.\begin{equation}p \mbox{ primo} \Rightarrow \varphi(p)=p-1
-\end{equation}
-\begin{equation}\mbox{ primo} \Rightarrow \varphi(p^k)=p^k-p^{k-1}
-\end{equation}
-\begin{equation}mcd(m_1,m_2)\Rightarrow \varphi(m_1m_2)=\varphi(m_1)\cdot \varphi(m_2)
-\end{equation}
-\underline{Demostración}:
-$$\mbox{1.) }
-p \mbox{ primo} \Rightarrow \mathbb Z_p^x\mbox{ es un cuerpo conmutativo} : \mathbb Z_p^x=\{0,1,2,\cdots,p-1\}$$
-\vspace{0.25cm}
-3.) Sea $\phi: \mathbb Z_{m_1m_2}\rightarrow \mathbb Z_{m_1} \times \mathbb Z_{m_2}$ a cada $\phi(\bar{a})=(\tilde{a},\hat{a})$, siendo $\bar{a}=[a]_{m_1m_2}$, $\tilde{a}=[a]_{m_1}$ y $\hat{a}=[a]_{m_2}$:
-\begin{itemize}
-\item Comprobamos que está bien definida
-$$\bar{a}=\bar{a'}\Rightarrow a-a'=\lambda m_1m_2\Rightarrow
-\begin{cases}
-a-a'=(\lambda m_2)m_1 & \Rightarrow \tilde{a}=\tilde{a'} \\
-a-a'=(\lambda m_1)m_2 & \Rightarrow \hat{a}=\hat{a'}
-\end{cases}
-\Rightarrow \phi(\bar{a})=\phi(\bar{a'})
-$$
-
-\item Ahora comprobamos que es biyectiva, para que conserve la suma y el producto
-\item Comenzamos por la inyectividad
-$$\phi(\bar{a})=\phi(\bar{b})\Rightarrow (\tilde{a}, \hat{a})=(\tilde{b}, \hat{b})\Rightarrow
-\begin{cases}
-\tilde{a}=\tilde{b} & \Rightarrow a-b=\lambda m_1 \\
-\hat{a}=\hat{b} & \Rightarrow a-b=\mu m_2
-\end{cases}
-$$
-$$
-\Rightarrow (a-b=\dot{m_1})\wedge (a-b=\dot{m_2})\Rightarrow a-b=\dot{m_1m_2} \Rightarrow a-b=\omega m_1 m_2 \Rightarrow \bar{a}=\bar{b}\Rightarrow \mbox{ Inyectiva}
-$$
-\item Suprayectividad
-$$(\tilde{a_1},\tilde{a_2})\stackrel{?}{=}\phi(\bar{a})$$
-Se que $$1=\lambda_1 m_1+\lambda_2 m_2 \Rightarrow
-\begin{cases}
-a_1\cdot 1=a_1\lambda_1 m_1+ a_1\cdot \lambda_2 m_2\equiv_{m_1} a_1\lambda_2 m_2\equiv a_1\lambda_2 m_2+a_2\lambda_1 m_1= a\\
-a_2\cdot 1=a_2\lambda_1 m_1+ a_2\cdot \lambda_2 m_2\equiv_{m_2} a_2\lambda_1 m_1\equiv a_2\lambda_1 m_1+ a_1\lambda_2 m_2= a 
-\end{cases}
-\Rightarrow \mbox{ sobre}
-$$
-Con lo que se conserva tanto el producto como la suma al ser biyectiva:
-$$\phi(\bar{a}+\bar{b})=\phi(\bar{a})+\phi(\bar{b})$$
-$$\phi(\bar{a}\cdot \bar{b})=\phi(\bar{a})\cdot \phi(\bar{b})$$
-\end{itemize}
-
-
-\section*{RESOLUCIÓN DE ECUACIONES DE CONGRUENCIAS}
-\subsubsection*{Hallar la clase inversa de una dada}
-Primero de todo, según una de las proposiciones ya vistas:
-$$mcd(a,m)=1\Leftrightarrow [a]_m\in \mathbb Z_m^x$$
-Es decir, una clase sólo es inversible cuando ella y el módulo son coprimos.\par
-Para hallar la clase inversible que en el fondo sería lo mismo que resolver esta ecuación: $[a]_mx=[1]_m$, seguimos los siguientes pasos que explicaremos mendiante un ejemplo:
-$$[7]_{201}\cdot [x]_m=1$$
-\begin{enumerate}
-\item Comprobar que es inversible
-$$mcd(7,201)=1\mid 1\Rightarrow \exists [7]_m^{-1}$$
-\item Realizar el algoritmo de la división de Euclides y escribir la expresión de Bezout.
-\begin{eqnarray}
-201 &=& 7\cdot 28 + 5 \\
-7   &=& 5\cdot 1 + 2 \\
-5   &=& 2\cdot 2 + 1 \\
-2	&=& 1\cdot 2 + 0
-\end{eqnarray}
-$$1\stackrel{(3)}{=}5-2\cdot 2\stackrel{(1)(2)}{=}201-7\cdot 28-7+5\stackrel{(1)}{=}201-7\cdot 28-7+201-7\cdot 28\Rightarrow$$
-$$1=3\cdot 201 -86\cdot 7$$
-\item Una vez dado, el número que multiplique a mi clase $[a]_m$ es la clase inversible que buscamos
-$$1=3\cdot 201 -86\cdot 7\Rightarrow -86\cdot 7\equiv 1\Rightarrow [x]_m=[-86]_m=[115]$$
-\end{enumerate}
-
-\subsection{Resolución de ecuaciones diofánticas}
-Las ecuaciones diofánticas son aquellas en las que los coeficientes y las incógnitas solo pueden tomar valores en el anillo de los enteros.
-$$a_1x_1+a_2x_2+\cdots+a_nx_n=c : a_i, c\in \mathbb Z$$
-Para que estas ecuaciones tengan solución, basta ver según lo anterior que $mcd(a_1,a_2,\cdots,a_n)\mid c$.
-Además las soluciones de dicho sistema vendrán dadas por:
-$$
-ax+by=c\Rightarrow
-\begin{cases}
-x=x_0+k\cdot\frac{b}{mcd(a,b)} \\
-y=y_0-k\cdot \frac{a}{mcd(a,b)} 
-\end{cases}
-$$
-Donde $x_0, y_0$ son soluciones del sistema y $k$ es un parámetro que pertenece a los $\mathbb Z$.
-Las soluciones iniciales se sacan obteniendo por el teorema de bezout (sean coprimos o no) los números que multiplicados por los coeficientes tienen como resultado el número $c$.
-Ej.:
-$$10x+6y=4$$
-\begin{enumerate}
-\item Comprobamos si tiene solución:
-\begin{eqnarray}
-10 &=& 6\cdot 1 +4 \\
-6  &=& 4\cdot 1 + 2 \\
-4  &=& 4\cdot 2 + 0
-\end{eqnarray}
-Como $mcd(10,6)=2\mid 4 \Rightarrow$ posee solución.
-
-\item Hallamos $x_0$, $y_0$ en función del teorema de Bezout:
-$$2=u\cdot 10 + v\cdot 6\Rightarrow$$
-$$2=6-4=6-10+6\Rightarrow 2=6\cdot 2 -1\cdot 10\Rightarrow x_0=-1,y_0=2$$
-
-\item El resto de soluciones vienen dadas por:
-$$
-\begin{cases}
-x=x_0+k\cdot\frac{b}{mcd(a,b)}=-1+3k \\
-y=y_0+k\cdot \frac{a}{mcd(a,b)}=2+5k
-\end{cases}
-$$
-
-\item Ahora basta con dar valores a k para hallar el resto de soluciones:
-$$
-\begin{cases}
-x=-1+3k=-7,-4,-1,2, 5,\cdots \\
-y=2+5k=-8,-3, 2, 7, 12, \cdots
-\end{cases}
-$$
-\end{enumerate}
-
-\subsubsection*{Sistemas de ecuaciones diofánticas}
-Cuando se poseen tantas incógnitas como ecuaciones, procedimiento es el mismo que para los sistemas de ecuaciones lineales, como la solución a ese sistema es única, basta con ver si los valores hallados al resolver la ecuación son enteros o no.
-El problema viene cuando encontramos que el número de incógnitas es mayor que el de ecuaciones, puesto que existen infinitas soluciones y a nosotros solo nos interesan las enteras. En este caso tenemos que seguir los siguientes pasos.
-\begin{enumerate}
-\item Escalonar el sistema de ecuaciones diofánticas
-
-\item Resolver como en el caso de ecuaciones diofánticas la ecuación de menos número de incógnitas
-
-\item Sustituir en las sucesivas ecuaciones posteriores los valores de las incógnitas anteriores para dejar la ecuación en función de k
-\end{enumerate}
-Ej.:
-$$
-\begin{cases}
-7x+2y+3z=5 \\
-5x+3y-2z=3
-\end{cases}
-$$
-\begin{enumerate}
-\item Escalono el sistema
-$$
-\begin{cases}
-7x+2y+3z=5 \\
-5x+3y-2z=3
-\end{cases}
-\Rightarrow
-\begin{cases}
-7x+2y+3z=5 \\
-29x+13y=19
-\end{cases}
-$$
-
-\item Resuelvo la 2ª ecuación:
-$$
-\begin{cases}
-x=2-13k \\
-y=-3+29k
-\end{cases}
-$$
-
-\item Sustituyo en la otra ecuación:
-$7x+2y+3z=5\Leftrightarrow 7(2-13k)+2y(-3+29k)+3z=5\Rightarrow z=-1=11k$
-
-Siendo estas las soluciones enteras para el sistema.
-\end{enumerate}
-
-\chapter{Polinomios}
-Sea $R$ un anillo conmutativo y unitario, un polinomio se define como una suma finita con coeficientes en R:
-$$R[x]=\{a_0+a_1x+\cdots+a_nx^n : a_0,a_1,\cdots,a_n\in R, n\geq 0\}$$
-Lo expresado arriba es una expresión sintética de lo que un polinomio representa puesto que se puede conocer a un polinomio solo por sus coeficientes:
-$$R[x]=(a_0,a_1,\cdots,a_n,0,0,0,\cdots)$$
-Para referirnos a los polinomios lo haremos como ``f''\footnote{en ocasiones podremos llamar f(x) cuando se confunda la notación con otros elementos.}.
-$$\mbox{Ej.: } (x^2+1)|f\Rightarrow f=g(x^2+1) \mbox{ Pero como se confunde } f(x)=g(x)\cdot (x^2+1)$$
-También podemos escribir los polinomios como:
-$$\sum_{i=0}^{n} a_ix^i$$
-
-\subsubsection*{Grado de un polinomio}
-Llamamos grado de un polinomio al mayor subíndice no nulo de los coeficientes del polinomio.
-$$\mbox{Ej.: } f=x^4+3x^3+-x+1 \Rightarrow gr(f)=4$$
-
-\subsection{Operaciones con polinomios}
-Para poder operar estos objetos matemáticos es necesario primero definir las operaciones competentes que logren conseguir las propiedades más ventajosas para el manejo de los mismos (p. ej. que posea las características de un anillo o de un cuerpo).
-\subsubsection*{Suma}
-La suma de polinomios se realiza coeficiente a coeficiente.
-$$\sum a_ix^i+\sum b_ix^i=\sum (a_i+b_i)x^i$$
-El grado del polinomio resultante es el del polinomio de mayor grado de los que conformaban la suma.
-
-\subsubsection*{Producto}
-El producto de polinomios posee una serie de peculiaridades.
-$$\sum_{i=0}^n a_ix^i\cdot \sum_{j=0}^m b_jx^j=\sum_{k=0}^{n+m} c_kx^k$$
-Definimos ahora, los coeficientes del polinomio producto siendo éste:
-$$c_k=\sum_{i+j=k} a_i+b_j$$
-Es decir el polinomio resultante sería de la forma:
-$$\sum_{i=0}^n a_ix^i\cdot \sum_{j=0}^m b_jx^j=a_0b_0+(a_0b_1+a_1b_0)x+(a_0b_2+a_1b_1+a_2b_0)x^2+\cdots+(a_nb_mx^{n+m})$$
-
-\subsection{Definiciones}
-\subsubsection*{Proposición}
-Si $R$ es un anillo conmutativo y unitario entonces los polinomios con coeficientes en $R$ también lo son\footnote{La demostración se haría propiedad a propiedad de anillo, verificando que se cumple para un polinomio}.
-$$(R,+,\cdot)\mbox{ anillo conmutativo y unitario} \Rightarrow (R[x],+,\cdot) \mbox{ anillo conmutativo y unitario}$$
-Esto otorga a los polinomios, las propiedades de anillo de los enteros.
-
-\subsubsection*{Teorema}
-Sea $\mathbb K$ un cuerpo conmutativo (como los $\mathbb R$, p. ej.)
-$$f,g \in \mathbb K[x], g\neq 0 \Rightarrow \exists!q,r\in \mathbb K[x] : f=q\cdot g+r$$ 
-Donde $r$ es el polinomio nulo o $gr(r)<gr(g)$, es decir, se pueden dividir polinomios.\par
-\underline{Demostración}:
-\begin{enumerate}
-\item Unicidad
-$$f=q\cdot g+r= q'\cdot g+r'\Rightarrow (q-q')q=r'-r$$
-Supongamos que $r\neq r'$:
-$$r'-r\neq 0\Rightarrow q'-q\neq 0 \Rightarrow gr(r'-r)=gr(q'-q)+gr(g)$$
-Por lo dicho en el teorema, $gr(r'-r)\leq gr(g)$, porque $r'-r<max\left( gr(r),gr(r')\right)$ y del mismo modo, $gr(q'-q)+gr(g)\geq gr(g)$ porque el $gr(q'-q)>0$ por lo que \# $\Rightarrow r=r'$.\par
-Ahora para demostrar la unicidad de $q$, tomamos $r=r'$:
-$$(q'-q)g=r'-r\Leftrightarrow (q-q')g=0\stackrel{g\neq 0}{\Rightarrow }q-q'=0\Rightarrow q'=q$$
-
-\item Existencia\par
-Sea $gr(f)$ y $gr(g)=m$, $f=a_0+\cdots+a_nx^n, a_n\neq 0$ y $g=b_0+\cdots+b_mx^m, b_m\neq 0$\par
-Realizaremos la demostración por inducción sobre $n$, suponiendo que $n\geq m$ porque para $n<m\Rightarrow f=0\cdot g +f$:
-$$\mbox{Hipótesis de inducción: } f=g\cdot (a_nb_m^{-1}x^{n-m})+r$$
-$$\mbox{Caso base: }n=0\Rightarrow m=0\Rightarrow f=a_0\neq 0 \wedge g=b_0\neq 0\Rightarrow a_0=(a_0b_0)^{-1}b_0+0\Rightarrow f=q\cdot g+ r$$
-Ahora demostramos el caso $n$ suponiendo como cierto $l<n$:
-$$gr(f-(a_nb_m^{-1}x^{n-m})g)<n\stackrel{H.I.}{\Rightarrow}f-(a_nb_m^{-1}x^{n-m})g=q\cdot g+r\Rightarrow f=(a_nb_m^{-1}x^{n-m}+q)g+r\Rightarrow f=qg+r$$
-\end{enumerate}
-
-\subsubsection*{Proposición}
-Sean $f,g\in \mathbb K[x]$, decimos que $f|g$ si $g=f\cdot h: h\in \mathbb K[x]$ y que $d=mcd(f,g)$ si $d|f,g$ siendo $d$ el mayor de los divisores comunes a ambos.\par
-Además, según un \textbf{teorema}, dados dos polinomios con coeficientes\footnote{El polinomio cuyo coeficiente de la x que determina su grado es 1 se llama mónico} en un cuerpo, $f,g\in \mathbb K[x]\Rightarrow \exists mcd(f,g)$\par
-\underline{Demostración}:\par
-Sean $f=r_0$ y $g=r_1$, suponemos ambos no nulos $\Rightarrow r_0=q_1r_1+r_2\Rightarrow gr(r_2)<gr(r_1)\vee r_2=0$
-$$mcd(r_0,r_1)=mcd(r_1,r_2)\Rightarrow d|r_0,r_1 \Leftrightarrow d|r_1,r_2$$
-Si $r_2=0\Rightarrow d=r_1$, pero si $r_2\neq 0\Rightarrow r_1=q_2\cdot r_2+r_3$, lo que implicaría un nuevo paso del algoritmo pero esta vez con $r_3$. Esto se repite hasta llegar a $r_n=0$ donde $r_{n-1}=mcd(r_0,r_1)$.\par
-Ej.:
-\begin{center}
-\includegraphics[scale=0.95]{division de polinomios}
-\end{center}
-
-\subsubsection*{Teorema de Bezout en polinomios}
-Dados dos polinomios con coeficientes en un cuerpo conmutativo, su máximo común divisor se puede expresar como combinación lineal de ambos polinomios.
-$$f,g\in \mathbb K[x], d=mcd(f,g)\Rightarrow d=uf+vg : u,v\in \mathbb K[x]$$
-Cuando ocurre el caso particular de que $d=1$ entonces los polinomios $u(x)$ y $v(x)$ deben ser constantes no nulas, ya que:
-$$1=u(x)\cdot v(x)\Rightarrow gr(1)=gr(u)+gr(v)\Leftrightarrow 0=gr(u)+gr(v)\Rightarrow gr(u)=gr(v)=0 \Rightarrow u=k, v=z : k,z\in \mathbb R$$
-
-\subsection{Polinomios primos e irreducibles}
-Decimos que $f\in \mathbb K[x], gr(f)>0$ es \textbf{irreducible} si $f=g\cdot h \Rightarrow gr(g)=0 \vee gr(h)=0$, es decir, $g,h\in \mathbb K[x]^x$\par
-Decimos que $f\in \mathbb K[x], gr(f)>0$ es \textbf{primo} si $f|g\cdot h \Rightarrow f|g \vee f|h$, es decir, $g,h\in \mathbb K[x]^x$\par
-De ambas definiciones se desprende la siguiente proposición:
-$$f\mbox{ primo}\Leftrightarrow f \mbox{ irreducible}$$
-\underline{Demostración}:\par
-Supongamos que $f$ es irreducible, que $f\mid gh$ y $f\nmid g$
-$$mcd(f,g)=1\stackrel{Bezout}{\Rightarrow} 1=uf+vg\Leftrightarrow h=uhf+vgh \stackrel{gh=f\cdot q_1}\Leftrightarrow h=(uh+vq_1)f\Rightarrow f\mid h \Rightarrow p \mbox{ es primo}$$
-
-Supongamos ahora que $f$ es primo, con lo cual:
-$$f\mbox{ primo} \Rightarrow f\mid g \vee f\mid h$$
-$$f=g\cdot h \Rightarrow 1=q_1(x)\cdot h(x) \Rightarrow gr(1)=gr(q_1)+gr(h)\Rightarrow 0=gr(q_1)+gr(h)\Rightarrow $$
-$$\Rightarrow gr(q_1)=gr(h)=0 \Rightarrow \mbox{ son constantes} \Rightarrow f \mbox{ primo}$$
-
-\subsubsection*{Teorema}
-Sea $f\in \mathbb K[x]$ y $f$ no constante:
-\begin{enumerate}
-\item $\exists f_1,f_2, \cdots, f_n\in \mathbb K[x]$ irreducibles $: f=f_1\cdot f_2 \cdot \cdots \cdot f_n$
-
-\item Si $f=g_1\cdot g_2 \cdot \cdots \cdot g_s \in \mathbb K[x]$ también irreducible $\Rightarrow r=s \wedge f_i=a_i\cdot g_i : \forall i=1,\cdots,r$ donde $a_i\in \mathbb K[x]^x$
-\end{enumerate}
-
-\underline{Demostración}:
-
-\begin{enumerate}
-\item Demostramos la existencia:\par
-Sea $f(x)$ un polinomio cualquiera perteneciente a $K[x]$:
-$$
-\begin{cases}
-\mbox{Si }f(x)\mbox{ primo} & \Rightarrow \mbox{Q.E.D.} \\
-\mbox{Si }f(x)\mbox{ no primo} & \Rightarrow \exists g(x): g(x)\mid f(x) : gr(g)\mbox{ minimo}\Rightarrow f(x)=g_1(x)\cdot f_1(x)
-\end{cases}
-$$
-Si aplicamos sucesivas veces el caso de los primos, llegará un momento en el que:
-$$f=g_1\cdot g_2\cdot g_3 \cdot \cdots \cdot g_n \cdot f_n$$
-Donde $f_n(x)$ será primo y en consecuencia, $f$ será descomposición de polinomios primos.
-
-\item Demostramos la unicidad:\par
-Por inducción sobre $r$:
-\begin{enumerate}
-\item Probamos los casos base: $r=1\Rightarrow f_1=g_1$
-
-\item Demostrados los casos $n\leq r-1$, demostramos que:
-$$f_1\cdot f_2 \cdot \cdots \cdot f_r=g_1\cdot g_2 \cdot \cdots \cdot g_s \Rightarrow f_1\mid g_1\cdot \cdots \cdot g_n\Rightarrow f_1\mid g_i \Rightarrow g_1=f_1\cdot h \Rightarrow h=a_0=cte.$$
-Sustituyendo en la expresión inicial:
-$$f_1\cdot \cdots \cdot f_r=f_1\cdot a_0\cdot g_2\cdot \cdots \cdot g_n\Rightarrow f_2\cdot \cdots \cdot f_r=a_0\cdot g_2\cdot \cdots \cdot g_s$$
-En el primer lado de la igualdad hay $r-1$ factores y en el lado derecho $s-2$, con lo cual:
-$$r-1=s-1\stackrel{H.I:}{\Rightarrow }r=s$$
-\end{enumerate}
-\end{enumerate}
-
-\subsection{Raíces de un polinomio}
-Son los valores que hacen 0 el polinomio, pero obsevemos con detenimiento un concepto que tal vez no tengamos en la cabeza de Bachillerato, veamos con detenimiento el siguiente polinomio:
-$$f(x)=x^2+1\in \mathbb R[x]$$
-Es curioso observar que a priori diríamos que este polinomio no tiene raíces en los $\mathbb R$, pero cojamos la siguiente matriz:
-$$A=\left( 
-\begin{array}{*2c}
-0 & -1 \\
-1 & 0 \\
-\end{array}
-\right)
-$$
-Ahora el valor del polinomio es:
-$$f(A)=A^2+I=\left(\begin{array}{*2c}0 & -1 \\ 1 & 0 \\ \end{array}\right)\cdot \left(\begin{array}{*2c}0 & -1 \\ 1 & 0 \\ \end{array}\right) + \left(\begin{array}{*2c}1 & 0 \\ 0 & 1 \\ \end{array}\right)= \left(\begin{array}{*2c}0 & 0 \\ 0 & 0 \\ \end{array}\right)=0$$
-Luego de aquí se desprende que el polinomio tiene raíces en el anillo de las matrices cuadradas, a pesar de que habíamos dicho que no tenía raíces reales.\par
-Supongamos que $f\in\mathbb K[x]$ y que $\mathbb K \subset \mathbb F$, siendo ambos cuerpos conmutativos (como $\mathbb R$ y $\mathbb C$, p. ej.), si uno es el subcuerpo del otro, es decir, poseen las mismas operaciones y uno está contenido en el otro, entonces considerando un $\alpha\in \mathbb F$ se define:
-$$f(\alpha)=a_0+a_1\alpha+\cdots+a_n\alpha^n$$
-En consecuencia, $f(\alpha)\in \mathbb F$ y es ráiz del polinomio $f$ si $f(\alpha)=0$
-\subsubsection*{Proposición}
-$\alpha$ es raíz de $f\Leftrightarrow f(\alpha)=(x-\alpha)\cdot g(x)$ para algún $g\in \mathbb F[x]$, es decir, las raíces de un polinomio generan factores lineales de un polinomio.\par
-\underline{Demostración}:
-\begin{enumerate}
-\item $\Rightarrow$:\par
-Tomamos $f\in \mathbb K[x]\Rightarrow f\in \mathbb F[x]$ y como $\alpha \in \mathbb F[x]\Rightarrow x-\alpha \in \mathbb F[x]$, entonces tenemos que: $f(x)=q(x)(x-\alpha)+r(x): q,r\in \mathbb F[x]$. \par
-Llegados a este punto, $r(x)=0\vee gr(r)<gr(x-\alpha)$ siendo $r(x)\neq 0$. Entonces $r(x)=a_0\neq 0$ porque $gr(x-\alpha)=1$, pero como $\alpha$ es raíz:
-$$f(\alpha)=0=q(\alpha)\cdot(\alpha-\alpha)+r(\alpha)\Leftrightarrow 0=q(\alpha)\cdot 0+ a_0\Rightarrow a_0=0\Rightarrow r(x)=0$$
-
-\item $\Leftarrow$:\par
-$$f(x)=(x-\alpha)g(x)\Rightarrow f(\alpha)=(\alpha-\alpha)g(\alpha)=0\cdot g(\alpha)=0$$
-\end{enumerate}
-
-\subsubsection*{Propiedades}
-Sean $f=a_0+a_1x+\cdots+a_nx^n$ y $g=b_0+b_1x+\cdots+b_mx^m$ dos polinomios, el producto de polinomios evaluados es equivalente la evaluación del producto y de la suma de polinomios.
-$$f(\alpha)+g(\alpha)=(f+g)(\alpha)$$
-$$f(\alpha)\cdot g(\alpha)=(f\cdot g)(\alpha)$$ 
-\underline{Demostración}\footnote{La demostración de la suma es trivial}:
-\begin{itemize}
-\item $f(\alpha)+g(\alpha)$:
-$$(a_0+a_i\alpha +\cdots+a_n\alpha ^n)(b_0+b_1\alpha +\cdots+b_m\alpha ^m)=\sum_{0\leq i \leq n} (a_i\alpha ^i)(b_j\alpha ^j)=\sum_{0\leq i \leq n\wedge 0\leq j\leq m} (a_ib_j\alpha^{i+j})$$
-
-\item $(f\cdot g)(\alpha)$:
-$$\left(\sum_{k=0}^{n+m}\left(\sum_{i+j=k} a_ib_j\right)x^k\right)(\alpha)=\sum_{k=0}^{n+m}\left(\sum_{i+j=k} a_ib_j\right)\alpha^k$$
-Y se puede observar que:
-$$\sum_{0\leq i \leq n\wedge 0\leq j\leq m} (a_ib_j\alpha^{i+j})=\sum_{k=0}^{n+m}\left(\sum_{i+j=k} a_ib_j\right)\alpha^k$$
-\end{itemize}
-
-\subsubsection*{Teorema}
-Sea $f\in \mathbb K[x]: \mathbb K\subset \mathbb F \wedge f\neq 0$, el número de raíces del polinomio es menor o igual que el grado del polinomio:
-$$|\{\alpha\in \mathbb F: f(\alpha)=0\}|\leq gr(f)$$
-\underline{Demostración}:
-Razonamos por inducción sobre el $gr(f)=n$:
-$$n=0\rightarrow f=a_0\neq 0\Rightarrow \{\alpha \in \mathbb F: f(\alpha)=0\}=\emptyset$$
-Tomando como cierta la proposición para los valores inferiores a $n$, demostramos los correspondientes a $n$:
-$$gr(f)=n\Rightarrow 
-\begin{cases}
-\nexists \alpha \in \mathbb F: f(\alpha)=0 & \Rightarrow f(\alpha)\neq 0: \forall \in \mathbb F\Rightarrow 0\leq n \\
-\exists \alpha \in \mathbb F: f(\alpha)=0 & \Rightarrow\quad(*) 
-\end{cases}$$
-$$(*)\rightarrow f(\alpha=0)\Rightarrow f(x)=(x-\alpha)\cdot g(x): g\in \mathbb F[x]\wedge gr(g)=n-1\Rightarrow f(\beta)=0\Leftrightarrow (\beta-\alpha)\cdot g(\beta)=0\Leftrightarrow$$
-$$\Leftrightarrow \beta-\alpha=0 \vee g(\beta)=0\Leftrightarrow |\{\beta\in\mathbb F: f(\beta)=0\}|=1+|\{\beta\in\mathbb F: g(\beta)=0\}|\Rightarrow
-$$
-$$\Rightarrow |\{\beta\in\mathbb F: f(\beta)=0\}|\leq 1+gr(g)=1+n-1$$
-
-\subsection{Teorema Fundamental del Álgebra}
-Si $f\in \mathbb C[x]$ y es no constante, entonces $\exists \alpha\in \mathbb C: f(\alpha)=0$.\par
-La demostración de dicho Teorema excede con creces la capacidad de este curso así que se pospondrá para más adelante, sin embargo, si podemos demostrar un Corolario:
-
-\subsubsection*{Corolario}
-Si $f\in\mathbb R[x]\Rightarrow \exists \alpha \in \mathbb C: f\in \mathbb C[x]\Rightarrow f(\alpha)=0$\par
-\underline{Demostración}:\par
-Supongamos que $f\in \mathbb C[x]: f=\sum_{i=0}^n a_ix^i: a_i\in \mathbb C$, tomamos su conjugado como $\bar{f}=\sum_{j=0}^n \bar{a_j}x^j: a_j\in \mathbb C$ y, por último, definimos el polinomio $h=f\cdot \bar{f}=\sum_{k=0}^{2n} \left( \sum_{i+j=k}(a_i\bar{a_j}\right) x^k$:
-$$\overline{\sum_{i+j=k}(a_i\bar{a_j}})=\sum_{i+j=k}(\bar{a_i}{a_j})\Rightarrow h\in\mathbb R[x]\Rightarrow \alpha\in \mathbb C: 0=h(\alpha)=f(\alpha)\cdot \bar{f}(\alpha)\Rightarrow$$
-$$
-\begin{cases}
-f(\alpha)=0 \\
-f(\alpha)\neq 0\Rightarrow \bar{f}(\alpha)=0\Rightarrow \overline{\bar{f}(\alpha)}=0\Rightarrow 0=\overline{\sum_{i=0}^n(\bar{a_i}\alpha^i)}=\sum_{i=0}^n(a_i\bar{\alpha}^i)=f(\bar{\alpha})=0
-\end{cases}
-$$
-
-\subsection{Teorema de la irreducibilidad de un polinomio}
-Un polinomio $f\in \mathbb C[x]$ es irreducible cuando $gr(f)=1$, puesto que ya hemos comprobado que para $gr(f)>1$, $f$ posee tantas raíces como el valor del grado del polinomio y  cada raíz descompone el polinomio en un factor lineal.
-
-\subsubsection*{Corolario}
-$$f\in \mathbb C[x]: gr(f)=n\geq 1\Rightarrow \exists!\alpha_1,\cdots,\alpha_n, a\in \mathbb C: a\neq 0: f(x)=a(x-\alpha_1)\cdot \cdots\cdot (x-\alpha_n)$$
-
-\subsubsection*{Polinomios irreducibles en $\mathbb R$}
-Para un $f\in \mathbb R[x]$, es irreducible si y solo si $gr(f)=1$ $gr(f)=2$ y su discriminante es negativo.
-\underline{Demostración}:
-\begin{itemize}
-\item ``$\Rightarrow$''
-$$\frac{-b\pm \sqrt{\Delta}}{2a}\notin \mathbb R : \forall \Delta <0$$
-
-\item ``$\Leftarrow$'': $f\in \mathbb R[x]\mbox{ irreducible}: gr(f)>1\Rightarrow$
-$$\exists \alpha\in \mathbb C: f(\alpha)=0\Rightarrow f(\bar{\alpha})=0\Rightarrow f(x)=(x-\alpha)(x-\bar{\alpha})h(x): h(x)\in \mathbb C[x]$$
-Por lo tanto como:
-$$f(x)=(x^2-2Real(\alpha)x+|\alpha|^2)h(x)$$
-Descompone en división exacta con $h(x)$ si este es no constante, pero como ambas raíces pertenecen a los complejos, cuando $h(x)$ es constante, es irreducible en $\mathbb R$ con grado 2.
-\end{itemize}
-
-De estos hechos se deduce que TODO polinomio impar SIEMPRE es irreducible, porque pueden ser producto de uno de grado 1 y otro de grado 2 o 3 de grado 1.
-
-\subsubsection*{Polinomios irreducibles en $\mathbb Q$}
-En este conjunto podemos encontrar polinomios irreducibles de cualquier grado, pero existe un teorema conocido como \textbf{criterio de Einsenstein} que dice:
-$$\exists p\mbox{ primo}\in \mathbb Z: p\mid a_0, p\mid a_1,\cdots, p\mid a_{n-1}\wedge p\nmid a_n \wedge p^2\nmid a_0\Rightarrow f\mbox{ es irreducible}$$
-Para calcular dichas raíces podemos buscar un $\alpha=\frac{r}{s}\in \mathbb Q: r\mid a_0\wedge s\mid a_n$. Además se puede añadir como criterio\footnote{La demostración de este añadido se hizo en un ejercicio que no figura en el documento} $r-s\mid p(1)$ y $r+s\mid p(-1)$\par
-\underline{Demostración}:
-Aplicamos que es una raíz:
-$$0=a_0+a_1\frac{r}{s}+\cdots+a_n\frac{r^n}{s^n}\stackrel{\cdot s^n}{\Rightarrow}0=a_0s^n+a_1rs^{n-1}+\cdots+a_{n-1}r^{n-1}s+a_nr^n\stackrel{1.)2.)}{\Rightarrow}$$
-$$\mbox{1.)}\rightarrow -a_0s^n=(a_1s^{n-1}+\cdots+a_nr^{n-1})r\Rightarrow r\mid -a_0s^n\Rightarrow r\mid a_0$$
-$$\mbox{2.)}\rightarrow -a_nr^n=(a_0s^n+\cdots+a_nr^{n})s\Rightarrow s\mid -a_nr^n\Rightarrow s\mid a_n$$
-
-\subsubsection*{Polinomios irreducibles en $\mathbb Z_p$}
-Siempre que tengamos un cuerpo conmutativo hay polinomios irreducibles de cualquier grado.\par
-Ej.: $f\in \mathbb Z_2[x]$
-\begin{itemize}
-\item Grado 1: $x+1$, $x$ irreducibles
-\item Grado 2: $x^2$, $x^2+x$, $x^2+1$ no son irreducibles pero $x^2+x+1$ sí
-\item ...
-\end{itemize}
-
-\subsection{Teorema raíces en una extensión de K}
-Existe un teorema que dice que si extendemos K a un cuerpo superior que lo contenga, entonces podemos encontrar ahí también las raíces de un polinomio de $K[x]$, pero antes vamos a ver determinados ejemplos.
-
-\subsubsection*{Ejemplo 1}
-Si definimos la matriz $C\in Mat_n(\mathbb K$ y definimos $f(C)$ como la evaluación de $f$ en $C$, siendo:
-$$C=\left(\begin{array}{ccc}
-0 & 0 & -1 \\
-1 & 0 & -1 \\
-0 & 1 & 0
-\end{array}\right)\stackrel{\mathbb Z_2}{=}
-\left(\begin{array}{ccc}
-0 & 0 & 1 \\
-1 & 0 & 1 \\
-0 & 1 & 0
-\end{array}\right)
-$$
-$$f(x)=x^3+x+1\rightarrow \mbox{irreducible en }\mathbb Z_2$$
-Ahora podemos decir que $f(C)=C^3+C+I=0$, extendiendo un polinomio irreducible en K, a un anillo que contiene a K y donde no es irreducible.\par
-Para formalizar el cuerpo al que debe pertenecer esta raíz, lo definimos de la siguiente manera:
-$$F=\{g(C): g\in \mathbb Z_2[x]\}\subseteq Mat_3(\mathbb Z_2)$$
-Las matrices que conforman este nuevo cuerpo son: $\{a_0I, a_0I+a_1C, a_0I+a_1C+a_2C^2,\cdots\}$. Para comprobar que es un cuerpo definimos la suma y el producto de los elementos de dicho conjunto:
-$$g(C)+h(C)=(g+h)(C)\in F$$
-$$g(C)\cdot h(C)=(g\cdot h)(C)\in F$$
-Con esta definición podemos decir que $(F,+,\cdot)$ es un cuerpo conmutativo con 8 elementos, y por tanto $\mathbb Z_2\subset F$.\par
-\underline{Demostración}:
-$$+:\mbox{asociativa, elemento neutro: }0=0(C)\in F, \mbox{ elemento opuesto: } -g(C)=(-g(C)\in F\mbox{ y es conmutativa}$$
-$$\cdot: \mbox{asociativa, distributiva, elemento neutro: }1(C)=I\in F,\mbox{ conmutativa}$$\footnote{$g(C)\cdot h(C)=(g\cdot h)(C)=(h\cdot g)(C)=h(C)\cdot g(C)$}
-Con  cual tras demostrar todas estas propiedades, podemos decir con seguridad que es un anillo conmutativo y unitario. Para ver que es un cuerpo:
-$$g(C)\neq 0\in F\Rightarrow g\neq 0\wedge x^3+x+1\nmid g\mbox{ porque si lo hiciese }g(C)=(C^3+C+I)h(C)=0\mbox{ \#}$$
-$$\mbox{Además }mcd(x^3+x+1,g)=1\Rightarrow 1=k(x)(x^3+x+1)+h(x)g(x)\Rightarrow I=k(C)\cdot 0+h(C)g(C)=h(C)g(C)$$
-$$\Rightarrow h(C)=g^{-1}(C)$$
-Por último\footnote{Decir que un cuerpo es isomorfo a otro ``$\simeq$'', es decir que existe una biyección entre ambos conjuntos que conserva la suma y el producto}, $ Z_2 \simeq \{a_0I: a_0\in \mathbb Z_2\}\subset F$
-
-\underline{Por qué tiene 8 elementos?}:
-$$g(C)=[q(x)(x^3+x+1)+r(x)](C)=q(C)\stackrel{=0}{(C^3+C+I)}+r(C)=r(C)$$
-Por lo que:
-$$C\subset F=\{g(C): g\in \mathbb Z_2[x]\}=\{a_0I+a_1C+a_2C^2: a_0,a_1,a_2\in \mathbb Z_2\}$$
-
-\subsubsection*{Teorema de extension de K cuando f es irreducible}
-De este ejemplo nace el caso general del teorema que dice: ``Para cualquier polinomio puedes encontrar raíces en un cuerpo que sea extensión del cuerpo en el que está definido''.\par
-Sean:
-$$f=x^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0: n\geq 1$$
-$$F=\{g(C): g\in K[x]\}$$
-$$C=\left(\begin{array}{ccccc}
-0 & 0 & \cdots & 0 & -a_0 \\
-1 & 0 & \cdots & 0 & -a_1 \\
-0 & 1 & \cdots & 0 & -a_0 \\
-\vdots & \vdots & \ddots & \vdots & \vdots \\
-0 & 0 & \cdots & 1 & -a_{n-1}\\
-\end{array}\right)$$
-
-Se cumplen las siguientes condiciones:
-\begin{enumerate}
-\item $f(C)=0: C\in F$
-\item $g\neq 0 \wedge gr(g)<gr(f): g\in K[x]\Rightarrow g(C)\neq 0$
-\item $(F,+,\cdot)$ es un \textbf{anillo conmutativo y unitario}, y si $f$ es irreducible entonces es un \textbf{cuerpo conmutativo}
-\item $K\simeq \{a\cdot I: a\in K\}\subset F$
-\item $F=\{g(C): g\in K[x], gr(g)<n\}=\{a_0I+a_1C+\cdots+a_nC^{n-1}: a_0,\cdots,a_{n-1}\in K\}$
-\end{enumerate}
-
-\underline{Demostración}:
-\begin{enumerate}
-\item Suponemos que :
-$$C=x(C): x\in K[x]\Rightarrow C\in F$$
-Llegados a este punto si llamamos $A=f(C)$ tratamos de demostrar que $A=0$:
-$$A=0\Rightarrow A\cdot I=0\Leftrightarrow \begin{cases}
-A\cdot E_1=0 \\
-A\cdot E_2=0 \\
-\vdots \\
-A\cdot E_n=0
-\end{cases}$$
-Donde $E_i$ denota a cada una de las columnas de la matriz identidad. De este modo deducimos que:
-$$A\cdot E_1=(a_0+a_1C+\cdots +a_{n-1}C^{n-1}+a_nC^n)E_1=a_0E_1+a_1CE_1+\cdots +a_{n-1}C^{n-1}E_1+a_nC^nE_1=$$
-$$\stackrel{CE_i=E_{i+1}}=a_0E_1+a_1E_2+\cdots +a_{n-1}E_n+(-a_0E_1-a_1E_2-\cdots -a_{n-1}E_n)=0$$
-Para demostrar el resto de casos, basta con observar que:
-$$A\cdot E_2=A\cdot C\cdot E_1=(a_0I+a_1C+\cdots+ a_{n-1}C^{n-1}+C^n)CE_1\stackrel{C\cdot C^{i}}{=}C\cdot A\cdot E_1=C\cdot 0=0$$
-
-\item Como $g\neq 0\Rightarrow g=b_0+\cdots+b_mx^m: \exists b_i\neq 0$ y desde aquí deducimos que:
-$$0=g(C)=b_0I+b_1+\cdots +b_mC^m\stackrel{\cdot E_1}{\Rightarrow} 0=b_0IE_1+b_1CE_1+\cdots+b_mC^mE_1\Rightarrow$$
-$$\Rightarrow \left(\begin{array}{c}
-b_0 \\
-b_1 \\
-\vdots \\
-b_m \\
-0 \\
-\vdots \\
-0
-\end{array}\right)=0\Rightarrow \mbox{ \#, Porque para que sea no nulo, algún $b_i$ debe ser distinto de 0.}
-$$
-
-\item Que las propiedades de ser anillo conmutativo y unitario son demostraciones triviales, sin embargo, la demostración de que cuando $f$ es irreducible, $F$ adquiere las propiedades de cuerpo reviste más importancia y complejidad:
-$$0\neq g(C)\in F\Rightarrow f\nmid\Rightarrow mcd(f,g)=1\Rightarrow$$
-$$\Rightarrow 1=u(x)f(x)+h(x)g(x)=u(C)f(C)+h(C)g(C)=h(C)g(C)\Rightarrow g^{-1}(C)=h(C)$$
-
-\item Al ser un subcuerpo:
-\begin{gather*}
-aI+bI=(a+b)I\in F \\
-(aI)(bI)=(ab)I\in F \\
-0=0I\in F \\
-I=1\cdot I\in F \\
--(aI)=(-a)I\in F \\
-(aI)^{-1}\stackrel{a\neq 0}{=}a^{-1}I \\
-\end{gather*}
-
-Por ser un isomorfismo:
-$$K\stackrel{\phi}{\rightarrow}\{aI: a\in K\}$$
-Observamos que la función $\phi$ es claramente biyectiva y como $\phi(a+b)=(a+b)I=aI+bI=\phi(a)+\phi(b)$ y $\phi(a\cdot b)=(a\cdot b)I=aI\cdot bI=\phi(a)\cdot \phi(b)$, se ve que se conserva la suma y el producto por lo tanto podemos decir que $K\simeq \{aI: a\in K\}\subset F$
-\vspace{0.5cm}
-\item Suponemos un $g(x)\in K[x]$, podemos decir por el Teorema de la división entera que $g=f\cdot q + r$, donde $r=0$ o $gr(r)<n$, esto implica que $g(C)=f(C)q(C)+r(C)=r(C)$ porque $f(C)=0$ así que: $gr(g)=gr(r)<gr(f)$
-\end{enumerate}
-
-\subsubsection*{Caso interesante}
-Un caso interesante de la posible aplicación de este teorema es la qeu sigue, sea $f=x^2+1\in \mathbb R[x]$ y $F=\{a_0I+a_1C: a_0,a_1\in \mathbb R\}$, donde $C\left(\begin{array}{cc} 0 & -1 \\ 1 & 0 \end{array}\right)$.\par
-En consecuencia, si hallamos una expresión general de las matrices que pertenecen al cuerpo F, estas son de la forma $\left(\begin{array}{cc}a_0 & -a_1 \\ a_1 & a_0\end{array}\right)$. De esta forma observamos que la información general de la matriz esta contenida en la 1ª columna puesto que conocida la primera columna conocemos el resto de la matriz. Si consideramos que dos matrices distintas de F, su producto tiene el siguiente aspecto:
-$$\left(\begin{array}{cc}a_0 & -a_1 \\ a_1 & a_0\end{array}\right)\cdot \left(\begin{array}{cc}b_0 & -b_1 \\ b_1 & b_0\end{array}\right)=\left(\begin{array}{cc}a_1b_0-a_1b_1 & \cdots \\ a_1b_0+a_0b_1 & \cdots \end{array}\right)$$
-Con lo cual se puede apreciar que si solo nos fijamos en la primera columna, se puede usar este cuerpo F como un buen modelo de los \textbf{números complejos} porque de hecho, la matriz $C$ compañera del polinomio $f$ es, según esta interpretación, el número $i$ y si nos fijamos en sus elementos coincide con lo relatado.
-\subsubsection*{Para el caso del otro día}
-$$f=x^3+x+1\in \mathbb Z_2\Rightarrow F=\{a_0I+a_1C+a_2C^2: a_0,a_1,a_2\in \mathbb Z_2\}\mbox{ donde } C=\left(\begin{array}{ccc} 0 & 0 & -1 \\ 1 & 0 & -1 \\0 & 1 & 0 \end{array}\right)\stackrel{\mathbb Z_2}{=}\left(\begin{array}{ccc} 0 & 0 & 1 \\ 1 & 0 & 1 \\0 & 1 & 0 \end{array}\right)$$
-$$\mbox{Las matrices de F son: }\left(\begin{array}{ccc} a_0 & 0 & 0 \\ 0 & a_0 & 0 \\0 & 0 & a_0 \end{array}\right)+\left(\begin{array}{ccc} 0 & 0 & a_1 \\ a_1 & 0 & a_1 \\0 & a_1 & 0 \end{array}\right)+\left(\begin{array}{ccc} 0 & a_2 & 0 \\ 0 & a_2 & a_2 \\a_2 & 0 & a_2 \end{array}\right)$$
-
-\subsubsection*{Teorema de extensión de K para cualquier polinomio}
-Como consecuencia del teorema que se cumple para los polinomios irreducibles, podemos extender su enunciado al TODOS LOS POLINOMIOS, con independencia de su irreducibilidad.\par
-El teorema dice: sea $f\in K[x]$ no constante, entonces $\exists F\supset K$, un $a\in K$ y $\alpha_1, \cdots, \alpha_n\in F$ tales que:
-\begin{enumerate}
-\item $F$ es un cuerpo conmutativo que contiene a K como subcuerpo.
-\item $f(x)=a(x-\alpha_1)\cdot \cdots \cdot (x-\alpha_n)$
-\end{enumerate}
-
-\underline{Demostración}: por inducción sobre $n=gr(f)$:
-\begin{itemize}
-\item Caso base:$n=1$
-$$f(x)=a_1x+a_0: a_0,a_1\in K\wedge a_1\neq 0\Rightarrow F=K\wedge \alpha_1=-a_0\cdot a_1^{-1}\in K\wedge a=a_1$$
-\item Paso inductivo, consideramos cierto para $l<gr(f)=n$:
-$$f=p_1\cdot \cdots \cdot p_m: p_i\in K[x] \mbox{ irreducible}\Rightarrow p_i\in K\Rightarrow K\subset K_1 \wedge \alpha_1\in K: p(\alpha_1)=0\Rightarrow$$
-$$\Rightarrow f(\alpha_1)=0\Rightarrow f(x)=(x-\alpha_1)g(x)\mbox{ donde }g(x)\in K[x]: gr(g)=l\stackrel{H.I.}{\Rightarrow}$$
-$$K\subset K_1\subset F: g(x)=a(x-\alpha_2)\cdot \cdots(x-\alpha_n)\Rightarrow f(x)=a(x-\alpha_1)(x-\alpha_2)\cdot \cdots \cdot (x-\alpha_n)\in F$$
-\end{itemize}
-
-\subsection{Relaciones de Girard-Newton}
-Al analizar el grado de un polinomio cuadrático mónico cualquiera como $f=a_0+a_1x+x^2$, se observa que el número de raíces según lo hablado en el capítulo debería ser 2, de este modo, el polinomio se puede reescribir como: $f=(x-\alpha_1)(x-\alpha_2)$. Desarrollando:
-$$f=(x-\alpha_1)(x-\alpha_2)=x^2-(\alpha_1+\alpha_2)x+\alpha_1\alpha_2\Rightarrow\begin{cases}a_0=\alpha_1\cdot \alpha_2 \\
-a_1=-(\alpha_1+\alpha_2)\end{cases}$$
-De este razonamiento para el caso de un polinomio de grado 2, se desprenden \textbf{las relaciones de GIRARD-NEWTON\footnote{Guardan relación con las fórmulas de generación de los polinomios simétricos elementales}}, que son generales para cualquier grado.
-$$a_{n-k}=(-1)^k\cdot \sum_{1\leq i\leq \cdots \leq i_k<n}\alpha_{i_1}\cdot \cdots \cdot \alpha_{i_k}\mbox{ donde }k=0,1,2, \cdots, n$$
-Ej\footnote{En el fondo se trata de hacer sumandos de $n-k$ elementos y poner tantos sumandos como posibles combinaciones de raíces}:
-$$n=3\rightarrow \begin{cases} a_0=-\alpha_1\alpha_2\alpha_3 \\
-a_1=\alpha_1\alpha_2+ \alpha_1\alpha_3+ \alpha_2\alpha_3 \\
-a_2=-(\alpha_1+\alpha_2+\alpha_3)
-\end{cases}$$
-Estas relaciones nos otorgan la capacidad manifiesta de poder  construir polinomios a partir de otros sin saber verdaderamente cuales son las raíces de los de partida:
-$$\mbox{Sea }p(x)=x^3+3x+1\Rightarrow p(x)=(x-\alpha_1)(x-\alpha_2)(x-\alpha_3)\Rightarrow
-\begin{cases}
-a_0=1=-\alpha_1\alpha_2\alpha_3 \\
-a_1=3=\alpha_1\alpha_2+\alpha_1\alpha_3+\alpha_2\alpha_3 \\
-a_2=1=-(\alpha_1+\alpha_2+\alpha_3)
-\end{cases}$$
-Aunque no conocemos el valor de las raíces, si que podemos construir un polinomio sabiendo la relación que guardan:
-$$\alpha_k'=\alpha_k+1\mbox{ donde }k=1,2,3\Rightarrow$$
-$$\Rightarrow p'(x)=x^3+a_2x^2+a_1x+a_0\Rightarrow
-\begin{cases}
-a_0'=-(\alpha_1+1)(\alpha_2+1)(\alpha_3+1)=-3 \\
-a_1'=(\alpha_1+1)(\alpha_2+1)+(\alpha_1+1)(\alpha_3+1)+(\alpha_2+1)(\alpha_3+1)=6 \\
-a_2'=-(\alpha_1+\alpha_2+\alpha_3+3)=-3
-\end{cases}$$
+\hypersetup{linkcolor=black} %% Conseguimos que el índice salga en negro
+\setcounter{tocdepth}{3}% para que salgan las subsubsecciones en el indice
+\setcounter{secnumdepth}{4}% para que salgan los números de las subsubsecciones en el indice
+\tableofcontents
+\hypersetup{linkcolor=blue} % retornamos el color de las referencias a azul, para que quede resaltado
 
 \chapter{Espacio vectorial y \\ Aplicación lineal}
 En este capítulo vamos a definir el concepto central de la asignatura: el espacio vectorial. Sus características dotan de propiedades muy especiales a los espacios que cumplen dicha definición y nos permite, junto con las aplicaciones lineales, descubrir una serie de propiedades abstractas a dichos espacios con consecuencias muy importantes en espacios concretos de este tipo.
@@ -2347,6 +1591,19 @@ $$p_{A'}=|A'-xI_n|=|P^{-1}AP-P^{-1}xP|=|P^{-1}(A-xI_n)P|=|P^{-1}|(A-xI_n)|P|=|(A
 El resultado anterior prueba que la definición de polinomio característico es adecuada porque es independiente de la base en la que yo represente la matriz de $\phi$, luego tiene sentido hablar de $p_\phi(x)$ en vez de $p_A(x)$.
 \end{obs}
 
+\begin{obs}
+Si nos fijamos, un polinomio característico de grado n viene dado por:
+$$(-1)^nx^n + (-1)^{n-1}(a_{11} + \cdots + a_{nn})x^{n-1} + \cdots + A_r x^r + \cdots + \det
+A$$
+donde $tr(A) = a_{11} + \cdots + a_{nn}$ se le suele denominar la traza de la matriz y $A_r$ denota la suma de los determinantes de los menores de orden $n-r$ que tienen la diagonal principal sobre la diagonal principal de $A$.
+
+De este modo, podemos ver que, a pesar de que estos elementos dependen de la matriz escogida, su valor debe ser invariante porque el polinomio característico es independiente de la representación matricial, luego descubrimos dos hechos muy importantes:
+\begin{itemize}
+\item El determinante es invariante por equivalencia de matrices.
+\item La traza es invariante por equivalencia de matrices.
+\end{itemize}
+\end{obs}
+
 \begin{defi}[Espectro]
 Sea $\phi \in End(V)$, se define el \textbf{espectro} de un endomorfismo como el conjunto de los autovalores :
 $$\sigma(\phi)=\{\lambda_1, \cdots, \lambda_t\}: q_\phi(\lambda_i) = 0$$
@@ -2686,7 +1943,11 @@ $$
 
 Este caso es más complejo y se explicará el procedimiento general a través de un ejemplo (aunque explicando los pasos a seguir y las partes).
 %%FIXME falta desarrollar este caso y poner el ejemplo
-Ej.:
+\begin{ej}
+Tomemos por ejemplo la matriz:
+$$matriz$$
+
+\end{ej}
 \end{itemize}
 
 \subsection{Triangularizabilidad}
@@ -3081,29 +2342,29 @@ FALTA EL EJEMPLO
 \end{ej}
 
 \subsection{Factores invariantes}
-Supongamos que tenemos un endomorfismo $\phi:V\rightarrow V$ y que:
-$$q_{\phi,v} = g\mbox{ y }q_{\phi, w} = h\mbox{ donde }mcd(g,h)=1\Rightarrow q_{\phi, v+w}=gh$$
-De este modo es lógico pensar que:
-$$C_{g}\oplus C_{h} \sim C_{gh}$$
+Existe una versión alternativa para clasificar los endomorfismos en clases de equivalencia. Del mismo modo que se ha visto la aproximación desde las perspectiva de los divisores elementales, ésta puede verse a través de una nueva: los factores invariantes.
 
-\underline{Demostración}:
-
+\begin{prop}
+Sea $\phi:V\rightarrow V$ un endomorfismo, si denotamos por $g = q_{\phi,v}$ y por $h = q_{\phi, w}$ de modo que $mcd(g,h)=1$, entonces ocurre que:
+$$q_{\phi, v+w}=gh \mbox{ y } C_{g}\oplus C_{h} \sim C_{gh}$$
+\end{prop}
+\begin{demo}
 Bastaría con demostrar que tenemos un endomorfismo en $K^{m+n}$ de manera que en una base es la suma directa de esas cajas y en la otra es la otra matriz compañera.
 
 Sea $\phi: K^{m+n}\rightarrow K^{m+n}$ donde $M_B(\phi) = C_{g}\oplus C_{h}$ por lo que sabemos que:
 $$B=\{v, \phi(v), \ldots, \phi^{m+n-1}(v), w, \phi(w), \ldots, \phi^{m+n-1}(w)\}$$
 Luego entonces como $q_{\phi, v+w}=gh$ si escogemos el vector $v'=v+w$ vemos que $\{v', \phi(v'), \ldots, \phi^{m+n-1}(v')\}$ forma una base, puesto que son linealmente independientes y hay tantos como la dimensión del espacio sobre el que están definidos y la matriz respecto de esa base es justamente la compañera.
+\end{demo}
 
-\subsubsection{Aplicaciones de lo que se ha explicado}
-Supongamos que $\phi: V\rightarrow V$ y que $\pm p_\phi = f_1^{a_1}\cdot f_2^{a_2} = q_\phi$ y supongamos que $q_\phi=p_\phi$ donde cada $f_i$ es un irreducible distinto.
-
-Entonces sabemos que $V=_\phi V_1\oplus V_2$ por el lema de estructura y además $V_i=\ker (f_i^{a_i}(\phi))$ y del mismo modo $\exists B_i: M_{B_i}(\phi\mid_{V_i})=C_{f_i^{a_i}}$. Luego volviendo a la matriz general:
+En consecuencia, veamos que si tenemos $\phi: V\rightarrow V$ tal que $\pm p_\phi = f_1^{a_1}\cdot f_2^{a_2} = q_\phi$ donde cada $f_i$ es un irreducible distinto, entonces sabemos que $V=_\phi V_1\oplus V_2$ por el lema de estructura y, además, que $V_i=\ker (f_i^{a_i}(\phi))$ y $\exists B_i: M_{B_i}(\phi\mid_{V_i})=C_{f_i^{a_i}}$. Luego volviendo a la matriz general:
 $$M_{B_1\cup B_2}(\phi)=C_{f_1^{a_1}}\oplus C_{f_2^{a_2}}\sim C_{f_1^{a_1}f_2^{a_2}}$$
-Por lo tanto se puede escoger siempre una base respecto de la cual, la matriz de $\phi$ es la compañera del producto de ambos trozos.
-Es decir, que \textbf{cuando mínimo y característico coinciden} entonces se ve que por inducción sobre el número de factores se tiene que:
+Por lo tanto, se puede escoger siempre una base respecto de la cual, la matriz de $\phi$ es la compañera del producto de ambos trozos.
+\begin{theo}
+Sea $\phi \in End(V)$, si $p_\phi = q_\phi$ entonces:
 $$\phi: V\rightarrow V:\pm p_\phi = q_\phi \Rightarrow \exists B: M_{B}(\phi)=C_{q_{\phi}}$$
-Por ejemplo veamos:
-$\phi: R^{4}\rightarrow R^{4}: p_\phi=(x^2+x+1)(x^2-x+1)\Rightarrow q_\phi=(x^2+x+1)(x^2-x+1)\Rightarrow \begin{cases} M_{B}(\phi)=C_{x^2+x+1}\oplus C_{x^2-x+1} & \mbox{ por divisores elementales}\\ M_{B'}(\phi)= C_{x^4+x^2+1}& \mbox{ por factores invariantes}\end{cases}$.
+\end{theo}
+Por ejemplo, supongamos $\phi: R^{4}\rightarrow R^{4}: p_\phi=(x^2+x+1)(x^2-x+1)=q_\phi$, entonces podemos ver las dos clasificaciones simultáneas:
+$$\begin{cases} M_{B}(\phi)=C_{x^2+x+1}\oplus C_{x^2-x+1} & \mbox{ por divisores elementales}\\ M_{B'}(\phi)= C_{x^4+x^2+1}& \mbox{ por factores invariantes}\end{cases}$$
 
 \subsubsection*{Paso de divisores elementales a factores invariantes}
 Supongamos que $p_\phi = f_1^{e_1}\cdot \cdots \cdot f_t^{e_t}$ y $q_\phi= f_1^{a_1}\cdot \cdots \cdot f_t^{a_t}$, entonces:
@@ -3245,7 +2506,7 @@ es un isomorfismo canónico entre ambos espacios.
 
 \subsection{Ortogonalidad}
 \label{Ortogonalidad dual}
-Un concepto fundamental que también se desarolla por ejemplo en el apartado de \nameref{Formas bilineales} es la ortogonalidad. Ésta nos va a permitir, en el caso del espacio dual, caracterizar los hiperplanos vectoriales con formas lineales del espacio dual.
+Un concepto fundamental que también se desarrolla, por ejemplo, en el apartado de \nameref{Formas bilineales} es la ortogonalidad. Ésta nos va a permitir, en el caso del espacio dual, caracterizar los hiperplanos vectoriales con formas lineales del espacio dual.
 
 \begin{defi}[Ortogonalidad]
 Sea $V$ un espacio vectorial y $V^*$ su dual, decimos que $\omega \in V^*$ es \textbf{ortogonal} a $v\in V$ si $\omega(v)=0$.
@@ -3330,16 +2591,6 @@ Si recordamos que $A=M_{B_v, B_w}(\phi)$ y $A^t=M_{B_w^*, B_v^*}(\phi^*)$, veamo
 $$rg(A^t)=rg(\phi^*)=\dim W^*-\dim \ker(\phi^*)=\dim W- \dim (Im(\phi))^\perp=$$
 $$=\dim W- (\dim W-\dim Im(\phi))=\dim Im(\phi)=rg(\phi)=A$$
 \end{obs}
-
-%FIXME
-\subsubsection{Hiperplanos explicación}
-Supongamos que tenemos $\dim V=n$ y un hiperplano $H<V$, es decir, $\dim H=n-1$. Este tendrá una única ecuación cartesiana que lo defina, por lo tanto:
-$$v\in H\Leftrightarrow a_1x_1+\cdots a_nx_n=0$$
-De este modo $H^\perp$ vemos que $\dim H^\perp = n-(n-1)=1$, con lo cual, este está generado por una única forma lineal. Si definimos $B^*$ la pregunta es quién es $\omega$. Si definimos $\omega=a_1v_1^*+\cdots + a_nv_n^*$, es decir, de la manera usual vemos que al aplicarla a un vector de $V$ lo que ocurre es que tras desarrollar:
-$$a_iv_i^*(v) = a_iv_i^*(b_1v_1+\cdots b_nv_n)=a_ib_i$$
-Porque $v_i^*$ se anula sobre todos los vectores de la base, excepto sobre el del mismo índice que él. Si esto lo hacemos con todos los vectores y sumando (lo que sería hacerla evaluación normal de $\omega(v)$) se tiene que:
-$$\omega(v)=a_1b_1+\cdots +a_nb_n$$
-Si $v=(b_1, \cdots, b_n)\in H\Rightarrow a_1b_1+\cdots a_nb_n=0\Rightarrow \omega(v)=0$ si definimos $\omega$ como lo hemos hecho, luego está bien definida.
 
 \section{Formas Bilineales}
 \label{Formas bilineales}
@@ -3602,14 +2853,7 @@ Por tanto, dado $v\in V$ podemos considerar, ya no $L(v)^\perp < V^*$, sino $L(v
 \item Del mismo modo, como también hemos visto que $w\mapsto \eta_w$ es un isomorfismo, entonces $L(v^*)^\perp \simeq W < V$.
 \item Por tanto, cuando escogemos un vector $v$ y decimos que otro vector $w$ es ortogonal a él, estamos diciendo que $\eta_w(v^*) = v^*(w)= f(v,w) = 0 $.
 \end{itemize}
-Surge ahora la pregunta de ¿y para qué todo este razonamiento si me podía limitar a considerar la definición de ortogonalidad previa sin relacionarla con la ortogonalidad del espacio dual? Pues muy sencillo: porque como una es equivalente a la otra a través de isomorfismos todos los enunciados válidos para una también lo son para la otra. De este modo y prácticamente de forma trivial, tenemos el siguiente enunciado.
-
-\begin{prop}
-Sea $V$ un espacio vectorial y $f$ un producto escalar, la ortogonalidad con respecto a $f$ verifica las siguientes propiedades:
-\begin{itemize}
-\item $W\subset U \Rightarrow U^\perp \subset W^\perp$
-\end{itemize}
-\end{prop}
+Surge ahora la pregunta de ¿y para qué todo este razonamiento si me podía limitar a considerar la definición de ortogonalidad previa sin relacionarla con la ortogonalidad del espacio dual? Pues muy sencillo: porque como una es equivalente a la otra a través de isomorfismos todos los enunciados válidos para una también lo son para la otra. De este modo, todas las propiedades deducidas para la ortogonalidad que se vio para formas lineales también se tiene para la ortogonalidad entendida desde el punto de vista bilineal.
 
 \subsection{Clasificación de formas bilineales}
 Del mismo modo que en el tema de clasificación de endomorfismos, tratábamos de agrupar las aplicaciones lineales en clases de equivalencia y escoger el representante más sencillo posible dentro de cada clase, en este apartado vamos a tratar de hacer lo mismo pero con las formas bilineales.
@@ -4225,10 +3469,12 @@ $$V = \pi \oplus \pi^\perp$$
 Restringimos de nuevo $\phi\mid_{\pi^\perp}$ que sigue siendo ortogonal y en ese trozo la matriz que conforma ya cumple las hipótesis. Los vectores de $\pi$ son ortogonales a los del perpendicular y podemos seleccionarlos de forma que conformen una base ortonormal en $\pi$ por lo que compondrán una de las cajas que habíamos definido como rotaciones.
 \end{itemize}
 
-+\chapter{Espacio Afín}
+\chapter{Espacio Afín}
+Durante este capítulo vamos a desarrollar toda la teoría necesaria para introducir los conceptos de espacio y aplicaciones afines. Esta nueva estructura junto con las aplicaciones asociadas a la misma nos van a permitir modelar el espacio real y la geometría tal y como la conocemos de forma analítica, completando la definición de espacio vectorial euclídeo que se dio.
+
+\section{Espacio Afín}
 Con esta nueva estructura buscamos enriquecer la noción de espacio vectorial euclídeo. Con éste último habíamos sido capaces de introducir las nociones ortogonalidad, producto escalar, etc. Sin embargo, dicha definición nos dejaba anclados a subespacios fijos al origen, pues todos los subespacios contienen al 0. Supuesto el plano $z=0$, si quisiéramos describir los paralelos a distintas alturas la definición de espacio vectorial euclídeo se nos quedaría corta. De esta necesidad nace el espacio afín.
 
-\section{Definición y Conceptos Básicos}
 \begin{defi}[Espacio Afín]
 Un \textbf{espacio afín} sobre un cuerpo $K$, es una terna $(A,V,\varphi)$ que verifica:
 \begin{itemize}
@@ -4328,7 +3574,13 @@ Sea $\varphi$ la aplicación de un espacio afín y $+$ la notación para la apli
 \end{enumerate}
 \end{demo}
 
+\begin{defi}[Dimensión de un Espacio Afín]
+Sea $(A,V,\varphi)$ un espacio afín de forma que $\dim V = n$, entonces definimos la \textbf{dimensión de $A$} como la dimensión de $V$, esto es, $\dim A = \dim V = n$.
+\end{defi}
+
 \subsection{Variedades Afines}
+Del mismo modo que en la estructura de espacio vectorial teníamos los subespacios, en la estructura de espacio afín tenemos el término variedad para referirnos a su homólogo. De esta manera, la restricción a dichas variedades componen de nuevo una estructura de espacio afín.
+
 \begin{defi}[Variedad Afín]
 Dado un espacio afín $(A,V,\varphi)$, un punto $p \in A$ y un subespacio $W < V$ se define la \textbf{variedad afín que pasa por $p$ con dirección $W$} como el conjunto:
 $$p + W = \{p + w : w \in W\} = \{q\in A : \vec{pq}\in W\}$$
@@ -5059,15 +4311,16 @@ a_1 & 1 &  1 \\
 \subsection{Clasificación de las Afinidades del Plano}
 Del mismo modo que hemos estado clasificando y caracterizando los endomorfismos, las aplicaciones ortogonales, ... nuestro objetivo ahora es clasificar todas las posibles aplicaciones afines en el plano. El propósito es poder tener un conocimiento muy preciso de lo que se espera encontrar como aplicación afín en el plano para, llegado el momento, tener claras las posibilidades y propiedades en el manejo de este objeto en áreas como la geometría.
 
-\underline{\textbf{Clasificación en dimensión 2}}:
-
-Sea $\dim \mathcal{A} = 2$, $K = \mathbb{C}$ y $\phi \in GA(\mathcal{A})$
+\subsubsection{Clasificación en $\mathbb{C}$}
+Sea $\dim \mathcal{A} = 2$, $K = \mathbb{C}$ y $\phi \in GA(\mathcal{A})$, entonces:
 \begin{itemize}
-\item $1 \in \sigma(\vec{\phi}) = \begin{cases} q_{\vec{\phi}} = x - 1 \Rightarrow \phi \mbox{ traslación } \Rightarrow \begin{cases} \phi = id & A_\phi = \mathcal{A} \\ \phi \neq id & A_\phi = \emptyset \end{cases} \\ q_{\vec{\phi}} = (x-1)(x-r) : r \neq 1,0,-1 \Rightarrow \phi \mbox{ diagonalizable } \Rightarrow \begin{cases} \phi \mbox{ hom. gen. } & A_\phi \neq \emptyset \\ \phi \mbox{ h. g. con desp. } & A_\phi = \emptyset \end{cases} \\ q_{\vec{\phi}} = (x-1)(x+1) \Rightarrow \begin{cases} \phi \mbox{ simetría } & A_\phi \neq \emptyset \\  \phi \mbox{ simetría con desplazamiento } & A_\phi = \emptyset\end{cases} \\ q_{\vec{\phi}} = (x-1)^2  \Rightarrow \begin{cases} \phi \mbox{ homología especial } & A_\phi \neq \emptyset \\ \phi \mbox{ homología especial con desplazamiento } & A_\phi = \emptyset   \end{cases} \end{cases}$
+\item $\boxed{1 \in \sigma(\vec{\phi})}$
+$$\begin{cases} q_{\vec{\phi}} = (x - 1) \Rightarrow \phi \mbox{ traslación } \Rightarrow \begin{cases} \phi = id & A_\phi = \mathcal{A} \\ \phi \neq id & A_\phi = \emptyset \end{cases} \\ q_{\vec{\phi}} = (x-1)(x-r) : r \neq 1,0,-1 \Rightarrow \phi \mbox{ diagonalizable } \Rightarrow \begin{cases} \phi \mbox{ h. g. } & A_\phi \neq \emptyset \\ \phi \mbox{ h. g. con desp. } & A_\phi = \emptyset \end{cases} \\ q_{\vec{\phi}} = (x-1)(x+1) \Rightarrow \begin{cases} \phi \mbox{ simetría } & A_\phi \neq \emptyset \\  \phi \mbox{ simetría con desplazamiento } & A_\phi = \emptyset\end{cases} \\ q_{\vec{\phi}} = (x-1)^2  \Rightarrow \begin{cases} \phi \mbox{ h. e. } & A_\phi \neq \emptyset \\ \phi \mbox{ h. e. con desp. } & A_\phi = \emptyset   \end{cases} \end{cases}$$
 
-\item $1 \notin \sigma(\vec{\phi}) \Rightarrow A_\phi = \{ p_0\}$, luego tomaremos como referencia $R=\{p_0, B\}$ con una base $B$ conveniente.
+\item $\boxed{1 \notin \sigma(\vec{\phi})}$
 
-$1 \in \sigma(\vec{\phi}) = \begin{cases} q_{\vec{\phi}} = x - r : r \neq 1,0 \Rightarrow \vec{\phi} = r \ id_V \Rightarrow \phi \mbox{ homotecia } \\  q_{\vec{\phi}} = (x - r)(x-s) : r,s \neq 1,0 \Rightarrow \mbox{ composición de homologías generales } \\ q_{\vec{\phi}} = (x - r)^2 : r \neq 1,0 \Rightarrow \mbox{ homología especial compuesta con homotecia } \end{cases}$
+En este caso, si conocemos el conjunto de puntos fijos, pues es $A_\phi = \{ p_0\}$, luego tomaremos como referencia $R=\{p_0, B\}$ con una base $B$ conveniente para cada caso.
+$$\begin{cases} q_{\vec{\phi}} = (x - r) : r \neq 1,0 \Rightarrow \vec{\phi} = r \cdot id \Rightarrow \phi \mbox{ homotecia } \\  q_{\vec{\phi}} = (x - r)(x-s) : r,s \neq 1,0 \Rightarrow \mbox{ composición de homologías generales } \\ q_{\vec{\phi}} = (x - r)^2 : r \neq 1,0 \Rightarrow \mbox{ homología especial compuesta con homotecia } \end{cases}$$
 
 \underline{Composición de homologías generales}
 
@@ -5108,10 +4361,12 @@ $$M_R (\phi) = \left(\begin{array}{c|cc}
 \end{pmatrix}$$
 \end{itemize}
 
-Sea $\dim \mathcal{A} = 2$, $K = \mathbb{R}$ y $\phi \in GA(\mathcal{A})$, entonces se mantienen todos los casos anteriores, pero hemos de añadir el caso en el que el polinomio no descompone:
-$$q_{\vec{\phi}} = x^2 + a_1x + a_0 \in \mathbb{R}[x] \mbox{ irreducible } \Rightarrow 1 \notin \sigma(\vec{\phi}) \Rightarrow A_\phi = \{p_0\} \Rightarrow$$
-$$ \Rightarrow q_{\vec{\phi}} = (x- \alpha)(x - \bar{\alpha}) : \alpha = a + bi \in \mathbb{C} \setminus \mathbb{R}$$
-Entonces la matriz asociada queda como:
+\subsubsection{Clasificación en $\mathbb{R}$}
+Sea $\dim \mathcal{A} = 2$, $K = \mathbb{R}$ y $\phi \in GA(\mathcal{A})$, se mantienen todos los casos anteriores, pero hemos de añadir el caso en el que el polinomio no descompone:
+$$q_{\vec{\phi}} = x^2 + a_1x + a_0 \in \mathbb{R}[x] \mbox{ irreducible } \Rightarrow 1 \notin \sigma(\vec{\phi}) \Rightarrow A_\phi = \{p_0\}$$
+Luego si expresamos el polinomio mínimo de esta manera
+$$q_{\vec{\phi}} = (x- \alpha)(x - \bar{\alpha}) : \alpha = a + bi \in \mathbb{C} \setminus \mathbb{R}$$
+la matriz asociada queda como:
 $$M_B (\vec{\phi}) = \begin{pmatrix}
 a & -b \\ b & a
 \end{pmatrix}\Rightarrow M_R (\phi) =  \left(\begin{array}{c|cc}
@@ -5121,80 +4376,75 @@ a & -b \\ b & a
 0 & b &  a
 \end{array}
 \right)$$
-Que se parece, pero no es extrapolable a las rotaciones vistas en las aplicaciones ortogonales.
 
-\section{ISOMETRÍAS}
-Sea $\dim V = n$ y $(A, V, \varphi)$ donde $\varphi(p,q) = \vec{pq}$ un espacio afín, si añadimos un producto escalar $f: V \times V \rightarrow \mathbb R$, entonces denominamos a $(A,V,\varphi, f)$ espacio afín euclídeo.
+\begin{obs}
+A pesar de que la notación es parecida, esta expresión no es extrapolable a las rotaciones vistas en las aplicaciones ortogonales.
+\end{obs}
 
-\subsection{Espacio métrico}
-Definimos la distancia entre dos puntos como:
-$$d(p,q) = ||\vec{pq}||$$
-De forma que con esta definición se cumplen las siguientes propiedades:
+\section{Isometrías}
+Con los elementos anteriores, el espacio vectorial euclídeo y el espacio afín, podemos construir una nueva estructura que permite modelar de forma feaciente la realidad geométrica del mundo en el que vivimos: el espacio afín euclídeo. En esta sección vamos a analizar las característica que aporta esta amalgama de estructuras al conjunto y a estudiar las aplicaciones que conservan dicho espacio que denominaremos movimientos rígidos o isometrías.
+
+\begin{defi}[Espacio Afín Euclídeo]
+Sea $(A, V, \varphi)$ un espacio afín, y $f: V \times V \rightarrow \mathbb R$, entonces definimos un \textbf{espacio afín euclídeo} como la estructura $(A,V,\varphi, f)$.
+\end{defi}
+
+\begin{defi}[Distancia]
+Sea $(A,V,f,\varphi)$ un espacio afín euclídeo, definimos la \textbf{distancia entre dos puntos} como:
+$$d(p,q) = ||\vec{pq}|| = \sqrt{q(\vec{pq})}$$
+y dicha definición verifica las siguientes propiedades:
 \begin{itemize}
 \item $d(p,q) \geq 0 : \forall p,q\in A$
 \item $d(p,q) = 0\Rightarrow p = q$
 \item $d(p,q) \leq d(p,r) + d(r,p)$
 \end{itemize}
-Lo cual define las características de un espacio métrico.
+\end{defi}
 
-\subsubsection*{Teorema de Pitágoras}
+\begin{theo}[de Pitágoras]
 $$\vec{p_0p_1}\perp \vec{p_0p_2}\Rightarrow ||\vec{p_1p_2}||^2 = ||\vec{p_0p_1}||^2 + ||\vec{p_0p_2}||^2$$
-
-\underline{Demostración}:
+\end{theo}
+\begin{demo}
 $$||\vec{p_1p_2}|| ^2 = f(\vec{p_1p_2}, \vec{p_1p_2}) = f(\vec{p_1p_0}+\vec{p_0p_2}, \vec{p_1p_0}+\vec{p_0p_2}) = f (\vec{p_1p_0}, \vec{p_1p_0}) + f(\vec{p_0p_2}, \vec{p_0p_2}) = ||\vec{p_1p_0}||^2 + ||\vec{p_0p_2}||$$
+\end{demo}
 
-\subsubsection*{Distancia punto-variedad}
+\begin{defi}[Distancia entre variedades]
 Sea $p\in A$ un punto y $X\subseteq A$ una variedad, definimos:
-$$d(p,X) = \inf\{d(p_1,q) : q\in X\}$$
-Y de hecho, este ínfimo se alcanza, luego:
-$$d(p,X) = \min\{d(p_1,q) : q\in X\}$$
-Luego si la distancia entre un punto y una variedad es 0, el punto está en la variedad:
-$$d(p,X) = 0 \Rightarrow p\in X$$
-
-\subsubsection*{Distancia entre variedades}
+$$d(p,X) = \inf\{d(p_1,q) : q\in X\} = d(p,X) = \min\{d(p_1,q) : q\in X\}$$
 Sean $X, Y\subseteq A$ variedades afines, definimos la distancia entre ellas como:
-$$d(X,Y) = \inf\{d(p,q) : p\in X, \ q\in Y \}$$
-Y, de nuevo, este ínfimo se alcanza, luego:
-$$d(X,Y) = \min\{d(p,q) : p\in X, \ q\in Y \}$$
-En consecuencia, si ambas intersecan, su distancia es 0:
+$$d(X,Y) = \inf\{d(p,q) : p\in X, \ q\in Y \}=  \min\{d(p,q) : p\in X, \ q\in Y \}$$
+y en ambos casos el ínfimo se alcanza.
+\end{defi}
+
+\begin{prop}
+Un punto pertenece a una variedad si y sólo si su distancia respecto a ella es 0.
+$$d(p,X) = 0 \Leftrightarrow p\in X$$
+Dadas dos variedades $X,Y\subseteq A$ ambas intersecan si y sólo si su distancia es nula.
 $$X\cap Y \neq \emptyset \Leftrightarrow \exists p_0 \in X \cap Y: d(p_0,p_0) = 0$$
+\end{prop}
 
-\subsection{Referencias Ortonormales}
-Sea $R = \{p_0, B\}$, diremos que el sistema de referencia es ortonormal, si lo es la base $B$ que lo compone.
+En este tema en concreto toman gran importancia lo que definiremos como referencias ortonormales, puesto que las bases ortonormales permiten dar la notación de matriz identidad, y en consecuencia la operación de producto escalar es la usual, al producto escalar y esto es preferible cuando trabajamos con vectores en estas estructuras.
 
-\subsubsection*{Matriz de paso entre sistemas de referencia}
-Sean $R, R'$ sistemas de referencia ortonormales, entonces la matriz de paso entre ambos verifica que:
-$$ M (R, R') = \left(\begin{array}{c|ccc}
-1& 0 & \ldots & 0 \\
-\hline
-a_1 & & &   \\
-\vdots & & M(B,B') & \\
-a_n & & &
-\end{array}
-\right)$$
-Recíprocamente, si la matriz de cambio de base es de este tipo, entonces los sistemas que intercambia son ortogonales.
+\begin{defi}[Referencia Ortonormal]
+Sea $R = \{p_0, B\}$ un sistema de referencia, diremos que es \textbf{ortonormal}, si lo es la base $B$ que lo compone.
+\end{defi}
 
-\subsection{Isometrías}
-Denotamos por movimiento rígido o isometría de A a una aplicación afín $\phi : A \to A $ tal que su aplicación lineal asociada $\vec{\phi}$ es ortogonal, es decir:
-$$ M_R (\phi) = \left(\begin{array}{c|ccc}
-1& 0 & \ldots & 0 \\
-\hline
-a_1 & & &   \\
-\vdots & & M_B (\vec{\phi}) & \\
-a_n & & &
-\end{array}
-\right): \overrightarrow{p_0 \phi(p_0)} = a_1 v_1 + \ldots + a_n v_n \mbox{ y }\vec{\phi} \in O(V)$$
-De este modo, $R$ ortonormal implica que $M_B (\vec{\phi}) \mbox{ ortogonal}$.
+\subsection{Clasificación de Movimientos Rígidos}
+De nuevo y como acostumbramos, vamos a clasificar todos las posibles isometrías que podemos encontrar en espacios habituales como pueden ser el plano y el espacio. Esto nos dará una ventaja significativa a la hora de trabajar en estos ambientes pues de tener una aplicación y verificar que es un movimiento rígido, podemos adquirir mucha información acerca de la misma y dar una expresión matricial más amable para trabajar con ella.
+
+\begin{defi}[Isometrías]
+Sea $\phi: A \rightarrow A$ una aplicación afín, decimos que es un \textbf{movimiento rígido o isometría de $A$} si su aplicación lineal asociada $\vec{\phi}$ es ortogonal, es decir, que para $R$ ortonormal la matriz $M_B (\vec{\phi})$ es ortogonal.
+\end{defi}
  
 Los movimientos son todos biyectivos por lo que existe la aplicación inversa que también es un movimiento. Como la composición de movimientos es de nuevo un movimiento, entonces el conjunto de estas aplicaciones junto con la composición forman un grupo.
 
-\subsubsection*{Proposición}
+\begin{prop}
 Una aplicación afín es un movimiento rígido si y sólo si conserva las distancias.
 $$\phi\mbox{ movimiento} \Leftrightarrow d(p,q) = d(\phi(p),\phi(q))$$
-\underline{Demostración}:
+\end{prop}
+\begin{demo}
 $$d(\phi(p), \phi(q))^2 = ||\overrightarrow{\phi(p) \phi(q)}||^2 = f(\overrightarrow{\phi(p) \phi(q)}, \overrightarrow{\phi(p) \phi(q)}) = f(\vec{\phi}(\vec{pq}),\vec{\phi}(\vec{pq})) \overset{\vec{\phi} \in O(V)}{=} f(\vec{pq}, \vec{pq}) = ||\vec{pq}||^2 = d(p,q)^2$$
+\end{demo}
 
-\underline{Ejemplo}:
+\begin{ej}
 Sea $\phi: \mathbb{R}^2 \to \mathbb{R}^2$ de forma que su matriz en base canónica sea:
 $$M_{R_c} (\phi) = \frac{1}{5} \begin{pmatrix} 5 & 0 & 0 \\ 0 & 4 & 3 \\ -5 & -3 & 4 \\\end{pmatrix} $$
 Veamos que $\phi$ es movimiento:
@@ -5226,47 +4476,70 @@ $$tr(\vec{\phi}) = 1 = -1+2c\Rightarrow c = 1 \Rightarrow s = 0 \Rightarrow  M_B
 Luego $\phi$ será una simetría especular si hay puntos fijos:
 $$A_\phi : \begin{cases} 1 - x - y + 2z = 0 \\ 1-x-y+2z = 0 \\ 2x + 2y - 4y = 0 \end{cases} \Rightarrow A_\phi = \emptyset$$
 Lo que quiere decir que $\vec{\phi}$ es simetría ortogonal, pero $\phi$ no es simetría (es simetría con desplazamiento).
+\end{ej}
 
-\subsubsection*{Clasificación de Movimientos}
-Sea $\phi : A \to A $ movimiento, $A$ espacio afín euclídeo de dimensión 2:
+\theoremstyle{break}
+	\theoremheaderfont{\normalfont\bfseries\color{teoremas}}
+	\theorembodyfont{\itshape}
+	\theoremseparator{\vspace{0.2cm}}
+	\theorempreskip{\topsep}
+	\theorempostskip{\topsep}
+	\theoremindent0cm
+	\theoremnumbering{arabic}
+	\theoremsymbol{}
+	\theoremprework{\vspace{0.2cm}}
+	\theorempostwork{\vspace{0.2cm}}
+	\renewtheorem*{defi}{Definición}
+\subsubsection{Clasificación en el plano}
+Sea $\phi : A \to A $ un movimiento rígido y $A$ un espacio afín euclídeo tal que $\dim A = 2$, entonces:
 \begin{itemize}
-\item $\vec{\phi} \in O^+(V)$
+\item $\boxed{\vec{\phi} \in O^+(V)}$
 	\begin{itemize}
-	\item \underline{\textbf{Giros}}: \fbox{$A_\phi \neq \emptyset$}
+	\item \fbox{$A_\phi \neq \emptyset$}
 	
-	Elegimos un $R=\{p_0, B\}$ de forma que $p_0\in A_\phi$ y una base ortonormal para que:
+	\begin{defi}[Giro]
+	Elegimos como $R=\{p_0, B\}$ donde $p_0\in A_\phi$ es fijo y $B$ es ortonormal para que:
 	$$M_R (\phi) = \begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sen\theta \\ 0 & \sen\theta & \cos\theta \\ \end{pmatrix} : 0 \leq \theta \leq \pi$$
- 	Como casos especiales tenemos que $\begin{cases} \theta = 0  & \Rightarrow \phi = id_A  \\ \theta = \pi & \phi \mbox{sim. central}\end{cases}$
+ 	Como casos especiales tenemos que $\begin{cases} \theta = 0  & \Rightarrow \phi = id_A  \\ \theta = \pi & \Rightarrow \phi = \mbox{sim. central}\end{cases}$
+ 	\end{defi}
 
-	\item \underline{\textbf{Giro con desplazamiento}}: \fbox{$A_\phi = \emptyset$}
+	\item \fbox{$A_\phi = \emptyset$}
 	
-	Elegimos de nuevo un $R=\{p, B\}$ donde $B$ es ortonormal (ahora no podemos coger $p$ conveniente) de forma que:
+	\begin{defi}[Giro con Desplazamiento]
+	Elegimos como $R=\{p, B\}$ donde $B$ es ortonormal (ahora no podemos coger $p$ conveniente) de forma que:
 	$$M_R (\phi) = \begin{pmatrix} 1 & 0 & 0 \\ a_1 & \cos\theta & -\sen\theta \\ a_2 & \sen\theta & \cos\theta \\ \end{pmatrix} = \underset{(a_1, a_2) \neq (0,0)}{\left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline a_1 & 1 & 0 \\ a_2 & 0 & 1 \\ \end{array} \right) } \begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sen\theta \\ 0 & \cos\theta & \sen\theta \\ \end{pmatrix} $$	
-	Se trata de la composición de un giro con centro $p_0$ y ángulo $\theta$ (la segunda matriz), seguido de una traslación de vector $v = (a_1,a_2)$. Cuando este giro es la identidad, se tiene sólo una traslación.
-
+	Vemo, por tanto, que se trata de la composición de un giro con centro $p_0$ y ángulo $\theta$ (la segunda matriz), seguido de una traslación de vector $v = (a_1,a_2)$.
+	\end{defi}
 	\end{itemize}
-\item $\vec{\phi} \in O^-(V)$
+		
+\item $\boxed{\vec{\phi} \in O^-(V)}$
 	\begin{itemize}
-	\item \underline{\textbf{Simetría Ortogonal Axial}}: \fbox{$A_\phi \neq \emptyset$}
+	\item \fbox{$A_\phi \neq \emptyset$}
 	
-	Elegimos $R=\{p_0, B\}$ con $p_0\in A_\phi$ y $B$ base ortonormal, de forma que:
+	\begin{defi}[Simetría Ortogonal Axial]
+	Elegimos como $R=\{p_0, B\}$ con $p_0\in A_\phi$ fijo y $B$ ortonormal, de forma que:
 	$$M_R (\phi) = \left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline 0 & 1 & 0 \\0 & 0 & -1 \\ \end{array} \right)$$
-	La base de la simetría corresponde a la variedad $p_0 + L(v_1) = A_\phi$ y la dirección $L(v_2) = L(v_1)^\perp$.
+	La base corresponde a la variedad $p_0 + L(v_1) = A_\phi$ y la dirección $L(v_2) = L(v_1)^\perp$.
+	\end{defi}
 
-	\item \underline{\textbf{Simetría Ortogonal Axial con desplazamiento}}: \fbox{$A_\phi = \emptyset$}
+	\item \fbox{$A_\phi = \emptyset$}
 	
-	Si esto ocurre dijimos que $1 \in \sigma(\vec{\phi})$ luego se tiene que:
-	$$M_R (\phi) = \left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline a_1 & 1 & 0 \\ a_2 & 0 & -1 \\ \end{array} \right) = \left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline a_1 & 1 & 0 \\ 0 & 0 & 1 \\ \end{array} \right)\left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline 0 & -1 & 0 \\ a_2 & 0 & 1 \\\end{array} \right)$$
-	Se trata de la composición de una traslación de vector $a_1 v_1$ (la primera matriz) con una simetría ortogonal axial, es decir, se trata de una simetría con desplazamiento.
+	\begin{defi}[Simetría Ortogonal Axial con desplazamiento]
+	En este caso, no tenemos puntos que queden fijos, luego la matriz es:
+	$$M_R (\phi) = \left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline a_1 & 1 & 0 \\ a_2 & 0 & -1 \\ \end{array} \right) = \left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline a_1 & 1 & 0 \\ a_2 & 0 & 1 \\ \end{array} \right)\left(\begin{array}{c|cc} 1 & 0  & 0  \\ \hline 0 & 1 & 0 \\ 0 & 0 & -1 \\\end{array} \right)$$
+	Se trata de la composición de una traslación de vector $v=(a_1, a_2)$ (la primera matriz) con una simetría ortogonal axial, es decir, se trata de una simetría con desplazamiento.
+	\end{defi}
 	\end{itemize}
 \end{itemize}
 
-Sea $\phi : A\rightarrow A$ movimiento donde $A$ es un espacio afín de dimensión 3:
+\subsubsection{Clasificación en el espacio}
+Sea $\phi : A\rightarrow A$ un movimiento rígido y $A$ es un espacio afín euclídeo tal que $\dim A = 3$, entonces:
 \begin{itemize}
-\item $\vec{\phi} \in O^+(V)$
+\item $\boxed{\vec{\phi} \in O^+(V)}$
 	\begin{itemize}
-	\item \underline{\textbf{Rotación}}: \fbox{$A_\phi \neq \emptyset$}
+	\item \fbox{$A_\phi \neq \emptyset$}
 	
+	\begin{defi}[Rotación]
 	Elegimos un sistema de referencia $R=\{p_0, B\}$ donde $p_0 \in A_\phi$ y $B$ sea una base ortonormal, entonces:
 	$$M_R (\phi) = \left(\begin{array}{c|ccc}
 1 & 0  & 0 & 0 \\
@@ -5277,9 +4550,10 @@ Sea $\phi : A\rightarrow A$ movimiento donde $A$ es un espacio afín de dimensi�
 \end{array}
 \right) : 0 \leq \theta \leq \pi$$
 Con lo cual, tal y como lo vimos el eje de rotación es $p_0 + L(v_1)$ y el ángulo $\theta$. Como casos especiales: $\begin{cases} \theta = 0 & \mbox{ Identidad } \\ \theta = \pi & \mbox{ Simetría axial } \end{cases}$
+	\end{defi}
 
-\item \underline{\textbf{Movimiento Helicoidal}}: \fbox{$A_\phi = \emptyset$}
-
+\item \fbox{$A_\phi = \emptyset$}
+\begin{defi}[Movimiento Helicoidal]
 En este caso solo podemos elegir una base ortonormal para poder obtener un sistema de referencia ortonormal, pero ya el punto no es fijo:
 $$M_R (\phi) = \underset{(a_1, a_2, a_3) \neq (0,0,0)}{\left(\begin{array}{c|ccc}
 1 & 0  & 0 & 0 \\
@@ -5305,12 +4579,14 @@ a_3 & 0 &  \sen\theta & \cos\theta
 \end{array}
 \right)$$
 Se le llama movimiento helicoidal por ser la composición de una rotación y una traslación de vector $a_1 v_1$ (el movimiento que haría una hélice). Como caso especial, cuando los giros son de ángulo 0, entonces tenemos las traslaciones dentro de este grupo.
-\end{itemize}
-\newpage
-\item $\vec{\phi} \in O^-(3)$
-\begin{itemize}
-\item \underline{\textbf{Rotación con simetría especular}}: \fbox{$A_\phi \neq \emptyset$}
+\end{defi}
 
+\end{itemize}
+\item $\boxed{\vec{\phi} \in O^-(3)}$
+\begin{itemize}
+\item \fbox{$A_\phi \neq \emptyset$}
+
+\begin{defi}[Rotación con Simetría Especular]
 Elegimos un sistema de referencia ortonormal $R=\{p_0, B\}$ donde $p_0\in A_\phi$ y $B$ ortonormal, entonces:
 $$M_R (\phi) = \left(\begin{array}{c|ccc}
 1 & 0  & 0 & 0 \\
@@ -5331,9 +4607,11 @@ $$M_R (\phi) = \left(\begin{array}{c|ccc}
 \right) $$
 
 Se trata de una rotación seguida de una simetría especular, cuya base es el plano de la rotación.
+\end{defi}
 
-\item \underline{\textbf{Simetría especular compuesta con traslación}}: \fbox{$A_\phi = \emptyset$}
+\item \fbox{$A_\phi = \emptyset$}
 
+\begin{defi}[Simetría Especular con Traslación]
 De este modo, sabemos que $\sigma (\phi)= \{-1 , 1 , 1\}$, luego en una referencia ortonormal tenemos:
 $$ M_R (\phi) = \left(\begin{array}{c|ccc}
 1 & 0  & 0 & 0 \\
@@ -5358,51 +4636,70 @@ a_1 & -1 & 0 & 0   \\
 \end{array}
 \right)$$
 Se trata de una simetría especular compuesta con una traslación, cuyo vector de traslación está contenido en la dirección del plano que es base de la simetría.
+\end{defi}
 \end{itemize}
 \end{itemize}
 
+\theoremstyle{break}
+	\theoremheaderfont{\normalfont\bfseries\color{teoremas}}
+	\theorembodyfont{\itshape}
+	\theoremseparator{\vspace{0.2cm}}
+	\theorempreskip{\topsep}
+	\theorempostskip{\topsep}
+	\theoremindent0cm
+	\theoremnumbering{arabic}
+	\theoremsymbol{}
+	\theoremprework{\vspace{0.2cm}\hrule}
+	\theorempostwork{\vspace{0.2cm}\hrule}
+	\renewtheorem*{defi}{Definición}
 \chapter{Cónicas}
-\section{Versión Afín}
-Sea $A = \mathbb{R}^2$ plano afín real usual, definimos el objeto matemático de las cónicas como el conjunto de puntos que verifican:
+En multitud de problemas físicos o analíticos usualmente trabajamos con este tipo de objetos matemáticos: las cónicas. El estudio profundo de su representación óptima y de los métodos para un manejo adecuado de dicho objeto nos permitirá en el futuro poder obviar la parte algebraica (y centrarnos en la sustancial) de los problemas en los que veamos involucrados este tipo de elementos.
+
+\begin{defi}[Cónica]
+Sea $A = \mathbb{R}^2$ plano afín real usual y $R=\{p_0, B\}$ un sistema de referencia, definimos una cónica como el conjunto de puntos que verifican:
 $$a_{11}x^2 + 2a_{12}xy + a_{22}y^2 + 2a_{01} x + 2a_{02} y + a_{00} = 0:  a_{ij} \in \mathbb{R} \mbox{ y } (a_{11}, a_{12}, a_{22}) \neq (0,0,0)$$
-La expresión matricial de la cónica sería : $$0 = \begin{pmatrix}
+\end{defi}
+
+La condición que se ha dado en la definición se puede expresar de forma matricial de la siguiente forma:
+$$0 = \begin{pmatrix}
 1 & x & y
 \end{pmatrix} A \begin{pmatrix}
 1 \\ x \\ y
 \end{pmatrix}\mbox{ donde }A = \begin{pmatrix} a_{00} & a_{01} & a_{02} \\
 a_{01} & a_{11} & a_{12} \\ a_{02} & a_{12} & a_{22}
 \end{pmatrix} = M_R (C)$$
-La matriz de paso entre sistemas de referencia verifica:
-$$P = M (R', R) \Rightarrow \begin{pmatrix}
-1 & x & y
-\end{pmatrix} = P \begin{pmatrix}
-1 \\ x' \\ y'
-\end{pmatrix} : p= ( x',y')_{R'} \mbox{ y } p= (x,y)_R$$
-Por tanto, si sustituimos en la expresión inicial:
+
+\begin{prop}
+Sea $C$ una cónica en el plano afín real $\mathbb{R}^2$, ésta queda representada por la matriz de coeficientes:
+$$M_R(C) = \begin{pmatrix} a_{00} & a_{01} & a_{02} \\
+a_{01} & a_{11} & a_{12} \\ a_{02} & a_{12} & a_{22}
+\end{pmatrix}$$
+donde $a_{ij}$ son los coeficientes de la ecuación general de una cónica.
+\end{prop}
+
+Como la matriz de paso $P = M (R', R)$ verifica que $\begin{pmatrix}
+1 & x & y \end{pmatrix} = P \begin{pmatrix} 1 \\ x' \\ y' \end{pmatrix}$, entonces $M_R(C) = A$ guarda la siguiente relación con la matriz $M_{R'}(C) = A'$:
 $$0 = \begin{pmatrix}
 1 & x & y
 \end{pmatrix} A \begin{pmatrix}
 1 \\ x \\ y
 \end{pmatrix} = \begin{pmatrix}
 1 & x' & y'
-\end{pmatrix}  \underbrace{P^t A P}_{A' = M_{R'} (C)} \begin{pmatrix}
+\end{pmatrix}  \underbrace{P^t A P}_{A'} \begin{pmatrix}
 1 \\ x' \\ y'
-\end{pmatrix} = \begin{pmatrix}
-1 & x' & y'
-\end{pmatrix} \begin{pmatrix} a'_{00} & a'_{01} & a'_{02} \\
-a'_{01} & a'_{11} & a'_{12} \\ a'_{02} & a'_{12} & a'_{22}
+\end{pmatrix} \Rightarrow A = P^tAP$$
 
-\end{pmatrix} \begin{pmatrix}
-1 \\ x' \\ y'
-\end{pmatrix} = a'_{11} x'^2 + \ldots + a'_{00}$$
+\subsection{Clasificación Afín}
+En este apartado vamos a clasificar las cónicas en 7 clases de equivalencia desde el punto de vista afín y a escoger los mejores representantes de cada una. De esta manera, trabajar con una cónica será más efectivo y sencillo.
 
-\subsection{Clasificación de cónicas}
-Dos cónicas $C, C'$ son \textbf{afínmente equivalentes} si respecto de sistemas distintos ambas tienen la misma matriz, es decir:
+\begin{defi}[Equivalencia Afín]
+Dos cónicas $C$ y $C'$ son \textbf{afínmente equivalentes} si respecto de sistemas distintos ambas tienen la misma matriz, es decir:
 $$C \sim C' \Leftrightarrow M_R (C) = M_{R'} (C')$$
-Esta relación es de equivalencia que cuenta con exactamente 7 clases de equivalecia en el conjunto cociente.
+esta relación define una relación de equivalencia cuyo conjunto cociente cuenta con exactamente 7 clases.
+\end{defi}
 
-\subsubsection*{Teorema}
-Toda cónica real es afínmente equivalente a una y sólo una de las siguientes:
+\begin{theo}
+Toda cónica real es \textbf{afínmente equivalente} a una y sólo una de las siguientes:
 \begin{center}
 \begin{tabular}{l @{\hspace{4cm}}  l}
 Elipse no degenerada: & $x^2 + y^2 - 1 = 0$ \\
@@ -5414,19 +4711,23 @@ Parábola simplemente degenerada: & $x^2 - 1 = 0$ \\
 Parábola doblemente degenerada: & $x^2 = 0$ \\
 \end{tabular}
 \end{center}
-\underline{Demostración}:
+\end{theo}
+\begin{demo}
+Consideremos la matriz de una cónica
+$$A = \left(\begin{array}{c|ccc}
+a_{00}  & a_{01} & & a_{02} \\
+\hline
+a_{01} & & &  \\
+ & & A_0 & \\
+a_{02} & & &
+\end{array}
+\right)$$
+y veamos que podemos escribir su ecuación de la siguiente manera:
 $$0 = \begin{pmatrix}
 1 & x & y
 \end{pmatrix} A \begin{pmatrix}
 1 \\ x \\ y
-\end{pmatrix} : A = \left(\begin{array}{c|cc}
-a_{00}  & a_{01} & a_{02} \\
-\hline
-a_{01} & A_0 &  \\
-a_{02} &  &
-\end{array}
-\right) \Leftrightarrow $$
-$$\Leftrightarrow 0 = \begin{pmatrix}
+\end{pmatrix} \Leftrightarrow 0 = \begin{pmatrix}
 1 & x & y
 \end{pmatrix} A \begin{pmatrix}
 1 \\ x \\ y
@@ -5437,20 +4738,22 @@ x \\ y
 \end{pmatrix} + 2 \begin{pmatrix}
 a_{01} & a_{02} \end{pmatrix} \begin{pmatrix}
 x \\ y
-\end{pmatrix} + a_{00} =
-$$
-De este modo, si consideramos $R = \{p_0, B\}$ un sistema de referencia, podemos interpretar $A_0$ como la matriz de una forma cuadrática, puesto que es simétrica, es decir, $M_B (q_0) = A_0 = \begin{pmatrix}
+\end{pmatrix} + a_{00} $$
+De este modo, si consideramos $R = \{p_0, B\}$ un sistema de referencia, podemos interpretar $A_0$ como la matriz de una forma cuadrática, puesto que es simétrica, es decir:
+$$M_B (q_0) = A_0 = \begin{pmatrix}
 a_{11} & a_{12} \\ a_{21} & a_{22}
-\end{pmatrix}
-$. Como el cuerpo son lo reales, $K = \mathbb{R}$, aplicando la Ley de Inercia, se tiene que:
+\end{pmatrix}$$
+Como el cuerpo son lo reales, aplicando la Ley de Inercia, se tiene que:
 $$A_0 \equiv A'_0 = \begin{pmatrix}
 \varepsilon_1 & 0 \\ 0 & \varepsilon_2
 \end{pmatrix}: \varepsilon_i = 1, - 1, 0$$
-Como son congruentes, existe una matriz de paso de una a otra y por tanto podemos expresar $A_0 = P^t  A'_0 P $, siendo $P = M(B, B')$ de forma que $P \begin{pmatrix}
-x \\ y
-\end{pmatrix} = \begin{pmatrix}
+Como son congruentes, existe una matriz de paso de una a otra y por tanto podemos expresar la relación entre ambas a través de $A_0 = P^t  A'_0 P $, siendo $P = M(B, B')$ (y teniendo la siguiente relación en consecuencia $\begin{pmatrix}
 x' \\ y'
-\end{pmatrix}$. Ahora si sustituimos convenientemente en la expresión inicial tenemos que:
+\end{pmatrix} = P \begin{pmatrix}
+x \\ y
+\end{pmatrix}$).
+
+Ahora si sustituimos convenientemente en la expresión inicial tenemos que:
 $$\begin{pmatrix}
 x & y
 \end{pmatrix}P^t  A'_0 P \begin{pmatrix}
@@ -5476,10 +4779,9 @@ a_{01} & a_{02} \end{pmatrix} P^{-1} \begin{pmatrix}
 x' \\ y'
 \end{pmatrix} + a_{00} = $$
 $$\varepsilon_1 (x')^2 + \varepsilon_2 (y')^2 + 2 a'_{01} x' + 2  a'_{02}$$
+Ambos $\varepsilon_1 , \varepsilon_2$ no pueden ser 0 simultáneamente pues entonces $A'_0 = A'= 0$ y todos los coeficientes del término cuadrático se anularían. Siempre un $\varepsilon_i$ es 1 o -1, pero además podemos suponer que el primero es siempre 1, puesto que si fuese -1 bastaría con multiplicar el poliniomio por -1 (los puntos no cambian) y si el segundo fuera el que toma el valor no nulo entonces bastaría con reodenar la base para que dicho $\varepsilon_2$ pase a ser $\varepsilon_1$.
 
-Ambos $\varepsilon_1 , \varepsilon_2$ no pueden valer los dos 0, ya que en ese caso $A'_0 = A'= 0$, y todos los coeficientes del término cuadrático se anularían y eso está excluido. Siempre un $\varepsilon$ vale 1 o -1, pero podemos suponer que el primero vale 1 siempre, puesto que si valiese menos 1 es multiplicar el poliniomio por -1 (los puntos no cambian) y si valiese el otro $\varepsilon$ el valor no nulo basta con reodenar la base, pudiendo suponer así que siempre el primer $\varepsilon$ vale 1.
-
-En el fondo lo que estamos haciendo es cambiar de sistema de referencia $R=\{p_0, B\}$ a un sistema $R'=\{p_0, B'\}$, puesto que teniendo en cuenta que $P = M(B,B')$ se satisface que:
+A pesar del arreglo algebraico que se ha hecho en el razonamiento anterior para simplificar la explicación y la notación, en el fondo lo que estamos haciendo es cambiar de sistema de referencia $R=\{p_0, B\}$ a un sistema $R'=\{p_0, B'\}$, puesto que teniendo en cuenta que $P = M(B,B')$ se satisface que:
 $$\begin{pmatrix} 1 \\ x' \\ y'\end{pmatrix} = \underbrace{\left(\begin{array}{c|ccc} 1 & 0 &  & 0 \\ \hline 0 &  &  &  \\  &  & P &  \\ 0 &  & & 
 \end{array}\right)}_{M(R,R')} \begin{pmatrix} 1 \\ x \\ y \end{pmatrix}$$
 
@@ -5541,31 +4843,36 @@ Como la matriz 2x2 es inversible, corresponde a un cambio de base por ser invers
 \mbox{ Recta única en el plano (doble sobre sí) } &a''_{00} = 0\end{cases}$$
 	\end{itemize}
 \end{itemize}
+\end{demo}
 
-\subsubsection*{Caracterización de las Cónicas}
-Sea $C$ una cónica, $A = M_R (C) $ y $A' = M_{R'} (C)$ se relacionan ambas de la siguiente forma:
-$$\left(\begin{array}{c|ccc}
-a'_{00} & a'_{01}& & a'_{02} \\
-\hline
-a'_{01} & & &   \\
- & & A'_0 & \\
-a'_{02} &  & & 
-\end{array}
-\right)= A' = P^t A P = \left(\begin{array}{c|ccc}
-1 & c_1 & & c_2 \\
-\hline
-0 & & &   \\
- & & P^t_0 & \\
-0 &  & & 
-\end{array}
-\right)\left(\begin{array}{c|ccc}
+\subsubsection{Caracterización de las Cónicas}
+Sea $C$ una cónica y
+\begin{align*}
+A = M_R (C) = \left(\begin{array}{c|ccc}
 a_{00} & a_{01}& & a_{02} \\
 \hline
 a_{01} & & &   \\
  & & A_0 & \\
 a_{02} &  & & 
 \end{array}
-\right) \left(\begin{array}{c|ccc}
+\right) & & A' = M_{R'} (C) = \left(\begin{array}{c|ccc}
+a'_{00} & a'_{01}& & a'_{02} \\
+\hline
+a'_{01} & & &   \\
+ & & A'_0 & \\
+a'_{02} &  & & 
+\end{array}
+\right)
+\end{align*}
+sus matrices de coeficientes en dos sistemas de referencia distintos, la relación que existe entre ambas viene dada por:
+$$A' = P^t A P \mbox{ donde } P^t = \left(\begin{array}{c|ccc}
+1 & c_1 & & c_2 \\
+\hline
+0 & & &   \\
+ & & P^t_0 & \\
+0 &  & & 
+\end{array}
+\right) \mbox{ y } P= \left(\begin{array}{c|ccc}
 1 & 0 && 0 \\
 \hline
 c_1 & &&   \\
@@ -5573,22 +4880,18 @@ c_1 & &&   \\
 c_2 & &&
 \end{array}
 \right)$$
-Siendo $P = M(R', R) = \left(\begin{array}{c|ccc}
-1 & 0 && 0 \\
-\hline
-c_1 & &&   \\
- & & P_0 & \\
-c_2 & &&
-\end{array}
-\right)$, $P_0 = M (B', B) $ y $c_1$ y $c_2$ la relación entre los centros de ambas. Del mismo modo, por ser afinmente equivalentes, entonces $A \equiv A'$ y se mantienen invariantes:
+Siendo $P = M(R', R)$, $P_0 = M (B', B) $ y $c_1$ y $c_2$ la relación entre los centros de ambas. Del mismo modo, por ser afínmente equivalentes, entonces $A \equiv A'$ y se mantienen invariantes:
 \begin{itemize}
 \item El rango: $rg(A) = rg(A')$
-\item La signatura no porque multiplicamos por -1 , pero sí se mantiene: $(s,t) = \varepsilon(A) = \varepsilon(A') = (s', t') \Rightarrow \delta = |s - t| = |s' - t'|$
+\item La signatura no porque multiplicamos por -1, pero sí se mantiene: $(s,t) = \varepsilon(A) = \varepsilon(A') = (s', t') \Rightarrow \delta = |s - t| = |s' - t'|$
 \item El signo del determinante de $A$: $sign|A| = d$
 \end{itemize}
-Luego podemos clasificar por invariantes las matrices de los 7 tipos de cónicas:
+
+\begin{theo}
+Sea $A$ la matriz de coeficientes de una cónica en cierto sistema de referencia $R$ y utilizando la siguiente notación:
 $$\begin{cases} r = \mbox{ rango} \\ \delta = |s-t| \\ d = \det A
 \end{cases}$$
+podemos clasificar dicha cónica en una y sólo una de las siguientes clases de equivalencia afín:
 \begin{itemize}
 \item $C$ elipse no degenerada:
 $$\left(\begin{array}{c|cc}
@@ -5647,6 +4950,9 @@ $$\left(\begin{array}{c|cc}
 \end{array}
 \right) \equiv A \Rightarrow \begin{cases} r= 1, \delta = 1, d = 0 \\ r_0 = 1, \delta_0 = 1, d_0 = 0 \end{cases}$$
 \end{itemize}
+\end{theo}
+
+\begin{obs}
 Además, si consideramos $C$ cónica de forma que $A = M_R (C)$ y $A' = M_{R'} (C)$, entonces podemos considerar la matriz de paso $P$ como la matriz de una aplicación afín en vez de una matriz de paso. Esta aplicación afín lleva los puntos de $C$ a los de $C'$ y los expresa respecto del propio sistema de referencia $R$, sin embargo, la matriz de la cónica cambia a la canónica que queríamos:
 $$P=\left(\begin{array}{c|cc}
 1 & 0 & 0 \\
@@ -5655,8 +4961,9 @@ c_1 & M(B, B')  &   \\
 c_2 &  &
 \end{array}
 \right) = M_R (\phi) : \phi (x,y)_R = (x', y')_R $$
-\underline{\textbf{Ejemplo}}:
+\end{obs}
 
+\begin{ej}
 En la referencia Canónica consideramos:
 $$0 = 5x^2 + 5y^2 + 6xy - 4x + 4y + 2$$
 Tras realizar las transformaciones convenientes, se tiene:
@@ -5674,16 +4981,19 @@ $$M_{R_c} (\phi)= \left(\begin{array}{c|cc}
 \sqrt{\frac{8}{5}} &  0 & \sqrt{\frac{8}{5}}
 \end{array}
 \right) $$
+\end{ej}
 
-\section{Versión Afín-Euclídeo}
-Sea $\mathbb{R}^2$ espacio afín euclídeo usual y la definición habitual de cónica, decimos que dos cónicas son afín-euclídeamente equivalentes si poseen la misma matriz respecto de sistemas de referencia \textbf{ortonormales} distintos:
+\subsection{Clasificación Afín-Euclídea}
+En esta clasificación vamos añadir una restricción más a la equivalencia entre cónicas. Ya no vale cualquier cambio de referencia, pues antes podíamos deformar el espacio afín (y, en consecuencia, la cónica) modificando las distancias y los ángulos, pero ahora la restricción va a ser que dichas características se mantengan invariantes. Es decir, que las aplicaciones que transformen una cónica en otra van a ser isometrías o los cambios entre sistemas de referencia han de ser ortonormales.
+
+\begin{defi}[Equivalencia Afín-Euclídea]
+Sea $\mathbb{R}^2$ espacio afín euclídeo usual y la definición habitual de cónica, decimos que dos cónicas $C$ y $C'$ son afín-euclídeamente equivalentes si y sólo si poseen la misma matriz respecto de sistemas de referencia \textbf{ortonormales} distintos, es decir,
 $$C \equiv C' \Leftrightarrow M_R(C) = M_{R'} (C)$$
-Es decir, hemos incluido una condición más fuerte porque exigimos que estos sistemas de referencia sean ortonormales.
+esta definición constituye una relación de equivalencia con 7 clases de equivalencia distintas.
+\end{defi}
 
-\subsubsection*{Teorema}
-Toda cónica de $\mathbb{R}^2$ es afín-euclídeamente equivalente a una y sólo una de las siguientes:
-
-Sean $ a,b \in \mathbb{R} : 0 < a \leq b $
+\begin{theo}
+Sean $ a,b \in \mathbb{R} : 0 < a \leq b $, toda cónica $C$ de $\mathbb{R}^2$ es afín-euclídeamente equivalente\footnote{La existencia de $a$ y un $b$ denota que todas las cónicas que son afin-euclídeamente equivalentes a esas cónicas lo son \textbf{para unos valores concretos de $a$ y $b$, pero no para todos}, es decir, estamos considerando la clase de equivalencia salvo cambio en los parámetros $a$ y $b$ (que determinan las características como el radio de una elipse, etc.)} a una y sólo una de las siguientes cónicas canónicas:
 \begin{center}
 \begin{tabular}{l @{\hspace{4cm}}  l}
 Elipse no degenerada: & $\frac{x^2}{a^2} + \frac{y^2}{b^2} - 1 =  0 $ \\
@@ -5695,11 +5005,8 @@ Parábola simplemente degenerada: & $x^2 -a^2 = 0$ \\
 Parábola doblemente degenerada: & $x^2 = 0$ \\
 \end{tabular}
 \end{center}
-Los casos en los que hay un $a$ y un $b$ denotan que todas las cónicas que son afin-euclídeamente equivalentes a esas cónicas lo son \textbf{para unos valores concretos de $a$ y $b$, pero no para todos} porque estos valores son los que determinan el radio (en elipses) o el ángulo (en hipérbolas degeneradas) y esto se debe conservar por la definición que hemos dado de espacio afín euclídeo.
-
-\newpage
-\underline{Demostración}:
-
+\end{theo}
+\begin{demo}
 Sea $R = \{p_0, B\}$ donde $B$ es una base ortonormal, entonces consideramos:
 $$0 = a_{11}x^2 + \ldots + a_{00} = \begin{pmatrix} x & y \end{pmatrix} A_0 \begin{pmatrix} x \\ y \end{pmatrix} + 2 \begin{pmatrix} a_{01} & a_{02} \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} + a_{00}$$
 Ya dijimos en su momento que:
@@ -5743,6 +5050,7 @@ $$\begin{cases} a''_{00} > 0 \Rightarrow C = \emptyset \\ a''_{00} = 0 \Rightarr
 
 \item Para el resto de posibles valores de $\lambda_2$ se hace completamente análogo.
 \end{itemize}
+\end{demo}
 
 
 
