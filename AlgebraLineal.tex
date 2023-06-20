@@ -146,44 +146,49 @@ Cálculo Diferencial © 2021 by Juan Diego Barrado \& Iker Muñoz is licensed un
 \hypersetup{linkcolor=blue} % retornamos el color de las referencias a azul, para que quede resaltado
 
 \chapter{Espacio vectorial y \\ Aplicación lineal}
-En este capítulo vamos a definir el concepto central de la asignatura: el espacio vectorial. Sus características dotan de propiedades muy especiales a los espacios que cumplen dicha definición y nos permite, junto con las aplicaciones lineales, descubrir una serie de propiedades abstractas a dichos espacios con consecuencias muy importantes en espacios concretos de este tipo.
+Este capítulo define y estudia el concepto de los espacios vectoriales y los morfismos entre ellos: las aplicaciones lineales. Principalmente estudiaremos los elementos necesarios para trabajar cómodamente en dichos espacios y la representación matricial de las aplicaciones lineales que nos permitirá hacer lo propio, pero con ellas como protagonistas.
 
 \section{Espacios Vectoriales}
+El espacio vectorial es la representación algebraica en matemáticas de los objetos ``cotidianos'' (por las propiedades que le vamos a exigir) que son cerrados bajo la suma de elementos del conjunto y producto por un escalar.
+
+Hay multitud de conjuntos que tienen estructura de espacio vectorial como son los polinomios de grado $n$ concreto, las aplicaciones continuas de $\mathbb{R}$ en $\mathbb{R}$, las sucesiones de números reales... Por lo que un conocimiento profundo de dicha estructura nos da ventaja a la hora de trabajar con todos los conjuntos anteriores. De ahí su importancia.
+
 \begin{defi}[Espacio Vectorial]
-Si suponemos que $(V,+,\cdot)$ donde $+: V\times V\rightarrow V$, $\cdot : K\times V\rightarrow V$ y $K$ es un cuerpo conmutativo, definimos un \textbf{espacio vectorial sobre $K$} como la terna que cumple:
+Sea la terna $(V,+,\cdot)$ formada por las operaciones $+: V\times V\rightarrow V$, $\cdot : K\times V\rightarrow V$, donde $K$ es un cuerpo conmutativo, decimos que es un \textbf{espacio vectorial sobre $K$} si y sólo si:
 \begin{itemize}
 \item $(V,+)$ es un grupo conmutativo.
-
-\item $\forall a \in K: \forall v,v'\in V: a(v+v')=av+av'$
-
-\item $\forall a,a' \in K: \forall v\in V: (a+a')v=av+a'v$
-
-\item $\forall a,a'\in K: \forall v \in V: a(a'v)=(aa')v$
-
-\item $\forall v\in V: 1_k\cdot v=v$
+\item \textbf{Distributiva de la suma vectorial}: $\forall a \in K: \forall v,v'\in V: a(v+v')=av+av'$
+\item \textbf{Distributiva de la suma escalar}: $ \forall a,a' \in K: \forall v\in V: (a+a')v=av+a'v $
+\item \textbf{Asociativa del producto por escalar}: $ \forall a,a'\in K: \forall v \in V: a(a'v)=(aa')v $
+\item \textbf{Elemento Neutro del producto por escalar}: $ \forall v\in V: 1_k\cdot v=v
+$
 \end{itemize}
-A los elementos de este conjunto conocido como espacio vectorial los llamaremos \textbf{vectores}.
+A los elementos de un espacio vectorial los llamaremos \textbf{vectores}.
 \end{defi}
 
-\begin{prop}
-Algunas propiedades muy elementales de esta definición son:
+En definitiva, vemos que se están pidiendo que el espacio vectorial tenga dos operaciones con propiedades que casi damos por hecho en multitud de conjuntos, lo que hace razonable la idea de que multitud de elementos en las matemáticas van a cumplir esta definición.
+
+\begin{prop}[Propiedades Algebraicas]
+Sea $(V,+,\cdot)$ un espacio vectorial, denotando por $0_k$ al ``cero'' de $K$ y $1_k$ al elemento neutro del producto de $K$ y $0_v$ el elemento neutro del espacio vectorial con respecto a la suma, para $a,b\in K$ se tiene: 
 \begin{enumerate}
-\item $a,b\in K: ab=0_k\Rightarrow a=0_k \vee b=0_k$
-
+\item $ab=0_k\Rightarrow a=0_k \mbox{ o } b=0_k$
 \item $a\cdot 0_k=0_k$
-
-\item $0_k\cdot v=0_v$ y $a\cdot 0_v=0_v$
-
+\item $0_k\cdot v=0_v$
+\item $a\cdot 0_v=0_v$
 \item $a\cdot v=0_v\Rightarrow a=0_k \vee v=0_v$
 \end{enumerate}
 \end{prop}
 \begin{demo}
 \begin{enumerate}
 \item 
-$$ab=0_k\mbox{ y } a\neq 0_k \stackrel{\exists a^{-1}\in K}{\Rightarrow} a^{-1}ab=a^{-1}0\Rightarrow b=0_k$$
+$$
+ab=0_k\mbox{ y } a\neq 0_k \stackrel{\exists a^{-1}\in K}{\Rightarrow} a^{-1}ab=a^{-1}0\Rightarrow b=0_k
+$$
 
 \item
-$$a\cdot 0_k=a\cdot (0_k+0_k)=a\cdot 0_k+a\cdot 0_k\stackrel{-a\cdot 0_k}{\Leftrightarrow}a\cdot 0_k-a\cdot 0_k=a\cdot 0_k+a\cdot 0_k-a\cdot 0_k\Leftrightarrow 0_k=a\cdot 0_k$$
+$$
+a\cdot 0_k=a\cdot (0_k+0_k)=a\cdot 0_k+a\cdot 0_k\stackrel{-a\cdot 0_k}{\Leftrightarrow}a\cdot 0_k-a\cdot 0_k=a\cdot 0_k+a\cdot 0_k-a\cdot 0_k\Leftrightarrow 0_k=a\cdot 0_k
+$$
 
 \item
 $$0_k\cdot v=(0_k+0_k)v=0_kv+0_kv\stackrel{-0_kv}{\Leftrightarrow} 0_kv-0_kv=0_kv+0_kv-0_kv\Leftrightarrow 0_v=0_kv$$
@@ -195,136 +200,174 @@ $$av=0_v\wedge a\neq 0_k\stackrel{\exists a^{-1}}{\Rightarrow} a^{-1}av=a^{-1}0_
 
 
 \begin{ej}
-Veamos algunos ejemplos de espacios vectoriales:
+Como hemos comentado al principio, hay multitud de objetos matemáticos que tienen estructura de espacio vectorial, entre ellos:
 \begin{itemize}
-\item Suponemos $V=K^n=\overbrace{K\times \cdots \times K}^{n}$, tenemos que definir ahora la suma de dos vectores y el producto por un escalar:
- $$(a_1, \cdots, a_n)+(b_1, \cdots, b_n)=(a_1+b_1, \cdots, a_n+ b_n)$$
- $$a(a_1, \cdots, a_n)=(a\cdot a_1, \cdots, a\cdot a_n)$$
-Está claro y es trivial demostrar que existe el neutro de la suma $0_v=(0,\cdots,0)$ y que existe el opuesto $-(a_1, \cdots, a_n)=(-a_1, \cdots, -a_n)$, aunque no serán todas, veamos por ejemplo  la demostración de alguna de las propiedades definidas al principio:
+\item Sea $V=K^n=K \times  \stackrel{n}{\cdots} \times K$ y sean las operaciones de suma y producto:
+$$
+(a_1, \cdots, a_n)+(b_1, \cdots, b_n)=(a_1+b_1, \cdots, a_n+ b_n)
+$$
+$$
+a \cdot (a_1, \cdots, a_n)=(a\cdot a_1, \cdots, a\cdot a_n)
+$$
+es trivial comprobar que se verifican las propiedades de grupo conmutativo con respecto a la suma (que hay opuesto, que hay elemento neutro, etc.) y también que se verifican las relativas al producto. Por ejemplo, por demostrar alguna, vemos que:
 $$(ab)(a_1, \cdots, a_n)=(aba_1, \cdots, aba_n)=a(ba_1, \cdots, ba_n)$$
-Este ejemplo que hemos dado es el \textbf{enésimo espacio vectorial estándar o canónico}, y probaremos más adelante que \textbf{cualquier espacio vectorial es isomorfo a este} y, por tanto, es modelo de los demás.
+Este ejemplo concreto tiene nombre propio y es lo que conocemos por \textbf{enésimo espacio vectorial estándar o canónico}.
 
-\item Consideramos $V=K[x]$ y definimos la suma y el producto por un escalar:
-$$f+g\mbox{ es la suma habitual de polinomios}$$
-$$a\cdot f=b\sum_{i=0}^n a_ix^i=\sum_{i=0}^n (b\cdot a_i)x^i$$
-Se pueden comprobar a través de esta definición el resto de propiedades de espacio vectorial confirmando que se puede considerar como uno mismo.
+\item Sea $V=K[x]$, es decir, el conjunto de los polinomios con coeficientes en $K$ y la suma\footnote{En la suma de la definición se ha considerado que $n> m$ y que los $b_i$ que se han añadido para completar el grado de $g(x)$ son todos cero.} y el producto por un escalar:
+$$
+f(x)+g(x) = \sum_{i=0}^n a_i x_i  + \sum_{i=0}^m b_i x_i = \sum_{i=0}^n (a_i + b_i) x_i
+$$
+$$
+b\cdot f = b\sum_{i=0}^n a_ix^i=\sum_{i=0}^n (b\cdot a_i)x^i
+$$
+de nuevo es trivial comprobar que tiene estructura de espacio vectorial.
 
-\item Llamamos $W=K_n[x]=\{f\in K[x]: gr(f)<n\}$ y definidas las operaciones anteriores\footnote{W es un subespacio vectorial de V} también cumple las propiedades de espacio vectorial, además, se comprueba fácilmente que el producto y la suma de polinomios definidas antes conservan que todo polinomio del conjunto tras ser operado con otro tenga como resultado un polinomio del conjunto (no altera el grado), por lo tanto es cerrado.
+\item Sea $V=K_n[x]=\{f\in K[x]: gr(f)<n\}$ y las operaciones anteriores, este conjunto también verifica las propiedades de espacio vectorial. Cabe destacar que también  es necesario comprobar que el conjunto es cerrado bajo la suma y el producto, esto es, que las operaciones no van a tener como resultado elementos de fuera del conjunto, es decir, polinomios de mayor grado.
 
-\item Llamamos $V=Mat_{m\times n}(K)$, se definen la suma y el producto como:
-$$(a_{ij})+(b_{ij})=(a_{ij}+b_{ij})$$
-$$b(a_{ij})=(b\cdot a_{ij})$$
-Y del mismo modo se pueden comprobar todas las propiedades anteriores para confirmar que se trata realmente de un espacio vectorial.
+\item Sea $V=Mat_{m\times n}(K)$ y las operaciones suma y producto las definida componente a componente como:
+$$
+(a_{ij})+(b_{ij})=(a_{ij}+b_{ij})
+$$
+$$
+b(a_{ij})=(b\cdot a_{ij})
+$$
+también es trivial la comprobación de la estructura de espacio vectorial.
 
-\item Llamamos $V=\{f: \mathbb R\rightarrow \mathbb R: f \mbox{ es una aplicación}\}$, definimos suma y producto:
-$$(f+g)(x)=f(x)+g(x):\forall x \in \mathbb R$$
-$$(a\cdot f)(x)=a\cdot f(x)$$
-Y del mismo modo, se puede comprobar que esta definición cumple todas las propiedades de espacio vectorial.
+\item Sea $V=\{f: \mathbb R\rightarrow \mathbb R \mbox{ donde } f\in C(\mathbb{R})\}$ y la suma y el producto:
+$$
+\forall x\in \mathbb{R} : (f+g)(x)=f(x)+g(x)
+$$
+$$
+(a\cdot f)(x)=a\cdot f(x)
+$$
+también verifica las condiciones de espacio vectorial.
 \end{itemize}
 \end{ej}
 
+El ejemplo anterior sugiere una relación importante entre espacios vectoriales. Hemos visto que los polinomios de grado arbitrario son espacios vectoriales, pero que también los de grado acotado también lo son. El último conjunto está contenido en el primero, por lo que tenemos un espacio vectorial metido dentro de otro espacio vectorial y ambos definidos con las mismas operaciones.
+
 \begin{defi}[Subespacio Vectorial]
-Sea $V$ un espacio vectorial sobre un cuerpo $K$ y $W\subseteq V: W\neq 0$, decimos que $W$ es un \textbf{subespacio vectorial} de $V$ si es cerrado bajo las operaciones de $V$, es decir:
+Sea $V$ un espacio vectorial sobre un cuerpo $K$ y $W\subseteq V$ un subconjunto suyo no vacío, decimos que $W$ es un \textbf{subespacio vectorial} de $V$ si es cerrado bajo las operaciones de $V$, es decir:
 \begin{itemize}
 \item $w, w'\in W: w+w'\in W$
-
 \item $a\in K\wedge w\in W: a\cdot w\in W$
 \end{itemize}
 Y lo denotamos por $W < V$.
 \end{defi}
 
 \begin{obs}
-Como $W\subseteq V$ y las propiedades se cumplen para todos los $v\in V$, en particular se cumplen para todos los $w\in W\subseteq V$ y, en consecuencia, por ser $W$ cerrado bajo las operaciones de $V$ cumple él mismo la definición de espacio vectorial.
-
-Por tanto, podemos decir de algún modo que ser subespacio vectorial es ser espacio vectorial dentro de otro espacio vectorial.
+Uno podría pensar que habría que pedir que también tenga estructura de espacio vectorial con las operaciones definidas para $V$, pero ¡estas ya se verifican trivialmente! Como $W\subseteq V$ y las propiedades se cumplen $\forall v\in V$, en particular se cumplen para todos los $w\in W\subseteq V$ y, en consecuencia, con pedir que $W$ sea cerrado bajo las operaciones de $V$ cumple él mismo la definición de espacio vectorial.
 \end{obs}
 
 \begin{ej}
-Sea $F(\mathbb R, \mathbb R)=\{f:\mathbb R\rightarrow \mathbb R : f\mbox{ es aplicacion}\}$ un espacio vectorial que denotaremos por $V$. Si llamamos $W=\{f\in V: f(-x)=f(x): \forall x \in \mathbb R\}$, entonces podemos comprobar que se dan las condiciones de subespacio vectorial:
+Sea $V= \{f:\mathbb R\rightarrow \mathbb R \mbox{ donde } f\in C(\mathbb{R}) \}$ que ya hemos visto que es un espacio vectorial, el conjunto $W=\{f\in V : f(-x)=f(x) \}$ es un subespacio vectorial pues es cerrado bajo la suma y el producto:
 $$f,g\in\mathbb W: (f+g)(-x)=f(-x)+g(-x)=f(x)+g(x)=(f+g)(x)$$
 $$a\in \mathbb K, g\in\mathbb W: (a\cdot g)(-x)=a\cdot g(-x)=a\cdot g(x)=(a\cdot g)(x)$$
 \end{ej}
 
+Ver que un espacio vectorial puede contener otros espacios vectoriales más pequeños en su interior suscita en el matemático la curiosidad por estudiar cómo se comporta la relación de subespacio vectorial con respecto a las operaciones habituales conjuntistas: uniones, intersecciones, etc.
+
 \begin{prop}[Operaciones con subespacios]
-Sean $W_1$ y $W_2$ dos subespacios vectoriales del espacio $V$, entonces:
+Sea $V$ un espacio vectorial y $W_1, W_2\subset V$ subespacios vectoriales suyos, entonces:
 \begin{itemize}
-\item $W_1\cap W_2< V$
+\item $W_1\cap W_2 < V$
 \item $W_1+W_2=\{w_1+w_2: w_1\in W_1\wedge w_2\in W_2\}< V$
 \end{itemize}
-Son subespacios vectoriales de $V$
+es decir, la estructura de espacio vectorial se conserva por la intersección y la suma de subespacios.
 \end{prop}
 
 \begin{obs}
-Dados dos subespacios $W_1$ y $W_2$, la unión:
-$$W_1\cup W_2\nless V \mbox{ en general}$$
-No es un subespacio en general. Como contraejemplo podemos pensar que $W_1$ es el eje de abcisas y $W_2$ es el eje de ordenadas y la union de ambos no es subconjunto del plano porque la suma de vectores de cada eje da vectores del plano fuera de los ejes.
+De haber sido uno el que hubiera pensado el enunciado de la proposición anterior, lo más razonable al comenzar a escribirlo hubiera sido pensar que la unión $W_1 \cup W_2$ iba a ser un espacio vectorial. Sin embargo, en general, esta operación no conserva la propiedades de espacio vectorial. Para visualizarlo, pueden verse $W_1$ como el eje de abcisas y $W_2$ el de ordenadas. Es sencillo ver que la unión de ambos no es cerrada bajo la suma, puesto que $(1,0) + (0,1) = (1,1)\notin W_1 \cup W_2$.
 \end{obs}
 
 
-\subsection{Sistema generador, base e indepencia lineal}
-Una vez visto el concepto de espacio vectorial y subespacio, vamos a caracterizar un conjunto de vectores del mismo que sea capaz de definir por completo la totalidad del espacio y que nos servirá como referencia para trabajar con el resto de vectores.
+\subsection{Dependencia lineal, sistemas generadores y base vectorial}
+Una vez definida la estructura de espacio vectorial, vamos a ver una serie de resultados que nos van a permitir expresar cualquier vector del espacio en términos de solo unos pocos. Principalmente esto nos va permitir razonar sobre el efecto que va a tener una transformación en cualquier vector simplemente observando que es lo que ocurre con dicha transformación en este selecto conjunto de vectores especiales.
 
 \begin{defi}[Independencia lineal]
-Un conjunto de vectores $\{v_1, v_2, \cdots, v_n\}$ es \textbf{linealmente independiente} si toda combinación lineal nula implica que dichos coeficientes son nulos:
-$$\forall a_1, \cdots, a_m\in K: a_1v_1+\cdots +a_mv_m=0_v\Rightarrow a_1=a_2=\cdots =a_m=0$$
+Sea el conjunto de vectores $\{v_1, v_2, \cdots, v_n\}$, decimos que es \textbf{linealmente independiente} si y sólo si
+$$
+a_1v_1+\cdots +a_mv_m=0_v\Rightarrow a_1=a_2=\cdots =a_m=0
+$$
+es decir, que cualquier combinación lineal nula implica que los coeficientes son nulos.
 \end{defi}
 
-Cuando esta condición no se verifica entonces decimos que el conjunto es \textbf{linealmenten dependiente} y entonces podemos encontrar una combinación con algún coeficiente no nulo que relaciona a todos:
-$$\forall a_1, \cdots, a_m\in K: \exists a_1v_1+\cdots +a_mv_m=0_v: \exists a_i\neq 0$$
-Esto implica que el vector $v_i$ se puede reescribir como combinación lineal de los restantes:
-$$v_i=-a_i^{-1}a_1v_1-\cdots-a_i^{-1}a_{i-1}v_{i-1}-\cdots-a_i^{-1}a_mv_m$$
+Cuando esta condición no se verifica entonces decimos que el conjunto es \textbf{linealmenten dependiente} y, en este caso, tenemos una combinación lineal con algún coeficiente no nulo:
+$$
+\forall a_1, \cdots, a_m\in K: \exists a_1v_1+\cdots +a_mv_m=0_v: \exists a_i\neq 0
+$$
+Precisamente esta combinación es la que hace honor al nombre de \textit{dependencia lineal} pues cualquier vector con coeficiente no nulo se puede expresar en términos de los demás:
+$$
+v_i=-a_i^{-1}a_1v_1-\cdots-a_i^{-1}a_{i-1}v_{i-1}-\cdots-a_i^{-1}a_mv_m
+$$
 
 \begin{ej}
-Sea el espacio vectorial canónico $K\times K\rightarrow K^2$. Si tomamos como vectores $e_1=(1,0)$ y $e_2=(0,1)$, estos son linealmente independientes porque:
-$$a_1\cdot e_1+a_2\cdot e_2=(0,0)\Leftrightarrow (a_1,a_2)=(0,0)\Leftrightarrow a_1=a_2=0$$
-Pero si añadimos el vector $v=(1,-2)$, entonces:
-$$-1\cdot e_1+ 2\cdot e_2+ 1\cdot v=(0,0)$$
-Lo que resulta en que $\{e_1, e_2, v\}$ son linealmente dependientes.
+Sea $K^2$ el espacio vectorial canónico y tomando los vectores $e_1=(1,0)$ y $e_2=(0,1)$, vemos que son son linealmente independientes puesto que:
+$$
+a_1\cdot e_1+a_2\cdot e_2=(0,0)\Leftrightarrow (a_1,a_2)=(0,0)\Leftrightarrow a_1=a_2=0
+$$
+pero si al conjunto $\{e_1, e_2\}$ añadimos el vector $v=(1,-2)$ se transforma en un conjunto linealmente dependiente pues:
+$$
+-1\cdot e_1+ 2\cdot e_2+ 1\cdot v=(0,0)
+$$
 \end{ej}
 
+Como hemos visto que la dependencia lineal permite expresar los vectores con coeficiente no nulo en términos de otros, nos interesa ahora estudiar qué vectores son dependientes de un conjunto de vectores dados. Es decir, lo que queremos saber es qué vectores son resultado de la combinación lineal del conjunto que tengamos entre manos.
+
 \begin{defi}[Envoltura lineal]
-Sea $S = \{v_1, \cdots, v_m\}$ un conjunto de vectores cualesquiera, llamamos $L(S)=\{a_1v_1+\cdots + a_mv_m: a_1, \cdots, a_m\in K\}$ al conjunto de todas las posibles combinaciones lineales de dichos vectores, que también forma un subespacio vectorial.
+Sea $S = \{v_1, \cdots, v_m\}$ un conjunto de vectores, definimos su \textbf{envoltura lineal} como:
+$$
+L(S)=\{a_1v_1+\cdots + a_mv_m: a_1, \cdots, a_m\in K\}
+$$
+es decir, como el conjunto formado por todas las posibles combinaciones lineales.
 \end{defi}
+\newpage
+
 \begin{prop}
-La definición anterior tiene como consecuencia directa que:
+Sea $L(S)$ la envoltura lineal de un conjunto de vectores $S$, entonces:
 \begin{itemize}
+\item $L(S)$ tiene estructura de espacio vectorial
 \item $S\subset L(S)$
 \item $L(S)$ es el menor subespacio vectorial en $V$ que contiene a $S$
-\item $\forall F\subset V: S\subset F, \ F\supset L(S)$
 \end{itemize}
 \end{prop}
 
+Después de responder a la pregunta anterior, ahora surge otra: ¿habrá algún conjunto de vectores que me permitan expresar en términos de ellos todo un subespacio vectorial? ¿Y todo el espacio vectorial?
+
 \begin{defi}[Sistema generador]
-Para un subespacio $F<V$ cualquiera, si encontramos un $S$ tal que $L(S)=F$, entonces decimos que $L(S)$ es un \textbf{sistema de generadores} de $F$.
+Sea $F<V$ un subespacio vectorial y $S$ un conjunto de vectores, decimos que $S$ es un \textbf{sistema generador\footnote{En este documento, nos vamos a limitar a estudiar espacios vectoriales finitamente generados, esto es, aquellos en los que el sistema generador está formado por un conjunto finito de vectores.} de $F$} si y sólo si $L(S)=F$.
 \end{defi}
+
 \begin{ej}
-Sea el espacio vectorial canónico $K^2$, si tomamos como $L(e_1,e_2)$ tenemos que $a_1e_1+a_2e_2=(a_1, a_2)\Rightarrow V=L(S)$, luego es generador del espacio vectorial $V$.
+Sea $K^2$ el espacio vectorial canónico, el conjunto $\{e_1, e_2\}$ es generador de $K^2$ porque un elemento cualquiera de $L(e_1,e_2)$ es de la forma $a_1e_1+a_2e_2=(a_1, a_2)$. Esto quiere decir que para cualquier $v\in V$ no tengo más que mirar sus coordenadas y dar esos valores a $a_1$ y a $a_2$ para poder ponerlo como combinación lineal de los vectores $e_1$ y $e_2$.
 \end{ej}
 
-En este curso nos vamos a limitar a estudiar espacios vectoriales finitamente\footnote{Por ejemplo, $K[x]$ no lo es.} generados, esto es, aquellos en los que el sistema generador está formado por un conjunto finito de vectores.
-
 \begin{defi}[Base vectorial]
-Cuando un conjunto $B={v_1, \cdots , v_n}$ de vectores es \textbf{linealmente independiente} y a su vez \textbf{sistema generador}, entonces decimos que es \textbf{base vectorial} de $V$.
-
-Los vectores de $V$ por tanto se puede expresar como:
-$$v=a_1v_1+\cdots+a_mv_m=a_1'v_1+\cdots+a_m'v_m: v_1, \cdots, v_m\in B$$
-Y, de hecho, esta descomposición es única porque restando ambas ecuaciones tenemos que:
-$$0_v=(a_1-a_1')v_1+\cdots+(a_m-a_m')v_m\stackrel{l.i.}{\Rightarrow} a_1-a_1'=\cdots=a_m-a_m'=0\Rightarrow a_i=a_i'$$
+Sea $B=\{v_1, \cdots , v_n\}$  un conjunto de vectores, decimos que $B$ es una \textbf{base vectorial de $V$} si y sólo si es linealmente independiente y sistema generador. Esto implica que los vectores de $V$ se pueden expresaren términos de la base:
+$$
+\forall v \in V : v=a_1v_1+\cdots+a_mv_m = a_1'v_1+\cdots+a_m'v_m
+$$
+De hecho, los coeficientes son únicos, pues:
+$$
+0=(a_1-a_1')v_1+\cdots+(a_m-a_m')v_m\stackrel{l.i.}{\Rightarrow} a_1-a_1'=\cdots=a_m-a_m'=0\Rightarrow a_i=a_i'
+$$
 \end{defi}
 
 \begin{ej}
 \begin{itemize}
-\item Siendo $K^n$ el espacio vectorial canónico, llamamos a $B_c=\{e_1, \cdots, e_n\}$ su base canónica.
+\item Sea $K^n$ el espacio vectorial canónico, llamamos a $B_c=\{e_1, \cdots, e_n\}$ su base canónica.
 
-\item Siendo $K[x]$ el espacio de los polinomios con coeficientes en $K$, éste no es finitamente generado, su base es infinita siendo una de ellas: $B=\{1, x, x^2, \cdots\}$. 
+\item Sea $K[x]$ el espacio de los polinomios con coeficientes en $K$, éste no es finitamente generado porque su base no es finita, siendo una de ellas $B=\{1, x, x^2, \cdots\}$. 
 
-\item Si tomamos $V = Mat_{3\times 2}(K)$ podemos definir la base de esta como:
+\item Sea $V = Mat_{3\times 2}(K)$, una de las bases es:
 $$B=\left\lbrace\left(\begin{array}{cc}1 & 0 \\ 0 & 0 \\ 0 & 0 \end{array}\right), \left(\begin{array}{cc}0 & 1 \\ 0 & 0 \\ 0 & 0 \end{array}\right), \left(\begin{array}{cc}0 & 0 \\ 1 & 0 \\ 0 & 0 \end{array}\right), \left(\begin{array}{cc}0 & 0 \\ 0 & 1 \\ 0 & 0 \end{array}\right), \left(\begin{array}{cc}0 & 0 \\ 0 & 0 \\ 1 & 0 \end{array}\right), \left(\begin{array}{cc}0 & 0 \\ 0 & 0 \\ 0 & 1 \end{array}\right)\right\rbrace$$
 \end{itemize}
 \end{ej}
 
+El concepto de base va ser central y esencial en el desarrollo posterior de toda la asignatura. Por ello, vamos a perder un poco de tiempo estudiando y demostrando dos propiedades fundamentales: que la base es finita y que tiene tantos vectores como dimensión el espacio vectorial. Esto es esencial pues si hemos dicho que la virtud de este elemento es que permite estudiar en sus vectores las propiedades de una transformación y extender los resultados a los demás, entonces necesitamos que sea finita para que el estudio sea útil.
+
 \begin{prop}
-Un conjunto $B$ es base si y sólo si es un sistema de generadores \textbf{minimal}, es decir, que ningún subconjunto de $B$ es sistema de generadores.
+Sea $B = \{v_1, \cdots, v_n\}$, este es base si y sólo si es un sistema de generadores \textbf{minimal}, es decir, que ningún subconjunto de $B$ es sistema de generadores.
 \end{prop}
 \begin{demo}
 \begin{itemize}
@@ -340,49 +383,54 @@ Un conjunto $B$ es base si y sólo si es un sistema de generadores \textbf{minim
 \end{demo}
 
 \begin{prop}
-Un conjunto $B$ es base si y sólo si es un sistema linealmente independiente \textbf{maximal}, esto es, que cualquier conjunto que lo contiene no es linealmente independiente.
+Sea $B = \{v_1, \cdots, v_n\}$, este es base si y sólo si es un sistema linealmente independiente \textbf{maximal}, esto es, que cualquier conjunto que lo contiene no es linealmente independiente.
 \end{prop}
 
 \begin{theo}[Existencia de bases]
-Todo espacio vectorial finitamente generado tiene alguna base.
+Sea $V$ un espacio vectorial finitamente generado, entonces tiene alguna base.
 \end{theo}
 \begin{demo}
-Como $V$ es finitamente generado, entonces: $\exists S=\{v_1, \cdots, v_m\}$ sistema de generadores de $V$ y entonces $\exists S'\subseteq S: S'$ es sistema de generadores minimal, por lo que $S'$ es base. Esto es así porque si a un sistema de generadores se le puede quitar un elemento, entonces no es minimal y puede encontrarse en él uno que sí lo sea, entonces dicho sistema minimal ya es base.\par
+Como $V$ es finitamente generado, entonces: $\exists S=\{v_1, \cdots, v_m\}$ sistema de generadores de $V$ y entonces $\exists S'\subseteq S: S'$ es sistema de generadores minimal, por lo que $S'$ es base. Esto es así porque si a un sistema de generadores se le puede quitar un elemento, entonces no es minimal y puede encontrarse en él uno que sí lo sea, entonces dicho sistema minimal ya es base.
 \end{demo}
 
 \begin{lema}[de Intercambio]
-Supongamos $V$ un espacio finitamente generado, sea $L=\{v_1, \cdots, v_s\}$ un conjunto linealmente independiente y $S=\{w_1, \cdots, w_t\}$ un sistema de generadores de $V$, entonces:
+Sea $V$ un espacio finitamente generado, $L=\{v_1, \cdots, v_s\}$ un conjunto linealmente independiente y $S=\{w_1, \cdots, w_t\}$ un sistema de generadores de $V$, entonces:
 \begin{enumerate}
-\item $s\leq t$
-\item $\exists i_1, \cdots, i_s, \ 1\leq i_1<\cdots< i_s\leq t : \{v_1, \cdots, v_s\}\cup S\setminus\{w_{i_1}, \cdots, w_{i_s}\}$ es un sistema de generadores.
+\item $|L|\leq |S|$
+\item $\exists i_1, \cdots, i_s : \{v_1, \cdots, v_s\}\cup S\setminus\{w_{i_1}, \cdots, w_{i_s}\}$ es un sistema de generadores.
 \end{enumerate}
-Lo que viene a afirmar que dado un sistema de generadores, si se sustituyen vectores del mismo por vectores de un conjunto que sea linealmente independiente, entonces el resultado sigue siendo sistema de generadores.
+es decir, que se pueden intercambiar los elementos del conjunto linealmente independiente por cierto elementos del sistema generador.
 \end{lema}
 \begin{demo}
-Por inducción sobre $s$:
-$$s=1\Rightarrow 0\neq v_1: L\{v_1\}\mbox{ es l. i. y }S=\{w_1, \cdots, w_t\}$$
-Como S es un sistema de generadores:
-$$v_1=a_1w_1+\cdots+a_tw_t\neq 0\Rightarrow \exists a_i\neq 0\stackrel{p.ej.}{\Rightarrow} a_1\neq 0\stackrel{\exists a_1^{-1}}{\Rightarrow} w_1=a_1^{-1}v_1-a_1^{-1}a_2w_2-\cdots- a_1^{-1}a_tw_t\Rightarrow $$
-$$\Rightarrow \{v_1, w_2, w_3, \cdots, w_t\}\mbox{ es sist. gen.}$$
-Puesto que para cualquier combinación lineal en la que participara $w_1$ ahora podemos sustituir por su descomposición anterior que sólo depende de dichos vectores.
+Por inducción sobre el número de vectores linealmente independientes $s$, para $s=1$ el conjunto formado por $L = \{v_1\}$ es l. i. (siempre que $v_1\neq 0$. Como $S$ es sistema de generadores, entonces $v_1$ se puede poner como combinación lineal de los elementos de $S$, es decir, $v_1=a_1w_1+\cdots+a_tw_t$ donde alguno de los $a_i \neq 0$.
 
-Ahora, para el caso en que $s$ sea arbitrario:
-$$L\{v_1, \cdots, v_s\} \mbox{ l. i. y } S=\{w_1, \cdots, w_t\}$$
-$$\{v_1, \cdots, v_{s-1}\}\mbox{ es l.i.}\Rightarrow \{v_1, \cdots, v_{s-1},w_s, \cdots,w_t\}\mbox{ es sistema de generadores}$$
-Además ocurre que:
-$$v_s=a_1v_1+\cdots+ a_{s-1}v_{s-1}+a_sw_s+\cdots+a_tw_t\neq 0\Rightarrow \exists a_i\neq 0$$
-ya que $a_s=\cdots=a_t=0$ y entonces $v_s=a_1v_1+\cdots+a_{s-1}v_{s-1}$, pero no puede ser porque por hipótesis $L$ era linealmente independiente. Con lo cual podemos suponer que $a_s\neq 0$:
-$$w_s= a_s^{-1}v_s-a_s^{-1}a_1v_1-\cdots-a_s^{-1}a_{s-1}v_{s-1}- a_s^{-1}a_{s+1}v_{s+1}-\cdots- a_s^{-1}a_tw_t\Rightarrow$$
-$$\Rightarrow \{v_1, \cdots, v_{s-1}, v_s, w_{s+1}, \cdots, w_t\}\mbox{ es sistema de generadores} $$
+Sin pérdida de generalidad, podemos suponer que es $a_1\neq 0$ (pues de lo contrario bastaría con cambiar el orden de los vectores de $S$) y lo que implica que tiene inverso y entonces:
+$$
+w_1=a_1^{-1}v_1-a_1^{-1}a_2w_2-\cdots- a_1^{-1}a_tw_t\Rightarrow \{v_1, w_2, w_3, \cdots, w_t\}\mbox{ es sist. gen.}
+$$
+porque cualquier combinación lineal en la que participara $w_1$ puede ser modificada sustituyendo $w_1$ por su descomposición anterior que sólo depende de los vectores anteriores.
+
+Demostrado para $s=1$, suponemos que $s$ es arbitrario, esto es, $L = \{v_1, \cdots, v_s\}$ es l. i. y $S=\{w_1, \cdots, w_t\}$, por la hipótesis de inducción sabemos que:
+$$
+\{v_1, \cdots, v_{s-1}\}\mbox{ es l.i.}\Rightarrow \{v_1, \cdots, v_{s-1},w_s, \cdots,w_t\}\mbox{ es sistema de generadores}
+$$
+Y de nuevo, podemos expresar $v_s$ en términos de este nuevo sistema generador
+$$
+v_s=a_1v_1+\cdots+ a_{s-1}v_{s-1}+a_sw_s+\cdots+a_tw_t
+$$
+si todos los términos $a_s, \cdots, a_t$ fueran cero, entonces $v_s=a_1v_1+\cdots+a_{s-1}v_{s-1}$, pero esto entraría en contradicción con la independencia de $L$. Por tanto, como alguno de los $a_s, \cdots, a_t$ es no nulo, podemos suponer que $a_s\neq 0$ y entonces:
+$$
+w_s= a_s^{-1}v_s-a_s^{-1}a_1v_1-\cdots-a_s^{-1}a_{s-1}v_{s-1}- a_s^{-1}a_{s+1}v_{s+1}-\cdots- a_s^{-1}a_tw_t
+$$
+que por el mismo motivo de sustituir $w_s$ por esta expresión en las combinaciones lineales donde interviniera demuestra que $\{v_1, \cdots, v_{s-1}, v_s, w_{s+1}, \cdots, w_t\}$ es sistema de generadores.
 \end{demo}
 
 \begin{prop}
-Si $V$ es finitamente generado y $L$ es linealmente independiente, entonces $L$ es finito.
+Sea $V$ un espacio vectorial finitamente generado y $L$ un conjunto linealmente independiente, entonces $L$ es finito.
 \end{prop}
 \begin{demo}
-Elegimos un sistema de generadores de $s$ vectores: $S=\{w_1, \cdots, w_s\}$, si $L$ es linealmente independiente, entonces por el lema de intercambio, el número de vectores que conforman $L$ es menor que $s$, luego es finito.
+Elegimos un sistema de generadores de $s$ vectores $S=\{w_1, \cdots, w_s\}$. Si $L$ es linealmente independiente, por el lema de intercambio, el número de vectores que conforman $L$ es menor que $s$, luego es finito.
 \end{demo}
-
 
 \begin{prop}
 Si $V$ es finitamente generado, entonces:
@@ -400,25 +448,31 @@ Si $V$ es finitamente generado, entonces:
 \end{demo}
 
 \begin{defi}[Dimensión]
-Sea $V$ un espacio vectorial finitamente generado, definimos la dimensión de $V$ como:
-$$\dim V=|B|$$
+Sea $V$ un espacio vectorial finitamente generado, definimos \textbf{la dimensión de $V$} como:
+$$
+\dim V=|B|
+$$
 donde $B$ es una base cualquiera de $V$.
 \end{defi}
 
 \begin{ej}
+En algunos de los espacios vectoriales que hemos estudiado, las bases asociadas son:
 \begin{itemize}
-\item $\dim K^2=2\rightarrow B=\{e_1=(1,0), e_2=(0,1)\}$
-\item $\dim K^n=n\rightarrow B=\{e_1, \cdots, e_n\}$
-\item $\dim Mat_{m\times n}(K)=m\cdot n\rightarrow B=\{E_{ij}: 1\leq i\leq m \wedge 1\leq j\leq n\}: E_{ij}=(a_{rs})\begin{cases}
+\item $\dim K^2=2 \Rightarrow B=\{e_1=(1,0), e_2=(0,1)\}$
+\item $\dim K^n=n \Rightarrow B=\{e_1, \cdots, e_n\}$
+\item $\dim Mat_{m\times n}(K)=mn \Rightarrow B=\{E_{ij}\} \mbox{ donde } E_{ij}=(a_{rs})\begin{cases}
 1 & si \quad (i,j)=(r,s) \\
 0 & si \quad(i,j)\neq (r,s)
 \end{cases}$
 \end{itemize}
 \end{ej}
-Por lo tanto si todo espacio vectorial posee una base, y toda base un cardinal, este la dimensión representa el número mínimo de vectores linealmente independientes que lo definen.
+
+\begin{obs}
+Como todo espacio vectorial posee una base y toda base un cardinal (que es el mismo en todas), la dimensión de un espacio vectorial indica el número máximo de vectores linealmente independientes que puede haber y el mínimo número de vectores que lo generan.
+\end{obs}
 
 \begin{theo}[de extensión de la base]
-Sea $V$ un espacio vectorial finitamente generado y $W<V$ un subespacio del mismo, se cumplen:
+Sea $V$ un espacio vectorial finitamente generado y $W<V$ un subespacio del mismo, entonces:
 \begin{enumerate}
 \item $W$ es finitamente generado
 \item $\dim W\leq \dim V$
@@ -428,7 +482,7 @@ Sea $V$ un espacio vectorial finitamente generado y $W<V$ un subespacio del mism
 \end{theo}
 \begin{demo}
 \begin{enumerate}
-\item Sea $L_w$ linealmente independiente $\Rightarrow $ también es linealmente independiente en $V$, luego como $V$ es finitamente generado: $|L_w|\leq \dim V=|B_v|$ entonces $L_w$ es finito $\Rightarrow L_w\subset L\subset W$: L es conjunto linealmente independiente maximal.
+\item Si $L_w$ linealmente independiente en $W$, entonces también es linealmente independiente en $V$ y, como $V$ es finitamente generado, entonces $|L_w|\leq \dim V=|B_v|$. Por tanto, $L_w$ es finito, luego $L_w\subset L\subset W$: L es conjunto linealmente independiente maximal.
 
 \item Se demuestra junto con la 2 al demostrar que $L_w$ es finito.
 
@@ -439,134 +493,236 @@ Sea $V$ un espacio vectorial finitamente generado y $W<V$ un subespacio del mism
 \end{demo}
 
 \begin{ej}
-En $K^2$ consideramos el vector $w_1=(2,-3)$, como $\{w_1\}$ es linealmente independiente y es base de $W_1$, entonces podemos extenderla a una base mayor $\Rightarrow \{e_1,(2,-3)\} \vee \{(2,-3), e_2\}$ y ambas son bases de $K^2$.
+Consideremos $K^2$ como espacio vectorial y el vector $w_1=(2,-3)$. El conjunto $\{w_1\}$ es linealmente independiente y es base del subespacio que genera (la envoltura lineal de $\{w_1\}$) que denotaremos por $W_1$.
+
+El teorema anterior nos dice que podemos extenderla a una base mayor, por ejemplo $\{e_1,(2,-3)\}$ o también $\{(2,-3), e_2\}$ y que queda demostrado que son bases de $K^2$.
 \end{ej}
 \begin{obs}
-Se cumple que siendo $\dim V=n$:
+El razonamiento del ejemplo anterior, nos permite enunciar la siguiente propiedad, sea $\dim V=n$ entonces:
 \begin{itemize}
 \item $L$ es independiente y $|L|=n \Rightarrow L$ es base.
 \item $S$ es sistema de generadores y $|S|=n\Rightarrow S $ es base. 
 \end{itemize}
+en el primer caso porque además de linealmente independientes añadir cualquier vector lo hace dependiente, lo que implica que es sistema generador y en el segundo caso porque porque si alguno fuera dependiente de los demás el conjunto $S$ menos ese vector también sería generador.
 \end{obs}
 
 \begin{theo}[de la Fórmula de GrassManm]
 Sea $V$ un espacio vectorial finitamente generado y $W_1, W_2<V$ subespacios vectoriales, entonces se cumple:
-$$\dim (W_1+W_2)=\dim W_1+\dim W_2-\dim (W_1\cap W_2)$$
+$$
+\dim (W_1+W_2)=\dim W_1+\dim W_2-\dim (W_1\cap W_2)
+$$
 \end{theo}
 \begin{demo}
-Llamamos $m_1=\dim W_1$, $m_2=\dim W_2$ y $p=\dim (W_1\cap W_2)$, vemos que $p\leq m_1$ y $p\leq m_2$.\par
-Sea ahora $B_{W_1\cap W_2}=\{v_1, \cdots, v_p\}$, entonces por el Teorema de extensión de bases:
-$$B_{W_1}=\{v_1, \cdots, v_p, w_{p+1}, \cdots, w_{m_1}\}\mbox{ y }B_{W_2}=\{v_1, \cdots, v_p, w'_{p+1}, \cdots, w'_{m_2}\}$$
+Vamos a utiliar la notación  $m_1=\dim W_1$, $m_2=\dim W_2$ y $p=\dim (W_1\cap W_2)$ con la que observamos que $p\leq m_1$ y $p\leq m_2$.
 
-Probamos ahora que $B=\{v_1, \cdots, v_p, w_{p+1}, \cdots, w_{m_1},w'_{p+1}, \cdots, w'_{m_2}\}$ es base de $W_1+W_2$, porque se puede apreciar que el número de elementos es $n+(n-p)+(m-p)=n+m-p$ que es justamente lo que dice la definición, ahora lo demostramos:
-$$a_1v_1+\cdots+a_pv_p+a_{p+1}w_{p+1}+\cdots+a_{m_1}w_{m_1}+a'_{p+1}w'_{p+1}+\cdots+a'_{m_2}w'_{m_2}=0\Leftrightarrow$$
-$$\Leftrightarrow a_1v_1+\cdots+a_pv_p+a_{p+1}w_{p+1}+\cdots+a_{m_1}w_{m_1}=-(+a'_{p+1}w'_{p+1}+\cdots+a'_{m_2}w'_{m_2})$$
+Tomemos una base de la intersección $B_{W_1\cap W_2} = \{v_1, \cdots, v_p\}$, por el Teorema de extensión, sabemos que existen
+\begin{align*}
+B_{W_1}=\{v_1, \cdots, v_p, w_{p+1}, \cdots, w_{m_1}\} & & B_{W_2}=\{v_1, \cdots, v_p, w'_{p+1}, \cdots, w'_{m_2}\}
+\end{align*}
 
-Como la primera parte del igual pertenece a $W_1$ y la segunda a $W_2$ y ambas son iguales, ambas pertenecen a $W_1\cap W_2$. Esto último me permite expresar dichos vectores en términos de la base de la intersección.
-$$a'_{p+1}w'_{p+1}+\cdots+a'_{m_2}w'_{m_2}=b_1v_1+\cdots+b_pv_p\Leftrightarrow -b_1v_1-\cdots-b_pv_p+a'_{p+1}w'_{p+1}+\cdots+a'_{m_2}w'_{m_2}=0$$
+Por lo tanto, para probar el resultado basta con probar que $B=\{v_1, \cdots, v_p, w_{p+1}, \cdots, w_{m_1},w'_{p+1}, \cdots, w'_{m_2}\}$ es base de $W_1+W_2$ porque se puede apreciar que el número de elementos es $n+(n-p)+(m-p)=n+m-p$ , justamente lo que dice la definición:
+$$
+a_1v_1+\cdots+a_pv_p+a_{p+1}w_{p+1}+\cdots+a_{m_1}w_{m_1}+a'_{p+1}w'_{p+1}+\cdots+a'_{m_2}w'_{m_2}=0\Leftrightarrow
+$$
+$$
+\Leftrightarrow a_1v_1+\cdots+a_pv_p+a_{p+1}w_{p+1}+\cdots+a_{m_1}w_{m_1}=-(+a'_{p+1}w'_{p+1}+\cdots+a'_{m_2}w'_{m_2})
+$$
+La primera parte pertenece a $W_1$ y la segunda a $W_2$, pero como ambas son iguales sabemos que ambas pertenecen a $W_1\cap W_2$. Esto último nos permite expresar dichos vectores en términos de la base de la intersección:
+$$
+a'_{p+1}w'_{p+1}+\cdots+a'_{m_2}w'_{m_2}=b_1v_1+\cdots+b_pv_p\Leftrightarrow -b_1v_1-\cdots-b_pv_p+a'_{p+1}w'_{p+1}+\cdots+a'_{m_2}w'_{m_2}=0
+$$
+Precisamente estos vectores conforman la base $B_{W_2}$, así que son linealmente independientes, luego $b_1=\cdots=b_p=a'_{p+1}=\cdots=a'_{m_2}=0$ y esto implica que:
+$$
+a_1v_1+\cdots+a_pv_p+a_{p+1}w_{p+1}+\cdots+a_{m_1}w_{m_1}=0
+$$
+De nuevo, estos vectores son la base $B_{W_1}$, así que su independencia lineal implica que $a_1=\cdots=a_p=\cdots=a_{m_1}=0$, lo que demuestra la independencia lineal de los vectores de la base $B$.
 
-Como justamente estos vectores conforman la base $B_{W_2}$, son linealmente independientes, en consecuencia: $b_1=\cdots=b_p=a'_{p+1}=\cdots=a'_{m_2}=0$, y esto implica que:
-$$a_1v_1+\cdots+a_pv_p+a_{p+1}w_{p+1}+\cdots+a_{m_1}w_{m_1}=0$$
-
-Y como estos también son linealmente independientes porque son la base $B_{W_1}$, entonces: $a_1=\cdots=a_p=\cdots=a_{m_1}=0$, con lo cual queda demostrado que $B$ es base de $W_1+W_2$, ya que todo vector $w_1+w_2=v\in W_1+W_2: w_1\in W_1 \wedge w_2\in W_2$ y cualquier vector de $W_1$ o de $W_2$ se puede expresar en términos de la nueva base.
-$$u_1+u_2=\lambda_1v_1+\cdots+\lambda_pv_p+\lambda_{p+1}w_{p+1}+\cdots+\lambda_{m_1}w_{m_1}+\mu_1v_1+\cdots+\mu_pv_p+\mu_{p+1}w'_{p+1}\cdots+\mu_{m_2}w'_{m_2}=$$
-$$=(\lambda_1+\mu_1)v_1+\cdots+(\lambda_p+\mu_p)v_p+\lambda_{p+1}w_{p+1}+\cdots+\lambda_{m_1}w_{m_1}+\mu_{p+1}w'_{p+1}\cdots+\mu_{m_2}w'_{m_2}$$
+Demostrar que es sistema de generadores es trivial, puesto que cualquier vector $w_1+w_2=v\in W_1+W_2$ con $w_1\in W_1$ y $w_2\in W_2$ o $v\in W_1$ o $v\in W_2$ se puede expresar en términos de la nueva base:
+$$
+u_1+u_2=\lambda_1v_1+\cdots+\lambda_pv_p+\lambda_{p+1}w_{p+1}+\cdots+\lambda_{m_1}w_{m_1}+\mu_1v_1+\cdots+\mu_pv_p+\mu_{p+1}w'_{p+1}\cdots+\mu_{m_2}w'_{m_2}=$$
+$$=(\lambda_1+\mu_1)v_1+\cdots+(\lambda_p+\mu_p)v_p+\lambda_{p+1}w_{p+1}+\cdots+\lambda_{m_1}w_{m_1}+\mu_{p+1}w'_{p+1}\cdots+\mu_{m_2}w'_{m_2}
+$$
 \end{demo}
 
 \begin{defi}[Suma Directa]
-Sea $V$ un espacio vectorial y $W_1,W_2<V$ dos subespacios vectoriales, entonces si se verifica que:
-$$\forall v\in V: \exists!w_1\in W_1,\ m_2\in W_2: v=w_1+w_2$$
-decimos que $V$ es la \textbf{suma directa} de $W_1+W_2$ y se expresa de la siguiente forma:
-$$W_1\oplus W_2$$
+Sea $V$ un espacio vectorial y $W_1,W_2<V$ dos subespacios vectoriales, decimos que $V$ es \textbf{suma directa de $W_1$ y $W_2$} si y sólo si se verifica:
+$$
+\forall v\in V: \exists!w_1\in W_1,\ m_2\in W_2: v=w_1+w_2
+$$
+y lo expresamos como $V = W_1\oplus W_2$.
 \end{defi}
-\begin{prop}
-La definición de suma directa es equivalente a esta otra:
-$$\forall v\in V: \exists!w_1\in W_1,\ m_2\in W_2: v=w_1+w_2\Leftrightarrow V=W_1+W_2\mbox{ y }  W_1\cap W_2=\{0\}$$
+
+\begin{prop}[Caracterización de la Suma Directa]
+Sea $V$ un espacio vectorial y $W_1, W_2<V$ dos subespacios vectoriales suyos, $V$ es suma directa de $W_1$ y $W_2$ si y sólo si:
+$$
+V=W_1+W_2\mbox{ y }  W_1\cap W_2=\{0\}
+$$
 \end{prop}
 \begin{demo}
 \begin{itemize}
-\item $\Leftarrow$: supongamos que $v=w_1+w_2\in W_1\cap W_2$, entonces:
-$$w_1+w_2=w'_1+w'_2: w_1,w'_1\in W_1\mbox{ y } w_2,w'_2\in W_2\Rightarrow w_1-w'_1=w'_2-w_2\in W_1\cap W_2=0\Rightarrow w_1=w'_1 \mbox{ y } w_2=w'_2$$
+\item $\Leftarrow$:
 
-\item $\Rightarrow$: tomemos $w'\in W_1\cap W_2$ y supongamos $w'\neq 0$, entonces:
-$$v = w_1 + w_2 \Rightarrow v-w' = w_1+w_2-w'\Rightarrow v= \underbrace{w_1 + w'}_{\in W_1} + \underbrace{w_2 - w'}_{\in W_2}$$
+Supongamos que $v=w_1+w_2\in W_1\cap W_2$, entonces:
+$$
+w_1+w_2=w'_1+w'_2: w_1,w'_1\in W_1\mbox{ y } w_2,w'_2\in W_2\Rightarrow w_1-w'_1=w'_2-w_2\in W_1\cap W_2=0\Rightarrow \begin{cases} w_1=w'_1 \\ w_2=w'_2
+\end{cases}
+$$
+
+\item $\Rightarrow$:
+
+Tomemos $w'\in W_1\cap W_2$ no nulo, entonces:
+$$
+v = w_1 + w_2 \Rightarrow v-w' = w_1+w_2-w'\Rightarrow v= \underbrace{w_1 + w'}_{\in W_1} + \underbrace{w_2 - w'}_{\in W_2}
+$$
 Pero como la descomposición es única, entonces:
-$$\begin{cases}
+$$
+\begin{cases}
 w_1 = w_1 + w' \\ w_2 = w_2 - w'
-\end{cases} \Rightarrow w' = 0$$
+\end{cases} \Rightarrow w' = 0
+$$
 \end{itemize}
 \end{demo}
 
-Viendo por ejemplo el espacio vectorial de $K^2$ es fácil comprender este concepto, $W_1=K\times \{0\}$ y $W_2=\{0\}\times K$ vemos que son los ejes coordenados y que la suma de vectores de ambos planos definen por completo el espacio bidimensional, además su intersección únicamente es el 0.
+El concepto de suma directa se entiende bien pensando en el espacio vectorial canónico $K^2$. En este caso, si tomamos como $W_1=K\times \{0\}$ (el eje de las x) y $W_2=\{0\}\times K$ (el eje de las y) es sencillo ver que cualquier vector del plano es suma de dos vectores de ambos subespacios ¡porque son los ejes! y la intersección de ambos trivialmente es el $(0,0)$ que es el $0$ de $K^2$.
 
 \begin{obs}
-Cuando nos paramos a pensar en una suma directa de 3 o más sumandos tenemos que comprobar que se verifican las siguientes condiciones:
-$$\begin{cases}V=W_1+W_2+W_3 \\
+La caracterización final de la suma directa se complica cuando el número de sumandos aumenta. Si queremos pensar en la suma directa de tres tenemos que comprobar que se verifican las siguientes condiciones:
+$$
+\begin{cases}V=W_1+W_2+W_3 \\
 W_1\cap W_2=\{0\}\\
-(W_1+W_2)\cap W_3=\{0\}\end{cases}$$
-Es decir, en el fondo es comprobar que todos los vectores son  una única suma de los vectores de cada subespacio.
+(W_1+W_2)\cap W_3=\{0\}\end{cases}
+$$
+es decir, en el fondo es comprobar que todos los vectores son suma única de los vectores de cada subespacio.
 \end{obs}
 
 \begin{ej}
-Consideramos $V=Mat_2(\mathbb R)$ por lo que una base sería $B=\left\lbrace
+Sea $V=Mat_2(\mathbb R)$ el espacio vectorial de las matrices cuadradas de dos dimensiones, una posible base es:
+$$
+B=\left\lbrace
 \left(\begin{array}{cc}1&0\\ 0&0\end{array}\right),\left(\begin{array}{cc}0&1\\ 0&0\end{array}\right),
 \left(\begin{array}{cc}0&0\\ 1&0\end{array}\right),
 \left(\begin{array}{cc}0&0\\ 0&1\end{array}\right)
-\right\rbrace$. Si consideramos como $S_2(\mathbb{R})$ al conjunto de las matrices simétricas y a $A_2(\mathbb R)$ al conjunto de las antisimétricas, entonces:
-$$S_2(\mathbb R)=\{A\in V: A=A^t\}<V$$
-$$A_2(\mathbb R)=\{A\in V: A=-A^t\}<V$$
-Para comprobar que son subespacios comprobamos\footnote{Y las de $S_2(\mathbb R)$ se demuestran de forma análoga.} que el producto y la suma son cerrados.
-$$A,B\in A_2(\mathbb R)\rightarrow A+B=-A^t-B^t=-(A^t+B^t)=-(A+B)^t\in A_2(\mathbb R)$$
-$$a\in \mathbb R, A\in A_2(\mathbb R)\rightarrow a\cdot A=a\cdot (-A^t)=-a\cdot A^t=-a\cdot A^t=-(a\cdot A^t)\in A_2(\mathbb R)$$
-Ahora determinamos las dimensiones de cada una:
-$$A=\left(\begin{array}{cc}a_{11}&a_{12}\\ a_{21}&a_{22}\end{array}\right)\in S_2(\mathbb R)\Leftrightarrow a_{12}=a_{21}\Leftrightarrow A=A=\left(\begin{array}{cc}a_{11}&a_{12}\\ a_{12}&a_{22}\end{array}\right)=$$
-$$a_{11}\left(\begin{array}{cc}1&0\\ 0&0\end{array}\right)+ a_{12}\left(\begin{array}{cc}0&1\\ 1&0\end{array}\right)+a_{22} \left(\begin{array}{cc}1&0\\ 0&1\end{array}\right)\Rightarrow \dim S_2(\mathbb R)=3$$
-
-$$A=\left(\begin{array}{cc}a_{11}&a_{12}\\ a_{21}&a_{22}\end{array}\right)\in S_2(\mathbb R)\Leftrightarrow a_{ij}=-a_{ji}\Rightarrow
-\begin{cases}
-a_{ii}=-a_{ii}\Leftrightarrow a_{ii}=0 \\
-a_{ij}=-a_{ji}
-\end{cases}\Rightarrow$$
-$$\Rightarrow A=\left(\begin{array}{cc}0&a_{12}\\ -a_{12}&0\end{array}\right)=a_{12}\left(\begin{array}{cc}0&1\\ -1&0\end{array}\right)\Rightarrow \dim A_2(\mathbb R)=1$$
-Ahora viendo como es la intersección de ambos subespacios:
-$$A\in A_2(\mathbb R)\cap S_2(\mathbb R)\Rightarrow \begin{cases}
-A=A^t \\ A=-A^t \end{cases} \Rightarrow A^t=-A^t\Leftrightarrow A^t=-A^t=0\Rightarrow A = 0$$
-Con lo cual vemos que se cumplen todas las hipótesis de la fórmula de GrassMann, por ello es que la suma supone el total del espacio vectorial definido:
-$$\dim (S_2+A_2)=3+1-0=4=\dim Mat_2(\mathbb R)\Rightarrow V=S_2\oplus A_2$$
-Con lo cual, esto demuestra que toda matriz de orden 2 debe poder expresarse como suma de matrices de ambos subespacios.
-$$(A+A^t)^t=A^t+A^{tt}=A^t+A\rightarrow A+A^t\mbox{ es simétrica}$$
-$$(A-A^t)^t=A^t-A^{tt}=A^t-A\rightarrow A-A^t\mbox{ es antisimétrica}$$
+\right\rbrace
+$$
+Los conjuntos $S_2(\mathbb{R}) := \{A\in V : A=A^t\}$ y $A_2(\mathbb R) := \{A\in V : A = -A^t\}$ que denotan al conjunto de las matrices simétricas y antisimétricas, respectivamente son subespacios vectoriales de $V$ porque son cerrados\footnote{Para las matrices de $S_2(\mathbb{R})$ la demostración es completamente análoga.} para la suma y el producto por un escalar:
+$$
+\forall A,B\in A_2(\mathbb R) :  A+B=-A^t-B^t=-(A^t+B^t)=-(A+B)^t \Rightarrow A+B\in A_2(\mathbb R)$$
+$$\forall a\in \mathbb R, \ \forall A\in A_2(\mathbb R) : a\cdot A=a\cdot (-A^t)=-a\cdot A^t=-(a\cdot A^t) \Rightarrow a\cdot A \in A_2(\mathbb R)
+$$
+Si determinamos las dimensiones de cada uno de estos subespacios:
+$$
+A\in S_2(\mathbb{R}) \Rightarrow A=\left(\begin{array}{cc}a_{11}&a_{12}\\ a_{12}&a_{22}\end{array}\right)= a_{11}\left(\begin{array}{cc}1&0\\ 0&0\end{array}\right)+ a_{12}\left(\begin{array}{cc}0&1\\ 1&0\end{array}\right)+a_{22} \left(\begin{array}{cc}1&0\\ 0&1\end{array}\right)\Rightarrow \dim S_2(\mathbb R)=3
+$$
+$$
+A\in A_2(\mathbb{R}) \Rightarrow A=\left(\begin{array}{cc}0&a_{12}\\ -a_{12}&0\end{array}\right)=a_{12}\left(\begin{array}{cc}0&1\\ -1&0\end{array}\right)\Rightarrow \dim A_2(\mathbb R)=1
+$$
+y vemos la intersección de ambos subespacios:
+$$
+A\in A_2(\mathbb R)\cap S_2(\mathbb R)\Rightarrow \begin{cases}
+A=A^t \\ A=-A^t \end{cases} \Rightarrow A^t=-A^t\Leftrightarrow A^t=-A^t=0\Rightarrow A = 0
+$$
+podemos darnos cuenta de que se cumplen todas las hipótesis de la caracterización de la suma directa. Por ello, la suma supone el total del espacio vectorial definido:
+$$
+\dim (S_2+A_2)=3+1-0=4=\dim Mat_2(\mathbb R)\Rightarrow V=S_2\oplus A_2
+$$
+Lo que demuestra que cualquier matriz cuadrada de dos dimensiones se puede poner como unas uma única de dos matrices: una simétrica y otra antisimétrica.
+$$
+A = \frac{A + A^t}{2} + \frac{A - A^t}{2}
+$$
+puesto que $(A+A^t)^t=A^t+A^{tt}=A^t+A$ luego $A+A^t$ es simétrica y $(A-A^t)^t=A^t-A^{tt}=A^t-A$ luego $A-A^t$ es antisimétrica.
 \end{ej}
 
 \subsubsection{Coordenadas y Cambio de Base}
-Dado un espacio vectorial Las son los valores que identifican a un vector con respecto a una base y son \textbf{únicos} con respecto a esa base.
+En su momento vimos que un vector se puede expresar de forma única en términos de los vectores de una base vectorial.
+$$
+v = a_1v_1 + \cdots a_nv_n
+$$
+La relación que existe entre este vector y los de la base vectorial la marcan los coeficientes de la combinación lineal que tiene como resultado el vector inicial. Estos coeficientes son los que llamamos coordenadas y conocerlos permite trabajar con cualquier espacio vectorial como si se trata del espacio vectorial canónico en el que sólo escribimos $(a_1, \cdots, a_n)$.
 
 \begin{defi}[Coordenadas]
 Sea $B=\{v_1,\cdots,v_n\}$ una base de $V$, cada vector se escribe de modo único como:
-$$v=x_1v_1+\cdots+x_nv_n: \exists! x_i\in K$$
-a los coeficientes $x_i$ los denotamos por \textbf{coordenadas} del vector $v$ respecto de la base $B$.
+$$
+\forall v \in V : v = x_1v_1 + \cdots + x_nv_n: \exists! x_i\in K
+$$
+definimos las \textbf{coordenadas de un vector} como los coeficientes $x_i$ asociados a la combinación lineal de los vectores de la base que lo representa.
 \end{defi}
 
 \begin{ej}
-Un vector $v=(a_1,a_2)$ se escribe de esa forma en la base canónica pero $v=(a_1-a_2, a_2)$ son las coordenadas del mismo vector en la base $B'=\{e_1, e_1+e_2\}$
+Sea $V=K^2$ y $B_c := \{e_1, e_2\}$ la base canónica, un vector cualquiera $v=(a_1,a_2)$ se puede expresar como:
+$$
+v=(a_1,a_2) = a_1(1,0) + a_2(0,1) = a_1e_1 + a_2e_2
+$$
+lo que implica que sus coordenadas con respecto a la base canónica son precisamente $(a_1, a_2)$. Sin embargo, si tomamos como base $B=\{e_1, e_1+e_2\}$, el mismo vector se expresa ahora como:
+$$
+v=(a_1, a_2) = a_1e_1 + a_2e_2 = a_1e_1 - a_2e_1 + a_2e_1 + a_2e_2 = (a_1 - a_2)e_1 + a_2(e_1 + e_2)
+$$
+lo que implica que respecto de la nueva base las coordenadas del mismo vector sean $(a_1-a_2, a_2)$.
 \end{ej}
 
+El ejemplo anterior pone de manifiesto que las coordenadas pueden cambiar en función de la base que escojamos para darlas. El cambio de base anterior era muy sencillo de calcular y no revestía mucha dificultad a la hora de especificar cuáles eran las nuevas coordenadas de $v$, pero ¿y si el cambio no es tan sencillo? ¿Hay alguna forma ``canónica'' de poder cambiar de base?
+
 \begin{prop}[Cambio de base]
-Sean $B'=\{v_1',\cdots, v_n'\}$ y $B=\{v_1, \cdots, v_n\}$ bases de $V$, entonces:
-$$\begin{cases}
-v=x_1v_1+\cdots+x_nv_n & \mbox{en } B\\
-v=x_1'v_1'+\cdots+x_n'v_n & \mbox{en } B'
-\end{cases}\Rightarrow x_1'v_1'+\cdots+x_n'v_n'=x_1v_1+\cdots+x_nv_n=$$
-$$=x_1(\stackrel{v_1\mbox{ en } B'}{\overbrace{a_{11}v_1'+\cdots+a_{n1}v_n'}})+\cdots+x_n(\stackrel{v_n\mbox{ en } B'}{\overbrace{a_{1n}v_1'+\cdots+a_{nn}v_n'}})=(a_{11}x_1+\cdots+a_{1n}x_n)v_1'+\cdots+(a_{n1}x_1+\cdots+a_{nn}x_n)v_n'\Leftrightarrow $$
-$$\Leftrightarrow x_1'=a_{11}x_1+\cdots+a_{1n}x_n, \cdots, x_n'=a_{n1}x_1+\cdots+a_{nn}x_n$$
-Si expresamos esta igualdad en forma matricial, como si de un sistema lineal se tratase (que de hecho lo es), entonces tenemos que:
-$$\underbrace{\left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)}_{\mbox{Coord. en } B'}=\underbrace{\left(\begin{array}{ccc}\overbrace{a_{11}}^{v_1\mbox{ en }B'}&\cdots&\overbrace{a_{1n}}^{v_n\mbox{ en }B'}\\\vdots&\ddots&\vdots\\a_{n1}&\cdots&a_{nn}\end{array}\right)}_{\mbox{Matriz de paso}}\underbrace{\left(\begin{array}{c}x_1\\\vdots\\x_n\end{array}\right)}_{\mbox{Coord. en } B}$$
-De forma análoga, en el otro sentido:
-$$\left(\begin{array}{c}x_1\\\vdots\\x_n\end{array}\right)=Q\cdot \left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)$$
-Por tanto, de ambas igualdades se deduce:
-$$\left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)=P\cdot \left(\begin{array}{c}x_1\\\vdots\\x_n\end{array}\right)=P\cdot Q\cdot \left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)\Leftrightarrow 0=(PQ-I)\left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)\Leftrightarrow PQ-I=0\Leftrightarrow PQ=I\Rightarrow \exists P^{-1}=Q$$
-Esto quiere decir que $P,Q\in Mat_n(\mathbb R)^x$, también llamado \textbf{grupo lineal} de \textit{n} dimensión sobre (K) $GL_n(K)$. En consecuencia, la matriz de paso de una base a otra es la inversa del cambio de base al revés.
+Sea $V$ un espacio vectorial y $B'=\{v_1',\cdots, v_n'\}$ y $B=\{v_1, \cdots, v_n\}$ dos bases del mismo, entonces la relación entre las coordenadas de ambos viene dada por:
+$$
+\underbrace{\left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)}_{\mbox{Coord. en } B'}=\underbrace{\left(\begin{array}{ccc}\overbrace{a_{11}}^{v_1\mbox{ en }B'}&\cdots&\overbrace{a_{1n}}^{v_n\mbox{ en }B'}\\\vdots&\ddots&\vdots\\a_{n1}&\cdots&a_{nn}\end{array}\right)}_{\mbox{Matriz de paso}}\underbrace{\left(\begin{array}{c}x_1\\\vdots\\x_n\end{array}\right)}_{\mbox{Coord. en } B}
+$$
+donde las columnas son los vectores de la base de partida expresados en términos de la base de llegada.
 \end{prop}
+\begin{demo}
+En primer lugar, como ambas son bases del espacio $V$, podemos expresar en términos de ellas un vector $v$ cualquiera:
+\begin{align*}
+v=x_1v_1+\cdots+x_nv_n  \mbox{ en } B && v=x_1'v_1'+\cdots+x_n'v_n  \mbox{ en } B'
+\end{align*}
+Por tanto, como ambas expresiones hacen referencia al vector $v$ podemos igualarlas:
+\begin{eqnarray*}
+x_1'v_1'+ \cdots + x_n'v_n'
+&=& x_1v_1+\cdots + x_nv_n \\
+&=& x_1(a_{11}v_1'+\cdots+a_{n1}v_n')+ \cdots + x_n(a_{1n}v_1'+\cdots+a_{nn}v_n') \\
+&=& (a_{11}x_1+\cdots+a_{1n}x_n)v_1'+\cdots+(a_{n1}x_1+\cdots+a_{nn}x_n)v_n'
+\end{eqnarray*}
+donde la segunda igualdad surge de expresar $v_i = a_{1i}v_1' + \cdots a_{ni}v_n'$, es decir, los vectores de la base de partida, en términos de los vectores de la base de llegada.
+
+Si pasamos todo a uno de los lados desde la expresión final anterior, entonces tenemos una combinación lineal de vectores independientes que vale 0. Precisamente por dicha independencia los coeficientes asociados tienen que ser nulos, es decir:
+$$
+\begin{cases}
+x_1'-a_{11}x_1+\cdots+a_{1n}x_n = 0 \\
+\vdots \\
+x_n' - a_{n1}x_1+\cdots+a_{nn}x_n = 0 
+\end{cases}
+\Rightarrow
+\begin{cases}
+x_1'=a_{11}x_1+\cdots+a_{1n}x_n \\
+\vdots \\
+x_n'=a_{n1}x_1+\cdots+a_{nn}x_n 
+\end{cases}
+$$
+Basta para obtener la fórmula del enunciado con escribir este sistema lineal en forma matricial, de modo que queda como:
+$$
+\underbrace{\left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)}_{\mbox{Coord. en } B'}=\underbrace{\left(\begin{array}{ccc}\overbrace{a_{11}}^{v_1\mbox{ en }B'}&\cdots&\overbrace{a_{1n}}^{v_n\mbox{ en }B'}\\\vdots&\ddots&\vdots\\a_{n1}&\cdots&a_{nn}\end{array}\right)}_{\mbox{Matriz de paso}}\underbrace{\left(\begin{array}{c}x_1\\\vdots\\x_n\end{array}\right)}_{\mbox{Coord. en } B}
+$$
+Todo el razonamiento previo puede hacerse en sentido inverso, esto es, pasando de la base $B'$ a la base $B$ y entonces se obtiene el mismo resultado.
+\end{demo}
+
+\begin{prop}
+Sea $V$ un espacio vectorial y $B$ y $B'$ dos bases del mismo, las matrices de paso de ambas
+\begin{align*}
+\underbrace{\left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)}_{\mbox{Coord. en } B'} = M(B,B') \cdot \underbrace{\left(\begin{array}{c}x_1\\\vdots\\x_n\end{array}\right)}_{\mbox{Coord. en } B} && \underbrace{\left(\begin{array}{c} x_1\\\vdots\\x_n\end{array} \right)}_{\mbox{Coord. en } B} = M(B',B) \cdot \underbrace{\left(\begin{array}{c}x_1'\\\vdots\\x_n'\end{array}\right)}_{\mbox{Coord. en } B'}
+\end{align*}
+son inversas entre sí, es decir, $M(B,B') = M(B',B)^{-1}$.
+\end{prop}
+\begin{demo}
+Si denotamos por $P=M(B,B')$ y por $Q=M(B',B)$ y tenemos en cuenta la forma en que relacionan las coordenadas y que hemos visto anteriormente, entonces:
+$$
+\left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)=P\cdot \left(\begin{array}{c}x_1\\\vdots\\x_n\end{array}\right)=P\cdot Q\cdot \left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)\Leftrightarrow 0=(PQ-I)\left(\begin{array}{c} x_1'\\\vdots\\x_n'\end{array} \right)\Leftrightarrow PQ-I=0\Leftrightarrow PQ=I
+$$
+lo que quiere decir que $P$ y $Q$ son inversas la una de la otra.
+\end{demo}
+
+\begin{obs}
+El resultado anterior expone que el conjunto de matrices cuadradas inversibles se puede identificar con el conjunto de posibles cambios de bases en un espacio vectorial.
+
+Por este motivo, el conjunto al que $Mat_n(\mathbb R)^x$ que hace referencia a las matrices cuadradas inversibles también se llama \textbf{grupo lineal} de \textit{n} dimensión sobre (K) y se denota por $GL_n(K)$.
+\end{obs}
 
 \begin{defi}[Característica de un Cuerpo]
 Sea $K$ un cuerpo, definimos su característica como el valor $p\in K$ que verifica que:
@@ -576,36 +732,48 @@ Es decir, que el $0_k$ es el $0$ cuando todos los múltiplos de 1 nos se anulan,
 \end{defi}
 
 \begin{ej}
-Sea $K^2=V$ y $B'=\{e_1+2e_2, 2e_1+e_2\}$ una base del mismo, puesto que es un conjunto de vectores de dimensión 2 y linealmente independiente:
-$$a_1(e_1+2e_2)+a_2(2e_1+e_2)=0\Leftrightarrow (a_1+2a_2)e_1+(2a_1+a_2)e_2=0\Rightarrow a_1-a_2=0\Rightarrow a_1=a_2\Rightarrow 3a_1=0\Rightarrow a_1=0=a_2$$
-Siempre y cuando $\chi(K) \neq 3$, volviendo a nuestro ejercicio, las matrices de paso son:
+Sea $V=K^2$ y $B'=\{e_1+2e_2, 2e_1+e_2\}$ una base del mismo (puesto que tiene dos vectores y es trivial comprobar su independencia lineal, entonces las matrices paso entre $B$ y $B_c$ son:
 \begin{align*}
 M(B',B_c)=\left(\begin{array}{cc}1&2\\2&1\end{array}\right) & & M(B_c,B')=\left(\begin{array}{cc}1&2\\2&1\end{array}\right)^{-1}
 \end{align*}
-Pero podemos hacer este cálculo de forma más explícita:
-$$\begin{cases}
+por lo visto en las proposiciones anteriores.
+
+Sin embargo, invertir una matriz no es en general algo agradable y sencillo de hacer en dimensiones altar, luego podemos optar por expresar los vectores de la base canónica en términos de los vectores de la base $B$ del enunciado:
+$$
+\begin{cases}
 v_1'=e_1+2e_2 \\
 v_2'=2e_1+e_2
 \end{cases}\stackrel{E_1 = E_1 - 2E_2}{\Rightarrow}
 \begin{cases}
-v_1'-2v_2'=e_1-4e_1=-3e_1\Leftrightarrow e_1=(\frac{-1}{3}, \frac{2}{3})_{B'} \\
-e_2=v_2'-2e_1=v_2'-2(\frac{-1}{3}v_1'+\frac{2}{3}v_2')\Rightarrow e_2=(\frac{2}{3},\frac{-1}{3})_{B'} \end{cases}\Rightarrow$$
-$$\Rightarrow
+v_1'-2v_2'=e_1-4e_1=-3e_1 \\
+e_2 = v_2'-2e_1
+\end{cases} 
+$$
+De la primera ecuación del sistema sabemos que $e_1=(\frac{-1}{3}, \frac{2}{3})_{B'}$ así que simplemente susituyendo en la segunda este valor de $e_1$, tenemos que:
+$$
+v_2'-2\left(\frac{-1}{3}v_1'+\frac{2}{3}v_2'\right)\Rightarrow e_2 = \left(\frac{2}{3},\frac{-1}{3}\right)_{B'}
+$$
+Luego, sin necesidad de invertir la matriz ``sencilla'' que ya conocíamos, hemos sido capaces de encontrar la matriz de cambio de base que es
+$$
 M(B_c,B')=\left(\begin{array}{cc}
 \frac{-1}{3} & \frac{2}{3}\\
 \frac{2}{3} & \frac{-1}{3}
 \end{array}\right)
 $$
-$$v=(7,-6)_{B_c}\in \mathbb R^2\Rightarrow v=\left(\begin{array}{cc}
+Por tanto, si ahora queremos expresar el vector $v=(7,-6)$ en términos de la nueva base $B$, basta con multiplicarlo por la matriz de cambio de base
+$$
+v=(7,-6)_{B_c}\in \mathbb R^2\Rightarrow v=\left(\begin{array}{cc}
 \frac{-1}{3} & \frac{2}{3}\\
 \frac{2}{3} & \frac{-1}{3}
 \end{array}\right)\cdot \left(\begin{array}{c}
 7\\
 -6
 \end{array}\right)=\left(\begin{array}{c}
-\frac{-19}{3}\\
--\frac{20}{3}
-\end{array}\right)\Rightarrow v = \left(\frac{-19}{3}, \frac{-20}{3}\right)_{B'}$$
+-19/3 \\
+-20/3
+\end{array}\right)\Rightarrow v = \left(\frac{-19}{3}, \frac{-20}{3}\right)_{B'}
+$$
+esto evita tener que estar continuamente calculando, como lo hemos hecho en el sistema anterior, las coordenadas del vector $v$ en términos de $B$ a mano.
 \end{ej}
 
 \subsection{Espacio vectorial cociente}
@@ -700,11 +868,17 @@ Con lo cual, $e_1$ y $e_2$ forman la base de $V/W$.
 \end{ej}
 
 \section{Aplicaciones Lineales}
+Al inicio del capítulo comentamos que íbamos a ver las características la estructura de espacio vectorial, pero que también íbamos a ver las características de los morfismos entre estructuras de este tipo.
+
+Por ello, esta sección está dedicada al estudio de las propiedades que tienen estas transformaciones: las aplicaciones lineales. Es muy común y habitual en matemáticas tener que definir o utilizar aplicaciones (funciones) entre objetos matemáticos. Si además añadimos que hemos comentado que la estructura de espacio vectorial está muy presente en multitud de elementos en las matemáticas, con más razón será necesario sacar provecho y ventajas de todas las propiedades que podamos descubrir de las mismas.
+
 \begin{defi}
-Sean $V$ y $V'$ dos espacios vectoriales y $\phi:V\longrightarrow V'$ una aplicación entre ambos, entonces decimos que \textbf{dicha aplicación es lineal} si conserva la suma y el producto por un escalar:
-$$\phi(v_1+v_2)=\phi(v_1)+\phi(v_2): \forall v_1,v_2\in V$$
-$$\phi(a\cdot v_1)=a\cdot \phi(v_1): \forall a\in K,\ \forall v\in V$$
-Al conjunto de aplicaciones lineales entre ambos espacios se le denota\footnote{Si el espacio de llegada y de salida son el mismo, es decir, $V=V'$, entonces se denota por $End(V)$} por $Hom(V,V')$.
+Sea $\phi:V\longrightarrow V'$ una aplicación entre dos espacios vectoriales, decimos que $\phi$ es una \textbf{aplicación lineal} si y sólo si conserva la suma y el producto por un escalar, es decir, si verifica que:
+\begin{itemize}
+\item $ \forall v_1,v_2\in V : \phi(v_1+v_2)=\phi(v_1)+\phi(v_2)$
+\item $\forall a\in K,\ \forall v\in V : \phi(a\cdot v_1)=a\cdot \phi(v_1)$
+\end{itemize}
+Al conjunto de aplicaciones lineales entre ambos espacios se le denota\footnote{Si el espacio de llegada y de salida son el mismo, es decir, $V=V'$, entonces se denota por $End(V)$} por $Hom(V,V')$, de \textit{homomorfismos} de $V$ en $V'$.
 \end{defi}
 
 \begin{ej}
@@ -756,14 +930,18 @@ $$\phi(v)=-v\Rightarrow w-u=-v=-w-u\Rightarrow 2w=0\Rightarrow v=u\in U$$
 \end{ej}
 
 \begin{defi}[Imagen y Núcleo]
-Sea $\phi: V\longrightarrow V'$ una aplicación lineal, decimos que \textbf{la imagen} de $\phi$ es el subespacio vectorial del espacio de llegada cuyos vectores son imagen de algún vector del espacio de salida:
-$$Im(\phi)=\{\phi(v): v\in V\}<V'$$
-Del mismo modo, decimos que \textbf{el núcleo} de $\phi$ es el subespacio vectorial del espacio inicial cuyos vectores se transforman en el vector nulo del espacio de llegada:
-$$\ker(\phi)=\{v\in V: \phi(v)=0_v\}<V$$
+Sea $\phi: V\longrightarrow V'$ una aplicación lineal, llamamos \textbf{imagen de $\phi$} al subespacio vectorial\footnote{La demostración de que es un subespacio vectorial del espacio de llegada es trivial por la condición de que las aplicaciones lineales conservan sumas y productos por escalares.} del espacio de llegada cuyos vectores son imagen de algún vector del espacio de salida:
+$$
+Im(\phi)=\{\phi(v): v\in V\}<V'
+$$
+Del mismo modo, llamamos \textbf{núcleo de $\phi$} al subespacio vectorial\footnotemark[7] del espacio de partida cuyos vectores se transforman en el vector nulo del espacio de llegada:
+$$
+\ker(\phi)=\{v\in V: \phi(v)=0_v\}<V
+$$
 \end{defi}
 
 \begin{prop}
-Sea $\phi: V\longrightarrow V'$ una aplicación lineal, decimos que:
+Sea $\phi: V\longrightarrow V'$ una aplicación lineal, entonces:
 \begin{enumerate}
 \item $\phi$ es suprayectiva $\Leftrightarrow Im(\phi)=V'$
 \item $\phi$ es inyectiva $\Leftrightarrow \ker(\phi)=\{0_v\}$
@@ -776,14 +954,23 @@ Sea $\phi: V\longrightarrow V'$ una aplicación lineal, decimos que:
 \item De la primera se deduce que:
 \begin{itemize}
 \item ``$\Rightarrow$'': supongamos que es inyectiva\par
-Vemos primero que: $\phi(0_v)=\phi(0_v+0_v)=\phi(0_v)+\phi(0_v)\Leftrightarrow 0_v'=\phi(0_v)\Rightarrow 0_v\in \ker(\phi)$.
-$$v\in \ker(\phi)\Rightarrow \phi(v)=0_v'\Rightarrow \phi(v)\phi(0)\Rightarrow v=0:\forall v\in \ker(\phi)$$
+Vemos primero que: $\phi(0_v)=\phi(0_v+0_v)=\phi(0_v)+\phi(0_v)\Leftrightarrow 0_{v'}=\phi(0_v)\Rightarrow 0_v\in \ker(\phi)$, es decir, que el cero va al cero.
+$$
+v\in \ker(\phi)\Rightarrow \phi(v)=0_{v'}\Rightarrow \phi(v) = \phi(0)\Rightarrow \forall v\in \ker(\phi) : v=0
+$$
+por la inyectividad de $\phi$.
 
-\item ``$\Leftarrow$'': supongamos cierto que el $\ker(\phi)=\{0_v\}$.
-$$\phi(v_1)=\phi(v_2)\Rightarrow \phi(v_1-v_2)=0_v'\Rightarrow v_1-v_2\in \ker(\phi)\Rightarrow v_1-v_2=0_v\Rightarrow v_1=v_2$$
+\item ``$\Leftarrow$'': supongamos cierto que el $\ker(\phi)=\{0_v\}$, entonces:
+$$
+\phi(v_1)=\phi(v_2)\Rightarrow \phi(v_1-v_2)=0_v'\Rightarrow v_1-v_2\in \ker(\phi)\Rightarrow v_1-v_2=0_v\Rightarrow v_1=v_2
+$$
 \end{itemize}
 \end{enumerate}
 \end{demo}
+
+\begin{obs}
+La demostración del enunciado anterior para la inyectividad pone de manifiesto que en las aplicaciones lineales SIEMPRE $\phi(0) = 0$.
+\end{obs}
 
 \textbf{Proyecciones}\par
 
@@ -861,12 +1048,12 @@ $$\begin{cases}\phi(v)=w-u \\ \varphi(v)=w \\ id(v)=w+u\end{cases}\Rightarrow (\
 \end{itemize}
 
 \begin{prop}[Operaciones con aplicaciones lineales]
-Sean $\phi_1, \phi_2: V\longrightarrow V'$ aplicaciones $K-lineales$, si definimos las operaciones:
+Sean $\phi_1, \phi_2: V\longrightarrow V'$ aplicaciones $K-lineales$ y las operaciones:
 \begin{itemize}
-\item $(\phi_1+\phi_2)(v)\stackrel{Def}{=}\phi_1(v)+\phi_2(v):\forall v\in V$
-\item $(a\cdot \phi_1)(v)\stackrel{Def}{=}a\cdot \phi_1(v):\forall v\in V$
+\item $(\phi_1+\phi_2)(v)\stackrel{def}{:=}\phi_1(v)+\phi_2(v)$
+\item $(a\cdot \phi_1)(v)\stackrel{def}{:=}a\cdot \phi_1(v)$
 \end{itemize}
-entonces podemos considerar $(Hom(V,V'),+,\cdot )$ como un espacio vectorial.
+entonces la terna $(Hom(V,V'),+,\cdot )$ tiene estructura de espacio vectorial.
 \end{prop}
 
 \begin{obs}
@@ -874,34 +1061,55 @@ Del mismo modo, se puede ver que $(\phi_2 \circ \phi_1)(v)$ es también una apli
 \end{obs}
 
 \begin{theo}
-Sean $V$ y $V'$ espacios vectoriales y $\{v_1, \cdots, v_n\}$ base de $V$ y $v_1', \cdots, v_n'\in V'$ vectores arbitrarios de $V'$ el teorema dice que:
-$$\exists! \phi: V\longrightarrow V': \phi(v_i)=v_i': \forall i=1,\cdots,n$$
-Esto quiere decir que una aplicación lineal entre dos espacios vectoriales está determinada de modo único por la imagen de los vectores de la base del espacio de partida.
+Sean $V$ y $V'$ espacios vectoriales, $B:=\{v_1, \cdots, v_n\}$ una base de $V$ y $v_1', \cdots, v_n'\in V'$ vectores arbitrarios de $V'$, entonces:
+$$
+\exists! \phi: V\longrightarrow V' \mbox{ tal que } \phi(v_i)=v_i': \forall i=1,\cdots,n
+$$
+es decir, una aplicación lineal queda únicamente determinada por la imagen de los vectores de una base del espacio de partida.
 \end{theo}
 \begin{demo}
 \begin{itemize}
 \item Existencia:
-Sea $v\in V: v=(a_1, \cdots, a_n)_B$ quiere decir que $v=\sum_{i=1}^n a_iv_i$. Ahora definimos $\phi(v)=\sum_{i=1}^na_iv_i'$ y vemos que es lineal:
-$$w=(b_1,\cdots,b_n)_B\Rightarrow v+w=(a_1+b_1,\cdots, a_n+b_n)_b\Rightarrow \phi(v+w)=\sum_{i=1}^n (a_i+b_i)v_i'=\sum_{i=1}^na_iv_i' + \sum_{i=1}^nb_iv_i'=\phi(v)+\phi(w)$$
-$$a\cdot v=(a\cdot a_1, \cdots, a\cdot a_n)_B\Rightarrow \phi(a\cdot v)=\sum_{i=1}^n(a\cdot a_i)v_i'=a\cdot \sum_{i=1}^na_iv_i'=a\cdot \phi(v)$$
 
-Y ahora vemos que se demuestra la existencia:
-$$v_i=(0,\cdots,1,\cdots,0)_B\Rightarrow \phi(v_i)=1\cdot v_i'=v_i'$$
+Cualquier $v=(a_1, \cdots, a_n)_B \in V$ se expresa en términos de la base $B$ como $v=\sum_{i=1}^n a_iv_i$, luego parece razonable que definamos la aplicación $\phi$ como $\phi(v) := \sum_{i=1}^na_iv_i'$. Para probar que efectivamente esta definición cumple el enunciado, no hay más que demostrar su linealidad:
+$$
+v+w = (a_1+b_1,\cdots, a_n+b_n)_B \Rightarrow \phi(v+w) = \sum_{i=1}^n (a_i+b_i)v_i' = \sum_{i=1}^na_iv_i' + \sum_{i=1}^nb_iv_i'=\phi(v)+\phi(w)
+$$
+$$
+a\cdot v=(a\cdot a_1, \cdots, a\cdot a_n)_B\Rightarrow \phi(a\cdot v)=\sum_{i=1}^n(a\cdot a_i)v_i'=a\cdot \sum_{i=1}^na_iv_i'=a\cdot \phi(v)
+$$
+y que conserva la propiedad $\phi(v_i) = v_i'$ del enunciado:
+$$
+v_i=(0,\cdots,1,\cdots,0)_B\Rightarrow \phi(v_i)=1\cdot v_i'=v_i'
+$$
 
 \item Unicidad:
-$$\mbox{Suponemos que hay dos y vemos que van a cumplir: }\phi(v_i)=\varphi(v_i)=v_i': \forall i=1,\cdots,n$$
-$$\phi(v)=\phi(\sum_{i=1}^na_iv_i)=\sum_{i=1}^na_i\phi(v_i)=\sum_{i=1}^na_iv_i'$$
-$$\varphi(v)=\varphi(\sum_{i=1}^na_iv_i)=\sum_{i=1}^na_i\varphi(v_i)=\sum_{i=1}^na_iv_i'$$
+
+Supongamos que hay dos y veamos que son la misma. Como hay dos, sabemos que $\phi(v_i)=\varphi(v_i)=v_i'$, luego:
+$$
+\phi(v)=\phi\left(\sum_{i=1}^na_iv_i\right)=\sum_{i=1}^na_i\phi(v_i)=\sum_{i=1}^na_iv_i'
+$$
+$$
+\varphi(v)=\varphi\left(\sum_{i=1}^na_iv_i\right)=\sum_{i=1}^na_i\varphi(v_i)=\sum_{i=1}^na_iv_i'
+$$
 \end{itemize}
 \end{demo}
 
 \begin{ej}
-Esto lo que quiere decir es que si suponemos que $V=K^2$ y $V'=K^3$ entonces solo hay una aplicación lineal que cumpla que $\phi(e_1)=(2,1,-3)$ y $\phi(e_2)=(0,1,0)$, con lo cual sabiendo la relación que existe entre los vectores de la base de un espacio y los vectores del espacio de llegada podemos definir de modo único la aplicación que las relaciona.
-$$\phi(a_1, a_2)=\phi(a_1e_1+a_2e_2)=a_1(2,1,-3)+a_2(0,1,0)=(2a_1, a_1+a_2, -3a_1)$$
+Sean $V=K^2$ y $V'=K^3$, solo hay una aplicación lineal que cumpla que
+\begin{align*}
+\phi(e_1)=(2,1,-3) & & \phi(e_2)=(0,1,0)
+\end{align*}
+porque como cada vector está definido en términos de la base, la aplicación es lineal y los vectores de la base tienen determinada su imagen, entonces para un vector arbitrario ocurre que:
+$$
+\phi(a_1, a_2)=\phi(a_1e_1+a_2e_2)=a_1(2,1,-3)+a_2(0,1,0)=(2a_1, a_1+a_2, -3a_1)
+$$
 \end{ej}
 
 \subsection{Isomorfía de Espacios Vectoriales}
-En ocasiones conocemos poco las características del espacio vectorial que estamos manejando. En estas situaciones, es útil encontrar un isomorfismo entre el espacio que manejamos y otro que sí conocemos, pues de encontrar dicha biyección se puede trabajar con uno y otro de forma intercambiable y aplicar los resultados del uno en el otro y viceversa.
+Ya hemos visto que en general si conozco las coordenadas de un vector conozco prácticamente todo lo relevante para los resultados que hemos expuesto sobre cambios de base y aplicaciones lineales. Como trabajar con el vector simplemente conociendo sus coordenadas es lo mismo que trabajar en $K^n$, esto nos da una pista sobre que trabajar en un espacio vectorial cualquiera va a ser muy parecido, si no igual, a trabajar en $K^n$.
+
+Cuando dos espacios vectoriales tienen la misma estructura, se dice que son isomorfos. Esto tiene grandes ventajas pues por muy complicado que sea el espacio en el que me muevo, si conozco un espacio vectorial que sea isomorfo a él y donde me maneje bien, entonces podré trabajar indistintamente en este último y aplicar los resultados del mismo en el primero (a través de una biyección entre los espacios adecuada).
 
 \begin{theo}
 Dos espacios vectoriales son isomorfos si y solo si la dimensión de ambos es la misma.
@@ -982,60 +1190,59 @@ $$\dim (W+U/W)=\dim (W+U)- \dim W\stackrel{Grassman}{=}\dim U-\dim (W\cap U)=\di
 \end{demo}
 
 \subsection{Matriz asociada a una aplicación lineal}
-Del mismo modo que un espacio vectorial quedaba completamente determinado a través de la base que lo componía, nuestro objetivo ahora es condensar toda la información relativa a una transformación lineal en un objeto matemático que nos sea fácil de manejar, en este caso, una matriz.
+El hecho de que una aplicación lineal quede determinada de modo único por su imagen a través de los vectores de una base sugiere que la información necesaria para conocer a una aplicación lineal es finita. Por tanto, existirá una representación de la misma que contenga esta información finita y que simplifique la forma de trabajar con ella.
 
-Sea $\phi: V\longrightarrow V'$ una aplicación K-lineal, $B=\{v_1,\cdots, v_n\}$ una base de $V$ y $B'=\{v_1',\cdots, v_m'\}$ una de $V'$. Sabemos que $\phi$ está determinado de modo único por su valor en los vectores de la base $B$, es decir:
-$$\begin{cases}\phi(v_1)=a_{11}v_1'+\cdots+a_{m1}v_m'
-\\ \vdots \\ \phi(v_n)=a_{1n}v_1'+\cdots+a_{mn}v_m'\end{cases}$$
-Con lo cual, podemos construir una matriz:
-$$M_{B,B'}(\phi)=\underbrace{\left(\begin{array}{ccc} \overbrace{a_{11}}^{\phi(v_1)} & \cdots & \overbrace{a_{1n}}^{\phi(v_n)} \\ \vdots & \ddots & \vdots \\ a_{m1} & \cdots & a_{mn} \end{array}\right)}_{\mbox{En base }B'}\in Mat_{m\times n}(K)$$
-Luego la pregunta es clara, ¿cómo podemos recuperar la aplicación $\phi$ a partir de su matriz asociada en términos de $B$ y $B'$? Expresamos la imagen de un vector genérico de $V$ en términos de la base B':
-$$\phi(x_1v_1+\cdots+x_nv_n)=x_1\phi(v_1)+\cdots+x_n\phi(v_n)=x_1(a_{11}v_1'+\cdots+a_{m1}v_m')+\cdots + x_n(a_{1n}v_1'+\cdots+a_{mn}v_m')=$$
-$$=\underbrace{(a_{11}x_1+\cdots+a_{1n}x_n)}_{x_1'}v_1'+\cdots\underbrace{(a_{m1}x_1+\cdots+a_{mn}x_n)}_{x_m'}v_m'\Rightarrow$$
-$$\Rightarrow \phi(v)=\phi(x_1v_1+\cdots+x_nv_n)=(a_{11}x_1+\cdots+a_{1n}x_n)v_1'+\cdots(a_{m1}x_1+\cdots+a_{mn}x_n)v_m'=x_1'v_1'+\cdots+x_m'v_m'=v'$$
-Con lo cual para transformar un vector en otro tenemos que:
-$$\left(\begin{array}{c} \overbrace{x_1'}^{\phi(v)} \\ \vdots\\ x_m'\end{array}\right)=\left(\begin{array}{ccc} \overbrace{a_{11}}^{\phi(v_1)} & \cdots & \overbrace{a_{1n}}^{\phi(v_n)} \\ \vdots & \ddots & \vdots \\ a_{m1} & \cdots & a_{mn} \end{array}\right)\cdot \left(\begin{array}{c} \overbrace{x_1}^{v} \\ \vdots\\ x_n\end{array}\right) \Rightarrow \phi(v) = M_{B,B'}(\phi)\cdot v^t$$
-\begin{theo}[de la Matriz Asociada]
-Sea $\phi: V\longrightarrow V'$ una aplicación K-lineal, $B=\{v_1,\cdots, v_n\}$ una base de $V$ y $B'=\{v_1',\cdots, v_m'\}$ una de $V'$. Podemos expresar la imagen por $\phi$ de los vectores de $V$ como:
-$$\forall v\in V : \phi(v) = M_{B,B'}(\phi) \cdot v^t$$
-donde la matriz de la ecuación es la matriz:
-$$\left(\begin{array}{ccc} \overbrace{a_{11}}^{\phi(v_1)} & \cdots & \overbrace{a_{1n}}^{\phi(v_n)} \\ \vdots & \ddots & \vdots \\ a_{m1} & \cdots & a_{mn} \end{array}\right)$$
-\end{theo}
-
-\begin{ej}
-Consideremos $\phi: \mathbb R^2 \longrightarrow \mathbb R^2$ y que $\phi(e_1)=\frac{3e_1+4e_2}{5}$ y $\phi(e_2)=\frac{4e_1-3e_2}{5}$, entonces tenemos que:
-$$A=M_{B_c}(\phi)=\left(\begin{array}{cc} \frac{3}{5} & \frac{4}{5} \\ \frac{4}{5} & \frac{-3}{5}\end{array}\right)\Rightarrow A^2=I \Rightarrow \phi^2=id_{\mathbb R^2}\Rightarrow \mbox{ simetría}$$
-Con lo cual, $\phi$ posee base $W$ y dirección $U$ de la simetría, entonces:
-$$v=(x_1,x_2)_B\in W\Leftrightarrow \phi(v)=v\Leftrightarrow \begin{pmatrix}
-x_1 \\
-x_2
-\end{pmatrix}=A\begin{pmatrix}
-x_1\\
-x_2
-\end{pmatrix}\Leftrightarrow W: x_1-2x_2=0
+Sea $\phi: V\longrightarrow V'$ una aplicación K-lineal, $B=\{v_1,\cdots, v_n\}$ una base de $V$ y $B'=\{v_1',\cdots, v_m'\}$ una de $V'$, sabemos que $\phi$ está determinada de modo único por su imagen a través de los vectores de la base $B$:
 $$
-Para hallar el subespacio $U$ el procedimiento es el mismo.
-\end{ej}
+\begin{cases}\phi(v_1)=a_{11}v_1'+\cdots+a_{m1}v_m'
+\\ \vdots \\ \phi(v_n)=a_{1n}v_1'+\cdots+a_{mn}v_m'\end{cases}
+$$
+Por otro lado, si calculamos la imagen de un vector $v$ arbitrario tenemos que:
+\begin{eqnarray*}
+\phi(v)
+&=& \phi(x_1v_1+\cdots+x_nv_n) \\
+&=& x_1\phi(v_1)+\cdots+x_n\phi(v_n) \\
+&=& x_1(a_{11}v_1'+\cdots+a_{m1}v_m')+ \cdots + x_n(a_{1n}v_1'+\cdots + a_{mn}v_m') \\
+&=& \underbrace{(a_{11}x_1+\cdots+a_{1n}x_n)}_{x_1'}v_1'+\cdots\underbrace{(a_{m1}x_1+\cdots+a_{mn}x_n)}_{x_m'}v_m'
+\end{eqnarray*}
+Por tanto, podemos observar que la relación con las coordenadas $(x_1', \cdots, x_m')$ se puede ver como un sistema lineal en el que interviene la información sobre la imagen de los vectores de la base inicial. Dicho sistema lineal, si se representa en su expresión matricial, tiene la forma:
+Con lo cual para transformar un vector en otro tenemos que:
+$$\left(\begin{array}{c} \overbrace{x_1'}^{\phi(v)} \\ \vdots\\ x_m'\end{array}\right)=\underbrace{\left(\begin{array}{ccc} \overbrace{a_{11}}^{\phi(v_1)} & \cdots & \overbrace{a_{1n}}^{\phi(v_n)} \\ \vdots & \ddots & \vdots \\ a_{m1} & \cdots & a_{mn} \end{array}\right)}_{M_{B,B'}(\phi)}\cdot \left(\begin{array}{c} \overbrace{x_1}^{v} \\ \vdots\\ x_n\end{array}\right) \Rightarrow \phi(v) = M_{B,B'}(\phi)\cdot v^t$$
+
+\begin{theo}[de la Matriz Asociada]
+Sea $\phi: V\longrightarrow V'$ una aplicación K-lineal, $B=\{v_1,\cdots, v_n\}$ una base de $V$ y $B'=\{v_1',\cdots, v_m'\}$ una de $V'$, podemos expresar la aplicación lineal como:
+$$
+\forall v\in V : \phi(v) = M_{B,B'}(\phi) \cdot v^t
+$$
+\end{theo}
 
 \begin{prop}[Operaciones con matrices asociadas]
 \begin{itemize}
-\item Sean $V\stackrel{\phi_1, \phi_2}{\longrightarrow} V'$ dos aplicaciones lineales y $B$ y $B'$ bases respectivas de los espacios $V$ y $V'$, entonces:
-$$M_{B,B'}(\phi_1+\phi_2)=M_{B,B'}(\phi_1)+M_{B,B'}(\phi_2)$$
+\item Sean $\phi_1,\phi_2 : V\longrightarrow V'$ dos aplicaciones lineales y $B$ y $B'$ bases respectivas de los espacios $V$ y $V'$, entonces:
+$$
+M_{B,B'}(\phi_1+\phi_2)=M_{B,B'}(\phi_1)+M_{B,B'}(\phi_2)
+$$
 
-\item Del mismo modo, si $a\in \mathbb K$ y $\phi: V\longrightarrow V'$, entonces:
-$$M_{B,B'}(a\cdot \phi)=a \cdot M_{B,B'}(\phi)$$
+\item Sea $\phi : V\longrightarrow V'$, $B$ y $B'$ bases respectivas y $a\in \mathbb K$, entonces:
+$$
+M_{B,B'}(a\cdot \phi)=a \cdot M_{B,B'}(\phi)
+$$
 
-\item Por último, $V\stackrel{\phi}{\longrightarrow} V'\stackrel{\varphi}{\longrightarrow } V''$, entonces:
-$$M_{B,B''}(\varphi\circ \phi)=M_{B,B''}(\varphi)\cdot M_{B,B''}(\phi)$$
+\item Sean las aplicaciones $V\stackrel{\phi}{\longrightarrow} V'\stackrel{\varphi}{\longrightarrow } V''$ y $B$ y $B'$ bases respectivas, entonces:
+$$
+M_{B,B''}(\varphi\circ \phi)=M_{B',B''}(\varphi)\cdot M_{B,B'}(\phi)
+$$
 \end{itemize}
 \end{prop}
 
 \begin{prop}
-Además, comentamos anteriormente que $(Hom_k(V,V'), +, \cdot )$ forma un espacio vectorial, por lo que podemos ver tomando $\dim V=n$ y $\dim V'=m$ que:
+Sea $(Hom_k(V,V'), +, \cdot )$ el espacio vectorial de los homomorfismos de $V'$ en $V$ y suponiendo $\dim V=n$ y $\dim V'=m$, entonces
 \begin{eqnarray*} \Phi:(V,V') &\longrightarrow& Mat_{m\times n}(K)\\ \phi &\longmapsto& M_{B,B'}(\phi) 
 \end{eqnarray*} 
-es un isomorfismo de espacios vectoriales, luego
-$$Hom_k(V,V')\simeq Mat_{m\times n}(K)$$
+es un isomorfismo de espacios vectoriales, es decir:
+$$
+Hom_k(V,V')\simeq Mat_{m\times n}(K)
+$$
 \end{prop}
 \begin{demo}
 \begin{itemize}
@@ -1048,39 +1255,43 @@ $$\phi\in \ker(\phi)\Rightarrow \Phi(\phi)=0\Rightarrow \Phi(\phi)=Mat_{B,B'}(\p
 
 \item Ahora que es suprayectiva:
 $$A=\begin{pmatrix}
-a_{11} & \cdots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{m1} & \cdots & a_{mn}\end{pmatrix}\in Mat_{m\times n}(K)\Rightarrow \exists \phi: V\longrightarrow V'\mbox{ tal que }\phi(v_i)=a_{1i}v_1'+\cdots+a_{mi}v_m'\Rightarrow \exists!\phi\Rightarrow Sobre$$
+a_{11} & \cdots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{m1} & \cdots & a_{mn}\end{pmatrix}\in Mat_{m\times n}(K)\Rightarrow \exists \phi: V\rightarrow V'\mbox{ tal que }\phi(v_i)=a_{1i}v_1'+\cdots+a_{mi}v_m'\Rightarrow \exists!\phi\Rightarrow Sobre$$
 
 Como para que la imagen de $\phi$ sea $A$ tiene que definirse a partir de los vectores de V', entonces es única porque ya demostramos que estos la determinan.
 \end{itemize}
 \end{demo}
 
 \begin{obs}
-Análogamente, si consideramos $(End_k(V), +, \circ)$ que forma un anillo unitario, entonces $End_k(V)\simeq Mat_n(K)$:
-\begin{eqnarray*} \Phi:(V,V) &\longrightarrow& Mat_{m\times n}(K)\\ \phi &\longmapsto& M_{B}(\phi) 
-\end{eqnarray*} 
+Como el resultado anterior es cierto para cualesquiera $V$ y $V'$, entonces $End_k(V)\simeq Mat_n(K)$ a través del mismo isomorfismo.
 \end{obs}
 
-
 \subsubsection{Equivalencia de aplicaciones lineales y relación entre sus matrices}
-Si dos aplicaciones lineales son esencialmente la misma aplicación, pero están expresadas respecto de bases distintas, entonces guardarán una relación muy especial que también relacionará sus matrices. En este apartado, tratamos de estudiar qué consecuencias tiene dicha relación y que ventajas le podemos sacar.
+Después de identificar cada aplicación lineal con su matriz asociada, puede surgir la siguiente pregunta: ¿cómo cambia la matriz si cambio las bases respecto de las cuales está definida $\phi$?
 
-\begin{defi}[Equivalencia de aplicaciones]
-Sea $A_1, A_2\in Mat_{m\times n}(K)$ y $V, V'$ espacios vectoriales de dimensiones $n$ y $m$ respectivamente, entonces se define la \textbf{equivalencia de matrices} como:
+Además, si la matriz asociada cambia al elegir bases distintas, tiene sentido definir un conjunto cociente donde las matrices que representan a la misma aplicación lineal desde bases distintas sean todas equivalentes.
+
+\begin{defi}[Equivalencia de matrices]
+Sea $A_1, A_2\in Mat_{m\times n}(K)$ y $V, V'$ espacios vectoriales de dimensiones $n$ y $m$ respectivamente, decimos que son \textbf{matrices equivalentes} si y sólo si:
 $$A_1\approx A_2 \Leftrightarrow \exists \phi: V\rightarrow V'\mbox{ lineal y bases } B_1,B_2\subset V \mbox{ y } B_1', B_2'\subset V': \begin{cases}
 A_1=M_{B_1,B_1'}(\phi) \\ A_2=M_{B_2,B_2'}(\phi)
 \end{cases}$$
-Es decir, dos matrices son equivalentes si representan a la misma aplicación lineal respecto de bases distintas.
+es decir, si representan a la misma aplicación lineal respecto de bases distintas.
 \end{defi}
 
-Para entender este concepto vamos a ver con cuidado todo el desarrollo del razonamiento teórico. Sea $\phi: V\longrightarrow V'$ y $B_1, B_2$ bases de $V$ y $B_1', B_2'$ bases de $V'$, definimos las matrices:
+Por tanto, el estudio de este conjunto cociente ahora se debería centrar en ver si cada clase de equivalencia tiene más de un elemento y ver cómo se relacionan los elementos de la misma clase de equivalencia. Para ello, supongamos una aplicación $\phi: V\longrightarrow V'$ y $B_1, B_2$ bases de $V$ y $B_1', B_2'$ bases de $V'$, con matrices\footnote{Nótese que pueden considerarse ambas matrices como matrices de una aplicación lineal porque anteriormente hemos demostrado que existía un isomorfismo entre el conjunto de matrices y el de aplicaciones.} asociadas:
 \begin{align*}
 A_1=Mat_{B_1,B_1'}(\phi) & & A_2=Mat_{B_2,B_2'}{}(\phi)
 \end{align*}
-Para entender la relación entre observar $\phi$ desde las bases $B_1$ y $B_1'$ con las de $B_2$ y $B_2'$ podemos ver la siguiente composición de funciones:
-$$\underbrace{V}_{B_1}\xrightarrow{id_v} \underbrace{V}_{B_2} \xrightarrow{\phi} \underbrace{V'}_{B'_2} \xrightarrow{id_{v'}} \underbrace{V'}_{B'_1}$$
-De este modo, podemos ver $A_1$ como la composición\footnote{Nótese que la composición de funciones se hace en orden inverso al producto de las mismas.} de las funciones que en el diagrama anterior aparecen, luego
-$$A_1=M_{B_1,B_1'}(\phi)=M_{B_2',B_1'}(id_{V'})\cdot M_{B_2,B_2'}(\phi)\cdot M_{B_1, B_2}(id_V)=\underbrace{M(B_2',B_1')}_{Q}\cdot A_2\cdot \underbrace{M(B_1,B_2)}_{P}=Q\cdot A_2\cdot P$$
-Sabemos, por ser matrices de paso, que $Q\in Mat_m(K)^x=Gl_m(K)$ y $P\in Mat_n(K)^x=Gl_n(K)$, es decir, existen sus inversas. Por lo tanto, podemos dar la siguiente definición para la equivalencia de matrices:
+A través del siguiente diagrama, se puede ver que considerar la aplicación expresada en términos de $B_1$ y $B_1'$ es lo mismo que considerarla en términos de $B_2$ y $B_2'$ pero cambiando de base antes y después para que todo se exprese en las bases iniciales:
+$$
+\underbrace{V}_{B_1}\xrightarrow{id_v} \underbrace{V}_{B_2} \xrightarrow{\phi} \underbrace{V'}_{B'_2} \xrightarrow{id_{v'}} \underbrace{V'}_{B'_1}
+$$
+es decir, que podemos ver $M_{B_1,B_1'}(\phi) = A_1$ como la composición\footnote{Nótese que la composición de funciones se hace en orden inverso al producto de las mismas.} de las funciones que en el diagrama anterior aparecen, luego:
+$$
+A_1=M_{B_1,B_1'}(\phi)=M_{B_2',B_1'}(id_{V'})\cdot M_{B_2,B_2'}(\phi)\cdot M_{B_1, B_2}(id_V)=\underbrace{M(B_2',B_1')}_{Q}\cdot A_2\cdot \underbrace{M(B_1,B_2)}_{P}=Q\cdot A_2\cdot P
+$$
+Como $P$ y $Q$ son matrices de cambio de base, pertenecen al grupo lineal, es decir, tienen inversa. Esto permite expresar, simplemente multiplicando por la inversa en ambos lados, $A_2$ en término de $A_1$ por matrices cuadradas del mismo modo que lo estábamos haciendo para $A_1$. Con este último resultado estamos en condiciones de poder reformular la definición de equivalencia de matrices de la siguiente manera.
+
 \begin{defi}[Equivalencia de matrices]
 Sean $A_1, A_2\in Mat_{m\times n}(K)$, se define la \textbf{equivalencia} como:
 $$A_1\approx A_2 \Leftrightarrow \exists P\in GL_n(K), Q\in GL_m(K) :  A_1=Q\cdot A_2\cdot P$$
@@ -1088,57 +1299,67 @@ donde el conjunto $GL(K)$ se refiere a las matrices inversibles de los tamaños 
 \end{defi}
 
 \begin{obs}
-Esto quiere decir que para una misma aplicación lineal existen varias representaciones matriciales en función de la base escogida que la defina, pero por medio de esta fórmula se relacionan todas ellas. Vemos, por tanto, que esta relación entre matrices establece una relación de equivalencia en $Hom(V,V')$ y las matrices que representan a la misma $\phi$ pertenecen a la misma clase de equivalencia.
+El desarrollo anterior permite relacionar todas las matrices que expresan a una aplicación lineal a través de una clase de equivalencia en el conjunto cociente que induce la relación de equivalencia entre matrices.
 \end{obs}
 
 \begin{prop}
-Sea $V$ un espacio vectorial de dimensión $n$, $B = \{v_1, \cdots, v_n\}$ una base del mismo y $P\in Gl_n(K)$. Expresamos $P$ de la siguiente forma y definimos el conjunto $B'$:
-\begin{align*}
-P=\begin{pmatrix} p_{11} & \cdots & p_{1n} \\ \vdots & \ddots & \vdots \\ p_{n1} & \cdots & p_{nn}\end{pmatrix} & & B'=\left\lbrace v_1'=\sum_{i=1}^np_{i1}v_i, \cdots , v_n'=\sum_{i=1}^n p_{in}v_i\right\rbrace
-\end{align*}
-entonces ocurre que:
-\begin{enumerate}
-\item El conjunto $B'$ es base de V.
-
-\item $P=M(B',B)$
-\end{enumerate}
+Sea $V$ un espacio vectorial, $B = \{v_1, \cdots, v_n\}$ una base del mismo y $P\in Gl_n(K)$ de  la forma $P=(p_{ij})$, entonces el conjunto de vectores:
+$$
+B' := \left\lbrace v_1'=\sum_{i=1}^np_{i1}v_i, \cdots , v_n'=\sum_{i=1}^n p_{in}v_i\right\rbrace
+$$
+es base de $V$ y $P$ es la matriz de cambio de base a $B'$.
 \end{prop}
 \begin{demo}
 \begin{enumerate}
-\item Supongamos:
-$$0=a_1v_1'+\cdots+ a_nv_n'=a_1(p_{11}v_1+\cdots p_{n1}v_n)+\cdots +a_n(p_{1n}v_1+\cdots p_{nm}v_n)=$$
-$$=(p_{11}a_1+\cdots p_{1n}a_n)v_1+\cdots +(p_{n1}a_1+\cdots +p_{nm}a_n)v_n\Rightarrow $$
-
-Como los vectores $v_i$ formaban una base por hipótesis, tenemos que:
-$$\Rightarrow 
+\item Veamos la independencia lineal, pues como hay tantos vectores como dimensión del espacio, se cumpliría trivialmente que es base
+\begin{eqnarray*}
+0
+&=& a_1v_1'+\cdots+ a_nv_n' \\
+&=& a_1(p_{11}v_1+\cdots p_{n1}v_n)+\cdots +a_n(p_{1n}v_1+\cdots p_{nm}v_n) \\
+&=& (p_{11}a_1+\cdots p_{1n}a_n)v_1+\cdots +(p_{n1}a_1+\cdots +p_{nm}a_n)v_n
+\end{eqnarray*}
+Como los vectores $v_i$ formaban una base, los coeficientes asociados a cada uno en la expresión anterior son nulos. Esto, expresado de forma matricial, se puede escribir como:
+$$
 \begin{cases}
 p_{11}a_1+\cdots p_{1n}a_n=0 \\
 \vdots \\
 p_{n1}a_1+\cdots +p_{nm}a_n
-\end{cases}\Rightarrow P\cdot \begin{pmatrix} a_1 \\ \vdots \\ a_n\end{pmatrix}= \begin{pmatrix} 0 \\ \vdots \\ 0\end{pmatrix}\Leftrightarrow   \begin{pmatrix} a_1 \\ \vdots \\ a_n\end{pmatrix}= P^{-1}\cdot \begin{pmatrix} 0 \\ \vdots \\ 0\end{pmatrix}=0\Rightarrow \forall i=0,\cdots, n: a_i=0\Rightarrow $$
-$$\Rightarrow \{v_1', \cdots, v_n'\}\mbox{ l. ind.}\stackrel{\dim V=n}{\Rightarrow} \{v_1', \cdots, v_n'\}\mbox{ es base}
-$$
+\end{cases}\Rightarrow P\cdot \begin{pmatrix} a_1 \\ \vdots \\ a_n\end{pmatrix}= \begin{pmatrix} 0 \\ \vdots \\ 0\end{pmatrix}\Leftrightarrow   \begin{pmatrix} a_1 \\ \vdots \\ a_n\end{pmatrix}= P^{-1}\cdot \begin{pmatrix} 0 \\ \vdots \\ 0\end{pmatrix}=0\Rightarrow  a_i=0 $$
 
-\item Probada la 1ª la segunda es inmediata porque si probamos lo primero, coger cada vector de $B'$ y lo expreso en base $B$, sus coordenadas son los coeficientes de la matriz $P$.
+\item Probado lo anterior, esto es trivial pues si lo primero es cierto, coger cada vector de $B'$ y expresarlo en base $B$, hace que los coeficientes de $P$ sean sus coordenadas.
 \end{enumerate}
 \end{demo}
 
 \begin{obs}
-Esto nos lleva a considerar que TODA matriz inversible se puede considerar como una matriz de cambio de base dentro de un espacio vectorial.
+Del mismo modo que pudimos identificar cada matriz con una aplicación lineal de la que es asociada, el teorema anterior nos permite considerar que toda matriz inversible es una matriz de algún cambio de base dentro de un espacio vectorial.
 \end{obs}
 
 \subsection{Rango de una aplicación lineal}
 Una característica fundamental tanto de las aplicaciones lineales como del álgebra matricial es el rango de dicho objeto. Esta característica nos permite desde discutir sistemas lineales para elucubrar sus posibles soluciones como conocer la dimensión de la imagen del subespacio de llegada de una aplicación lineal.
 
-\begin{defi}[Rango]
-Sea $\phi: V\rightarrow V'$ una aplicación lineal, se define el \textbf{rango de la aplicación} como:
-$$rg(\phi)=\dim_k Im(\phi)$$
-Por tanto, en dimensión finita $\dim V=\dim \ker(\phi)+\dim Im(\phi)=\dim \ker(\phi)+ rg(\phi)$.
-
-Sea $A\in Mat_{m\times n}(K)$ definida como $A=\begin{pmatrix} a_{11} & \cdots  & a_{1n}\\ \vdots & \ddots & \vdots \\ a_{m1} & \cdots &a_{mn}\end{pmatrix}$, se define el \textbf{rango de la matriz} como:
-$$rg(A)=\dim_k L(a_{11}e_{1}+\cdots+a_{m1}e_m, \cdots , a_{1n}e_1+\cdots+a_{mn}e_m)$$
-Es decir, que $rg(A)$ es el subespacio generado por los vectores columnas de la matriz A (que están expresados en función de la base canónica de $K^m$).
+\begin{defi}[Rango de una aplicación]
+Sea $\phi: V\rightarrow V'$ una aplicación lineal, definimos el \textbf{rango de la aplicación} como:
+$$
+rg(\phi) := \dim_k Im(\phi)
+$$
+es decir, es la dimensión del subespacio imagen de la aplicación lineal.
 \end{defi}
+
+Si consideramos una matriz $A\in Mat_{m\times n}(K)$ definida como $A=(a_{ij})$, vimos que esta se podía interpretar como la matriz asociada a una aplicación lineal y, en ese caso, el rango de la aplicación lineal se correspondería con la dimensión de la envoltura lineal de los vectores columna (imagen de los de la base) que definen la imagen de la aplicación lineal. Por esto, tiene sentido dar la siguiente definición.
+
+\begin{defi}[Rango de una matriz]
+Sea $A\in Mat_{m\times n}(K)$ una matriz definida como $A=(a_{ij})$, definimos el \textbf{rango de la matriz} como: 
+$$
+rg(A) := \dim_k L(a_{11}e_{1}+\cdots+a_{m1}e_m, \cdots , a_{1n}e_1+\cdots+a_{mn}e_m)
+$$
+es decir, $rg(A)$ es la dimensión del subespacio generado por los vectores columnas de la matriz $A$.
+\end{defi}
+
+\begin{obs}
+Como la dimensión de la envoltura lineal es el número de vectores linealmente independientes, esto nos proporciona un método para calcular la dimensión de un subespacio o la independencia lineal de un conjunto de vectores.
+\end{obs}
+
+Claramente la definición anterior que se ha dado para el rango de una matriz solo es interesante si dicho rango se conserva entre todas las matrices que pueden representar una misma aplicación lineal. Por tanto, nuestros pasos se encaminan a poder decir que dicho rango depende exclusivamente de la aplicación lineal y no de la representación escogida para la misma.
 
 \begin{lema}
 Sea $A=(a_{ij})\in Mat_{m\times n}(K)$ y $W$ a un espacio vectorial cualquiera de dimensión $\dim W=m$ escogemos una base suya $B=\{w_1, \cdots, w_m\}$ y la definición de rango de la matriz $A$ no cambia.
@@ -1162,17 +1383,25 @@ Este lema lo que nos resume es que para la definición del rango de una matriz, 
 \end{obs}
 
 \begin{prop}
-Sea $\phi: V\rightarrow V'$ una aplicación lineal y $A = M_{B,B'}(\phi)$ la matriz que la representa, entonces el rango de ambas coincide, es decir:
-$$rg(\phi)=rg(A): A=M_{B,B'}(\phi)\mbox{ donde B y B' son bases arbitrarias}$$
-Es decir, lo que queremos decir es que el rango es el mismo sea cual sea la matriz que representa dicha transformación lineal.
+Sea $\phi: V\rightarrow V'$ una aplicación lineal y $A = M_{B,B'}(\phi)$ su representación matricial en bases arbitrarias, entonces:
+$$
+\forall A = M_{B,B'}(\phi) \in  Mat_{m\times n}(K) :  rg(\phi)=rg(A)
+$$
+es decir, el rango de la aplicación y de la matriz coincide para todas las matrices equivalentes.
 \end{prop}
 \begin{demo}
-$$rg(\phi)=\dim Im(\phi)=\dim L(\phi(v_1), \cdots, \phi(v_n))=\dim L(a_{11}v_1'+\cdots + a_{m1}v_m', \cdots , a_{1n}v_1'+\cdots +a_{mn}v_m')=rg(A)$$
+Simplemente basta con ver que
+$$
+rg(\phi)=\dim Im(\phi)=\dim L(\phi(v_1), \cdots, \phi(v_n))=\dim L(a_{11}v_1'+\cdots + a_{m1}v_m', \cdots , a_{1n}v_1'+\cdots +a_{mn}v_m')
+$$
+y precisamente el lema anterior nos dice que este último término es igual al rango de $A$.
 \end{demo}
 
 \begin{prop}
-Sea $A\in Mat_{m\times n}(K)$ cuyo rango es $r$, entonces $A$ es equivalente a una matriz\footnote{Esta notación quiere decir que la matriz se puede dividir en 4 cuadrantes desiguales, la parte superior izquierda corresponde a una matriz identidad cuadrada de tamaño $r$ y el resto de cuadrantes a matrices nulas que no tienen por qué ser cuadradas.} con esta forma:
-$$A\approx A'=\left(\begin{array}{c|c} I_r & 0  \\ \hline 0 & 0 \end{array}\right) \in Mat_{m\times n}(K)$$
+Sea $A\in Mat_{m\times n}(K)$ con rango $r$, entonces $A$ es equivalente a una matriz\footnote{Esta notación quiere decir que la matriz se puede dividir en 4 cuadrantes desiguales, la parte superior izquierda corresponde a una matriz identidad cuadrada de tamaño $r$ y el resto de cuadrantes a matrices nulas que no tienen por qué ser cuadradas.} con esta forma:
+$$
+A\approx A'=\left(\begin{array}{c|c} I_r & 0  \\ \hline 0 & 0 \end{array}\right) \in Mat_{m\times n}(K)
+$$
 \end{prop}
 \begin{demo}
 $$A=M_{B,B'}(\phi), \phi: \underbrace{V}_{B_1}\rightarrow \underbrace{V'}_{B_1'}$$
@@ -1194,26 +1423,36 @@ $$Mat_{B_2, B_2'}(\phi)=\begin{pmatrix}
 \end{demo}
 
 \begin{prop}
-Dos matrices $A_1$ y $A_2$ son equivalentes si y sólo si tienen el mismo rango:
-$$A_1\approx A_2\Leftrightarrow rg(A_1)=rg(A_2)$$
+Sean $A_1, A_2 \in Mat_{m\times n}(K)$, entonces:
+$$
+A_1\approx A_2\Leftrightarrow rg(A_1)=rg(A_2)
+$$
+es decir, la equivalencia se caracteriza por rangos.
 \end{prop}
 \begin{demo}
 \begin{itemize}
 \item ``$\Rightarrow $'':
-$$A_1=M_{B_1, B_1'}(\phi), A_2=M_{B_2, B_2'}(\phi)\Rightarrow rg(A_1)=rg(\phi)=rg(A_2)$$
+$$
+A_1=M_{B_1, B_1'}(\phi) \mbox{ y } A_2=M_{B_2, B_2'}(\phi) \Rightarrow rg(A_1)=rg(\phi)=rg(A_2)
+$$
 
 \item ``$\Leftarrow$'':
-$$rg(A_1)=rg(A_2)=r\Rightarrow A_1\approx \left(\begin{array}{c|c} I_r & 0  \\ \hline 0 & 0 \end{array}\right) \mbox{ y } A_2\approx\left(\begin{array}{c|c} I_r & 0  \\ \hline 0 & 0 \end{array}\right) \Rightarrow A_1\approx A_2$$
+$$
+rg(A_1)=rg(A_2)=r\Rightarrow A_1\approx \left(\begin{array}{c|c} I_r & 0  \\ \hline 0 & 0 \end{array}\right) \mbox{ y } A_2\approx\left(\begin{array}{c|c} I_r & 0  \\ \hline 0 & 0 \end{array}\right) \Rightarrow A_1\approx A_2
+$$
 \end{itemize}
 \end{demo}
 
 \begin{obs}
-Esta relación entre matrices define una relación de equivalencia que genera un nuevo espacio cociente de la forma $Mat_{m\times n}(K)/\approx=\{\bar{A}: A\in Mat_{m\times n}(K)\}$. Por ejemplo, si tenemos que $m=4$ y $n=3$, entonces $rg(A)\leq 3\Rightarrow r=0,1,2,3$, es decir, hay cuatro clases de equivalencia y cada matriz pertenece a una u otra en función del rango que tenga.
+Los enunciados anteriores permiten, no solo caracterizar la relación de equivalencia entre matrices a través del rango, sino conocer el número de clases de equivalencia y el mejor representante de cada una en el conjunto cociente $Mat_{m\times n}(K)/\approx $. Por ejemplo, si tenemos que $m=4$ y $n=3$, entonces $rg(A)\leq 3\Rightarrow r=0,1,2,3$, es decir, hay cuatro clases de equivalencia y cada matriz puede ser equivalente a cada una de las matrices con caja $I_r$ comentadas anteriormente.
 \end{obs}
 
 \begin{theo}
-Este teorema afirma que el rango por vectores columna y por vectores fila es el mismo aunque a priori no parezca tan trivial.
-$$rg(A)=rg(A^t)$$
+Sea $A \in Mat_{m\times n}(K)$ y denotando por $A^t$ a su traspuesta, entonces:
+$$
+rg(A)=rg(A^t)
+$$
+es decir, ambas matrices son equivalentes.
 \end{theo}
 \begin{demo}
 $$A\approx \left(\begin{array}{c|c} I_r & 0  \\ \hline 0 & 0 \end{array}\right)\Rightarrow \left(\begin{array}{c|c} I_r & 0  \\ \hline 0 & 0 \end{array}\right)= Q\cdot A \cdot P: P\in Gl_n(K), Q\in Gl_m(K)\Rightarrow \left(\begin{array}{c|c} I_r & 0  \\ \hline 0 & 0 \end{array}\right)^t= (QAP)^t$$
@@ -1242,26 +1481,38 @@ $$\Rightarrow \mbox{ como }rg(P)=n\mbox{ B' es l. ind.}\Rightarrow B'\mbox{ base
 \end{demo}
 
 \chapter{Estructura de Endomorfismos}
-Vamos a estudiar en este capítulo la estructura de unas aplicaciones lineales muy concretas, las que van de un cuerpo en sí mismo. La intención de este capítulo es clasificar los endomorfismos según su clase de equivalencia a través de los conceptos que se van a desarrollar.
+Este capítulo está dedicado a unos homomorfismos concretos: los que van de un cuerpo en sí mismo o endomorfismos. En el capítulo anterior, habíamos visto que para cualquiera aplicación lineal podíamos encontrar una matriz concreta más sencilla (por rango) que también representaba a la aplicación lineal. En este caso, esto no va a ser tan sencillo puesto que generalmente en los endomorfimos se suele dar la misma base de llegada que de partida.
+
+En esta línea, el capítulo va a tratar de desarrollar la teoría necesaria para poder utilizar la matriz más sencilla posible y va a introducir ciertos subespacios muy especiales, relacionados con el estudio de la matriz sencilla anterior.
 
 \begin{defi}[Semejanza de Aplicaciones]
-Sea $\phi: V\rightarrow V$ una aplicación lineal de un espacio vectorial $V$ en sí mismo, con dimensión $\dim V = n$, entonces definimos la \textbf{semejanza entre matrices} como:
-$$A\sim A' \Leftrightarrow \exists B, B'\subset V : \begin{cases}
-A=M_{B}(\phi) \\ A'=M_{B'}(\phi) \end{cases}$$
+Sea $\phi: V\rightarrow V$ una aplicación lineal de un espacio vectorial $V$ en sí mismo, con dimensión $\dim V = n$, definimos la \textbf{semejanza entre matrices} como:
+$$
+A\sim A' \Leftrightarrow \exists B, B'\subset V : \begin{cases}
+A=M_{B}(\phi) \\ A'=M_{B'}(\phi) \end{cases}
+$$
 \end{defi}
-De nuevo, como en el capítulo anterior, dada la aplicación lineal esta queda definida por su matriz $A=M_B(\phi)$ y la matriz $A'=M_{B'}(\phi)$ respecto de otra base $B'$ queda relacionada con primera por medio de una matriz de paso:
-$$A'= P^{-1}AP: P=M(B',B)\in Gl_n(K)$$
-Por tanto, podemos dar la siguiente definición equivalente a la primera dada:
+
+De nuevo, y haciendo el desarrollo del capítulo anterior, la definición previa impone que sean matrices que representan a la misma aplicación lineal respecto de bases distintas. Este hecho da pie a la posibilidad de pasar de una a otra a través de una matriz de cambio de base, de modo que ambas quedan relacionadas a través de la expresión:
+$$
+A'= P^{-1}AP: P=M(B',B)\in Gl_n(K)
+$$
+lo que permite dar una definición equivalente a la primera prescindiendo (al menos en apariencia) de las aplicaciones lineales.
+
 \begin{defi}[Semejanza de Matrices]
-Sean $A,A'\in Mat_{n}(K)$ dos matrices de dimensión $n$, decimos que estas dos matrices \textbf{son semejantes} si y sólo si existe una matriz de paso entre ambas:
-$$A\sim A' \Leftrightarrow \exists P \in Gl_n(K) : A' = P^{-1}AP$$
+Sean $A,A'\in Mat_{n}(K)$, decimos que ambas son \textbf{semejantes} si y sólo si existe una matriz en el grupo lineal que las relacione como:
+$$
+A\sim A' \Leftrightarrow \exists P \in Gl_n(K) : A' = P^{-1}AP
+$$
 \end{defi}
 
 \begin{obs}
-Esta relación entre matrices define una relación de equivalencia en el espacio $End(V)$.
+Al igual que ocurría con la equivalencia de matrices, esta relación de equivalencia (más fuerte que la anterior) permite definir un conjunto cociente y agrupar las matrices semejantes en la misma clase.
 \end{obs}
 
 \section{Polinomio mínimo y característico}
+Posteriormente cobrará más sentido esta noción, pero por lo pronto podemos decir que es interesante desde el punto de vista algebraico preguntarse por si una matriz es raíz de un polinomio. 
+
 \subsection{Polinomio mínimo de un endomorfismo}
 Consideramos $A\in Mat_n(K)$ y el conjunto de vectores $\{I_n, A, A^2, \cdots, A^{n^2}\}\subset Mat_n(K)$. Como $\dim Mat_n(K)= n^2$ y en ese conjunto hay $n^2+1$ vectores, necesariamente ese conjunto debe ser linealmente dependiente. Con lo cual, $\exists a_0, \cdots, a_{n^2}\in K: a_0I+\cdots+a_{n^2}A^{n^2}=0$ donde $\exists a_i \neq 0$, es decir, en cierta manera se puede interpretar que $A$ es la raíz del polinomio:
 $$(a_0+a_1x+\cdots+a_{n^2}x^{n^2})(A)=f(A): f\neq 0$$
@@ -1272,23 +1523,27 @@ Sea $\phi \in End(V)$ y dada la aplicación
 \begin{eqnarray*}
 \Phi_\phi:K[x] &\longrightarrow& End(V) \\ p(x) &\longmapsto& p(\phi) 
 \end{eqnarray*}
-se define el \textbf{polinomio mínimo} de un endomorfismo como el mínimo elemento en el $\ker \Phi_\phi$ y lo denotamos por $q_\phi(x)$, es decir, el polinomio mínimo es el polinomio de menor grado que se anula en el endomorfismo.
+se define el \textbf{polinomio mínimo $q_\phi(x)$ de un endomorfismo} como el mínimo polinomio en el $\ker \Phi_\phi$.
 \end{defi}
 
-\begin{prop}
-Sea $A\in Mat_n(K)$, siempre existe un polinomio no nulo y de grado al menos 1 del que es raíz.
-$$\forall A\in Mat_n(K): \exists f\in K[x]: f(A)=0$$
-\end{prop}
+La definición anterior formaliza la idea inicial de encontrar el polinomio de menor grado del cual el endomorfismo es raíz. Sin embargo, la idea inicial de la subsección proponía el razonamiento para matrices y no para endomorfismos ¿El polinomio mínimo del endomorfismo será el mismo que el polinomio mínimo de las representaciones matriciales del mismo? ¿Será el mismo entre representaciones matriciales? ¿Existe y hay alguna forma de calcularlo?
 
 \begin{defi}[Polinomio Mínimo de una Matriz]
-Sea $A\in Mat_n(K)$ y dada la siguiente aplicación
+Sea $A\in Mat_n(K)$ y dada la aplicación
 \begin{eqnarray*}
 \Phi_A:K[x] &\longrightarrow& Mat_n(K) \\ p(x) &\longmapsto& p(A) 
 \end{eqnarray*}
-se define el \textbf{polinomio mínimo de una matriz} como el mínimo elemento del $\ker \Phi_A$ y se denota por $q_A(x)$, es decir, el polinomio mínimo es el polinomio de menor grado que se anula en la matriz.
+se define el \textbf{polinomio mínimo $q_A(x)$ de una matriz} como el mínimo polinomio del $\ker \Phi_A$.
 \end{defi}
 
-\begin{prop}
+\begin{prop}[Existencia]
+Sea $A\in Mat_n(K)$, siempre existe un polinomio no constate del que es raíz.
+$$
+\forall A\in Mat_n(K): \exists f\in K[x]: f(A)=0
+$$
+\end{prop}
+
+\begin{prop}[Unicidad]
 Sea $A\in Mat_n(K)$, existe un único polinomio $q_A\in K[x]$ que cumple:
 \begin{itemize}
 \item $q_A\neq 0$
@@ -1298,31 +1553,48 @@ Sea $A\in Mat_n(K)$, existe un único polinomio $q_A\in K[x]$ que cumple:
 \end{itemize}
 \end{prop}
 \begin{demo}
-Las tres primeras condiciones ya se han visto donde se explica la parte de como descubrir dicho polinomio, por lo que vamos a demostrar la 3ª:
-$$f(A) = 0 \Rightarrow f(A)=0= g(A)q_A(A)+r(A)\Rightarrow r(A)=0\Rightarrow r=0\Rightarrow q_A\mid f$$
-Vemos que $r(A)=0\Rightarrow r=0$ porque $q_A$ es mínimo, entonces $r(A)$ que es de grado más pequeño no puede anularse a menos que sea el polinomio nulo.
+Las tres primeras condiciones ya se han visto donde se explica la parte de como descubrir dicho polinomio, por lo que vamos a demostrar la última:
+$$
+f(A) = 0 \Rightarrow f(A)=0= g(A)q_A(A)+r(A)\Rightarrow r(A)=0
+$$
+Como $r$ es de grado menor que $q_A$, no puede ser no nulo porque en ese caso habríamos encontrado un polinomio de grado menor que $q_A$ y que se anula en $A$, es decir, que $q_A$ no sería mínimo.
 
-Veamos que es único:
-$$q_A, q_A'\Rightarrow q_A\mid q_A' \mbox{ pero también }q_A'\mid q_A \Rightarrow q_A = q_A'$$
+Veamos que es único, para ello supongamos que existen dos. Por el razonamiento anterior, $q_A\mid q_A'$, pero también ocurre que $q_A'\mid q_A$. Por tanto, podemos deducir que $q_A = q_A'
+$.
 \end{demo}
 
 \begin{prop}
-Sean $A, A'\in Mat_n(K): A\sim A'$, entonces tienen el mismo polinomio mínimo.
+Sean $A, A'\in Mat_n(K)$ dos matrices semejantes, ambas tienen el mismo polinomio mínimo.
 \end{prop}
 \begin{demo}
-$$q_A(A')=q_A(P^{-1}AP)= (a_0+a_1x+\cdots+x^m)(P^{-1}AP)= a_0I+a_1P^{-1}AP+\cdots+(P^{-1}AP)^m= $$
-$$= a_0I+P^{-1}a_1AP+\cdots+ P^{-1}A^mP= P^{-1}(a_0I+a_1A+\cdots+A^m)P = P^{-1}\underbrace{q_A(A)}_{=0}P = 0$$
+La demostración es puramente algebraica, basta con ver que:
+\begin{eqnarray*}
+q_A(A')
+&=& q_A(P^{-1}AP) \\
+&=& (a_0+a_1x+\cdots+x^m)(P^{-1}AP) \\
+&=& a_0I+a_1P^{-1}AP+\cdots+(P^{-1}AP)^m \\
+&=& a_0I+P^{-1}a_1AP+\cdots+ P^{-1}A^mP \\
+&=& P^{-1}(a_0I+a_1A+\cdots+A^m)P \\
+&=& P^{-1}\underbrace{q_A(A)}_{=0}P = 0
+\end{eqnarray*}
 \end{demo}
 
-El último objetivo de este razonamiento es poder afirmar que el polinomio mínimo de un endomorfismo y de su representación matricial coinciden. Para ello, analizamos la matriz del endomorfismo resultante de evaluarlo en un polinomio:
-$$f= a_0+\cdots+a_mx^m \Rightarrow f(\phi)= a_0 id_v+\cdots+a_m\phi^m\Rightarrow$$
-$$\Rightarrow M_B(f(\phi))=a_0I+a_1A+\cdots+a_mA^m= f(A):A=M_B(\phi)$$
-y vemos precisamente que la matriz final es la misma que la resultante de evaluar la matriz $A$ del endomorfismo en $f$, es decir, $f(A) = M_B(f(\phi))$.
+Con este último resultado ya podemos afirmar que la definición de polinomio mínimo de una matriz coincide entre todas las matrices semejantes, esto es, entre todas las posibles representaciones matriciales de una misma aplicación lineal. Para concluir con las preguntas que planteamos al inicio de todo este desarrollo, basta con ver que el endomorfismo y las representaciones matriciales tienen en común el mismo polinomio mínimo.
 
-Por tanto, de aquí podemos concluir que para que el endomorfismo $q_\phi(\phi)$ sea el endomorfismo nulo, su matriz en cualquier base ha de ser la matriz nula, es decir\footnote{En la segunda ecuación se puede concluir que $q_A(\phi) = 0$ porque $M_B(q_A(\phi)) = 0$ para cualquier base $B$ ya que es cierto que $A$ cambia en función de la base, pero matrices semejantes tienen el mismo polinomio mínimo, luego $q_A = q_{A'}$.}
-$$q_\phi (\phi)=0\Leftrightarrow M_B(q_\phi(\phi))= 0\Leftrightarrow q_\phi(A)=0 \Rightarrow q_\phi \mid q_A$$
-$$q_A(A) = 0 \Leftrightarrow M_B(q_A(\phi)) = 0 \Leftrightarrow q_A(\phi) = 0\Rightarrow q_A\mid q_\phi$$
-Este resultado nos permite ver $q_\phi(\phi)$ como el endomorfismo nulo o como la matriz nula en función de lo que mejor nos convenga.
+Para un polinomio cualquiera $f(x) = a_0+\cdots+a_mx^m$ podemos considerar $f(\phi)$ como el endomorfismo resultante de sustituir este endomorfismo en el polinomio y operar según las operaciones para aplicaciones lineales vistas anteriormente. Cuando analizamos la matriz de dicho endomorfismo $f(\phi)$, entonces:
+$$
+f(\phi)= a_0 id_v+\cdots+a_m\phi^m \Rightarrow M_B(f(\phi))=a_0I+a_1A+\cdots+a_mA^m = f(A)
+$$
+nos damos cuenta de que dicha matriz es la misma que obtendríamos sustituyendo $A=M_B(\phi)$ en el mismo polinomio $f$, es decir, $f(A) = M_B(f(\phi))$.
+
+Por tanto, del razonamiento anterior podemos ver que
+$$
+q_\phi (\phi)=0\Leftrightarrow M_B(q_\phi(\phi))= 0\Leftrightarrow q_\phi(A)=0 \Rightarrow q_\phi \mid q_A
+$$
+$$
+q_A(A) = 0 \Leftrightarrow M_B(q_A(\phi)) = 0 \Leftrightarrow q_A(\phi) = 0\Rightarrow q_A\mid q_\phi
+$$
+donde cabe destacar que en la segunda ecuación la igualdad $M_B(q_A(\phi)) = 0$ es para cualquier base $B$ (porque las matrices semejantes tienen el mismo polinomio mínimo $q_A$) lo que justifica poder afirmar que el endomorfismo $q_A(\phi)$ es el nulo.
 
 Por tanto, visto que el razonamiento de polinomio mínimo se aplica para cualquier matriz y que dos matrices semejantes conservan su polinomio mínimo, podemos hacer referencia a el polinomio mínimo del endomorfismo \textbf{sea cual sea la matriz que lo representa}, puesto que este se conserva independientemente de la base en la que esté expresada su matriz.
 
@@ -1341,66 +1613,89 @@ $$\phi^2=id\Leftrightarrow (x^2-1)(\phi)=0\Leftrightarrow \begin{cases} (x-1)(\p
 \end{ej}
 
 \subsubsection{Polinomio mínimo de un endomorfismo y un vector}
-Lógicamente, si $q_\phi(\phi) = 0 $, entonces $\forall v\in V : q_\phi(\phi)(v) = 0$ puesto que es la aplicación nula. Por tanto, surge la siguiente pregunta: ¿cuál es el polinomio mínimo $q_v(x)$ para que $q_v(\phi)(v) = 0$?, es decir, se puede redefinir el concepto de polinomio mínimo, pero ahora respecto de dos objetos $q_{\phi, v}$ siendo $v\in V: v\neq 0$ y $\phi\in End(V)$ un endomorfismo.
+Lógicamente, $q_\phi(\phi) = 0 $ implica que $\forall v\in V : q_\phi(\phi)(v) = 0$ puesto que hemos comentado que $q_\phi(\phi)$ es la aplicación nula, pero esto genera una nueva pregunta: ¿cuál es el polinomio mínimo $q_v(x)$ para que $q_v(\phi)(v) = 0$?, es decir, ¿habrá otro polinomio distinto que se anule en un cierto vector, pero que no haga $\phi$ la aplicación nula?
 
 \begin{defi}[Polinomio mínimo de un Endomorfismo y un Vector]
 Sea $\phi\in End(V)$ y $v\in V$ no nulo, dada la aplicación 
 \begin{eqnarray*}
 \Phi_{v, \phi}: K[x] &\longrightarrow& V \\ p(x) &\longmapsto& p(\phi)(v) 
 \end{eqnarray*}
-se define el \textbf{polinomio mínimo de un endomorfismo y un vector} como el mínimo del $\ker \Phi_{v,\phi}$ y se denota por $q_{v, \phi}$, es decir, es el polinomio de menor grado para el cual la imagen de $v$ a través del endomorfismo $q(\phi)$ es nula.
+se define el \textbf{polinomio mínimo $q_{v, \phi}$ de un endomorfismo y un vector} como el mínimo polinomio del $\ker \Phi_{v,\phi}$.
 \end{defi}
 
 \begin{prop}
-Sea $\phi\in End(V)$ y $v\in V$, entonces:
-$$q_{v,\phi}\mid q_\phi$$
+Sea $\phi\in End(V)$ y $v\in V$, el polinomio mínimo del vector $q_{v,\phi}$ divide al polinomio mínimo del endomorfismo $q_\phi$.
 \end{prop}
 \begin{demo}
-Se tiene trivialmente por ser $q_\phi$ el mínimo donde se anulan todos los $v$ y ser $q_{v,\phi}$ el mínimo donde se anula $v$ (no necesariamente los demás).
+Como $q_\phi(\phi)(v) = 0$ tiene que ser un polinomio de grado mayor que el que hemos definido como mínimo $q_{v,\phi}$ y, por tanto, este último debe dividirlo.
 \end{demo}
 
 \begin{ej}
-Imaginemos que tenemos una proyección cuya matriz respecto de la base canónica es $M_{B_c}(\phi)=\begin{pmatrix} 1 & 0 \\ 0 & 0\end{pmatrix}$, ¿cuál es el polinomio mínimo de esta proyección? Por todo lo desarrollado antes es fácil ver que $q_\phi(\phi)= x^2-x$, pero ¿quién es $q_{\phi,e_1}(\phi)$ y $q_{\phi, e_2}$?.
+Supongamos que el endomorfismo $\phi$ es una proyección cuya matriz respecto de la base canónica es:
+$$
+M_{B_c}(\phi)=\begin{pmatrix} 1 & 0 \\ 0 & 0\end{pmatrix}
+$$
+¿cuál es el polinomio mínimo de esta proyección? Por todo lo desarrollado antes, es fácil ver que $q_\phi(\phi)= x^2-x$, pero ¿quién es $q_{\phi,e_1}(\phi)$ y $q_{\phi, e_2}$?.
 
-Aplicamos la proyección al primer vector y segundo vector: $\phi(e_1)=e_1$ y $\phi(e_2)=0$. Entonces $q_{\phi,e_1}=x-1(\phi)$ y $q_{\phi, e_2}=x$ porque $(x-1)(\phi)=\phi-id$ y ahora $\phi(e_1)-id(e_1)=e_1-e_1=0$, es decir, al evaluar $e_1$ en $q_{\phi,e_1}$ obtenemos que el resultado es 0. Del mismo modo que con $(x)(\phi)=\phi$ y ahora $\phi(e_2)=0$.
+En primer lugar, para $e_1$ nos percatamos podemos ver que $\phi(e_1) = e_1$. Esto quiere decir que $(x-1)(\phi)(e_1) = 0$ y como es de grado uno, no hay otro menor que él donde se anule. Utilizando el mismo razonamiento para $e_2$, vemos que $\phi(e_2)=0$ y entonces $q_{\phi, e_2}=x$.
 \end{ej}
 
 \begin{prop}
-Sea $\phi\in End(V)$ y $B=\{v_1, \cdots, v_n\}$, entonces:
-$$q_\phi = mcm\{q_{\phi, v_1}, \cdots, q_{\phi, v_n}\}$$
+Sea $\phi\in End(V)$ y $B=\{v_1, \cdots, v_n\}$ una base de $V$, entonces:
+$$
+q_\phi = mcm\{q_{\phi, v_1}, \cdots, q_{\phi, v_n}\}
+$$
+por lo que el mínimo global se puede recuperar a partir de los mínimos para cada vector de la base.
 \end{prop}
 \begin{demo}
-Vamos a ver que $q_\phi = \bar{q}$ y para ello basta con ver que se dividen mutuamente, es decir, que $q_\phi \mid \bar{q}$ y $\bar{q}\mid q_\phi$: 
+Para demostrarlo basta con ver que $q_\phi$ divide al polinomio $\bar{q} = mcm\{q_{\phi, v_1}, \cdots, q_{\phi, v_n}\}$ y viceversa:
+\begin{itemize}
+\item $\bar{q} \mid q_\phi$: simplemente vemos que $\forall i \in I : q_i\mid q_\phi \Rightarrow \bar{q}\mid q_\phi $.
 
-$$q_i\mid q_\phi\Rightarrow \bar{q}\mid q_\phi$$
-Por otro lado:
-$$\bar{q}= q_i\cdot g_i: i=1,2,\cdots,n$$
+\item $q_\phi \mid \bar{q}$:
 
-Con lo cual, vemos que le pasa a $\bar{q}(\phi)$ cuando se le aplica a $v_i$:
-$$\left[\bar{q}(\phi)\right](v_i)=\left[(g_iq_i)(\phi)\right](v_i)= [g_i(\phi)\circ q_i(\phi)](v_i)=g_i(\phi)\left(\underbrace{q_i(\phi)(v_i}_{=0})\right) = g_i(\phi)(0)=0\Rightarrow \left[\bar{q}(\phi)\right](v_i)==0$$
-
+El polinomio $\bar{q}$ puede escribirse como $\forall i \in I :  \bar{q} = g_i q_i$. Con lo cual, vemos que le pasa a $\bar{q}(\phi)$ cuando se le aplica a $v_i$:
+$$
+\left[\bar{q}(\phi)\right](v_i)=\left[(g_iq_i)(\phi)\right](v_i)= [g_i(\phi)\circ q_i(\phi)](v_i)=g_i(\phi)\left(\underbrace{q_i(\phi)(v_i}_{=0})\right) = g_i(\phi)(0)=0
+$$
 Por tanto, $\bar{q}(\phi)$ es la aplicación nula porque se anula sobre cada uno de los vectores de la base, luego $q_\phi \mid \bar{q}$.
+\end{itemize}
 \end{demo}
 
 \subsubsection{Cálculo del polinomio mínimo}
 Ya visto el concepto de polinomio mínimo, en la práctica basta con calcular el polinomio mínimo de cada uno de los vectores de la base del espacio vectorial y saber que el buscado es el m.c.m. de ellos.
 
-Además, la búsqueda del polinomio mínimo de cada vector se puede plantear de la siguiente forma: como lo que se busca es una expresión $a_0v+a_1\phi(v)+\cdots+a_n\phi^n(v_n)$ de tamaño mínimo y con algún $a_i\neq 0$, entonces basta calcular $v,\phi(v), \phi^2(v),\cdots \in V$ hasta que el conjunto sea linealmente dependiente\footnote{Realmente este polinomio es el mínimo porque si existiera otro de grado menor para el cual se anulase el vector evaluado en el endomorfismo resultante, entonces habría un conjunto más pequeño linealmente independiente y eso no puede ser.}, luego tendremos cada $a_i$.
+Además, existe un método canónico para la búsqueda del polinomio mínimo de cada vector. Como lo que se busca es una expresión $a_0v + a_1\phi(v) + \cdots + a_n\phi^n(v_n)$ de tamaño mínimo y con algún $a_i\neq 0$, entonces basta calcular $v,\phi(v), \phi^2(v), \cdots \in V$ hasta que el conjunto sea linealmente dependiente\footnote{Realmente este polinomio es el mínimo porque si existiera otro de grado menor para el cual se anulase el vector evaluado en el endomorfismo resultante, entonces habría un conjunto más pequeño linealmente independiente y eso no puede ser.} y los coeficientes $a_i$ vendrían dados por la combinación lineal no trivial nula de la dependencia lineal.
 
 \begin{ej}
 Sea $\phi\in End(V)$ representado en la base canónica por
-$$M_B(\phi)=\begin{pmatrix} 0&1&1\\1&0&1\\1&1&0\end{pmatrix}$$
-calculamos las imágenes de los vectores de la base $\phi(e_1) = e_2+e_3$ y $\phi^2(e_1)=2e_1+e_2+e_3$. Vemos incluso que, antes de que el número de vectores sea mayor que la dimensión de $R^3$, ya tenemos una colección de vectores que guardan dependencia lineal de la siguiente forma: $\phi^2(v)-2e_1-2\phi(e_1)=0$, por tanto, tenemos que $[(x^2-x-2)(\phi)](e_1)=0$ luego $q_{\phi,e_1}=x^2-x-2$.
-Realizando este procedimiento con el resto de vectores y hallando el m.c.m. tenemos el $q_\phi$.
+$$
+M_B(\phi)=\begin{pmatrix} 0&1&1\\1&0&1\\1&1&0\end{pmatrix}
+$$
+para calcular el polinomio mínimo para $e_1$, seguimos los pasos anteriores:
+\begin{eqnarray*}
+\phi(e_1) &=& e_2+e_3  \\
+\phi^2(e_1) &=& 2e_1+e_2+e_3
+\end{eqnarray*}
+En este punto paramos, pues hemos encontrado un conjunto dependiente a través de la relación
+$$
+\phi^2(v)-2e_1-2\phi(e_1)=0 \Rightarrow [(x^2-x-2)(\phi)](e_1)=0
+$$
+lo que implica que el polinomio mínimo es de la forma
+$$
+q_{\phi,e_1}=x^2-x-2
+$$
 \end{ej}
 
 \subsection{Polinomio característico de un endomorfismo}
 Aunque el polinomio mínimo goza de buenas propiedades, tenemos una herramienta más potente: el  polinomio característico. Este especial polinomio nos permitirá determinar desde el número y dimensión de los subespacios invariantes por $\phi$ hasta poder expresar la matriz de $\phi$ de la forma más sencilla posible.
 
 \begin{defi}[Autovalores y Vectores Propios]
-Sea $\phi\in End(V)$, $\lambda\in K$ y $v\neq 0$, definimos los \textbf{vectores propios} del endomorfismo como aquellos que verifican:
-$$\phi(v) = \lambda \cdot v$$
-y definimos los \textbf{autovalores} como todos los valores de $\lambda$ para los cuales existen autovectores.
+Sea $\phi\in End(V)$, $\lambda\in K$ y $v\neq 0$, definimos un \textbf{vector propio} del endomorfismo como aquel que verifica:
+$$
+\phi(v) = \lambda \cdot v
+$$
+y llamamos \textbf{autovalor} al $\lambda$ asociado.
 \end{defi}
 
 \begin{defi}[Polinomio Característico]
@@ -1409,33 +1704,39 @@ $$p_\phi(x) = |A- x\cdot I_n|$$
 \end{defi}
 
 \begin{prop}
-Sea $\phi\in End(V)$, $A=M_B(\phi)$ y $A'=M_{B'}(\phi)$, entonces el polinomio característico respecto de ambas matrices coincide, es decir, matrices semejantes tienen el mismo polinomio característico.
+Sea $\phi\in End(V)$, $A=M_B(\phi)$ y $A'=M_{B'}(\phi)$, el polinomio característico de ambas coincide, es decir, matrices semejantes tienen el mismo polinomio característico.
 \end{prop}
 \begin{demo}
-Sean $A=M_B(\phi)$ y $A'=M_B'(\phi)$, ambas matrices por ser semejantes cumplen que $A'=P^{-1}AP$. Veamos que:
-$$p_{A'}=|A'-xI_n|=|P^{-1}AP-P^{-1}xP|=|P^{-1}(A-xI_n)P|=|P^{-1}|(A-xI_n)|P|=|(A-xI_n|=p_A$$
+Sean $A=M_B(\phi)$ y $A'=M_B'(\phi)$, ambas matrices por ser semejantes cumplen que $A'=P^{-1}AP$ y el resto es algebraico:
+\begin{eqnarray*}
+p_{A'}
+&=& |A'-xI_n| \\
+&=& |P^{-1}AP-P^{-1}xP|\\
+&=& |P^{-1}(A-xI_n)P|\\
+&=& |P^{-1}|(A-xI_n)|P|\\
+&=& |(A-xI_n| = p_A
+\end{eqnarray*}
 \end{demo}
 
 \begin{obs}
-El resultado anterior prueba que la definición de polinomio característico es adecuada porque es independiente de la base en la que yo represente la matriz de $\phi$, luego tiene sentido hablar de $p_\phi(x)$ en vez de $p_A(x)$.
+De nuevo, igual que en el polinomio mínimo, el resultado anterior prueba que la definición es consistente pues no depende de la representación matricial utilizada para ello. Por tanto, tiene sentido hablar de $p_\phi(x)$ en vez de $p_A(x)$.
 \end{obs}
 
 \begin{obs}
-Si nos fijamos, un polinomio característico de grado n viene dado por:
-$$(-1)^nx^n + (-1)^{n-1}(a_{11} + \cdots + a_{nn})x^{n-1} + \cdots + A_r x^r + \cdots + \det
-A$$
-donde $tr(A) = a_{11} + \cdots + a_{nn}$ se le suele denominar la traza de la matriz y $A_r$ denota la suma de los determinantes de los menores de orden $n-r$ que tienen la diagonal principal sobre la diagonal principal de $A$.
-
-De este modo, podemos ver que, a pesar de que estos elementos dependen de la matriz escogida, su valor debe ser invariante porque el polinomio característico es independiente de la representación matricial, luego descubrimos dos hechos muy importantes:
-\begin{itemize}
-\item El determinante es invariante por equivalencia de matrices.
-\item La traza es invariante por equivalencia de matrices.
-\end{itemize}
+Un desarrollo exhaustivo del polinomio característico de grado $n$ reflejaría que los coeficientes siguen la expresión:
+$$
+(-1)^nx^n + (-1)^{n-1}(a_{11} + \cdots + a_{nn})x^{n-1} + \cdots + A_r x^r + \cdots + \det
+A
+$$
+esto revela que propiedades matriciales\footnote{$A_r$ denota la suma de los determinantes de los menores de orden $n-r$ que tienen la diagonal principal sobre la diagonal principal de $A$.} como la traza $tr(A) = a_{11} + \cdots + a_{nn}$ o el determinante $\det A$ se mantienen invariantes entre matrices equivalentes.
 \end{obs}
 
 \begin{defi}[Espectro]
-Sea $\phi \in End(V)$, se define el \textbf{espectro} de un endomorfismo como el conjunto de los autovalores :
-$$\sigma(\phi)=\{\lambda_1, \cdots, \lambda_t\}: q_\phi(\lambda_i) = 0$$
+Sea $\phi \in End(V)$, definimos el \textbf{espectro} de un endomorfismo
+$$
+\sigma(\phi)=\{\lambda_1, \cdots, \lambda_t\}: q_\phi(\lambda_i) = 0
+$$
+como el conjunto de todos sus autovalores.
 \end{defi}
 
 \subsubsection{Teorema de Caley-Hamilton}
@@ -1599,28 +1900,38 @@ Tal y como dijimos al comienzo del capítulo, el objetivo de este desarrollo es 
 
 
 \begin{defi}[Subespacios Propios]
-Sea $V$ un espacio vectorial y $\phi  \in End(V)$, se define un \textbf{subespacio propio para el autovalor $\lambda$} como aquel que verifica:
-$$V_{\phi, \lambda}=\{v\in V : \phi(v) = \lambda v\}$$
-es decir, son los subespacios generador por vectores propios.
+Sea $V$ un espacio vectorial y $\phi  \in End(V)$, se define un \textbf{subespacio propio para el autovalor $\lambda$} como
+$$
+V_{\phi, \lambda}=\{v\in V : \phi(v) = \lambda v\}
+$$
+aquellos generados por vectores propios.
 \end{defi}
 
 \begin{obs}
-Realmente estamos diciendo que $V_{\phi,\lambda} = \ker(\phi-\lambda id)$ por lo que trivialmente es un subespacio de $V$.
+La comprobación de que es un subespacio es trivial, puesto que se trata de $V_{\phi,\lambda} = \ker(\phi-\lambda id)$ y ya demostramos en su momento que esto se trata de subespacios cuando $\phi$ eran aplicaciones lineales.
 \end{obs}
 
 \begin{defi}[Multiplicidades Algebraicas y Dimensión geométrica]
-Sea $\phi \in End(V)$, si su polinomio característico es $\pm p_\phi=(x-\lambda_1)^{e_1}\cdots (x-\lambda_t)^{e_t}$ decimos que las \textbf{multiplicidades algebraicas de los autovalores} son los $e_i$.
-
-Del mismo modo, decimos que la \textbf{dimensión geométrica} es la dimensión del subespacio propio para el autovalor $\lambda$, es decir:
-$$d_i=\dim_K V_{\phi,\lambda_i} = \dim \ker(\phi-\lambda_i id)= n - rg(\phi-\lambda_i id)$$
+Sea $\phi \in End(V)$ cuyo polinomio característico es
+$$
+\pm p_\phi=(x-\lambda_1)^{e_1}\cdots (x-\lambda_t)^{e_t}
+$$
+llamamos
+\begin{itemize}
+\item \textbf{multiplicidades algebraicas} a los $e_i$ de los autovalores
+\item \textbf{dimensión geométrica} a $d_i = \dim_K V_{\phi,\lambda_i}$ de los autovalores.
+\end{itemize}
 \end{defi}
+
 \begin{obs}
-En la práctica, la dimensión geométrica representa el número de vectores propios linealmente independientes para cada autovalor $\lambda_i$.
+En el fondo, la dimensión geométrica puede verse como el número de vectores propios linealmente independientes dentro del subespacio $V_{\phi, \lambda}$ de cada autovalor $\lambda_i$.
 \end{obs}
 
 \begin{prop}
-Las dimensiones geométricas siempre son más pequeñas o iguales que las multiplicidades algebraicas:
-$$\forall i \in \mathbb N: d_i\leq e_i$$
+Sea $\phi \in End(V)$ y $\lambda$ un autovalor suyo, entonces:
+$$
+\forall i \in \mathbb N: d_i\leq e_i
+$$
 \end{prop}
 \begin{demo}
 Como $d$ es la dimensión de un subespacio consideramos una base del mismo: $B=\{v_1, \cdots, v_d\}$ base de $V_{\phi, \lambda}$ y ahora completamos dicha base a una base de $V$ siendo esta $B'=\{v_1,\cdots,v_d, v_{d+1},\cdots, v_n\}$ así que vamos a expresar la matriz de $\phi$ en base $B'$:
@@ -1640,9 +1951,10 @@ Sea $\phi\in End(V)$, decimos que es \textbf{diagonalizable} si existe alguna ba
 \end{defi}
 
 \begin{ej}
-Supongamos que $\phi: V\rightarrow V$ es una simetría, entonces $V=W\oplus U$ con $\dim V=n$, $\dim W=m$ y $\dim U = m-n$. Escogemos una base de $V$, $B=\{\underbrace{v_1, \cdots, v_m,}_{B_W} \underbrace{v_{m+1}, \cdots, v_n}_{B_U}\}$ vemos que como un endomorfismo queda determinado por la imagen de los vectores de la base:
-$$M_B(\phi)=\left(\begin{array}{c|c} I_n & 0 \\ \hline 0 & -I_{n-m} \end{array}\right)$$
-Lo que ocurre realmente es que si $A=M_{B'}(\phi)$ y $A=M_B(\phi)$, entonces $\exists P=M(B',B): A'=P^{-1}AP$. Es decir, transformo mediante una matriz de paso, una matriz que no es diagonal en una \textbf{semejante} que sí lo es.
+Sea $\phi: V\rightarrow V$ una simetría, vimos en su momento que $V = W\oplus U$ con $\dim V=n$, $\dim W=m$ y $\dim U = m-n$. De este modo, una base $B=\{\underbrace{v_1, \cdots, v_m,}_{B_W} \underbrace{v_{m+1}, \cdots, v_n}_{B_U}\}$ determina de modo único la matriz del endomorfismo que quedaría, con los vectores escogidos en $B$, de la forma
+$$
+M_B(\phi)=\left(\begin{array}{c|c} I_n & 0 \\ \hline 0 & -I_{n-m} \end{array}\right)
+$$
 \end{ej}
 
 \begin{prop}
@@ -1664,25 +1976,26 @@ $$B\mbox{ base}: \phi(v_i)=\lambda_iv_i: i=1,\cdots, n\Rightarrow M_B(\phi)=\beg
 \end{demo}
 
 \begin{obs}
-Luego esto nos da un muy buen criterio a priori para saber si un endomorfismo es diagonalizable, puesto que basta con calcular sus vectores propios y ver si forman una base.
+Este resultado es uno de los primeros que nos permite discutir rápidamente si un endomorfismo es diagonalizable. Basta con calcular sus vectores propios y comprobar si se puede formar una base con ellos.
 \end{obs}
 
 \begin{ej}
-Supongamos el siguiente endomorfismo:
-$$M_{B_c}(\phi)=\begin{pmatrix} 0&1&1\\1&0&1\\1&1&0 \end{pmatrix} \Rightarrow \begin{cases}
+Supongamos que tenemos el endomorfismo definido por:
+$$
+M_{B_c}(\phi)=\begin{pmatrix} 0&1&1\\1&0&1\\1&1&0 \end{pmatrix} \Rightarrow \begin{cases}
 p_\phi= (x+1)^2(x-2) \\ q_\phi=(x+1)(x-2)
-\end{cases}$$
-Luego sus autovalores son $\lambda_1 = -1$ y $\lambda_2 = 2$ y de ahí podemos deducir que $V_{\phi, \lambda_1}= \ker(\phi+id) \equiv x+y+z=0$ y como es un plano puedo encontrar en él dos vectores linealmente independientes.
+\end{cases}
+$$
+los autovalores son las raíces del polinomio mínimo y característico, que son $\lambda_1 = -1$ y $\lambda_2 = 2$. El primer subespacio propio $V_{\phi, \lambda_1}= \ker(\phi+id) \equiv x+y+z=0$ es un plano, lo que permite encontrar dos vectores linealmente independientes y el segundo $V_{\phi,\lambda_2}=\ker(\phi-2id)\equiv \begin{cases}x-2y+z=0 \\ x+y-2z=0\end{cases}$ es una recta, que aporta un único vector linealmente independiente.
 
-Por otro lado, $V_{\phi,\lambda_2}=\ker(\phi-2id)\equiv \begin{cases}x-2y+z=0 \\ x+y-2z=0\end{cases}$, que por ser una recta posee un vector linealmente independiente.
-
-Así que uniendo los 3 vectores comentados se tiene que $B'=\{(e_1-e_2), (e_1-e_3), (e_1+e_2+e_3)\}$ y se comprueba fácilmente que es base de $V$. Expresando $\phi$ en la base construida se tiene que
-$$A'=M_{B'}(\phi)=\begin{pmatrix}-1&0&0\\0&-1&0\\0&0&2\end{pmatrix}$$
+Por tanto, si unimos los tres vectores comentados se tiene que $B'=\{(e_1-e_2), (e_1-e_3), (e_1+e_2+e_3)\}$ y basta comprobar su independencia para poder afirmar que es base. En dicha base, la expresión matricial de $\phi$ sería:
+$$
+A'=M_{B'}(\phi)=\begin{pmatrix}-1&0&0\\0&-1&0\\0&0&2\end{pmatrix}
+$$
 \end{ej}
 
 \begin{prop}
-Sea $\phi \in End(V)$ y $\lambda_1, \lambda_2$ autovalores del endomorfismo, entonces los vectores propios de $\lambda_1$ son distintos de los vectores propios de $\lambda_2$, es decir, vectores propios respecto de autovalores distintos forman conjuntos linealmente independientes.
-$$v_1\in V_{\phi, \lambda_1},\ v_2\in V_{\phi,\lambda_2}: \lambda_1 \neq \lambda_2 \Rightarrow \{v_1,v_2\}\mbox{ l.i.}$$
+Sea $\phi \in End(V)$ y $\lambda_1, \lambda_2 $ autovalores distintos, los vectores propios de $V_{\phi, \lambda_1}$ son independientes de los de $V_{\phi, \lambda_2}$.
 \end{prop}
 \begin{demo}
 $$a_1v_1+a_2v_2=0\Rightarrow \phi(a_1v_1+a_2v_2)=\phi(0)=0\Rightarrow a_1\lambda_1v_1+a_2\lambda_2v_2=0$$
@@ -1694,7 +2007,7 @@ Y tenemos que $a_1v_1=0\Rightarrow a_1=0$
 \end{demo}
 
 \begin{prop}
-Sea $\phi\in End(V)$, entonces $\phi$ es diagonalizable si y sólo si $p_\phi$ descompone completamente en $K[x]$ y $d_i=e_i:\forall i$.
+Sea $\phi\in End(V)$, entonces $\phi$ es diagonalizable si y sólo si $p_\phi$ descompone completamente en $K[x]$ y $d_i=e_i$.
 \end{prop}
 \begin{demo}
 \begin{itemize}
@@ -4884,4 +5197,3 @@ $$\begin{cases} a''_{00} > 0 \Rightarrow C = \emptyset \\ a''_{00} = 0 \Rightarr
 
 
 \end{document}
-
